@@ -9,11 +9,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install only Flask
 COPY requirements.txt ./
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
-# Copy app sources
 COPY app.py ./
 COPY templates ./templates
 COPY static ./static
@@ -21,16 +19,7 @@ COPY data ./data
 
 EXPOSE 5000
 
-# Healthcheck using Python stdlib (no curl)
-HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD python - <<'PY' || exit 1
-import urllib.request, sys
-try:
-    with urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=2) as r:
-        sys.exit(0 if r.status == 200 else 1)
-except Exception:
-    sys.exit(1)
-PY
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD python -c "import urllib.request, sys, urllib.error, socket;\n\ntry:\n    r = urllib.request.urlopen('http://127.0.0.1:5000/health', timeout=2);\n    sys.exit(0 if r.status == 200 else 1)\nexcept Exception:\n    sys.exit(1)"
 
-# Use Flask’s built-in server for this demo
 ENV FLASK_APP=app.py
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
