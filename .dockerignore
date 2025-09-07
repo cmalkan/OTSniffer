@@ -1,0 +1,15 @@
+﻿# VCS / OS
+.git
+.gitignore
+*.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Local dev files
+dev_check.py
+node_modules/

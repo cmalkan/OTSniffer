@@ -33,3 +33,21 @@ This is a minimal Flask app (single dependency) with demo data to explore OT exp
 - Add Shodan aggregate client with `SHODAN_API_KEY` (facets: country, product)
 - Saved presets and narrative exports (PNG/PDF)
 - Compliance lock to always redact raw details
+
+## Docker
+
+Build and run with Docker:
+
+```powershell
+cd "G:\\My Drive\\Ghar Files\\4. B2 Docs\\Tech Projects\\Idea91 OTSniffer"
+docker build -t otsniffer:latest .
+docker run --rm -p 5000:5000 -e PORT=5000 -e FLASK_DEBUG=0 otsniffer:latest
+# open http://localhost:5000
+```
+
+Or with Docker Compose:
+
+```powershell
+cd "G:\\My Drive\\Ghar Files\\4. B2 Docs\\Tech Projects\\Idea91 OTSniffer"
+docker compose up --build
+```
