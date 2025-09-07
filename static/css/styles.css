@@ -1,0 +1,42 @@
+﻿:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --acc1: #2563eb; /* blue */
+  --acc2: #059669; /* green */
+  --acc3: #db2777; /* pink */
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); }
+.container { max-width: 1100px; margin: 0 auto; padding: 16px; }
+.small { font-size: 12px; color: var(--muted); }
+.site-header { border-bottom: 1px solid var(--border); background: #fff; position: sticky; top: 0; z-index: 10; }
+.site-header h1 { font-size: 18px; margin: 0; }
+.site-header nav { display: flex; gap: 12px; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+.site-header a { color: var(--text); text-decoration: none; }
+.site-footer { border-top: 1px solid var(--border); margin-top: 24px; }
+
+.filters { margin: 16px 0; }
+.filter-form { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+.filter-form label { display: flex; flex-direction: column; gap: 6px; }
+.filter-form select { padding: 8px; border: 1px solid var(--border); border-radius: 6px; }
+.button, .filter-form button, .filter-form a.button { background: var(--text); color: #fff; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; text-decoration: none; }
+.button-secondary { background: #374151; }
+
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+.kpi { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #fff; }
+.kpi-label { color: var(--muted); font-size: 12px; }
+.kpi-value { font-size: 28px; font-weight: 700; margin-top: 8px; }
+
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.card { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #fff; }
+.card h3 { margin: 0 0 8px; font-size: 16px; }
+.span-2 { grid-column: span 2; }
+
+@media (max-width: 800px) {
+  .kpis { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; }
+  .span-2 { grid-column: span 1; }
+}

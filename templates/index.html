@@ -1,0 +1,125 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+<section class="filters">
+  <form method="get" action="/" class="filter-form">
+    <label>
+      <span>Industry</span>
+      <select name="industry">
+        <option value="">All</option>
+        {% for ind in filters.industries %}
+        <option value="{{ ind }}" {% if ind == filters.industry %}selected{% endif %}>{{ ind }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      <span>Country</span>
+      <select name="country">
+        <option value="">All</option>
+        {% for c in filters.countries %}
+        <option value="{{ c }}" {% if c == filters.country %}selected{% endif %}>{{ c }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      <span>Period</span>
+      <select name="period">
+        <option value="7d"  {% if filters.period == '7d' %}selected{% endif %}>Last 7 days</option>
+        <option value="30d" {% if filters.period == '30d' %}selected{% endif %}>Last 30 days</option>
+        <option value="90d" {% if filters.period == '90d' %}selected{% endif %}>Last 90 days</option>
+      </select>
+    </label>
+    <button type="submit">Apply</button>
+    <a class="button button-secondary" href="/export.csv">Export CSV</a>
+  </form>
+</section>
+
+<section class="kpis">
+  <div class="kpi">
+    <div class="kpi-label">Total Findings</div>
+    <div class="kpi-value">{{ data.total }}</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Top Industry</div>
+    <div class="kpi-value">{{ (data.industries[0].name if data.industries) or '-' }}</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Top Country</div>
+    <div class="kpi-value">{{ (data.countries[0].name if data.countries) or '-' }}</div>
+  </div>
+</section>
+
+<section class="grid">
+  <div class="card">
+    <h3>By Industry</h3>
+    <canvas id="chartIndustry" height="140"></canvas>
+  </div>
+  <div class="card">
+    <h3>By Country</h3>
+    <canvas id="chartCountry" height="140"></canvas>
+  </div>
+  <div class="card">
+    <h3>Top Vendors</h3>
+    <canvas id="chartVendor" height="140"></canvas>
+  </div>
+  <div class="card span-2">
+    <h3>Trend</h3>
+    <canvas id="chartTrend" height="180"></canvas>
+  </div>
+</section>
+
+<script>
+  const dataIndustries = {{ data.industries | tojson }};
+  const dataCountries  = {{ data.countries  | tojson }};
+  const dataVendors    = {{ data.vendors    | tojson }};
+  const dataTimeline   = {{ data.timeline   | tojson }};
+
+  function barConfig(labels, values, color) {
+    return {
+      type: 'bar',
+      data: {
+        labels,
+        datasets: [{
+          data: values,
+          backgroundColor: color,
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true } }
+      }
+    };
+  }
+
+  function listToLv(list) {
+    return [list.map(x => x.name), list.map(x => x.count)];
+  }
+
+  // Industry
+  {
+    const [labels, values] = listToLv(dataIndustries);
+    new Chart(document.getElementById('chartIndustry'), barConfig(labels, values, '#2563eb'));
+  }
+  // Country
+  {
+    const [labels, values] = listToLv(dataCountries);
+    new Chart(document.getElementById('chartCountry'), barConfig(labels, values, '#059669'));
+  }
+  // Vendors
+  {
+    const [labels, values] = listToLv(dataVendors);
+    new Chart(document.getElementById('chartVendor'), barConfig(labels, values, '#db2777'));
+  }
+  // Trend
+  {
+    const labels = dataTimeline.labels;
+    const values = dataTimeline.values;
+    new Chart(document.getElementById('chartTrend'), {
+      type: 'line',
+      data: { labels, datasets: [{ data: values, borderColor: '#111827', backgroundColor: 'rgba(17,24,39,0.08)', fill: true, tension: 0.3 }]},
+      options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true }}}
+    });
+  }
+</script>
+{% endblock %}

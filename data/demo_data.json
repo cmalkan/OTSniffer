@@ -1,0 +1,25 @@
+﻿{
+  "generated": "demo",
+  "items": [
+    {"date": "2025-08-15", "industry": "Healthcare", "country": "US", "vendor": "Siemens", "count": 42},
+    {"date": "2025-08-16", "industry": "Healthcare", "country": "US", "vendor": "GE", "count": 22},
+    {"date": "2025-08-17", "industry": "Energy",     "country": "DE", "vendor": "Schneider", "count": 19},
+    {"date": "2025-08-18", "industry": "Energy",     "country": "DE", "vendor": "Siemens",   "count": 27},
+    {"date": "2025-08-19", "industry": "Manufacturing","country": "GB", "vendor": "Rockwell",  "count": 15},
+    {"date": "2025-08-20", "industry": "Manufacturing","country": "IN", "vendor": "Honeywell", "count": 18},
+    {"date": "2025-08-21", "industry": "Healthcare", "country": "CH", "vendor": "Philips",   "count": 11},
+    {"date": "2025-08-22", "industry": "Energy",     "country": "US", "vendor": "ABB",       "count": 24},
+    {"date": "2025-08-23", "industry": "Manufacturing","country": "US", "vendor": "Bosch",    "count": 17},
+    {"date": "2025-08-24", "industry": "Energy",     "country": "FR", "vendor": "Schneider", "count": 21},
+    {"date": "2025-08-25", "industry": "Healthcare", "country": "US", "vendor": "Siemens",   "count": 33},
+    {"date": "2025-08-26", "industry": "Energy",     "country": "DE", "vendor": "ABB",       "count": 20},
+    {"date": "2025-08-27", "industry": "Manufacturing","country": "IN", "vendor": "Siemens",   "count": 23},
+    {"date": "2025-08-28", "industry": "Healthcare", "country": "GB", "vendor": "Philips",   "count": 14},
+    {"date": "2025-08-29", "industry": "Energy",     "country": "US", "vendor": "GE",        "count": 26},
+    {"date": "2025-08-30", "industry": "Manufacturing","country": "US", "vendor": "Rockwell",  "count": 19},
+    {"date": "2025-08-31", "industry": "Healthcare", "country": "US", "vendor": "Abbott",    "count": 16},
+    {"date": "2025-09-01", "industry": "Energy",     "country": "DE", "vendor": "Siemens",   "count": 25},
+    {"date": "2025-09-02", "industry": "Manufacturing","country": "GB", "vendor": "Honeywell", "count": 13},
+    {"date": "2025-09-03", "industry": "Healthcare", "country": "IN", "vendor": "GE",        "count": 12}
+  ]
+}
