@@ -1,0 +1,18 @@
+﻿# Ignore OS/editor cruft
+.desktop.ini
+*.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Node/Frontend (if added later)
+node_modules/
+
+# Cache or local data
+*.cache
+*.log
+
