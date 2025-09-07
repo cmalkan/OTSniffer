@@ -1,7 +1,7 @@
 ﻿from flask import Flask, render_template, request, jsonify, Response
 import os
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import Counter, defaultdict
 
 app = Flask(__name__)
@@ -76,6 +76,17 @@ def aggregates(items):
     }
 
 
+def period_range(period: str, items):
+    today = max([parse_date(it['date']) for it in items if parse_date(it['date'])] or [datetime.utcnow().date()])
+    if period == '7d':
+        start = today - timedelta(days=6)
+    elif period == '90d':
+        start = today - timedelta(days=89)
+    else:
+        start = today - timedelta(days=29)
+    return start, today
+
+
 @app.route('/')
 def index():
     items = load_demo_items()
@@ -83,18 +94,10 @@ def index():
     country = request.args.get('country') or ''
     period = request.args.get('period') or '30d'
 
-    today = max([parse_date(it['date']) for it in items if parse_date(it['date'])] or [datetime.utcnow().date()])
-    if period == '7d':
-        start = today.replace(day=max(1, today.day - 6))
-    elif period == '90d':
-        start = today.replace(day=max(1, today.day - 89))
-    else:
-        start = today.replace(day=max(1, today.day - 29))
-
-    filtered = filter_items(items, industry=industry or None, country=country or None, start_date=start, end_date=today)
+    start, end = period_range(period, items)
+    filtered = filter_items(items, industry=industry or None, country=country or None, start_date=start, end_date=end)
     aggs = aggregates(filtered)
 
-    # Unique sets for filters
     industries = sorted({it['industry'] for it in items})
     countries = sorted({it['country'] for it in items})
 
@@ -129,7 +132,13 @@ def health():
 @app.route('/export.csv')
 def export_csv():
     items = load_demo_items()
-    aggs = aggregates(items)
+    industry = request.args.get('industry') or None
+    country = request.args.get('country') or None
+    period = request.args.get('period') or '30d'
+    start, end = period_range(period, items)
+    filtered = filter_items(items, industry=industry, country=country, start_date=start, end_date=end)
+    aggs = aggregates(filtered)
+
     import io
     buf = io.StringIO()
     buf.write('category,name,count\n')
@@ -144,4 +153,4 @@ def export_csv():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=int(os.getenv('PORT', '5000')))  # Dev-only
+    app.run(debug=True, host='0.0.0.0', port=int(os.getenv('PORT', '5000')))
