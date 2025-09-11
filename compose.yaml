@@ -2,8 +2,9 @@
   otsniffer:
     build: .
     ports:
-      - "8501:8501"
+      - "8601:8501"
     environment:
       - PORT=8501
+      - SHODAN_API_KEY=${SHODAN_API_KEY:-}
     healthcheck:
-      test: ["CMD-SHELL", "python -c \"import urllib.request, sys;\n\ntry:\n    r = urllib.request.urlopen('http://127.0.0.1:8501', timeout=2);\n    sys.exit(0 if r.status == 200 else 1)\nexcept Exception:\n    sys.exit(1)\" "]
+      test: ["CMD-SHELL", "python -c \"import urllib.request, sys;\ntry:\n    r = urllib.request.urlopen('http://127.0.0.1:8501', timeout=2);\n    sys.exit(0 if r.status == 200 else 1)\nexcept Exception:\n    sys.exit(1)\" "]
