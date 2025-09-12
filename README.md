@@ -2,7 +2,8 @@
 
 Minimal dashboard for exploring operational technology (OT) exposure via [Shodan](https://www.shodan.io/).
 
-## Setup
+## Install
+### Setup
 
 1. Install dependencies:
    ```bash
@@ -10,7 +11,7 @@ Minimal dashboard for exploring operational technology (OT) exposure via [Shodan
    ```
 2. Provide a Shodan API key via the `SHODAN_API_KEY` environment variable. You can place it in a `.env` file or export it directly in your shell.
 
-## Usage
+###j Usage
 
 Run the Streamlit dashboard:
 
@@ -25,10 +26,26 @@ Choose an industry from the provided list and optionally scope the search to a t
 Build and run the dashboard in a container:
 
 ```bash
-docker build -t otsniffer .
-docker run -e SHODAN_API_KEY=your_key -p 8501:8501 otsniffer
 ```
+#### Docker build
+docker build -t OTSniffer:1.0 .
 
-## Future work
+#### Docker Run
+docker run --rm -e SHODAN_API_KEY=fnWsFlfN9iHRrFahpW12J2ZgvMX2dOBG -p 8501:8501 otsniffer:1.0 streamlit run /app/dashboard.py
 
+#### Template site
+Local URL: http://localhost:8501
+
+```
+```
+## Future
 This project is a starting point and will evolve to link with the CertLoop repo for certificate analysis.
+
+
+## dependencies
+[https://docs.streamlit.io/develop/api-reference/write-magic]
+[https://developer.shodan.io/api]
+
+### Writing a curl in python
+response = requests.get('https://api.shodan.io/tools/myip?key=SHODAN_API_KEY')
+        st.write(response.text)

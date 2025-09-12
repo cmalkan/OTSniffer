@@ -1,2 +1,3 @@
 shodan
 streamlit
+requests
