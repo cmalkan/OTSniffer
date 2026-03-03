@@ -1,0 +1,7 @@
+path,score
+FW1 -> ENG1,1.0
+FW1 -> ENG1 -> HIS1,0.585
+FW1 -> ENG1 -> HIS1 -> HMI1,0.5265
+FW1 -> ENG1 -> HMI1,0.495
+FW1 -> ENG1 -> HIS1 -> HMI1 -> PLC1,0.4739
+FW1 -> ENG1 -> HMI1 -> PLC1,0.4455

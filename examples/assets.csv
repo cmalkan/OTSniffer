@@ -1,0 +1,6 @@
+id,hostname,ip,type,criticality,vendor,firmware_version,zone
+A1,plc-line1,10.10.1.10,PLC,5,Siemens,3.1,OT
+A2,hmi-main,10.10.1.20,HMI,4,Rockwell,11.0,OT
+A3,historian,10.10.2.5,Historian,3,AVEVA,2023.2,DMZ
+A4,eng-workstation,10.10.3.15,Workstation,3,Dell,Win10,IT
+A5,vpn-gateway,203.0.113.4,Gateway,5,Cisco,9.6,Perimeter

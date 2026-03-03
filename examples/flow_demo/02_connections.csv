@@ -1,0 +1,6 @@
+src_asset_id,dst_asset_id,protocol,port,segmentation_boundary
+FW1,ENG1,ssh,22,false
+ENG1,HIS1,rdp,3389,true
+HIS1,HMI1,opcua,4840,false
+HMI1,PLC1,modbus,502,false
+ENG1,HMI1,http,8080,true

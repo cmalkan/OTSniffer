@@ -1,268 +1,144 @@
-# OTSniffer
+# Industrial Cyber Risk Simulation (ICRS) - Streamlit MVP
 
-Minimal dashboard for exploring operational technology (OT) exposure via [Shodan](https://www.shodan.io/).
+ICRS is a defensive OT risk modeling product for manufacturers. It combines OT topology ingestion, Shodan exposure enrichment, attack propagation simulation, and downtime-to-financial impact estimation.
 
-## Install
-### Setup
+## 1) System architecture summary
 
-1. Install dependencies:
+### First-principles decomposition
+- **Input reality**: OT assets + trust boundaries + external exposure.
+- **Computation core**: Graph propagation probabilities constrained by segmentation and protocol risk.
+- **Business output**: Expected downtime and financial exposure ranges.
+- **Decision support**: Executive-ready report for repeatable productized engagements.
+
+### Module boundaries
+- `app.py`: Streamlit UI only (engagement workflow, forms, rendering).
+- `risk_engine.py`: Graph creation, propagation scoring, chokepoints, path ranking, financial model.
+- `shodan_integration.py`: Defensive Shodan lookups and exposure normalization.
+- `database.py` + `data_models.py`: SQLite persistence abstraction (SQLAlchemy).
+- `report_generator.py`: PDF report generation.
+
+This separation keeps business logic out of UI code and enables migration to API services later.
+
+## 2) Features delivered
+
+### Productized engagement workflow
+- Create engagement (client/site/cost per hour downtime).
+- Load historical engagements from local SQLite.
+
+### OT ingestion
+- Upload `assets.csv` with:
+  - `id, hostname, ip, type, criticality, vendor, firmware_version, zone`
+- Upload `connections.csv` with:
+  - `src_asset_id, dst_asset_id, protocol, port, segmentation_boundary`
+
+### Shodan enrichment (defensive only)
+- Upload public IP CSV or enter comma-separated IPs.
+- Pull open ports, services, vulnerabilities (if available), last update timestamp.
+- Risk weighting:
+  - High: exposed remote admin patterns (RDP/SSH/Telnet)
+  - Medium: exposed web/admin surfaces
+  - Low: otherwise
+- No scanning beyond Shodan API queries.
+
+### Risk simulation engine
+- Directed graph model with NetworkX.
+- Initial compromise node selector.
+- Propagation scoring via BFS with:
+  - segmentation reduction factors
+  - remote admin protocol multipliers
+- Outputs:
+  - node compromise probabilities
+  - top 10 propagation paths
+  - containment chokepoints
+
+### Downtime + financial model
+- Recovery time mapping by criticality.
+- Expected downtime = `sum(probability * recovery_hours)`.
+- Exposure scenarios:
+  - Best case = 0.5x
+  - Base case = 1x
+  - Worst case = 2x
+
+### Visualizations
+- Blast radius graph (Plotly).
+- Risk heatmap table.
+- External exposure summary.
+- Financial summary cards.
+
+### Executive report export
+- PDF includes:
+  - executive financial summary
+  - Shodan findings
+  - blast radius snapshot
+  - top propagation paths
+  - containment recommendations
+  - defensive-use disclaimer
+
+## 3) Project layout
+
+```
+/app.py
+/risk_engine.py
+/shodan_integration.py
+/data_models.py
+/report_generator.py
+/database.py
+/examples/
+/tests/
+/requirements.txt
+```
+
+## 4) Run locally
+
+1. Use Python 3.11.
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-2. Provide a Shodan API key via the `SHODAN_API_KEY` environment variable. You can place it in a `.env` file or export it directly in your shell.
+3. Set Shodan key:
+   ```bash
+   export SHODAN_API_KEY="<your_key>"
+   ```
+4. Start app:
+   ```bash
+   streamlit run app.py
+   ```
+5. Open Streamlit URL and:
+   - create/load engagement
+   - upload `examples/assets.csv`
+   - upload `examples/connections.csv`
+   - optionally run Shodan with `examples/public_ips.csv`
 
-###j Usage
-
-Run the Streamlit dashboard:
+## 5) Test
 
 ```bash
-streamlit run dashboard.py
+pytest -q
 ```
 
-Choose an industry from the provided list and optionally scope the search to a two-letter country code. The dashboard displays the number of results and up to 20 matches with their IP address, organization and product information.
+## 6) Evolution path (post-MVP)
 
-## Docker
+### Move to FastAPI backend
+- Extract services from `risk_engine.py`, `shodan_integration.py`, and `database.py` into API routes.
+- Keep Streamlit as client initially, then replace with React or internal portal as needed.
+- Add async workers for expensive simulations/report generation.
 
-Build and run the dashboard in a container:
+### Multi-tenant SaaS
+- Add tenant/org tables and foreign keys on all engagement-linked entities.
+- Enforce tenant scoping in every query.
+- Move SQLite to Postgres.
 
-```bash
-```
-#### Docker build
-docker build -t OTSniffer:1.0 .
+### Enterprise auth
+- Add OIDC/SAML SSO (Okta/Azure AD).
+- Role model: Analyst, Manager, Executive, Admin.
+- Add audit logging and policy controls.
 
-#### Docker Run
-docker run --rm -e SHODAN_API_KEY=fnWsFlfN9iHRrFahpW12J2ZgvMX2dOBG -p 8501:8501 otsniffer:1.0 streamlit run /app/dashboard.py
+## Safety disclaimer
+This software is for authorized defensive risk analysis only.
 
-#### Template site
-Local URL: http://localhost:8501
+## 7) Flow test artifacts
 
-```
-```
-## Future
-This project is a starting point and will evolve to link with the CertLoop repo for certificate analysis.
+A deterministic walkthrough dataset is available under `examples/flow_demo/` to validate the full UI flow.
 
-
-## dependencies
-[https://docs.streamlit.io/develop/api-reference/write-magic]
-[https://developer.shodan.io/api]
-
-
-## Other Ideas
-Reference: https://chatgpt.com/c/69a51185-d648-8325-a4a3-ca18cf2481f3
-
-Create a new category:
-**Industrial Cyber Risk Simulation** — a platform that models ransomware propagation, containment failure, and financial downtime impact in OT environments.
-
----
-
-### Why *Not* To Do It
-
-1. **Market Readiness Risk**
-   Executives think in compliance and insurance forms, not probabilistic simulation.
-   You may need to educate the market from scratch.
-
-2. **Data Quality Problem**
-   Many factories lack accurate network diagrams.
-   Simulation requires clean architecture data.
-
-3. **Big Vendor Gravity**
-   OT security giants could bolt on “risk scoring” if your differentiation is shallow.
-
-4. **Capital & Time Intensive**
-   Category creation = 3–5 year commitment.
-   Not a side project.
-
-5. **High Technical Complexity**
-   Attack graphs + cyber-physical modeling + financial conversion = non-trivial engineering.
-
-6. **Credibility & Liability Risk**
-   If your model is wrong, trust collapses.
-
-7. **Unclear Buyer Persona**
-   CISO? COO? CFO? Insurer?
-   New categories fail when ownership is ambiguous.
-
----
-
-### When It *Does* Make Sense
-
-* If OT ransomware risk keeps increasing (it is).
-* If insurers demand quantification (they are).
-* If boards want dollar-based exposure (they do).
-* If no dominant simulation platform exists (currently true).
-
----
-
-### The Core Decision
-
-This only makes sense if:
-
-* You are willing to commit 3+ years.
-* You want to build a category, not incremental SaaS.
-* You have unfair advantage (OT + 62443 depth + industry access).
-* You can recruit serious technical talent.
-
----
-
-### Prompt for AI
-Below is a **Codex-ready prompt** you can paste directly.
-It forces strategic thinking, short-term revenue, long-term category creation, and Shodan integration — while thinking in first principles (Elon-style).
-
----
-
-# 📌 PROMPT FOR CODEX
-
-You are acting as a technical cofounder guided by Elon Musk–style first principles thinking.
-
-Your task is to design and help implement a **category-defining product** in industrial cybersecurity, while also creating a short-term revenue engine.
-
-## Context
-
-The goal is to build a new category:
-
-**Industrial Cyber Risk Simulation (ICRS)**
-A computational engine that models ransomware propagation and financial downtime impact in OT environments.
-
-However, I need:
-
-1. **Short-term revenue (0–12 months)** via paid engagements.
-2. **Long-term scalable SaaS product**.
-3. Potential integration with **Shodan API** for external exposure intelligence.
-4. This must be a real product, not just consulting.
-
-Think in systems. Think long-term defensibility. Avoid incremental compliance tooling.
-
----
-
-# 🎯 Core Requirements
-
-Design a system that:
-
-### Phase 1 — Revenue Engine (Immediate)
-
-Create a productized service:
-
-“Factory Cyber Failure Simulation”
-
-Deliverables:
-
-* OT asset mapping intake
-* External exposure analysis (via Shodan API)
-* Basic attack path modeling
-* Blast radius visualization
-* Downtime cost estimation
-* Executive PDF report
-
-This must:
-
-* Be partially automated
-* Be repeatable
-* Be structured as product, not generic consulting
-* Generate $100K+ per engagement
-
-Provide:
-
-* Architecture
-* Data flow
-* Required APIs
-* MVP build steps
-* Suggested tech stack
-
----
-
-### Phase 2 — Category Engine (SaaS)
-
-Design scalable SaaS architecture that:
-
-Inputs:
-
-* OT topology (manual upload initially)
-* Asset lists
-* Segmentation data
-* Remote access info
-* Shodan external exposure data
-
-Engine:
-
-* Graph-based attack path modeling
-* Containment boundary detection
-* Downtime simulation model
-* Financial loss estimator
-* Risk scoring algorithm
-
-Outputs:
-
-* Risk heatmap
-* Lateral movement simulation
-* Financial exposure projection
-* Board-ready dashboard
-
-Must:
-
-* Be multi-tenant
-* Cloud-native
-* API-first
-* Designed for enterprise clients
-
----
-
-# 🔐 Shodan Integration
-
-Explain:
-
-* How to use Shodan API to:
-
-  * Identify exposed industrial services
-  * Detect open ports & protocols
-  * Identify PLC signatures
-  * Pull CVE data
-* How to safely ingest and normalize that data
-* How to avoid legal or compliance issues
-* How to convert Shodan findings into risk weightings
-
-Provide:
-
-* Sample API calls
-* Data schema design
-* Integration flow
-
----
-
-# 🧠 Think Like Elon
-
-When designing:
-
-* Remove unnecessary complexity.
-* Focus on computational modeling, not checklists.
-* Ensure product feels 10x better than consulting reports.
-* Avoid “dashboard bloat.”
-* Optimize for defensibility and category ownership.
-
-If something is weak or incremental, challenge it.
-
----
-
-# 📊 Deliverables From You
-
-1. High-level system architecture diagram (described textually).
-2. MVP feature breakdown (what to build first).
-3. Data model (entities & relationships).
-4. Risk modeling logic (conceptual math).
-5. Shodan integration plan.
-6. Tech stack recommendation.
-7. 6-month build roadmap.
-8. Monetization strategy (short-term + long-term).
-9. Clear differentiation vs Claroty / Dragos.
-10. Risks & failure modes.
-
-Be detailed and technical.
-
-Do not give generic startup advice.
-Design like we are building a serious industrial product.
-
-
-
-
-### Writing a curl in python
-response = requests.get('https://api.shodan.io/tools/myip?key=SHODAN_API_KEY')
-        st.write(response.text)
+- Walkthrough guide: `examples/flow_demo/README_FLOW_TEST.md`
+- Input files: `01_assets.csv`, `02_connections.csv`, `03_public_ips_template.csv`
+- Expected outputs: `expected_risk_heatmap.csv`, `expected_top_paths.csv`, `expected_financials.json`
