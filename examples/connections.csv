@@ -1,0 +1,6 @@
+src_asset_id,dst_asset_id,protocol,port,segmentation_boundary
+A5,A4,ssh,22,false
+A4,A3,rdp,3389,true
+A3,A2,opcua,4840,false
+A2,A1,modbus,502,false
+A4,A2,http,8080,true

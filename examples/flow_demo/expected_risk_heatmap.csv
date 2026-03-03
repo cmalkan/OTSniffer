@@ -1,0 +1,6 @@
+id,hostname,criticality,compromise_probability,risk_score
+FW1,perimeter-fw,5,1.0,5.0
+ENG1,eng-workstation,3,1.0,3.0
+PLC1,plc-line1,5,0.4738500000000001,2.3692500000000005
+HIS1,historian,4,0.5850000000000001,2.3400000000000003
+HMI1,hmi-line1,4,0.5265000000000001,2.1060000000000003

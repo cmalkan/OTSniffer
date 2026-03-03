@@ -1,0 +1,6 @@
+id,hostname,ip,type,criticality,vendor,firmware_version,zone
+FW1,perimeter-fw,10.0.0.1,Firewall,5,PaloAlto,11.0,Perimeter
+ENG1,eng-workstation,10.0.1.10,Workstation,3,Dell,Win11,IT
+HIS1,historian,10.0.2.10,Historian,4,AVEVA,2024.1,DMZ
+HMI1,hmi-line1,10.0.3.20,HMI,4,Rockwell,12.2,OT
+PLC1,plc-line1,10.0.3.50,PLC,5,Siemens,4.0,OT
