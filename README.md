@@ -1,65 +1,42 @@
-# OTSniffer
+# OTSniffer (Netlify-first)
 
-OTSniffer is a Streamlit app for **real-time OT cyber risk analysis** using:
+This project is now **Netlify-first** (not Streamlit-first).
 
-- **SBOM/software exposure** (what is exploitable)
-- **Network architecture** (what is reachable)
+The previous Streamlit runtime error (`ModuleNotFoundError: pypdf`) is avoided by removing that dependency from the active path. The analyzer now runs through:
 
-It scores each asset and shows what to fix first.
+- `web/index.html` (frontend UI)
+- `netlify/functions/analyze.js` (serverless risk API)
 
-## Features
+## Deploy on Netlify
 
-- Command-deck style UI with mission controls in sidebar
-- Demo mode (instant run) + file upload mode
-- SBOM JSON + network CSV parsing
-- Per-asset risk ranking and portfolio metrics
-- CSV export of risk ranking
-- Optional Shodan connectivity panel (`SHODAN_API_KEY`)
+1. Push this repo to GitHub.
+2. In Netlify: **Add new site → Import existing project**.
+3. Use these settings:
+   - Publish directory: `web`
+   - Functions directory: `netlify/functions`
+4. Deploy.
 
-## Install
+Optional for live component lookups:
+- Add environment variable `SHODAN_API_KEY` in Netlify site settings.
 
-```bash
-pip install -r requirements.txt
-```
+## What the Netlify app supports
 
-## Run
+- SBOM JSON ingestion
+- Network ingestion from:
+  - CSV (`source,target,zone_trust,segmentation_strength`)
+  - PDF extracted text patterns (e.g., `Level 5 Internet -> L3 DMZ`)
+- Portfolio risk scoring
+- Asset ranking + VIT score visibility
+- Purdue-style graphical network view
+- Optional real-time Shodan search per SBOM component
 
-```bash
-export SHODAN_API_KEY="YOUR_SHODAN_API_KEY"   # optional
-streamlit run dashboard.py
-```
-
-Open http://localhost:8501
-
-## Inputs
-
-### SBOM JSON
-
-```json
-{
-  "components": [
-    {
-      "name": "PLC-1",
-      "asset_type": "plc",
-      "exposed_to_internet": true,
-      "vulnerabilities": [{"severity": "critical"}]
-    }
-  ]
-}
-```
-
-### Network CSV
-
-```csv
-source,target,zone_trust,segmentation_strength
-Internet,PLC-1,untrusted,0.1
-```
-
-`zone_trust`: `untrusted|dmz|trusted`  
-`segmentation_strength`: `0..1` where `1` means strong segmentation.
-
-## Tests
+## Local checks
 
 ```bash
 pytest -q
+node -e "const h=require('./netlify/functions/analyze.js').handler; h({httpMethod:'POST',body:JSON.stringify({sbom:{components:[{name:'PLC-1',asset_type:'plc',exposed_to_internet:true,vulnerabilities:[{severity:'critical'}]}]},network_csv:'source,target,zone_trust,segmentation_strength\nInternet,PLC-1,untrusted,0.1'})}).then(r=>console.log(r.statusCode))"
 ```
+
+## Legacy Streamlit
+
+`dashboard.py` is now a compatibility shim that points users to Netlify deployment.

@@ -7,6 +7,7 @@ from typing import Any, Dict, Iterable, List
 import csv
 import io
 import json
+import re
 
 
 @dataclass
@@ -54,15 +55,7 @@ def _to_bool(value: Any) -> bool:
 
 
 def parse_sbom_json(sbom_text: str) -> List[Dict[str, Any]]:
-    """Parse a minimal CycloneDX-like SBOM JSON into normalized components.
-
-    Expected minimal fields per component:
-      - name
-      - version (optional)
-      - vulnerabilities (optional list of dicts with severity)
-      - exposed_to_internet (optional bool)
-      - asset_type (optional)
-    """
+    """Parse a minimal CycloneDX-like SBOM JSON into normalized components."""
     data = json.loads(sbom_text)
 
     raw_components = data.get("components", []) if isinstance(data, dict) else []
@@ -93,8 +86,6 @@ def parse_network_csv(network_csv_text: str) -> List[Dict[str, Any]]:
     """Parse network architecture CSV edges.
 
     Required columns: source,target,zone_trust,segmentation_strength
-    zone_trust: untrusted|dmz|trusted
-    segmentation_strength: float 0-1 where 1 = strong segmentation
     """
     reader = csv.DictReader(io.StringIO(network_csv_text))
     links: List[Dict[str, Any]] = []
@@ -121,6 +112,44 @@ def parse_network_csv(network_csv_text: str) -> List[Dict[str, Any]]:
         )
 
     return links
+
+
+def _infer_zone_trust(source: str, target: str) -> str:
+    line = f"{source} {target}".lower()
+    if any(x in line for x in {"internet", "external", "level 5", "level5", "corp"}):
+        return "untrusted"
+    if "dmz" in line or "level 3.5" in line:
+        return "dmz"
+    return "trusted"
+
+
+def parse_network_pdf_text(pdf_text: str) -> List[Dict[str, Any]]:
+    """Parse extracted PDF text into network links.
+
+    Looks for patterns like: "Level 3 SCADA -> Level 2 PLC".
+    """
+    pattern = re.compile(r"([A-Za-z0-9 ._\-/()]+?)\s*(?:->|→|=>|to)\s*([A-Za-z0-9 ._\-/()]+)")
+    links: List[Dict[str, Any]] = []
+
+    for line in pdf_text.splitlines():
+        for source, target in pattern.findall(line):
+            src = source.strip(" -:\t")
+            dst = target.strip(" -:\t")
+            if not src or not dst:
+                continue
+            trust = _infer_zone_trust(src, dst)
+            segmentation = 0.35 if trust == "untrusted" else (0.55 if trust == "dmz" else 0.75)
+            links.append(
+                {
+                    "source": src,
+                    "target": dst,
+                    "zone_trust": trust,
+                    "segmentation_strength": segmentation,
+                }
+            )
+
+    deduped = {(l["source"], l["target"], l["zone_trust"]): l for l in links}
+    return list(deduped.values())
 
 
 def _vulnerability_score(vulns: Iterable[Dict[str, Any]]) -> float:
@@ -159,6 +188,7 @@ def compute_risk(assets: List[Dict[str, Any]], links: List[Dict[str, Any]]) -> R
                 **asset,
                 "risk_score": round(score, 2),
                 "inbound_links": len(inbound),
+                "vit_score": round(vuln, 2),
             }
         )
 
@@ -170,7 +200,9 @@ def compute_risk(assets: List[Dict[str, Any]], links: List[Dict[str, Any]]) -> R
     max_asset = max(a["risk_score"] for a in enriched_assets)
     internet_exposed_count = sum(1 for a in enriched_assets if a["exposed_to_internet"])
     vulnerable_component_count = sum(1 for a in enriched_assets if a["vulnerabilities"])
-    critical_link_count = sum(1 for l in links if l["zone_trust"] == "untrusted" and l["segmentation_strength"] < 0.5)
+    critical_link_count = sum(
+        1 for l in links if l["zone_trust"] == "untrusted" and l["segmentation_strength"] < 0.5
+    )
 
     summary = RiskSummary(
         overall_score=round(overall, 2),

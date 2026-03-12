@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer Command Center</title>
+  <style>
+    :root {
+      --bg: #061225;
+      --panel: #0c1b31;
+      --panel-2: #102642;
+      --text: #e7f6ff;
+      --muted: #8aa2bd;
+      --accent: #1ecad3;
+      --accent2: #58e09d;
+      --danger: #ff6b6b;
+      --warn: #ffb74d;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: linear-gradient(180deg, var(--bg), #08172a); color: var(--text); font-family: Inter, Segoe UI, Arial, sans-serif; }
+    .wrap { max-width: 1280px; margin: 18px auto; padding: 0 16px; }
+    .top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom: 12px; }
+    .title { font-size: 28px; font-weight: 700; }
+    .sub { color: var(--muted); }
+    .grid { display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; }
+    .card { background: var(--panel); border:1px solid #173354; border-radius: 14px; padding:14px; }
+    .kpis { display:grid; grid-template-columns: repeat(4,1fr); gap:10px; margin-top: 10px; }
+    .kpi { background: var(--panel-2); border:1px solid #22466d; border-radius:10px; padding:10px; }
+    .kpi .label { color:var(--muted); font-size:12px; }
+    .kpi .value { font-size:20px; font-weight:700; margin-top:4px; }
+    textarea { width:100%; min-height:150px; border-radius:10px; border:1px solid #2b4e73; background:#08172a; color:var(--text); padding:10px; }
+    .row { display:flex; gap:8px; align-items:center; flex-wrap: wrap; }
+    button { background: linear-gradient(90deg,var(--accent),#20a6d0); border:none; color:#032027; padding:10px 14px; font-weight:700; border-radius:10px; cursor:pointer; }
+    button.secondary { background:#173354; color:var(--text); }
+    table { width:100%; border-collapse:collapse; margin-top:8px; }
+    th,td { border-bottom:1px solid #1f3f62; text-align:left; padding:8px; font-size:13px; }
+    .small { color:var(--muted); font-size:12px; }
+    .ok { color: var(--accent2); }
+    .err { color: var(--danger); }
+    .tabs { display:flex; gap:8px; margin: 10px 0; }
+    .tab { padding:8px 10px; border-radius:8px; border:1px solid #244a70; cursor:pointer; color:var(--muted); }
+    .tab.active { color:var(--text); background:#123255; }
+    .hidden { display:none; }
+    svg { width:100%; height:460px; background:#08172a; border:1px solid #22466d; border-radius:10px; }
+    .pill { border-radius:999px; padding:4px 10px; border:1px solid #234b72; color:var(--muted); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="title">⚡ OTSniffer Netlify Command Center</div>
+      <div class="sub">Malkan-style palette · risk = exploitability × reachability × criticality</div>
+    </div>
+    <div class="pill">Netlify-first (no Streamlit required)</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Inputs</h3>
+      <div class="small">1) SBOM JSON 2) Network CSV or PDF extracted text</div>
+      <label class="small">SBOM JSON</label>
+      <textarea id="sbom"></textarea>
+      <div style="height:8px"></div>
+      <div class="row">
+        <label><input type="radio" name="netmode" value="csv" checked> Network CSV</label>
+        <label><input type="radio" name="netmode" value="pdf"> PDF Extract Text</label>
+      </div>
+      <textarea id="network"></textarea>
+      <div class="row" style="margin-top:8px">
+        <label><input id="enableShodan" type="checkbox"> Enable Shodan component checks</label>
+        <label class="small">limit <input id="shodanLimit" type="number" min="1" max="10" value="5" style="width:60px"></label>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <button id="analyzeBtn">Analyze</button>
+        <button class="secondary" id="loadDemoBtn">Load Demo</button>
+        <span id="status" class="small"></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Snapshot</h3>
+      <div class="kpis">
+        <div class="kpi"><div class="label">Overall Risk</div><div id="kOverall" class="value">-</div></div>
+        <div class="kpi"><div class="label">Max Asset Risk</div><div id="kMax" class="value">-</div></div>
+        <div class="kpi"><div class="label">Internet Exposed</div><div id="kExposed" class="value">-</div></div>
+        <div class="kpi"><div class="label">Weak Untrusted Links</div><div id="kLinks" class="value">-</div></div>
+      </div>
+      <div class="small" style="margin-top:10px">VIT details and Shodan results are shown in tabs below.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="tabs">
+      <div class="tab active" data-tab="risk">Risk Ranking</div>
+      <div class="tab" data-tab="graph">Network Graph</div>
+      <div class="tab" data-tab="vit">SBOM VIT</div>
+      <div class="tab" data-tab="shodan">Shodan</div>
+    </div>
+
+    <div id="tab-risk">
+      <table><thead><tr><th>Asset</th><th>Type</th><th>Risk</th><th>VIT</th><th>Internet</th></tr></thead><tbody id="riskRows"></tbody></table>
+    </div>
+
+    <div id="tab-graph" class="hidden">
+      <svg id="graph"></svg>
+    </div>
+
+    <div id="tab-vit" class="hidden">
+      <table><thead><tr><th>Component</th><th>Version</th><th>Vuln Count</th><th>Severity Trace</th><th>VIT Score</th></tr></thead><tbody id="vitRows"></tbody></table>
+    </div>
+
+    <div id="tab-shodan" class="hidden">
+      <table><thead><tr><th>Component</th><th>Query</th><th>Matches</th></tr></thead><tbody id="shodanRows"></tbody></table>
+      <div class="small">Shodan uses Netlify environment variable <code>SHODAN_API_KEY</code> in the function runtime.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const demoSbom = {
+  components: [
+    {name:"PLC-Line-01",version:"3.1",asset_type:"plc",exposed_to_internet:true,vulnerabilities:[{severity:"critical"},{severity:"high"}]},
+    {name:"SCADA-Master",version:"9.4",asset_type:"scada",vulnerabilities:[{severity:"high"}]},
+    {name:"HMI-Packaging",version:"2.0",asset_type:"hmi",vulnerabilities:[{severity:"medium"}]}
+  ]
+};
+const demoCsv = `source,target,zone_trust,segmentation_strength\nInternet,PLC-Line-01,untrusted,0.1\nL3 DMZ,SCADA-Master,dmz,0.45\nSCADA-Master,HMI-Packaging,trusted,0.7`;
+const demoPdfExtract = `Level 5 Internet -> L3 DMZ\nL3 DMZ -> SCADA-Master\nSCADA-Master -> PLC-Line-01`;
+
+const sbomEl = document.getElementById('sbom');
+const networkEl = document.getElementById('network');
+const statusEl = document.getElementById('status');
+
+function netMode() { return [...document.querySelectorAll('input[name="netmode"]')].find(r => r.checked).value; }
+function setDemo() { sbomEl.value = JSON.stringify(demoSbom, null, 2); networkEl.value = netMode()==='csv' ? demoCsv : demoPdfExtract; }
+setDemo();
+document.getElementById('loadDemoBtn').onclick = setDemo;
+document.querySelectorAll('input[name="netmode"]').forEach(el => el.addEventListener('change', setDemo));
+
+function setTabs() {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.onclick = () => {
+      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      ['risk','graph','vit','shodan'].forEach(id => document.getElementById(`tab-${id}`).classList.add('hidden'));
+      document.getElementById(`tab-${t.dataset.tab}`).classList.remove('hidden');
+    };
+  });
+}
+setTabs();
+
+function td(text){ const x=document.createElement('td'); x.textContent=text; return x; }
+function riskColor(score){ return score>=75?'#ff6b6b':score>=50?'#ffb74d':'#58e09d'; }
+
+function renderRisk(rows){
+  const tb=document.getElementById('riskRows'); tb.innerHTML='';
+  rows.forEach(r=>{
+    const tr=document.createElement('tr');
+    tr.append(td(r.name)); tr.append(td(r.asset_type));
+    const score=td(r.risk_score); score.style.color=riskColor(r.risk_score); score.style.fontWeight='700'; tr.append(score);
+    tr.append(td(r.vit_score)); tr.append(td(r.exposed_to_internet?'yes':'no'));
+    tb.append(tr);
+  });
+}
+
+function renderVit(rows){
+  const tb=document.getElementById('vitRows'); tb.innerHTML='';
+  rows.forEach(r=>{
+    const tr=document.createElement('tr');
+    const trace=(r.vulnerabilities||[]).map(v=>v.severity).join(', ') || 'none';
+    tr.append(td(r.name)); tr.append(td(r.version||'n/a')); tr.append(td((r.vulnerabilities||[]).length)); tr.append(td(trace)); tr.append(td(r.vit_score));
+    tb.append(tr);
+  });
+}
+
+function renderShodan(rows){
+  const tb=document.getElementById('shodanRows'); tb.innerHTML='';
+  if(!rows.length){ const tr=document.createElement('tr'); const cell=td('No results (enable + key not set?)'); cell.colSpan=3; tr.append(cell); tb.append(tr); return; }
+  rows.forEach(r=>{ const tr=document.createElement('tr'); tr.append(td(r.component)); tr.append(td(r.query)); tr.append(td(String(r.matches))); tb.append(tr); });
+}
+
+function levelOf(name){
+  const s=name.toLowerCase();
+  if(s.includes('internet')||s.includes('corp')||s.includes('level 5')) return 'L5';
+  if(s.includes('dmz')||s.includes('3.5')) return 'L3.5';
+  if(s.includes('scada')||s.includes('level 3')) return 'L3';
+  if(s.includes('hmi')||s.includes('level 2')) return 'L2';
+  if(s.includes('plc')||s.includes('level 1')) return 'L1';
+  return 'L0';
+}
+
+function renderGraph(links){
+  const svg=document.getElementById('graph');
+  svg.innerHTML='';
+  const width=svg.clientWidth||1000, height=460;
+  const levels=['L5','L3.5','L3','L2','L1','L0'];
+  const xMap=Object.fromEntries(levels.map((l,i)=>[l, 90+i*150]));
+
+  const nodes=[...new Set(links.flatMap(l=>[l.source,l.target]))];
+  const byLevel={}; levels.forEach(l=>byLevel[l]=[]);
+  nodes.forEach(n=>byLevel[levelOf(n)].push(n));
+  const pos={};
+
+  levels.forEach(level=>{
+    byLevel[level].forEach((n,i)=>{
+      pos[n]={x:xMap[level], y:60+i*70};
+    });
+    const label=document.createElementNS('http://www.w3.org/2000/svg','text');
+    label.setAttribute('x', xMap[level]-25); label.setAttribute('y', 20); label.setAttribute('fill', '#8aa2bd'); label.textContent=level; svg.append(label);
+  });
+
+  links.forEach(l=>{
+    const s=pos[l.source], t=pos[l.target]; if(!s||!t) return;
+    const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+    line.setAttribute('x1', s.x); line.setAttribute('y1', s.y); line.setAttribute('x2', t.x); line.setAttribute('y2', t.y);
+    line.setAttribute('stroke', l.zone_trust==='untrusted'?'#ff6b6b':l.zone_trust==='dmz'?'#ffb74d':'#58e09d'); line.setAttribute('stroke-width','2');
+    svg.append(line);
+  });
+
+  nodes.forEach(n=>{
+    const p=pos[n]; if(!p) return;
+    const rect=document.createElementNS('http://www.w3.org/2000/svg','rect');
+    rect.setAttribute('x', p.x-55); rect.setAttribute('y', p.y-15); rect.setAttribute('width',110); rect.setAttribute('height',26);
+    rect.setAttribute('rx',8); rect.setAttribute('fill','#0c1b31'); rect.setAttribute('stroke','#1ecad3'); svg.append(rect);
+    const txt=document.createElementNS('http://www.w3.org/2000/svg','text');
+    txt.setAttribute('x', p.x); txt.setAttribute('y', p.y+3); txt.setAttribute('text-anchor','middle'); txt.setAttribute('fill','#e7f6ff'); txt.setAttribute('font-size','11'); txt.textContent=n;
+    svg.append(txt);
+  });
+}
+
+async function analyze(){
+  statusEl.textContent='Running analysis...'; statusEl.className='small';
+  try {
+    const payload={ sbom: JSON.parse(sbomEl.value), enable_shodan: document.getElementById('enableShodan').checked, shodan_limit: Number(document.getElementById('shodanLimit').value) };
+    if(netMode()==='csv') payload.network_csv=networkEl.value; else payload.network_pdf_text=networkEl.value;
+
+    const res=await fetch('/.netlify/functions/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+    const data=await res.json();
+    if(!res.ok) throw new Error(data.error || 'analysis failed');
+
+    document.getElementById('kOverall').textContent=`${data.summary.overall_score}/100`;
+    document.getElementById('kMax').textContent=`${data.summary.max_asset_score}/100`;
+    document.getElementById('kExposed').textContent=data.summary.internet_exposed_count;
+    document.getElementById('kLinks').textContent=data.summary.critical_link_count;
+
+    renderRisk(data.assets||[]); renderVit(data.assets||[]); renderGraph(data.links||[]); renderShodan(data.shodan||[]);
+    statusEl.textContent='Done.'; statusEl.className='small ok';
+  } catch (e) {
+    statusEl.textContent=`Error: ${e.message}`; statusEl.className='small err';
+  }
+}
+
+document.getElementById('analyzeBtn').onclick=analyze;
+</script>
+</body>
+</html>
