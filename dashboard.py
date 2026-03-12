@@ -1,33 +1,24 @@
-"""Minimal OT Sniffer dashboard using Shodan."""
+"""Legacy Streamlit entrypoint.
 
-import os
-from typing import Dict
+Netlify is now the primary UI path. This file remains only as a compatibility shim.
+"""
 
-import shodan
 import streamlit as st
 
 
-import requests
-
-
 def main() -> None:
-    ## Titles the streamlit webdashboard 
-    st.title("OTSniffer Dashboard")
-    
-    ##  Sets api_key to Shodan api key from docker file
-    api_key = os.getenv("SHODAN_API_KEY")
-    
-    ## If no key error
-    if not api_key:
-        st.error("Missing SHODAN_API_KEY environment variable")
-        return
-    
-    ## New Shodan class settings the key
-    api = shodan.Shodan(api_key)
+    st.set_page_config(page_title="OTSniffer (legacy)", page_icon="⚡")
+    st.title("OTSniffer")
+    st.info("Streamlit is deprecated for this project. Use the Netlify UI (`web/` + `netlify/functions/`) instead.")
+    st.code(
+        """Netlify deploy quickstart:
+1) Push repo to GitHub
+2) Import project in Netlify
+3) Publish dir: web
+4) Functions dir: netlify/functions
+"""
+    )
 
-    if st.button("My-IP", type="secondary"):
-        response = requests.get('https://api.shodan.io/tools/myip?key=fnWsFlfN9iHRrFahpW12J2ZgvMX2dOBG')
-        st.write(response.text)
 
 if __name__ == "__main__":
     main()
