@@ -5,6 +5,7 @@ Netlify is now the primary UI path. This file remains only as a compatibility sh
 
 import streamlit as st
 
+from risk_engine import compute_risk, parse_network_csv, parse_sbom_json
 
 def main() -> None:
     st.set_page_config(page_title="OTSniffer (legacy)", page_icon="⚡")
