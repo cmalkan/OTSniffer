@@ -3,6 +3,7 @@
   "version": "0.2.1",
   "private": true,
   "scripts": {
-    "build": "node -e \"console.log('netlify build ok')\""
+    "build": "node -e \"console.log('netlify build ok')\"",
+    "test": "node --test tests-js/*.test.mjs"
   }
 }

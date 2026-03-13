@@ -7,3 +7,28 @@
   from = "/api/analyze"
   to = "/.netlify/functions/analyze"
   status = 200
+
+[[redirects]]
+  from = "/api/simulate/blast-radius"
+  to = "/.netlify/functions/simulate-blast-radius"
+  status = 200
+
+[[redirects]]
+  from = "/api/simulate/top-scenarios"
+  to = "/.netlify/functions/simulate-top-scenarios"
+  status = 200
+
+[[redirects]]
+  from = "/api/scenarios/prebuilt"
+  to = "/.netlify/functions/scenarios-prebuilt"
+  status = 200
+
+[[redirects]]
+  from = "/api/assets/:assetId/paths"
+  to = "/.netlify/functions/assets-paths?assetId=:assetId"
+  status = 200
+
+[[redirects]]
+  from = "/api/assets/:assetId/risk"
+  to = "/.netlify/functions/assets-risk?assetId=:assetId"
+  status = 200
