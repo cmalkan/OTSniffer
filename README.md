@@ -1,6 +1,6 @@
 # OTSniffer (Netlify Deployment)
 
-This project is designed to run on **Netlify**.
+This project is designed to run on **Netlify** and presents a command-center UI with a Malkan-style dark blue palette.
 
 ## Deploy to Netlify
 
@@ -20,11 +20,13 @@ This project is designed to run on **Netlify**.
 
 `/api/analyze` redirects to the Netlify function path.
 
-## Netlify notes
+## UI capabilities
 
-- No local database required.
-- All compute is handled in serverless function `netlify/functions/analyze.js`.
-- Frontend is static `web/index.html`.
+- SBOM JSON input
+- Network CSV or PDF-extract text input
+- Portfolio KPI snapshot
+- Tabs for Risk Ranking, Network Graph data, SBOM VIT, and Shodan
+- Optional Shodan component checks if `SHODAN_API_KEY` is configured in Netlify env vars
 
 ## Python tests (repository validation)
 
