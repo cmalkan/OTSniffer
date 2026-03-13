@@ -1,42 +1,33 @@
-# OTSniffer (Netlify-first)
+# OTSniffer (Netlify Deployment)
 
-This project is now **Netlify-first** (not Streamlit-first).
+This project is designed to run on **Netlify**.
 
-The previous Streamlit runtime error (`ModuleNotFoundError: pypdf`) is avoided by removing that dependency from the active path. The analyzer now runs through:
+## Deploy to Netlify
 
-- `web/index.html` (frontend UI)
-- `netlify/functions/analyze.js` (serverless risk API)
-
-## Deploy on Netlify
-
-1. Push this repo to GitHub.
-2. In Netlify: **Add new site → Import existing project**.
-3. Use these settings:
+1. Push this repository to GitHub.
+2. In Netlify, choose **Add new site** → **Import an existing project**.
+3. Select this repo.
+4. Netlify build settings (or from `netlify.toml`):
+   - Build command: `npm run build`
    - Publish directory: `web`
    - Functions directory: `netlify/functions`
-4. Deploy.
+5. Deploy.
 
-Optional for live component lookups:
-- Add environment variable `SHODAN_API_KEY` in Netlify site settings.
+## Runtime endpoints (on Netlify)
 
-## What the Netlify app supports
+- `POST /api/analyze`
+- `POST /.netlify/functions/analyze`
 
-- SBOM JSON ingestion
-- Network ingestion from:
-  - CSV (`source,target,zone_trust,segmentation_strength`)
-  - PDF extracted text patterns (e.g., `Level 5 Internet -> L3 DMZ`)
-- Portfolio risk scoring
-- Asset ranking + VIT score visibility
-- Purdue-style graphical network view
-- Optional real-time Shodan search per SBOM component
+`/api/analyze` redirects to the Netlify function path.
 
-## Local checks
+## Netlify notes
+
+- No local database required.
+- All compute is handled in serverless function `netlify/functions/analyze.js`.
+- Frontend is static `web/index.html`.
+
+## Python tests (repository validation)
 
 ```bash
 pytest -q
-node -e "const h=require('./netlify/functions/analyze.js').handler; h({httpMethod:'POST',body:JSON.stringify({sbom:{components:[{name:'PLC-1',asset_type:'plc',exposed_to_internet:true,vulnerabilities:[{severity:'critical'}]}]},network_csv:'source,target,zone_trust,segmentation_strength\nInternet,PLC-1,untrusted,0.1'})}).then(r=>console.log(r.statusCode))"
 ```
-
-## Legacy Streamlit
-
-`dashboard.py` is now a compatibility shim that points users to Netlify deployment.
