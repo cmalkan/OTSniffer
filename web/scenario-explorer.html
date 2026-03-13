@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scenario Explorer</title>
+  <link rel="stylesheet" href="/web/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div><h1 class="title">Scenario Explorer</h1><div class="subtitle">Trace lateral movement paths, segmentation barriers, affected controllers, and process-function disruption.</div></div>
+    <nav class="nav">
+      <a href="/web/index.html">Operations Dashboard</a>
+      <a class="active" href="/web/scenario-explorer.html">Scenario Explorer</a>
+      <a href="/web/network-graph.html">Network / Graph View</a>
+      <a href="/web/asset-detail.html">Asset Detail</a>
+      <a href="/web/scenario-comparison.html">Scenario Comparison</a>
+    </nav>
+  </div>
+
+  <div class="layout">
+    <aside class="panel filters">
+      <h2>Scenario Controls</h2>
+      <label>Compromised Asset</label><select id="startAsset" class="input"></select>
+      <label>Scenario Preset</label><select id="preset" class="input"></select>
+      <label>Max Depth</label><input id="maxDepth" class="input" type="number" min="1" max="8" value="6" />
+      <label><input type="checkbox" id="includeVuln" checked /> Include vulnerabilities</label>
+      <label><input type="checkbox" id="includeBarriers" checked /> Include segmentation barriers</label>
+      <div class="row"><button class="btn btn-primary" id="runBtn">Run Simulation</button></div>
+
+      <h2 style="margin-top:12px">Score Breakdown</h2>
+      <div id="scoreBreakdown" class="small">Run a scenario to view blast radius, operational impact, path complexity, and confidence.</div>
+
+      <h2 style="margin-top:12px">Segmentation Barriers</h2>
+      <div class="table-wrap" style="max-height:220px"><table><thead><tr><th>From</th><th>To</th><th>Reason</th></tr></thead><tbody id="barrierRows"></tbody></table></div>
+    </aside>
+
+    <main class="panel" data-tabs>
+      <div class="kpi-grid">
+        <div class="kpi"><div class="k">Blast Radius Severity</div><div class="v" id="kSeverity">-</div></div>
+        <div class="kpi"><div class="k">Impacted Assets</div><div class="v" id="kAssets">-</div></div>
+        <div class="kpi"><div class="k">Impacted Zones</div><div class="v" id="kZones">-</div></div>
+        <div class="kpi"><div class="k">Impacted Process Functions</div><div class="v" id="kProcesses">-</div></div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="assets">Impacted Assets</button>
+        <button class="tab" data-tab="zones">Impacted Zones</button>
+        <button class="tab" data-tab="processes">Impacted Process Functions</button>
+        <button class="tab" data-tab="paths">Attack Paths</button>
+      </div>
+
+      <div data-panel="assets" class="panel-inner">
+        <div class="table-wrap"><table><thead><tr><th>Asset</th><th>Type</th><th>Zone</th><th>Hop</th><th>Controllers</th><th>Safety</th><th>Reason</th></tr></thead><tbody id="assetRows"></tbody></table></div>
+      </div>
+      <div data-panel="zones" class="panel-inner hidden"><div class="table-wrap"><table><thead><tr><th>Zone</th><th>Level</th><th>Exposure</th></tr></thead><tbody id="zoneRows"></tbody></table></div></div>
+      <div data-panel="processes" class="panel-inner hidden"><div class="table-wrap"><table><thead><tr><th>Process Function</th><th>Criticality</th><th>Impacted Assets</th></tr></thead><tbody id="processRows"></tbody></table></div></div>
+      <div data-panel="paths" class="panel-inner hidden"><div class="table-wrap"><table><thead><tr><th>Path</th><th>Assets</th><th>Protocol Chain</th><th>Transitions</th><th>Risk</th><th>Inspect</th></tr></thead><tbody id="pathRows"></tbody></table></div></div>
+    </main>
+
+    <aside class="panel drawer">
+      <h2>Path Detail Drawer</h2>
+      <h3>Selected Path Metadata</h3>
+      <div id="pathMeta" class="small">Select a path from Attack Paths table.</div>
+
+      <h3 style="margin-top:12px">Vulnerability Contribution</h3>
+      <div class="table-wrap" style="max-height:230px"><table><thead><tr><th>Asset</th><th>CVE</th><th>Severity</th></tr></thead><tbody id="vulnRows"></tbody></table></div>
+
+      <h3 style="margin-top:12px">Analyst Summary</h3>
+      <div id="analystSummary" class="small">-</div>
+
+      <h3 style="margin-top:12px">Executive Summary</h3>
+      <div id="execSummary" class="small">-</div>
+    </aside>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/web/js/api.js';
+import { severityBadge, setTabs, fillTableBody } from '/web/js/ui.js';
+
+setTabs(document);
+
+const startAsset = document.getElementById('startAsset');
+const preset = document.getElementById('preset');
+let last = null;
+
+async function init() {
+  const [assetsRes, prebuiltRes] = await Promise.all([api.assets(), api.prebuiltScenarios()]);
+  (assetsRes.assets || []).forEach(a => {
+    const opt = document.createElement('option');
+    opt.value = a.asset_id; opt.textContent = `${a.name} (${a.asset_type})`; startAsset.appendChild(opt);
+  });
+  (prebuiltRes.scenarios || []).forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s.start_asset_id; opt.textContent = `${s.title}`; preset.appendChild(opt);
+  });
+
+  const q = new URLSearchParams(location.search);
+  if (q.get('start')) startAsset.value = q.get('start');
+}
+
+preset.addEventListener('change', () => { if (preset.value) startAsset.value = preset.value; });
+
+document.getElementById('runBtn').addEventListener('click', async () => {
+  const body = {
+    start_asset_id: startAsset.value,
+    max_depth: Number(document.getElementById('maxDepth').value || 6),
+    include_vulnerabilities: document.getElementById('includeVuln').checked,
+    include_zone_barriers: document.getElementById('includeBarriers').checked,
+    mode: 'analyst',
+  };
+  last = await api.simulateBlastRadius(body);
+  render(last);
+});
+
+function render(data) {
+  document.getElementById('kSeverity').innerHTML = severityBadge(data.severity_label);
+  document.getElementById('kAssets').textContent = data.total_impacted_assets;
+  document.getElementById('kZones').textContent = data.total_impacted_zones;
+  document.getElementById('kProcesses').textContent = data.total_impacted_processes;
+
+  fillTableBody(document.getElementById('assetRows'), (data.impacted_assets || []).map(a => [
+    a.name, a.asset_type, a.zone_id, a.hop_distance, a.is_critical_controller ? 'yes':'no', a.is_safety_related ? 'yes':'no', a.reachability_reason
+  ]));
+  fillTableBody(document.getElementById('zoneRows'), (data.impacted_zones || []).map(z => [z.zone_name, z.level, 'downstream exposure']));
+  fillTableBody(document.getElementById('processRows'), (data.impacted_processes || []).map(p => [p.name, p.criticality, p.impacted_assets.length]));
+  fillTableBody(document.getElementById('pathRows'), (data.attack_paths || []).map(p => [
+    p.path_id,
+    p.ordered_assets.join(' → '),
+    p.protocols_used.join(', '),
+    p.zone_transitions.join(' → '),
+    p.path_risk_score,
+    `<button class='btn btn-secondary inspect-path' data-id='${p.path_id}'>Inspect</button>`
+  ]));
+  fillTableBody(document.getElementById('barrierRows'), (data.segmentation_barriers_encountered || []).map(b => [b.from_asset_id, b.to_asset_id, b.reason]));
+  fillTableBody(document.getElementById('vulnRows'), (data.exploited_or_exploitable_vulnerabilities || []).map(v => [v.asset_id, v.cve, v.severity]));
+
+  document.getElementById('analystSummary').textContent = data.analyst_summary;
+  document.getElementById('execSummary').textContent = data.executive_summary;
+  document.getElementById('scoreBreakdown').innerHTML = `risk_score=${data.risk_score}, blast_radius_score=${data.blast_radius_score}, operational_impact_score=${data.operational_impact_score}, path_complexity_score=${data.path_complexity_score}, confidence_score=${data.confidence_score}`;
+
+  document.querySelectorAll('.inspect-path').forEach(btn => btn.addEventListener('click', () => {
+    const path = (data.attack_paths || []).find(p => p.path_id === btn.dataset.id);
+    if (!path) return;
+    document.getElementById('pathMeta').innerHTML = `Path <b>${path.path_id}</b><br/>${path.path_explanation}<br/>Assets: ${path.ordered_assets.join(' → ')}`;
+  }));
+}
+
+init().catch((e) => { document.getElementById('analystSummary').textContent = e.message; });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "plant_id": "plant-alpha",
+  "plant_name": "Alpha Combined Cycle Energy Plant",
+  "sector": "energy",
+  "zones": [
+    {"zone_id":"z_dmz","name":"OT DMZ","level":"L3.5","description":"Boundary and brokering"},
+    {"zone_id":"z_ops","name":"Operations Control","level":"L3","description":"SCADA and historian"},
+    {"zone_id":"z_cell1","name":"Turbine Cell","level":"L2","description":"HMI and engineering workstation"},
+    {"zone_id":"z_process","name":"Process Control","level":"L1","description":"PLCs and safety"}
+  ],
+  "assets": [
+    {"asset_id":"a_scada_01","name":"SCADA Core 01","asset_type":"scada-server","vendor":"Siemens","model":"WinCC OA","firmware_version":"3.18","ip_address":"10.20.3.10","zone_id":"z_ops","criticality_score":9,"process_tag":"power_dispatch"},
+    {"asset_id":"a_hist_01","name":"Plant Historian","asset_type":"historian","vendor":"AVEVA","model":"PI-like","firmware_version":"2023.2","ip_address":"10.20.3.20","zone_id":"z_ops","criticality_score":8,"process_tag":"ops_visibility"},
+    {"asset_id":"a_hmi_01","name":"Turbine HMI","asset_type":"hmi","vendor":"Rockwell","model":"PanelView","firmware_version":"12.1","ip_address":"10.20.2.15","zone_id":"z_cell1","criticality_score":9,"process_tag":"turbine_control"},
+    {"asset_id":"a_eng_01","name":"Engineering WS","asset_type":"engineering-workstation","vendor":"Honeywell","model":"EngStation","firmware_version":"5.4","ip_address":"10.20.2.30","zone_id":"z_cell1","criticality_score":7,"process_tag":"logic_changes"},
+    {"asset_id":"a_plc_01","name":"Boiler PLC","asset_type":"plc","vendor":"Schneider","model":"M580","firmware_version":"2.90","ip_address":"10.20.1.11","zone_id":"z_process","criticality_score":10,"process_tag":"boiler_control"},
+    {"asset_id":"a_sis_01","name":"SIS Controller","asset_type":"safety-controller","vendor":"HIMA","model":"HIMax","firmware_version":"5.2","ip_address":"10.20.1.50","zone_id":"z_process","criticality_score":10,"process_tag":"trip_safety"}
+  ],
+  "vulnerabilities": [
+    {"vuln_id":"v1","cve":"CVE-2024-1111","description":"Auth bypass in web HMI component","severity":"high","exploitability":0.7,"affected_vendor":"Rockwell","affected_product":"PanelView","affected_version":"12.1","asset_id":"a_hmi_01"},
+    {"vuln_id":"v2","cve":"CVE-2023-9988","description":"Unsafe project import leads to RCE","severity":"critical","exploitability":0.9,"affected_vendor":"Honeywell","affected_product":"EngStation","affected_version":"5.4","asset_id":"a_eng_01"},
+    {"vuln_id":"v3","cve":"CVE-2022-7123","description":"Protocol stack crash vulnerability","severity":"medium","exploitability":0.4,"affected_vendor":"Schneider","affected_product":"M580","affected_version":"2.90","asset_id":"a_plc_01"}
+  ],
+  "connectivity": [
+    {"source_asset_id":"a_scada_01","target_asset_id":"a_hmi_01","protocol":"opc-ua","port":4840,"trust_level":"high","allowed_direction":"bi"},
+    {"source_asset_id":"a_hmi_01","target_asset_id":"a_plc_01","protocol":"modbus-tcp","port":502,"trust_level":"high","allowed_direction":"bi"},
+    {"source_asset_id":"a_eng_01","target_asset_id":"a_plc_01","protocol":"s7","port":102,"trust_level":"medium","allowed_direction":"bi"},
+    {"source_asset_id":"a_plc_01","target_asset_id":"a_sis_01","protocol":"profinet","port":34964,"trust_level":"medium","allowed_direction":"uni"},
+    {"source_asset_id":"a_hist_01","target_asset_id":"a_scada_01","protocol":"https","port":443,"trust_level":"high","allowed_direction":"uni"}
+  ],
+  "process_functions": [
+    {"process_id":"p1","name":"Power Dispatch","criticality":10,"primary_zone_id":"z_ops","dependent_asset_ids":["a_scada_01","a_hist_01"]},
+    {"process_id":"p2","name":"Turbine Control","criticality":10,"primary_zone_id":"z_cell1","dependent_asset_ids":["a_hmi_01","a_plc_01"]},
+    {"process_id":"p3","name":"Safety Trip Logic","criticality":10,"primary_zone_id":"z_process","dependent_asset_ids":["a_sis_01","a_plc_01"]}
+  ],
+  "demo_scenarios": [
+    {"scenario_id":"s1","title":"Engineering workstation compromise","compromised_asset_id":"a_eng_01","intent":"Evaluate potential impact on PLC and process safety"},
+    {"scenario_id":"s2","title":"HMI ransomware foothold","compromised_asset_id":"a_hmi_01","intent":"Map spread to PLC and control function"}
+  ]
+}
