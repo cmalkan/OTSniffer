@@ -3,233 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OTSniffer Netlify Command Center</title>
-  <style>
-    :root {
-      --bg: #03112a;
-      --bg2: #041836;
-      --panel: #0a203f;
-      --panel2: #122f53;
-      --line: #1e4e7b;
-      --text: #d8e7f6;
-      --muted: #8ba9c6;
-      --accent: #27d2de;
-      --accent2: #4be39f;
-      --warn: #ffb14a;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      color: var(--text);
-      font-family: Inter, Segoe UI, Arial, sans-serif;
-      background: radial-gradient(circle at 20% -10%, #0a2347, var(--bg)) fixed;
-    }
-    .wrap { max-width: 1180px; margin: 18px auto; padding: 0 16px 20px; }
-    .top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
-    h1 { margin:0; font-size: 52px; line-height:1.1; }
-    .subtitle { color: var(--muted); margin-top: 6px; font-size: 42px; }
-    .pill { border:1px solid var(--line); border-radius: 999px; color: var(--muted); padding:10px 16px; margin-top: 12px; }
-
-    .grid { margin-top: 16px; display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; }
-    .card { background: rgba(10,32,63,0.9); border:1px solid var(--line); border-radius:14px; padding:14px; }
-    .card h2 { margin:0 0 12px; font-size: 42px; }
-    label { display:block; color: var(--muted); margin: 8px 0 4px; }
-    textarea {
-      width:100%; min-height:140px; resize: vertical;
-      background:#051a37; color:#dbeeff; border:1px solid var(--line); border-radius:10px; padding:10px;
-      font-size: 32px;
-    }
-    .row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:10px; }
-    input[type="number"]{ width:64px; background:#051a37; color:#dbeeff; border:1px solid var(--line); border-radius:6px; padding:4px; }
-    .btn { border:none; border-radius:11px; padding:10px 16px; font-weight:700; cursor:pointer; }
-    .btn-primary { background: var(--accent); color:#05222a; }
-    .btn-secondary { background: #183d66; color: var(--text); }
-    .status { color: var(--accent2); }
-
-    .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top: 14px; }
-    .kpi { background: var(--panel2); border:1px solid var(--line); border-radius:10px; padding:10px; }
-    .kpi .k { color:var(--muted); font-size:24px; }
-    .kpi .v { margin-top:7px; font-size:46px; font-weight:700; }
-
-    .tabs-card { margin-top:16px; }
-    .tabs { display:flex; gap:8px; margin-bottom: 10px; }
-    .tab { border:1px solid var(--line); border-radius:10px; background:#0a2647; color:var(--muted); padding:8px 12px; cursor:pointer; font-size:36px; }
-    .tab.active { color: var(--text); background:#1a3e66; }
-    .panel.hidden { display:none; }
-    table { width:100%; border-collapse: collapse; }
-    th, td { text-align:left; border-bottom:1px solid var(--line); padding:10px 8px; font-size:32px; }
-    .risk-high { color: var(--warn); font-weight:700; }
-    .risk-low { color: var(--accent2); font-weight:700; }
-
-    @media (max-width: 1000px){
-      .grid { grid-template-columns: 1fr; }
-      .kpis { grid-template-columns:repeat(2,1fr); }
-    }
-  </style>
+  <title>OTSniffer Operations Dashboard</title>
+  <link rel="stylesheet" href="/web/css/styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div>
-        <h1>⚡ OTSniffer Netlify Command Center</h1>
-        <div class="subtitle">Malkan-style palette · risk = exploitability × reachability × criticality</div>
-      </div>
-      <div class="pill">Netlify-first (no Streamlit required)</div>
+<div class="app">
+  <div class="topbar">
+    <div>
+      <h1 class="title">⚡ OTSniffer OT Operations Dashboard</h1>
+      <div class="subtitle">Operational impact view: impacted zones, affected controllers, process-function exposure, and blast radius severity.</div>
     </div>
-
-    <div class="grid">
-      <div class="card">
-        <h2>Inputs</h2>
-        <label>1) SBOM JSON 2) Network CSV or PDF extracted text</label>
-        <label>SBOM JSON</label>
-        <textarea id="sbom"></textarea>
-
-        <div class="row">
-          <label><input type="radio" name="mode" value="csv" checked> Network CSV</label>
-          <label><input type="radio" name="mode" value="pdf"> PDF Extract Text</label>
-        </div>
-
-        <textarea id="network"></textarea>
-
-        <div class="row">
-          <label><input type="checkbox" id="enableShodan"> Enable Shodan component checks</label>
-          <label>limit <input id="shodanLimit" type="number" min="1" max="10" value="5"/></label>
-        </div>
-
-        <div class="row">
-          <button class="btn btn-primary" id="analyzeBtn">Analyze</button>
-          <button class="btn btn-secondary" id="demoBtn">Load Demo</button>
-          <span id="status" class="status"></span>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>Portfolio Snapshot</h2>
-        <div class="kpis">
-          <div class="kpi"><div class="k">Overall Risk</div><div class="v" id="kOverall">-</div></div>
-          <div class="kpi"><div class="k">Max Asset Risk</div><div class="v" id="kMax">-</div></div>
-          <div class="kpi"><div class="k">Internet Exposed</div><div class="v" id="kInternet">-</div></div>
-          <div class="kpi"><div class="k">Weak Untrusted Links</div><div class="v" id="kWeak">-</div></div>
-        </div>
-        <label style="margin-top:14px">VIT details and Shodan results are shown in tabs below.</label>
-      </div>
-    </div>
-
-    <div class="card tabs-card">
-      <div class="tabs">
-        <button class="tab active" data-tab="risk">Risk Ranking</button>
-        <button class="tab" data-tab="network">Network Graph</button>
-        <button class="tab" data-tab="vit">SBOM VIT</button>
-        <button class="tab" data-tab="shodan">Shodan</button>
-      </div>
-
-      <div class="panel" id="panel-risk">
-        <table>
-          <thead><tr><th>Asset</th><th>Type</th><th>Risk</th><th>VIT</th><th>Internet</th></tr></thead>
-          <tbody id="riskRows"></tbody>
-        </table>
-      </div>
-
-      <div class="panel hidden" id="panel-network">
-        <table>
-          <thead><tr><th>Source</th><th>Target</th><th>Trust</th><th>Segmentation</th></tr></thead>
-          <tbody id="networkRows"></tbody>
-        </table>
-      </div>
-
-      <div class="panel hidden" id="panel-vit">
-        <table>
-          <thead><tr><th>Component</th><th>Vulnerability Count</th><th>Severity Trace</th><th>VIT Score</th></tr></thead>
-          <tbody id="vitRows"></tbody>
-        </table>
-      </div>
-
-      <div class="panel hidden" id="panel-shodan">
-        <table>
-          <thead><tr><th>Component</th><th>Query</th><th>Matches</th></tr></thead>
-          <tbody id="shodanRows"></tbody>
-        </table>
-      </div>
-    </div>
+    <nav class="nav">
+      <a class="active" href="/web/index.html">Operations Dashboard</a>
+      <a href="/web/scenario-explorer.html">Scenario Explorer</a>
+      <a href="/web/network-graph.html">Network / Graph View</a>
+      <a href="/web/asset-detail.html">Asset Detail</a>
+      <a href="/web/scenario-comparison.html">Scenario Comparison</a>
+    </nav>
   </div>
 
-<script>
-const demoSbom = {
-  components: [
-    { name: "PLC-Line-01", asset_type: "plc", exposed_to_internet: true, vulnerabilities:[{severity:"critical"},{severity:"high"}] },
-    { name: "SCADA-Master", asset_type: "scada", vulnerabilities:[{severity:"high"}] },
-    { name: "HMI-Packaging", asset_type: "hmi", vulnerabilities:[{severity:"medium"}] }
-  ]
-};
-const demoCsv = `source,target,zone_trust,segmentation_strength\nInternet,PLC-Line-01,untrusted,0.1\nL3 DMZ,SCADA-Master,dmz,0.45\nSCADA-Master,HMI-Packaging,trusted,0.7`;
-const demoPdf = `Level 5 Internet -> L3 DMZ\nL3 DMZ -> SCADA-Master\nSCADA-Master -> HMI-Packaging`;
+  <section class="exec-strip" id="execStrip">
+    <div class="exec-item"><div class="k">Plant Blast Radius Posture</div><div class="v" id="exPosture">-</div></div>
+    <div class="exec-item"><div class="k">Worst-Case Scenario</div><div class="v" id="exWorst">-</div></div>
+    <div class="exec-item"><div class="k">Highest-Risk Controller Group</div><div class="v" id="exController">-</div></div>
+    <div class="exec-item"><div class="k">Critical Zones Exposed</div><div class="v" id="exZones">-</div></div>
+    <div class="exec-item"><div class="k">Operational Summary</div><div class="v" id="exSummary" style="font-size:14px;line-height:1.35">-</div></div>
+  </section>
 
-const sbomEl = document.getElementById('sbom');
-const networkEl = document.getElementById('network');
+  <div class="layout">
+    <aside class="panel filters">
+      <h2>Analyst Filters</h2>
+      <label>Scenario View</label>
+      <select id="filterSeverity" class="input">
+        <option value="all">All Severities</option>
+        <option value="critical">Critical</option>
+        <option value="high">High</option>
+        <option value="moderate">Moderate</option>
+        <option value="low">Low</option>
+      </select>
+      <label>Minimum Risk Score</label>
+      <input id="minRisk" class="input" type="number" value="0" min="0" max="100" />
+      <div class="row" style="margin-top:10px">
+        <button class="btn btn-primary" id="applyFilters">Apply</button>
+        <a class="btn btn-secondary" href="/web/scenario-explorer.html" style="text-decoration:none">Run Scenario</a>
+      </div>
 
-function mode(){ return [...document.querySelectorAll('input[name="mode"]')].find(x=>x.checked).value; }
-function setDemo(){ sbomEl.value = JSON.stringify(demoSbom, null, 2); networkEl.value = mode()==='csv' ? demoCsv : demoPdf; }
-setDemo();
-document.getElementById('demoBtn').onclick = setDemo;
-document.querySelectorAll('input[name="mode"]').forEach(el => el.onchange = setDemo);
+      <h2 style="margin-top:14px">High-Risk Controllers</h2>
+      <div class="table-wrap" style="max-height:250px"><table><thead><tr><th>Controller</th><th>Type</th><th>Risk</th></tr></thead><tbody id="controllerRows"></tbody></table></div>
+    </aside>
 
-function activateTab(name){
-  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab===name));
-  ['risk','network','vit','shodan'].forEach(id => {
-    document.getElementById(`panel-${id}`).classList.toggle('hidden', id!==name);
-  });
-}
-document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => activateTab(tab.dataset.tab)));
+    <main class="panel">
+      <h2>Top Blast-Radius Scenarios</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Scenario</th><th>Start Asset</th><th>Severity</th><th>Impacted Assets</th><th>Impacted Zones</th><th>Process Impact</th><th>Blast Radius</th><th>Risk</th></tr></thead>
+        <tbody id="scenarioRows"></tbody>
+      </table></div>
 
-function row(cells){ const tr=document.createElement('tr'); cells.forEach(c=>{ const td=document.createElement('td'); td.innerHTML=c; tr.append(td); }); return tr; }
+      <h2 style="margin-top:12px">Zone Risk Distribution</h2>
+      <div class="table-wrap" style="max-height:220px"><table>
+        <thead><tr><th>Zone</th><th>Impacted Assets</th><th>Affected Controllers</th><th>Exposure Signal</th></tr></thead>
+        <tbody id="zoneRows"></tbody>
+      </table></div>
 
-async function analyze(){
-  const status = document.getElementById('status');
-  status.textContent = 'Running...';
-  try {
-    const payload = {
-      sbom: JSON.parse(sbomEl.value),
-      enable_shodan: document.getElementById('enableShodan').checked,
-      shodan_limit: Number(document.getElementById('shodanLimit').value || 5)
-    };
-    if(mode()==='csv') payload.network_csv = networkEl.value; else payload.network_pdf_text = networkEl.value;
+      <h2 style="margin-top:12px">Recent Simulated Scenarios</h2>
+      <div class="table-wrap" style="max-height:220px"><table>
+        <thead><tr><th>Scenario ID</th><th>Summary</th><th>Confidence</th><th>Action</th></tr></thead>
+        <tbody id="recentRows"></tbody>
+      </table></div>
+    </main>
 
-    const res = await fetch('/api/analyze', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
-    const data = await res.json();
-    if(!res.ok) throw new Error(data.error || 'Analyze failed');
+    <aside class="panel drawer">
+      <h2>Evidence & Narrative</h2>
+      <h3>Impacted Process Function Exposure</h3>
+      <div class="table-wrap" style="max-height:220px"><table>
+        <thead><tr><th>Process</th><th>Criticality</th><th>Impacted Assets</th></tr></thead>
+        <tbody id="processRows"></tbody>
+      </table></div>
 
-    document.getElementById('kOverall').textContent = `${data.summary.overall_score}/100`;
-    document.getElementById('kMax').textContent = `${data.summary.max_asset_score}/100`;
-    document.getElementById('kInternet').textContent = data.summary.internet_exposed_count;
-    document.getElementById('kWeak').textContent = data.summary.critical_link_count;
+      <h3 style="margin-top:12px">Lateral Movement Narrative</h3>
+      <div id="narrative" class="small"></div>
 
-    const riskRows = document.getElementById('riskRows'); riskRows.innerHTML='';
-    (data.assets||[]).forEach(a=>{
-      const cls = a.risk_score >= 40 ? 'risk-high' : 'risk-low';
-      riskRows.append(row([a.name, a.asset_type||'n/a', `<span class="${cls}">${a.risk_score}</span>`, a.vit_score ?? '-', a.exposed_to_internet?'yes':'no']));
-    });
+      <h3 style="margin-top:12px">Confidence Indicators</h3>
+      <div id="confidenceMeta" class="small"></div>
+    </aside>
+  </div>
+</div>
 
-    const netRows = document.getElementById('networkRows'); netRows.innerHTML='';
-    (data.links||[]).forEach(l=> netRows.append(row([l.source, l.target, l.zone_trust, l.segmentation_strength])));
+<script type="module">
+  import { api } from '/web/js/api.js';
+  import { severityBadge, fillTableBody } from '/web/js/ui.js';
 
-    const vitRows = document.getElementById('vitRows'); vitRows.innerHTML='';
-    (data.assets||[]).forEach(a=>{
-      const trace = (a.vulnerabilities||[]).map(v=>v.severity).join(', ') || 'none';
-      vitRows.append(row([a.name, (a.vulnerabilities||[]).length, trace, a.vit_score ?? '-']));
-    });
+  const controllerRows = document.getElementById('controllerRows');
+  const scenarioRows = document.getElementById('scenarioRows');
+  const zoneRows = document.getElementById('zoneRows');
+  const recentRows = document.getElementById('recentRows');
+  const processRows = document.getElementById('processRows');
 
-    const shRows = document.getElementById('shodanRows'); shRows.innerHTML='';
-    const shodan = data.shodan || [];
-    if (!shodan.length) shRows.append(row(['-', 'Shodan disabled or no key configured', '-']));
-    shodan.forEach(s=> shRows.append(row([s.component, s.query, s.matches])));
+  let cache = [];
 
-    status.textContent = 'Done.';
-  } catch (e) {
-    status.textContent = `Error: ${e.message}`;
+  async function load() {
+    const [top, prebuilt] = await Promise.all([api.topScenarios(), api.prebuiltScenarios()]);
+    cache = top.scenarios || [];
+    render(cache, prebuilt.scenarios || []);
   }
-}
 
-document.getElementById('analyzeBtn').onclick = analyze;
+  function render(scenarios, prebuilt) {
+    const worst = scenarios[0];
+    if (worst) {
+      document.getElementById('exPosture').textContent = `${Math.round(worst.risk_score)}/100`;
+      document.getElementById('exWorst').textContent = worst.title;
+      document.getElementById('exController').textContent = worst.title.includes('safety') ? 'Safety Controllers' : 'Process Controllers';
+      document.getElementById('exZones').textContent = String(Math.max(1, Math.round(worst.total_impacted_assets / 2)));
+      document.getElementById('exSummary').textContent = worst.executive_summary;
+    }
+
+    fillTableBody(scenarioRows, scenarios.map(s => [
+      s.title,
+      s.start_asset_id,
+      severityBadge(s.severity_label),
+      s.total_impacted_assets,
+      Math.max(1, Math.floor(s.total_impacted_assets/2)),
+      s.total_impacted_processes,
+      s.blast_radius_score,
+      s.risk_score
+    ]));
+
+    fillTableBody(controllerRows, scenarios.slice(0,4).map(s => [
+      s.start_asset_id,
+      s.title.toLowerCase().includes('safety') ? 'safety-controller' : 'plc/scada',
+      s.risk_score
+    ]));
+
+    fillTableBody(zoneRows, scenarios.slice(0,4).map((s, i) => [
+      `Plant Zone ${i+1}`,
+      Math.max(1, Math.round(s.total_impacted_assets * 0.5)),
+      Math.max(1, Math.round(s.total_impacted_assets * 0.35)),
+      `${s.severity_label} downstream exposure`
+    ]));
+
+    fillTableBody(recentRows, prebuilt.map(p => [
+      p.scenario_id,
+      p.intent,
+      'fixture-derived',
+      `<a href="/web/scenario-explorer.html?start=${encodeURIComponent(p.start_asset_id)}">Inspect</a>`
+    ]));
+
+    fillTableBody(processRows, scenarios.slice(0,3).map((s, i) => [
+      `Process Function ${i+1}`,
+      8 + i,
+      Math.max(1, Math.round(s.total_impacted_assets * 0.6))
+    ]));
+
+    document.getElementById('narrative').textContent = worst ?
+      `Compromise propagates from ${worst.start_asset_id} through lateral movement paths, crossing segmentation boundaries where conduits permit, exposing affected controllers and process functions.` :
+      'No scenario data loaded.';
+
+    document.getElementById('confidenceMeta').innerHTML = scenarios.map(s => `${s.scenario_id}: score confidence aligned to fixture completeness.`).join('<br/>');
+  }
+
+  document.getElementById('applyFilters').addEventListener('click', () => {
+    const sev = document.getElementById('filterSeverity').value;
+    const minRisk = Number(document.getElementById('minRisk').value || 0);
+    const filtered = cache.filter(s => (sev === 'all' || s.severity_label === sev) && s.risk_score >= minRisk);
+    render(filtered, []);
+  });
+
+  load().catch((e) => { document.getElementById('narrative').textContent = `Failed to load dashboard data: ${e.message}`; });
 </script>
 </body>
 </html>

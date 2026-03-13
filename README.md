@@ -1,88 +1,62 @@
 # OTSniffer — Netlify OT Blast Radius Demo
 
-Netlify-first OT cyber simulation demo focused on **post-DMZ operational impact**.
+Dense analyst-grade OT cyber simulation demo for Netlify.
 
-## Architecture (single Netlify deployment)
+## Deployment model (unchanged)
+- Single repository
+- Single Netlify deployment
+- Static frontend under `web/`
+- Netlify Functions under `netlify/functions/`
+- JSON fixture data under `data/`
+- No external backend hosting or local DB dependency
 
-- Static frontend: `web/index.html`
-- Serverless APIs: `netlify/functions/*.js`
-- Shared simulation engine modules:
-  - `netlify/functions/_shared/data.js`
-  - `netlify/functions/_shared/simulation.js`
-  - `netlify/functions/_shared/scoring.js`
-- Demo plant fixture: `data/plant-demo.json`
+## Frontend route/page structure
+- `/web/index.html` — Operations Dashboard
+- `/web/scenario-explorer.html` — Scenario Explorer
+- `/web/network-graph.html` — Network / Graph View
+- `/web/asset-detail.html` — Asset Detail View
+- `/web/scenario-comparison.html` — Scenario Comparison View
 
-No local DB, no separate backend hosting.
+## API route mapping (Netlify redirects)
+- `POST /api/analyze` → `/.netlify/functions/analyze`
+- `POST /api/simulate/blast-radius` → `/.netlify/functions/simulate-blast-radius`
+- `GET /api/simulate/top-scenarios` → `/.netlify/functions/simulate-top-scenarios`
+- `GET /api/assets/:assetId/paths` → `/.netlify/functions/assets-paths?assetId=:assetId`
+- `GET /api/assets/:assetId/risk` → `/.netlify/functions/assets-risk?assetId=:assetId`
+- `GET /api/scenarios/prebuilt` → `/.netlify/functions/scenarios-prebuilt`
 
-## API contracts
+## Shared simulation services
+- `netlify/functions/_shared/data.js` — fixture loading + indexing
+- `netlify/functions/_shared/scoring.js` — explainable scoring factors
+- `netlify/functions/_shared/simulation.js` — traversal, attack paths, summaries
 
-### POST `/api/simulate/blast-radius`
-Request:
-
-```json
-{
-  "start_asset_id": "a_eng_01",
-  "max_depth": 6,
-  "include_vulnerabilities": true,
-  "include_zone_barriers": true,
-  "mode": "analyst"
-}
-```
-
-Response includes:
-- start asset metadata
-- impacted assets / zones / process functions
-- controller reachability
-- attack paths and explanations
-- segmentation barriers encountered
-- exploitable vulnerabilities
-- blast radius, risk, operational impact, confidence, severity
-- analyst + executive summaries
-
-### GET `/api/simulate/top-scenarios`
-Returns ranked scenarios (engineering workstation, HMI, etc.) with risk and impact summaries.
-
-### GET `/api/assets/:assetId/paths`
-Returns path drilldowns from the selected compromised asset.
-
-### GET `/api/assets/:assetId/risk`
-Returns risk/severity summary for the selected compromised asset.
-
-### GET `/api/scenarios/prebuilt`
-Returns deterministic prebuilt scenario definitions from fixture data.
-
-## Netlify deployment
-
-1. Push repo to GitHub.
-2. Netlify → Add new site → Import existing project.
-3. Build settings from `netlify.toml`:
-   - build command: `npm run build`
-   - publish directory: `web`
-   - functions directory: `netlify/functions`
-4. Deploy.
-
-Optional env var:
-- `SHODAN_API_KEY` (enables component-level Shodan check enrichment)
+## Dense analyst UI coverage
+- Operations dashboard: top scenarios, risk distribution, controller summaries, process exposure tables
+- Scenario explorer: impacted assets/zones/processes tables, path list, detail drawer, barrier list, vulnerability panel, score breakdown
+- Network view: graph panel + controls + selected node/edge metadata + path focus
+- Asset view: metadata, vulnerabilities, connections, downstream reachability, scenario membership
+- Scenario comparison: side-by-side metrics and score decomposition
 
 ## Verification
-
 ```bash
 npm run build
 npm test
 pytest -q
 ```
 
-Function smoke test:
-
+Function smoke tests:
 ```bash
 node -e "const h=require('./netlify/functions/simulate-blast-radius.js').handler; h({httpMethod:'POST',body:JSON.stringify({start_asset_id:'a_eng_01',max_depth:6,include_vulnerabilities:true,include_zone_barriers:true,mode:'analyst'})}).then(r=>console.log(r.statusCode, JSON.parse(r.body).severity_label))"
 ```
 
-## Month 3 UI readiness
+## Netlify deployment
+1. Push repo to GitHub.
+2. Netlify → Add new site → Import existing project.
+3. Build settings come from `netlify.toml`:
+   - Build command: `npm run build`
+   - Publish directory: `web`
+   - Functions directory: `netlify/functions`
+4. Deploy.
 
-APIs are intentionally verbose to support dense analyst UX:
-- table views
-- path drilldowns
-- scenario comparisons
-- scoring decomposition panels
-- explorable rationale metadata
+Optional env var:
+- `SHODAN_API_KEY` to enable component-level Shodan enrichment.
