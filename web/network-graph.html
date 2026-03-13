@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Network / Graph View</title>
-  <link rel="stylesheet" href="/web/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
   <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
@@ -11,11 +11,11 @@
   <div class="topbar">
     <div><h1 class="title">Network / Graph View</h1><div class="subtitle">Conduits, zone transitions, downstream reachability, and selected attack-path highlighting.</div></div>
     <nav class="nav">
-      <a href="/web/index.html">Operations Dashboard</a>
-      <a href="/web/scenario-explorer.html">Scenario Explorer</a>
-      <a class="active" href="/web/network-graph.html">Network / Graph View</a>
-      <a href="/web/asset-detail.html">Asset Detail</a>
-      <a href="/web/scenario-comparison.html">Scenario Comparison</a>
+      <a href="/index.html">Operations Dashboard</a>
+      <a href="/scenario-explorer.html">Scenario Explorer</a>
+      <a class="active" href="/network-graph.html">Network / Graph View</a>
+      <a href="/asset-detail.html">Asset Detail</a>
+      <a href="/scenario-comparison.html">Scenario Comparison</a>
     </nav>
   </div>
 
@@ -51,8 +51,8 @@
 </div>
 
 <script type="module">
-import { api } from '/web/js/api.js';
-import { fillTableBody } from '/web/js/ui.js';
+import { api } from '/js/api.js';
+import { fillTableBody } from '/js/ui.js';
 
 let assets = [];
 let result = null;

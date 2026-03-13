@@ -1,7 +1,15 @@
 // Shared API service for Netlify-backed analyst pages.
 export async function callJson(url, options = {}) {
   const res = await fetch(url, options);
-  const data = await res.json();
+  const text = await res.text();
+
+  let data;
+  try {
+    data = text ? JSON.parse(text) : {};
+  } catch {
+    throw new Error(`Non-JSON API response from ${url}. Check Netlify redirects/functions deployment.`);
+  }
+
   if (!res.ok) throw new Error(data.error || `API error ${res.status}`);
   return data;
 }

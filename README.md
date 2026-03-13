@@ -11,11 +11,11 @@ Dense analyst-grade OT cyber simulation demo for Netlify.
 - No external backend hosting or local DB dependency
 
 ## Frontend route/page structure
-- `/web/index.html` — Operations Dashboard
-- `/web/scenario-explorer.html` — Scenario Explorer
-- `/web/network-graph.html` — Network / Graph View
-- `/web/asset-detail.html` — Asset Detail View
-- `/web/scenario-comparison.html` — Scenario Comparison View
+- `/index.html` — Operations Dashboard
+- `/scenario-explorer.html` — Scenario Explorer
+- `/network-graph.html` — Network / Graph View
+- `/asset-detail.html` — Asset Detail View
+- `/scenario-comparison.html` — Scenario Comparison View
 
 ## API route mapping (Netlify redirects)
 - `POST /api/analyze` → `/.netlify/functions/analyze`

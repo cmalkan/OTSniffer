@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OTSniffer Operations Dashboard</title>
-  <link rel="stylesheet" href="/web/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 <div class="app">
@@ -14,11 +14,11 @@
       <div class="subtitle">Operational impact view: impacted zones, affected controllers, process-function exposure, and blast radius severity.</div>
     </div>
     <nav class="nav">
-      <a class="active" href="/web/index.html">Operations Dashboard</a>
-      <a href="/web/scenario-explorer.html">Scenario Explorer</a>
-      <a href="/web/network-graph.html">Network / Graph View</a>
-      <a href="/web/asset-detail.html">Asset Detail</a>
-      <a href="/web/scenario-comparison.html">Scenario Comparison</a>
+      <a class="active" href="/index.html">Operations Dashboard</a>
+      <a href="/scenario-explorer.html">Scenario Explorer</a>
+      <a href="/network-graph.html">Network / Graph View</a>
+      <a href="/asset-detail.html">Asset Detail</a>
+      <a href="/scenario-comparison.html">Scenario Comparison</a>
     </nav>
   </div>
 
@@ -45,7 +45,7 @@
       <input id="minRisk" class="input" type="number" value="0" min="0" max="100" />
       <div class="row" style="margin-top:10px">
         <button class="btn btn-primary" id="applyFilters">Apply</button>
-        <a class="btn btn-secondary" href="/web/scenario-explorer.html" style="text-decoration:none">Run Scenario</a>
+        <a class="btn btn-secondary" href="/scenario-explorer.html" style="text-decoration:none">Run Scenario</a>
       </div>
 
       <h2 style="margin-top:14px">High-Risk Controllers</h2>
@@ -90,8 +90,8 @@
 </div>
 
 <script type="module">
-  import { api } from '/web/js/api.js';
-  import { severityBadge, fillTableBody } from '/web/js/ui.js';
+  import { api } from '/js/api.js';
+  import { severityBadge, fillTableBody } from '/js/ui.js';
 
   const controllerRows = document.getElementById('controllerRows');
   const scenarioRows = document.getElementById('scenarioRows');
