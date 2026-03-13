@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer Netlify Command Center</title>
+  <style>
+    :root {
+      --bg: #03112a;
+      --bg2: #041836;
+      --panel: #0a203f;
+      --panel2: #122f53;
+      --line: #1e4e7b;
+      --text: #d8e7f6;
+      --muted: #8ba9c6;
+      --accent: #27d2de;
+      --accent2: #4be39f;
+      --warn: #ffb14a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      background: radial-gradient(circle at 20% -10%, #0a2347, var(--bg)) fixed;
+    }
+    .wrap { max-width: 1180px; margin: 18px auto; padding: 0 16px 20px; }
+    .top { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; }
+    h1 { margin:0; font-size: 52px; line-height:1.1; }
+    .subtitle { color: var(--muted); margin-top: 6px; font-size: 42px; }
+    .pill { border:1px solid var(--line); border-radius: 999px; color: var(--muted); padding:10px 16px; margin-top: 12px; }
+
+    .grid { margin-top: 16px; display:grid; grid-template-columns: 1.2fr 1fr; gap:16px; }
+    .card { background: rgba(10,32,63,0.9); border:1px solid var(--line); border-radius:14px; padding:14px; }
+    .card h2 { margin:0 0 12px; font-size: 42px; }
+    label { display:block; color: var(--muted); margin: 8px 0 4px; }
+    textarea {
+      width:100%; min-height:140px; resize: vertical;
+      background:#051a37; color:#dbeeff; border:1px solid var(--line); border-radius:10px; padding:10px;
+      font-size: 32px;
+    }
+    .row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:10px; }
+    input[type="number"]{ width:64px; background:#051a37; color:#dbeeff; border:1px solid var(--line); border-radius:6px; padding:4px; }
+    .btn { border:none; border-radius:11px; padding:10px 16px; font-weight:700; cursor:pointer; }
+    .btn-primary { background: var(--accent); color:#05222a; }
+    .btn-secondary { background: #183d66; color: var(--text); }
+    .status { color: var(--accent2); }
+
+    .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top: 14px; }
+    .kpi { background: var(--panel2); border:1px solid var(--line); border-radius:10px; padding:10px; }
+    .kpi .k { color:var(--muted); font-size:24px; }
+    .kpi .v { margin-top:7px; font-size:46px; font-weight:700; }
+
+    .tabs-card { margin-top:16px; }
+    .tabs { display:flex; gap:8px; margin-bottom: 10px; }
+    .tab { border:1px solid var(--line); border-radius:10px; background:#0a2647; color:var(--muted); padding:8px 12px; cursor:pointer; font-size:36px; }
+    .tab.active { color: var(--text); background:#1a3e66; }
+    .panel.hidden { display:none; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { text-align:left; border-bottom:1px solid var(--line); padding:10px 8px; font-size:32px; }
+    .risk-high { color: var(--warn); font-weight:700; }
+    .risk-low { color: var(--accent2); font-weight:700; }
+
+    @media (max-width: 1000px){
+      .grid { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns:repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>⚡ OTSniffer Netlify Command Center</h1>
+        <div class="subtitle">Malkan-style palette · risk = exploitability × reachability × criticality</div>
+      </div>
+      <div class="pill">Netlify-first (no Streamlit required)</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Inputs</h2>
+        <label>1) SBOM JSON 2) Network CSV or PDF extracted text</label>
+        <label>SBOM JSON</label>
+        <textarea id="sbom"></textarea>
+
+        <div class="row">
+          <label><input type="radio" name="mode" value="csv" checked> Network CSV</label>
+          <label><input type="radio" name="mode" value="pdf"> PDF Extract Text</label>
+        </div>
+
+        <textarea id="network"></textarea>
+
+        <div class="row">
+          <label><input type="checkbox" id="enableShodan"> Enable Shodan component checks</label>
+          <label>limit <input id="shodanLimit" type="number" min="1" max="10" value="5"/></label>
+        </div>
+
+        <div class="row">
+          <button class="btn btn-primary" id="analyzeBtn">Analyze</button>
+          <button class="btn btn-secondary" id="demoBtn">Load Demo</button>
+          <span id="status" class="status"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Portfolio Snapshot</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="k">Overall Risk</div><div class="v" id="kOverall">-</div></div>
+          <div class="kpi"><div class="k">Max Asset Risk</div><div class="v" id="kMax">-</div></div>
+          <div class="kpi"><div class="k">Internet Exposed</div><div class="v" id="kInternet">-</div></div>
+          <div class="kpi"><div class="k">Weak Untrusted Links</div><div class="v" id="kWeak">-</div></div>
+        </div>
+        <label style="margin-top:14px">VIT details and Shodan results are shown in tabs below.</label>
+      </div>
+    </div>
+
+    <div class="card tabs-card">
+      <div class="tabs">
+        <button class="tab active" data-tab="risk">Risk Ranking</button>
+        <button class="tab" data-tab="network">Network Graph</button>
+        <button class="tab" data-tab="vit">SBOM VIT</button>
+        <button class="tab" data-tab="shodan">Shodan</button>
+      </div>
+
+      <div class="panel" id="panel-risk">
+        <table>
+          <thead><tr><th>Asset</th><th>Type</th><th>Risk</th><th>VIT</th><th>Internet</th></tr></thead>
+          <tbody id="riskRows"></tbody>
+        </table>
+      </div>
+
+      <div class="panel hidden" id="panel-network">
+        <table>
+          <thead><tr><th>Source</th><th>Target</th><th>Trust</th><th>Segmentation</th></tr></thead>
+          <tbody id="networkRows"></tbody>
+        </table>
+      </div>
+
+      <div class="panel hidden" id="panel-vit">
+        <table>
+          <thead><tr><th>Component</th><th>Vulnerability Count</th><th>Severity Trace</th><th>VIT Score</th></tr></thead>
+          <tbody id="vitRows"></tbody>
+        </table>
+      </div>
+
+      <div class="panel hidden" id="panel-shodan">
+        <table>
+          <thead><tr><th>Component</th><th>Query</th><th>Matches</th></tr></thead>
+          <tbody id="shodanRows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script>
+const demoSbom = {
+  components: [
+    { name: "PLC-Line-01", asset_type: "plc", exposed_to_internet: true, vulnerabilities:[{severity:"critical"},{severity:"high"}] },
+    { name: "SCADA-Master", asset_type: "scada", vulnerabilities:[{severity:"high"}] },
+    { name: "HMI-Packaging", asset_type: "hmi", vulnerabilities:[{severity:"medium"}] }
+  ]
+};
+const demoCsv = `source,target,zone_trust,segmentation_strength\nInternet,PLC-Line-01,untrusted,0.1\nL3 DMZ,SCADA-Master,dmz,0.45\nSCADA-Master,HMI-Packaging,trusted,0.7`;
+const demoPdf = `Level 5 Internet -> L3 DMZ\nL3 DMZ -> SCADA-Master\nSCADA-Master -> HMI-Packaging`;
+
+const sbomEl = document.getElementById('sbom');
+const networkEl = document.getElementById('network');
+
+function mode(){ return [...document.querySelectorAll('input[name="mode"]')].find(x=>x.checked).value; }
+function setDemo(){ sbomEl.value = JSON.stringify(demoSbom, null, 2); networkEl.value = mode()==='csv' ? demoCsv : demoPdf; }
+setDemo();
+document.getElementById('demoBtn').onclick = setDemo;
+document.querySelectorAll('input[name="mode"]').forEach(el => el.onchange = setDemo);
+
+function activateTab(name){
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab===name));
+  ['risk','network','vit','shodan'].forEach(id => {
+    document.getElementById(`panel-${id}`).classList.toggle('hidden', id!==name);
+  });
+}
+document.querySelectorAll('.tab').forEach(tab => tab.addEventListener('click', () => activateTab(tab.dataset.tab)));
+
+function row(cells){ const tr=document.createElement('tr'); cells.forEach(c=>{ const td=document.createElement('td'); td.innerHTML=c; tr.append(td); }); return tr; }
+
+async function analyze(){
+  const status = document.getElementById('status');
+  status.textContent = 'Running...';
+  try {
+    const payload = {
+      sbom: JSON.parse(sbomEl.value),
+      enable_shodan: document.getElementById('enableShodan').checked,
+      shodan_limit: Number(document.getElementById('shodanLimit').value || 5)
+    };
+    if(mode()==='csv') payload.network_csv = networkEl.value; else payload.network_pdf_text = networkEl.value;
+
+    const res = await fetch('/api/analyze', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+    const data = await res.json();
+    if(!res.ok) throw new Error(data.error || 'Analyze failed');
+
+    document.getElementById('kOverall').textContent = `${data.summary.overall_score}/100`;
+    document.getElementById('kMax').textContent = `${data.summary.max_asset_score}/100`;
+    document.getElementById('kInternet').textContent = data.summary.internet_exposed_count;
+    document.getElementById('kWeak').textContent = data.summary.critical_link_count;
+
+    const riskRows = document.getElementById('riskRows'); riskRows.innerHTML='';
+    (data.assets||[]).forEach(a=>{
+      const cls = a.risk_score >= 40 ? 'risk-high' : 'risk-low';
+      riskRows.append(row([a.name, a.asset_type||'n/a', `<span class="${cls}">${a.risk_score}</span>`, a.vit_score ?? '-', a.exposed_to_internet?'yes':'no']));
+    });
+
+    const netRows = document.getElementById('networkRows'); netRows.innerHTML='';
+    (data.links||[]).forEach(l=> netRows.append(row([l.source, l.target, l.zone_trust, l.segmentation_strength])));
+
+    const vitRows = document.getElementById('vitRows'); vitRows.innerHTML='';
+    (data.assets||[]).forEach(a=>{
+      const trace = (a.vulnerabilities||[]).map(v=>v.severity).join(', ') || 'none';
+      vitRows.append(row([a.name, (a.vulnerabilities||[]).length, trace, a.vit_score ?? '-']));
+    });
+
+    const shRows = document.getElementById('shodanRows'); shRows.innerHTML='';
+    const shodan = data.shodan || [];
+    if (!shodan.length) shRows.append(row(['-', 'Shodan disabled or no key configured', '-']));
+    shodan.forEach(s=> shRows.append(row([s.component, s.query, s.matches])));
+
+    status.textContent = 'Done.';
+  } catch (e) {
+    status.textContent = `Error: ${e.message}`;
+  }
+}
+
+document.getElementById('analyzeBtn').onclick = analyze;
+</script>
+</body>
+</html>
