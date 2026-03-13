@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer Netlify App</title>
+  <style>
+    body{font-family:Arial,sans-serif;background:#061225;color:#e7f6ff;margin:0}
+    .wrap{max-width:980px;margin:20px auto;padding:16px}
+    .card{background:#0c1b31;border:1px solid #1a365d;border-radius:12px;padding:16px}
+    textarea{width:100%;min-height:160px;background:#08172a;color:#e7f6ff;border:1px solid #234b72;border-radius:8px;padding:8px}
+    button{margin-top:10px;background:#1ecad3;border:0;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .muted{color:#8aa2bd}
+    pre{background:#08172a;border:1px solid #234b72;padding:10px;border-radius:8px;white-space:pre-wrap}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>⚡ OTSniffer Netlify App</h1>
+  <div class="card">
+    <p class="muted">This app is intended to run on Netlify (static site + Netlify Function).</p>
+    <p>API endpoint: <code>/api/analyze</code> (redirects to <code>/.netlify/functions/analyze</code> in Netlify).</p>
+    <textarea id="payload">{"components":[{"name":"PLC-1","exposed_to_internet":true,"vulnerabilities":[{"severity":"critical"}]}]}</textarea>
+    <br/>
+    <button id="analyzeBtn">Analyze via Netlify Function</button>
+    <pre id="output">Click Analyze to call /api/analyze</pre>
+  </div>
+</div>
+<script>
+  document.getElementById('analyzeBtn').addEventListener('click', async () => {
+    const output = document.getElementById('output');
+    output.textContent = 'Calling /api/analyze...';
+    try {
+      const body = { sbom: JSON.parse(document.getElementById('payload').value) };
+      const res = await fetch('/api/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      output.textContent = JSON.stringify(data, null, 2);
+    } catch (e) {
+      output.textContent = `Error: ${e.message}`;
+    }
+  });
+</script>
+</body>
+</html>
