@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network / Graph View</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div><h1 class="title">Network / Graph View</h1><div class="subtitle">Conduits, zone transitions, downstream reachability, and selected attack-path highlighting.</div></div>
+    <nav class="nav">
+      <a href="/index.html">Operations Dashboard</a>
+      <a href="/scenario-explorer.html">Scenario Explorer</a>
+      <a class="active" href="/network-graph.html">Network / Graph View</a>
+      <a href="/asset-detail.html">Asset Detail</a>
+      <a href="/scenario-comparison.html">Scenario Comparison</a>
+    </nav>
+  </div>
+
+  <div class="layout" style="grid-template-columns:290px 1fr 340px">
+    <aside class="panel filters">
+      <h2>Graph Controls</h2>
+      <label>Compromised Start Asset</label><select id="startAsset" class="input"></select>
+      <label>Filter Zone</label><select id="zoneFilter" class="input"><option value="all">All Zones</option></select>
+      <label>Filter Asset Type</label><select id="typeFilter" class="input"><option value="all">All Types</option></select>
+      <label>Criticality Threshold</label><input id="critFilter" class="input" type="number" min="0" max="10" value="0"/>
+      <div class="row"><button class="btn btn-primary" id="runBtn">Run + Highlight</button><button class="btn btn-secondary" id="resetBtn">Reset</button></div>
+
+      <h2 style="margin-top:12px">Legend</h2>
+      <div class="small">Blue edge: trusted conduit<br/>Amber edge: medium-trust conduit<br/>Red edge: segmentation-sensitive path</div>
+
+      <h2 style="margin-top:12px">Attack Paths</h2>
+      <div class="table-wrap" style="max-height:230px"><table><thead><tr><th>Path</th><th>Hops</th><th>Risk</th><th>Focus</th></tr></thead><tbody id="pathRows"></tbody></table></div>
+    </aside>
+
+    <main class="panel">
+      <h2>OT Asset Graph</h2>
+      <div id="graphCanvas"></div>
+      <div class="small" style="margin-top:8px">Use filters and path focus to inspect affected controllers, zone conduits, and downstream movement pathways.</div>
+    </main>
+
+    <aside class="panel drawer">
+      <h2>Selected Node Metadata</h2>
+      <div id="nodeMeta" class="small">Click a node on the graph.</div>
+      <h2 style="margin-top:12px">Selected Edge Metadata</h2>
+      <div id="edgeMeta" class="small">Click an edge on the graph.</div>
+    </aside>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/js/api.js';
+import { fillTableBody } from '/js/ui.js';
+
+let assets = [];
+let result = null;
+let network = null;
+let nodesDS = null;
+let edgesDS = null;
+
+async function init() {
+  const assetsRes = await api.assets();
+  assets = assetsRes.assets || [];
+
+  const startSel = document.getElementById('startAsset');
+  const zoneSel = document.getElementById('zoneFilter');
+  const typeSel = document.getElementById('typeFilter');
+
+  const zoneSet = new Set();
+  const typeSet = new Set();
+  assets.forEach(a => {
+    zoneSet.add(a.zone_id); typeSet.add(a.asset_type);
+    const o = document.createElement('option'); o.value = a.asset_id; o.textContent = `${a.name} (${a.asset_type})`; startSel.appendChild(o);
+  });
+  [...zoneSet].forEach(z => { const o = document.createElement('option'); o.value = z; o.textContent = z; zoneSel.appendChild(o); });
+  [...typeSet].forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; typeSel.appendChild(o); });
+
+  document.getElementById('runBtn').onclick = run;
+  document.getElementById('resetBtn').onclick = () => { if (result) renderGraph(result, null); };
+}
+
+async function run() {
+  result = await api.simulateBlastRadius({
+    start_asset_id: document.getElementById('startAsset').value,
+    max_depth: 6,
+    include_vulnerabilities: true,
+    include_zone_barriers: true,
+    mode: 'analyst'
+  });
+  renderGraph(result, null);
+  renderPathTable(result);
+}
+
+function edgeColor(trust){ return trust==='untrusted' ? '#ff6b7a' : trust==='dmz' ? '#ffbf53' : '#3ba8ff'; }
+
+function renderGraph(data, focusPath) {
+  const zone = document.getElementById('zoneFilter').value;
+  const type = document.getElementById('typeFilter').value;
+  const crit = Number(document.getElementById('critFilter').value || 0);
+
+  const impacted = data.impacted_assets || [];
+  const nodeRows = impacted
+    .filter(a => (zone==='all' || a.zone_id===zone) && (type==='all' || a.asset_type===type) && a.criticality_score >= crit)
+    .map(a => ({ id: a.asset_id, label: `${a.name}\n${a.asset_type}`, color: a.is_safety_related ? '#ff6b7a' : '#3ba8ff', shape:'box' }));
+
+  const idSet = new Set(nodeRows.map(n => n.id));
+  const edges = (data.attack_paths || []).flatMap(p => {
+    const ids = p.ordered_asset_ids || [];
+    const out = [];
+    for (let i=1; i<ids.length; i++) {
+      if (!idSet.has(ids[i-1]) || !idSet.has(ids[i])) continue;
+      const highlight = focusPath && p.path_id===focusPath;
+      out.push({ from: ids[i-1], to: ids[i], label: p.protocols_used?.join(',') || '', color: highlight ? '#50df9e' : '#245987', width: highlight ? 3 : 1.4 });
+    }
+    return out;
+  });
+
+  nodesDS = new vis.DataSet(nodeRows);
+  edgesDS = new vis.DataSet(edges);
+
+  const container = document.getElementById('graphCanvas');
+  network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
+    physics: { stabilization: false },
+    edges: { arrows: 'to', color: '#245987', font: { color:'#a9c1da', size:11 } },
+    nodes: { font:{ color:'#f3f8ff', size:12 }, borderWidth:1 },
+    interaction: { hover:true }
+  });
+
+  network.on('click', (params) => {
+    if (params.nodes.length) {
+      const id = params.nodes[0];
+      const a = impacted.find(x => x.asset_id===id);
+      document.getElementById('nodeMeta').innerHTML = a ?
+        `<b>${a.name}</b><br/>Type: ${a.asset_type}<br/>Zone: ${a.zone_id}<br/>Criticality: ${a.criticality_score}<br/>Process Tag: ${a.process_tag}<br/>Reason: ${a.reachability_reason}` : 'Node metadata unavailable';
+    }
+    if (params.edges.length) {
+      const e = edgesDS.get(params.edges[0]);
+      document.getElementById('edgeMeta').innerHTML = `<b>${e.from}</b> → <b>${e.to}</b><br/>Protocol(s): ${e.label || 'n/a'}`;
+    }
+  });
+}
+
+function renderPathTable(data) {
+  fillTableBody(document.getElementById('pathRows'), (data.attack_paths || []).map(p => [
+    p.path_id,
+    p.hop_count,
+    p.path_risk_score,
+    `<button class='btn btn-secondary focus-path' data-id='${p.path_id}'>Focus</button>`
+  ]));
+  document.querySelectorAll('.focus-path').forEach(btn => btn.addEventListener('click', () => renderGraph(data, btn.dataset.id)));
+}
+
+init().catch(e => { document.getElementById('nodeMeta').textContent = e.message; });
+</script>
+</body>
+</html>

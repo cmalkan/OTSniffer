@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asset Detail</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div><h1 class="title">Asset Detail View</h1><div class="subtitle">Asset-level risk contribution, vulnerabilities, conduits, downstream reachability, and process-function linkage.</div></div>
+    <nav class="nav">
+      <a href="/index.html">Operations Dashboard</a>
+      <a href="/scenario-explorer.html">Scenario Explorer</a>
+      <a href="/network-graph.html">Network / Graph View</a>
+      <a class="active" href="/asset-detail.html">Asset Detail</a>
+      <a href="/scenario-comparison.html">Scenario Comparison</a>
+    </nav>
+  </div>
+
+  <div class="layout">
+    <aside class="panel filters">
+      <h2>Asset Selection</h2>
+      <label>Asset</label><select id="assetSel" class="input"></select>
+      <div class="row"><button class="btn btn-primary" id="loadBtn">Load Asset Evidence</button></div>
+
+      <h2 style="margin-top:12px">Risk Summary</h2>
+      <div id="riskSummary" class="small">Select asset to compute blast-radius severity.</div>
+    </aside>
+
+    <main class="panel" data-tabs>
+      <h2 id="assetName">Asset Metadata</h2>
+      <div class="tabs">
+        <button class="tab active" data-tab="meta">Metadata</button>
+        <button class="tab" data-tab="vuln">Vulnerabilities</button>
+        <button class="tab" data-tab="connections">Connections</button>
+        <button class="tab" data-tab="downstream">Downstream Reachability</button>
+      </div>
+
+      <div data-panel="meta">
+        <div class="table-wrap"><table><tbody id="metaRows"></tbody></table></div>
+      </div>
+      <div data-panel="vuln" class="hidden"><div class="table-wrap"><table><thead><tr><th>CVE</th><th>Severity</th><th>Description</th></tr></thead><tbody id="vulnRows"></tbody></table></div></div>
+      <div data-panel="connections" class="hidden"><div class="table-wrap"><table><thead><tr><th>Inbound/Outbound</th><th>Connected Asset</th><th>Protocol/Direction</th></tr></thead><tbody id="connRows"></tbody></table></div></div>
+      <div data-panel="downstream" class="hidden"><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Hop</th><th>Process Tag</th><th>Path Membership</th></tr></thead><tbody id="downRows"></tbody></table></div></div>
+    </main>
+
+    <aside class="panel drawer">
+      <h2>Related Context</h2>
+      <h3>Scenarios containing this asset</h3>
+      <div class="table-wrap" style="max-height:180px"><table><thead><tr><th>Scenario</th><th>Severity</th></tr></thead><tbody id="scenarioRows"></tbody></table></div>
+      <h3 style="margin-top:12px">Related Zone & Process Info</h3>
+      <div id="zoneProcessInfo" class="small"></div>
+      <h3 style="margin-top:12px">Risk Contribution Explanation</h3>
+      <div id="riskExpl" class="small"></div>
+    </aside>
+  </div>
+</div>
+
+<script type="module">
+import { api } from '/js/api.js';
+import { setTabs, severityBadge, fillTableBody } from '/js/ui.js';
+
+setTabs(document);
+let assets = [];
+
+async function init() {
+  const a = await api.assets();
+  assets = a.assets || [];
+  const sel = document.getElementById('assetSel');
+  assets.forEach(x => { const o=document.createElement('option'); o.value=x.asset_id; o.textContent=`${x.name} (${x.asset_type})`; sel.appendChild(o); });
+  document.getElementById('loadBtn').onclick = loadDetails;
+}
+
+async function loadDetails() {
+  const id = document.getElementById('assetSel').value;
+  const [risk, paths, top] = await Promise.all([api.assetRisk(id), api.assetPaths(id), api.topScenarios()]);
+  const asset = assets.find(a => a.asset_id === id);
+
+  document.getElementById('assetName').textContent = `${asset.name} — Asset Metadata`;
+  fillTableBody(document.getElementById('metaRows'), [
+    ['asset_id', asset.asset_id],['asset_type',asset.asset_type],['vendor',asset.vendor],['model',asset.model],['firmware_version',asset.firmware_version],['ip_address',asset.ip_address],['zone_id',asset.zone_id],['criticality_score',asset.criticality_score],['process_tag',asset.process_tag]
+  ]);
+
+  // Reusing risk API as base and path simulation for evidence-rich downstream context.
+  const sim = await api.simulateBlastRadius({start_asset_id:id,max_depth:6,include_vulnerabilities:true,include_zone_barriers:true,mode:'analyst'});
+
+  fillTableBody(document.getElementById('vulnRows'), (sim.exploited_or_exploitable_vulnerabilities || []).filter(v=>v.asset_id===id).map(v => [v.cve, v.severity, v.description || 'n/a']));
+  fillTableBody(document.getElementById('connRows'), (paths.paths || []).flatMap(p => p.ordered_asset_ids.map((assetId, idx) => {
+    if (idx===0 || p.ordered_asset_ids[idx-1]!==id) return [];
+    return [[ 'outbound', assetId, `${p.protocols_used.join(',')} / path ${p.path_id}` ]];
+  })));
+  fillTableBody(document.getElementById('downRows'), (sim.impacted_assets || []).map(a => [a.name, a.hop_distance, a.process_tag, sim.attack_paths.filter(p => p.ordered_asset_ids.includes(a.asset_id)).map(p => p.path_id).join(', ')]));
+
+  fillTableBody(document.getElementById('scenarioRows'), (top.scenarios || []).filter(s => s.start_asset_id===id || s.title.toLowerCase().includes(asset.name.toLowerCase())).map(s => [s.title, severityBadge(s.severity_label)]));
+
+  document.getElementById('riskSummary').innerHTML = `Severity: ${severityBadge(risk.severity_label)}<br/>Risk Score: ${risk.risk_score}<br/>Blast Radius: ${risk.blast_radius_score}<br/>Operational Impact: ${risk.operational_impact_score}<br/>Confidence: ${risk.confidence_score}`;
+  document.getElementById('zoneProcessInfo').textContent = `Zone ${asset.zone_id}, process tag ${asset.process_tag}. Downstream process exposure appears in impacted_processes output.`;
+  document.getElementById('riskExpl').textContent = risk.analyst_summary;
+}
+
+init().catch(e => { document.getElementById('riskSummary').textContent = e.message; });
+</script>
+</body>
+</html>

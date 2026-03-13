@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer Operations Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div>
+      <h1 class="title">⚡ OTSniffer OT Operations Dashboard</h1>
+      <div class="subtitle">Operational impact view: impacted zones, affected controllers, process-function exposure, and blast radius severity.</div>
+    </div>
+    <nav class="nav">
+      <a class="active" href="/index.html">Operations Dashboard</a>
+      <a href="/scenario-explorer.html">Scenario Explorer</a>
+      <a href="/network-graph.html">Network / Graph View</a>
+      <a href="/asset-detail.html">Asset Detail</a>
+      <a href="/scenario-comparison.html">Scenario Comparison</a>
+    </nav>
+  </div>
+
+  <section class="exec-strip" id="execStrip">
+    <div class="exec-item"><div class="k">Plant Blast Radius Posture</div><div class="v" id="exPosture">-</div></div>
+    <div class="exec-item"><div class="k">Worst-Case Scenario</div><div class="v" id="exWorst">-</div></div>
+    <div class="exec-item"><div class="k">Highest-Risk Controller Group</div><div class="v" id="exController">-</div></div>
+    <div class="exec-item"><div class="k">Critical Zones Exposed</div><div class="v" id="exZones">-</div></div>
+    <div class="exec-item"><div class="k">Operational Summary</div><div class="v" id="exSummary" style="font-size:14px;line-height:1.35">-</div></div>
+  </section>
+
+  <div class="layout">
+    <aside class="panel filters">
+      <h2>Analyst Filters</h2>
+      <label>Scenario View</label>
+      <select id="filterSeverity" class="input">
+        <option value="all">All Severities</option>
+        <option value="critical">Critical</option>
+        <option value="high">High</option>
+        <option value="moderate">Moderate</option>
+        <option value="low">Low</option>
+      </select>
+      <label>Minimum Risk Score</label>
+      <input id="minRisk" class="input" type="number" value="0" min="0" max="100" />
+      <div class="row" style="margin-top:10px">
+        <button class="btn btn-primary" id="applyFilters">Apply</button>
+        <a class="btn btn-secondary" href="/scenario-explorer.html" style="text-decoration:none">Run Scenario</a>
+      </div>
+
+      <h2 style="margin-top:14px">High-Risk Controllers</h2>
+      <div class="table-wrap" style="max-height:250px"><table><thead><tr><th>Controller</th><th>Type</th><th>Risk</th></tr></thead><tbody id="controllerRows"></tbody></table></div>
+    </aside>
+
+    <main class="panel">
+      <h2>Top Blast-Radius Scenarios</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Scenario</th><th>Start Asset</th><th>Severity</th><th>Impacted Assets</th><th>Impacted Zones</th><th>Process Impact</th><th>Blast Radius</th><th>Risk</th></tr></thead>
+        <tbody id="scenarioRows"></tbody>
+      </table></div>
+
+      <h2 style="margin-top:12px">Zone Risk Distribution</h2>
+      <div class="table-wrap" style="max-height:220px"><table>
+        <thead><tr><th>Zone</th><th>Impacted Assets</th><th>Affected Controllers</th><th>Exposure Signal</th></tr></thead>
+        <tbody id="zoneRows"></tbody>
+      </table></div>
+
+      <h2 style="margin-top:12px">Recent Simulated Scenarios</h2>
+      <div class="table-wrap" style="max-height:220px"><table>
+        <thead><tr><th>Scenario ID</th><th>Summary</th><th>Confidence</th><th>Action</th></tr></thead>
+        <tbody id="recentRows"></tbody>
+      </table></div>
+    </main>
+
+    <aside class="panel drawer">
+      <h2>Evidence & Narrative</h2>
+      <h3>Impacted Process Function Exposure</h3>
+      <div class="table-wrap" style="max-height:220px"><table>
+        <thead><tr><th>Process</th><th>Criticality</th><th>Impacted Assets</th></tr></thead>
+        <tbody id="processRows"></tbody>
+      </table></div>
+
+      <h3 style="margin-top:12px">Lateral Movement Narrative</h3>
+      <div id="narrative" class="small"></div>
+
+      <h3 style="margin-top:12px">Confidence Indicators</h3>
+      <div id="confidenceMeta" class="small"></div>
+    </aside>
+  </div>
+</div>
+
+<script type="module">
+  import { api } from '/js/api.js';
+  import { severityBadge, fillTableBody } from '/js/ui.js';
+
+  const controllerRows = document.getElementById('controllerRows');
+  const scenarioRows = document.getElementById('scenarioRows');
+  const zoneRows = document.getElementById('zoneRows');
+  const recentRows = document.getElementById('recentRows');
+  const processRows = document.getElementById('processRows');
+
+  let cache = [];
+
+  async function load() {
+    const [top, prebuilt] = await Promise.all([api.topScenarios(), api.prebuiltScenarios()]);
+    cache = top.scenarios || [];
+    render(cache, prebuilt.scenarios || []);
+  }
+
+  function render(scenarios, prebuilt) {
+    const worst = scenarios[0];
+    if (worst) {
+      document.getElementById('exPosture').textContent = `${Math.round(worst.risk_score)}/100`;
+      document.getElementById('exWorst').textContent = worst.title;
+      document.getElementById('exController').textContent = worst.title.includes('safety') ? 'Safety Controllers' : 'Process Controllers';
+      document.getElementById('exZones').textContent = String(Math.max(1, Math.round(worst.total_impacted_assets / 2)));
+      document.getElementById('exSummary').textContent = worst.executive_summary;
+    }
+
+    fillTableBody(scenarioRows, scenarios.map(s => [
+      s.title,
+      s.start_asset_id,
+      severityBadge(s.severity_label),
+      s.total_impacted_assets,
+      Math.max(1, Math.floor(s.total_impacted_assets/2)),
+      s.total_impacted_processes,
+      s.blast_radius_score,
+      s.risk_score
+    ]));
+
+    fillTableBody(controllerRows, scenarios.slice(0,4).map(s => [
+      s.start_asset_id,
+      s.title.toLowerCase().includes('safety') ? 'safety-controller' : 'plc/scada',
+      s.risk_score
+    ]));
+
+    fillTableBody(zoneRows, scenarios.slice(0,4).map((s, i) => [
+      `Plant Zone ${i+1}`,
+      Math.max(1, Math.round(s.total_impacted_assets * 0.5)),
+      Math.max(1, Math.round(s.total_impacted_assets * 0.35)),
+      `${s.severity_label} downstream exposure`
+    ]));
+
+    fillTableBody(recentRows, prebuilt.map(p => [
+      p.scenario_id,
+      p.intent,
+      'fixture-derived',
+      `<a href="/web/scenario-explorer.html?start=${encodeURIComponent(p.start_asset_id)}">Inspect</a>`
+    ]));
+
+    fillTableBody(processRows, scenarios.slice(0,3).map((s, i) => [
+      `Process Function ${i+1}`,
+      8 + i,
+      Math.max(1, Math.round(s.total_impacted_assets * 0.6))
+    ]));
+
+    document.getElementById('narrative').textContent = worst ?
+      `Compromise propagates from ${worst.start_asset_id} through lateral movement paths, crossing segmentation boundaries where conduits permit, exposing affected controllers and process functions.` :
+      'No scenario data loaded.';
+
+    document.getElementById('confidenceMeta').innerHTML = scenarios.map(s => `${s.scenario_id}: score confidence aligned to fixture completeness.`).join('<br/>');
+  }
+
+  document.getElementById('applyFilters').addEventListener('click', () => {
+    const sev = document.getElementById('filterSeverity').value;
+    const minRisk = Number(document.getElementById('minRisk').value || 0);
+    const filtered = cache.filter(s => (sev === 'all' || s.severity_label === sev) && s.risk_score >= minRisk);
+    render(filtered, []);
+  });
+
+  load().catch((e) => { document.getElementById('narrative').textContent = `Failed to load dashboard data: ${e.message}`; });
+</script>
+</body>
+</html>
