@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>T1 Exposure Snapshot — Alpha Combined Cycle Energy Plant</title>
+  <style>
+@page { size: Letter; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: #212529;
+  font-size: 12px;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+code, pre { font-family: 'JetBrains Mono', Consolas, monospace; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  padding: 0.6in 0.75in;
+  page-break-after: always;
+  position: relative;
+  background: #fff;
+}
+.page:last-child { page-break-after: auto; }
+
+/* Cover */
+.page-cover { padding: 0.9in 0.75in 0.75in; display: flex; flex-direction: column; }
+.cover-brand { border-bottom: 1px solid #E1E7EB; padding-bottom: 16px; }
+.cover-partner {
+  font-size: 13px; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #07758b;
+}
+.cover-hero {
+  flex: 1;
+  display: flex; flex-direction: column; justify-content: center;
+  gap: 14px;
+  border-left: 4px solid #0AA2C0;
+  padding-left: 28px;
+}
+.cover-eyebrow {
+  font-size: 11px; letter-spacing: 0.2em; color: #6C757D;
+  text-transform: uppercase; font-weight: 600;
+}
+.cover-hero h1 {
+  font-size: 36pt; line-height: 1.05; margin: 0;
+  font-weight: 700; letter-spacing: -0.02em; color: #142a2e;
+}
+.cover-sub { font-size: 14px; color: #3A4750; max-width: 5.5in; }
+.cover-meta {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #E1E7EB;
+  margin-top: auto;
+}
+.cover-meta div { display: flex; flex-direction: column; gap: 2px; }
+.cover-meta .k { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: #6C757D; font-weight: 600; }
+.cover-meta .v { font-family: 'JetBrains Mono', Consolas, monospace; font-size: 10.5px; color: #142a2e; }
+
+/* Page header */
+.ph {
+  display: flex; align-items: baseline; gap: 10px;
+  padding-bottom: 10px; margin-bottom: 14px;
+  border-bottom: 1px solid #E1E7EB;
+}
+.ph-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: #0AA2C0; font-weight: 600;
+}
+.ph-name {
+  font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #6C757D; font-weight: 600;
+}
+
+h2 { font-size: 20pt; margin: 0 0 12px; font-weight: 600; letter-spacing: -0.015em; color: #142a2e; }
+h3 { font-size: 13pt; margin: 18px 0 8px; font-weight: 600; color: #142a2e; }
+
+.lede { font-size: 13px; color: #3A4750; max-width: 6.5in; }
+.lede strong { color: #142a2e; }
+
+.kpi-row {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+.kpi {
+  border: 1px solid #E1E7EB; border-radius: 8px;
+  padding: 10px 12px; background: #FAFBFC;
+  border-left: 3px solid #0AA2C0;
+}
+.kpi-v {
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 22pt;
+  line-height: 1; letter-spacing: -0.02em;
+}
+.kpi-k {
+  font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.1em;
+  color: #6C757D; font-weight: 600; margin-top: 4px;
+}
+
+.actions { list-style: none; margin: 0; padding: 0; }
+.actions li { padding: 10px 0; border-bottom: 1px solid #E1E7EB; }
+.actions li:last-child { border: 0; }
+.action-head { display: flex; gap: 10px; align-items: center; }
+.sev { width: 8px; height: 8px; border-radius: 50%; background: var(--c); flex: 0 0 auto; }
+.action-title { font-weight: 500; color: #142a2e; }
+.action-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; color: #6C757D; margin-left: 18px; margin-top: 2px;
+}
+.action-meta code { background: #F0F4F5; padding: 1px 4px; border-radius: 3px; color: #07758b; }
+
+.footer-note {
+  position: absolute; bottom: 0.45in; left: 0.75in; right: 0.75in;
+  font-size: 10px; color: #9AA5AE; border-top: 1px solid #E1E7EB; padding-top: 10px;
+}
+
+/* Finding cards */
+.finding-grid { display: flex; flex-direction: column; gap: 10px; }
+.finding-card {
+  border: 1px solid #E1E7EB; border-radius: 10px;
+  padding: 12px 14px; background: #fff;
+}
+.fc-head {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 4px;
+}
+.fc-n {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: #9AA5AE; font-weight: 600;
+}
+.fc-sev {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em;
+  font-weight: 700; color: var(--c); padding: 1px 8px;
+  border: 1px solid var(--c); border-radius: 999px;
+  background: color-mix(in srgb, var(--c) 8%, #fff);
+}
+.fc-id { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #9AA5AE; margin-left: auto; }
+.fc-type {
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em;
+  color: #6C757D; font-weight: 600; margin-bottom: 6px;
+}
+.fc-evidence {
+  margin: 0 0 8px;
+  padding: 8px 10px;
+  background: #F8F9FA; border: 1px solid #E1E7EB; border-radius: 6px;
+  font-size: 11px; color: #142a2e;
+  white-space: pre-wrap; word-break: break-all;
+}
+.fc-meta {
+  display: flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #6C757D;
+}
+.fc-meta code { background: #F0F4F5; padding: 1px 4px; border-radius: 3px; color: #07758b; }
+.fc-tool {
+  padding: 1px 6px; border-radius: 4px;
+  border: 1px solid #A8D9E3; color: #07758b;
+  background: color-mix(in srgb, #0AA2C0 8%, #fff);
+}
+.sep { opacity: 0.4; }
+.fc-conf-bar {
+  width: 60px; height: 3px; background: #E1E7EB; border-radius: 2px;
+  display: inline-block; position: relative; overflow: hidden;
+}
+.fc-conf-fill { display: block; height: 100%; background: linear-gradient(90deg, #0AA2C0, #017e84); }
+.fc-conf-n { font-weight: 600; color: #142a2e; }
+
+/* Appendix */
+.next { margin: 0; padding-left: 18px; }
+.next li { margin: 6px 0; color: #3A4750; }
+.next strong { color: #142a2e; }
+.appx-footer {
+  position: absolute; bottom: 0.6in; left: 0.75in; right: 0.75in;
+  font-size: 10px; color: #6C757D; line-height: 1.6;
+  padding-top: 12px; border-top: 1px solid #E1E7EB;
+}
+.appx-footer code { color: #07758b; }
+
+/* Regulatory cross-reference */
+.reg-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+.reg-card {
+  border: 1px solid #E1E7EB; border-radius: 10px;
+  padding: 10px 14px; background: #fff;
+  border-left: 3px solid #0AA2C0;
+}
+.reg-name {
+  font-size: 12pt; font-weight: 700; color: #142a2e;
+  letter-spacing: -0.005em;
+}
+.reg-sub {
+  font-size: 10px; color: #6C757D; letter-spacing: 0.04em;
+  text-transform: uppercase; font-weight: 600; margin: 2px 0 6px;
+}
+.reg-card p { margin: 0; font-size: 11px; line-height: 1.55; color: #3A4750; }
+.reg-card p strong { color: #142a2e; }
+.appx-footer-inline {
+  margin-top: 12px; padding-top: 10px;
+  border-top: 1px solid #E1E7EB;
+  font-size: 10px; color: #6C757D; line-height: 1.6;
+}
+</style>
+</head>
+<body>
+  
+<section class="page page-cover">
+  <header class="cover-brand">
+    <div class="cover-logo-row">
+      <div class="cover-partner">Malkan Solutions / Partner MSSP</div>
+    </div>
+  </header>
+  <div class="cover-hero">
+    <div class="cover-eyebrow">T1 EXPOSURE SNAPSHOT</div>
+    <h1>Alpha Combined Cycle Energy Plant</h1>
+    <div class="cover-sub">L0-L3 OT environment, passive recon + static scan, 2026-04-14 through 2026-04-19</div>
+  </div>
+  <footer class="cover-meta">
+    <div><span class="k">Client</span><span class="v">Northfork Water Authority</span></div>
+    <div><span class="k">Engagement</span><span class="v">ENG-2026-NWA-001</span></div>
+    <div><span class="k">Scan window</span><span class="v">2026-04-19</span></div>
+    <div><span class="k">Authorized by</span><span class="v">J. Rivera, Plant Manager</span></div>
+    <div><span class="k">Classification</span><span class="v">CONFIDENTIAL</span></div>
+  </footer>
+</section>
+  
+<section class="page">
+  <header class="ph"><span class="ph-num">02</span><span class="ph-name">Executive Summary</span></header>
+  <h2>Alpha Combined Cycle Energy Plant — one page for the sponsor</h2>
+  <p class="lede">
+    This engagement surfaced <strong>11 evidence-graded findings</strong> across
+    <strong>6 assets</strong>,
+    spanning supply chain, secret leak, exposure, mesh gap. The highest-severity finding is <strong>WinCC OA dependency log4j-core 2.14.1 (CVE-2021-44228) in /opt/wincc/lib</strong> on asset <code>a_scada_01</code>.
+  </p>
+  <div class="kpi-row">
+    
+    <div class="kpi">
+      <div class="kpi-v" style="color:#C73E4D">4</div>
+      <div class="kpi-k">Critical</div>
+    </div>
+    
+    <div class="kpi">
+      <div class="kpi-v" style="color:#C97B1F">4</div>
+      <div class="kpi-k">High</div>
+    </div>
+    
+    <div class="kpi">
+      <div class="kpi-v" style="color:#07758b">3</div>
+      <div class="kpi-k">Medium</div>
+    </div>
+    
+    <div class="kpi">
+      <div class="kpi-v" style="color:#142a2e">6</div>
+      <div class="kpi-k">Assets in scope</div>
+    </div>
+  </div>
+  <h3>Top 3 actions this quarter</h3>
+  <ol class="actions">
+    
+      <li>
+        <div class="action-head">
+          <span class="sev" style="--c:#C73E4D"></span>
+          <span class="action-title">WinCC OA dependency log4j-core 2.14.1 (CVE-2021-44228) in /opt/wincc/lib</span>
+        </div>
+        <div class="action-meta">
+          asset <code>a_scada_01</code> · supply chain ·
+          source manual · conf 95%
+        </div>
+      </li>
+      <li>
+        <div class="action-head">
+          <span class="sev" style="--c:#C73E4D"></span>
+          <span class="action-title">BEGIN RSA PRIVATE KEY ----***-- in /projects/turbine_logic.acd.bak</span>
+        </div>
+        <div class="action-meta">
+          asset <code>a_eng_01</code> · secret leak ·
+          source noseyparker · conf 90%
+        </div>
+      </li>
+      <li>
+        <div class="action-head">
+          <span class="sev" style="--c:#C73E4D"></span>
+          <span class="action-title">TCP/102 (S7comm) reachable from corporate VLAN per simulated Shodan banner</span>
+        </div>
+        <div class="action-meta">
+          asset <code>a_scada_01</code> · exposure ·
+          source shodan · conf 90%
+        </div>
+      </li>
+  </ol>
+  <div class="footer-note">Full evidence lineage in §3. Toolchain provenance and scan parameters in the appendix.</div>
+</section>
+  
+<section class="page">
+  <header class="ph"><span class="ph-num">03</span><span class="ph-name">Top 5 Findings — Evidence Cards</span></header>
+  <h2>What we found, and how we know</h2>
+  <div class="finding-grid">
+    
+  <article class="finding-card">
+    <div class="fc-head">
+      <span class="fc-n">#1</span>
+      <span class="fc-sev" style="--c:#C73E4D">critical</span>
+      <span class="fc-id">f_seed_06_scada_log4j</span>
+    </div>
+    <div class="fc-type">supply chain</div>
+    <pre class="fc-evidence">WinCC OA dependency log4j-core 2.14.1 (CVE-2021-44228) in /opt/wincc/lib</pre>
+    <div class="fc-meta">
+      asset <code>a_scada_01</code>
+      <span class="sep">·</span>
+      source <span class="fc-tool">manual</span>
+      <span class="sep">·</span>
+      confidence
+      <span class="fc-conf-bar"><span class="fc-conf-fill" style="width:95%"></span></span>
+      <span class="fc-conf-n">95</span>
+    </div>
+  </article>
+  <article class="finding-card">
+    <div class="fc-head">
+      <span class="fc-n">#2</span>
+      <span class="fc-sev" style="--c:#C73E4D">critical</span>
+      <span class="fc-id">f_seed_01_eng_key</span>
+    </div>
+    <div class="fc-type">secret leak</div>
+    <pre class="fc-evidence">BEGIN RSA PRIVATE KEY ----***-- in /projects/turbine_logic.acd.bak</pre>
+    <div class="fc-meta">
+      asset <code>a_eng_01</code>
+      <span class="sep">·</span>
+      source <span class="fc-tool">noseyparker</span>
+      <span class="sep">·</span>
+      confidence
+      <span class="fc-conf-bar"><span class="fc-conf-fill" style="width:90%"></span></span>
+      <span class="fc-conf-n">90</span>
+    </div>
+  </article>
+  <article class="finding-card">
+    <div class="fc-head">
+      <span class="fc-n">#3</span>
+      <span class="fc-sev" style="--c:#C73E4D">critical</span>
+      <span class="fc-id">f_seed_08_scada_s7</span>
+    </div>
+    <div class="fc-type">exposure</div>
+    <pre class="fc-evidence">TCP/102 (S7comm) reachable from corporate VLAN per simulated Shodan banner</pre>
+    <div class="fc-meta">
+      asset <code>a_scada_01</code>
+      <span class="sep">·</span>
+      source <span class="fc-tool">shodan</span>
+      <span class="sep">·</span>
+      confidence
+      <span class="fc-conf-bar"><span class="fc-conf-fill" style="width:90%"></span></span>
+      <span class="fc-conf-n">90</span>
+    </div>
+  </article>
+  <article class="finding-card">
+    <div class="fc-head">
+      <span class="fc-n">#4</span>
+      <span class="fc-sev" style="--c:#C73E4D">critical</span>
+      <span class="fc-id">f_seed_11_sis_zone</span>
+    </div>
+    <div class="fc-type">mesh gap</div>
+    <pre class="fc-evidence">SIS controller a_sis_01 reachable from z_cell1 (HMI zone) — violates IEC 62443 zone isolation</pre>
+    <div class="fc-meta">
+      asset <code>a_sis_01</code>
+      <span class="sep">·</span>
+      source <span class="fc-tool">manual</span>
+      <span class="sep">·</span>
+      confidence
+      <span class="fc-conf-bar"><span class="fc-conf-fill" style="width:80%"></span></span>
+      <span class="fc-conf-n">80</span>
+    </div>
+  </article>
+  <article class="finding-card">
+    <div class="fc-head">
+      <span class="fc-n">#5</span>
+      <span class="fc-sev" style="--c:#C97B1F">high</span>
+      <span class="fc-id">f_seed_02_eng_aws</span>
+    </div>
+    <div class="fc-type">secret leak</div>
+    <pre class="fc-evidence">AKIA***XYZ in /configs/s3-backup.cfg</pre>
+    <div class="fc-meta">
+      asset <code>a_eng_01</code>
+      <span class="sep">·</span>
+      source <span class="fc-tool">noseyparker</span>
+      <span class="sep">·</span>
+      confidence
+      <span class="fc-conf-bar"><span class="fc-conf-fill" style="width:85%"></span></span>
+      <span class="fc-conf-n">85</span>
+    </div>
+  </article>
+  </div>
+</section>
+  
+<section class="page">
+  <header class="ph"><span class="ph-num">04</span><span class="ph-name">Regulatory cross-reference — water / wastewater</span></header>
+  <h2>Where these findings feed your compliance evidence</h2>
+  <p class="lede">
+    This T1 Exposure Snapshot is built to slot into the evidence set your utility already maintains. Findings, attack-path reasoning, and segmentation posture map to the following regulatory and guidance frameworks.
+  </p>
+  <div class="reg-grid">
+    <div class="reg-card">
+      <div class="reg-name">EPA — America's Water Infrastructure Act (AWIA §2013)</div>
+      <div class="reg-sub">Risk &amp; Resilience Assessment + Emergency Response Plan</div>
+      <p>Findings feed the <strong>cybersecurity component</strong> of your RRA renewal. Blast-radius scenario (§5 in T2) satisfies the "malevolent acts" analysis required under 42 U.S.C. §300i-2.</p>
+    </div>
+    <div class="reg-card">
+      <div class="reg-name">EPA — Enforcement Memorandum (2023)</div>
+      <div class="reg-sub">End of enforcement discretion for cybersecurity in PWS sanitary surveys</div>
+      <p>This report documents that the utility has <strong>actively assessed</strong> its OT posture, closing the "what have you done" gap that state primacy agencies now probe in surveys.</p>
+    </div>
+    <div class="reg-card">
+      <div class="reg-name">CISA — Cross-Sector Cybersecurity Performance Goals (CPGs, v1.0.1)</div>
+      <div class="reg-sub">Applicable to water/wastewater sector</div>
+      <p>Findings map to CPG 1.A (Asset Inventory), 2.F (Network Segmentation), 2.W (Separating User and Privileged Accounts), and 4.A (Incident Reporting readiness).</p>
+    </div>
+    <div class="reg-card">
+      <div class="reg-name">CIRCIA — Cyber Incident Reporting for Critical Infrastructure Act</div>
+      <div class="reg-sub">72-hour reporting obligation, rule finalized by CISA</div>
+      <p>Baseline posture documented here materially shortens incident triage. Contact chain on cover page + evidence-pack SHA-256 support chain-of-custody for any downstream CISA reporting.</p>
+    </div>
+    <div class="reg-card">
+      <div class="reg-name">Grant eligibility — State Revolving Fund (SRF) + IIJA cyber set-asides</div>
+      <div class="reg-sub">Line-item framing for funding applications</div>
+      <p>This engagement is structured as a <strong>discrete, documentable cybersecurity assessment</strong> eligible for inclusion in DWSRF / CWSRF applications under state cyber set-asides and IIJA-authorized programs. Utility procurement should confirm with the state financing board.</p>
+    </div>
+  </div>
+  <div class="appx-footer-inline">
+    Utility is encouraged to cite this report in its next RRA update. CISA advisory monitoring is available as part of the T4 Managed Monitoring retainer.
+  </div>
+</section>
+  
+<section class="page">
+  <header class="ph"><span class="ph-num">05</span><span class="ph-name">Appendix — What comes next</span></header>
+  <h2>Deferred to T2 Blast-Radius Assessment</h2>
+  <ul class="next">
+    <li><strong>Attack-path chains</strong> — top scenario with barrier-level trace from finding to process impact.</li>
+    <li><strong>External exposure map</strong> — correlated Shodan + ASM view beyond this snapshot window.</li>
+    <li><strong>Mesh / segmentation audit</strong> — IT/OT boundary policy verification.</li>
+    <li><strong>IEC 62443-4-2 SR coverage matrix</strong> — auditor-ready mapping (available as T2 deliverable).</li>
+    <li><strong>Managed monitoring (T4)</strong> — quarterly re-scan, new-CVE re-scoring, CISA advisory alerting, drift detection.</li>
+  </ul>
+  <div class="appx-footer">
+    Toolchain: <code>otsniff</code> — evidence-graded OT assessment pipeline. All evidence snippets in this report are redacted per the engagement ROE; full unredacted evidence is in the encrypted evidence pack (SHA-256 referenced on the cover). Cross-references to EPA AWIA, CISA CPGs, and CIRCIA on §4.
+  </div>
+</section>
+</body>
+</html>

@@ -25,6 +25,7 @@ export const api = {
   prebuiltScenarios: () => callJson('/api/scenarios/prebuilt'),
   assetPaths: (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/paths`),
   assetRisk: (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/risk`),
+  evidence: (assetId) => callJson(`/api/evidence/${encodeURIComponent(assetId)}`),
   assets: () => callJson('/api/assets'),
   graphSummary: () => callJson('/api/graph/summary'),
 };

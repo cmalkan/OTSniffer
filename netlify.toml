@@ -32,3 +32,8 @@
   from = "/api/assets/:assetId/risk"
   to = "/.netlify/functions/assets-risk?assetId=:assetId"
   status = 200
+
+[[redirects]]
+  from = "/api/evidence/:assetId"
+  to = "/.netlify/functions/evidence?assetId=:assetId"
+  status = 200

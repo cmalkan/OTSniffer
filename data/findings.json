@@ -1,0 +1,114 @@
+{
+  "findings": [
+    {
+      "finding_id": "f_seed_01_eng_key",
+      "asset_id": "a_eng_01",
+      "finding_type": "secret_leak",
+      "severity": "critical",
+      "evidence": "BEGIN RSA PRIVATE KEY ----***-- in /projects/turbine_logic.acd.bak",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "finding_id": "f_seed_02_eng_aws",
+      "asset_id": "a_eng_01",
+      "finding_type": "secret_leak",
+      "severity": "high",
+      "evidence": "AKIA***XYZ in /configs/s3-backup.cfg",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_seed_03_hist_pi",
+      "asset_id": "a_hist_01",
+      "finding_type": "secret_leak",
+      "severity": "high",
+      "evidence": "pi_admin:Hone***23 in /etc/aveva/historian.ini",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.8
+    },
+    {
+      "finding_id": "f_seed_04_hmi_modbus",
+      "asset_id": "a_hmi_01",
+      "finding_type": "secret_leak",
+      "severity": "medium",
+      "evidence": "modbus_admin:fact***01 in panelview-export.xml",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.6
+    },
+    {
+      "finding_id": "f_seed_05_eng_unpinned",
+      "asset_id": "a_eng_01",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "GitHub Actions workflow ci.yml uses unpinned actions/checkout@master",
+      "source_tool": "gato-x",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_seed_06_scada_log4j",
+      "asset_id": "a_scada_01",
+      "finding_type": "supply_chain",
+      "severity": "critical",
+      "evidence": "WinCC OA dependency log4j-core 2.14.1 (CVE-2021-44228) in /opt/wincc/lib",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.95
+    },
+    {
+      "finding_id": "f_seed_07_hist_openssl",
+      "asset_id": "a_hist_01",
+      "finding_type": "supply_chain",
+      "severity": "medium",
+      "evidence": "Outdated OpenSSL 1.0.2k bundled with historian connector",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.75
+    },
+    {
+      "finding_id": "f_seed_08_scada_s7",
+      "asset_id": "a_scada_01",
+      "finding_type": "exposure",
+      "severity": "critical",
+      "evidence": "TCP/102 (S7comm) reachable from corporate VLAN per simulated Shodan banner",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "finding_id": "f_seed_09_plc_modbus",
+      "asset_id": "a_plc_01",
+      "finding_type": "exposure",
+      "severity": "high",
+      "evidence": "TCP/502 (Modbus) responding on 10.20.1.11 with no auth banner",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_seed_10_hmi_http",
+      "asset_id": "a_hmi_01",
+      "finding_type": "exposure",
+      "severity": "medium",
+      "evidence": "HTTP/80 PanelView web UI exposed, default cert",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.7
+    },
+    {
+      "finding_id": "f_seed_11_sis_zone",
+      "asset_id": "a_sis_01",
+      "finding_type": "mesh_gap",
+      "severity": "critical",
+      "evidence": "SIS controller a_sis_01 reachable from z_cell1 (HMI zone) — violates IEC 62443 zone isolation",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.8
+    }
+  ]
+}

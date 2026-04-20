@@ -1,0 +1,58 @@
+# Toolchain dev services. All npm / Python work for this repo runs through Docker.
+# Usage:
+#   docker compose -f compose.toolchain.yml run --rm node npm test
+#   docker compose -f compose.toolchain.yml run --rm py pytest -q
+#   docker compose -f compose.toolchain.yml run --rm otsniff help
+
+services:
+  node:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["npm", "test"]
+
+  web:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: ["node", "scripts/dev-server.mjs"]
+
+  py:
+    build: .
+    working_dir: /app
+    volumes:
+      - .:/app
+    entrypoint: []
+    command: ["pytest", "-q"]
+
+  otsniff:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    entrypoint: ["node", "scripts/otsniff/cli.mjs"]
+    command: ["help"]
+
+  # Renderer service — Playwright image ships with Chromium preinstalled.
+  # First run will `npm install` into a named volume so the image stays pristine.
+  report:
+    image: mcr.microsoft.com/playwright:v1.49.0-jammy
+    working_dir: /app
+    volumes:
+      - .:/app
+      - otsniff_report_node_modules:/app/node_modules
+    entrypoint:
+      - "sh"
+      - "-c"
+      - |
+        if [ ! -d node_modules/playwright ]; then npm install --no-audit --no-fund; fi
+        exec node scripts/otsniff/cli.mjs "$@"
+      - "--"
+    command: ["report", "--help"]
+
+volumes:
+  otsniff_report_node_modules: {}
