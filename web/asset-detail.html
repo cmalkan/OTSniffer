@@ -8,7 +8,17 @@
 <body>
 <div class="app">
   <div class="topbar">
-    <div><h1 class="title">Asset Detail View</h1><div class="subtitle">Asset-level risk contribution, vulnerabilities, conduits, downstream reachability, and process-function linkage.</div></div>
+    <a class="brand" href="/" aria-label="Malkan Solutions — OTSniffer">
+      <img src="/assets/malkan-logo.png" alt="Malkan Solutions" />
+      <span class="brand-meta">
+        <span class="brand-product">OTSniffer</span>
+        <span class="brand-tagline">Evidence-graded OT blast-radius</span>
+      </span>
+    </a>
+    <div class="title-block">
+      <h1 class="title">Asset Detail</h1>
+      <div class="subtitle">Asset-level risk contribution, vulnerabilities, conduits, downstream reachability, and process-function linkage.</div>
+    </div>
     <nav class="nav">
       <a href="/index.html">Operations Dashboard</a>
       <a href="/scenario-explorer.html">Scenario Explorer</a>
@@ -33,6 +43,7 @@
       <div class="tabs">
         <button class="tab active" data-tab="meta">Metadata</button>
         <button class="tab" data-tab="vuln">Vulnerabilities</button>
+        <button class="tab" data-tab="evidence">Evidence</button>
         <button class="tab" data-tab="connections">Connections</button>
         <button class="tab" data-tab="downstream">Downstream Reachability</button>
       </div>
@@ -40,7 +51,14 @@
       <div data-panel="meta">
         <div class="table-wrap"><table><tbody id="metaRows"></tbody></table></div>
       </div>
-      <div data-panel="vuln" class="hidden"><div class="table-wrap"><table><thead><tr><th>CVE</th><th>Severity</th><th>Description</th></tr></thead><tbody id="vulnRows"></tbody></table></div></div>
+      <div data-panel="vuln" class="hidden"><div class="table-wrap"><table><thead><tr><th>CVE</th><th>Severity</th><th>Source</th><th>Description</th></tr></thead><tbody id="vulnRows"></tbody></table></div></div>
+      <div data-panel="evidence" class="hidden">
+        <div class="ev-summary">
+          <div class="ev-counts" id="evCounts"></div>
+          <div class="ev-tools" id="evTools"></div>
+        </div>
+        <ul class="ev-list" id="evList"></ul>
+      </div>
       <div data-panel="connections" class="hidden"><div class="table-wrap"><table><thead><tr><th>Inbound/Outbound</th><th>Connected Asset</th><th>Protocol/Direction</th></tr></thead><tbody id="connRows"></tbody></table></div></div>
       <div data-panel="downstream" class="hidden"><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Hop</th><th>Process Tag</th><th>Path Membership</th></tr></thead><tbody id="downRows"></tbody></table></div></div>
     </main>
@@ -72,9 +90,56 @@ async function init() {
   document.getElementById('loadBtn').onclick = loadDetails;
 }
 
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+function renderEvidence(data) {
+  const counts = data.severity_counts || {};
+  const order = ['critical','high','medium','low','info'];
+  document.getElementById('evCounts').innerHTML = order
+    .filter(k => counts[k])
+    .map(k => `<span class="ev-count c-${k}"><strong>${counts[k]}</strong>${k}</span>`)
+    .join('') || '<span class="ev-count">no findings</span>';
+  document.getElementById('evTools').innerHTML = Object.entries(data.tool_counts || {})
+    .map(([tool, n]) => `<span class="ev-tool-chip">${esc(tool)} · ${n}</span>`)
+    .join('');
+
+  const list = document.getElementById('evList');
+  if (!data.findings.length) {
+    list.innerHTML = `<li class="ev-empty">No evidence attached to this asset yet.<br/>Run <code>otsniff scan:secrets --asset ${esc(data.asset_id)} --target &lt;path&gt;</code> then <code>otsniff merge</code> to attach findings.</li>`;
+    return;
+  }
+  list.innerHTML = data.findings.map(f => {
+    const conf = Math.round((f.confidence ?? 0) * 100);
+    const detected = (f.detected_at || '').replace('T',' ').replace('Z','').slice(0,19);
+    return `
+      <li class="ev-item">
+        <span class="ev-dot sev-${esc(f.severity)}"></span>
+        <div class="ev-body">
+          <div class="ev-header">
+            <span class="ev-type">${esc(f.finding_type).replace(/_/g,' ')}</span>
+            <span class="ev-id">${esc(f.finding_id)}</span>
+          </div>
+          <pre class="ev-evidence">${esc(f.evidence)}</pre>
+          <div class="ev-meta">
+            <span class="ev-tool-chip">${esc(f.source_tool)}</span>
+            <span class="sep">·</span>
+            <span>${esc(detected)}</span>
+          </div>
+        </div>
+        <div class="ev-conf" title="confidence ${conf}%">
+          <span class="ev-conf-label">conf ${conf}</span>
+          <span class="ev-conf-bar" style="--conf:${conf}%"></span>
+        </div>
+      </li>`;
+  }).join('');
+}
+
 async function loadDetails() {
   const id = document.getElementById('assetSel').value;
-  const [risk, paths, top] = await Promise.all([api.assetRisk(id), api.assetPaths(id), api.topScenarios()]);
+  const [risk, paths, top, evidence] = await Promise.all([
+    api.assetRisk(id), api.assetPaths(id), api.topScenarios(),
+    api.evidence(id).catch(() => ({ findings: [], severity_counts: {}, tool_counts: {}, asset_id: id })),
+  ]);
   const asset = assets.find(a => a.asset_id === id);
 
   document.getElementById('assetName').textContent = `${asset.name} — Asset Metadata`;
@@ -82,10 +147,18 @@ async function loadDetails() {
     ['asset_id', asset.asset_id],['asset_type',asset.asset_type],['vendor',asset.vendor],['model',asset.model],['firmware_version',asset.firmware_version],['ip_address',asset.ip_address],['zone_id',asset.zone_id],['criticality_score',asset.criticality_score],['process_tag',asset.process_tag]
   ]);
 
-  // Reusing risk API as base and path simulation for evidence-rich downstream context.
   const sim = await api.simulateBlastRadius({start_asset_id:id,max_depth:6,include_vulnerabilities:true,include_zone_barriers:true,mode:'analyst'});
 
-  fillTableBody(document.getElementById('vulnRows'), (sim.exploited_or_exploitable_vulnerabilities || []).filter(v=>v.asset_id===id).map(v => [v.cve, v.severity, v.description || 'n/a']));
+  const srcByVuln = new Map((evidence.findings || []).map(f => [f.finding_id, f.source_tool]));
+  fillTableBody(document.getElementById('vulnRows'),
+    (sim.exploited_or_exploitable_vulnerabilities || [])
+      .filter(v=>v.asset_id===id)
+      .map(v => {
+        const src = v.source_tool || srcByVuln.get(v.vuln_id) || 'fixture';
+        return [v.cve, v.severity, `<span class="src-tag">${esc(src)}</span>`, v.description || 'n/a'];
+      })
+  );
+  renderEvidence(evidence);
   fillTableBody(document.getElementById('connRows'), (paths.paths || []).flatMap(p => p.ordered_asset_ids.map((assetId, idx) => {
     if (idx===0 || p.ordered_asset_ids[idx-1]!==id) return [];
     return [[ 'outbound', assetId, `${p.protocols_used.join(',')} / path ${p.path_id}` ]];

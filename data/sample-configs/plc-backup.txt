@@ -1,0 +1,9 @@
+# Sample PLC project export (synthetic — for toolchain demo only)
+aws_access_key_id = AKIAIOSFODNN7EXAMPLE
+api_key: "sk_live_abcdefghijklmnop1234567890"
+engineering_station login = admin:plc
+modbus_user=operator
+modbus_pass=1234
+-----BEGIN RSA PRIVATE KEY-----
+MIIBOgIBAAJBAKj34GkxFhD90vcNLYLInFEX6Ppy1tPf9Cnzj4p4WGeKLs1Pt8Qu
+-----END RSA PRIVATE KEY-----

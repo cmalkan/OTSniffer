@@ -3,3 +3,10 @@ node_modules
 out
 .DS_Store
 .env*
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Local-only Claude Code settings (shared settings.json is committed)
+.claude/settings.local.json

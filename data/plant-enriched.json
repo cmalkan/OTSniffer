@@ -1,0 +1,457 @@
+{
+  "plant_id": "plant-alpha",
+  "plant_name": "Alpha Combined Cycle Energy Plant",
+  "sector": "energy",
+  "zones": [
+    {
+      "zone_id": "z_dmz",
+      "name": "OT DMZ",
+      "level": "L3.5",
+      "description": "Boundary and brokering"
+    },
+    {
+      "zone_id": "z_ops",
+      "name": "Operations Control",
+      "level": "L3",
+      "description": "SCADA and historian"
+    },
+    {
+      "zone_id": "z_cell1",
+      "name": "Turbine Cell",
+      "level": "L2",
+      "description": "HMI and engineering workstation"
+    },
+    {
+      "zone_id": "z_process",
+      "name": "Process Control",
+      "level": "L1",
+      "description": "PLCs and safety"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "a_scada_01",
+      "name": "SCADA Core 01",
+      "asset_type": "scada-server",
+      "vendor": "Siemens",
+      "model": "WinCC OA",
+      "firmware_version": "3.18",
+      "ip_address": "10.20.3.10",
+      "zone_id": "z_ops",
+      "criticality_score": 9,
+      "process_tag": "power_dispatch"
+    },
+    {
+      "asset_id": "a_hist_01",
+      "name": "Plant Historian",
+      "asset_type": "historian",
+      "vendor": "AVEVA",
+      "model": "PI-like",
+      "firmware_version": "2023.2",
+      "ip_address": "10.20.3.20",
+      "zone_id": "z_ops",
+      "criticality_score": 8,
+      "process_tag": "ops_visibility"
+    },
+    {
+      "asset_id": "a_hmi_01",
+      "name": "Turbine HMI",
+      "asset_type": "hmi",
+      "vendor": "Rockwell",
+      "model": "PanelView",
+      "firmware_version": "12.1",
+      "ip_address": "10.20.2.15",
+      "zone_id": "z_cell1",
+      "criticality_score": 9,
+      "process_tag": "turbine_control"
+    },
+    {
+      "asset_id": "a_eng_01",
+      "name": "Engineering WS",
+      "asset_type": "engineering-workstation",
+      "vendor": "Honeywell",
+      "model": "EngStation",
+      "firmware_version": "5.4",
+      "ip_address": "10.20.2.30",
+      "zone_id": "z_cell1",
+      "criticality_score": 7,
+      "process_tag": "logic_changes"
+    },
+    {
+      "asset_id": "a_plc_01",
+      "name": "Boiler PLC",
+      "asset_type": "plc",
+      "vendor": "Schneider",
+      "model": "M580",
+      "firmware_version": "2.90",
+      "ip_address": "10.20.1.11",
+      "zone_id": "z_process",
+      "criticality_score": 10,
+      "process_tag": "boiler_control"
+    },
+    {
+      "asset_id": "a_sis_01",
+      "name": "SIS Controller",
+      "asset_type": "safety-controller",
+      "vendor": "HIMA",
+      "model": "HIMax",
+      "firmware_version": "5.2",
+      "ip_address": "10.20.1.50",
+      "zone_id": "z_process",
+      "criticality_score": 10,
+      "process_tag": "trip_safety"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "vuln_id": "v1",
+      "cve": "CVE-2024-1111",
+      "description": "Auth bypass in web HMI component",
+      "severity": "high",
+      "exploitability": 0.7,
+      "affected_vendor": "Rockwell",
+      "affected_product": "PanelView",
+      "affected_version": "12.1",
+      "asset_id": "a_hmi_01"
+    },
+    {
+      "vuln_id": "v2",
+      "cve": "CVE-2023-9988",
+      "description": "Unsafe project import leads to RCE",
+      "severity": "critical",
+      "exploitability": 0.9,
+      "affected_vendor": "Honeywell",
+      "affected_product": "EngStation",
+      "affected_version": "5.4",
+      "asset_id": "a_eng_01"
+    },
+    {
+      "vuln_id": "v3",
+      "cve": "CVE-2022-7123",
+      "description": "Protocol stack crash vulnerability",
+      "severity": "medium",
+      "exploitability": 0.4,
+      "affected_vendor": "Schneider",
+      "affected_product": "M580",
+      "affected_version": "2.90",
+      "asset_id": "a_plc_01"
+    },
+    {
+      "vuln_id": "f_seed_01_eng_key",
+      "cve": "SECRET-f_seed_01_eng_key",
+      "description": "BEGIN RSA PRIVATE KEY ----***-- in /projects/turbine_logic.acd.bak",
+      "severity": "critical",
+      "exploitability": 0.9,
+      "asset_id": "a_eng_01",
+      "source_tool": "noseyparker",
+      "evidence_finding_id": "f_seed_01_eng_key"
+    },
+    {
+      "vuln_id": "f_seed_02_eng_aws",
+      "cve": "SECRET-f_seed_02_eng_aws",
+      "description": "AKIA***XYZ in /configs/s3-backup.cfg",
+      "severity": "high",
+      "exploitability": 0.85,
+      "asset_id": "a_eng_01",
+      "source_tool": "noseyparker",
+      "evidence_finding_id": "f_seed_02_eng_aws"
+    },
+    {
+      "vuln_id": "f_seed_03_hist_pi",
+      "cve": "SECRET-f_seed_03_hist_pi",
+      "description": "pi_admin:Hone***23 in /etc/aveva/historian.ini",
+      "severity": "high",
+      "exploitability": 0.8,
+      "asset_id": "a_hist_01",
+      "source_tool": "noseyparker",
+      "evidence_finding_id": "f_seed_03_hist_pi"
+    },
+    {
+      "vuln_id": "f_seed_04_hmi_modbus",
+      "cve": "SECRET-f_seed_04_hmi_modbus",
+      "description": "modbus_admin:fact***01 in panelview-export.xml",
+      "severity": "medium",
+      "exploitability": 0.6,
+      "asset_id": "a_hmi_01",
+      "source_tool": "manual",
+      "evidence_finding_id": "f_seed_04_hmi_modbus"
+    },
+    {
+      "vuln_id": "f_seed_05_eng_unpinned",
+      "cve": "SUPPLY-f_seed_05_eng_unpinned",
+      "description": "GitHub Actions workflow ci.yml uses unpinned actions/checkout@master",
+      "severity": "high",
+      "exploitability": 0.85,
+      "asset_id": "a_eng_01",
+      "source_tool": "gato-x",
+      "evidence_finding_id": "f_seed_05_eng_unpinned"
+    },
+    {
+      "vuln_id": "f_seed_06_scada_log4j",
+      "cve": "SUPPLY-f_seed_06_scada_log4j",
+      "description": "WinCC OA dependency log4j-core 2.14.1 (CVE-2021-44228) in /opt/wincc/lib",
+      "severity": "critical",
+      "exploitability": 0.95,
+      "asset_id": "a_scada_01",
+      "source_tool": "manual",
+      "evidence_finding_id": "f_seed_06_scada_log4j"
+    },
+    {
+      "vuln_id": "f_seed_07_hist_openssl",
+      "cve": "SUPPLY-f_seed_07_hist_openssl",
+      "description": "Outdated OpenSSL 1.0.2k bundled with historian connector",
+      "severity": "medium",
+      "exploitability": 0.75,
+      "asset_id": "a_hist_01",
+      "source_tool": "manual",
+      "evidence_finding_id": "f_seed_07_hist_openssl"
+    },
+    {
+      "vuln_id": "f_seed_08_scada_s7",
+      "cve": "EXPOSURE-f_seed_08_scada_s7",
+      "description": "TCP/102 (S7comm) reachable from corporate VLAN per simulated Shodan banner",
+      "severity": "critical",
+      "exploitability": 0.9,
+      "asset_id": "a_scada_01",
+      "source_tool": "shodan",
+      "evidence_finding_id": "f_seed_08_scada_s7"
+    },
+    {
+      "vuln_id": "f_seed_09_plc_modbus",
+      "cve": "EXPOSURE-f_seed_09_plc_modbus",
+      "description": "TCP/502 (Modbus) responding on 10.20.1.11 with no auth banner",
+      "severity": "high",
+      "exploitability": 0.85,
+      "asset_id": "a_plc_01",
+      "source_tool": "shodan",
+      "evidence_finding_id": "f_seed_09_plc_modbus"
+    },
+    {
+      "vuln_id": "f_seed_10_hmi_http",
+      "cve": "EXPOSURE-f_seed_10_hmi_http",
+      "description": "HTTP/80 PanelView web UI exposed, default cert",
+      "severity": "medium",
+      "exploitability": 0.7,
+      "asset_id": "a_hmi_01",
+      "source_tool": "shodan",
+      "evidence_finding_id": "f_seed_10_hmi_http"
+    },
+    {
+      "vuln_id": "f_seed_11_sis_zone",
+      "cve": "MESH-f_seed_11_sis_zone",
+      "description": "SIS controller a_sis_01 reachable from z_cell1 (HMI zone) — violates IEC 62443 zone isolation",
+      "severity": "critical",
+      "exploitability": 0.8,
+      "asset_id": "a_sis_01",
+      "source_tool": "manual",
+      "evidence_finding_id": "f_seed_11_sis_zone"
+    }
+  ],
+  "connectivity": [
+    {
+      "source_asset_id": "a_scada_01",
+      "target_asset_id": "a_hmi_01",
+      "protocol": "opc-ua",
+      "port": 4840,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_hmi_01",
+      "target_asset_id": "a_plc_01",
+      "protocol": "modbus-tcp",
+      "port": 502,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_eng_01",
+      "target_asset_id": "a_plc_01",
+      "protocol": "s7",
+      "port": 102,
+      "trust_level": "medium",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_plc_01",
+      "target_asset_id": "a_sis_01",
+      "protocol": "profinet",
+      "port": 34964,
+      "trust_level": "medium",
+      "allowed_direction": "uni"
+    },
+    {
+      "source_asset_id": "a_hist_01",
+      "target_asset_id": "a_scada_01",
+      "protocol": "https",
+      "port": 443,
+      "trust_level": "high",
+      "allowed_direction": "uni"
+    }
+  ],
+  "process_functions": [
+    {
+      "process_id": "p1",
+      "name": "Power Dispatch",
+      "criticality": 10,
+      "primary_zone_id": "z_ops",
+      "dependent_asset_ids": [
+        "a_scada_01",
+        "a_hist_01"
+      ]
+    },
+    {
+      "process_id": "p2",
+      "name": "Turbine Control",
+      "criticality": 10,
+      "primary_zone_id": "z_cell1",
+      "dependent_asset_ids": [
+        "a_hmi_01",
+        "a_plc_01"
+      ]
+    },
+    {
+      "process_id": "p3",
+      "name": "Safety Trip Logic",
+      "criticality": 10,
+      "primary_zone_id": "z_process",
+      "dependent_asset_ids": [
+        "a_sis_01",
+        "a_plc_01"
+      ]
+    }
+  ],
+  "demo_scenarios": [
+    {
+      "scenario_id": "s1",
+      "title": "Engineering workstation compromise",
+      "compromised_asset_id": "a_eng_01",
+      "intent": "Evaluate potential impact on PLC and process safety"
+    },
+    {
+      "scenario_id": "s2",
+      "title": "HMI ransomware foothold",
+      "compromised_asset_id": "a_hmi_01",
+      "intent": "Map spread to PLC and control function"
+    }
+  ],
+  "evidence_findings": [
+    {
+      "finding_id": "f_seed_01_eng_key",
+      "asset_id": "a_eng_01",
+      "finding_type": "secret_leak",
+      "severity": "critical",
+      "evidence": "BEGIN RSA PRIVATE KEY ----***-- in /projects/turbine_logic.acd.bak",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "finding_id": "f_seed_02_eng_aws",
+      "asset_id": "a_eng_01",
+      "finding_type": "secret_leak",
+      "severity": "high",
+      "evidence": "AKIA***XYZ in /configs/s3-backup.cfg",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_seed_03_hist_pi",
+      "asset_id": "a_hist_01",
+      "finding_type": "secret_leak",
+      "severity": "high",
+      "evidence": "pi_admin:Hone***23 in /etc/aveva/historian.ini",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.8
+    },
+    {
+      "finding_id": "f_seed_04_hmi_modbus",
+      "asset_id": "a_hmi_01",
+      "finding_type": "secret_leak",
+      "severity": "medium",
+      "evidence": "modbus_admin:fact***01 in panelview-export.xml",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.6
+    },
+    {
+      "finding_id": "f_seed_05_eng_unpinned",
+      "asset_id": "a_eng_01",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "GitHub Actions workflow ci.yml uses unpinned actions/checkout@master",
+      "source_tool": "gato-x",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_seed_06_scada_log4j",
+      "asset_id": "a_scada_01",
+      "finding_type": "supply_chain",
+      "severity": "critical",
+      "evidence": "WinCC OA dependency log4j-core 2.14.1 (CVE-2021-44228) in /opt/wincc/lib",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.95
+    },
+    {
+      "finding_id": "f_seed_07_hist_openssl",
+      "asset_id": "a_hist_01",
+      "finding_type": "supply_chain",
+      "severity": "medium",
+      "evidence": "Outdated OpenSSL 1.0.2k bundled with historian connector",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.75
+    },
+    {
+      "finding_id": "f_seed_08_scada_s7",
+      "asset_id": "a_scada_01",
+      "finding_type": "exposure",
+      "severity": "critical",
+      "evidence": "TCP/102 (S7comm) reachable from corporate VLAN per simulated Shodan banner",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "finding_id": "f_seed_09_plc_modbus",
+      "asset_id": "a_plc_01",
+      "finding_type": "exposure",
+      "severity": "high",
+      "evidence": "TCP/502 (Modbus) responding on 10.20.1.11 with no auth banner",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_seed_10_hmi_http",
+      "asset_id": "a_hmi_01",
+      "finding_type": "exposure",
+      "severity": "medium",
+      "evidence": "HTTP/80 PanelView web UI exposed, default cert",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.7
+    },
+    {
+      "finding_id": "f_seed_11_sis_zone",
+      "asset_id": "a_sis_01",
+      "finding_type": "mesh_gap",
+      "severity": "critical",
+      "evidence": "SIS controller a_sis_01 reachable from z_cell1 (HMI zone) — violates IEC 62443 zone isolation",
+      "source_tool": "manual",
+      "detected_at": "2026-04-19T12:00:00Z",
+      "confidence": 0.8
+    }
+  ],
+  "evidence_meta": {
+    "merged_at": "2026-04-19T20:31:04.295Z",
+    "accepted_count": 11,
+    "rejected_count": 0,
+    "rejections": [],
+    "rejections_truncated": false
+  }
+}

@@ -37,11 +37,48 @@ Dense analyst-grade OT cyber simulation demo for Netlify.
 - Asset view: metadata, vulnerabilities, connections, downstream reachability, scenario membership
 - Scenario comparison: side-by-side metrics and score decomposition
 
-## Verification
+## Service packaging (Malkan Solutions LLC)
+
+Four productized tiers. Buyer-facing names; internal T-codes retained for SOW plumbing only. Full spec, value quantification, and funding-source map in [`docs/tiers-and-glossary.md`](docs/tiers-and-glossary.md).
+
+| Code | Buyer name | Duration | Anchor price |
+|---|---|---|---|
+| T1 | **Evidence Pack** | 1 week | $7,500 |
+| T2 | **Impact Map** | 3–4 weeks | $35,000 |
+| T3 | **Proven Pathways** | 6–8 weeks | $95,000 |
+| T4 | **Posture Watch** | Retainer | $4,500/mo |
+
+## Evidence Toolchain (`otsniff`)
+
+OTSniffer ships with an evidence-graded assessment toolchain under `scripts/otsniff/`. It chains open-source scanners into a normalized findings pipeline that feeds the existing risk engine and blast-radius simulation, so scenario scores are backed by real evidence rather than fixture data.
+
+Pipeline phases:
+```
+INGEST → STATIC SCAN → EXTERNAL RECON → LAB VALIDATION → ENRICH → SCORE/SIM → REPORT
+```
+
+v0.1 ships `scan:secrets` (credential / API-key leak detection with a built-in fallback) and `merge` (idempotent enrichment of a plant fixture). Future phases: supply-chain scan, mesh audit, external attack-surface recon, lab-only credential validation, PDF report.
+
+Normalized finding schema (`scripts/otsniff/schema.mjs`): `{ finding_id, asset_id, finding_type, severity, evidence, source_tool, detected_at, confidence }`.
+
 ```bash
-npm run build
-npm test
-pytest -q
+# End-to-end demo run (Docker-based):
+docker compose -f compose.toolchain.yml run --rm otsniff scan:secrets \
+  --target /app/data --out /app/data/findings.json
+docker compose -f compose.toolchain.yml run --rm otsniff merge \
+  --plant /app/data/plant-demo.json \
+  --findings /app/data/findings.json \
+  --out /app/data/plant-enriched.json
+```
+
+Guardrails: active / lab-only phases (credential validation, path validation) are gated behind `LAB_MODE=1` and never invoked from Netlify Functions.
+
+## Verification
+All npm and Python work runs inside Docker via `compose.toolchain.yml`:
+```bash
+docker compose -f compose.toolchain.yml run --rm node npm run build
+docker compose -f compose.toolchain.yml run --rm node npm test
+docker compose -f compose.toolchain.yml run --rm py pytest -q
 ```
 
 Function smoke tests:
