@@ -101,6 +101,66 @@ Numbers are directional — cite sources when used with clients; do not invent s
 - **Insurance loading:** 15–25% premium reductions for documented OT segmentation + continuous monitoring. On a $75,000 annual premium, that is $11,000–$19,000/year — Evidence Pack pays for itself every year.
 - **Rate-case defensibility:** Impact Map report becomes an exhibit in rate-case filings; utilities without documented cyber assessments face pushback from state PUCs.
 
+### Comparable teardown (what we're anchored against)
+
+Preserves the vendor-comparable analysis that set the floor/anchor/premium bands above. Where a firm public SKU isn't available, the band is derived from partner-channel margin math (typical 30–45% channel markup on OT-specialist vendor assessments) and is marked *low* confidence. **Do not quote specific competitor dollar figures externally without re-verifying** — these are defensible internal anchors, not published rate cards.
+
+#### Evidence Pack (T1) — anchor $7,500
+
+| Vendor / offering | Scope comparable to | Price band | Where they anchor in buyer's mind | Source / confidence |
+|---|---|---|---|---|
+| Dragos "Quickstart" / partner-led OT assessment | Passive asset & exposure snapshot, 1–2 wk | $15k–$35k (partner-delivered); Dragos-direct rare below $50k | "OT-specialist = expensive but credible" | Partner teardown, channel margin ~35%. Medium confidence. |
+| Claroty / Nozomi partner "posture check" (SI-delivered) | Asset inventory + passive findings, 1–2 wk | $10k–$25k (often bundled into appliance POC) | Free-to-cheap when tied to a sensor sale; standalone feels thin | Channel-rep conversations; public Claroty xDome trial framing. Medium. |
+| Regional SI / small MSSP "OT health check" | Site walk-down + passive scan + PDF | $5k–$15k per site | "Commodity — one of six quotes" | Public SI statements of capability; AWWA vendor directory. Medium-high. |
+| AWWA / NRWA free or subsidized RRA tabletop | AWIA RRA checklist assist | $0–$3k | "Grant-funded baseline, not defensible evidence" | AWWA cybersecurity guidance page. High. |
+| Mandiant / Kudelski "scoping assessment" | Pre-engagement scoping, not a deliverable | $0 (loss-leader) or $25k+ as paid workshop | Credibility-by-association; never a wedge buy | Public service descriptions. Medium. |
+
+**Positioning read (T1):** $7.5k anchor sits at **value-parity with regional SI** and **~50% penetration vs Dragos/Claroty partner quicks**. The decoy effect from T2/T3 makes T1 read as "the affordable wedge from a firm that also does the premium work" — not as the cheap seat. Floor of $5k holds because below it, the buyer pattern-matches to a free AWWA tabletop and discounts credibility.
+
+#### Impact Map (T2) — anchor $35,000
+
+| Vendor / offering | Scope comparable to | Price band | Where they anchor in buyer's mind | Source / confidence |
+|---|---|---|---|---|
+| Dragos Professional Services "architecture review" + threat scenarios | Attack-path mapping + IEC 62443 alignment | $60k–$120k | "What a real OT vendor charges — but we wait 8 weeks" | Dragos PS scoping norms; partner teardown. Medium. |
+| Claroty / Nozomi partner "risk assessment" | Asset + segmentation + attack-path narrative | $40k–$90k | Tied to product sale; feels like pre-sales | Channel margin math. Medium-low. |
+| 1898 & Co. (Burns & McDonnell) OT risk assessment | Multi-week engineering + cyber review | $75k–$250k per site | "The engineering firm our board already trusts" | Public case studies; utility RFP awards. Medium. |
+| Kudelski / Accenture Security OT practice scoping | Strategy + attack scenarios | $100k–$300k+ | Premium brand tax; slow decision cycle | Big-consultancy rate-card norms ($350–550/hr blended). Medium. |
+| Regional SI "comprehensive OT risk assessment" | Site survey + vuln scan + report | $25k–$60k | "Cheaper than Dragos but no blast-radius narrative" | SI capability statements. Medium-high. |
+
+**Positioning read (T2):** $35k anchor is **penetration vs OT-specialists (~40–55% below Dragos PS)** and **parity with premium regional SI**. The differentiator is the blast-radius simulation + rate-case exhibit framing — neither Dragos PS nor a regional SI typically delivers a PUC-filing-ready artifact. $55k premium remains below the psychological $60k "needs VP sign-off" threshold at most mid-utilities.
+
+#### Proven Pathways (T3) — anchor $95,000
+
+| Vendor / offering | Scope comparable to | Price band | Where they anchor in buyer's mind | Source / confidence |
+|---|---|---|---|---|
+| Mandiant (Google Cloud) OT red team / validated assessment | Lab-validated attack paths, IR-adjacent | $150k–$400k | "The premium anchor — what you buy after an incident" | Public Mandiant engagement norms; post-M&A pricing. Medium. |
+| Dragos "Threat & Risk" multi-phase + validation | Phased assessment w/ targeted validation | $120k–$250k | "OT-native premium — long lead time" | Partner teardown. Medium-low. |
+| Accenture / Kudelski OT red team | Full-scope red team + remediation roadmap | $200k–$500k+ | "Board-level program, not a project" | Big-consultancy norms. Medium. |
+| 1898 & Co. + partner red-team | Engineering + cyber validation combo | $150k–$350k | Utility-trusted engineering wrapper around cyber | Public utility program awards. Low-medium. |
+| Electric-utility in-house + NERC CIP auditor | Compliance-validation equivalent | $80k–$150k (internal-equivalent cost) | "We already pay for this via NERC CIP" | NERC CIP program cost studies. Medium. |
+
+**Positioning read (T3):** $95k anchor is deliberate **sub-$100k penetration vs Mandiant/Accenture premium** (clears GM signing limits at mid-industrial manufacturers). Primary role is **decoy** — presence of T3 on the sheet makes T2 read as obvious value. $140k premium ceiling still sits ~25–40% below Mandiant floor, preserving "credible but accessible" position.
+
+#### Posture Watch (T4) — anchor $4,500/mo ($54k/yr list)
+
+| Vendor / offering | Scope comparable to | Price band | Where they anchor in buyer's mind | Source / confidence |
+|---|---|---|---|---|
+| Dragos Platform subscription (sensor + service) | Continuous OT monitoring + advisories | $60k–$250k/yr depending on site count | "The platform play — sensor-dependent" | Public Dragos platform norms; partner quotes. Medium. |
+| Claroty xDome / Nozomi Vantage SaaS | Asset visibility + advisories | $30k–$120k/yr per site | Asset-inventory tool, not evidence retainer | Vendor SaaS list pages. Medium. |
+| Elisity microsegmentation subscription | Identity-based segmentation SaaS | $40k–$150k/yr per site (per Elisity ROI guide) | "Adjacent control, not an assessment" | Elisity microseg budget guide 2025. High. |
+| MSSP OT managed service (regional) | 24×7 monitoring + quarterly report | $5k–$15k/mo | "We already pay an MSSP" — direct substitute objection | MSSP channel pricing norms. Medium-high. |
+| Big-4 retainer / "CISO advisory" | Quarterly advisory hours | $8k–$25k/mo | Premium advisory, not evidence-product | Big-4 retainer norms. Medium. |
+
+**Positioning read (T4):** $4.5k/mo anchor is **parity with regional MSSP OT retainer** and **~80–90% below Dragos platform**. Explicitly *not* positioned as a monitoring product (decoy-collision with Dragos/Nozomi/Claroty platforms) — sold as an **evidence-refresh retainer** tied to quarterly board/insurer asks. $2.5k/mo floor holds only inside an MSSP white-label where MSSP adds the monitoring layer.
+
+### What this means
+
+The **$7,500 T1 anchor remains defensible** against this set: it sits cleanly between the AWWA/NRWA free-tabletop floor and the Dragos/Claroty partner-quickstart band, while the T2/T3 decoys keep it from reading as commodity. Three conditions would justify moving it:
+
+- **Move to $9,500 anchor** if (a) Impact Map close rate exceeds 25% of T1 engagements (demand signal), or (b) a named insurer formally discounts premiums on evidence of T1 completion (funding-source upgrade).
+- **Hold at $7,500** through at least W12 — two to three T1 engagements are needed to validate willingness-to-pay before repricing; moving earlier damages anchor credibility with MSSP channel partners.
+- **Drop to $5,000 floor** only inside an MSSP bundled deal (60/40 split stated above) or for a marquee logo where the report itself is the case study. Never as a list-price response to a "it's too expensive" objection — that is a packaging failure, not a pricing one.
+
 ---
 
 ## Glossary — every acronym used across this project
