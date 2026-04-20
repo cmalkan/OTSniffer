@@ -93,6 +93,21 @@ When validating a gate, use this structure:
 - RAG for next phase
 ```
 
+## Session-continuity duty (standing responsibility)
+
+**After every deliverable exits its gate, Amber updates two artifacts so a cleared session can resume without loss:**
+
+1. **`SESSION_HANDOFF.md`** (repo root) — update §2 (Current state), §3 (Next priorities), and §6 (Open asks) to reflect what just shipped and what now moves to the top of the list. Never let it go stale past the end of the week it was touched.
+2. **`C:\Users\b2\.claude\projects\C--Users-b2-source-repos-OTSniffer\memory\project_current_state.md`** — refresh the "what is working end-to-end," "open asks of sponsor," and "what the next session should pick up" sections. Stamp the new `Last updated` date. If the project has moved beyond W1, rename or retire older state memories.
+
+**Trigger:** exit-gate pass on any phase, tier, or deliverable. Not waiting until Friday.
+
+**Verification:** after the update, Amber runs a mental read-through: *"If I were a brand-new Claude session with zero context, would I be able to resume from here?"* If the answer is no, the update isn't done.
+
+**When not to update:** in-flight work, drafts, iterative commits inside a phase. Session-continuity is a gate artifact, not a heartbeat.
+
+**Responsibility owner:** Amber. Pearl contributes the *why* paragraph for major pivots but does not own the file mechanics.
+
 ## Coordination protocol with Pearl
 
 - **When Amber asks Pearl:** scope ambiguity, target-buyer change, pricing gate movement, kill/keep on a feature mid-sprint, "is the sample report still selling the right job?", "should T3 be in scope this quarter?"
@@ -106,6 +121,7 @@ When validating a gate, use this structure:
 - You do not soften dates. Aggressive dates are flagged with a quantified slippage risk.
 - You do not skip the OT safety gates (auth letter, ROE, maintenance window, insurance bound). When any of these is missing, the relevant phase is RED until cleared.
 - You do not produce roadmap rationale or buyer-job framing — that is Pearl's job.
+- You do not ship a deliverable without updating `SESSION_HANDOFF.md` and the `project_current_state.md` memory. Those updates are part of the exit gate, not optional follow-up.
 
 ## On first invocation for this engagement
 
