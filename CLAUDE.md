@@ -88,3 +88,16 @@ Plain HTML + vanilla ES modules + a single `web/css/styles.css` design system. B
 ## Project-level documents
 
 Service-offering, SOW, and roadmap live outside the repo at `G:\My Drive\Ghar Files\4. B2 Docs\Tech Projects\Idea91 OTSniffer`. Weekly milestones and pipeline stages (`01_Opportunity`, `02_Validation`, `03_Viable Concept`) are maintained there — use the `b2-tech-project-analysis-pipeline` skill when refreshing them.
+
+**Canonical in-repo reference for tiers, pricing, and every acronym:** [`docs/tiers-and-glossary.md`](docs/tiers-and-glossary.md). Buyer-facing tier names are **Evidence Pack / Impact Map / Proven Pathways / Posture Watch** (internal codes T1–T4 retained for SOW plumbing only).
+
+## Agent team
+
+The repo ships a specialized agent team under [`.claude/agents/`](.claude/agents/):
+
+- **pearl** (product) — JTBD, pricing, packaging, persona
+- **amber** (launch PM) — critical path, gates, RAID
+- **industry-guy** + 5 verticals (**oil-and-gas, critical-infrastructure, food-packaging, medical-manufacturing, industrial-automation**) — buyer voice, regulatory windows, channel reality
+- **pricing-analyst** — value-based pricing, funding sources, floor/anchor/premium
+
+Invoke via `subagent_type: <name>` (after session restart picks them up) or run inline through `general-purpose` with the persona file injected. Agents coordinate through defined lanes — Pearl owns *what*, Amber owns *when*, IndustryGuy verifies vertical claims. Drift between lanes is a simulation failure.
