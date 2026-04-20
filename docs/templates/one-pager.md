@@ -109,5 +109,5 @@ No obligation. No pitch deck. One call, one shared intake form, one SOW decision
 - Single-page PDF is the distribution format. Markdown is the canonical source for copy updates.
 - Do not localize dollar figures or grant names without re-verifying the state-specific program. SRF program names are federally consistent; IIJA cyber grant flow is state-administered and name-varies.
 - Numbers in the back-page teaser are approximate industry directional; do not state a specific customer in any example or aggregate figure.
-- The "$7,500" anchor is sponsor-confirmation-pending as of template date. If sponsor reprices T1, update this file and all derivative PDFs in one change.
+- $7,500 anchor confirmed by sponsor 2026-04-20. If sponsor reprices T1 later, update this file and all derivative PDFs in one change.
 - Water-utility variant only. Oil & Gas / Food / Pharma / Medical Manufacturing variants are parked this quarter; do not repurpose by find-and-replace.

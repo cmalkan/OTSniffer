@@ -1,10 +1,10 @@
 # Statement of Work — Evidence Pack (T1)
 
-**Template version:** 2026-04-20 · draft · anchor pricing pending sponsor confirmation
+**Template version:** 2026-04-20 · confirmed
 **Issuer:** Malkan Solutions LLC ("Provider")
 **Client:** `{{CLIENT_LEGAL_NAME}}` ("Client")
 **Engagement code:** `{{ENG-CODE}}`
-**Governing law / venue:** `{{STATE}}` — *TBD by sponsor before first execution*
+**Governing law / venue:** Wisconsin (`{{COUNTY}}` County)
 
 > This SOW incorporates by reference the executed Master Services Agreement (MSA) between the parties. If no MSA is in place, the Terms in §10 apply.
 
@@ -120,7 +120,7 @@ If Client believes a finding is factually inaccurate, Client notifies Provider i
 - **Indemnification:** Each party indemnifies the other against third-party claims arising from its own gross negligence or willful misconduct.
 - **Termination:** Either party may terminate for material uncured breach after 5 business days written notice. Fees earned through termination date remain payable.
 - **Independent contractor:** Provider is engaged as an independent contractor. No employment, partnership, or joint venture is created.
-- **Governing law:** `{{STATE}}` law; exclusive venue in `{{COUNTY, STATE}}` courts.
+- **Governing law:** Wisconsin law; exclusive venue in `{{COUNTY}}` County, Wisconsin courts.
 
 ## 11. Change control
 
@@ -147,7 +147,7 @@ Signature: _____________________
 ### Template notes (delete before execution)
 
 - Replace all `{{PLACEHOLDER}}` values.
-- Confirm $7,500 anchor with sponsor before first external issuance. Pearl held $5k floor only inside bundled MSSP deals.
-- Governing law / venue unresolved — sponsor decision required (Malkan Solutions LLC state of formation is the natural default).
+- $7,500 anchor and Wisconsin governing law confirmed by sponsor 2026-04-20. Floor $5,000 only inside a bundled MSSP deal; Premium $12,000 for multi-site / white-label / expedited.
+- Populate `{{COUNTY}}` with Malkan Solutions LLC's registered-agent county in Wisconsin before first execution.
 - Pair with: Rules of Engagement (`roe.md`), Authorization Letter (`authorization-letter.md`), Intake Questionnaire (`intake-questionnaire.md`). Authorization Letter is *not* required for T1 passive-only but is recommended for utility-sector engagements where Client's own policy mandates it.
 - Do not issue without a matching entry in Malkan's engagement register and a distinct `{{ENG-CODE}}`.
