@@ -6,11 +6,10 @@
 //   { target: "<path-to-repo-or-workflows-dir>", assetHint }
 //   { repo:   "owner/name", assetHint, token }        // docker mode only
 
-import { spawn } from "node:child_process";
-import { readFile, readdir, stat } from "node:fs/promises";
-import { createHash } from "node:crypto";
+import { readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { SEVERITIES } from "../schema.mjs";
+import { run, safeRead, makeFinding } from "./_base.mjs";
 
 const GATO_IMAGE = process.env.OTSNIFF_GATO_IMAGE || "ghcr.io/praetorian-inc/gato-x:latest";
 const MAX_FILE_BYTES = 1 * 1024 * 1024;
@@ -77,8 +76,7 @@ async function tryDockerScan({ repo, token }) {
     const out = await run("docker", args, { timeoutMs: 180_000 });
     return parseGato(out);
   } catch (err) {
-    const code = err && err.code;
-    if (code !== "ENOENT") {
+    if (err && err.code !== "ENOENT") {
       process.stderr.write(`otsniff: gato scanner unavailable (${err.message}); using builtin fallback\n`);
     }
     return null;
@@ -91,7 +89,8 @@ function parseGato(stdout) {
   try { parsed = JSON.parse(stdout); } catch { return findings; }
   const rows = Array.isArray(parsed) ? parsed : parsed.findings || parsed.results || [];
   for (const r of rows) {
-    findings.push(toFinding({
+    findings.push(makeFinding({
+      finding_type: "supply_chain",
       evidence: (r.description || r.rule || r.name || "supply-chain issue").slice(0, 300),
       severity: mapSeverity(r.severity),
       confidence: typeof r.confidence === "number" ? r.confidence : 0.8,
@@ -104,20 +103,14 @@ function parseGato(stdout) {
 
 async function builtinScan(target, assetHint) {
   const files = await walk(target, 0);
-  const entries = await Promise.all(files.map(async (file) => {
-    try {
-      const st = await stat(file);
-      if (st.size > MAX_FILE_BYTES) return null;
-      return { file, text: await readFile(file, "utf8") };
-    } catch { return null; }
-  }));
-
+  const entries = await Promise.all(files.map((f) => safeRead(f, { maxBytes: MAX_FILE_BYTES })));
   const findings = [];
   for (const entry of entries) {
     if (!entry) continue;
     for (const pat of WORKFLOW_PATTERNS) {
       if (!pat.test(entry.text)) continue;
-      findings.push(toFinding({
+      findings.push(makeFinding({
+        finding_type: "supply_chain",
         evidence: `${pat.description} (${path.relative(target, entry.file).replace(/\\/g, "/")})`,
         severity: pat.severity,
         confidence: 0.55,
@@ -130,13 +123,19 @@ async function builtinScan(target, assetHint) {
   return findings;
 }
 
+// Bespoke walker: when given a repo root, redirect into nested .github/workflows
+// rather than scanning every YAML in the project. Falls back to a vanilla recursive
+// walk inside .github/ or when the caller already pointed at a workflows dir.
 async function walk(root, depth) {
   if (depth > 10) return [];
   const s = await stat(root).catch(() => null);
   if (!s) return [];
   if (s.isFile()) return YAML_EXT.has(path.extname(root).toLowerCase()) ? [root] : [];
   const out = [];
-  for (const entry of await readdir(root, { withFileTypes: true })) {
+  let entries;
+  try { entries = await readdir(root, { withFileTypes: true }); }
+  catch { return []; }
+  for (const entry of entries) {
     if (entry.name === ".git" || entry.name === "node_modules") continue;
     const p = path.join(root, entry.name);
     if (entry.isSymbolicLink()) continue;
@@ -165,33 +164,4 @@ function mapSeverity(s) {
   if (v === "warning") return "medium";
   if (v === "error") return "high";
   return "medium";
-}
-
-function toFinding({ evidence, severity, confidence, key, asset_id, source_tool }) {
-  return {
-    finding_id: "f_" + createHash("sha1").update(key).digest("hex").slice(0, 12),
-    asset_id: asset_id || "",
-    finding_type: "supply_chain",
-    severity,
-    evidence,
-    source_tool,
-    detected_at: new Date().toISOString(),
-    confidence,
-  };
-}
-
-function run(cmd, args, { timeoutMs = 60_000 } = {}) {
-  return new Promise((resolve, reject) => {
-    const p = spawn(cmd, args, { stdio: ["ignore", "pipe", "pipe"] });
-    let out = "", err = "";
-    const timer = setTimeout(() => { p.kill("SIGKILL"); reject(new Error("timeout")); }, timeoutMs);
-    p.stdout.on("data", (d) => { if (out.length < 4_000_000) out += d; });
-    p.stderr.on("data", (d) => { if (err.length < 200_000) err += d; });
-    p.on("error", (e) => { clearTimeout(timer); reject(e); });
-    p.on("close", (code) => {
-      clearTimeout(timer);
-      if (code !== 0) reject(new Error(`${cmd} exit ${code}: ${err}`));
-      else resolve(out);
-    });
-  });
 }

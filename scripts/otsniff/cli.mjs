@@ -4,6 +4,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { scanSecrets } from "./scanners/secrets.mjs";
 import { scanSupplyChain } from "./scanners/supply-chain.mjs";
+import { scanExposure } from "./scanners/exposure.mjs";
+import { scanMeshGap } from "./scanners/mesh-gap.mjs";
 import { mergeFindings } from "./merge.mjs";
 import { buildReport } from "./report.mjs";
 
@@ -17,6 +19,16 @@ Commands:
                       GitHub Actions workflow audit of a local repo path
   scan:supply-chain   --repo <owner/name> [--token <gh-token>] --out <findings.json> [--asset <id>]
                       Remote repo audit (requires docker scanner)
+
+  scan:exposure       --plant <plant.json> --out <findings.json>
+                      Static graph analysis of plant fixture for service-exposure
+                      patterns (web management on HMI/SCADA, control protocols
+                      crossing Purdue levels, field RTU on DNP3)
+
+  scan:mesh-gap       --plant <plant.json> --out <findings.json>
+                      Static graph analysis for IEC 62443 zone-isolation violations
+                      (safety controller reachable from non-PLC, high-crit PLC
+                      reachable from two-or-more levels above)
 
   merge               --plant <plant.json> --findings <findings.json> --out <enriched.json>
                       Merge normalized findings into a plant fixture
@@ -42,6 +54,11 @@ function parseArgs(argv) {
   return args;
 }
 
+async function writeFindings(findings, outPath) {
+  await writeFile(outPath, JSON.stringify({ findings }, null, 2));
+  console.log(`wrote ${findings.length} findings to ${outPath}`);
+}
+
 async function main() {
   const [, , cmd, ...rest] = process.argv;
   const args = parseArgs(rest);
@@ -49,9 +66,7 @@ async function main() {
     case "scan:secrets": {
       if (!args.target || !args.out) throw new Error("--target and --out required");
       const findings = await scanSecrets({ target: args.target, assetHint: args.asset || "unknown" });
-      await writeFile(args.out, JSON.stringify({ findings }, null, 2));
-      console.log(`wrote ${findings.length} findings to ${args.out}`);
-      return;
+      return writeFindings(findings, args.out);
     }
     case "scan:supply-chain": {
       if (!args.out) throw new Error("--out required");
@@ -62,9 +77,17 @@ async function main() {
         token: args.token || process.env.GH_TOKEN,
         assetHint: args.asset || "unknown",
       });
-      await writeFile(args.out, JSON.stringify({ findings }, null, 2));
-      console.log(`wrote ${findings.length} findings to ${args.out}`);
-      return;
+      return writeFindings(findings, args.out);
+    }
+    case "scan:exposure": {
+      if (!args.plant || !args.out) throw new Error("--plant and --out required");
+      const findings = await scanExposure({ plantPath: args.plant });
+      return writeFindings(findings, args.out);
+    }
+    case "scan:mesh-gap": {
+      if (!args.plant || !args.out) throw new Error("--plant and --out required");
+      const findings = await scanMeshGap({ plantPath: args.plant });
+      return writeFindings(findings, args.out);
     }
     case "report": {
       if (!args.plant || !args.out) throw new Error("--plant and --out required");
