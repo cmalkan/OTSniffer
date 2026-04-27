@@ -14,6 +14,16 @@ export async function callJson(url, options = {}) {
   return data;
 }
 
+// Plant key persistence — the tab strip selection survives navigation.
+const PLANT_KEY = 'otsniff_plant_key';
+export function getPlantKey() { return localStorage.getItem(PLANT_KEY) || 'energy'; }
+export function setPlantKey(k) { localStorage.setItem(PLANT_KEY, k); }
+
+const q = (path) => {
+  const k = getPlantKey();
+  return path + (path.includes('?') ? '&' : '?') + 'plant=' + encodeURIComponent(k);
+};
+
 export const api = {
   simulateBlastRadius: (payload) =>
     callJson('/api/simulate/blast-radius', {
@@ -21,11 +31,13 @@ export const api = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     }),
-  topScenarios: () => callJson('/api/simulate/top-scenarios'),
+  topScenarios:   () => callJson('/api/simulate/top-scenarios'),
   prebuiltScenarios: () => callJson('/api/scenarios/prebuilt'),
-  assetPaths: (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/paths`),
-  assetRisk: (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/risk`),
-  evidence: (assetId) => callJson(`/api/evidence/${encodeURIComponent(assetId)}`),
-  assets: () => callJson('/api/assets'),
-  graphSummary: () => callJson('/api/graph/summary'),
+  assetPaths:     (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/paths`),
+  assetRisk:      (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/risk`),
+  evidence:       (assetId) => callJson(`/api/evidence/${encodeURIComponent(assetId)}`),
+  assets:         () => callJson(q('/api/assets')),
+  graph:          () => callJson(q('/api/graph')),
+  posture:        () => callJson(q('/api/posture')),
+  plants:         () => callJson('/api/plants'),
 };

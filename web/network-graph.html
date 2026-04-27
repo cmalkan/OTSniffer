@@ -1,168 +1,144 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Network / Graph View</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer — Architecture &amp; BOM</title>
   <link rel="stylesheet" href="/css/styles.css" />
-  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
 <div class="app">
-  <div class="topbar">
+
+  <header class="topbar">
     <a class="brand" href="/" aria-label="Malkan Solutions — OTSniffer">
-      <img src="/assets/malkan-logo.png" alt="Malkan Solutions" />
+      <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-meta">
         <span class="brand-product">OTSniffer</span>
-        <span class="brand-tagline">Evidence-graded OT blast-radius</span>
+        <span class="brand-tagline">Malkan Solutions · OT Risk Assessment</span>
       </span>
     </a>
+
     <div class="title-block">
-      <h1 class="title">Network / Graph View</h1>
-      <div class="subtitle">Conduits, zone transitions, downstream reachability, and selected attack-path highlighting.</div>
+      <h1 class="title">Architecture &amp; <em>BOM</em></h1>
+      <div class="subtitle">Network topology mapped to the Purdue Reference Model, with a per-asset bill of materials. Click any asset card or table row for the asset deep-dive.</div>
     </div>
-    <nav class="nav">
-      <a href="/index.html">Operations Dashboard</a>
-      <a href="/scenario-explorer.html">Scenario Explorer</a>
-      <a class="active" href="/network-graph.html">Network / Graph View</a>
-      <a href="/asset-detail.html">Asset Detail</a>
-      <a href="/scenario-comparison.html">Scenario Comparison</a>
-    </nav>
+
+    <div class="live-strip">
+      <span class="live-pulse">Inventory · Live</span>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="/index.html">Posture</a>
+    <a class="active" href="/network-graph.html">Architecture &amp; BOM</a>
+    <a href="/asset-detail.html">Asset Detail</a>
+  </nav>
+
+  <div data-plant-tabs></div>
+
+  <div class="section-head" data-reveal="1">
+    <h2 class="section-title" data-tag="01">Plant Topology</h2>
+    <span class="section-meta" id="topoMeta">— assets · — conduits · — zones</span>
   </div>
 
-  <div class="layout" style="grid-template-columns:290px 1fr 340px">
-    <aside class="panel filters">
-      <h2>Graph Controls</h2>
-      <label>Compromised Start Asset</label><select id="startAsset" class="input"></select>
-      <label>Filter Zone</label><select id="zoneFilter" class="input"><option value="all">All Zones</option></select>
-      <label>Filter Asset Type</label><select id="typeFilter" class="input"><option value="all">All Types</option></select>
-      <label>Criticality Threshold</label><input id="critFilter" class="input" type="number" min="0" max="10" value="0"/>
-      <div class="row"><button class="btn btn-primary" id="runBtn">Run + Highlight</button><button class="btn btn-secondary" id="resetBtn">Reset</button></div>
+  <section class="schematic-stage" data-reveal="2">
+    <div class="stage-grid"></div>
+    <div class="stage-corners"></div>
+    <div class="stage-header">
+      <div class="stage-title">
+        <span class="stage-id" id="stageDocId">DOC · OT-TPL-001</span>
+        <span>Conduits, zone transitions, evidence overlay</span>
+      </div>
+      <div class="stage-legend">
+        <span><i style="background:#0AA2C0"></i> trusted</span>
+        <span><i style="background:#0AA2C0; opacity:0.5"></i> medium</span>
+        <span><i style="background:#C16B36"></i> low-trust</span>
+      </div>
+    </div>
+    <svg id="stage-svg" role="img" aria-label="Plant topology schematic"></svg>
+  </section>
 
-      <h2 style="margin-top:12px">Legend</h2>
-      <div class="small">Blue edge: trusted conduit<br/>Amber edge: medium-trust conduit<br/>Red edge: segmentation-sensitive path</div>
-
-      <h2 style="margin-top:12px">Attack Paths</h2>
-      <div class="table-wrap" style="max-height:230px"><table><thead><tr><th>Path</th><th>Hops</th><th>Risk</th><th>Focus</th></tr></thead><tbody id="pathRows"></tbody></table></div>
-    </aside>
-
-    <main class="panel">
-      <h2>OT Asset Graph</h2>
-      <div id="graphCanvas"></div>
-      <div class="small" style="margin-top:8px">Use filters and path focus to inspect affected controllers, zone conduits, and downstream movement pathways.</div>
-    </main>
-
-    <aside class="panel drawer">
-      <h2>Selected Node Metadata</h2>
-      <div id="nodeMeta" class="small">Click a node on the graph.</div>
-      <h2 style="margin-top:12px">Selected Edge Metadata</h2>
-      <div id="edgeMeta" class="small">Click an edge on the graph.</div>
-    </aside>
+  <div class="section-head" data-reveal="3">
+    <h2 class="section-title" data-tag="02">Bill of Materials</h2>
+    <span class="section-meta" id="bomMeta">— assets</span>
   </div>
+
+  <div class="bom-table-wrap" data-reveal="4">
+    <table class="bom-table">
+      <thead>
+        <tr>
+          <th style="width: 130px">Asset</th>
+          <th>Name</th>
+          <th>Vendor / Model</th>
+          <th>Firmware</th>
+          <th>Zone</th>
+          <th style="width: 110px">Criticality</th>
+          <th style="width: 200px">Risk Signal</th>
+        </tr>
+      </thead>
+      <tbody id="bomBody"></tbody>
+    </table>
+  </div>
+
 </div>
 
 <script type="module">
 import { api } from '/js/api.js';
-import { fillTableBody } from '/js/ui.js';
+import { renderSchematic } from '/js/schematic-graph.js';
+import { renderPlantTabs } from '/js/plant-tabs.js';
+renderPlantTabs(document.querySelector('[data-plant-tabs]'));
 
-let assets = [];
-let result = null;
-let network = null;
-let nodesDS = null;
-let edgesDS = null;
+const $ = (id) => document.getElementById(id);
+const escape = (s) => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;" }[c]));
+
+init().catch(err => $('bomMeta').textContent = `Failed: ${err.message}`);
 
 async function init() {
-  const assetsRes = await api.assets();
-  assets = assetsRes.assets || [];
+  const [graph, posture] = await Promise.all([api.graph(), api.posture()]);
+  $('topoMeta').textContent = `${graph.assets.length} assets · ${graph.connectivity.length} conduits · ${graph.zones.length} zones`;
+  $('bomMeta').textContent = `${graph.assets.length} assets · ${posture.bom.vendor_count} vendors`;
+  $('stageDocId').textContent = `DOC · OT-TPL-${graph.plant_id.slice(-3).toUpperCase()}`;
 
-  const startSel = document.getElementById('startAsset');
-  const zoneSel = document.getElementById('zoneFilter');
-  const typeSel = document.getElementById('typeFilter');
-
-  const zoneSet = new Set();
-  const typeSet = new Set();
-  assets.forEach(a => {
-    zoneSet.add(a.zone_id); typeSet.add(a.asset_type);
-    const o = document.createElement('option'); o.value = a.asset_id; o.textContent = `${a.name} (${a.asset_type})`; startSel.appendChild(o);
+  renderSchematic($('stage-svg'), graph, {
+    onSelect: (asset) => {
+      if (asset) location.href = `/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}`;
+    },
   });
-  [...zoneSet].forEach(z => { const o = document.createElement('option'); o.value = z; o.textContent = z; zoneSel.appendChild(o); });
-  [...typeSet].forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; typeSel.appendChild(o); });
 
-  document.getElementById('runBtn').onclick = run;
-  document.getElementById('resetBtn').onclick = () => { if (result) renderGraph(result, null); };
+  renderBOM(graph, posture);
 }
 
-async function run() {
-  result = await api.simulateBlastRadius({
-    start_asset_id: document.getElementById('startAsset').value,
-    max_depth: 6,
-    include_vulnerabilities: true,
-    include_zone_barriers: true,
-    mode: 'analyst'
-  });
-  renderGraph(result, null);
-  renderPathTable(result);
+function renderBOM(graph, posture) {
+  const riskByAsset = new Map((posture.asset_risk || []).map(a => [a.asset_id, a]));
+  const advByAsset = {};
+  // Flatten advisories from posture topRisks (advisory-kind only) into per-asset counts
+  for (const r of (posture.top_risks || [])) {
+    if (r.kind !== 'advisory') continue;
+    advByAsset[r.asset_id] = (advByAsset[r.asset_id] || 0) + 1;
+  }
+
+  $('bomBody').innerHTML = graph.assets.map(a => {
+    const z = graph.zones.find(zz => zz.zone_id === a.zone_id);
+    const risk = riskByAsset.get(a.asset_id);
+    const findings = (graph.findings_by_asset[a.asset_id] || []).length;
+    const advisories = risk ? (risk.advisory_count || 0) : 0;
+    const critClass = a.criticality_score >= 9 ? 'crit-9' : a.criticality_score >= 7 ? 'crit-7' : '';
+    return `
+      <tr onclick="location.href='/asset-detail.html?id=${encodeURIComponent(a.asset_id)}'">
+        <td><span class="asset-id">${escape(a.asset_id)}</span></td>
+        <td>${escape(a.name)}<div style="font-size:11px;color:var(--ink-muted);margin-top:2px;letter-spacing:0.04em;text-transform:uppercase">${escape(a.asset_type)}</div></td>
+        <td><span class="vendor">${escape(a.vendor)}</span><div style="font-size:11px;color:var(--ink-muted);margin-top:2px">${escape(a.model)}</div></td>
+        <td>${escape(a.firmware_version || '—')}</td>
+        <td>${escape(z ? z.zone_id : '—')}<div style="font-size:11px;color:var(--ink-muted);margin-top:2px">${escape(z ? z.level : '')}</div></td>
+        <td><span class="crit-pill ${critClass}">crit ${a.criticality_score}</span></td>
+        <td class="findings-cell">
+          ${advisories > 0 ? `<span class="indicator has-advisories">${advisories} CVE</span>` : ''}
+          ${findings > 0  ? `<span class="indicator has-findings">${findings} finding${findings === 1 ? '' : 's'}</span>` : ''}
+          ${(advisories === 0 && findings === 0) ? `<span class="indicator zero">—</span>` : ''}
+        </td>
+      </tr>`;
+  }).join('');
 }
-
-function edgeColor(trust){ return trust==='untrusted' ? '#ff6b7a' : trust==='dmz' ? '#ffbf53' : '#3ba8ff'; }
-
-function renderGraph(data, focusPath) {
-  const zone = document.getElementById('zoneFilter').value;
-  const type = document.getElementById('typeFilter').value;
-  const crit = Number(document.getElementById('critFilter').value || 0);
-
-  const impacted = data.impacted_assets || [];
-  const nodeRows = impacted
-    .filter(a => (zone==='all' || a.zone_id===zone) && (type==='all' || a.asset_type===type) && a.criticality_score >= crit)
-    .map(a => ({ id: a.asset_id, label: `${a.name}\n${a.asset_type}`, color: a.is_safety_related ? '#ff6b7a' : '#3ba8ff', shape:'box' }));
-
-  const idSet = new Set(nodeRows.map(n => n.id));
-  const edges = (data.attack_paths || []).flatMap(p => {
-    const ids = p.ordered_asset_ids || [];
-    const out = [];
-    for (let i=1; i<ids.length; i++) {
-      if (!idSet.has(ids[i-1]) || !idSet.has(ids[i])) continue;
-      const highlight = focusPath && p.path_id===focusPath;
-      out.push({ from: ids[i-1], to: ids[i], label: p.protocols_used?.join(',') || '', color: highlight ? '#50df9e' : '#245987', width: highlight ? 3 : 1.4 });
-    }
-    return out;
-  });
-
-  nodesDS = new vis.DataSet(nodeRows);
-  edgesDS = new vis.DataSet(edges);
-
-  const container = document.getElementById('graphCanvas');
-  network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
-    physics: { stabilization: false },
-    edges: { arrows: 'to', color: '#245987', font: { color:'#a9c1da', size:11 } },
-    nodes: { font:{ color:'#f3f8ff', size:12 }, borderWidth:1 },
-    interaction: { hover:true }
-  });
-
-  network.on('click', (params) => {
-    if (params.nodes.length) {
-      const id = params.nodes[0];
-      const a = impacted.find(x => x.asset_id===id);
-      document.getElementById('nodeMeta').innerHTML = a ?
-        `<b>${a.name}</b><br/>Type: ${a.asset_type}<br/>Zone: ${a.zone_id}<br/>Criticality: ${a.criticality_score}<br/>Process Tag: ${a.process_tag}<br/>Reason: ${a.reachability_reason}` : 'Node metadata unavailable';
-    }
-    if (params.edges.length) {
-      const e = edgesDS.get(params.edges[0]);
-      document.getElementById('edgeMeta').innerHTML = `<b>${e.from}</b> → <b>${e.to}</b><br/>Protocol(s): ${e.label || 'n/a'}`;
-    }
-  });
-}
-
-function renderPathTable(data) {
-  fillTableBody(document.getElementById('pathRows'), (data.attack_paths || []).map(p => [
-    p.path_id,
-    p.hop_count,
-    p.path_risk_score,
-    `<button class='btn btn-secondary focus-path' data-id='${p.path_id}'>Focus</button>`
-  ]));
-  document.querySelectorAll('.focus-path').forEach(btn => btn.addEventListener('click', () => renderGraph(data, btn.dataset.id)));
-}
-
-init().catch(e => { document.getElementById('nodeMeta').textContent = e.message; });
 </script>
 </body>
 </html>
