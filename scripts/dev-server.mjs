@@ -28,7 +28,8 @@ const apiRoutes = [
 ];
 
 // Plant registry — labels are buyer-facing tab names, files are the merged
-// fixtures sitting in data/. Add new entries to wire up new use-case demos.
+// fixtures sitting in data/. Built-in entries are seeded here; customer plants
+// produced by the onboarding flow get auto-registered when their files exist.
 const PLANT_REGISTRY = {
   energy: {
     key: 'energy',
@@ -46,6 +47,32 @@ const PLANT_REGISTRY = {
   },
 };
 
+// Discover any extra plant-*-enriched.json files at startup (and on each
+// /api/plants call) so plants saved via the onboarding flow show up without
+// a server restart.
+function discoverPlantsFromDisk() {
+  try {
+    const files = require('node:fs').readdirSync(join(root, 'data'));
+    for (const f of files) {
+      const m = f.match(/^plant-([a-z0-9_-]+)-enriched\.json$/i);
+      if (!m) continue;
+      const key = m[1].toLowerCase();
+      if (PLANT_REGISTRY[key]) continue;
+      try {
+        const raw = require(join(root, 'data', f));
+        PLANT_REGISTRY[key] = {
+          key,
+          label: raw.plant_label || raw.plant_name || key,
+          sector: raw.sector || 'unknown',
+          plant_id: raw.plant_id || `plant-${key}`,
+          file: `data/${f}`,
+        };
+      } catch { /* ignore unreadable */ }
+    }
+  } catch { /* data dir may not exist on first boot */ }
+}
+discoverPlantsFromDisk();
+
 function resolvePlantKey(url) {
   const k = url?.searchParams?.get('plant');
   return (k && PLANT_REGISTRY[k]) ? k : 'energy';
@@ -59,7 +86,116 @@ function loadPlant(plantKey) {
   return require(filePath);
 }
 
+// Persist a customer-built plant fixture from the onboarding form. Body is
+// the plant JSON in our standard schema. We write it to data/plant-{key}-demo.json
+// and run mergeFindings to produce the -enriched companion (so the new plant
+// works with /api/posture immediately). The plant key is normalized from the
+// supplied plant_id and added to the in-memory registry for this server's
+// lifetime; restarting the server re-discovers it from disk via the registry
+// in this file (see "discoverPlantsFromDisk" — assigned at startup).
+async function handleOnboardingSave(req, res) {
+  try {
+    const body = await readBody(req);
+    const plant = JSON.parse(body);
+    if (!plant.plant_id || !plant.plant_name || !Array.isArray(plant.assets)) {
+      throw new Error('plant_id, plant_name, and assets[] are required');
+    }
+    const key = (plant.onboarding_key || plant.plant_id.replace(/^plant-/, '')).replace(/[^a-z0-9_-]/gi, '-').toLowerCase();
+    const demoPath = join(root, 'data', `plant-${key}-demo.json`);
+    const enrichedPath = join(root, 'data', `plant-${key}-enriched.json`);
+    delete plant.onboarding_key;
+
+    // Ensure findings array exists for merge step
+    const findings = plant.evidence_findings || [];
+    delete plant.evidence_findings;
+    delete plant.evidence_meta;
+    delete plant.vulnerabilities;
+
+    const { writeFile } = await import('node:fs/promises');
+    await writeFile(demoPath, JSON.stringify(plant, null, 2));
+
+    // Merge to produce enriched
+    const { mergeFindings } = await import('./otsniff/merge.mjs');
+    const enriched = mergeFindings(plant, findings);
+    await writeFile(enrichedPath, JSON.stringify(enriched, null, 2));
+
+    // Register in plant registry so the tab strip picks it up
+    PLANT_REGISTRY[key] = {
+      key,
+      label: plant.plant_label || plant.plant_name,
+      sector: plant.sector || 'unknown',
+      plant_id: plant.plant_id,
+      file: `data/plant-${key}-enriched.json`,
+    };
+
+    res.writeHead(200, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({
+      ok: true,
+      key,
+      plant_id: plant.plant_id,
+      assets: plant.assets.length,
+      paths: { demo: `data/plant-${key}-demo.json`, enriched: `data/plant-${key}-enriched.json` },
+    }));
+  } catch (err) {
+    res.writeHead(400, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ ok: false, error: err.message }));
+  }
+}
+
+// Accepts a multipart-or-base64 drawing upload, stores under data/uploads/.
+// For simplicity we accept a JSON body { plant_key, filename, content_base64 }
+// from the browser rather than wrestling with multipart parsing in raw Node.
+async function handleDrawingUpload(req, res) {
+  try {
+    const body = await readBody(req);
+    const { plant_key, filename, content_base64, content_type } = JSON.parse(body);
+    if (!plant_key || !filename || !content_base64) {
+      throw new Error('plant_key, filename, content_base64 required');
+    }
+    const safeKey = String(plant_key).replace(/[^a-z0-9_-]/gi, '-').toLowerCase();
+    const safeName = String(filename).replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 200);
+    const dir = join(root, 'data', 'uploads', safeKey);
+    const { writeFile, mkdir } = await import('node:fs/promises');
+    await mkdir(dir, { recursive: true });
+    const buf = Buffer.from(content_base64, 'base64');
+    if (buf.length > 25 * 1024 * 1024) throw new Error('upload exceeds 25MB cap');
+    const fullPath = join(dir, safeName);
+    await writeFile(fullPath, buf);
+
+    res.writeHead(200, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({
+      ok: true,
+      url: `/uploads/${safeKey}/${safeName}`,
+      bytes: buf.length,
+      content_type: content_type || 'application/octet-stream',
+    }));
+  } catch (err) {
+    res.writeHead(400, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ ok: false, error: err.message }));
+  }
+}
+
+async function handleUpload(res, pathname) {
+  // Serve uploaded files back to the browser (drawings, etc.)
+  const requested = pathname.replace(/^\/+/, '');
+  const full = join(root, 'data', requested);
+  if (!existsSync(full) || !full.startsWith(join(root, 'data', 'uploads'))) {
+    res.writeHead(404); res.end(); return;
+  }
+  const buf = await readFile(full);
+  const ext = extname(full).toLowerCase();
+  const ct = mime[ext] || (ext === '.png' ? 'image/png'
+            : ext === '.jpg' || ext === '.jpeg' ? 'image/jpeg'
+            : ext === '.svg' ? 'image/svg+xml'
+            : ext === '.pdf' ? 'application/pdf'
+            : 'application/octet-stream');
+  res.writeHead(200, { 'content-type': ct });
+  res.end(buf);
+}
+
 async function handlePlantsList(res) {
+  // Re-discover so newly-onboarded plants surface without a restart
+  discoverPlantsFromDisk();
   const list = Object.values(PLANT_REGISTRY).map(p => {
     const exists = existsSync(join(root, p.file));
     return {
@@ -328,10 +464,13 @@ const server = createServer(async (req, res) => {
     }
 
     if (url.pathname.startsWith('/api/')) {
-      if (url.pathname === '/api/plants'  && req.method === 'GET') { await handlePlantsList(res); return; }
-      if (url.pathname === '/api/assets'  && req.method === 'GET') { await handleAssetsList(res, url); return; }
-      if (url.pathname === '/api/graph'   && req.method === 'GET') { await handleGraph(res, url); return; }
-      if (url.pathname === '/api/posture' && req.method === 'GET') { await handlePosture(res, url); return; }
+      if (url.pathname === '/api/plants'           && req.method === 'GET')  { await handlePlantsList(res); return; }
+      if (url.pathname === '/api/assets'           && req.method === 'GET')  { await handleAssetsList(res, url); return; }
+      if (url.pathname === '/api/graph'            && req.method === 'GET')  { await handleGraph(res, url); return; }
+      if (url.pathname === '/api/posture'          && req.method === 'GET')  { await handlePosture(res, url); return; }
+      if (url.pathname === '/api/onboarding/save'  && req.method === 'POST') { await handleOnboardingSave(req, res); return; }
+      if (url.pathname === '/api/onboarding/drawing' && req.method === 'POST') { await handleDrawingUpload(req, res); return; }
+      if (url.pathname.startsWith('/uploads/')     && req.method === 'GET')  { await handleUpload(res, url.pathname); return; }
       if (await dispatchApi(req, res, url)) return;
       res.writeHead(404, { 'content-type': 'application/json' });
       res.end(JSON.stringify({ error: `no route for ${req.method} ${url.pathname}` }));

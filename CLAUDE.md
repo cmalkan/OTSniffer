@@ -97,7 +97,7 @@ The repo ships a specialized agent team under [`.claude/agents/`](.claude/agents
 
 - **pearl** (product) — JTBD, pricing, packaging, persona
 - **amber** (launch PM) — critical path, gates, RAID
-- **industry-guy** + 5 verticals (**oil-and-gas, critical-infrastructure, food-packaging, medical-manufacturing, industrial-automation**) — buyer voice, regulatory windows, channel reality
+- **industry-guy** + 6 verticals (**oil-and-gas, critical-infrastructure** [water/wastewater only], **electric-utilities, food-packaging, medical-manufacturing** [dual persona: manufacturing/validation + premarket device-OEM], **industrial-automation**) — buyer voice, regulatory windows, channel reality
 - **pricing-analyst** — value-based pricing, funding sources, floor/anchor/premium
 
 Invoke via `subagent_type: <name>` (after session restart picks them up) or run inline through `general-purpose` with the persona file injected. Agents coordinate through defined lanes — Pearl owns *what*, Amber owns *when*, IndustryGuy verifies vertical claims. Drift between lanes is a simulation failure.
