@@ -1,0 +1,374 @@
+{
+  "plant_id": "plant-knpc",
+  "plant_name": "knpc",
+  "sector": "energy",
+  "zones": [
+    {
+      "zone_id": "z_dmz",
+      "name": "OT DMZ",
+      "level": "L3.5",
+      "description": "Jump server, historian replication, vendor remote access"
+    },
+    {
+      "zone_id": "z_ops",
+      "name": "Control Center",
+      "level": "L3",
+      "description": "Primary SCADA and historian"
+    },
+    {
+      "zone_id": "z_treatment",
+      "name": "Treatment Plant Floor",
+      "level": "L2",
+      "description": "Operator HMI and engineering workstation"
+    },
+    {
+      "zone_id": "z_process",
+      "name": "Process Control",
+      "level": "L1",
+      "description": "Treatment PLC and chemical-dosing safety controller"
+    },
+    {
+      "zone_id": "z_field",
+      "name": "Distribution Field",
+      "level": "L1",
+      "description": "Lift-station RTUs reaching back via cellular VPN"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "a_asset-1",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-2",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-3",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-4",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-5",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-6",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-7",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-8",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-9",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-10",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-11",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-12",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-13",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-14",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-15",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-16",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-17",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-18",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-19",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-20",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-21",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_asset-22",
+      "name": "",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    }
+  ],
+  "connectivity": [
+    {
+      "source_asset_id": "a_scada_01",
+      "target_asset_id": "a_hmi_01",
+      "protocol": "opc-ua",
+      "port": 4840,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_hmi_01",
+      "target_asset_id": "a_plc_01",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_eng_01",
+      "target_asset_id": "a_plc_01",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "medium",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_plc_01",
+      "target_asset_id": "a_sis_01",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "medium",
+      "allowed_direction": "uni"
+    },
+    {
+      "source_asset_id": "a_hist_01",
+      "target_asset_id": "a_scada_01",
+      "protocol": "https",
+      "port": 443,
+      "trust_level": "high",
+      "allowed_direction": "uni"
+    },
+    {
+      "source_asset_id": "a_scada_01",
+      "target_asset_id": "a_rtu_01",
+      "protocol": "dnp3",
+      "port": 20000,
+      "trust_level": "medium",
+      "allowed_direction": "bi"
+    }
+  ],
+  "process_functions": [],
+  "demo_scenarios": [],
+  "onboarding_meta": {
+    "saved_at": "2026-04-27T21:22:01.757Z",
+    "drawings": [
+      {
+        "name": "ME-20420-RMP-ZCD-001 Rev C - Commented.pdf",
+        "url": "/uploads/knpc/ME-20420-RMP-ZCD-001_Rev_C_-_Commented.pdf",
+        "size": 2345026
+      }
+    ]
+  },
+  "vulnerabilities": [],
+  "evidence_findings": [],
+  "evidence_meta": {
+    "merged_at": "2026-04-27T21:22:01.782Z",
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "rejections": [],
+    "rejections_truncated": false
+  }
+}

@@ -4,6 +4,7 @@
 // JSON the operator confirmed.
 
 import { setPlantKey } from '/js/api.js';
+import { inferTopologyFromLines } from '/js/topology-extract.js';
 
 const $ = (id) => document.getElementById(id);
 const escape = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;" }[c]));
@@ -553,6 +554,11 @@ async function handleDrawing(file) {
   try {
     if (file.size > 25 * 1024 * 1024) throw new Error('Drawing exceeds 25 MB cap.');
     const buf = await file.arrayBuffer();
+    let inferred = null;
+    if (/\.pdf$/i.test(file.name)) {
+      setStatus('drawingStatus', `Parsing ${file.name} for zones and conduits before upload...`, false);
+      inferred = await inferTopologyFromPDF(buf);
+    }
     const b64 = bytesToBase64(new Uint8Array(buf));
     const res = await fetch('/api/onboarding/drawing', {
       method: 'POST',
@@ -562,6 +568,16 @@ async function handleDrawing(file) {
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || `HTTP ${res.status}`);
     state.drawings.push({ url: json.url, name: file.name, size: json.bytes, content_type: json.content_type });
+    const mergeSummary = inferred ? mergeInferredTopology(inferred) : null;
+    if (mergeSummary?.applied) {
+      renderDrawings();
+      setStatus(
+        'drawingStatus',
+        `Uploaded ${file.name}. Inferred ${mergeSummary.zones} zones, ${mergeSummary.assets} assets, and ${mergeSummary.conduits} conduits. Review Steps 2-4 before saving.`,
+        false
+      );
+      return;
+    }
     renderDrawings();
     setStatus('drawingStatus', `Uploaded ${file.name} → ${json.url}`, false);
   } catch (err) {
@@ -590,6 +606,112 @@ function bytesToBase64(bytes) {
     s += String.fromCharCode.apply(null, bytes.subarray(i, i + chunk));
   }
   return btoa(s);
+}
+
+async function inferTopologyFromPDF(buffer) {
+  if (!window.pdfjsLib) await loadPDFjs();
+  const pdfjsLib = window.pdfjsLib;
+  const pdf = await pdfjsLib.getDocument({ data: buffer }).promise;
+  const pages = [];
+
+  for (let p = 1; p <= pdf.numPages; p++) {
+    const page = await pdf.getPage(p);
+    const content = await page.getTextContent();
+    const items = content.items.map(it => ({ str: it.str, x: it.transform[4], y: it.transform[5] }));
+    pages.push(positionedToLines(items));
+  }
+
+  const boilerplate = detectBoilerplate(pages);
+  const lines = pages
+    .flatMap(page => page.filter(line => !boilerplate.has(normLineText(line.text))))
+    .map(line => line.text)
+    .filter(Boolean);
+
+  return inferTopologyFromLines(lines, state.bom);
+}
+
+function mergeInferredTopology(topology) {
+  if (!topology) return { applied: false, zones: 0, assets: 0, conduits: 0 };
+
+  if (topology.suggestedAssets.length || topology.matchedAssets.length) {
+    state.bom = state.bom.filter(hasMeaningfulAssetRow);
+  }
+  if (topology.connectivity.length) {
+    state.conn = state.conn.filter(conn => conn.source_asset_id || conn.target_asset_id);
+  }
+
+  let addedZones = 0;
+  let addedAssets = 0;
+  let addedConduits = 0;
+
+  const zoneIds = new Set(state.zones.map(zone => zone.zone_id));
+  for (const zone of topology.zones) {
+    if (!zone.zone_id || zoneIds.has(zone.zone_id)) continue;
+    state.zones.push({ ...zone });
+    zoneIds.add(zone.zone_id);
+    addedZones += 1;
+  }
+
+  const assetById = new Map(state.bom.map(asset => [asset.asset_id, asset]));
+  for (const match of topology.matchedAssets) {
+    const existing = assetById.get(match.asset_id);
+    if (!existing) continue;
+    if (!existing.zone_id) existing.zone_id = match.zone_id;
+    if (!existing.name && match.suggested_name) existing.name = match.suggested_name;
+  }
+
+  const assetKeys = new Set(state.bom.map(asset => topologyAssetKey(asset)));
+  for (const asset of topology.suggestedAssets) {
+    const key = topologyAssetKey(asset);
+    if (!asset.asset_id || assetKeys.has(key)) continue;
+    state.bom.push({ ...asset });
+    assetKeys.add(key);
+    addedAssets += 1;
+  }
+
+  const liveAssetIds = new Set(state.bom.map(asset => asset.asset_id).filter(Boolean));
+  const conduitKeys = new Set(state.conn.map(conn => connKey(conn)));
+  for (const conn of topology.connectivity) {
+    if (!liveAssetIds.has(conn.source_asset_id) || !liveAssetIds.has(conn.target_asset_id)) continue;
+    const key = connKey(conn);
+    if (conduitKeys.has(key)) continue;
+    state.conn.push({ ...conn });
+    conduitKeys.add(key);
+    addedConduits += 1;
+  }
+
+  renderBOM();
+  renderZones();
+  renderConn();
+
+  return {
+    applied: addedZones > 0 || addedAssets > 0 || addedConduits > 0 || topology.matchedAssets.length > 0,
+    zones: addedZones,
+    assets: addedAssets + topology.matchedAssets.length,
+    conduits: addedConduits,
+  };
+}
+
+function hasMeaningfulAssetRow(asset) {
+  if (!asset) return false;
+  const assetId = String(asset.asset_id || '').trim();
+  return !!(
+    String(asset.name || '').trim() ||
+    String(asset.vendor || '').trim() ||
+    String(asset.model || '').trim() ||
+    String(asset.ip_address || '').trim() ||
+    String(asset.zone_id || '').trim() ||
+    String(asset.process_tag || '').trim() ||
+    (assetId && !/^a_asset[-_]/i.test(assetId))
+  );
+}
+
+function topologyAssetKey(asset) {
+  return `${asset.zone_id || ''}::${String(asset.name || '').trim().toLowerCase()}::${asset.asset_type || ''}`;
+}
+
+function connKey(conn) {
+  return `${conn.source_asset_id}::${conn.target_asset_id}::${conn.protocol}::${conn.port}`;
 }
 
 // ── save ────────────────────────────────────────────────────────────────
