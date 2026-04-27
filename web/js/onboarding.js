@@ -309,51 +309,169 @@ async function parseDOCX(file) {
   return rows.filter(r => r.some(cell => cell.length > 0));
 }
 
-// PDF — pdf.js gives positioned text per page. Group by line via y-coordinate
-// proximity, then split each line on tab/multiple-space gaps to get columns.
-// Heuristic and imperfect. Tells the user when it falls back.
+// PDF — pdf.js gives positioned text per page. Mirror of the Node-side
+// extract-bom.mjs parser. Strips repeating page-level boilerplate, clusters
+// text into per-page lines by y-coordinate, then detects table regions by
+// looking for runs of >=3 lines that share column-x positions AND have a
+// header row containing recognizable column-name tokens. False positives
+// (narrative paragraphs that happen to align) are rejected.
 async function parsePDF(file) {
-  if (!window.pdfjsLib) {
-    await loadPDFjs();
-  }
+  if (!window.pdfjsLib) await loadPDFjs();
   const pdfjsLib = window.pdfjsLib;
   const buf = await file.arrayBuffer();
   const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
-  const allLines = [];
+
+  // Step 1 — extract per-page lines with column-x positions
+  const pages = [];
   for (let p = 1; p <= pdf.numPages; p++) {
     const page = await pdf.getPage(p);
     const content = await page.getTextContent();
     const items = content.items.map(it => ({ str: it.str, x: it.transform[4], y: it.transform[5] }));
-    // Group items on the same y-coord (within 2pt) into lines
-    items.sort((a, b) => b.y - a.y || a.x - b.x);
-    let currentY = null, line = [];
-    for (const it of items) {
-      if (currentY === null || Math.abs(it.y - currentY) > 2.5) {
-        if (line.length) allLines.push(line);
-        line = [it];
-        currentY = it.y;
-      } else {
-        line.push(it);
+    pages.push(positionedToLines(items));
+  }
+
+  // Step 2 — strip lines that repeat across >40% of pages (running headers/footers)
+  const boilerplate = detectBoilerplate(pages);
+  const cleaned = pages.map(lines => lines.filter(line => !boilerplate.has(normLineText(line.text))));
+
+  // Step 3 — locate table regions on each page
+  const allTableRows = [];
+  for (const lines of cleaned) {
+    for (const t of detectTables(lines)) {
+      allTableRows.push([t.headers, ...t.rows]);
+    }
+  }
+
+  // Return the LARGEST table found. The auto-mapper downstream picks columns.
+  if (allTableRows.length === 0) return [];
+  allTableRows.sort((a, b) => b.length - a.length);
+  return allTableRows[0];
+}
+
+function positionedToLines(items) {
+  items.sort((a, b) => b.y - a.y || a.x - b.x);
+  const lines = [];
+  let curY = null, group = [];
+  for (const it of items) {
+    if (curY === null || Math.abs(it.y - curY) > 2.5) {
+      if (group.length) lines.push(toLine(group));
+      group = [it]; curY = it.y;
+    } else group.push(it);
+  }
+  if (group.length) lines.push(toLine(group));
+  return lines;
+}
+
+function toLine(items) {
+  items.sort((a, b) => a.x - b.x);
+  const cols = [];
+  let cur = items[0]?.str || '';
+  let curStartX = items[0]?.x || 0;
+  for (let i = 1; i < items.length; i++) {
+    const prev = items[i - 1];
+    const it = items[i];
+    const gap = it.x - (prev.x + prev.str.length * 5);
+    if (gap > 14) {
+      cols.push({ text: cur.trim(), x: curStartX });
+      cur = it.str; curStartX = it.x;
+    } else {
+      cur += (cur && !cur.endsWith(' ') ? ' ' : '') + it.str;
+    }
+  }
+  cols.push({ text: cur.trim(), x: curStartX });
+  return {
+    text: cols.map(c => c.text).join('  |  '),
+    cols: cols.filter(c => c.text.length > 0),
+  };
+}
+
+function normLineText(t) { return t.replace(/\s+/g, ' ').trim().toLowerCase(); }
+
+function detectBoilerplate(pages) {
+  const counts = new Map();
+  for (const lines of pages) {
+    const seen = new Set();
+    for (const line of lines) {
+      const k = normLineText(line.text);
+      if (k.length < 4 || k.length > 200 || seen.has(k)) continue;
+      seen.add(k);
+      counts.set(k, (counts.get(k) || 0) + 1);
+    }
+  }
+  const threshold = Math.max(3, Math.floor(pages.length * 0.4));
+  const out = new Set();
+  for (const [k, c] of counts) if (c >= threshold) out.add(k);
+  return out;
+}
+
+const HEADER_TOKEN_HINTS = new Set([
+  'assetid','tag','tagname','letterbug','wsname','name','device','model','modelno','modelnumber',
+  'vendor','manufacturer','make','mfr','supplier','ip','ipaddress','zone','vlan','subnet','network',
+  'type','function','description','firewall','switch','server','host','controller','level','location',
+  'id','port','protocol','priority','criticality','sl',
+]);
+
+function detectTables(lines) {
+  const tables = [];
+  let i = 0;
+  const looksLikeHeader = (cols) => {
+    const cells = cols.map(c => c.text || '');
+    if (!cells.every(c => c.length > 0 && c.length <= 40)) return false;
+    let hits = 0;
+    for (const h of cells.map(c => c.toLowerCase().replace(/[^a-z0-9]/g, ''))) {
+      for (const hint of HEADER_TOKEN_HINTS) {
+        if (h.includes(hint)) { hits++; break; }
       }
     }
-    if (line.length) allLines.push(line);
-  }
-  // Convert each line into columns by detecting gaps between items
-  const rows = allLines.map(items => {
-    items.sort((a, b) => a.x - b.x);
-    const cols = [];
-    let cur = items[0]?.str || '';
-    for (let i = 1; i < items.length; i++) {
-      const prev = items[i-1];
-      const it = items[i];
-      const gap = it.x - (prev.x + prev.str.length * 5);  // rough char-width estimate
-      if (gap > 14) { cols.push(cur.trim()); cur = it.str; }
-      else cur += (cur && !cur.endsWith(' ') ? ' ' : '') + it.str;
+    return hits >= 2;
+  };
+  while (i < lines.length) {
+    if (!lines[i].cols || lines[i].cols.length < 3) { i++; continue; }
+    const xs = lines[i].cols.map(c => c.x);
+    let j = i + 1;
+    const runRows = [lines[i]];
+    while (j < lines.length) {
+      const cand = lines[j];
+      if (matchesColumnPattern(cand.cols, xs)) { runRows.push(cand); j++; }
+      else if (cand.cols && cand.cols.length <= 2 && runRows.length > 0) {
+        const prev = runRows[runRows.length - 1];
+        const last = prev.cols[prev.cols.length - 1];
+        if (last) last.text += ' ' + cand.cols.map(c => c.text).join(' ');
+        prev.text = prev.cols.map(c => c.text).join('  |  ');
+        j++;
+      } else break;
     }
-    cols.push(cur.trim());
-    return cols;
-  });
-  return rows.filter(r => r.some(c => c.length > 0));
+    if (runRows.length >= 3 && looksLikeHeader(runRows[0].cols)) {
+      const headers = runRows[0].cols.map(c => c.text);
+      const rows = runRows.slice(1).map(r => {
+        const filled = new Array(headers.length).fill('');
+        for (const c of r.cols) {
+          const idx = nearestColIndex(c.x, xs);
+          filled[idx] = filled[idx] ? filled[idx] + ' ' + c.text : c.text;
+        }
+        return filled;
+      });
+      tables.push({ headers, rows });
+      i = j;
+    } else i++;
+  }
+  return tables;
+}
+
+function matchesColumnPattern(cols, xs) {
+  if (cols.length < Math.max(2, xs.length - 1)) return false;
+  let matched = 0;
+  for (const c of cols) if (xs.some(x => Math.abs(x - c.x) <= 10)) matched++;
+  return matched >= Math.min(cols.length, xs.length) - 1;
+}
+
+function nearestColIndex(x, xs) {
+  let best = 0, dist = Infinity;
+  for (let i = 0; i < xs.length; i++) {
+    const d = Math.abs(x - xs[i]);
+    if (d < dist) { dist = d; best = i; }
+  }
+  return best;
 }
 
 async function loadPDFjs() {

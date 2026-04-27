@@ -1,0 +1,905 @@
+{
+  "file": "/app/tests/ME-20420-RMP-FDS-CS-001_RevD Commented.pdf",
+  "pages": 146,
+  "tables_detected": 12,
+  "boilerplate_lines": 8,
+  "candidates": [
+    {
+      "page": 26,
+      "confidence": 0.75,
+      "column_map": {
+        "asset_id": 2,
+        "name": 0,
+        "model": 1
+      },
+      "original_headers": [
+        "Firewall Name",
+        "Firewall Model",
+        "Letter bug"
+      ],
+      "assets": [
+        {
+          "asset_id": "57850A OPC DA",
+          "name": "RMP WS#4 057FW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "43210A MODBUS",
+          "name": "RMP WS#1 043FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "41110B MODBUS",
+          "name": "RMP WS#2 041FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "48510B MODBUS",
+          "name": "RMP WS#3 048FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "51610B MODBUS",
+          "name": "RMP WS#4 051FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "51620B MODBUS",
+          "name": "RMP WS#4 051FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "57610A ETHERNETIP",
+          "name": "RMP WS#4 057FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "51710A MODBUS",
+          "name": "RMP WS#4 051FW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "57760A MODBUS",
+          "name": "RMP WS#4 057FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "80120C MODBUS",
+          "name": "RMP WS#5 080FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "97320A MODBUS",
+          "name": "UCR WS#4 097FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "97320B MODBUS",
+          "name": "UCR WS#4 097FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "97320C MODBUS",
+          "name": "UCR WS#4 097FW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "10530A MODBUS",
+          "name": "UCR WS#4 105FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I1140B MODBUS",
+          "name": "107 - FAR WS#7 107FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I1240B MODBUS",
+          "name": "107 - FAR WS#7 107FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I1340A MODBUS",
+          "name": "107 - FAR WS#7 107FW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I1340C MODBUS",
+          "name": "107 - FAR WS#7 107FW7/08",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I2140C MODBUS",
+          "name": "107 - FAR WS#7 125FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I2141B MODBUS",
+          "name": "107 - FAR WS#7 125FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "G1140B MODBUS",
+          "name": "144 FAR WS#1 144FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "G1240B MODBUS Page 26 of 146",
+          "name": "144 FAR WS#1 144FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        }
+      ]
+    },
+    {
+      "page": 27,
+      "confidence": 0.75,
+      "column_map": {
+        "asset_id": 2,
+        "name": 0,
+        "model": 1
+      },
+      "original_headers": [
+        "Firewall Name",
+        "Firewall Model",
+        "Letter bug"
+      ],
+      "assets": [
+        {
+          "asset_id": "G1340C MODBUS",
+          "name": "144 FAR WS#1 144FW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "H1240C MODBUS",
+          "name": "153 FAR WS#4 153FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "25230A MODBUS",
+          "name": "RCR WS#7 025FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "25230B MODBUS",
+          "name": "RCR WS#7 025FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I3140B OPC DA",
+          "name": "107 - FAR WS#7 329FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I3140C OPC DA",
+          "name": "107 - FAR WS#7 329FW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I3240B MODBUS",
+          "name": "107 - FAR WS#7 329FW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "I3241A MODBUS",
+          "name": "107 - FAR WS#7 329FW7/08",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "42120B MODBUS",
+          "name": "RMP WS#2 042FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "57310A MODBUS",
+          "name": "UCR WS#4 057FW7/08",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "58910A MODBUS",
+          "name": "NGOD WS#1 058FW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "C1120D OPC DA RMP - server ConneXium",
+          "name": "RCC COMMON GHIFW1/02",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "ConneXium",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "C1240A OPC DA room RMP - server ConneXium",
+          "name": "extension COMMON GHIFW3/04",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "C1240B OPC DA room Page 27 of 146",
+          "name": "extension COMMON GHIFW5/06",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        }
+      ]
+    },
+    {
+      "page": 46,
+      "confidence": 0.5,
+      "column_map": {
+        "name": 1,
+        "zone_id": 0
+      },
+      "original_headers": [
+        "Zone",
+        "Functionality",
+        "SL"
+      ],
+      "assets": [
+        {
+          "asset_id": "a_extracted_2",
+          "name": "Foxboro DCS Control System",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "Control system Zone",
+          "criticality_score": 5,
+          "process_tag": ""
+        }
+      ]
+    },
+    {
+      "page": 47,
+      "confidence": 0.5,
+      "column_map": {
+        "name": 1,
+        "zone_id": 1
+      },
+      "original_headers": [
+        "#",
+        "VLAN Name",
+        "VLAN Members"
+      ],
+      "assets": [
+        {
+          "asset_id": "a_extracted_2",
+          "name": "CS_SRV",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "CS_SRV",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_3",
+          "name": "CS_STORE",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "CS_STORE",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_4",
+          "name": "CS_UNUSED",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "CS_UNUSED",
+          "criticality_score": 5,
+          "process_tag": ""
+        }
+      ]
+    },
+    {
+      "page": 48,
+      "confidence": 0.5,
+      "column_map": {
+        "name": 1,
+        "zone_id": 1
+      },
+      "original_headers": [
+        "#",
+        "VLAN Name",
+        "VLAN Members"
+      ],
+      "assets": [
+        {
+          "asset_id": "a_extracted_2",
+          "name": "DCS_VHOST",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "DCS_VHOST",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_3",
+          "name": "DCS_SRV",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "DCS_SRV",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_4",
+          "name": "",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_5",
+          "name": "DCS_ADV_APPS",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "DCS_ADV_APPS",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_6",
+          "name": "DCS_OPC",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "DCS_OPC",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_7",
+          "name": "DCS_UNUSED",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "DCS_UNUSED",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_8",
+          "name": "DCS_VHN",
+          "asset_type": "plc",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "DCS_VHN",
+          "criticality_score": 5,
+          "process_tag": ""
+        }
+      ]
+    },
+    {
+      "page": 141,
+      "confidence": 0.75,
+      "column_map": {
+        "name": 1,
+        "asset_type": 0,
+        "process_tag": 1
+      },
+      "original_headers": [
+        "Exclusion Type",
+        "Process Name",
+        "Library Name Name"
+      ],
+      "assets": [
+        {
+          "asset_id": "a_extracted_2",
+          "name": "\\ imclntinst",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ imclntinst"
+        },
+        {
+          "asset_id": "a_extracted_3",
+          "name": "\\ lastgood",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ lastgood"
+        },
+        {
+          "asset_id": "a_extracted_4",
+          "name": "\\ scinv",
+          "asset_type": "Skip Change Tracking",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ scinv"
+        },
+        {
+          "asset_id": "a_extracted_5",
+          "name": "\\ recycled",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ recycled"
+        },
+        {
+          "asset_id": "a_extracted_6",
+          "name": "\\ solidcore.log",
+          "asset_type": "Exclude path from file operations",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ solidcore.log"
+        },
+        {
+          "asset_id": "a_extracted_7",
+          "name": "\\ pagefile.sys",
+          "asset_type": "Ignore path for file operations",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ pagefile.sys"
+        },
+        {
+          "asset_id": "a_extracted_8",
+          "name": "\\ recycler",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ recycler"
+        },
+        {
+          "asset_id": "a_extracted_9",
+          "name": "\\ microsoft \\ forms",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ microsoft \\ forms"
+        },
+        {
+          "asset_id": "a_extracted_10",
+          "name": "fbwf.cfg",
+          "asset_type": "Ignore path for file operations",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "fbwf.cfg"
+        },
+        {
+          "asset_id": "a_extracted_11",
+          "name": "\\ enum",
+          "asset_type": "Skip registry protection",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ enum"
+        },
+        {
+          "asset_id": "a_extracted_12",
+          "name": "\\ performance",
+          "asset_type": "Skip registry protection",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ performance"
+        },
+        {
+          "asset_id": "a_extracted_13",
+          "name": "\\ $recycle.bin",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ $recycle.bin"
+        },
+        {
+          "asset_id": "a_extracted_14",
+          "name": "\\ csc",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ csc"
+        },
+        {
+          "asset_id": "a_extracted_15",
+          "name": "",
+          "asset_type": "Ignore path for file operations",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_16",
+          "name": "\\ sis common store",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ sis common store"
+        },
+        {
+          "asset_id": "a_extracted_17",
+          "name": "\\ qaquotasv4",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ qaquotasv4"
+        },
+        {
+          "asset_id": "a_extracted_18",
+          "name": "\\ s3diag.log",
+          "asset_type": "Exclude path from file operations",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ s3diag.log"
+        },
+        {
+          "asset_id": "a_extracted_19",
+          "name": "",
+          "asset_type": "Ignore path for file operations",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": ""
+        },
+        {
+          "asset_id": "a_extracted_20",
+          "name": "\\ windows \\ system32",
+          "asset_type": "Exclude path from write - protection rules",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ windows \\ system32"
+        },
+        {
+          "asset_id": "a_extracted_21",
+          "name": "\\ scinvlog",
+          "asset_type": "Skip Change Tracking",
+          "vendor": "",
+          "model": "",
+          "firmware_version": "",
+          "ip_address": "",
+          "zone_id": "",
+          "criticality_score": 5,
+          "process_tag": "\\ scinvlog"
+        }
+      ]
+    }
+  ]
+}

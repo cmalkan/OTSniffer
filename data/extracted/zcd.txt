@@ -1,0 +1,463 @@
+Warning: Cannot polyfill `DOMMatrix`, rendering may be broken.
+Warning: Cannot polyfill `Path2D`, rendering may be broken.
+# /app/tests/ME-20420-RMP-ZCD-001 Rev C - Commented.pdf
+# pages: 8
+
+Warning: TT: undefined function: 21
+
+=========================
+page 1 (21 lines)
+=========================
+
+| UPGRADING OF EXISTING DCS SYSTEMS & ASSOCIATED
+| EQUIPMENT FOR CYBER SECURITY COMPLIANCE AT
+| RMP CCR & OMCCR IN MAA REFINERY
+| CYBERSECURITY - OVERALL ZONES AND
+| CONDUITS DRAWING (RMP)
+| SCALE : NTS
+| AREA  |  RMP CCR & OMCCR IN MAA REFINERY
+| PROJECT ORDER NUMBER :  |  CA/CPC/0707
+| DRAWING: ME-20420-RMP-ZCD-001
+| C  29.05.2025  M.A  |  RE-ISSUED FOR APPROVAL  |  CA/CPC/0707
+| SUB AREA RMP  |  NO:
+| B  20.04.2025  M.A  |  ISSUED FOR APPROVAL  |  CA/CPC/0707
+| A  10.12.2024  M.A  |  ISSUED FOR REVIEW  |  CA/CPC/0707
+| DRWG.TYPE ZONES AND CONDUITS DRAWING
+| PROJ.ENG.  SPEC.ENG.  |  ASSET UNIT ORIGINATOR DISC. DOC. SEQUENCE SHEET REV.
+| DATE APPRD
+| REV  |  DESCRIPTION  |  CODE CODE  |  CODE  |  CODE TYPE. NO.  |  NO.  |  NO.
+| (DD.MM.YY)  BY  |  PROJECT ORDER NUMBER
+| KNPC APPROVAL
+| DESCRIPTION OVERALL ZONES AND CONDUITS DRAWING
+| MASTER DRAWING REVISION
+
+=========================
+page 2 (71 lines)
+=========================
+
+| ABBREVIATIONS:  |  LEGENDS:
+| ABBREVIATION  |  DESCRIPTION
+| AIMAPI  AIM Application Interface
+| ALMS  Alarm management system
+| AMS  Asset management system
+| APC  Advanced process control
+| CA  |  Certificate authority
+| DMZ  Demilitarized zone
+| DWS  Display wal system
+| ePO  ePolicy Orchestrator (Trellix endpoint protection)
+| ESD  Emergency Shutdown System
+| FCP  Field Control Processor (FCP270 or 280)
+| FDC  Field Device Controller (FDC280)
+| FDCN  Foxboro DCS Control Network  |  TRICONEX/TRIDENT  |  VIRTUALIZATION
+| FGS  Fire and Gas System  |  CONTROLLERS  |  HOST / SERVER
+| GW  |  Gateway
+| IDS  |  Intrusion detection system
+| LAN  Local area network
+| NPM  Network performance monitoring
+| OOB  Out of band
+| OPC  OLE for process control
+| P2P  Peer to peer
+| PDC  Primary domain controller
+| PIN  |  Plant information network
+| RADIUS  Remote Authentication Dial-in User Service
+| SA  |  System Advisor
+| SDC  Secondary domain controller
+| SIS  |  Safety Instrumented System
+| TC  |  Thin client
+| TCP/IP  TRANSMISSION CONTROL PROTOCOL/INTERNET PROTOCOL
+| TSAA  Triconex System Access Application  |  FIREWALL  |  NOZOMI IDS
+| VHN  Virtualization host network
+| VM  |  Virtual machine
+| WSUS  Windows server update services
+| Legend  |  Description
+| FIBRE OPTIC CABLE (FO)
+| ETHERNET CABLE
+| LEVEL 1 (PROCESS CONTROL LEVEL)
+| LEVEL 2.0 (FOXBORO EVO CONTROL NETWORK)
+| LEVEL 3.0 - PLANT INFORMATION NETWORK
+| THIN CLIENT  |  PHYSICAL MACHINE
+| LEVEL 3.2 - SECURITY NETWORK
+| LEVEL 3.5 - DMZ
+| LEVEL 4
+| VHN NETWORK
+| SPAN TRAFFIC
+| PRINTER  |  NTP SERVER
+| AGGREGATOR  |  UNTRUSTED
+| SWITCH (IDS)  |  BOUNDARY
+| CONTROL SYSTEM
+| THIRD PARTY ZONE
+| ZONE
+| CYBERSECURITY  |  SCHNEIDER SIS OR
+| ZONE  |  GDS ZONE
+| CONDUIT  |  ACCESS LIST
+| SCALE : NTS
+| AREA  |  RMP CCR & OMCCR IN MAA REFINERY
+| PROJECT ORDER NUMBER :  |  CA/CPC/0707
+| DRAWING: ME-20420-RMP-ZCD-001
+| C  29.05.2025  M.A  |  RE-ISSUED FOR APPROVAL  |  CA/CPC/0707
+| SUB AREA RMP  |  NO:
+| B  20.04.2025  M.A  |  ISSUED FOR APPROVAL  |  CA/CPC/0707
+| A  10.12.2024  M.A  |  ISSUED FOR REVIEW  |  CA/CPC/0707
+| DRWG.TYPE ZONES AND CONDUITS DRAWING
+| PROJ.ENG.  SPEC.ENG.  |  ASSET UNIT ORIGINATOR DISC. DOC. SEQUENCE SHEET REV.
+| DATE APPRD
+| REV  |  DESCRIPTION  |  CODE CODE  |  CODE  |  CODE TYPE. NO.  |  NO.  |  NO.
+| (DD.MM.YY)  BY  |  PROJECT ORDER NUMBER
+| KNPC APPROVAL
+| DESCRIPTION OVERALL ZONES AND CONDUITS DRAWING
+| MASTER DRAWING REVISION
+
+=========================
+page 3 (85 lines)
+=========================
+
+| LEVEL4
+| UPGRADING OF EXISTING DCS SYSTEMS &
+| ASSOCIATED EQUIPMENT FOR CYBER SECURITY
+| COMPLIANCE AT RMP CCR & OMCCR IN MAA REFINERY
+| IP21 Dynamo Nozomi SIEM LOG
+| Servers Archiver IDS  |  FILE  |  CYBERSECURITY - OVERALL ZONES AND
+| COLLECTOR  |  CONDUITS DRAWING (RMP)
+| SE Project No:  KNPC Contract No: Document No  |  Revision No.  Date Page No
+| ME-20420  CA/CPC/0707 ME-20420-RMP-ZCD-001  |  C  |  29-May-2025 3 Of 8
+| Note1: Boundary protection is enforced via Access Control Lists (ACLs) on the Triconex systems, restricting network access to predefined IP ranges and proprietary
+| `  |  protocols (TSAA)
+| LEVEL 3.5 DMZ
+| North
+| Firewall
+| (KNPC-IT)
+| LOCATION –  KNPC IT CENTER
+| DMC  |  Dynamo
+| Server  |  Collector Nozomi
+| (AspenTech) (Honeywell) IDS
+| CyberSecurity Zone
+| RMCSV1 VMs: RMCSV2 VMs: RMPBK1  |  SL3
+| VM1-PDC+Radius VM1-SDC+Radius (Centralized
+| VM2-LOG Svr VM2-WSUS  |  NAS Backup)
+| ICSS  |  VM3-ePO  |  VM3-NPM Srv
+| Firewall  |  VM4-WSUS (Replica) VM4-CA Server
+| (Redundant)  |  VM5-NPM Srv (Replica) VM5-ePO (Replica)
+| VM6-CA Srv (Replica)) VM6-Log Srv (Replica)
+| L3.2 Security
+| Network
+| L3.2 Network Switch
+| (Redundant)
+| RMCSV1 CyberSecurity RMCSV2 CyberSecurity
+| Virtual Server Virtual Server  |  Span Traffic
+| (To Nozomi IDS)
+| RMPT15
+| VHN Switch (Redundant)
+| VHN Network
+| L3 PIN Network
+| L3 PIN Edge Switch (Redundant)  |  L3 PIN Edge Switch (Redundant)
+| L3 PIN Root Switch
+| (Redundant)  |  L3 PIN Edge Switch (Redundant)
+| LEVEL3
+| NTP Server RMPSAD
+| (Redundant)  |  Thin Client Thin Client Thin Client Thin Client Thin Client  |  Thin Client Thin Client Thin Client
+| (System Advisor)  |  (RMPAP3
+| (OWS X DMC (EWS (Historian (CSA  |  (OWS X (EWS (Historian
+| 4 nos)  |  GRW235) 048A01) Server)  |  6 nos) GRWS04) 051A01)
+| Gateway)
+| Control System Zone
+| Extended to
+| RMPV08 RMPV09  |  RMPV10 RMPV11  |  Locations Listed in
+| RMPPS1 043A01  |  041A01  |  048DW1  |  051DW1  |  Page 4 To 8
+| RMPAP1 (Common  |  043A02  |  041A02  |  WS#3 Virtual WS#3 Virtual (Display Wall  |  WS#4 Virtual WS#4 Virtual (Display Wall
+| (DMC Gateway) WS#1 Host/ DCS AMS  |  WS#2 Host/ DCS AMS  |  Server (Pri) Server (Sec)  |  Server (Pri) Server (Sec)
+| IP21 Gateway) Historian  |  Historian  |  Interface  |  Interface
+| Station)  |  Station)
+| Control System Zone
+| 043W01 044W01 058W01 058W02  |  041W01 042W01 041W02 042W02
+| L2 MESH Root  |  (DCS OWS) (DCS OWS) (DCS OWS) (DCS OWS)  |  (DCS OWS) (DCS OWS) (DCS OWS) (DCS OWS)
+| Switches
+| (Redundant)
+| L2 MESH Edge  |  L2 MESH Edge Switches  |  L2 MESH Edge  |  L2 MESH Edge
+| Switches (Redundant)  |  (Redundant)  |  Switches (Redundant)  |  Switches (Redundant)
+| LEVEL2
+| L2 MESH Network
+| FCP  |  FDC280  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP
+| (432C11) (043G01)  |  (411C11)  |  (421C21)  |  (485C15)  |  (485C26)  |  (516C13)  |  (516C24)  |  (576C34) (577C26) (578C15) (577C13)
+| SL1  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI FDSI FDSI
+| FBM233  |  FBM233  |  FBM233  |  FDSI
+| FBM233  |  FBM233  |  FBM233 FBM233  |  FBM233  |  FBM233 FBM233  |  FBM233 FBM233  |  FBM233 FBM233 FBM233 FBM233
+| Note1  |  Note1  |  Note1  |  Note1  |  Note1  |  Note1
+| TSAA  |  Note1  |  IP
+| Modbus TCP/IP  |  Modbus TCP/IP TSAA  |  Modbus TCP/IP TSAA  |  TSAA  |  TSAA  |  TSAA  |  TSAA  |  TCP/IP  |  TCP/IP
+| Modbus TCP/IP  |  Modbus TCP/IP  |  Modbus TCP/IP  |  Ethernet Modbus OPC DA Modbus
+| LEVEL1
+| rd  |  rd  |  rd  |  rd  |  3 rd  Party 3 rd  Party 3 rd  Party 3 rd  Party
+| 3 Party Zone  |  3 Party Zone  |  3 Party Zone  |  3 rd  Party Zone  |  3 rd  Party Zone SIS Zone 3 Party SIS Zone
+| SIS Zone  |  SIS Zone  |  SIS Zone  |  SIS Zone SIS Zone  |  Zone  |  Zone  |  Zone Zone Zone
+| `  |  `  |  Schneider `  |  `  |  `  |  `  |  `  |  `  |  `  |  `
+| Unit43/44 AB  |  Schneider  |  Unit41 LCP  |  Unit42 LCP  |  Schneider  |  Schneider Schneider  |  Schneider  |  Schneider
+| SIS  |  SIS  |  SIS  |  WS#3 LCP  |  WS#4 LCP  |  GDS  |  Halon FDS Fire
+| PLC  |  (AB PLC)  |  (AB PLC)  |  (AB PLC)  |  SIS  |  SIS  |  (AB PLC)  |  SIS  |  SIS  |  ENMC20  |  Detection
+| (Unit43/44)  |  (Unit41)  |  (Unit42)  |  (Unit48) (Unit49)  |  (Unit50) TGS  |  (Unit52) (AB PLC)  |  (Honeywell)
+| (FGPLC)
+| LOCATION –  RMPCCR  |  LOCATION –  RMPCCR (WS#1)  |  LOCATION –  RMPCCR (WS#2)  |  LOCATION –  RMPCCR (WS#3)  |  LOCATION –  RMPCCR (WS#4)
+
+=========================
+page 4 (56 lines)
+=========================
+
+| LEVEL4
+| UPGRADING OF EXISTING DCS SYSTEMS &
+| ASSOCIATED EQUIPMENT FOR CYBER SECURITY
+| COMPLIANCE AT RMP CCR & OMCCR IN MAA REFINERY
+| CYBERSECURITY - OVERALL ZONES AND
+| CONDUITS DRAWING (RMP)
+| SE Project No:  KNPC Contract No: Document No  |  Revision No.  Date Page No
+| ME-20420  CA/CPC/0707 ME-20420-RMP-ZCD-001  |  C  |  29-May-2025 4 Of 8
+| Note1: Boundary protection is enforced via Access Control Lists (ACLs) on the Triconex systems, restricting network access to predefined IP ranges and proprietary
+| protocols (TSAA)
+| LEVEL 3.5 DMZ
+| VHN Network
+| L3 PIN Network
+| L3 PIN Switch (Redundant)  |  L3 PIN Switch (Redundant)  |  L3 PIN Switch (Redundant)
+| Thin Client Thin Client Thin Client RMPLPS  |  Control System Zone
+| Thin Client Thin Client Thin Client Thin Client Thin Client  |  Thin Client Thin Client Thin Client Thin Client  |  Extended to
+| GHIAP1 (DMC)/ RTD7A/ RMPMTK/  |  Thin Client Thin Client Thin Client RMPPS3/
+| 107W01 144W01 GRWS01 107W02 144FH1  |  107W03 107FH3 153W01 153FH2 GHIAP2 (DMC)/ GRWS07  |  Locations Listed in
+| (EWS) (OWS) (OWS) GHIHT1 (Historian)/ RTDB7B RMPBTK  |  RMPSP4
+| (OWS) (OWS)  |  RMPLGW (IP21 Gateway) (Time Keeper)  |  (OWS) (OWS) (OWS) (OWS) GHIHT2 (Historian) (EWS)  |  Page 5 To 8
+| (IP21 Gateway)
+| LEVEL3
+| RMPAP2 RMPPS2 040A01  |  005W01 009W01
+| (Common (Common  |  040A02  |  025W01 025W02
+| WS#5 Host/ DCS AMS  |  (DCS OWS) (DCS OWS) (DCS OWS) (DCS OWS)  |  RMPV12 RMPV13  |  RMPV14 RMPV15
+| DMC Gateway) IP21 Gateway) Historian  |  (DCS Virtual (DCS Virtual
+| (DCS Virtual (DCS Virtual
+| Server) Server)  |  Server) Server)
+| 040W01 040W02 080W01 080W02  |  025W03 026W01 026W02 026W03
+| (DCS OWS) (DCS OWS) (DCS OWS) (DCS OWS)  |  (DCS OWS) (DCS OWS) (DCS OWS) (DCS OWS)
+| Control System Zone
+| LEVEL2
+| L2 MESH Edge  |  L2 MESH  |  L2 MESH Distribution
+| Switches  |  EdgeSwitches  |  Switches
+| (Redundant)  |  (Redundant)
+| L2 MESH Network
+| FCP  |  FCP  |  FCP
+| (401C11) (801C21)  |  FCP  |  (GHIC12)
+| SL1
+| FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI
+| FBM233 FBM233  |  FBM233  |  FBM233  |  FBM233
+| Note1  |  Note1
+| TSAA  |  TSAA
+| Modbus TCP/IP  |  OPC DA
+| OPC DA
+| LEVEL1
+| SIS Zone  |  SIS Zone rd  |  3 rd  Party Zone 3 rd  Party Zone
+| 3 Party
+| Zone
+| Schneider Schneider  |  `
+| SIS  |  SIS  |  `  |  Halon FDS MCMOPC
+| (Unit40) (Unit80)  |  (Honeywell) (Bently Nevada)
+| WS#5 LCP
+| (AB PLC)
+| WS#5  |  WS#7  |  RMP BrownField Units & Common
+| LOCATION –  RMPCCR
+
+=========================
+page 5 (51 lines)
+=========================
+
+| LEVEL4
+| UPGRADING OF EXISTING DCS SYSTEMS &
+| ASSOCIATED EQUIPMENT FOR CYBER SECURITY
+| COMPLIANCE AT RMP CCR & OMCCR IN MAA REFINERY
+| CYBERSECURITY - OVERALL ZONES AND
+| CONDUITS DRAWING (RMP)
+| SE Project No:  KNPC Contract No: Document No  |  Revision No.  Date Page No
+| ME-20420  CA/CPC/0707 ME-20420-RMP-ZCD-001  |  C  |  29-May-2025 5 Of 8
+| LEVEL 3.5 DMZ  |  Note1: Boundary protection is enforced via Access Control Lists (ACLs) on the Triconex systems, restricting network access to predefined IP ranges and proprietary
+| protocols (TSAA)
+| VHN Switch Redundant
+| VHN Network
+| L3 PIN Distribution Switch (Redundant)
+| L3 PIN Network
+| L3 PIN Edge Switch
+| (Redundant)
+| L3 PIN Edge Switch  |  L3 PIN Edge Switch  |  L3 PIN Edge Switch  |  L3 PIN Edge Switch  |  L3 PIN Edge Switch  |  L3 PIN Edge Switch
+| (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)
+| LEVEL3
+| Control System Zone
+| Extended to
+| Locations Listed in
+| Page 6 To 8
+| Thin Client  |  Thin Client  |  Thin Client  |  Thin Client  |  Thin Client
+| X 9 Nos.  |  X 8 Nos.  |  Thin Client  |  Thin Client
+| X 9 Nos.  |  X 9 Nos.  |  X 9 Nos.  |  X 7 Nos.
+| (WS#1 to WS#7  |  (WS#1 to WS#7  |  (WS#1 to WS#7  |  (WS#1 to WS#7  |  (WS#1 to WS#7  |  X 5 Nos.
+| DCS OWS  |  DCS OWS  |  (WS#1 to WS#7  |  (WS#1 to WS#7
+| Control System Zone DCS OWS  |  DCS OWS  |  DCS OWS  |  DCS OWS
+| VMs)  |  VMs)  |  VMs)  |  VMs)  |  VMs)  |  DCS OWS &
+| VMs)  |  Application VMs)
+| DWSW31  |  DWSW61  |  DWSW71
+| DWSW11  |  DWSW21  |  (WS#3 DWS)  |  DWSW41  |  DWSW51  |  (WS#7 DWS)
+| (WS#1 DWS)  |  (WS#2 DWS)  |  (WS#4 DWS)  |  (WS#5 DWS)  |  (WS#6 DWS)
+| RMPV01  |  RMPV02  |  RMPV03  |  RMPV04  |  RMPV05  |  RMPV06  |  RMPV07
+| (DCS Virtual  |  (DCS Virtual  |  (DCS Virtual  |  (DCS Virtual  |  (DCS Virtual  |  (DCS Virtual  |  (DCS Virtual
+| Server)  |  Server)  |  Server)  |  Server)  |  Server)  |  Server)  |  Server)
+| LEVEL2
+| L2 MESH Edge Switches  |  L2 MESH Edge Switches  |  L2 MESH Edge Switches  |  L2 MESH Edge Switches  |  L2 MESH Edge Switches  |  L2 MESH Edge Switches  |  L2 MESH Edge Switches
+| (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)  |  (Redundant)
+| L2 MESH Network
+| FCP
+| (GHIC11)
+| SL1  |  FDSI
+| FBM233
+| OPC DA
+| LEVEL1
+| 3 rd  Party Zone
+| `
+| AMADAS Comm.
+| LOCATION –  RCC (WS#1 to WS#7)
+
+=========================
+page 6 (44 lines)
+=========================
+
+| LEVEL4
+| UPGRADING OF EXISTING DCS SYSTEMS &
+| ASSOCIATED EQUIPMENT FOR CYBER SECURITY
+| COMPLIANCE AT RMP CCR & OMCCR IN MAA REFINERY
+| CYBERSECURITY - OVERALL ZONES AND
+| CONDUITS DRAWING (RMP)
+| SE Project No:  KNPC Contract No: Document No  |  Revision No.  Date Page No
+| ME-20420  CA/CPC/0707 ME-20420-RMP-ZCD-001  |  C  |  29-May-2025 6 Of 8
+| LEVEL 3.5
+| DMZ  |  Note1: Boundary protection is enforced via Access Control Lists (ACLs) on the Triconex systems, restricting network access to predefined IP ranges and proprietary
+| protocols (TSAA)
+| L3 PIN Network
+| L3 PIN Edge Switches
+| (Redundant)
+| LEVEL3
+| Control System Zone
+| 107A01  |  Extended to
+| DCS GALAXY/HOST/AMS  |  Locations Listed in
+| Workstation  |  Page 7,8
+| (DCS/SIS/FGS/3 rd  Party System)
+| Control System Zone  |  107OW1 107LH1 107LH2
+| (DCS OWS) (DCS OWS) (DCS OWS)
+| L2 MESH Edge Switches
+| (Redundant)
+| LEVEL2
+| L2 MESH Network
+| FCP  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP
+| (107I11)  |  (107I12)  |  (107I13)  |  (125I21)  |  (329I31)  |  (329I32)
+| FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  SL1
+| FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI
+| FBM233 FBM233  |  FBM233 FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233 FBM233 FBM233
+| FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233
+| Note1  |  Note1  |  Note1  |  Note1  |  Note1  |  Note1
+| TSAA  |  TSAA  |  TCP/IP TCP/IP  |  TSAA  |  TSAA  |  TCP/IP TCP/IP  |  TSAA  |  TCP/IP  |  TCP/IP  |  TSAA  |  TCP/IP  |  TCP/IP
+| Modbus TCP/IP  |  Modbus TCP/IP Modbus Modbus  |  Modbus Modbus  |  Modbus  |  Modbus  |  Modbus  |  Modbus
+| LEVEL1
+| FGS Zone
+| SIS Zone  |  FGS Zone  |  SIS Zone
+| rd  |  FGS Zone  |  rd  |  rd  |  rd  |  rd  |  rd  |  rd  |  rd  |  rd  |  rd
+| SIS Zone  |  3 Party Zone  |  3 Party Zone 3 Party Zone 3 Party Zone  |  3 Party Zone 3 Party Zone  |  3 Party Zone 3 Party Zone  |  3 Party Zone 3 Party Zone
+| Schneider  |  `  |  Schneider  |  `  |  Schneider  |  Schneider  |  `  |  Schneider  |  `  |  Schneider  |  `
+| SIS  |  DRCS  |  FGS  |  IMCS  |  MMS  |  GC ANALYSER SIS  |  FGS  |  MMS  |  IMCS  |  SIS  |  N2APSA  |  N2BPSA  |  FGS  |  MMS  |  IMCS
+| (Unit-107)  |  (Unit-107)  |  (Unit-125)  |  (Unit-125)  |  (Unit-329)  |  (Unit-329)
+| LOCATION –  FAR107
+
+=========================
+page 7 (46 lines)
+=========================
+
+| LEVEL4
+| UPGRADING OF EXISTING DCS SYSTEMS &
+| ASSOCIATED EQUIPMENT FOR CYBER SECURITY
+| COMPLIANCE AT RMP CCR & OMCCR IN MAA REFINERY
+| CYBERSECURITY - OVERALL ZONES AND
+| CONDUITS DRAWING (RMP)
+| SE Project No:  KNPC Contract No: Document No  |  Revision No.  Date Page No
+| ME-20420  CA/CPC/0707 ME-20420-RMP-ZCD-001  |  C  |  29-May-2025 7 Of 8
+| LEVEL 3.5 DMZ  |  Note1: Boundary protection is enforced via Access Control Lists (ACLs) on the Triconex systems, restricting network access to predefined IP ranges and proprietary
+| protocols (TSAA)
+| L3 PIN Network
+| L3 PIN Edge Switch  |  L3 PIN Edge Switch  |  L3 PIN Edge Switch
+| (Redundant)  |  (Redundant)  |  (Redundant)
+| LEVEL3
+| 153A01  |  Control System Zone
+| 144A01  |  DCS HOST /AMS Workstation  |  Extended to
+| DCS HOST /AMS Workstation  |  (DCS/SIS/FGS/3 rd  Party System)  |  Locations Listed in
+| (DCS/SIS/FGS/3 rd  Party System)
+| Page 8
+| 581A51
+| Host + Historian
+| 144OW2 144LH1  |  153OW2
+| Control System Zone  |  (DCS OWS) (DCS OWS)  |  (DCS OWS)
+| LEVEL2  |  L2 MESH Edge Switches  |  L2 MESH Edge
+| L2 MESH Edge
+| (Redundant)  |  Switches (Redundant)  |  Switches (Redundant)
+| L2 MESH Network
+| FCP  |  FCP  |  FCP  |  FCP  |  FDC280  |  FCP
+| (144G11)  |  (144G12)  |  (144G13)  |  (153H12)  |  (058G01)  |  (583C29)
+| FDSI  |  FDSI  |  SL1
+| FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI
+| FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233
+| FBM233
+| Note1  |  Note1  |  Note1  |  Note1  |  Note1
+| Modbus TCP/IP  |  TSAA  |  Modbus TCP/IP  |  TSAA  |  Modbus TCP/IP  |  TSAA  |  TSAA  |  TCP/IP  |  TSAA  |  TCP/IP
+| Modbus  |  Modbus
+| LEVEL1
+| SIS Zone  |  FGS Zone  |  SIS Zone  |  FGS Zone  |  SIS Zone
+| 3 rd  Party Zone
+| 3 rd  Party Zone  |  3 rd  Party Zone  |  3 rd  Party Zone  |  3 rd  Party Zone
+| Schneider  |  Schneider  |  Schneider  |  `  |  Schneider
+| `  |  Schneider  |  `  |  `  |  GC Analyzer  |  `
+| SIS  |  FGS  |  SIS  |  FGS  |  SIS  |  Unit58 GDS
+| ASC  |  IMCS  |  (Unit-144)  |  Analyser  |  (Unit-153)  |  (Siemens)  |  (Unit-58)
+| (Unit-144)  |  (Unit-153)  |  (AB PLC)
+| LOCATION –  FAR144  |  LOCATION –  FAR153  |  LOCATION –  NGOD
+
+=========================
+page 8 (43 lines)
+=========================
+
+| LEVEL4
+| UPGRADING OF EXISTING DCS SYSTEMS &
+| ASSOCIATED EQUIPMENT FOR CYBER SECURITY
+| COMPLIANCE AT RMP CCR & OMCCR IN MAA REFINERY
+| CYBERSECURITY - OVERALL ZONES AND
+| CONDUITS DRAWING (RMP)
+| SE Project No:  KNPC Contract No: Document No  |  Revision No.  Date Page No
+| ME-20420  CA/CPC/0707 ME-20420-RMP-ZCD-001  |  C  |  29-May-2025 8 Of 8
+| LEVEL 3.5 DMZ  |  Note1: Boundary protection is enforced via Access Control Lists (ACLs) on the Triconex systems, restricting network access to predefined IP ranges and proprietary
+| protocols (TSAA)
+| L3 PIN Network
+| LEVEL3
+| L3 PIN Edge Switch  |  L3 PIN Edge Switch
+| (Redundant)  |  (Redundant)
+| 005W02  |  105W01
+| 005A01  |  (DCS OWS)  |  070A01  |  (DCS OWS)
+| Host + Historian  |  Host + Historian
+| Control System Zone
+| LEVEL2  |  L2 MESH Edge Switches  |  L2 MESH Edge Switches
+| L2 MESH Edge Switches  |  L2 MESH Edge Switches  |  (Redundant)  |  (Redundant)
+| L2 MESH Network  |  (Redundant)  |  (Redundant)
+| FCP  |  FDC280  |  FCP  |  FDC280  |  FDC280  |  FCP  |  FCP  |  FCP  |  FCP  |  FCP
+| (252C26)  |  (025G01)  |  (262C26) (005G01)  |  (032C11)  |  (057C06) (573C15) (097C06)  |  (105C23)  |  FCP
+| (005G03)  |  (105C22)
+| FDSI  |  FDSI  |  SL1
+| FDSI  |  FDSI FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI  |  FDSI FDSI
+| FBM233  |  FBM233 FBM233  |  FBM233  |  FBM233  |  FBM233  |  FBM233 FBM233 FBM233 FBM233 FBM233  |  FBM233
+| Note1  |  Note1  |  Note1  |  Note1  |  Note1  |  Note1  |  Note1
+| TSAA  |  TSAA  |  TSAA  |  TSAA  |  TSAA  |  TSAA  |  TSAA  |  Note1
+| Modbus TCP/IP Modbus TCP/IP  |  Modbus TCP/IP Modbus TCP/IP Modbus TCP/IP Modbus TCP/IP  |  Modbus TCP/IP  |  TSAA
+| LEVEL1
+| 3 rd  Party rd  |  rd  |  3 rd  Party 3 rd  Party 3 rd  Party 3 rd  Party  |  SIS Zone
+| SIS Zone  |  3 Party SIS Zone  |  SIS Zone  |  SIS Zone  |  SIS Zone  |  SIS Zone  |  3 Party
+| Zone  |  Zone  |  Zone  |  Zone  |  Zone  |  Zone Zone
+| Schneider  |  Schneider  |  Schneider
+| `  |  Schneider  |  Schneider  |  Schneider  |  `  |  SIS
+| SIS  |  GDS  |  SIS  |  SIS  |  Schneider Schneider  |  Main
+| MOV  |  (Unit-26  |  SIS  |  SIS  |  LCP  |  LCP  |  (Unit105)
+| (Unit-25  |  (AB PLC) (Unit-25)  |  SIS-1  |  SIS-2  |  (Unit-62)  |  GDS CFP MOV  |  Turbo
+| HIPPS)  |  HIPPS)  |  (Unit-05) (Unit-05) (Unit-09)  |  FUP
+| (AB PLC) (CFP) (C10501)
+| LOCATION –  UCR
+| LOCATION –  RCR
