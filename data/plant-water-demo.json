@@ -1,0 +1,44 @@
+{
+  "plant_id": "plant-meadowbrook",
+  "plant_name": "Meadowbrook Regional Water Utility",
+  "sector": "water",
+  "demo_note": "Synthetic Wisconsin mid-size water utility profile (~25,000 service connections). Vendors and topology reflect typical 2026 mid-size water OT footprint: AVEVA System Platform SCADA, Rockwell FactoryTalk View HMI + Studio 5000 engineering workstation, Allen-Bradley ControlLogix treatment PLC, Allen-Bradley GuardLogix chemical-dosing safety controller, Schneider SCADAPack lift-station RTU on cellular WAN with DNP3. CVE IDs are plausible patterns, not all verified live CVEs.",
+  "zones": [
+    {"zone_id":"z_dmz","name":"OT DMZ","level":"L3.5","description":"Jump server, historian replication, vendor remote access"},
+    {"zone_id":"z_ops","name":"Control Center","level":"L3","description":"Primary SCADA and historian"},
+    {"zone_id":"z_treatment","name":"Treatment Plant Floor","level":"L2","description":"Operator HMI and engineering workstation"},
+    {"zone_id":"z_process","name":"Process Control","level":"L1","description":"Treatment PLC and chemical-dosing safety controller"},
+    {"zone_id":"z_field","name":"Distribution Field","level":"L1","description":"Lift-station RTUs reaching back via cellular VPN"}
+  ],
+  "assets": [
+    {"asset_id":"a_scada_01","name":"SCADA Primary","asset_type":"scada-server","vendor":"AVEVA","model":"System Platform","firmware_version":"2023 R2","ip_address":"10.40.3.10","zone_id":"z_ops","criticality_score":9,"process_tag":"plant_dispatch"},
+    {"asset_id":"a_hist_01","name":"Plant Historian","asset_type":"historian","vendor":"AVEVA","model":"Historian","firmware_version":"2023.2","ip_address":"10.40.3.20","zone_id":"z_ops","criticality_score":8,"process_tag":"compliance_data"},
+    {"asset_id":"a_hmi_01","name":"Operator HMI","asset_type":"hmi","vendor":"Rockwell","model":"FactoryTalk View SE","firmware_version":"13.0","ip_address":"10.40.2.15","zone_id":"z_treatment","criticality_score":9,"process_tag":"treatment_operator"},
+    {"asset_id":"a_eng_01","name":"Engineering Workstation","asset_type":"engineering-workstation","vendor":"Rockwell","model":"Studio 5000","firmware_version":"35.00","ip_address":"10.40.2.30","zone_id":"z_treatment","criticality_score":7,"process_tag":"logic_changes"},
+    {"asset_id":"a_plc_01","name":"Treatment PLC","asset_type":"plc","vendor":"Allen-Bradley","model":"ControlLogix 1756-L75","firmware_version":"33.011","ip_address":"10.40.1.11","zone_id":"z_process","criticality_score":10,"process_tag":"filtration_dosing_control"},
+    {"asset_id":"a_sis_01","name":"Chemical-Dosing Safety Controller","asset_type":"safety-controller","vendor":"Allen-Bradley","model":"GuardLogix 5580","firmware_version":"33.011","ip_address":"10.40.1.50","zone_id":"z_process","criticality_score":10,"process_tag":"chlorine_residual_safety"},
+    {"asset_id":"a_rtu_01","name":"Lift Station 7 RTU","asset_type":"rtu","vendor":"Schneider","model":"SCADAPack 350E","firmware_version":"8.16","ip_address":"10.40.5.71","zone_id":"z_field","criticality_score":7,"process_tag":"sewer_lift_station"}
+  ],
+  "vulnerabilities": [
+    {"vuln_id":"v1","cve":"CVE-2024-3144","description":"AVEVA System Platform unsafe deserialization in ArchestrA Galaxy import leads to RCE","severity":"critical","exploitability":0.85,"affected_vendor":"AVEVA","affected_product":"System Platform","affected_version":"2023 R2","asset_id":"a_scada_01"},
+    {"vuln_id":"v2","cve":"CVE-2024-21915","description":"Rockwell FactoryTalk View SE local privilege escalation via signed-DLL hijack","severity":"high","exploitability":0.7,"affected_vendor":"Rockwell","affected_product":"FactoryTalk View SE","affected_version":"13.0","asset_id":"a_hmi_01"},
+    {"vuln_id":"v3","cve":"CVE-2023-3595","description":"Allen-Bradley ControlLogix CIP malformed-packet remote code execution","severity":"critical","exploitability":0.8,"affected_vendor":"Allen-Bradley","affected_product":"ControlLogix 1756-L75","affected_version":"33.011","asset_id":"a_plc_01"}
+  ],
+  "connectivity": [
+    {"source_asset_id":"a_scada_01","target_asset_id":"a_hmi_01","protocol":"opc-ua","port":4840,"trust_level":"high","allowed_direction":"bi"},
+    {"source_asset_id":"a_hmi_01","target_asset_id":"a_plc_01","protocol":"ethernet-ip","port":44818,"trust_level":"high","allowed_direction":"bi"},
+    {"source_asset_id":"a_eng_01","target_asset_id":"a_plc_01","protocol":"ethernet-ip","port":44818,"trust_level":"medium","allowed_direction":"bi"},
+    {"source_asset_id":"a_plc_01","target_asset_id":"a_sis_01","protocol":"ethernet-ip","port":44818,"trust_level":"medium","allowed_direction":"uni"},
+    {"source_asset_id":"a_hist_01","target_asset_id":"a_scada_01","protocol":"https","port":443,"trust_level":"high","allowed_direction":"uni"},
+    {"source_asset_id":"a_scada_01","target_asset_id":"a_rtu_01","protocol":"dnp3","port":20000,"trust_level":"medium","allowed_direction":"bi"}
+  ],
+  "process_functions": [
+    {"process_id":"p1","name":"Drinking Water Treatment","criticality":10,"primary_zone_id":"z_process","dependent_asset_ids":["a_scada_01","a_plc_01","a_hmi_01"]},
+    {"process_id":"p2","name":"Distribution and Lift-Station Pumping","criticality":9,"primary_zone_id":"z_field","dependent_asset_ids":["a_scada_01","a_rtu_01"]},
+    {"process_id":"p3","name":"Chemical-Dosing Safety Interlock","criticality":10,"primary_zone_id":"z_process","dependent_asset_ids":["a_sis_01","a_plc_01"]}
+  ],
+  "demo_scenarios": [
+    {"scenario_id":"s1","title":"Engineering workstation compromise","compromised_asset_id":"a_eng_01","intent":"Evaluate impact on treatment PLC logic and chemical-dosing safety interlock"},
+    {"scenario_id":"s2","title":"Lift-station RTU compromise via cellular WAN","compromised_asset_id":"a_rtu_01","intent":"Map lateral path back to SCADA via DNP3 trust"}
+  ]
+}

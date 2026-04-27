@@ -1,0 +1,114 @@
+{
+  "findings": [
+    {
+      "finding_id": "f_water_01_eng_key",
+      "asset_id": "a_eng_01",
+      "finding_type": "secret_leak",
+      "severity": "critical",
+      "evidence": "BEGIN RSA PRIVATE KEY ----***-- in /projects/treatment_logic_v4.acd.bak (Rockwell Studio 5000 project backup)",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "finding_id": "f_water_02_eng_aws",
+      "asset_id": "a_eng_01",
+      "finding_type": "secret_leak",
+      "severity": "high",
+      "evidence": "AKIA***WTR in /configs/s3-historian-backup.cfg",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_water_03_hist_admin",
+      "asset_id": "a_hist_01",
+      "finding_type": "secret_leak",
+      "severity": "high",
+      "evidence": "aaUser:Wonder***24 in /etc/aveva/historian.cfg (AVEVA Historian admin account, plaintext)",
+      "source_tool": "noseyparker",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.8
+    },
+    {
+      "finding_id": "f_water_04_hmi_export",
+      "asset_id": "a_hmi_01",
+      "finding_type": "secret_leak",
+      "severity": "medium",
+      "evidence": "ftview_admin:plant***42 in /exports/panelview-treatment.xml — note: may be vendor default in export template; verify against deployed credential before action",
+      "source_tool": "manual",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.6
+    },
+    {
+      "finding_id": "f_water_05_si_unpinned",
+      "asset_id": "a_eng_01",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "Integrator CI workflow ci.yml uses unpinned actions/checkout@master — finding owner is the system integrator that builds your Studio 5000 projects, not the utility ops team",
+      "source_tool": "gato-x",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_water_06_scada_log4j",
+      "asset_id": "a_scada_01",
+      "finding_type": "supply_chain",
+      "severity": "critical",
+      "evidence": "AVEVA System Platform 2023 R2 dependency log4j-core 2.14.1 (CVE-2021-44228) located in /opt/aveva/lib — vendor patch path required, network isolation as compensating control",
+      "source_tool": "manual",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.95
+    },
+    {
+      "finding_id": "f_water_07_hist_openssl",
+      "asset_id": "a_hist_01",
+      "finding_type": "supply_chain",
+      "severity": "medium",
+      "evidence": "Outdated OpenSSL 1.0.2k bundled with DNP3 connector library at /opt/aveva/dnp3 — exposure depends on whether DNP3 traffic terminates outside the OT DMZ",
+      "source_tool": "manual",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.75
+    },
+    {
+      "finding_id": "f_water_08_scada_cip",
+      "asset_id": "a_scada_01",
+      "finding_type": "exposure",
+      "severity": "critical",
+      "evidence": "TCP/44818 (EtherNet/IP CIP) on SCADA Primary reachable from corporate VLAN per simulated Shodan banner — violates IT/OT segmentation",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.9
+    },
+    {
+      "finding_id": "f_water_09_rtu_cellular",
+      "asset_id": "a_rtu_01",
+      "finding_type": "exposure",
+      "severity": "high",
+      "evidence": "TCP/20000 (DNP3) on Lift Station 7 RTU responding on cellular carrier IP (Verizon Private LTE class) without source-IP allowlist — common mid-size-utility lift-station exposure pattern",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.85
+    },
+    {
+      "finding_id": "f_water_10_hmi_http",
+      "asset_id": "a_hmi_01",
+      "finding_type": "exposure",
+      "severity": "medium",
+      "evidence": "HTTP/80 FactoryTalk View web UI exposed with default Rockwell self-signed cert; restrict to management VLAN, replace cert",
+      "source_tool": "shodan",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.7
+    },
+    {
+      "finding_id": "f_water_11_sis_zone",
+      "asset_id": "a_sis_01",
+      "finding_type": "mesh_gap",
+      "severity": "critical",
+      "evidence": "GuardLogix chemical-dosing safety controller a_sis_01 reachable from z_treatment (operator HMI zone) — violates IEC 62443 zone isolation; risk to chlorine residual safety interlock and finished-water quality",
+      "source_tool": "manual",
+      "detected_at": "2026-04-26T20:00:00Z",
+      "confidence": 0.8
+    }
+  ]
+}
