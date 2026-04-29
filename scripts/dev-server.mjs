@@ -103,7 +103,35 @@ async function handleOnboardingSave(req, res) {
     const key = (plant.onboarding_key || plant.plant_id.replace(/^plant-/, '')).replace(/[^a-z0-9_-]/gi, '-').toLowerCase();
     const demoPath = join(root, 'data', `plant-${key}-demo.json`);
     const enrichedPath = join(root, 'data', `plant-${key}-enriched.json`);
+    const overwriteConfirmed = plant.confirm_overwrite === true;
     delete plant.onboarding_key;
+    delete plant.confirm_overwrite;
+
+    // Block accidental overwrite. Built-in plants (energy, water) are locked
+    // unless explicitly confirmed; customer plants warn but allow on confirm.
+    const BUILTIN_KEYS = new Set(['energy', 'water']);
+    if (existsSync(demoPath) && !overwriteConfirmed) {
+      let existingMeta = null;
+      try {
+        const existing = JSON.parse(await (await import('node:fs/promises')).readFile(demoPath, 'utf8'));
+        existingMeta = {
+          plant_name: existing.plant_name,
+          asset_count: Array.isArray(existing.assets) ? existing.assets.length : 0,
+          saved_at: existing.onboarding_meta?.saved_at,
+        };
+      } catch { /* corrupt file is fine to overwrite */ }
+      res.writeHead(409, { 'content-type': 'application/json' });
+      res.end(JSON.stringify({
+        ok: false,
+        error: 'plant_exists',
+        message: BUILTIN_KEYS.has(key)
+          ? `Key "${key}" is a built-in demo plant. Pick a different plant key.`
+          : `A plant with key "${key}" already exists. Re-uploading will overwrite manual edits.`,
+        existing: existingMeta,
+        builtin: BUILTIN_KEYS.has(key),
+      }));
+      return;
+    }
 
     // Ensure findings array exists for merge step
     const findings = plant.evidence_findings || [];
@@ -113,6 +141,33 @@ async function handleOnboardingSave(req, res) {
 
     const { writeFile } = await import('node:fs/promises');
     await writeFile(demoPath, JSON.stringify(plant, null, 2));
+
+    // Auto-run the SBOM → CISA-advisories scanner against the demo fixture
+    // so every saved plant arrives at /api/posture already enriched with
+    // supply_chain findings. Failures are logged, not fatal — saving still
+    // succeeds with whatever findings the operator supplied directly.
+    let advSummary = null;
+    try {
+      const { scanAdvisories } = await import('./otsniff/scanners/advisories.mjs');
+      const adv = await scanAdvisories({ plant: demoPath });
+      findings.push(...adv.findings);
+      advSummary = adv.summary;
+
+      // Apply asset patches (canonical vendor/model where empty) and rewrite
+      // the demo file so the dashboard shows recognized vendors.
+      if (Array.isArray(adv.asset_patches) && adv.asset_patches.length) {
+        const patchById = new Map(adv.asset_patches.map(p => [p.asset_id, p]));
+        for (const a of plant.assets) {
+          const p = patchById.get(a.asset_id);
+          if (!p) continue;
+          if (!a.vendor && p.vendor) a.vendor = p.vendor;
+          if (!a.model && p.model) a.model = p.model;
+        }
+        await writeFile(demoPath, JSON.stringify(plant, null, 2));
+      }
+    } catch (err) {
+      console.error('[onboarding] advisories scan failed:', err.message);
+    }
 
     // Merge to produce enriched
     const { mergeFindings } = await import('./otsniff/merge.mjs');
@@ -135,7 +190,49 @@ async function handleOnboardingSave(req, res) {
       plant_id: plant.plant_id,
       assets: plant.assets.length,
       paths: { demo: `data/plant-${key}-demo.json`, enriched: `data/plant-${key}-enriched.json` },
+      advisories: advSummary,
     }));
+  } catch (err) {
+    res.writeHead(400, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ ok: false, error: err.message }));
+  }
+}
+
+// Delete a customer-onboarded plant. Removes both the demo and enriched
+// JSON files plus the per-plant uploads directory. Built-in plants
+// (energy, water) are protected — they cannot be deleted via this endpoint.
+async function handleOnboardingDelete(req, res, key) {
+  try {
+    const safeKey = String(key || '').replace(/[^a-z0-9_-]/gi, '-').toLowerCase();
+    if (!safeKey) throw new Error('plant key required');
+    const BUILTIN_KEYS = new Set(['energy', 'water']);
+    if (BUILTIN_KEYS.has(safeKey)) {
+      res.writeHead(403, { 'content-type': 'application/json' });
+      res.end(JSON.stringify({ ok: false, error: 'builtin_plant', message: `Built-in plant "${safeKey}" cannot be deleted.` }));
+      return;
+    }
+    const { unlink, rm } = await import('node:fs/promises');
+    const removed = [];
+    const tryUnlink = async (p) => {
+      if (existsSync(p)) { await unlink(p); removed.push(p.replace(root + '/', '').replace(root + '\\', '')); }
+    };
+    await tryUnlink(join(root, 'data', `plant-${safeKey}-demo.json`));
+    await tryUnlink(join(root, 'data', `plant-${safeKey}-enriched.json`));
+    const uploadsDir = join(root, 'data', 'uploads', safeKey);
+    if (existsSync(uploadsDir)) {
+      await rm(uploadsDir, { recursive: true, force: true });
+      removed.push(`data/uploads/${safeKey}/`);
+    }
+    delete PLANT_REGISTRY[safeKey];
+    // node ESM module cache holds onto the require()'d JSON — bust it so a
+    // future re-upload of the same key reads from disk, not stale memory.
+    try {
+      const cachePath = join(root, 'data', `plant-${safeKey}-enriched.json`);
+      delete require.cache[require.resolve(cachePath)];
+    } catch { /* file already gone */ }
+
+    res.writeHead(200, { 'content-type': 'application/json' });
+    res.end(JSON.stringify({ ok: true, key: safeKey, removed }));
   } catch (err) {
     res.writeHead(400, { 'content-type': 'application/json' });
     res.end(JSON.stringify({ ok: false, error: err.message }));
@@ -414,14 +511,30 @@ async function handleGraph(res, url) {
       confidence: f.confidence,
     });
   }
+
+  // Function-based connectivity inference. We always compute it; the renderer
+  // chooses to draw it (dashed) when declared connectivity is sparse, or to
+  // hide it when declared is rich. Threshold: declared edges < 0.4 per asset.
+  const declared = data.connectivity || [];
+  const assets = data.assets || [];
+  let inferred = [];
+  try {
+    const { inferConnectivityFromFunction } = await import('../web/js/connectivity-infer.js');
+    inferred = inferConnectivityFromFunction(assets, data.zones || [], declared);
+  } catch (err) {
+    console.error('[graph] connectivity-infer failed:', err.message);
+  }
+
   res.writeHead(200, { 'content-type': 'application/json' });
   res.end(JSON.stringify({
     plant_id: data.plant_id,
     plant_name: data.plant_name,
     sector: data.sector,
     zones: data.zones || [],
-    assets: data.assets || [],
-    connectivity: data.connectivity || [],
+    assets: assets,
+    connectivity: declared,
+    inferred_connectivity: inferred,
+    inference_active: assets.length > 0 && declared.length < assets.length * 0.4,
     process_functions: data.process_functions || [],
     findings_by_asset: findingsByAsset,
   }));
@@ -463,6 +576,8 @@ const server = createServer(async (req, res) => {
       return;
     }
 
+    if (url.pathname.startsWith('/uploads/') && req.method === 'GET')  { await handleUpload(res, url.pathname); return; }
+
     if (url.pathname.startsWith('/api/')) {
       if (url.pathname === '/api/plants'           && req.method === 'GET')  { await handlePlantsList(res); return; }
       if (url.pathname === '/api/assets'           && req.method === 'GET')  { await handleAssetsList(res, url); return; }
@@ -470,7 +585,10 @@ const server = createServer(async (req, res) => {
       if (url.pathname === '/api/posture'          && req.method === 'GET')  { await handlePosture(res, url); return; }
       if (url.pathname === '/api/onboarding/save'  && req.method === 'POST') { await handleOnboardingSave(req, res); return; }
       if (url.pathname === '/api/onboarding/drawing' && req.method === 'POST') { await handleDrawingUpload(req, res); return; }
-      if (url.pathname.startsWith('/uploads/')     && req.method === 'GET')  { await handleUpload(res, url.pathname); return; }
+      {
+        const m = url.pathname.match(/^\/api\/onboarding\/plant\/([^/]+)$/);
+        if (m && req.method === 'DELETE') { await handleOnboardingDelete(req, res, m[1]); return; }
+      }
       if (await dispatchApi(req, res, url)) return;
       res.writeHead(404, { 'content-type': 'application/json' });
       res.end(JSON.stringify({ error: `no route for ${req.method} ${url.pathname}` }));

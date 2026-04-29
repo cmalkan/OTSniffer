@@ -10,3 +10,15 @@ __pycache__/
 
 # Local-only Claude Code settings (shared settings.json is committed)
 .claude/settings.local.json
+
+# Customer-uploaded documents — binary, may contain confidential plant data,
+# never committed. Operators upload via the onboarding form into these dirs.
+/data/uploads/
+/web/assets/repro/
+
+# Debug + extraction artifacts (regeneratable from source PDFs)
+/data/extracted/*-debug.json
+/data/extracted/*-pdf-raw.txt
+
+# Per-plant scanner output (generated, not source)
+/data/findings-*-advisories.json

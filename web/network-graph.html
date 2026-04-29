@@ -42,6 +42,14 @@
     <span class="section-meta" id="topoMeta">— assets · — conduits · — zones</span>
   </div>
 
+  <div class="blast-toolbar" data-reveal="2" id="blastToolbar">
+    <span class="blast-toolbar-title">Click mode</span>
+    <button type="button" class="blast-mode-btn" id="modeInspect">Inspect (open detail)</button>
+    <button type="button" class="blast-mode-btn is-active" id="modeBlast">Blast Radius</button>
+    <span class="blast-target-info" id="blastTargetInfo">Click any asset to overlay its blast radius. Concentric red rings show how far an attacker reaches if that asset is compromised.</span>
+    <button type="button" class="blast-clear-btn" id="blastClearBtn" style="display:none">× Clear</button>
+  </div>
+
   <section class="schematic-stage" data-reveal="2">
     <div class="stage-grid"></div>
     <div class="stage-corners"></div>
@@ -70,6 +78,7 @@
         <tr>
           <th style="width: 130px">Asset</th>
           <th>Name</th>
+          <th>Function</th>
           <th>Vendor / Model</th>
           <th>Firmware</th>
           <th>Zone</th>
@@ -87,6 +96,7 @@
 import { api } from '/js/api.js';
 import { renderSchematic } from '/js/schematic-graph.js';
 import { renderPlantTabs } from '/js/plant-tabs.js';
+import { inferAssetFunction } from '/js/asset-function.js';
 renderPlantTabs(document.querySelector('[data-plant-tabs]'));
 
 const $ = (id) => document.getElementById(id);
@@ -100,11 +110,77 @@ async function init() {
   $('bomMeta').textContent = `${graph.assets.length} assets · ${posture.bom.vendor_count} vendors`;
   $('stageDocId').textContent = `DOC · OT-TPL-${graph.plant_id.slice(-3).toUpperCase()}`;
 
-  renderSchematic($('stage-svg'), graph, {
-    onSelect: (asset) => {
-      if (asset) location.href = `/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}`;
+  let mode = 'blast';   // 'inspect' | 'blast'
+  const ctrl = renderSchematic($('stage-svg'), graph, {
+    onSelect: async (asset) => {
+      if (!asset) return;
+      if (mode === 'inspect') {
+        location.href = `/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}`;
+        return;
+      }
+      // Blast-radius mode: overlay the target on the topology
+      $('blastTargetInfo').innerHTML = `Tracing blast radius from <strong>${escape(asset.name)}</strong>…`;
+      try {
+        const result = await api.simulateBlastRadius({
+          start_asset_id: asset.asset_id,
+          max_depth: 6,
+          include_vulnerabilities: true,
+          include_zone_barriers: true,
+          mode: 'analyst',
+        });
+        ctrl.showBlastRadius(result, asset.asset_id);
+        $('blastTargetInfo').innerHTML = `<strong>${escape(asset.name)}</strong> · ${result.severity_label?.toUpperCase() || 'LOW'} · ${(result.impacted_assets || []).length} reachable · risk ${Math.round(result.risk_score || 0)}/100. <a href="/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}">Open full detail →</a>`;
+        $('blastClearBtn').style.display = '';
+      } catch (err) {
+        $('blastTargetInfo').textContent = `Trace failed: ${err.message}`;
+      }
     },
   });
+
+  // Toolbar mode toggle
+  $('modeInspect').addEventListener('click', () => {
+    mode = 'inspect';
+    $('modeInspect').classList.add('is-active');
+    $('modeBlast').classList.remove('is-active');
+    ctrl.clearBlastRadius();
+    $('blastTargetInfo').textContent = 'Click any asset to open the deep-dive panel.';
+    $('blastClearBtn').style.display = 'none';
+  });
+  $('modeBlast').addEventListener('click', () => {
+    mode = 'blast';
+    $('modeBlast').classList.add('is-active');
+    $('modeInspect').classList.remove('is-active');
+    $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius. Concentric red rings show how far an attacker reaches if that asset is compromised.';
+  });
+  $('blastClearBtn').addEventListener('click', () => {
+    ctrl.clearBlastRadius();
+    $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius.';
+    $('blastClearBtn').style.display = 'none';
+  });
+
+  // Auto-trigger blast radius if the URL includes ?focus=<asset_id>
+  const focus = new URLSearchParams(location.search).get('focus');
+  if (focus && graph.assets.find(a => a.asset_id === focus)) {
+    ctrl.select(focus);
+    // Programmatically dispatch the same logic the click handler runs
+    const asset = graph.assets.find(a => a.asset_id === focus);
+    setTimeout(async () => {
+      try {
+        const result = await api.simulateBlastRadius({
+          start_asset_id: focus,
+          max_depth: 6,
+          include_vulnerabilities: true,
+          include_zone_barriers: true,
+          mode: 'analyst',
+        });
+        ctrl.showBlastRadius(result, focus);
+        $('blastTargetInfo').innerHTML = `<strong>${escape(asset.name)}</strong> · ${result.severity_label?.toUpperCase() || 'LOW'} · ${(result.impacted_assets || []).length} reachable · risk ${Math.round(result.risk_score || 0)}/100. <a href="/asset-detail.html?id=${encodeURIComponent(focus)}">Open full detail →</a>`;
+        $('blastClearBtn').style.display = '';
+      } catch (err) {
+        $('blastTargetInfo').textContent = `Trace failed: ${err.message}`;
+      }
+    }, 100);
+  }
 
   renderBOM(graph, posture);
 }
@@ -124,10 +200,13 @@ function renderBOM(graph, posture) {
     const findings = (graph.findings_by_asset[a.asset_id] || []).length;
     const advisories = risk ? (risk.advisory_count || 0) : 0;
     const critClass = a.criticality_score >= 9 ? 'crit-9' : a.criticality_score >= 7 ? 'crit-7' : '';
+    const fn = a.essential_function || inferAssetFunction(a);
+    const fnInferred = !a.essential_function;
     return `
       <tr onclick="location.href='/asset-detail.html?id=${encodeURIComponent(a.asset_id)}'">
         <td><span class="asset-id">${escape(a.asset_id)}</span></td>
         <td>${escape(a.name)}<div style="font-size:11px;color:var(--ink-muted);margin-top:2px;letter-spacing:0.04em;text-transform:uppercase">${escape(a.asset_type)}</div></td>
+        <td><span class="fn-text${fnInferred ? ' fn-inferred' : ''}" title="${fnInferred ? 'Inferred from name + asset_type' : 'Operator-supplied'}">${escape(fn)}</span></td>
         <td><span class="vendor">${escape(a.vendor)}</span><div style="font-size:11px;color:var(--ink-muted);margin-top:2px">${escape(a.model)}</div></td>
         <td>${escape(a.firmware_version || '—')}</td>
         <td>${escape(z ? z.zone_id : '—')}<div style="font-size:11px;color:var(--ink-muted);margin-top:2px">${escape(z ? z.level : '')}</div></td>

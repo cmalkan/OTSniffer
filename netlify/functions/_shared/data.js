@@ -4,14 +4,29 @@ const path = require('node:path');
 const DEFAULT_FILE = path.join(process.cwd(), 'data', 'plant-demo.json');
 const ENRICHED_FILE = path.join(process.cwd(), 'data', 'plant-enriched.json');
 
-function resolveDataFile() {
+// Resolve a plant-key to its on-disk fixture. Mirrors dev-server's
+// PLANT_REGISTRY semantics: built-in keys map to fixed files, anything else
+// is treated as a customer-onboarded key with a `plant-<key>-enriched.json`
+// (preferred) or `plant-<key>-demo.json` companion.
+function resolveDataFile(plantKey) {
   if (process.env.OTSNIFF_PLANT_FILE) return process.env.OTSNIFF_PLANT_FILE;
+  const k = String(plantKey || '').replace(/[^a-z0-9_-]/gi, '').toLowerCase();
+  if (k && k !== 'energy') {
+    if (k === 'water') {
+      const f = path.join(process.cwd(), 'data', 'plant-water-enriched.json');
+      if (fs.existsSync(f)) return f;
+    }
+    const enriched = path.join(process.cwd(), 'data', `plant-${k}-enriched.json`);
+    if (fs.existsSync(enriched)) return enriched;
+    const demo = path.join(process.cwd(), 'data', `plant-${k}-demo.json`);
+    if (fs.existsSync(demo)) return demo;
+  }
   if (fs.existsSync(ENRICHED_FILE)) return ENRICHED_FILE;
   return DEFAULT_FILE;
 }
 
-function loadPlantData() {
-  const raw = fs.readFileSync(resolveDataFile(), 'utf8');
+function loadPlantData(plantKey) {
+  const raw = fs.readFileSync(resolveDataFile(plantKey), 'utf8');
   const data = JSON.parse(raw);
 
   for (const key of ['assets', 'zones', 'connectivity', 'vulnerabilities', 'process_functions', 'demo_scenarios']) {

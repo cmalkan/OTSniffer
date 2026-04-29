@@ -18,15 +18,15 @@ const ZONE_LEVEL_HINTS = [
 ];
 
 const ASSET_TYPE_HINTS = [
-  { re: /\b(histori(?:an|cal))\b/i, asset_type: "historian" },
-  { re: /\b(hmi|operator workstation|thin client)\b/i, asset_type: "hmi" },
-  { re: /\b(engineering workstation|eng workstation|ews)\b/i, asset_type: "engineering-workstation" },
-  { re: /\b(sis|fgs|safety controller)\b/i, asset_type: "safety-controller" },
-  { re: /\b(rtu|remote terminal|remote telemetry)\b/i, asset_type: "rtu" },
-  { re: /\b(firewall|ngfw|fortigate|connexium)\b/i, asset_type: "firewall" },
-  { re: /\b(switch|mesh|pin|vhn)\b/i, asset_type: "switch" },
-  { re: /\b(controller|plc)\b/i, asset_type: "plc" },
-  { re: /\b(server|domain controller|radius|wsus|nas|vm|virtual host|epo|log server|ca server|ntp)\b/i, asset_type: "scada-server" },
+  { re: /\b(histori(?:an|cal|ans))\b/i, asset_type: "historian" },
+  { re: /\b(hmi|operator workstation|operator workstations|thin client)\b/i, asset_type: "hmi" },
+  { re: /\b(engineering workstation|engineering workstations|eng workstation|eng workstations|workstation|workstations|ews)\b/i, asset_type: "engineering-workstation" },
+  { re: /\b(sis|fgs|safety controller|safety controllers)\b/i, asset_type: "safety-controller" },
+  { re: /\b(rtu|rtus|remote terminal|remote telemetry)\b/i, asset_type: "rtu" },
+  { re: /\b(firewall|firewalls|ngfw|fortigate|connexium)\b/i, asset_type: "firewall" },
+  { re: /\b(switch|switches|mesh|pin|vhn)\b/i, asset_type: "switch" },
+  { re: /\b(controller|controllers|plc|plcs)\b/i, asset_type: "plc" },
+  { re: /\b(server|servers|domain controller|radius|wsus|nas|vm|virtual host|epo|log server|ca server|ntp)\b/i, asset_type: "scada-server" },
 ];
 
 const IGNORE_DESCRIPTOR_RE = /\b(unused|printers?|ports?)\b/i;
@@ -37,6 +37,14 @@ export function inferTopologyFromText(text, existingAssets = []) {
     .map(cleanLine)
     .filter(Boolean);
   return inferTopologyFromLines(lines, existingAssets);
+}
+
+export function inferAssetTypeFromText(text, fallback = "scada-server") {
+  const sample = String(text || "");
+  for (const hint of ASSET_TYPE_HINTS) {
+    if (hint.re.test(sample)) return hint.asset_type;
+  }
+  return fallback;
 }
 
 export function inferTopologyFromLines(lines, existingAssets = []) {
@@ -249,10 +257,7 @@ function makeAssetFromDescriptor(name, zone_id) {
 }
 
 function inferAssetType(name) {
-  for (const hint of ASSET_TYPE_HINTS) {
-    if (hint.re.test(name)) return hint.asset_type;
-  }
-  return "scada-server";
+  return inferAssetTypeFromText(name, "scada-server");
 }
 
 function inferLevel(name, description) {

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { inferTopologyFromLines } from "../web/js/topology-extract.js";
+import { inferAssetTypeFromText, inferTopologyFromLines } from "../web/js/topology-extract.js";
 
 const knpcLikeLines = [
   "8.2.1 Cybersecurity Zone (L3.2)",
@@ -82,4 +82,11 @@ test("topology extractor: maps inferred zones onto existing BOM assets", () => {
     inferred.suggestedAssets.every((asset) => asset.name !== "DCS Workstations" && asset.name !== "Foxboro Controllers"),
     "matched BOM assets should not be re-added as suggestions"
   );
+});
+
+test("topology extractor: classifies common OT asset labels", () => {
+  assert.equal(inferAssetTypeFromText("Foxboro Controllers"), "plc");
+  assert.equal(inferAssetTypeFromText("DCS Workstations"), "engineering-workstation");
+  assert.equal(inferAssetTypeFromText("Centralized NAS Server"), "scada-server");
+  assert.equal(inferAssetTypeFromText("L2 MESH Network Switches"), "switch");
 });

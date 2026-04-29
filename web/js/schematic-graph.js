@@ -49,17 +49,22 @@ export function renderSchematic(svg, graph, options = {}) {
   // Clear any prior render
   while (svg.firstChild) svg.removeChild(svg.firstChild);
 
-  // Geometry — sized for 14px asset name + 12px metadata at typical viewport.
+  // Geometry — assets stack VERTICALLY inside each zone (length-wise),
+  // so zones become tall narrow columns. This reads better than the
+  // wide-row layout when a single zone has many assets (KNPC has 30+
+  // firewalls in one zone).
   const ASSET_W = 220;
-  const ASSET_H = 104;
-  const ASSET_GAP_X = 28;
-  const ZONE_PAD = 24;
-  const ZONE_GAP = 40;
+  const ASSET_H = 92;
+  const ASSET_GAP_Y = 14;
+  const ZONE_PAD_TOP = 36;     // extra top room so the inside zone label clears the first asset card
+  const ZONE_PAD = 22;         // bottom + side padding inside the zone box
+  const ZONE_GAP = 36;
   const BAND_LABEL_W = 150;
-  const BAND_PAD_TOP = 42;
+  const BAND_PAD_TOP = 44;
   const BAND_PAD_BOTTOM = 28;
   const PADDING_X = BAND_LABEL_W + 36;
   const PADDING_TOP = 80;
+  const MAX_ASSETS_PER_COLUMN = 12; // wrap to a new column inside the zone after this many
 
   // 1) Group zones by Purdue level
   const zonesByLevel = new Map();
@@ -94,34 +99,45 @@ export function renderSchematic(svg, graph, options = {}) {
 
     for (const z of zonesInBand) {
       const assets = assetsByZone.get(z.zone_id) || [];
-      // We stack assets vertically inside a zone if the zone is "narrow" or
-      // place them in 1 row. With small fixtures we use a single row of cards.
-      const cols = Math.max(1, assets.length);
-      const zoneWidth = cols * ASSET_W + (cols - 1) * ASSET_GAP_X + 2 * ZONE_PAD;
+      const count = Math.max(1, assets.length);
+      // Wrap to multiple columns ONLY when a zone has more than
+      // MAX_ASSETS_PER_COLUMN assets. Otherwise it's a single tall column.
+      const cols = Math.max(1, Math.ceil(count / MAX_ASSETS_PER_COLUMN));
+      const rows = Math.min(MAX_ASSETS_PER_COLUMN, Math.ceil(count / cols));
+      const zoneWidth = cols * ASSET_W + (cols - 1) * 18 + 2 * ZONE_PAD;
+      const zoneInnerHeight = rows * ASSET_H + (rows - 1) * ASSET_GAP_Y;
 
-      const assetCoords = assets.map((a, i) => ({
-        asset: a,
-        x: cursorX + ZONE_PAD + i * (ASSET_W + ASSET_GAP_X),
-        // Asset Y placed within band; computed after bandHeight is known
-        i,
-      }));
+      const assetCoords = assets.map((a, i) => {
+        const col = Math.floor(i / rows);
+        const row = i % rows;
+        return {
+          asset: a,
+          x: cursorX + ZONE_PAD + col * (ASSET_W + 18),
+          row, col,
+        };
+      });
 
       zoneLayouts.push({
         zone: z,
         x: cursorX,
         width: zoneWidth,
+        innerHeight: zoneInnerHeight,
         assets: assetCoords,
       });
 
       cursorX += zoneWidth + ZONE_GAP;
-      maxAssetsInBand = Math.max(maxAssetsInBand, assets.length);
+      maxAssetsInBand = Math.max(maxAssetsInBand, rows);
     }
 
-    const bandHeight = ASSET_H + 2 * ZONE_PAD + BAND_PAD_TOP + BAND_PAD_BOTTOM;
-    // Now finalize asset Y positions
+    // Band height = tallest zone's column height + zone padding + band chrome.
+    // Top pad reserved for the inside zone label.
+    const tallestInner = Math.max(...zoneLayouts.map(zl => zl.innerHeight), ASSET_H);
+    const bandHeight = tallestInner + ZONE_PAD_TOP + ZONE_PAD + BAND_PAD_TOP + BAND_PAD_BOTTOM;
+    // Equalize zone box heights across the band so they line up visually
     for (const zl of zoneLayouts) {
+      zl.innerHeight = tallestInner;
       for (const ac of zl.assets) {
-        ac.y = cursorY + BAND_PAD_TOP + ZONE_PAD;
+        ac.y = cursorY + BAND_PAD_TOP + ZONE_PAD_TOP + ac.row * (ASSET_H + ASSET_GAP_Y);
       }
     }
 
@@ -201,17 +217,37 @@ export function renderSchematic(svg, graph, options = {}) {
         x: zl.x,
         y: bl.y + BAND_PAD_TOP,
         width: zl.width,
-        height: ASSET_H + 2 * ZONE_PAD,
+        height: zl.innerHeight + ZONE_PAD_TOP + ZONE_PAD,
         rx: 14, ry: 14,
       });
       svg.appendChild(zoneRect);
 
+      // Zone label sits INSIDE the zone box at the top, with a translucent
+      // pill behind it. This keeps multiple narrow adjacent zones from
+      // overlapping their labels — each label is bounded by its zone width.
+      const labelMaxWidth = zl.width - 28;
+      const labelText = truncateToFit(zl.zone.name || zl.zone.zone_id, labelMaxWidth, 12);
+      const pillW = Math.min(labelMaxWidth, labelText.length * 7 + 14);
+      const pillH = 18;
+      const pillX = zl.x + 12;
+      const pillY = bl.y + BAND_PAD_TOP + 8;
+      svg.appendChild(el("rect", {
+        x: pillX, y: pillY,
+        width: pillW, height: pillH,
+        rx: 4, ry: 4,
+        fill: "rgba(255, 255, 255, 0.86)",
+        stroke: "rgba(132, 151, 182, 0.18)",
+        "stroke-width": 0.5,
+      }));
       const zoneLabel = el("text", {
         class: "zone-label",
-        x: zl.x + 18,
-        y: bl.y + BAND_PAD_TOP - 14,
+        x: pillX + 7,
+        y: pillY + 12,
       });
-      zoneLabel.textContent = `${zl.zone.zone_id.toUpperCase()} · ${zl.zone.name}`;
+      zoneLabel.textContent = labelText;
+      const titleEl = el("title");
+      titleEl.textContent = `${zl.zone.zone_id} · ${zl.zone.name}${zl.zone.level ? ' · ' + zl.zone.level : ''}`;
+      zoneLabel.appendChild(titleEl);
       svg.appendChild(zoneLabel);
     }
   }
@@ -232,18 +268,33 @@ export function renderSchematic(svg, graph, options = {}) {
   const edgeLayer = el("g", { class: "edge-layer" });
   svg.appendChild(edgeLayer);
 
+  // Merge declared + inferred connectivity. Inferred edges only render when
+  // the graph signaled inference_active (sparse declared connectivity), or
+  // when the consumer passes options.showInferred = true.
+  const allEdges = (graph.connectivity || []).map(c => ({ ...c, _inferred: false }));
+  const showInferred = options.showInferred ?? graph.inference_active ?? false;
+  if (showInferred && Array.isArray(graph.inferred_connectivity)) {
+    for (const c of graph.inferred_connectivity) allEdges.push(c);
+  }
+
   const edgeIndex = new Map(); // edgeId -> { groupEl, pathEl }
-  for (const c of graph.connectivity || []) {
+  for (const c of allEdges) {
     const a = assetPos.get(c.source_asset_id);
     const b = assetPos.get(c.target_asset_id);
     if (!a || !b) continue;
-    const edgeId = `${c.source_asset_id}|${c.target_asset_id}`;
-    const group = el("g", { class: "edge-group", "data-edge": edgeId });
+    const edgeId = `${c.source_asset_id}|${c.target_asset_id}|${c.protocol}|${c.port}`;
+    const inferredCls = c._inferred ? " is-inferred" : "";
+    const group = el("g", { class: `edge-group${inferredCls}`, "data-edge": edgeId });
+    if (c._reason) {
+      const t = el("title");
+      t.textContent = `${c._inferred ? '[inferred] ' : ''}${c._reason || ''}\n${c.source_asset_id} → ${c.target_asset_id} · ${c.protocol}/${c.port}`;
+      group.appendChild(t);
+    }
     const trustClass = c.trust_level === "low" ? "is-untrusted" :
                        c.trust_level === "medium" ? "is-medium" : "";
     const d = orthogonalPath(a, b);
     const path = el("path", {
-      class: `edge-line ${trustClass}`,
+      class: `edge-line ${trustClass}${inferredCls}`,
       d,
       "marker-end":
         c.trust_level === "low" ? "url(#arrow-warn)" :
@@ -252,15 +303,18 @@ export function renderSchematic(svg, graph, options = {}) {
     });
     group.appendChild(path);
 
-    // Edge label rendered at midpoint
-    const mid = midPointOnPath(a, b);
-    const label = el("text", {
-      class: "edge-label",
-      x: mid.x, y: mid.y - 4,
-      "text-anchor": "middle",
-    });
-    label.textContent = PROTO_LABEL[c.protocol] || c.protocol;
-    group.appendChild(label);
+    // Edge label rendered at midpoint — skip for inferred edges to keep the
+    // diagram readable when many fan-out conduits overlap.
+    if (!c._inferred) {
+      const mid = midPointOnPath(a, b);
+      const label = el("text", {
+        class: "edge-label",
+        x: mid.x, y: mid.y - 4,
+        "text-anchor": "middle",
+      });
+      label.textContent = PROTO_LABEL[c.protocol] || c.protocol;
+      group.appendChild(label);
+    }
 
     edgeLayer.appendChild(group);
     edgeIndex.set(edgeId, { group, path });
@@ -435,10 +489,140 @@ export function renderSchematic(svg, graph, options = {}) {
     if (selectedAssetId) select(selectedAssetId);
   });
 
+  // ── Blast-radius overlay ─────────────────────────────────────────────
+  let blastOverlay = null;
+
+  function clearBlastRadius() {
+    if (blastOverlay) {
+      blastOverlay.remove();
+      blastOverlay = null;
+    }
+    svg.classList.remove("blast-active");
+  }
+
+  function showBlastRadius(result, originAssetId) {
+    clearBlastRadius();
+    const origin = assetPos.get(originAssetId);
+    if (!origin) return;
+    svg.classList.add("blast-active");
+    const cx = origin.x + origin.w / 2;
+    const cy = origin.y + origin.h / 2;
+
+    const overlay = el("g", { class: "blast-overlay" });
+    blastOverlay = overlay;
+
+    // Compute distances from origin to each impacted asset (graph-coord)
+    const impacted = (result.impacted_assets || []).map((a) => {
+      const p = assetPos.get(a.asset_id);
+      if (!p) return null;
+      const ax = p.x + p.w / 2;
+      const ay = p.y + p.h / 2;
+      return { id: a.asset_id, dist: Math.hypot(ax - cx, ay - cy), pos: p, asset: a };
+    }).filter(Boolean);
+
+    // Three concentric rings — inner (33% percentile), mid (66%), outer (100%).
+    // Padding of +24 so the ring sits just outside the farthest card.
+    if (impacted.length > 0) {
+      const ds = impacted.map((x) => x.dist).sort((a, b) => a - b);
+      const pick = (p) => ds[Math.min(ds.length - 1, Math.floor(ds.length * p))] || 80;
+      const r3 = Math.max(pick(1.0) + 60, 140);
+      const r2 = Math.max(pick(0.66) + 40, 100);
+      const r1 = Math.max(pick(0.33) + 24, 60);
+      // Outer ring (faintest, widest)
+      overlay.appendChild(ringEl(cx, cy, r3, "blast-ring blast-ring-outer"));
+      overlay.appendChild(ringEl(cx, cy, r2, "blast-ring blast-ring-mid"));
+      overlay.appendChild(ringEl(cx, cy, r1, "blast-ring blast-ring-inner"));
+    } else {
+      // Isolated asset — just a single ring around the origin
+      overlay.appendChild(ringEl(cx, cy, 80, "blast-ring blast-ring-inner"));
+    }
+
+    // Origin crosshair: target reticle on the compromised asset
+    overlay.appendChild(el("circle", {
+      cx, cy, r: 18,
+      class: "blast-origin-ring",
+    }));
+    overlay.appendChild(el("line", {
+      x1: cx - 26, y1: cy, x2: cx + 26, y2: cy,
+      class: "blast-crosshair",
+    }));
+    overlay.appendChild(el("line", {
+      x1: cx, y1: cy - 26, x2: cx, y2: cy + 26,
+      class: "blast-crosshair",
+    }));
+
+    // Highlight every reachable asset
+    for (const im of impacted) {
+      overlay.appendChild(el("rect", {
+        x: im.pos.x - 4, y: im.pos.y - 4,
+        width: im.pos.w + 8, height: im.pos.h + 8,
+        rx: 9, ry: 9,
+        class: "blast-asset-hit",
+      }));
+    }
+
+    // Highlight attack-path edges in red, on top of the regular edges
+    const drawn = new Set();
+    for (const path of (result.attack_paths || [])) {
+      const hops = path.path || path.hops || [];
+      for (let i = 0; i < hops.length - 1; i++) {
+        const aid = hops[i].asset_id || hops[i];
+        const bid = hops[i + 1].asset_id || hops[i + 1];
+        const k = `${aid}|${bid}`;
+        if (drawn.has(k)) continue;
+        drawn.add(k);
+        const a = assetPos.get(aid);
+        const b = assetPos.get(bid);
+        if (!a || !b) continue;
+        overlay.appendChild(el("path", {
+          d: orthogonalPath(a, b),
+          class: "blast-path-edge",
+        }));
+      }
+    }
+
+    // Severity / score badge floating above the origin
+    const sev = String(result.severity_label || "low").toLowerCase();
+    const reach = impacted.length;
+    const risk = Math.round(result.risk_score || 0);
+    const badge = el("g", { class: "blast-badge" });
+    const badgeW = 200, badgeH = 40;
+    badge.appendChild(el("rect", {
+      x: cx - badgeW / 2, y: cy - 96,
+      width: badgeW, height: badgeH,
+      rx: 6, ry: 6,
+      class: `blast-badge-rect blast-badge-${sev}`,
+    }));
+    const t1 = el("text", {
+      x: cx, y: cy - 80,
+      "text-anchor": "middle",
+      class: "blast-badge-sev",
+    });
+    t1.textContent = `BLAST RADIUS · ${sev.toUpperCase()}`;
+    const t2 = el("text", {
+      x: cx, y: cy - 65,
+      "text-anchor": "middle",
+      class: "blast-badge-meta",
+    });
+    t2.textContent = `${reach} reachable · risk ${risk}/100`;
+    badge.appendChild(t1);
+    badge.appendChild(t2);
+    overlay.appendChild(badge);
+
+    // Append last so it draws on top of cards + edges
+    svg.appendChild(overlay);
+  }
+
+  function ringEl(cx, cy, r, cls) {
+    return el("circle", { cx, cy, r, class: cls });
+  }
+
   return {
     select,
     reset: () => { selectedAssetId && select(selectedAssetId); },
     selectedId: () => selectedAssetId,
+    showBlastRadius,
+    clearBlastRadius,
   };
 }
 
@@ -536,4 +720,14 @@ function midPointOnPath(a, b) {
 function truncate(s, n) {
   if (!s) return "";
   return s.length <= n ? s : s.slice(0, n - 1) + "…";
+}
+
+// Approximate "truncate to pixel width" — uses a per-char advance estimate
+// for the ~12px JetBrains Mono / system stack used for zone labels. Good
+// enough to prevent cross-zone overflow without measuring text in the DOM.
+function truncateToFit(s, pxWidth, fontPx = 12) {
+  if (!s) return "";
+  const approxCharW = fontPx * 0.62;
+  const maxChars = Math.max(4, Math.floor(pxWidth / approxCharW));
+  return s.length <= maxChars ? s : s.slice(0, Math.max(1, maxChars - 1)) + "…";
 }

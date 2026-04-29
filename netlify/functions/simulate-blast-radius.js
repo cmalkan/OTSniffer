@@ -8,7 +8,8 @@ exports.handler = async (event) => {
 
   try {
     const req = JSON.parse(event.body || '{}');
-    const data = loadPlantData();
+    const plantKey = (event.queryStringParameters && event.queryStringParameters.plant) || req.plant;
+    const data = loadPlantData(plantKey);
     const indexes = indexPlantData(data);
 
     const result = simulateBlastRadius(data, indexes, {

@@ -26,7 +26,7 @@ const q = (path) => {
 
 export const api = {
   simulateBlastRadius: (payload) =>
-    callJson('/api/simulate/blast-radius', {
+    callJson(q('/api/simulate/blast-radius'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -40,4 +40,5 @@ export const api = {
   graph:          () => callJson(q('/api/graph')),
   posture:        () => callJson(q('/api/posture')),
   plants:         () => callJson('/api/plants'),
+  deletePlant:    (key) => callJson(`/api/onboarding/plant/${encodeURIComponent(key)}`, { method: 'DELETE' }),
 };

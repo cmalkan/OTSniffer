@@ -6,6 +6,7 @@ import { scanSecrets } from "./scanners/secrets.mjs";
 import { scanSupplyChain } from "./scanners/supply-chain.mjs";
 import { scanExposure } from "./scanners/exposure.mjs";
 import { scanMeshGap } from "./scanners/mesh-gap.mjs";
+import { scanAdvisories } from "./scanners/advisories.mjs";
 import { mergeFindings } from "./merge.mjs";
 import { buildReport } from "./report.mjs";
 
@@ -29,6 +30,11 @@ Commands:
                       Static graph analysis for IEC 62443 zone-isolation violations
                       (safety controller reachable from non-PLC, high-crit PLC
                       reachable from two-or-more levels above)
+
+  scan:advisories     --plant <plant.json> --out <findings.json> [--feed <path>]
+                      Match plant SBOM (vendor + model) against CISA ICS-CERT
+                      advisories. Tags KEV-listed CVEs, grades exploitability,
+                      and emits findings sorted KEV-first.
 
   merge               --plant <plant.json> --findings <findings.json> --out <enriched.json>
                       Merge normalized findings into a plant fixture
@@ -88,6 +94,35 @@ async function main() {
       if (!args.plant || !args.out) throw new Error("--plant and --out required");
       const findings = await scanMeshGap({ plantPath: args.plant });
       return writeFindings(findings, args.out);
+    }
+    case "scan:advisories": {
+      if (!args.plant || !args.out) throw new Error("--plant and --out required");
+      const result = await scanAdvisories({ plant: args.plant, feed: args.feed });
+      const s = result.summary;
+      console.error(
+        `# advisories: ${s.advisories_loaded} loaded, ${s.advisories_matched} matched | ` +
+        `assets: ${s.assets_matched}/${s.assets_total} matched, ${s.assets_with_vendor}/${s.assets_total} with vendor | ` +
+        `KEV hits: ${s.kev_hits}` +
+        (s.vendor_unknown.length ? ` | vendor_unknown: ${s.vendor_unknown.slice(0,5).join(", ")}` : "")
+      );
+      if (s.vendors_recognized_no_match && s.vendors_recognized_no_match.length) {
+        console.error(`# feed-coverage gap (recognized but 0 advisories): ${s.vendors_recognized_no_match.join(", ")}`);
+      }
+      // When --backfill is set, rewrite the plant file with canonical vendor/model patches.
+      if (args.backfill && Array.isArray(result.asset_patches) && result.asset_patches.length) {
+        const plant = JSON.parse(await readFile(args.plant, "utf8"));
+        const byId = new Map(result.asset_patches.map(p => [p.asset_id, p]));
+        let patched = 0;
+        for (const a of plant.assets || []) {
+          const p = byId.get(a.asset_id);
+          if (!p) continue;
+          if (!a.vendor && p.vendor) { a.vendor = p.vendor; patched++; }
+          if (!a.model && p.model) a.model = p.model;
+        }
+        await writeFile(args.plant, JSON.stringify(plant, null, 2));
+        console.error(`# backfilled vendor/model on ${patched} asset rows in ${args.plant}`);
+      }
+      return writeFindings(result.findings, args.out);
     }
     case "report": {
       if (!args.plant || !args.out) throw new Error("--plant and --out required");

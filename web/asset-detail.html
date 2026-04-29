@@ -87,21 +87,33 @@
       </ul>
 
       <div class="section-head" data-reveal="4" style="margin-top:48px">
-        <h2 class="section-title" data-tag="03">Simulate Compromise</h2>
-        <span class="section-meta">if this asset is breached, where does it spread?</span>
+        <h2 class="section-title" data-tag="03">Blast Radius &amp; Compromise Impact</h2>
+        <span class="section-meta">what an attacker can do if this asset is breached — independent of CVE coverage</span>
       </div>
-      <section class="actions" data-reveal="5">
-        <div class="action-card is-priority">
-          <div class="step">Run simulation</div>
-          <div class="heading">Trace lateral reach from this asset</div>
-          <div class="body">Simulates compromise of this asset and traces conduit-permitted lateral movement paths across zone boundaries. Result is bounded by the connectivity graph and trust levels declared in the plant fixture.</div>
-          <button class="btn" id="simBtn" style="margin-top: 4px">Run blast-radius trace</button>
+      <section class="impact-panel" data-reveal="5" id="impactPanel">
+        <div class="impact-summary" id="impactSummary">Computing impact…</div>
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-card-head">Operational impact of compromise</div>
+            <div class="impact-card-body" id="impactNarrative">—</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-head">Reachable assets <span class="impact-count" id="reachCount">—</span></div>
+            <div class="impact-card-body impact-list" id="reachList">—</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-head">Impacted business processes <span class="impact-count" id="procCount">—</span></div>
+            <div class="impact-card-body impact-list" id="procImpactList">—</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-head">Top attack paths <span class="impact-count" id="pathCount">—</span></div>
+            <div class="impact-card-body impact-list" id="pathList">—</div>
+          </div>
         </div>
-        <div class="action-card" id="simResult">
-          <div class="step">Output</div>
-          <div class="heading">Awaiting trace</div>
-          <div class="body">Press the button at left to run the simulation. Results will appear here.</div>
-          <div class="meta">Source: <code>POST /api/simulate/blast-radius</code></div>
+        <div class="impact-foot">
+          <button class="btn-secondary" id="simBtn">Refresh trace</button>
+          <a class="btn-secondary" id="viewOnTopologyLink" href="#" style="text-decoration:none">View blast radius on topology →</a>
+          <span class="impact-meta">Source: <code>POST /api/simulate/blast-radius</code> · trace bounded by connectivity graph + zone-trust + criticality.</span>
         </div>
       </section>
     </div>
@@ -129,6 +141,7 @@
 <script type="module">
 import { api } from '/js/api.js';
 import { renderPlantTabs } from '/js/plant-tabs.js';
+import { inferAssetFunction, inferCompromiseImpact } from '/js/asset-function.js';
 renderPlantTabs(document.querySelector('[data-plant-tabs]'));
 
 const $ = (id) => document.getElementById(id);
@@ -163,6 +176,8 @@ function loadAsset(assetId) {
   currentAssetId = assetId;
   const a = graph.assets.find(x => x.asset_id === assetId);
   if (!a) return;
+  const topoLink = $('viewOnTopologyLink');
+  if (topoLink) topoLink.href = `/network-graph.html?focus=${encodeURIComponent(assetId)}`;
 
   // Title + subtitle
   $('assetTitle').innerHTML = `<em>${escape(a.name)}</em>`;
@@ -291,51 +306,96 @@ function loadAsset(assetId) {
     : procs.map(p => `<div class="kv"><span class="k">${escape(p.name)}</span><span class="v ${p.criticality >= 9 ? 'crit' : 'med'}">crit ${p.criticality}</span></div>`).join('');
   $('procTag').textContent = `${procs.length} processes`;
 
-  // Reset sim card
-  $('simResult').innerHTML = `
-    <div class="step">Output</div>
-    <div class="heading">Awaiting trace</div>
-    <div class="body">Press the button at left to run the simulation. Results will appear here.</div>
-    <div class="meta">Source: <code>POST /api/simulate/blast-radius</code></div>`;
+  // Trigger an automatic blast-radius trace for this asset.
+  runSim();
 }
 
 async function runSim() {
   if (!currentAssetId) return;
-  $('simResult').innerHTML = `
-    <div class="step">Running…</div>
-    <div class="heading">Tracing lateral reach</div>
-    <div class="body">Computing reachability across the connectivity graph with conduit trust levels and zone-barrier filtering.</div>
-    <div class="meta">…</div>`;
+  $('impactSummary').textContent = 'Tracing lateral reach across connectivity graph…';
+  $('impactNarrative').textContent = '—';
+  $('reachList').textContent = '—';
+  $('procImpactList').textContent = '—';
+  $('pathList').textContent = '—';
+  ['reachCount','procCount','pathCount'].forEach(id => $(id).textContent = '—');
+
+  const a = graph.assets.find(x => x.asset_id === currentAssetId);
+  const z = graph.zones.find(zz => zz.zone_id === a?.zone_id);
+  const fnText = a?.essential_function || inferAssetFunction(a);
+  const impactNarrative = inferCompromiseImpact(a, z);
+
+  let result;
   try {
-    const result = await api.simulateBlastRadius({
+    result = await api.simulateBlastRadius({
       start_asset_id: currentAssetId,
       max_depth: 6,
       include_vulnerabilities: true,
       include_zone_barriers: true,
       mode: 'analyst',
     });
-    const zones = new Set((result.impacted_assets || []).map(a => a.zone_id));
-    $('simResult').innerHTML = `
-      <div class="step">Result</div>
-      <div class="heading">${result.impacted_assets?.length || 0} assets reached · risk ${Math.round(result.risk_score || 0)}/100</div>
-      <div class="body">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.7;color:var(--ink-3)">
-          severity:&nbsp;<strong style="color:${sevColor(result.severity_label)}">${escape(result.severity_label)}</strong><br/>
-          impacted&nbsp;assets:&nbsp;<strong>${result.impacted_assets?.length || 0}</strong><br/>
-          impacted&nbsp;zones:&nbsp;<strong>${zones.size}</strong><br/>
-          impacted&nbsp;processes:&nbsp;<strong>${result.impacted_process_functions?.length || result.total_impacted_processes || 0}</strong><br/>
-          attack&nbsp;paths:&nbsp;<strong>${result.attack_paths?.length || 0}</strong>
-        </div>
-        ${result.analyst_summary ? `<div style="margin-top:12px; font-size:13px; color:var(--ink-2); line-height:1.55">${escape(result.analyst_summary)}</div>` : ''}
-      </div>
-      <div class="meta">Source: <code>POST /api/simulate/blast-radius</code> · trace at ${new Date().toLocaleTimeString()}</div>`;
   } catch (err) {
-    $('simResult').innerHTML = `
-      <div class="step">Error</div>
-      <div class="heading">Trace failed</div>
-      <div class="body">${escape(err.message)}</div>
-      <div class="meta">Try a different asset or check the dev-server logs.</div>`;
+    $('impactSummary').innerHTML = `
+      <span class="impact-sev impact-sev-medium">Trace unavailable</span>
+      ${escape(err.message)}`;
+    $('impactNarrative').textContent = `${fnText}\n\n${impactNarrative}`;
+    return;
   }
+
+  // Top-line summary
+  const sev = result.severity_label || 'low';
+  const reachCount = (result.impacted_assets || []).length;
+  const zonesReached = new Set((result.impacted_assets || []).map(x => x.zone_id)).size;
+  const procImpacted = (result.impacted_process_functions || result.total_impacted_processes || []);
+  const procCount = Array.isArray(procImpacted) ? procImpacted.length : Number(procImpacted) || 0;
+  const pathCount = (result.attack_paths || []).length;
+  $('impactSummary').innerHTML = `
+    <span class="impact-sev impact-sev-${sev}">${escape(sev.toUpperCase())}</span>
+    <span class="impact-headline">Risk score <strong>${Math.round(result.risk_score || 0)}/100</strong> · ${reachCount} reachable asset${reachCount === 1 ? '' : 's'} across ${zonesReached} zone${zonesReached === 1 ? '' : 's'}</span>
+  `;
+
+  // Operational impact panel — combines function + compromise narrative + analyst_summary
+  $('impactNarrative').innerHTML = `
+    <div class="impact-fn"><strong>Function:</strong> ${escape(fnText)}</div>
+    <div class="impact-narr">${escape(impactNarrative)}</div>
+    ${result.analyst_summary ? `<div class="impact-analyst">${escape(result.analyst_summary)}</div>` : ''}
+  `;
+
+  // Reachable assets — top 12 by criticality if present, else first 12
+  const reach = (result.impacted_assets || []).slice().sort((x, y) => (y.criticality_score || 0) - (x.criticality_score || 0));
+  $('reachCount').textContent = `${reach.length}`;
+  $('reachList').innerHTML = reach.length === 0
+    ? '<div class="impact-empty">Asset is isolated — no lateral reach declared in the connectivity graph.</div>'
+    : reach.slice(0, 12).map(x => {
+        const zz = graph.zones.find(z => z.zone_id === x.zone_id);
+        return `<div class="impact-row">
+          <a class="impact-link" href="/asset-detail.html?id=${encodeURIComponent(x.asset_id)}">${escape(x.name || x.asset_id)}</a>
+          <span class="impact-tag">${escape(zz ? zz.level : '')}</span>
+          <span class="impact-crit">crit ${x.criticality_score ?? '—'}</span>
+        </div>`;
+      }).join('') + (reach.length > 12 ? `<div class="impact-more">+ ${reach.length - 12} more</div>` : '');
+
+  // Impacted processes — list names + criticality
+  const procs = Array.isArray(result.impacted_process_functions) ? result.impacted_process_functions : [];
+  $('procCount').textContent = `${procs.length}`;
+  $('procImpactList').innerHTML = procs.length === 0
+    ? '<div class="impact-empty">No declared business process depends on this asset (or its reachable neighbors).</div>'
+    : procs.slice(0, 8).map(p => `<div class="impact-row">
+        <span class="impact-text">${escape(p.name || p.id || '—')}</span>
+        <span class="impact-crit">crit ${p.criticality ?? '—'}</span>
+      </div>`).join('');
+
+  // Attack paths — show top 5
+  const paths = result.attack_paths || [];
+  $('pathCount').textContent = `${paths.length}`;
+  $('pathList').innerHTML = paths.length === 0
+    ? '<div class="impact-empty">No multi-hop reach path found.</div>'
+    : paths.slice(0, 5).map(p => {
+        const hops = (p.path || p.hops || []).map(h => h.asset_id || h).join(' → ');
+        return `<div class="impact-path">
+          <code>${escape(hops)}</code>
+          ${p.severity ? `<span class="impact-sev impact-sev-${p.severity}">${escape(p.severity)}</span>` : ''}
+        </div>`;
+      }).join('');
 }
 
 function sevColor(label) {

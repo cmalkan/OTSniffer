@@ -4,7 +4,9 @@
 // JSON the operator confirmed.
 
 import { setPlantKey } from '/js/api.js';
-import { inferTopologyFromLines } from '/js/topology-extract.js';
+import { inferAssetTypeFromText, inferTopologyFromLines } from '/js/topology-extract.js';
+import { tagAssetsFromPdfLines } from '/js/vendor-recognize.js';
+import { inferAssetFunction } from '/js/asset-function.js';
 
 const $ = (id) => document.getElementById(id);
 const escape = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;" }[c]));
@@ -17,7 +19,7 @@ const state = {
   drawings: [], // { url, name, size, content_type }
 };
 
-const ASSET_FIELDS  = ['asset_id', 'name', 'asset_type', 'vendor', 'model', 'firmware_version', 'ip_address', 'zone_id', 'criticality_score', 'process_tag'];
+const ASSET_FIELDS  = ['asset_id', 'name', 'asset_type', 'essential_function', 'vendor', 'model', 'firmware_version', 'ip_address', 'zone_id', 'criticality_score', 'process_tag'];
 const ZONE_FIELDS   = ['zone_id', 'name', 'level', 'description'];
 const CONN_FIELDS   = ['source_asset_id', 'target_asset_id', 'protocol', 'port', 'trust_level', 'allowed_direction'];
 const ASSET_TYPES   = ['scada-server', 'historian', 'hmi', 'engineering-workstation', 'plc', 'safety-controller', 'rtu', 'firewall', 'switch'];
@@ -27,11 +29,11 @@ const DIRECTIONS    = ['bi', 'uni'];
 // Auto-mapping aliases for column headers (case + punctuation insensitive).
 // Maps any normalized header string to its canonical asset field.
 const HEADER_ALIASES = {
-  asset_id:          ['assetid', 'id', 'tag', 'tagname', 'asset', 'assetname', 'identifier'],
-  name:              ['name', 'description', 'desc', 'label', 'asset_description', 'assetdescription', 'friendly', 'friendlyname'],
-  asset_type:        ['type', 'asset_type', 'assettype', 'category', 'class', 'kind'],
+  asset_id:          ['assetid', 'id', 'tag', 'tagname', 'asset', 'assetname', 'identifier', 'deviceid', 'node'],
+  name:              ['name', 'description', 'desc', 'label', 'assetdescription', 'friendly', 'friendlyname', 'hostname', 'servername', 'switchname', 'firewallname', 'controllername', 'stationname'],
+  asset_type:        ['type', 'assettype', 'category', 'class', 'kind', 'deviceclass'],
   vendor:            ['vendor', 'manufacturer', 'make', 'mfr', 'oem'],
-  model:             ['model', 'modelnumber', 'modelno', 'partnumber', 'partno', 'product', 'productname', 'pn'],
+  model:             ['model', 'modelnumber', 'modelno', 'partnumber', 'partno', 'product', 'productname', 'pn', 'switchmodel', 'firewallmodel', 'servermodel'],
   firmware_version:  ['firmware', 'firmwareversion', 'version', 'fw', 'rev', 'revision', 'fwversion'],
   ip_address:        ['ip', 'ipaddress', 'address', 'ipaddr'],
   zone_id:           ['zone', 'zoneid', 'subnet', 'network', 'vlan', 'segment'],
@@ -94,7 +96,7 @@ function bindBOMToolbar() {
 
 function addBOMRow(initial = {}) {
   state.bom.push({
-    asset_id: '', name: '', asset_type: 'plc',
+    asset_id: '', name: '', asset_type: 'plc', essential_function: '',
     vendor: '', model: '', firmware_version: '',
     ip_address: '', zone_id: '', criticality_score: 5, process_tag: '',
     ...initial,
@@ -103,24 +105,31 @@ function addBOMRow(initial = {}) {
 
 function renderBOM() {
   const tbody = $('bomBody');
-  tbody.innerHTML = state.bom.map((row, i) => `
-    <tr data-i="${i}">
-      <td><input data-f="asset_id" value="${escape(row.asset_id)}" placeholder="a_plc_01"></td>
+  tbody.innerHTML = state.bom.map((row, i) => {
+    const needsVendor = !!row.asset_id && !String(row.vendor || '').trim();
+    const rowClass = needsVendor ? 'needs-review' : '';
+    const reviewBadge = needsVendor ? '<span class="review-flag" title="Vendor not recognized — fill in or this asset will not match advisories">!</span>' : '';
+    const inferredFn = inferAssetFunction(row);
+    return `
+    <tr data-i="${i}" class="${rowClass}">
+      <td><input data-f="asset_id" value="${escape(row.asset_id)}" placeholder="a_plc_01">${reviewBadge}</td>
       <td><input data-f="name" value="${escape(row.name)}" placeholder="Treatment PLC"></td>
       <td>
         <select data-f="asset_type">
           ${ASSET_TYPES.map(t => `<option value="${t}" ${t === row.asset_type ? 'selected' : ''}>${t}</option>`).join('')}
         </select>
       </td>
-      <td><input data-f="vendor" value="${escape(row.vendor)}" placeholder="Rockwell Automation"></td>
-      <td><input data-f="model" value="${escape(row.model)}" placeholder="ControlLogix 1756-L75"></td>
-      <td><input data-f="firmware_version" value="${escape(row.firmware_version)}" placeholder="33.011"></td>
-      <td><input data-f="ip_address" value="${escape(row.ip_address)}" placeholder="10.40.1.11"></td>
-      <td><input data-f="zone_id" value="${escape(row.zone_id)}" placeholder="z_process"></td>
+      <td><input data-f="essential_function" value="${escape(row.essential_function)}" placeholder="${escape(inferredFn)}" title="Inferred placeholder shown — type to override"></td>
+      <td><input data-f="vendor" value="${escape(row.vendor)}" placeholder="${needsVendor ? 'needs review' : '—'}" title="${escape(row._vendor_evidence || '')}"></td>
+      <td><input data-f="model" value="${escape(row.model)}" placeholder="—"></td>
+      <td><input data-f="firmware_version" value="${escape(row.firmware_version)}" placeholder="—"></td>
+      <td><input data-f="ip_address" value="${escape(row.ip_address)}" placeholder="—"></td>
+      <td><input data-f="zone_id" value="${escape(row.zone_id)}" placeholder="—"></td>
       <td><input data-f="criticality_score" type="number" min="1" max="10" value="${row.criticality_score}"></td>
       <td><input data-f="process_tag" value="${escape(row.process_tag)}" placeholder="filtration_control"></td>
       <td class="row-action"><button title="remove" data-action="rm">×</button></td>
-    </tr>`).join('');
+    </tr>`;
+  }).join('');
   tbody.querySelectorAll('tr').forEach(tr => {
     const i = Number(tr.dataset.i);
     tr.querySelectorAll('input, select').forEach(el => {
@@ -129,6 +138,12 @@ function renderBOM() {
         let v = el.value;
         if (f === 'criticality_score') v = Number(v) || 0;
         state.bom[i][f] = v;
+        // Clear the needs-review flag once vendor is filled.
+        if (f === 'vendor') {
+          if (String(v).trim()) tr.classList.remove('needs-review');
+          else tr.classList.add('needs-review');
+          updateBomMeta();
+        }
       });
     });
     tr.querySelector('[data-action="rm"]').addEventListener('click', () => {
@@ -136,7 +151,19 @@ function renderBOM() {
       renderBOM();
     });
   });
-  $('bomMeta').textContent = `${state.bom.length} asset${state.bom.length === 1 ? '' : 's'}`;
+  updateBomMeta();
+}
+
+function updateBomMeta() {
+  const total = state.bom.length;
+  const needsReview = state.bom.filter(a => a.asset_id && !String(a.vendor || '').trim()).length;
+  const meta = $('bomMeta');
+  if (!meta) return;
+  if (needsReview) {
+    meta.innerHTML = `${total} asset${total === 1 ? '' : 's'} · <span class="review-count">${needsReview} need vendor review</span>`;
+  } else {
+    meta.textContent = `${total} asset${total === 1 ? '' : 's'}`;
+  }
 }
 
 // ── zone table ──────────────────────────────────────────────────────────
@@ -254,7 +281,19 @@ async function handleBOMFile(file) {
     } else if (ext === 'docx') {
       rows = await parseDOCX(file);
     } else if (ext === 'pdf') {
-      rows = await parsePDF(file);
+      const extracted = await extractAssetsFromPDF(file);
+      if (!extracted.assets.length) throw new Error('No asset-like tables extracted from the PDF. Try a CSV export or a more inventory-like document.');
+      state.bom = extracted.assets;
+      renderBOM();
+      const vendorNote = extracted.vendorSummary
+        ? ` Vendor recognition: ${extracted.vendorSummary.tagged}/${extracted.vendorSummary.total} tagged (${Math.round(extracted.vendorSummary.coverage * 100)}%).`
+        : '';
+      setStatus(
+        'bomStatus',
+        `Extracted ${extracted.assets.length} asset rows from ${file.name} across ${extracted.tableCount} PDF table candidates. Mapped columns: ${extracted.mappedColumns.join(', ') || 'none'}.${vendorNote} Review and correct any wrong values.`,
+        false
+      );
+      return;
     } else {
       throw new Error(`Unsupported file type .${ext}. Use .csv, .docx, or .pdf.`);
     }
@@ -347,6 +386,66 @@ async function parsePDF(file) {
   if (allTableRows.length === 0) return [];
   allTableRows.sort((a, b) => b.length - a.length);
   return allTableRows[0];
+}
+
+async function extractAssetsFromPDF(file) {
+  if (!window.pdfjsLib) await loadPDFjs();
+  const pdfjsLib = window.pdfjsLib;
+  const buf = await file.arrayBuffer();
+  const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+
+  const pages = [];
+  const allTextLines = [];
+  for (let p = 1; p <= pdf.numPages; p++) {
+    const page = await pdf.getPage(p);
+    const content = await page.getTextContent();
+    const items = content.items.map(it => ({ str: it.str, x: it.transform[4], y: it.transform[5] }));
+    pages.push(positionedToLines(items));
+  }
+
+  const boilerplate = detectBoilerplate(pages);
+  const cleaned = pages.map(lines => lines.filter(line => !boilerplate.has(normLineText(line.text))));
+  for (const page of cleaned) {
+    for (const line of page) {
+      if (line.text) allTextLines.push(line.text);
+    }
+  }
+  const tableRows = [];
+  for (const lines of cleaned) {
+    for (const t of detectTables(lines)) {
+      tableRows.push([t.headers, ...t.rows]);
+    }
+  }
+
+  const candidateAssets = [];
+  const mappedColumns = new Set();
+  for (const rows of tableRows) {
+    const mapped = mapRowsToAssets(rows);
+    const filtered = mapped.assets.filter(isLikelyAssetRow);
+    if (!filtered.length) continue;
+    const score = scoreAssetTable(rows[0], filtered);
+    if (score < 2) continue;
+    mapped.mappedColumns.forEach(col => mappedColumns.add(col));
+    candidateAssets.push(...filtered);
+  }
+
+  const topology = inferTopologyFromLines(allTextLines, candidateAssets);
+  const zoneByAssetId = new Map(topology.matchedAssets.map(match => [match.asset_id, match.zone_id]));
+  for (const asset of candidateAssets) {
+    if (!asset.zone_id && zoneByAssetId.has(asset.asset_id)) asset.zone_id = zoneByAssetId.get(asset.asset_id);
+  }
+
+  const mergedAssets = [...candidateAssets, ...topology.suggestedAssets.filter(isLikelyAssetRow)];
+  const deduped = sortAssetsForReview(dedupeAssets(mergedAssets));
+
+  const tagged = tagAssetsFromPdfLines(allTextLines, deduped, topology.zones || []);
+
+  return {
+    assets: tagged.assets,
+    mappedColumns: [...mappedColumns],
+    tableCount: tableRows.length,
+    vendorSummary: tagged.summary,
+  };
 }
 
 function positionedToLines(items) {
@@ -496,7 +595,8 @@ async function loadPDFjs() {
 function mapRowsToAssets(rows) {
   if (rows.length < 2) {
     // Single row — treat all as one asset, unmapped
-    const single = { asset_id: '', name: rows[0]?.join(' ') || '', vendor: '', model: '', firmware_version: '', ip_address: '', zone_id: '', criticality_score: 5, process_tag: '', asset_type: 'plc' };
+    const singleName = rows[0]?.join(' ') || '';
+    const single = { asset_id: '', name: singleName, vendor: '', model: '', firmware_version: '', ip_address: '', zone_id: '', criticality_score: 5, process_tag: '', asset_type: inferAssetTypeFromText(singleName, 'scada-server') };
     return { assets: [single], mappedColumns: [] };
   }
   const headers = rows[0].map(h => normalizeHeader(h));
@@ -504,7 +604,7 @@ function mapRowsToAssets(rows) {
   const mappedColumns = [];
   for (const [field, aliases] of Object.entries(HEADER_ALIASES)) {
     for (let i = 0; i < headers.length; i++) {
-      if (aliases.includes(headers[i])) {
+      if (aliases.some(alias => headers[i].includes(alias))) {
         if (colMap[field] === undefined) {
           colMap[field] = i;
           mappedColumns.push(`${rows[0][i]} → ${field}`);
@@ -517,7 +617,7 @@ function mapRowsToAssets(rows) {
   for (let r = 1; r < rows.length; r++) {
     const row = rows[r];
     const a = {
-      asset_id: '', name: '', asset_type: 'plc',
+      asset_id: '', name: '', asset_type: '',
       vendor: '', model: '', firmware_version: '',
       ip_address: '', zone_id: '', criticality_score: 5, process_tag: '',
     };
@@ -528,6 +628,7 @@ function mapRowsToAssets(rows) {
     }
     if (!a.asset_id) a.asset_id = `a_${slugify(a.name || a.vendor || `asset_${r}`).slice(0, 24)}`;
     if (!a.name && a.vendor && a.model) a.name = `${a.vendor} ${a.model}`;
+    if (!a.asset_type) a.asset_type = inferAssetTypeFromText([a.name, a.vendor, a.model, a.process_tag, ...row].filter(Boolean).join(' '), 'scada-server');
     assets.push(a);
   }
   return { assets, mappedColumns };
@@ -535,6 +636,61 @@ function mapRowsToAssets(rows) {
 
 function normalizeHeader(h) {
   return String(h || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+const NON_ASSET_TEXT_RE = /\b(exclude path|skip registry|write protection|file operations|registry protection|ignore path|protection rules?)\b/i;
+const ASSET_SIGNAL_RE = /\b(server|workstation|switch|firewall|controller|plc|hmi|rtu|nas|vm|domain controller|radius|histori|thin client|foxboro|fortigate|connexium)\b/i;
+
+function isLikelyAssetRow(asset) {
+  const text = [asset.asset_id, asset.name, asset.vendor, asset.model, asset.process_tag].filter(Boolean).join(' ');
+  if (!text.trim()) return false;
+  if (NON_ASSET_TEXT_RE.test(text)) return false;
+  return ASSET_SIGNAL_RE.test(text) || !!asset.ip_address;
+}
+
+function scoreAssetTable(headers, assets) {
+  const headerText = (headers || []).join(' ');
+  if (NON_ASSET_TEXT_RE.test(headerText)) return -5;
+  let score = 0;
+  if (ASSET_SIGNAL_RE.test(headerText)) score += 2;
+  const names = new Set(assets.map(asset => `${asset.name}|${asset.model}`));
+  score += Math.min(4, names.size / 2);
+  const types = new Set(assets.map(asset => asset.asset_type).filter(Boolean));
+  score += Math.min(3, types.size);
+  if (assets.some(asset => asset.name)) score += 1;
+  return score;
+}
+
+function dedupeAssets(assets) {
+  const seen = new Set();
+  const out = [];
+  for (const asset of assets) {
+    const key = `${String(asset.name || '').trim().toLowerCase()}|${String(asset.model || '').trim().toLowerCase()}|${asset.asset_type}|${String(asset.zone_id || '').trim().toLowerCase()}`;
+    if (!key.replace(/\|/g, '').trim() || seen.has(key)) continue;
+    seen.add(key);
+    out.push(asset);
+  }
+  return out;
+}
+
+function sortAssetsForReview(assets) {
+  const rank = {
+    'scada-server': 0,
+    'historian': 1,
+    'engineering-workstation': 2,
+    'hmi': 3,
+    'plc': 4,
+    'safety-controller': 5,
+    'rtu': 6,
+    'firewall': 7,
+    'switch': 8,
+  };
+  return [...assets].sort((a, b) => {
+    const ra = rank[a.asset_type] ?? 99;
+    const rb = rank[b.asset_type] ?? 99;
+    if (ra !== rb) return ra - rb;
+    return String(a.name || a.asset_id || '').localeCompare(String(b.name || b.asset_id || ''));
+  });
 }
 
 // ── drawing uploader ────────────────────────────────────────────────────
@@ -554,12 +710,13 @@ async function handleDrawing(file) {
   try {
     if (file.size > 25 * 1024 * 1024) throw new Error('Drawing exceeds 25 MB cap.');
     const buf = await file.arrayBuffer();
+    const uploadBytes = new Uint8Array(buf.slice(0));
     let inferred = null;
     if (/\.pdf$/i.test(file.name)) {
       setStatus('drawingStatus', `Parsing ${file.name} for zones and conduits before upload...`, false);
-      inferred = await inferTopologyFromPDF(buf);
+      inferred = await inferTopologyFromPDF(buf.slice(0));
     }
-    const b64 = bytesToBase64(new Uint8Array(buf));
+    const b64 = bytesToBase64(uploadBytes);
     const res = await fetch('/api/onboarding/drawing', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -571,9 +728,11 @@ async function handleDrawing(file) {
     const mergeSummary = inferred ? mergeInferredTopology(inferred) : null;
     if (mergeSummary?.applied) {
       renderDrawings();
+      const vs = mergeSummary.vendorSummary;
+      const vendorMsg = vs ? ` Vendor recognition: ${vs.tagged}/${vs.total} (${Math.round(vs.coverage * 100)}%) tagged.` : '';
       setStatus(
         'drawingStatus',
-        `Uploaded ${file.name}. Inferred ${mergeSummary.zones} zones, ${mergeSummary.assets} assets, and ${mergeSummary.conduits} conduits. Review Steps 2-4 before saving.`,
+        `Uploaded ${file.name}. Inferred ${mergeSummary.zones} zones, ${mergeSummary.assets} assets, and ${mergeSummary.conduits} conduits.${vendorMsg} Review Steps 2-4 before saving.`,
         false
       );
       return;
@@ -627,7 +786,15 @@ async function inferTopologyFromPDF(buffer) {
     .map(line => line.text)
     .filter(Boolean);
 
-  return inferTopologyFromLines(lines, state.bom);
+  const topology = inferTopologyFromLines(lines, state.bom);
+  // Tag both suggested and matched assets with vendor recognition from the
+  // PDF's full text, using the zone context to disambiguate.
+  const allInferredAssets = [...topology.suggestedAssets];
+  const tagged = tagAssetsFromPdfLines(lines, allInferredAssets, topology.zones || []);
+  topology.suggestedAssets = tagged.assets;
+  topology._vendorSummary = tagged.summary;
+  topology._extractedLines = lines;
+  return topology;
 }
 
 function mergeInferredTopology(topology) {
@@ -680,6 +847,13 @@ function mergeInferredTopology(topology) {
     addedConduits += 1;
   }
 
+  // Re-run vendor recognition over the full BOM with the drawing's lines,
+  // so existing rows that lacked a vendor get tagged from this PDF's context.
+  if (topology._extractedLines && topology._extractedLines.length) {
+    const retagged = tagAssetsFromPdfLines(topology._extractedLines, state.bom, state.zones);
+    state.bom = retagged.assets;
+  }
+
   renderBOM();
   renderZones();
   renderConn();
@@ -689,6 +863,7 @@ function mergeInferredTopology(topology) {
     zones: addedZones,
     assets: addedAssets + topology.matchedAssets.length,
     conduits: addedConduits,
+    vendorSummary: topology._vendorSummary,
   };
 }
 
@@ -762,7 +937,7 @@ function buildPlant() {
   };
 }
 
-async function save() {
+async function save({ confirmOverwrite = false } = {}) {
   const plant = buildPlant();
   if (!plant.plant_name || plant.plant_name === 'Untitled Plant') {
     setStatus('saveStatus', 'Plant name is required.', true);
@@ -772,6 +947,21 @@ async function save() {
     setStatus('saveStatus', 'At least one asset is required.', true);
     return;
   }
+  // Warn before save if any extracted asset still lacks a vendor — the
+  // operator may want to fill them in first, but can proceed.
+  const emptyVendor = state.bom.filter(a => a.asset_id && !String(a.vendor || '').trim()).length;
+  if (emptyVendor && !confirmOverwrite) {
+    const proceed = confirm(
+      `${emptyVendor} of ${state.bom.length} assets have no vendor recognized. ` +
+      `These will save as-is and will not match any CISA advisories until you fill them in.\n\n` +
+      `Save anyway?`
+    );
+    if (!proceed) {
+      setStatus('saveStatus', `Save cancelled. ${emptyVendor} asset rows highlighted for review.`, true);
+      return;
+    }
+  }
+  if (confirmOverwrite) plant.confirm_overwrite = true;
   setStatus('saveStatus', `Saving plant fixture (${plant.assets.length} assets, ${plant.zones.length} zones, ${plant.connectivity.length} conduits)…`, false);
   try {
     const res = await fetch('/api/onboarding/save', {
@@ -779,10 +969,36 @@ async function save() {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(plant),
     });
+    if (res.status === 409) {
+      const conflict = await res.json();
+      if (conflict.builtin) {
+        setStatus('saveStatus', conflict.message, true);
+        return;
+      }
+      const meta = conflict.existing || {};
+      const proceed = confirm(
+        `Plant key "${plant.onboarding_key}" already exists.\n\n` +
+        `Existing: ${meta.plant_name || '(unknown)'}, ${meta.asset_count || 0} assets` +
+        (meta.saved_at ? ` (saved ${meta.saved_at.slice(0, 10)})` : '') + `.\n\n` +
+        `Overwrite? Manual edits to vendor/model on the existing plant will be lost.`
+      );
+      if (!proceed) {
+        setStatus('saveStatus', `Save cancelled. Change the plant key to keep both, or click Save again to overwrite.`, true);
+        return;
+      }
+      return save({ confirmOverwrite: true });
+    }
     const json = await res.json();
     if (!json.ok) throw new Error(json.error || `HTTP ${res.status}`);
+    const adv = json.advisories;
+    const advMsg = adv
+      ? ` Advisories matched: ${adv.advisories_matched} (${adv.kev_hits} KEV) across ${adv.assets_matched}/${adv.assets_total} assets.`
+      : '';
+    const gapMsg = (adv && adv.vendors_recognized_no_match && adv.vendors_recognized_no_match.length)
+      ? ` Vendors with no feed coverage: ${adv.vendors_recognized_no_match.slice(0, 5).join(', ')} (CISA ICS-CERT scope gap — not all OT/IT vendors are covered).`
+      : '';
     setStatus('saveStatus',
-      `Saved! Plant key "${json.key}" with ${json.assets} assets. Wrote ${json.paths.demo} and ${json.paths.enriched}. Switching to that plant…`,
+      `Saved! Plant key "${json.key}" with ${json.assets} assets.${advMsg}${gapMsg} Wrote ${json.paths.demo} and ${json.paths.enriched}. Switching to that plant…`,
       false);
     setPlantKey(json.key);
     setTimeout(() => { location.href = '/index.html'; }, 1200);
