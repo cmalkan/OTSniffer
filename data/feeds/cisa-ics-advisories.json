@@ -1,6 +1,29 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-118-01",
+      "title": "NSA GRASSMARLIN",
+      "date": "2026-04-28",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to disclose sensitive information.",
+      "sectors": [
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2026-6807"
+      ],
+      "cvss_max": 5.5,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "NSA",
+          "product": "GRASSMARLIN",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-118-01"
+    },
+    {
       "advisory_id": "ICSA-26-113-01",
       "title": "Yadea T5 Electric Bicycle",
       "date": "2026-04-23",
@@ -1577,6 +1600,255 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-11"
     },
     {
+      "advisory_id": "ICSA-26-120-01",
+      "title": "ABB System 800xA, Symphony Plus IEC 61850",
+      "date": "2026-04-13",
+      "summary": "This vulnerability was privately reported relating to ABB’s implementation of the IEC 61850 communication stack for MMS client applications used in some Automation control system products. \n\nNote: IEC 61850 communication typically supports MMS and GOOSE protocols. Some ABB products support both, others only MMS (e.g. S+ Operations and PM 877). In any case, GOOSE communication is not impacted by this reported vulnerability.\n\nIf an attacker gains access to a site’s IEC 61850 network, then exploiting this vulnerability will result in a device fault (PM 877, CI850 and CI868 modules) and will require a manual restart.\n\nIf this attack is directed at a S+ Operations node running IEC 61850 connectivity, this will result in a crash in the IEC 61850 communication driver which, if continued a repeati",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-3756"
+      ],
+      "cvss_max": 6.5,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "AC800M Product line (System 800xA) CI868",
+          "version": "",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Symphony Plus SD Series CI850",
+          "version": "",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Symphony Plus MR (Melody Rack)  PM 877",
+          "version": "",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "S+ Operations",
+          "version": "",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware <=6.0.0303.0",
+          "version": "",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware <=6.1.0031.0",
+          "version": "",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware <=6.1.1004.0",
+          "version": "",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware <=6.1.1202.0",
+          "version": "",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware <=6.2.0006.0",
+          "version": "",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware 6.1.1-3",
+          "version": "",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "7.0",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "A_0",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "A_1",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "A_2.003",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "A_3.005",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "A_4.001",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "B_0.005",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "C_0",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": ">=3.10|<=3.52",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "3.53",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "3.3",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "2.3",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "2.2",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "2.1",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Firmware",
+          "version": "3.4",
+          "product_id": "CSAFPID-0025"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-01"
+    },
+    {
+      "advisory_id": "ICSA-26-120-06",
+      "title": "ABB Ability Symphony Plus Engineering",
+      "date": "2026-04-13",
+      "summary": "ABB became aware of vulnerability in the products versions listed as affected in the advisory. The ABB S+ Engineering product versions are affected by vulnerabilities in PostgreSQL version 13.11 and earlier versions. If an attacker gains access to a site’s S+ Client Server network, they could exploit such vulnerabilities by executing arbitrary code and potentially compromising the entire system.",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2023-5869",
+        "CVE-2023-39417",
+        "CVE-2024-7348",
+        "CVE-2024-0985"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.2",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.3",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.3_RU1",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.3_RU2",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.3_RU3",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.4",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.4_SP1",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.4_SP2",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Symphony Plus S+ Engineering",
+          "version": "2.4_SP2_RU1",
+          "product_id": "CSAFPID-0009"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-06"
+    },
+    {
       "advisory_id": "ICSA-26-099-01",
       "title": "Contemporary Controls BASC 20T",
       "date": "2026-04-09",
@@ -2412,6 +2684,73 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-08"
+    },
+    {
+      "advisory_id": "ICSA-26-120-05",
+      "title": "ABB AWIN Gateways",
+      "date": "2026-03-13",
+      "summary": "ABB became aware of vulnerability in the products versions listed as affected in the advisory. An update is available that resolves the reported vulnerabilities.\n\nAWIN gateways are not intended to be internet-facing.\n\nAn attacker who successfully exploited this vulnerability could take remote control of the product and reboot the device, potentially causing a denial of service. It can also reveal system specific configuration.\n\nABB requires, as noted in the User Manual, that AWIN gateways should not be exposed to the internet or any other insecure network.\n\nNote. To exploit this vulnerability the attacker needs access to the AWIN gateways. These gateways are installed on sites which often have perimeter security, and the gateways are installed behind firewalls.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-13777",
+        "CVE-2025-13778",
+        "CVE-2025-13779"
+      ],
+      "cvss_max": 8.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "AWIN GW100 rev. 2",
+          "version": "",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN",
+          "version": "GW120",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN Firmware GW100 rev.2",
+          "version": "2.0-0",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN Firmware GW100 rev.2",
+          "version": "2.0-1",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN Firmware GW100 rev.2",
+          "version": "2.1-0",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN Firmware GW120",
+          "version": "1.2-0",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN Firmware GW120",
+          "version": "1.2-1",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AWIN Firmware GW120",
+          "version": "2.0-0",
+          "product_id": "CSAFPID-0008"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-05"
     },
     {
       "advisory_id": "ICSA-26-071-01",
@@ -4361,9 +4700,9 @@
     },
     {
       "advisory_id": "ICSA-26-062-01",
-      "title": "Mitsubishi Electric MELSEC iQ-F Series EtherNet/IP module and Ethernet module",
+      "title": "Mitsubishi Electric MELSEC iQ-F Series EtherNet/IP module and Ethernet Module (Update A)",
       "date": "2026-03-03",
-      "summary": "Successful exploitation of these vulnerabilities could allow a remote attacker to cause a denial-of-service condition by continuously sending UDP packets to the affected products.",
+      "summary": "Successful exploitation of these vulnerabilities could allow a remote attacker to cause a denial-of-service condition on the affected products by continuously sending UDP packets to the products.",
       "sectors": [
         "Critical Manufacturing"
       ],
@@ -4390,7 +4729,7 @@
         {
           "vendor": "Mitsubishi Electric",
           "product": "MELSEC iQ-F Series FX5-EIP EtherNet/IP Module FX5-EIP",
-          "version": "vers:all/*",
+          "version": "<=1.000",
           "product_id": "CSAFPID-0003"
         }
       ],
@@ -7257,6 +7596,60 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-020-03"
     },
     {
+      "advisory_id": "ICSA-26-120-04",
+      "title": "ABB Ability OPTIMAX",
+      "date": "2026-01-16",
+      "summary": "ABB became aware of severe vulnerability in the products versions listed as affected in the advisory, if the optional integration with Azure Active Directory for Single-Sign On is enabled. We have not received any reports of this vulnerability being exploited.\n\nAn attacker who successfully exploits this vulnerability could bypass user authentication and potentially cause the product to:\n- Shutdown the system,\n- Modify the configuration of the system,\n- Install and run arbitrary code",
+      "sectors": [
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-14510"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Ability OPTIMAX 6.1",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability OPTIMAX 6.2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability OPTIMAX 6.3",
+          "version": "<6.3.1-251120",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability OPTIMAX 6.3",
+          "version": "6.3.1-251120",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability OPTIMAX 6.4",
+          "version": "<6.4.1-251120",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability OPTIMAX 6.4",
+          "version": "6.4.1-251120",
+          "product_id": "CSAFPID-0006"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-04"
+    },
+    {
       "advisory_id": "ICSA-26-015-01",
       "title": "AVEVA Process Optimization",
       "date": "2026-01-15",
@@ -9074,6 +9467,71 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-03"
+    },
+    {
+      "advisory_id": "ICSA-26-120-03",
+      "title": "ABB Edgenius Management Portal",
+      "date": "2025-11-20",
+      "summary": "ABB identified a critical vulnerability present in ABB Ability Edgenius starting from version 3.2.0.0. We have not received any reports of this vulnerability being exploited. \n\nAn unauthenticated attacker could exploit this vulnerability to: \n\n→\tinstall and run arbitrary code,\n\n→\tuninstall installed applications,\n\n→\tmodify the configuration of installed applications,\n\non systems running the vulnerable versions of ABB Ability Edgenius, including 3.2.0.0 through 3.2.1.1.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2025-10571"
+      ],
+      "cvss_max": 9.6,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius",
+          "version": "3.2.0.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius",
+          "version": "3.2.2.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius",
+          "version": "3.2.1.1",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-03"
+    },
+    {
+      "advisory_id": "ICSA-26-120-02",
+      "title": "AABB PCM600",
+      "date": "2025-11-03",
+      "summary": "An update is available that resolves vulnerability in the product versions listed as affected in this advisory.\n\nAn attacker who successfully exploited this vulnerability could insert and run arbitrary code in the system.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2018-1002208"
+      ],
+      "cvss_max": 4.4,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Protection and Control IED manager PCM600",
+          "version": ">=1.5|<=2.13",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Protection and Control IED manager PCM600",
+          "version": "2.14",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-02"
     },
     {
       "advisory_id": "ICSA-25-252-01",
@@ -22572,287 +23030,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-128-01"
     },
     {
-      "advisory_id": "ICSA-25-128-03",
-      "title": "Mitsubishi Electric Multiple FA Products (Update B)",
-      "date": "2025-05-08",
-      "summary": "Successful exploitation of this vulnerability could allow an remote attacker to cause a denial-of-service condition on the affected products. ",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-3511"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32T",
-          "version": "<=09",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32TE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32DT",
-          "version": "<=09",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32DTE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32T",
-          "version": "<=09",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32TE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32DT",
-          "version": "<=09",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32DTE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCF1-32D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCF1-32T",
-          "version": "<=09",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCE3-32D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCE3-32DT",
-          "version": "<=09",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A4-16D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A4-16DE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A2-16T",
-          "version": "<=09",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A2-16TE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A42-16DT",
-          "version": "<=09",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A42-16DTE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16T",
-          "version": "<=09",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16TE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16D",
-          "version": "<=09",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16T",
-          "version": "<=09",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16TE",
-          "version": "<=09",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Analog-Digital Converter module NZ2GN2S-60AD4",
-          "version": "<=07",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Analog-Digital Converter module NZ2GN2B-60AD4",
-          "version": "<=07",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Digital-Analog Converter module NZ2GN2S-60DA4",
-          "version": "<=07",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Digital-Analog Converter module NZ2GN2B-60DA4",
-          "version": "<=07",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41P01",
-          "version": "01",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN FPGA module NZ2GN2S- D41D01",
-          "version": "01",
-          "product_id": "CSAFPID-0032"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41PD02",
-          "version": "01",
-          "product_id": "CSAFPID-0033"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-300",
-          "version": "<=1.08J",
-          "product_id": "CSAFPID-0034"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-60",
-          "version": "<=1.08J",
-          "product_id": "CSAFPID-0035"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-T2",
-          "version": "<=26",
-          "product_id": "CSAFPID-0036"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-EIP",
-          "version": "<=10",
-          "product_id": "CSAFPID-0037"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-SX",
-          "version": "<=05",
-          "product_id": "CSAFPID-0038"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series Ethernet Interface Module RJ71EN71",
-          "version": "<=85",
-          "product_id": "CSAFPID-0039"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN master/local Station Communication LSI CP610 NZ2GACP610-60",
-          "version": "<=05",
-          "product_id": "CSAFPID-0040"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN master/local Station Communication LSI CP610 NZ2KT-NPETNG51",
-          "version": "<=05",
-          "product_id": "CSAFPID-0041"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-F Series FX5 CC-Link IE TSN Master/Local Module FX5-CCLGN-MS",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0042"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-F Series FX5 Ethernet Module FX5-ENET",
-          "version": "<=1.200",
-          "product_id": "CSAFPID-0043"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0044"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-128-03"
-    },
-    {
       "advisory_id": "ICSA-25-126-01",
       "title": "Optigo Networks ONS NC600",
       "date": "2025-05-06",
@@ -23066,6 +23243,287 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-196-01"
+    },
+    {
+      "advisory_id": "ICSA-25-128-03",
+      "title": "Mitsubishi Electric Multiple FA Products (Update C)",
+      "date": "2025-04-25",
+      "summary": "Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition, a timeout error, or a communication delay by sending a specially crafted UDP packet to the product. ",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-3511"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32T",
+          "version": "<=09",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32TE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32DT",
+          "version": "<=09",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32DTE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32T",
+          "version": "<=09",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32TE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32DT",
+          "version": "<=09",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32DTE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GNCF1-32D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GNCF1-32T",
+          "version": "<=09",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GNCE3-32D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GNCE3-32DT",
+          "version": "<=09",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A4-16D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A4-16DE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A2-16T",
+          "version": "<=09",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A2-16TE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A42-16DT",
+          "version": "<=09",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A42-16DTE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16T",
+          "version": "<=09",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16TE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16D",
+          "version": "<=09",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16T",
+          "version": "<=09",
+          "product_id": "CSAFPID-0025"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16TE",
+          "version": "<=09",
+          "product_id": "CSAFPID-0026"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Analog-Digital Converter module NZ2GN2S-60AD4",
+          "version": "<=07",
+          "product_id": "CSAFPID-0027"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Analog-Digital Converter module NZ2GN2B-60AD4",
+          "version": "<=07",
+          "product_id": "CSAFPID-0028"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Digital-Analog Converter module NZ2GN2S-60DA4",
+          "version": "<=07",
+          "product_id": "CSAFPID-0029"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Digital-Analog Converter module NZ2GN2B-60DA4",
+          "version": "<=07",
+          "product_id": "CSAFPID-0030"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41P01",
+          "version": "01",
+          "product_id": "CSAFPID-0031"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41D01",
+          "version": "01",
+          "product_id": "CSAFPID-0032"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41PD02",
+          "version": "01",
+          "product_id": "CSAFPID-0033"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-300",
+          "version": "<=1.08J",
+          "product_id": "CSAFPID-0034"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-60",
+          "version": "<=1.08J",
+          "product_id": "CSAFPID-0035"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-T2",
+          "version": "<=26",
+          "product_id": "CSAFPID-0036"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-EIP",
+          "version": "<=10",
+          "product_id": "CSAFPID-0037"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-SX",
+          "version": "<=05",
+          "product_id": "CSAFPID-0038"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-R Series Ethernet Interface Module RJ71EN71",
+          "version": "<=85",
+          "product_id": "CSAFPID-0039"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN master/local Station Communication LSI CP610 NZ2GACP610-60",
+          "version": "<=05",
+          "product_id": "CSAFPID-0040"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "CC-Link IE TSN master/local Station Communication LSI CP610 NZ2KT-NPETNG51",
+          "version": "<=05",
+          "product_id": "CSAFPID-0041"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-F Series FX5 CC-Link IE TSN Master/Local Module FX5-CCLGN-MS",
+          "version": "<=1.020",
+          "product_id": "CSAFPID-0042"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-F Series FX5 Ethernet Module FX5-ENET",
+          "version": "<=1.200",
+          "product_id": "CSAFPID-0043"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP",
+          "version": "<=1.106",
+          "product_id": "CSAFPID-0044"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-128-03"
     },
     {
       "advisory_id": "ICSA-25-114-02",

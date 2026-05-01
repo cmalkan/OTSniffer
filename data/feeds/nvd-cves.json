@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-04-27T20:16:06.873Z",
+  "pulled_at": "2026-05-01T08:27:10.259Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -70992,6 +70992,601 @@
       "published": "2019-05-22T20:29:01.667",
       "last_modified": "2024-11-21T04:12:52.140",
       "fetched_at": "2026-04-27T20:16:00.383Z"
+    },
+    "CVE-2025-14376": {
+      "cve_id": "CVE-2025-14376",
+      "description": "A security issue was discovered within the legacy ADI server component of Verve Asset Manager, caused by plaintext secrets stored in environment variables on the ADI server. This component has been retired and has been optional since the 1.36 release in 2024.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-922"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1767.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-20T14:16:07.280",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:25:18.714Z"
+    },
+    "CVE-2025-14377": {
+      "cve_id": "CVE-2025-14377",
+      "description": "A security issue was discovered within the legacy Ansible playbook component of Verve Asset Manager, caused by plaintext secrets incorrectly stored when a playbook is running. This component has been retired and has been optional since the 1.36 release in 2024.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-312"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1767.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-20T14:16:07.510",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:25:25.276Z"
+    },
+    "CVE-2025-61943": {
+      "cve_id": "CVE-2025-61943",
+      "description": "The vulnerability, if exploited, could allow an authenticated miscreant \n(Process Optimization Standard User) to tamper with queries in Captive \nHistorian and achieve code execution under SQL Server administrative \nprivileges, potentially resulting in complete compromise of the SQL \nServer.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.4,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+      "cwes": [
+        "CWE-89"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-015-01.json",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://softwaresupportsp.aveva.com/en-US/downloads/products/details/a643eaa3-0d85-4fde-ac11-5239e87a68ea",
+          "tags": [
+            "Permissions Required"
+          ]
+        },
+        {
+          "url": "https://www.aveva.com/en/support-and-success/cyber-security-updates/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-01",
+          "tags": [
+            "Third Party Advisory",
+            "US Government Resource"
+          ]
+        }
+      ],
+      "published": "2026-01-16T02:16:45.093",
+      "last_modified": "2026-01-22T15:19:41.990",
+      "fetched_at": "2026-05-01T08:25:31.845Z"
+    },
+    "CVE-2024-46747": {
+      "cve_id": "CVE-2024-46747",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nHID: cougar: fix slab-out-of-bounds Read in cougar_report_fixup\n\nreport_fixup for the Cougar 500k Gaming Keyboard was not verifying\nthat the report descriptor size was correct before accessing it",
+      "cvss_version": "3.1",
+      "cvss_score": 7.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/30e9ce7cd5591be639b53595c95812f1a2afdfdc",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/34185de73d74fdc90e8651cfc472bfea6073a13f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/48b2108efa205f4579052c27fba2b22cc6ad8aa0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/890dde6001b651be79819ef7a3f8c71fc8f9cabf",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a6e9c391d45b5865b61e569146304cff72821a5d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e239e44dcd419b13cf840e2a3a833204e4329714",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e4a602a45aecd6a98b4b37482f5c9f8f67a32ddd",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/fac3cb3c6428afe2207593a183b5bc4742529dfd",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2024-09-18T08:15:03.790",
+      "last_modified": "2025-11-03T23:15:58.953",
+      "fetched_at": "2026-05-01T08:25:38.398Z"
+    },
+    "CVE-2024-49860": {
+      "cve_id": "CVE-2024-49860",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nACPI: sysfs: validate return type of _STR method\n\nOnly buffer objects are valid return values of _STR.\n\nIf something else is returned description_show() will access invalid\nmemory.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "cwes": [
+        "CWE-843"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0cdfb9178a3bba843c95c2117c82c15f1a64b9ce",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/2364b6af90c6b6d8a4783e0d3481ca80af699554",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4b081991c4363e072e1748efed0bbec8a77daba5",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4bb1e7d027413835b086aed35bc3f0713bc0f72b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/5c8d007c14aefc3f2ddf71e4c40713733dc827be",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/92fd5209fc014405f63a7db79802ca4b01dc0c05",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f0921ecd4ddc14646bb5511f49db4d7d3b0829f0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f51e5a88f2e7224858b261546cf6b3037dfb1323",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2024-10-21T13:15:06.723",
+      "last_modified": "2025-11-03T23:16:26.417",
+      "fetched_at": "2026-05-01T08:25:44.950Z"
+    },
+    "CVE-2024-49863": {
+      "cve_id": "CVE-2024-49863",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nvhost/scsi: null-ptr-dereference in vhost_scsi_get_req()\n\nSince commit 3f8ca2e115e5 (\"vhost/scsi: Extract common handling code\nfrom control queue handler\") a null pointer dereference bug can be\ntriggered when guest sends an SCSI AN request.\n\nIn vhost_scsi_ctl_handle_vq(), `vc.target` is assigned with\n`&v_req.tmf.lun[1]` within a switch-case block and is then passed to\nvhost_scsi_get_req() which extracts `vc->req` and `tpg`. However, for\na `VIRTIO_SCSI_T_AN_*` request, tpg is not required, so `vc.target` is\nset to NULL in this branch. Later, in vhost_scsi_get_req(),\n`vc->target` is dereferenced without being checked, leading to a null\npointer dereference bug. This bug can be triggered from guest.\n\nWhen this bug occurs, the vhost_worker process is killed while holding\n`vq->mutex` and the corresponding tpg will remain occupied\nindefinitely.\n\nBelow is the KASAN report:\nOops: general protection fault, probably for non-canonical address\n0xdffffc0000000000: 0000 [#1] PREEMPT SMP KASAN NOPTI\nKASAN: null-ptr-deref in range [0x0000000000000000-0x0000000000000007]\nCPU: 1 PID: 840 Comm: poc Not tainted 6.10.0+ #1\nHardware name: QEMU Ubuntu 24.04 PC (i440FX + PIIX, 1996), BIOS\n1.16.3-debian-1.16.3-2 04/01/2014\nRIP: 0010:vhost_scsi_get_req+0x165/0x3a0\nCode: 00 fc ff df 48 89 fa 48 c1 ea 03 80 3c 02 00 0f 85 2b 02 00 00\n48 b8 00 00 00 00 00 fc ff df 4d 8b 65 30 4c 89 e2 48 c1 ea 03 <0f> b6\n04 02 4c 89 e2 83 e2 07 38 d0 7f 08 84 c0 0f 85 be 01 00 00\nRSP: 0018:ffff888017affb50 EFLAGS: 00010246\nRAX: dffffc0000000000 RBX: ffff88801b000000 RCX: 0000000000000000\nRDX: 0000000000000000 RSI: 0000000000000000 RDI: ffff888017affcb8\nRBP: ffff888017affb80 R08: 0000000000000000 R09: 0000000000000000\nR10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000\nR13: ffff888017affc88 R14: ffff888017affd1c R15: ffff888017993000\nFS:  000055556e076500(0000) GS:ffff88806b100000(0000) knlGS:0000000000000000\nCS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\nCR2: 00000000200027c0 CR3: 0000000010ed0004 CR4: 0000000000370ef0\nCall Trace:\n <TASK>\n ? show_regs+0x86/0xa0\n ? die_addr+0x4b/0xd0\n ? exc_general_protection+0x163/0x260\n ? asm_exc_general_protection+0x27/0x30\n ? vhost_scsi_get_req+0x165/0x3a0\n vhost_scsi_ctl_handle_vq+0x2a4/0xca0\n ? __pfx_vhost_scsi_ctl_handle_vq+0x10/0x10\n ? __switch_to+0x721/0xeb0\n ? __schedule+0xda5/0x5710\n ? __kasan_check_write+0x14/0x30\n ? _raw_spin_lock+0x82/0xf0\n vhost_scsi_ctl_handle_kick+0x52/0x90\n vhost_run_work_list+0x134/0x1b0\n vhost_task_fn+0x121/0x350\n...\n </TASK>\n---[ end trace 0000000000000000 ]---\n\nLet's add a check in vhost_scsi_get_req.\n\n[whitespace fixes]",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-476"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/00fb5b23e1c9cdbe496f5cd6b40367cb895f6c93",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/221af82f606d928ccef19a16d35633c63026f1be",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/25613e6d9841a1f9fb985be90df921fa99f800de",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/46128370a72c431df733af5ebb065c4d48c9ad39",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/61517f33e76d2c5247c1e61e668693afe5b67e6f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6592347f06e2b19a624270a85ad4b3ae48c3b241",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ace9c778a214da9c98d7b69d904d1b0816f4f681",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/01/msg00001.html",
+          "tags": []
+        }
+      ],
+      "published": "2024-10-21T18:15:06.120",
+      "last_modified": "2025-11-03T23:16:26.600",
+      "fetched_at": "2026-05-01T08:25:51.507Z"
+    },
+    "CVE-2024-26722": {
+      "cve_id": "CVE-2024-26722",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nASoC: rt5645: Fix deadlock in rt5645_jack_detect_work()\n\nThere is a path in rt5645_jack_detect_work(), where rt5645->jd_mutex\nis left locked forever. That may lead to deadlock\nwhen rt5645_jack_detect_work() is called for the second time.\n\nFound by Linux Verification Center (linuxtesting.org) with SVACE.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-667"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/050ad2ca0ac169dd9e552075d2c6af1bbb46534c",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1f0d7792e9023e8658e901b7b76a555f6aa052ec",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3dd2d99e2352903d0e0b8769e6c9b8293c7454b2",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/422d5243b9f780abd3d39da2b746e3915677b07d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4a98bc739d0753a5810ce5630943cd7614c7717e",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6ef5d5b92f7117b324efaac72b3db27ae8bb3082",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d14b8e2005f36319df9412d42037416d64827f6b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ed5b8b735369b40d6c1f8ef3e62d369f74b4c491",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2024-04-03T15:15:54.090",
+      "last_modified": "2025-01-07T17:35:32.710",
+      "fetched_at": "2026-05-01T08:25:58.060Z"
+    },
+    "CVE-2024-35990": {
+      "cve_id": "CVE-2024-35990",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndma: xilinx_dpdma: Fix locking\n\nThere are several places where either chan->lock or chan->vchan.lock was\nnot held. Add appropriate locking. This fixes lockdep warnings like\n\n[   31.077578] ------------[ cut here ]------------\n[   31.077831] WARNING: CPU: 2 PID: 40 at drivers/dma/xilinx/xilinx_dpdma.c:834 xilinx_dpdma_chan_queue_transfer+0x274/0x5e0\n[   31.077953] Modules linked in:\n[   31.078019] CPU: 2 PID: 40 Comm: kworker/u12:1 Not tainted 6.6.20+ #98\n[   31.078102] Hardware name: xlnx,zynqmp (DT)\n[   31.078169] Workqueue: events_unbound deferred_probe_work_func\n[   31.078272] pstate: 600000c5 (nZCv daIF -PAN -UAO -TCO -DIT -SSBS BTYPE=--)\n[   31.078377] pc : xilinx_dpdma_chan_queue_transfer+0x274/0x5e0\n[   31.078473] lr : xilinx_dpdma_chan_queue_transfer+0x270/0x5e0\n[   31.078550] sp : ffffffc083bb2e10\n[   31.078590] x29: ffffffc083bb2e10 x28: 0000000000000000 x27: ffffff880165a168\n[   31.078754] x26: ffffff880164e920 x25: ffffff880164eab8 x24: ffffff880164d480\n[   31.078920] x23: ffffff880165a148 x22: ffffff880164e988 x21: 0000000000000000\n[   31.079132] x20: ffffffc082aa3000 x19: ffffff880164e880 x18: 0000000000000000\n[   31.079295] x17: 0000000000000000 x16: 0000000000000000 x15: 0000000000000000\n[   31.079453] x14: 0000000000000000 x13: ffffff8802263dc0 x12: 0000000000000001\n[   31.079613] x11: 0001ffc083bb2e34 x10: 0001ff880164e98f x9 : 0001ffc082aa3def\n[   31.079824] x8 : 0001ffc082aa3dec x7 : 0000000000000000 x6 : 0000000000000516\n[   31.079982] x5 : ffffffc7f8d43000 x4 : ffffff88003c9c40 x3 : ffffffffffffffff\n[   31.080147] x2 : ffffffc7f8d43000 x1 : 00000000000000c0 x0 : 0000000000000000\n[   31.080307] Call trace:\n[   31.080340]  xilinx_dpdma_chan_queue_transfer+0x274/0x5e0\n[   31.080518]  xilinx_dpdma_issue_pending+0x11c/0x120\n[   31.080595]  zynqmp_disp_layer_update+0x180/0x3ac\n[   31.080712]  zynqmp_dpsub_plane_atomic_update+0x11c/0x21c\n[   31.080825]  drm_atomic_helper_commit_planes+0x20c/0x684\n[   31.080951]  drm_atomic_helper_commit_tail+0x5c/0xb0\n[   31.081139]  commit_tail+0x234/0x294\n[   31.081246]  drm_atomic_helper_commit+0x1f8/0x210\n[   31.081363]  drm_atomic_commit+0x100/0x140\n[   31.081477]  drm_client_modeset_commit_atomic+0x318/0x384\n[   31.081634]  drm_client_modeset_commit_locked+0x8c/0x24c\n[   31.081725]  drm_client_modeset_commit+0x34/0x5c\n[   31.081812]  __drm_fb_helper_restore_fbdev_mode_unlocked+0x104/0x168\n[   31.081899]  drm_fb_helper_set_par+0x50/0x70\n[   31.081971]  fbcon_init+0x538/0xc48\n[   31.082047]  visual_init+0x16c/0x23c\n[   31.082207]  do_bind_con_driver.isra.0+0x2d0/0x634\n[   31.082320]  do_take_over_console+0x24c/0x33c\n[   31.082429]  do_fbcon_takeover+0xbc/0x1b0\n[   31.082503]  fbcon_fb_registered+0x2d0/0x34c\n[   31.082663]  register_framebuffer+0x27c/0x38c\n[   31.082767]  __drm_fb_helper_initial_config_and_unlock+0x5c0/0x91c\n[   31.082939]  drm_fb_helper_initial_config+0x50/0x74\n[   31.083012]  drm_fbdev_dma_client_hotplug+0xb8/0x108\n[   31.083115]  drm_client_register+0xa0/0xf4\n[   31.083195]  drm_fbdev_dma_setup+0xb0/0x1cc\n[   31.083293]  zynqmp_dpsub_drm_init+0x45c/0x4e0\n[   31.083431]  zynqmp_dpsub_probe+0x444/0x5e0\n[   31.083616]  platform_probe+0x8c/0x13c\n[   31.083713]  really_probe+0x258/0x59c\n[   31.083793]  __driver_probe_device+0xc4/0x224\n[   31.083878]  driver_probe_device+0x70/0x1c0\n[   31.083961]  __device_attach_driver+0x108/0x1e0\n[   31.084052]  bus_for_each_drv+0x9c/0x100\n[   31.084125]  __device_attach+0x100/0x298\n[   31.084207]  device_initial_probe+0x14/0x20\n[   31.084292]  bus_probe_device+0xd8/0xdc\n[   31.084368]  deferred_probe_work_func+0x11c/0x180\n[   31.084451]  process_one_work+0x3ac/0x988\n[   31.084643]  worker_thread+0x398/0x694\n[   31.084752]  kthread+0x1bc/0x1c0\n[   31.084848]  ret_from_fork+0x10/0x20\n[   31.084932] irq event stamp: 64549\n[   31.084970] hardirqs last  enabled at (64548): [<ffffffc081adf35c>] _raw_spin_unlock_irqrestore+0x80/0x90\n[   31.085157]\n---truncated---",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-667"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0ccac964520a6f19e355652c8ca38af2a7f27076",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/244296cc3a155199a8b080d19e645d7d49081a38",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8bf574183282d219cfa991f7df37aad491d74c11",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8e3c94767cad5150198e4337c8b91f3bb068e14b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c660be571609e03e7d5972343536a736fcb31557",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/fcdd5bb4a8c81c64c1334d7e0aba41a8829a24de",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/0ccac964520a6f19e355652c8ca38af2a7f27076",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/244296cc3a155199a8b080d19e645d7d49081a38",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2024-05-20T10:15:13.257",
+      "last_modified": "2024-11-21T09:21:22.667",
+      "fetched_at": "2026-05-01T08:26:04.614Z"
+    },
+    "CVE-2025-4417": {
+      "cve_id": "CVE-2025-4417",
+      "description": "A cross-site scripting vulnerability exists in \nAVEVA PI Connector for CygNet \nVersions 1.6.14 and prior that, if exploited, could allow an \nadministrator miscreant with local access to the connector admin portal \nto persist arbitrary JavaScript code that will be executed by other \nusers who visit affected pages.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:C/C:N/I:H/A:N",
+      "cwes": [
+        "CWE-79"
+      ],
+      "references": [
+        {
+          "url": "https://www.aveva.com/en/support-and-success/cyber-security-updates/",
+          "tags": []
+        },
+        {
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-162-09",
+          "tags": []
+        }
+      ],
+      "published": "2025-06-12T20:15:21.760",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:26:11.174Z"
+    },
+    "CVE-2025-4418": {
+      "cve_id": "CVE-2025-4418",
+      "description": "An improper validation of integrity check value vulnerability exists in \n\nAVEVA PI Connector for CygNet Versions 1.6.14 and prior that, if exploited, \ncould allow a miscreant with elevated privileges to modify PI Connector \nfor CygNet local data files (cache and buffers) in a way that causes the\n connector service to become unresponsive.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.4,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-354"
+      ],
+      "references": [
+        {
+          "url": "https://www.aveva.com/en/support-and-success/cyber-security-updates/",
+          "tags": []
+        },
+        {
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-162-09",
+          "tags": []
+        }
+      ],
+      "published": "2025-06-12T20:15:21.943",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:26:17.760Z"
+    },
+    "CVE-2025-40592": {
+      "cve_id": "CVE-2025-40592",
+      "description": "A vulnerability has been identified in Mendix Studio Pro 10 (All versions < V10.23.0), Mendix Studio Pro 10.12 (All versions < V10.12.17), Mendix Studio Pro 10.18 (All versions < V10.18.7), Mendix Studio Pro 10.6 (All versions < V10.6.24), Mendix Studio Pro 11 (All versions < V11.0.0), Mendix Studio Pro 8 (All versions < V8.18.35), Mendix Studio Pro 9 (All versions < V9.24.35). A zip path traversal vulnerability exists in the module installation process of Studio Pro. By crafting a malicious module and distributing it via (for example) the Mendix Marketplace, an attacker could write or modify arbitrary files in directories outside a developer’s project directory upon module installation.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.1,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:H/A:N",
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-627195.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-06-12T08:15:23.407",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:26:24.325Z"
+    },
+    "CVE-2025-32454": {
+      "cve_id": "CVE-2025-32454",
+      "description": "A vulnerability has been identified in Teamcenter Visualization V14.3 (All versions < V14.3.0.14), Teamcenter Visualization V2312 (All versions < V2312.0010), Teamcenter Visualization V2406 (All versions < V2406.0008), Teamcenter Visualization V2412 (All versions < V2412.0004), Tecnomatix Plant Simulation V2404 (All versions < V2404.0013). The affected applications contain an out of bounds read past the end of an allocated structure while parsing specially crafted WRL files.\r\nThis could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-486186.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-542540.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2025-05-13T10:15:24.953",
+      "last_modified": "2025-09-23T15:26:08.277",
+      "fetched_at": "2026-05-01T08:26:30.880Z"
+    },
+    "CVE-2025-0133": {
+      "cve_id": "CVE-2025-0133",
+      "description": "A reflected cross-site scripting (XSS) vulnerability in the GlobalProtect™ gateway and portal features of Palo Alto Networks PAN-OS® software enables execution of malicious JavaScript in the context of an authenticated Captive Portal user's browser when they click on a specially crafted link. The primary risk is phishing attacks that can lead to credential theft—particularly if you enabled Clientless VPN.\n\nThere is no availability impact to GlobalProtect features or GlobalProtect users. Attackers cannot use this vulnerability to tamper with or modify contents or configurations of the GlobalProtect portal or gateways. The integrity impact of this vulnerability is limited to enabling an attacker to create phishing and credential-stealing links that appear to be hosted on the GlobalProtect portal.\n\n\n\nFor GlobalProtect users with Clientless VPN enabled, there is a limited impact on confidentiality due to inherent risks of Clientless VPN that facilitate credential theft. You can read more about this risk in the informational bulletin  PAN-SA-2025-0005 https://security.paloaltonetworks.com/PAN-SA-2025-0005   https://security.paloaltonetworks.com/PAN-SA-2025-0005 . There is no impact to confidentiality for GlobalProtect users if you did not enable (or you disable) Clientless VPN.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-79"
+      ],
+      "references": [
+        {
+          "url": "https://security.paloaltonetworks.com/CVE-2025-0133",
+          "tags": []
+        }
+      ],
+      "published": "2025-05-14T19:15:51.517",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:26:37.436Z"
+    },
+    "CVE-2023-52927": {
+      "cve_id": "CVE-2023-52927",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: allow exp not to be removed in nf_ct_find_expectation\n\nCurrently nf_conntrack_in() calling nf_ct_find_expectation() will\nremove the exp from the hash table. However, in some scenario, we\nexpect the exp not to be removed when the created ct will not be\nconfirmed, like in OVS and TC conntrack in the following patches.\n\nThis patch allows exp not to be removed by setting IPS_CONFIRMED\nin the status of the tmpl.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-416"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/3fa58a6fbd1e9e5682d09cdafb08fba004cb12ec",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4914109a8e1e494c6aa9852f9e84ec77a5fc643f",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "https://seadragnol.github.io/posts/CVE-2023-52927/",
+          "tags": [
+            "Exploit",
+            "Technical Description"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/05/msg00045.html",
+          "tags": [
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2025-03-14T15:15:39.253",
+      "last_modified": "2025-12-31T00:48:10.147",
+      "fetched_at": "2026-05-01T08:26:44.011Z"
+    },
+    "CVE-2025-32854": {
+      "cve_id": "CVE-2025-32854",
+      "description": "A vulnerability has been identified in TeleControl Server Basic (All versions < V3.1.2.2). The affected application is vulnerable to SQL injection through the internally used 'LockOpcSettings' method. This could allow an authenticated remote attacker to bypass authorization controls, to read from and write to the application's database and execute code with \"NT AUTHORITY\\NetworkService\" permissions. A successful attack requires the attacker to be able to access port 8000 on a system where a vulnerable version of the affected application is executed on.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-89"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-443402.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2025-04-16T18:16:15.660",
+      "last_modified": "2025-08-19T15:12:05.700",
+      "fetched_at": "2026-05-01T08:26:50.577Z"
+    },
+    "CVE-2025-2440": {
+      "cve_id": "CVE-2025-2440",
+      "description": "CWE-922: Insecure Storage of Sensitive Information vulnerability exists that could potentially lead to unauthorized\naccess of confidential data when a malicious user, having physical access and advanced information on the file\nsystem, sets the radio in factory default mode.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.2,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "cwes": [
+        "CWE-922"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2025-098-02&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2025-098-02.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2025-04-09T11:15:42.507",
+      "last_modified": "2026-04-15T00:35:42.020",
+      "fetched_at": "2026-05-01T08:26:57.141Z"
     }
   }
 }
