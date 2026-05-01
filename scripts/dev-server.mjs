@@ -25,6 +25,7 @@ const apiRoutes = [
   { method: 'GET',  pattern: /^\/api\/assets\/([^/]+)\/paths$/,         fn: 'assets-paths',   param: 'assetId' },
   { method: 'GET',  pattern: /^\/api\/assets\/([^/]+)\/risk$/,          fn: 'assets-risk',    param: 'assetId' },
   { method: 'GET',  pattern: /^\/api\/evidence\/([^/]+)$/,              fn: 'evidence',       param: 'assetId' },
+  { method: 'GET',  pattern: /^\/api\/assets\/([^/]+)\/attack-paths$/,   fn: 'attack-paths',   param: 'assetId' },
 ];
 
 // Plant registry — labels are buyer-facing tab names, files are the merged

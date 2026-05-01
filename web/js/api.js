@@ -35,6 +35,14 @@ export const api = {
   prebuiltScenarios: () => callJson('/api/scenarios/prebuilt'),
   assetPaths:     (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/paths`),
   assetRisk:      (assetId) => callJson(`/api/assets/${encodeURIComponent(assetId)}/risk`),
+  attackPaths:    (assetId, opts = {}) => {
+    const params = new URLSearchParams();
+    if (opts.direction) params.set('direction', opts.direction);
+    if (opts.from) params.set('from', opts.from);
+    const qs = params.toString();
+    const path = `/api/assets/${encodeURIComponent(assetId)}/attack-paths${qs ? '?' + qs : ''}`;
+    return callJson(q(path));
+  },
   evidence:       (assetId) => callJson(`/api/evidence/${encodeURIComponent(assetId)}`),
   assets:         () => callJson(q('/api/assets')),
   graph:          () => callJson(q('/api/graph')),

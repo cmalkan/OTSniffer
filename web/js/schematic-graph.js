@@ -623,6 +623,19 @@ export function renderSchematic(svg, graph, options = {}) {
     selectedId: () => selectedAssetId,
     showBlastRadius,
     clearBlastRadius,
+    // Spatial accessors used by the attack-paths overlay (web/js/attack-paths-overlay.js).
+    // Kept on the controller so consumers don't have to re-do layout math.
+    getSvg: () => svg,
+    getAssetBox: (id) => assetPos.get(id) || null,
+    getAssetCenter: (id) => {
+      const p = assetPos.get(id);
+      return p ? { x: p.x + p.w / 2, y: p.y + p.h / 2 } : null;
+    },
+    routeBetween: (fromId, toId) => {
+      const a = assetPos.get(fromId);
+      const b = assetPos.get(toId);
+      return a && b ? orthogonalPath(a, b) : null;
+    },
   };
 }
 

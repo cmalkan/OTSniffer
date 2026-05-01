@@ -97,6 +97,7 @@ import { api } from '/js/api.js';
 import { renderSchematic } from '/js/schematic-graph.js';
 import { renderPlantTabs } from '/js/plant-tabs.js';
 import { inferAssetFunction } from '/js/asset-function.js';
+import { createAttackPathsOverlay } from '/js/attack-paths-overlay.js';
 renderPlantTabs(document.querySelector('[data-plant-tabs]'));
 
 const $ = (id) => document.getElementById(id);
@@ -110,7 +111,11 @@ async function init() {
   $('bomMeta').textContent = `${graph.assets.length} assets · ${posture.bom.vendor_count} vendors`;
   $('stageDocId').textContent = `DOC · OT-TPL-${graph.plant_id.slice(-3).toUpperCase()}`;
 
-  let mode = 'blast';   // 'inspect' | 'blast'
+  let mode = 'blast';                 // 'inspect' | 'blast'
+  let originAssetId = null;           // 1st-click asset — the compromised origin in blast mode
+  let originAssetName = '';
+  let lastBlastResult = null;         // last blast response, for impacted-asset membership check
+
   const ctrl = renderSchematic($('stage-svg'), graph, {
     onSelect: async (asset) => {
       if (!asset) return;
@@ -118,24 +123,77 @@ async function init() {
         location.href = `/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}`;
         return;
       }
-      // Blast-radius mode: overlay the target on the topology
-      $('blastTargetInfo').innerHTML = `Tracing blast radius from <strong>${escape(asset.name)}</strong>…`;
-      try {
-        const result = await api.simulateBlastRadius({
-          start_asset_id: asset.asset_id,
-          max_depth: 6,
-          include_vulnerabilities: true,
-          include_zone_barriers: true,
-          mode: 'analyst',
-        });
-        ctrl.showBlastRadius(result, asset.asset_id);
-        $('blastTargetInfo').innerHTML = `<strong>${escape(asset.name)}</strong> · ${result.severity_label?.toUpperCase() || 'LOW'} · ${(result.impacted_assets || []).length} reachable · risk ${Math.round(result.risk_score || 0)}/100. <a href="/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}">Open full detail →</a>`;
-        $('blastClearBtn').style.display = '';
-      } catch (err) {
-        $('blastTargetInfo').textContent = `Trace failed: ${err.message}`;
+
+      // Re-click on same origin — refresh the blast view, drop any attack-path overlay.
+      if (originAssetId && asset.asset_id === originAssetId) {
+        apOverlay.clearPaths();
+        await runBlastFor(asset);
+        return;
       }
+
+      // 2nd click: target asset is in the current blast radius. Fetch the
+      // vulnerability-derived attack paths from origin → target and overlay.
+      const inBlast = !!lastBlastResult?.impacted_assets?.some(a => a.asset_id === asset.asset_id);
+      if (originAssetId && inBlast) {
+        $('blastTargetInfo').innerHTML = `Tracing attack vector <strong>${escape(originAssetName)}</strong> → <strong>${escape(asset.name)}</strong>…`;
+        try {
+          const apResp = await api.attackPaths(asset.asset_id, {
+            direction: 'incoming',
+            from: originAssetId,
+          });
+          const paths = apResp?.paths || [];
+          if (paths.length === 0) {
+            apOverlay.clearPaths();
+            $('blastTargetInfo').innerHTML = `<strong>${escape(asset.name)}</strong> is reachable from <strong>${escape(originAssetName)}</strong> by topology, but no vulnerability-derived attack path is on file. Reachability only — add advisory matches to surface a kill chain.`;
+            return;
+          }
+          apOverlay.showPaths(paths, { fromAssetId: originAssetId });
+          const top = paths[0];
+          const hopWord = top.hops.length === 1 ? 'hop' : 'hops';
+          const phase = (top.kill_chain_phase || '').replace(/-/g, ' ');
+          const conf = (Math.round((top.path_confidence || 0) * 100) / 100).toFixed(2);
+          $('blastTargetInfo').innerHTML = `Attack vector · <strong>${escape(originAssetName)}</strong> → <strong>${escape(asset.name)}</strong> · ${paths.length} ${paths.length === 1 ? 'path' : 'paths'} · top: ${top.hops.length} ${hopWord} · ${escape(phase)} · confidence ${conf}. Hover any hop for protocol, leverage, MITRE TTP.`;
+          $('blastClearBtn').style.display = '';
+        } catch (err) {
+          $('blastTargetInfo').textContent = `Attack-path lookup failed: ${err.message}`;
+        }
+        return;
+      }
+
+      // Otherwise: treat this as a new origin (not in current blast, or no origin yet).
+      apOverlay.clearPaths();
+      await runBlastFor(asset);
     },
   });
+
+  const apOverlay = createAttackPathsOverlay(ctrl);
+
+  async function runBlastFor(asset) {
+    $('blastTargetInfo').innerHTML = `Tracing blast radius from <strong>${escape(asset.name)}</strong>…`;
+    try {
+      const result = await api.simulateBlastRadius({
+        start_asset_id: asset.asset_id,
+        max_depth: 6,
+        include_vulnerabilities: true,
+        include_zone_barriers: true,
+        mode: 'analyst',
+      });
+      ctrl.showBlastRadius(result, asset.asset_id);
+      lastBlastResult = result;
+      originAssetId = asset.asset_id;
+      originAssetName = asset.name;
+      const reach = (result.impacted_assets || []).length;
+      const sev = (result.severity_label || 'low').toUpperCase();
+      const risk = Math.round(result.risk_score || 0);
+      const next = reach > 0
+        ? `<em>Click an impacted asset to see the attack vector that reaches it.</em>`
+        : `<em>No reachable assets — isolated.</em>`;
+      $('blastTargetInfo').innerHTML = `<strong>${escape(asset.name)}</strong> · ${sev} · ${reach} reachable · risk ${risk}/100. ${next} <a href="/asset-detail.html?id=${encodeURIComponent(asset.asset_id)}">Open full detail →</a>`;
+      $('blastClearBtn').style.display = '';
+    } catch (err) {
+      $('blastTargetInfo').textContent = `Trace failed: ${err.message}`;
+    }
+  }
 
   // Toolbar mode toggle
   $('modeInspect').addEventListener('click', () => {
@@ -143,6 +201,10 @@ async function init() {
     $('modeInspect').classList.add('is-active');
     $('modeBlast').classList.remove('is-active');
     ctrl.clearBlastRadius();
+    apOverlay.clearPaths();
+    originAssetId = null;
+    originAssetName = '';
+    lastBlastResult = null;
     $('blastTargetInfo').textContent = 'Click any asset to open the deep-dive panel.';
     $('blastClearBtn').style.display = 'none';
   });
@@ -150,36 +212,49 @@ async function init() {
     mode = 'blast';
     $('modeBlast').classList.add('is-active');
     $('modeInspect').classList.remove('is-active');
-    $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius. Concentric red rings show how far an attacker reaches if that asset is compromised.';
+    $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius. Then click any reachable asset to see how the attacker reaches it via the matched advisory.';
   });
   $('blastClearBtn').addEventListener('click', () => {
     ctrl.clearBlastRadius();
+    apOverlay.clearPaths();
+    originAssetId = null;
+    originAssetName = '';
+    lastBlastResult = null;
     $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius.';
     $('blastClearBtn').style.display = 'none';
   });
+
+  // ESC anywhere — dismiss attack-path overlay first, then blast on a second ESC.
+  document.addEventListener('keydown', (ev) => {
+    if (ev.key !== 'Escape') return;
+    if (apOverlay.isShowing()) {
+      apOverlay.clearPaths();
+      if (originAssetId && lastBlastResult) {
+        const a = graph.assets.find(x => x.asset_id === originAssetId);
+        if (a) {
+          $('blastTargetInfo').innerHTML = `<strong>${escape(a.name)}</strong> · ${(lastBlastResult.severity_label || 'low').toUpperCase()} · ${(lastBlastResult.impacted_assets || []).length} reachable. <em>Click an impacted asset to see the attack vector that reaches it.</em>`;
+        }
+      }
+      return;
+    }
+    if (lastBlastResult) {
+      ctrl.clearBlastRadius();
+      lastBlastResult = null;
+      originAssetId = null;
+      $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius.';
+      $('blastClearBtn').style.display = 'none';
+    }
+  });
+
+  // Update the default toolbar copy now that the two-click flow exists.
+  $('blastTargetInfo').textContent = 'Click any asset to overlay its blast radius. Then click any reachable asset to see how the attacker reaches it via the matched advisory.';
 
   // Auto-trigger blast radius if the URL includes ?focus=<asset_id>
   const focus = new URLSearchParams(location.search).get('focus');
   if (focus && graph.assets.find(a => a.asset_id === focus)) {
     ctrl.select(focus);
-    // Programmatically dispatch the same logic the click handler runs
     const asset = graph.assets.find(a => a.asset_id === focus);
-    setTimeout(async () => {
-      try {
-        const result = await api.simulateBlastRadius({
-          start_asset_id: focus,
-          max_depth: 6,
-          include_vulnerabilities: true,
-          include_zone_barriers: true,
-          mode: 'analyst',
-        });
-        ctrl.showBlastRadius(result, focus);
-        $('blastTargetInfo').innerHTML = `<strong>${escape(asset.name)}</strong> · ${result.severity_label?.toUpperCase() || 'LOW'} · ${(result.impacted_assets || []).length} reachable · risk ${Math.round(result.risk_score || 0)}/100. <a href="/asset-detail.html?id=${encodeURIComponent(focus)}">Open full detail →</a>`;
-        $('blastClearBtn').style.display = '';
-      } catch (err) {
-        $('blastTargetInfo').textContent = `Trace failed: ${err.message}`;
-      }
-    }, 100);
+    setTimeout(() => { runBlastFor(asset); }, 100);
   }
 
   renderBOM(graph, posture);

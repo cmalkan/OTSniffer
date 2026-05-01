@@ -37,3 +37,8 @@
   from = "/api/evidence/:assetId"
   to = "/.netlify/functions/evidence?assetId=:assetId"
   status = 200
+
+[[redirects]]
+  from = "/api/assets/:assetId/attack-paths"
+  to = "/.netlify/functions/attack-paths?assetId=:assetId"
+  status = 200
