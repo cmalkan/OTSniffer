@@ -37,6 +37,21 @@ services:
     entrypoint: ["node", "scripts/otsniff/cli.mjs"]
     command: ["help"]
 
+  # Feed-refresh service — pulls CISA ICS-CERT, KEV, and NVD on a schedule.
+  # Default cadence is every 48 hours; override via FEED_REFRESH_HOURS env.
+  # Pass NVD_API_KEY here if you have one to unlock 50 req / 30s on NVD.
+  # Run with: docker compose -f compose.toolchain.yml up -d feeds
+  feeds:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: ["node", "scripts/feeds/refresh-loop.mjs"]
+    environment:
+      FEED_REFRESH_HOURS: "48"
+      # NVD_API_KEY: "..."  # uncomment + set when an API key is registered
+    restart: unless-stopped
+
   # Renderer service — Playwright image ships with Chromium preinstalled.
   # First run will `npm install` into a named volume so the image stays pristine.
   report:

@@ -18,6 +18,7 @@ export const SOURCE_TOOLS = /** @type {const} */ ([
   "trident",
   "chariot",
   "shodan",
+  "cisa-advisories",
   "manual",
 ]);
 

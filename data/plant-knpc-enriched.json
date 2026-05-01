@@ -1,0 +1,2042 @@
+{
+  "plant_id": "plant-knpc",
+  "plant_name": "knpc 2",
+  "sector": "energy",
+  "zones": [
+    {
+      "zone_id": "z_3_party_zone",
+      "name": "3 Party Zone",
+      "level": "L2",
+      "description": "3 Party Zone"
+    },
+    {
+      "zone_id": "z_sis_zone",
+      "name": "SIS Zone",
+      "level": "L1",
+      "description": "SIS Zone"
+    },
+    {
+      "zone_id": "z_control_system_zone_dcs_ows",
+      "name": "Control System Zone DCS OWS",
+      "level": "L2",
+      "description": "DCS OWS"
+    },
+    {
+      "zone_id": "z_control_system_zone",
+      "name": "Control System Zone",
+      "level": "L2",
+      "description": "107OW1 107LH1 107LH2"
+    },
+    {
+      "zone_id": "z_3_rd_party_zone",
+      "name": "3 Rd Party Zone",
+      "level": "L2",
+      "description": "3 rd Party Zone"
+    },
+    {
+      "zone_id": "z_dmz_demilitarized_zone",
+      "name": "DMZ Demilitarized Zone",
+      "level": "L3.5",
+      "description": "ePO ePolicy Orchestrator (Trellix endpoint protection)"
+    },
+    {
+      "zone_id": "z_third_party_zone",
+      "name": "THIRD PARTY ZONE",
+      "level": "L2",
+      "description": "DRAWING: ME-20420-RMP-ZCD-001"
+    },
+    {
+      "zone_id": "z_cybersecurity_zone",
+      "name": "CyberSecurity Zone",
+      "level": "L3.5",
+      "description": "VM1-PDC+Radius VM1-SDC+Radius (Centralized"
+    },
+    {
+      "zone_id": "z_rd_party_zone",
+      "name": "Rd Party Zone",
+      "level": "L2",
+      "description": "LOCATION – RCC (WS#1 to WS#7)"
+    },
+    {
+      "zone_id": "z_fgs_zone",
+      "name": "FGS Zone",
+      "level": "L1",
+      "description": "(DCS/SIS/FGS/3 rd Party System)"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "a_ca_server_vm",
+      "name": "CA Server VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_centralized_nas_server",
+      "name": "Centralized NAS Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cs_virtualization_host_server",
+      "name": "CS Virtualization Host Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cybersecurity_virtualized_host_server_1",
+      "name": "Cybersecurity Virtualized Host Server - 1",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cybersecurity_virtualized_host_server_2",
+      "name": "Cybersecurity Virtualized Host Server - 2",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_dcs_vm_host_server",
+      "name": "DCS VM Host Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_dcs_vm_host_servers",
+      "name": "DCS VM Host Servers",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_epo_vm",
+      "name": "EPO VM",
+      "asset_type": "scada-server",
+      "vendor": "Trellix (formerly McAfee)",
+      "model": "ePolicy Orchestrator",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_log_server_vm",
+      "name": "Log Server VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_npm_vm",
+      "name": "NPM VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ntp_server",
+      "name": "NTP Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_radius_vm",
+      "name": "RADIUS VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_wsus_vm",
+      "name": "WSUS VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cs_thin_client",
+      "name": "CS Thin Client",
+      "asset_type": "hmi",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_dcs_thin_client",
+      "name": "DCS Thin Client",
+      "asset_type": "hmi",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_foxboro_controllers",
+      "name": "Foxboro Controllers",
+      "asset_type": "plc",
+      "vendor": "Schneider Electric (Foxboro)",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 9,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_primary_domain_controller",
+      "name": "Primary Domain Controller",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 9,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_secondary_domain_controller",
+      "name": "Secondary Domain Controller",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 9,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw1-02",
+      "name": "107 - FAR WS#7 107FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw3-04",
+      "name": "107 - FAR WS#7 107FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw5-06",
+      "name": "107 - FAR WS#7 107FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw7-08",
+      "name": "107 - FAR WS#7 107FW7/08",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-125fw1-02",
+      "name": "107 - FAR WS#7 125FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-125fw3-04",
+      "name": "107 - FAR WS#7 125FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw1-02",
+      "name": "107 - FAR WS#7 329FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw3-04",
+      "name": "107 - FAR WS#7 329FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw5-06",
+      "name": "107 - FAR WS#7 329FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw7-08",
+      "name": "107 - FAR WS#7 329FW7/08",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_144-far-ws-1-144fw1-02",
+      "name": "144 FAR WS#1 144FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_144-far-ws-1-144fw3-04",
+      "name": "144 FAR WS#1 144FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_144-far-ws-1-144fw5-06",
+      "name": "144 FAR WS#1 144FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_153-far-ws-4-153fw1-02",
+      "name": "153 FAR WS#4 153FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ngod-ws-1-058fw1-02",
+      "name": "NGOD WS#1 058FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rcc-common-ghifw1-02",
+      "name": "RCC COMMON GHIFW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rcr-ws-7-025fw1-02",
+      "name": "RCR WS#7 025FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rcr-ws-7-025fw3-04",
+      "name": "RCR WS#7 025FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-1-043fw1-02",
+      "name": "RMP WS#1 043FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-2-041fw1-02",
+      "name": "RMP WS#2 041FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-2-042fw1-02",
+      "name": "RMP WS#2 042FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-3-048fw1-02",
+      "name": "RMP WS#3 048FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-051fw1-02",
+      "name": "RMP WS#4 051FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-051fw3-04",
+      "name": "RMP WS#4 051FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-051fw5-06",
+      "name": "RMP WS#4 051FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-057fw1-02",
+      "name": "RMP WS#4 057FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-057fw3-04",
+      "name": "RMP WS#4 057FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-057fw5-06",
+      "name": "RMP WS#4 057FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-5-080fw1-02",
+      "name": "RMP WS#5 080FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-057fw7-08",
+      "name": "UCR WS#4 057FW7/08",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-097fw1-02",
+      "name": "UCR WS#4 097FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-097fw3-04",
+      "name": "UCR WS#4 097FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-097fw5-06",
+      "name": "UCR WS#4 097FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-105fw1-02",
+      "name": "UCR WS#4 105FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    }
+  ],
+  "connectivity": [
+    {
+      "source_asset_id": "a_ca_server_vm",
+      "target_asset_id": "a_cs_thin_client",
+      "protocol": "opc-ua",
+      "port": 4840,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_cs_thin_client",
+      "target_asset_id": "a_primary_domain_controller",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_dcs_vm_host_server",
+      "target_asset_id": "a_dcs_thin_client",
+      "protocol": "opc-ua",
+      "port": 4840,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_dcs_thin_client",
+      "target_asset_id": "a_foxboro_controllers",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    }
+  ],
+  "process_functions": [],
+  "demo_scenarios": [],
+  "onboarding_meta": {
+    "saved_at": "2026-04-28T15:37:21.700Z",
+    "drawings": [
+      {
+        "name": "ME-20420-RMP-ZCD-001 Rev C - Commented.pdf",
+        "url": "/uploads/draft/ME-20420-RMP-ZCD-001_Rev_C_-_Commented.pdf",
+        "size": 2345026
+      }
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "vuln_id": "f_08d26ee0327a",
+      "cve": "SUPPLY-f_08d26ee0327a",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-107fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_08d26ee0327a"
+    },
+    {
+      "vuln_id": "f_df91af72f8da",
+      "cve": "SUPPLY-f_df91af72f8da",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-107fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_df91af72f8da"
+    },
+    {
+      "vuln_id": "f_694e6518955c",
+      "cve": "SUPPLY-f_694e6518955c",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-107fw5-06",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_694e6518955c"
+    },
+    {
+      "vuln_id": "f_fba3d27eb119",
+      "cve": "SUPPLY-f_fba3d27eb119",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-107fw7-08",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_fba3d27eb119"
+    },
+    {
+      "vuln_id": "f_3db76c2085ee",
+      "cve": "SUPPLY-f_3db76c2085ee",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-125fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_3db76c2085ee"
+    },
+    {
+      "vuln_id": "f_f2b2a52193ad",
+      "cve": "SUPPLY-f_f2b2a52193ad",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-125fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_f2b2a52193ad"
+    },
+    {
+      "vuln_id": "f_55d107eab6c3",
+      "cve": "SUPPLY-f_55d107eab6c3",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-329fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_55d107eab6c3"
+    },
+    {
+      "vuln_id": "f_501178d60509",
+      "cve": "SUPPLY-f_501178d60509",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-329fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_501178d60509"
+    },
+    {
+      "vuln_id": "f_fa5a4a70d2d5",
+      "cve": "SUPPLY-f_fa5a4a70d2d5",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-329fw5-06",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_fa5a4a70d2d5"
+    },
+    {
+      "vuln_id": "f_f992d70dd986",
+      "cve": "SUPPLY-f_f992d70dd986",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_107-far-ws-7-329fw7-08",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_f992d70dd986"
+    },
+    {
+      "vuln_id": "f_78c725d5e154",
+      "cve": "SUPPLY-f_78c725d5e154",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_144-far-ws-1-144fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_78c725d5e154"
+    },
+    {
+      "vuln_id": "f_07d0edd12354",
+      "cve": "SUPPLY-f_07d0edd12354",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_144-far-ws-1-144fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_07d0edd12354"
+    },
+    {
+      "vuln_id": "f_f5a68b123387",
+      "cve": "SUPPLY-f_f5a68b123387",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_144-far-ws-1-144fw5-06",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_f5a68b123387"
+    },
+    {
+      "vuln_id": "f_dccded921046",
+      "cve": "SUPPLY-f_dccded921046",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_153-far-ws-4-153fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_dccded921046"
+    },
+    {
+      "vuln_id": "f_6f6f27f92cbb",
+      "cve": "SUPPLY-f_6f6f27f92cbb",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_ngod-ws-1-058fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_6f6f27f92cbb"
+    },
+    {
+      "vuln_id": "f_ac446bbc2680",
+      "cve": "SUPPLY-f_ac446bbc2680",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rcc-common-ghifw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_ac446bbc2680"
+    },
+    {
+      "vuln_id": "f_3e5a2efb5632",
+      "cve": "SUPPLY-f_3e5a2efb5632",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rcr-ws-7-025fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_3e5a2efb5632"
+    },
+    {
+      "vuln_id": "f_1bc583b3972e",
+      "cve": "SUPPLY-f_1bc583b3972e",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rcr-ws-7-025fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_1bc583b3972e"
+    },
+    {
+      "vuln_id": "f_435dd5a16525",
+      "cve": "SUPPLY-f_435dd5a16525",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-1-043fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_435dd5a16525"
+    },
+    {
+      "vuln_id": "f_c1173f14a7d5",
+      "cve": "SUPPLY-f_c1173f14a7d5",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-2-041fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_c1173f14a7d5"
+    },
+    {
+      "vuln_id": "f_d74ec789614e",
+      "cve": "SUPPLY-f_d74ec789614e",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-2-042fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_d74ec789614e"
+    },
+    {
+      "vuln_id": "f_9086fbce90a9",
+      "cve": "SUPPLY-f_9086fbce90a9",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-3-048fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_9086fbce90a9"
+    },
+    {
+      "vuln_id": "f_a2568abef86e",
+      "cve": "SUPPLY-f_a2568abef86e",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-4-051fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_a2568abef86e"
+    },
+    {
+      "vuln_id": "f_6cd4ca4b8c47",
+      "cve": "SUPPLY-f_6cd4ca4b8c47",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-4-051fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_6cd4ca4b8c47"
+    },
+    {
+      "vuln_id": "f_40fee5963d88",
+      "cve": "SUPPLY-f_40fee5963d88",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-4-051fw5-06",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_40fee5963d88"
+    },
+    {
+      "vuln_id": "f_0d73b0e193a2",
+      "cve": "SUPPLY-f_0d73b0e193a2",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-4-057fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_0d73b0e193a2"
+    },
+    {
+      "vuln_id": "f_4e64ccae9b77",
+      "cve": "SUPPLY-f_4e64ccae9b77",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-4-057fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_4e64ccae9b77"
+    },
+    {
+      "vuln_id": "f_7b22258064b6",
+      "cve": "SUPPLY-f_7b22258064b6",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-4-057fw5-06",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_7b22258064b6"
+    },
+    {
+      "vuln_id": "f_9c56b0d770a6",
+      "cve": "SUPPLY-f_9c56b0d770a6",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_rmp-ws-5-080fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_9c56b0d770a6"
+    },
+    {
+      "vuln_id": "f_f7b1dd9ca3a2",
+      "cve": "SUPPLY-f_f7b1dd9ca3a2",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_ucr-ws-4-057fw7-08",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_f7b1dd9ca3a2"
+    },
+    {
+      "vuln_id": "f_09de938f3838",
+      "cve": "SUPPLY-f_09de938f3838",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_ucr-ws-4-097fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_09de938f3838"
+    },
+    {
+      "vuln_id": "f_93f572192d81",
+      "cve": "SUPPLY-f_93f572192d81",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_ucr-ws-4-097fw3-04",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_93f572192d81"
+    },
+    {
+      "vuln_id": "f_84f2764e9df3",
+      "cve": "SUPPLY-f_84f2764e9df3",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_ucr-ws-4-097fw5-06",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_84f2764e9df3"
+    },
+    {
+      "vuln_id": "f_3e69fbba8439",
+      "cve": "SUPPLY-f_3e69fbba8439",
+      "description": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "severity": "high",
+      "exploitability": 0.9,
+      "asset_id": "a_ucr-ws-4-105fw1-02",
+      "source_tool": "cisa-advisories",
+      "evidence_finding_id": "f_3e69fbba8439"
+    }
+  ],
+  "evidence_findings": [
+    {
+      "finding_id": "f_08d26ee0327a",
+      "asset_id": "a_107-far-ws-7-107fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_df91af72f8da",
+      "asset_id": "a_107-far-ws-7-107fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_694e6518955c",
+      "asset_id": "a_107-far-ws-7-107fw5-06",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_fba3d27eb119",
+      "asset_id": "a_107-far-ws-7-107fw7-08",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_3db76c2085ee",
+      "asset_id": "a_107-far-ws-7-125fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_f2b2a52193ad",
+      "asset_id": "a_107-far-ws-7-125fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_55d107eab6c3",
+      "asset_id": "a_107-far-ws-7-329fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_501178d60509",
+      "asset_id": "a_107-far-ws-7-329fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_fa5a4a70d2d5",
+      "asset_id": "a_107-far-ws-7-329fw5-06",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_f992d70dd986",
+      "asset_id": "a_107-far-ws-7-329fw7-08",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_78c725d5e154",
+      "asset_id": "a_144-far-ws-1-144fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_07d0edd12354",
+      "asset_id": "a_144-far-ws-1-144fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_f5a68b123387",
+      "asset_id": "a_144-far-ws-1-144fw5-06",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_dccded921046",
+      "asset_id": "a_153-far-ws-4-153fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_6f6f27f92cbb",
+      "asset_id": "a_ngod-ws-1-058fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_ac446bbc2680",
+      "asset_id": "a_rcc-common-ghifw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_3e5a2efb5632",
+      "asset_id": "a_rcr-ws-7-025fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_1bc583b3972e",
+      "asset_id": "a_rcr-ws-7-025fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_435dd5a16525",
+      "asset_id": "a_rmp-ws-1-043fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_c1173f14a7d5",
+      "asset_id": "a_rmp-ws-2-041fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_d74ec789614e",
+      "asset_id": "a_rmp-ws-2-042fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_9086fbce90a9",
+      "asset_id": "a_rmp-ws-3-048fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_a2568abef86e",
+      "asset_id": "a_rmp-ws-4-051fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_6cd4ca4b8c47",
+      "asset_id": "a_rmp-ws-4-051fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_40fee5963d88",
+      "asset_id": "a_rmp-ws-4-051fw5-06",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_0d73b0e193a2",
+      "asset_id": "a_rmp-ws-4-057fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_4e64ccae9b77",
+      "asset_id": "a_rmp-ws-4-057fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_7b22258064b6",
+      "asset_id": "a_rmp-ws-4-057fw5-06",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_9c56b0d770a6",
+      "asset_id": "a_rmp-ws-5-080fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_f7b1dd9ca3a2",
+      "asset_id": "a_ucr-ws-4-057fw7-08",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_09de938f3838",
+      "asset_id": "a_ucr-ws-4-097fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_93f572192d81",
+      "asset_id": "a_ucr-ws-4-097fw3-04",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_84f2764e9df3",
+      "asset_id": "a_ucr-ws-4-097fw5-06",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    },
+    {
+      "finding_id": "f_3e69fbba8439",
+      "asset_id": "a_ucr-ws-4-105fw1-02",
+      "finding_type": "supply_chain",
+      "severity": "high",
+      "evidence": "ICSA-25-107-03 · Schneider Electric ConneXium · CVSS 7.8 · unspecified · CVE-2025-2222, CVE-2025-2223",
+      "source_tool": "cisa-advisories",
+      "detected_at": "2026-04-29T04:30:45.485Z",
+      "confidence": 0.9,
+      "evidence_obj": {
+        "advisory_id": "ICSA-25-107-03",
+        "advisory_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-03",
+        "cve_ids": [
+          "CVE-2025-2222",
+          "CVE-2025-2223"
+        ],
+        "matched_vendor_canonical": "Schneider Electric",
+        "matched_product_family": "ConneXium",
+        "asset_vendor_raw": "Schneider Electric",
+        "asset_model_raw": "ConneXium",
+        "kev_listed": false,
+        "exploit_gating": "unspecified",
+        "cvss_base": 7.8,
+        "match_score": 17,
+        "rationale": "Schneider Electric ConneXium firmware unspecified — assume affected until captured during onsite review; matches ICSA-25-107-03.",
+        "source_feed": "cisa-ics-cert"
+      }
+    }
+  ],
+  "evidence_meta": {
+    "merged_at": "2026-04-29T04:31:20.985Z",
+    "accepted_count": 34,
+    "rejected_count": 0,
+    "rejections": [],
+    "rejections_truncated": false
+  }
+}

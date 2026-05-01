@@ -1,0 +1,46 @@
+name: refresh-feeds
+
+# Pulls CISA ICS-CERT (CSAF), CISA Known Exploited Vulnerabilities, and NVD CVE
+# detail records every 2 days. Commits the refreshed feed JSON files back to
+# the repo so deployed builds always have current data.
+#
+# To unlock NVD's higher rate limit, register a free key at
+# https://nvd.nist.gov/developers/request-an-api-key and store it as the repo
+# secret NVD_API_KEY.
+
+on:
+  schedule:
+    - cron: "13 6 */2 * *"   # 06:13 UTC every 2 days
+  workflow_dispatch:          # also allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run feed pullers
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: node scripts/feeds/pull-all.mjs
+
+      - name: Commit refreshed feeds
+        run: |
+          git config user.name  "feeds-refresh-bot"
+          git config user.email "noreply@malkansolutions.com"
+          if git diff --quiet -- data/feeds/; then
+            echo "No feed changes."
+            exit 0
+          fi
+          git add data/feeds/
+          git commit -m "chore(feeds): scheduled refresh $(date -u +%Y-%m-%d)"
+          git push

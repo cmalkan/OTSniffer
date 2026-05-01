@@ -453,5 +453,130 @@
     "rejected_count": 0,
     "rejections": [],
     "rejections_truncated": false
-  }
+  },
+  "attack_paths": [
+    {
+      "path_id": "ap_demo_triton_class",
+      "source_finding_id": "f_seed_11_sis_zone",
+      "compromised_asset_id": "a_eng_01",
+      "target_asset_id": "a_sis_01",
+      "kill_chain_phase": "inhibit-response",
+      "rationale": "Attacker on the engineering workstation reaches the SIS controller in 1 hop via the engineering protocol, downloads attacker-supplied safety logic, and silences the trip — TRITON/TRISIS pattern (Saudi Aramco 2017). Trigger is a zone-isolation finding (mesh_gap), not a matched advisory; advisory backing is pending CISA ICS-CERT coverage of TSAA / Triconex. Confidence elevated by TTP cluster overlap.",
+      "hops": [
+        {
+          "from_asset_id": "a_eng_01",
+          "to_asset_id": "a_sis_01",
+          "protocol": "tsaa",
+          "leverage": "TriStation engineering session over TSAA with cached project file; default keyswitch position on the safety controller",
+          "mitre_attack_for_ics": ["T0843", "T0858", "T0879"],
+          "exploit_gating": "requires-credentials",
+          "hop_confidence": 0.7
+        }
+      ],
+      "path_confidence": 0.805,
+      "matched_ttp_cluster": "triton-trisis",
+      "animation": {
+        "color_token": "--sev-critical",
+        "speed_ms_per_hop": 640,
+        "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "respects_prefers_reduced_motion": true,
+        "label_each_hop": true,
+        "opacity_by_gating": {
+          "confirmed-remote-unauth": 1.0,
+          "confirmed-remote-auth": 0.95,
+          "requires-credentials": 0.85,
+          "requires-default-creds": 0.9,
+          "requires-adjacent": 0.75,
+          "requires-physical": 0.55,
+          "requires-specific-firmware": 0.7,
+          "theoretical-only": 0.45
+        }
+      }
+    },
+    {
+      "path_id": "ap_demo_dcs_setpoint",
+      "source_finding_id": "f_seed_05_eng_unpinned",
+      "compromised_asset_id": "a_eng_01",
+      "target_asset_id": "a_plc_01",
+      "kill_chain_phase": "impair-control",
+      "rationale": "Attacker on the engineering workstation pivots to the boiler PLC via S7 over the OT VLAN, then issues unauthorized command messages to manipulate boiler setpoints — engineering-protocol abuse, no exploit needed.",
+      "hops": [
+        {
+          "from_asset_id": "a_eng_01",
+          "to_asset_id": "a_plc_01",
+          "protocol": "s7comm",
+          "leverage": "S7 engineering session; default operator-role credential on the controller still active (T0859 valid accounts)",
+          "mitre_attack_for_ics": ["T0859", "T0855", "T0831"],
+          "exploit_gating": "requires-default-creds",
+          "hop_confidence": 0.75
+        }
+      ],
+      "path_confidence": 0.75,
+      "matched_ttp_cluster": null,
+      "animation": {
+        "color_token": "--sev-critical",
+        "speed_ms_per_hop": 600,
+        "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "respects_prefers_reduced_motion": true,
+        "label_each_hop": true,
+        "opacity_by_gating": {
+          "confirmed-remote-unauth": 1.0,
+          "confirmed-remote-auth": 0.95,
+          "requires-credentials": 0.85,
+          "requires-default-creds": 0.9,
+          "requires-adjacent": 0.75,
+          "requires-physical": 0.55,
+          "requires-specific-firmware": 0.7,
+          "theoretical-only": 0.45
+        }
+      }
+    },
+    {
+      "path_id": "ap_demo_volt_typhoon",
+      "source_finding_id": "f_seed_07_hist_openssl",
+      "compromised_asset_id": "a_hist_01",
+      "target_asset_id": "a_plc_01",
+      "kill_chain_phase": "lateral-movement",
+      "rationale": "Attacker dwelling on the Plant Historian uses cached PI Server credentials to reach the engineering workstation, then exploits an unauthenticated CIP service on the boiler PLC — Volt-Typhoon-class living-off-the-land via valid accounts and remote services.",
+      "hops": [
+        {
+          "from_asset_id": "a_hist_01",
+          "to_asset_id": "a_eng_01",
+          "protocol": "osi-pi",
+          "leverage": "Cached PI Server service-account credential reused on the engineering workstation",
+          "mitre_attack_for_ics": ["T0859", "T0886"],
+          "exploit_gating": "requires-credentials",
+          "hop_confidence": 0.7
+        },
+        {
+          "from_asset_id": "a_eng_01",
+          "to_asset_id": "a_plc_01",
+          "protocol": "ethernet-ip",
+          "leverage": "Unauthenticated CIP service on the controller — class of issue covered by multiple CISA ICSA advisories on EtherNet/IP CIP implementations; specific advisory pending matcher coverage",
+          "mitre_attack_for_ics": ["T0866", "T0843"],
+          "exploit_gating": "confirmed-remote-unauth",
+          "hop_confidence": 0.9
+        }
+      ],
+      "path_confidence": 0.735,
+      "matched_ttp_cluster": "volt-typhoon",
+      "animation": {
+        "color_token": "--sev-critical",
+        "speed_ms_per_hop": 480,
+        "easing": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "respects_prefers_reduced_motion": true,
+        "label_each_hop": true,
+        "opacity_by_gating": {
+          "confirmed-remote-unauth": 1.0,
+          "confirmed-remote-auth": 0.95,
+          "requires-credentials": 0.85,
+          "requires-default-creds": 0.9,
+          "requires-adjacent": 0.75,
+          "requires-physical": 0.55,
+          "requires-specific-firmware": 0.7,
+          "theoretical-only": 0.45
+        }
+      }
+    }
+  ]
 }

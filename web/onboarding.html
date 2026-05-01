@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer — Onboarding</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    /* Onboarding-specific tweaks. Stays in this file rather than polluting the
+       global stylesheet — these only apply to a single page. */
+    .ob-step {
+      border-top: 1px solid var(--line);
+      padding-top: 28px;
+      margin-bottom: 36px;
+    }
+    .ob-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 24px;
+    }
+    .ob-grid .full { grid-column: span 2; }
+    .ob-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12.5px;
+    }
+    .ob-table th {
+      background: var(--surface-2);
+      color: var(--ink-muted);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    .ob-table td {
+      padding: 6px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    .ob-table tr:last-child td { border-bottom: 0; }
+    .ob-table input, .ob-table select {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid transparent;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 12.5px;
+      color: var(--ink);
+      border-radius: 6px;
+    }
+    .ob-table input:focus, .ob-table select:focus {
+      outline: none;
+      border-color: var(--mk-cyan);
+      background: var(--surface-2);
+    }
+    .ob-table .row-action {
+      text-align: right;
+      width: 32px;
+    }
+    .ob-table .row-action button {
+      background: transparent;
+      border: 1px solid var(--line-strong);
+      color: var(--ink-dim);
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color var(--dur-hover) var(--ease), border-color var(--dur-hover) var(--ease);
+    }
+    .ob-table .row-action button:hover {
+      color: var(--sev-critical);
+      border-color: var(--sev-critical);
+    }
+    .ob-drop {
+      border: 2px dashed var(--line-strong);
+      border-radius: 14px;
+      padding: 28px;
+      text-align: center;
+      color: var(--ink-3);
+      background: var(--surface);
+      transition: border-color var(--dur-hover) var(--ease), background var(--dur-hover) var(--ease);
+      cursor: pointer;
+    }
+    .ob-drop.is-drag { border-color: var(--mk-cyan); background: var(--mk-cyan-tint); }
+    .ob-drop strong { color: var(--ink); font-weight: 600; }
+    .ob-drop .hint { font-size: 13px; color: var(--ink-muted); margin-top: 8px; }
+    .ob-drop input { display: none; }
+    .ob-status {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 12px;
+      padding: 8px 14px;
+      border-left: 2px solid var(--mk-cyan);
+      background: var(--mk-cyan-tint);
+      border-radius: 0 6px 6px 0;
+      letter-spacing: 0.02em;
+      display: none;
+    }
+    .ob-status.is-error { border-left-color: var(--sev-critical); background: var(--sev-critical-tint); color: var(--sev-critical); }
+    .ob-status.show { display: block; }
+    .ob-toolbar {
+      display: flex;
+      gap: 10px;
+      margin: 12px 0;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .ob-help {
+      font-size: 13px;
+      color: var(--ink-3);
+      line-height: 1.55;
+      max-width: 70ch;
+      margin-bottom: 18px;
+    }
+    .ob-help code {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--mk-cyan-800);
+      background: var(--mk-cyan-tint);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+    .ob-attach-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .ob-attach {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 14px;
+      padding: 10px 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      align-items: center;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+    }
+    .ob-attach .thumb {
+      width: 56px; height: 40px;
+      background: var(--surface-2);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: var(--ink-muted);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      overflow: hidden;
+    }
+    .ob-attach .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .ob-attach .name { color: var(--ink); font-weight: 500; }
+    .ob-attach .size { color: var(--ink-muted); }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Malkan Solutions — OTSniffer">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-meta">
+        <span class="brand-product">OTSniffer</span>
+        <span class="brand-tagline">Malkan Solutions · OT Risk Assessment</span>
+      </span>
+    </a>
+
+    <div class="title-block">
+      <h1 class="title">Plant <em>Onboarding</em></h1>
+      <div class="subtitle">Build a new plant fixture from a customer BOM. Drop a .csv, .docx, or .pdf table and review the extracted rows, or fill the form by hand. Network drawings can be uploaded as reference attachments.</div>
+    </div>
+
+    <div class="live-strip">
+      <span class="live-pulse">Onboarding · Draft</span>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="/index.html">Posture</a>
+    <a href="/network-graph.html">Architecture &amp; BOM</a>
+    <a href="/asset-detail.html">Asset Detail</a>
+    <a class="active" href="/onboarding.html">Onboarding</a>
+  </nav>
+
+  <!-- Step 1 — plant identity -->
+  <section class="ob-step" data-reveal="1">
+    <div class="section-head">
+      <h2 class="section-title" data-tag="01">Plant Identity</h2>
+      <span class="section-meta">required · used as document title</span>
+    </div>
+    <div class="ob-grid">
+      <div>
+        <label class="label">Plant name</label>
+        <input class="input" id="plantName" placeholder="e.g. Riverside Regional Water Utility" />
+      </div>
+      <div>
+        <label class="label">Sector</label>
+        <select class="input" id="plantSector">
+          <option value="water">Water / Wastewater</option>
+          <option value="energy">Energy / Power</option>
+          <option value="oil-gas">Oil &amp; Gas</option>
+          <option value="manufacturing">Manufacturing</option>
+          <option value="medical">Medical Manufacturing</option>
+          <option value="food">Food &amp; Packaging</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label class="label">Plant ID (auto-generated from name)</label>
+        <input class="input" id="plantId" readonly placeholder="plant-…" />
+      </div>
+      <div>
+        <label class="label">Onboarding key (used as URL tab)</label>
+        <input class="input" id="plantKey" placeholder="e.g. riverside" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 2 — BOM -->
+  <section class="ob-step" data-reveal="2">
+    <div class="section-head">
+      <h2 class="section-title" data-tag="02">Bill of Materials</h2>
+      <span class="section-meta" id="bomMeta">0 assets</span>
+    </div>
+    <div class="ob-help">
+      Drop a CSV, Word, or PDF document containing an asset table. Common headers like <code>asset_id</code>, <code>vendor</code>, <code>model</code>, <code>firmware</code>, <code>zone</code>, <code>criticality</code> are auto-mapped. Review and correct the extracted rows before saving — extraction is heuristic, not authoritative. CSV is most reliable; PDF is least reliable.
+    </div>
+    <label class="ob-drop" id="bomDrop">
+      <strong>Drop a BOM file here</strong> or click to browse
+      <div class="hint">Accepts .csv, .xlsx (CSV-format only), .docx, .pdf · max 25 MB</div>
+      <input type="file" id="bomFile" accept=".csv,.docx,.pdf,.txt" />
+    </label>
+    <div class="ob-status" id="bomStatus"></div>
+
+    <div class="ob-toolbar">
+      <button class="btn btn-ghost" id="bomAddRow">+ add row</button>
+      <button class="btn btn-ghost" id="bomClear">clear table</button>
+      <button class="btn btn-ghost" id="bomLoadSample">load sample</button>
+    </div>
+
+    <div style="border:1px solid var(--line); border-radius:12px; overflow:auto; max-height:480px;">
+      <table class="ob-table" id="bomTable">
+        <thead>
+          <tr>
+            <th>asset_id</th>
+            <th>name</th>
+            <th>asset_type</th>
+            <th>function</th>
+            <th>vendor</th>
+            <th>model</th>
+            <th>firmware</th>
+            <th>ip_address</th>
+            <th>zone_id</th>
+            <th>crit</th>
+            <th>process_tag</th>
+            <th class="row-action"></th>
+          </tr>
+        </thead>
+        <tbody id="bomBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Step 3 — zones -->
+  <section class="ob-step" data-reveal="3">
+    <div class="section-head">
+      <h2 class="section-title" data-tag="03">Network Zones</h2>
+      <span class="section-meta" id="zoneMeta">0 zones</span>
+    </div>
+    <div class="ob-help">
+      List the network segments / VLANs the assets above live in, with their Purdue Reference Model level. Levels: <code>L0</code> field/process, <code>L1</code> basic control, <code>L2</code> supervisory/HMI, <code>L3</code> operations control, <code>L3.5</code> OT DMZ, <code>L4</code> IT corporate.
+    </div>
+    <div class="ob-toolbar">
+      <button class="btn btn-ghost" id="zoneAddRow">+ add zone</button>
+    </div>
+    <div style="border:1px solid var(--line); border-radius:12px; overflow:auto;">
+      <table class="ob-table" id="zoneTable">
+        <thead>
+          <tr>
+            <th>zone_id</th>
+            <th>name</th>
+            <th>level</th>
+            <th>description</th>
+            <th class="row-action"></th>
+          </tr>
+        </thead>
+        <tbody id="zoneBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Step 4 — connectivity -->
+  <section class="ob-step" data-reveal="4">
+    <div class="section-head">
+      <h2 class="section-title" data-tag="04">Connectivity</h2>
+      <span class="section-meta" id="connMeta">0 conduits</span>
+    </div>
+    <div class="ob-help">
+      Each row is one "asset A talks to asset B" conduit. Protocols include
+      <code>opc-ua</code>, <code>modbus-tcp</code>, <code>ethernet-ip</code>, <code>s7</code>, <code>dnp3</code>, <code>profinet</code>, <code>https</code>, <code>http</code>.
+      Trust levels: <code>high</code> (declared/expected), <code>medium</code>, <code>low</code> (segmentation-sensitive).
+    </div>
+    <div class="ob-toolbar">
+      <button class="btn btn-ghost" id="connAddRow">+ add conduit</button>
+    </div>
+    <div style="border:1px solid var(--line); border-radius:12px; overflow:auto;">
+      <table class="ob-table" id="connTable">
+        <thead>
+          <tr>
+            <th>source_asset_id</th>
+            <th>target_asset_id</th>
+            <th>protocol</th>
+            <th>port</th>
+            <th>trust_level</th>
+            <th>direction</th>
+            <th class="row-action"></th>
+          </tr>
+        </thead>
+        <tbody id="connBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Step 5 — drawings -->
+  <section class="ob-step" data-reveal="5">
+    <div class="section-head">
+      <h2 class="section-title" data-tag="05">Network Drawings</h2>
+      <span class="section-meta">reference attachments</span>
+    </div>
+    <div class="ob-help">
+      Upload one-line diagrams, network schematics, or vendor-provided architecture drawings. PDF uploads are parsed client-side for zone names, VLAN members, and conduit hints, then used to prefill Steps 2-4. Review the inferred topology before saving.
+    </div>
+    <label class="ob-drop" id="drawingDrop">
+      <strong>Drop a drawing here</strong> or click to browse
+      <div class="hint">Accepts .png, .jpg, .pdf, .svg · stored under data/uploads/{key}/</div>
+      <input type="file" id="drawingFile" accept=".png,.jpg,.jpeg,.pdf,.svg" />
+    </label>
+    <div class="ob-status" id="drawingStatus"></div>
+    <div class="ob-attach-list" id="drawingList"></div>
+  </section>
+
+  <!-- Step 6 — save -->
+  <section class="ob-step" data-reveal="6">
+    <div class="section-head">
+      <h2 class="section-title" data-tag="06">Save &amp; Activate</h2>
+      <span class="section-meta">writes plant-{key}-enriched.json + adds to tab strip</span>
+    </div>
+    <div class="ob-toolbar">
+      <button class="btn" id="saveBtn">Save plant fixture</button>
+      <button class="btn btn-ghost" id="downloadBtn">Download as JSON</button>
+      <button class="btn btn-ghost" id="previewBtn">Preview JSON</button>
+    </div>
+    <div class="ob-status" id="saveStatus"></div>
+    <pre id="previewBox" style="display:none; max-height:400px; overflow:auto; background:var(--surface-2); border:1px solid var(--line); border-radius:8px; padding:14px; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:var(--ink-2); margin-top:12px"></pre>
+  </section>
+
+</div>
+
+<!-- Browser-side parsers loaded from CDN. mammoth handles .docx tables; pdf.js
+     handles PDF text extraction. Both stay client-side so customer BOM data
+     never leaves the customer's machine until the explicit Save click. -->
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.6.0/mammoth.browser.min.js"></script>
+<script type="module" src="/js/onboarding.js"></script>
+
+</body>
+</html>

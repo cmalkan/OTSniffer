@@ -1,0 +1,739 @@
+{
+  "plant_id": "plant-knpc",
+  "plant_name": "knpc 2",
+  "sector": "energy",
+  "zones": [
+    {
+      "zone_id": "z_3_party_zone",
+      "name": "3 Party Zone",
+      "level": "L2",
+      "description": "3 Party Zone"
+    },
+    {
+      "zone_id": "z_sis_zone",
+      "name": "SIS Zone",
+      "level": "L1",
+      "description": "SIS Zone"
+    },
+    {
+      "zone_id": "z_control_system_zone_dcs_ows",
+      "name": "Control System Zone DCS OWS",
+      "level": "L2",
+      "description": "DCS OWS"
+    },
+    {
+      "zone_id": "z_control_system_zone",
+      "name": "Control System Zone",
+      "level": "L2",
+      "description": "107OW1 107LH1 107LH2"
+    },
+    {
+      "zone_id": "z_3_rd_party_zone",
+      "name": "3 Rd Party Zone",
+      "level": "L2",
+      "description": "3 rd Party Zone"
+    },
+    {
+      "zone_id": "z_dmz_demilitarized_zone",
+      "name": "DMZ Demilitarized Zone",
+      "level": "L3.5",
+      "description": "ePO ePolicy Orchestrator (Trellix endpoint protection)"
+    },
+    {
+      "zone_id": "z_third_party_zone",
+      "name": "THIRD PARTY ZONE",
+      "level": "L2",
+      "description": "DRAWING: ME-20420-RMP-ZCD-001"
+    },
+    {
+      "zone_id": "z_cybersecurity_zone",
+      "name": "CyberSecurity Zone",
+      "level": "L3.5",
+      "description": "VM1-PDC+Radius VM1-SDC+Radius (Centralized"
+    },
+    {
+      "zone_id": "z_rd_party_zone",
+      "name": "Rd Party Zone",
+      "level": "L2",
+      "description": "LOCATION – RCC (WS#1 to WS#7)"
+    },
+    {
+      "zone_id": "z_fgs_zone",
+      "name": "FGS Zone",
+      "level": "L1",
+      "description": "(DCS/SIS/FGS/3 rd Party System)"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "a_ca_server_vm",
+      "name": "CA Server VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_centralized_nas_server",
+      "name": "Centralized NAS Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cs_virtualization_host_server",
+      "name": "CS Virtualization Host Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cybersecurity_virtualized_host_server_1",
+      "name": "Cybersecurity Virtualized Host Server - 1",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cybersecurity_virtualized_host_server_2",
+      "name": "Cybersecurity Virtualized Host Server - 2",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_dcs_vm_host_server",
+      "name": "DCS VM Host Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_dcs_vm_host_servers",
+      "name": "DCS VM Host Servers",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_epo_vm",
+      "name": "EPO VM",
+      "asset_type": "scada-server",
+      "vendor": "Trellix (formerly McAfee)",
+      "model": "ePolicy Orchestrator",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_log_server_vm",
+      "name": "Log Server VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_npm_vm",
+      "name": "NPM VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ntp_server",
+      "name": "NTP Server",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_radius_vm",
+      "name": "RADIUS VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_wsus_vm",
+      "name": "WSUS VM",
+      "asset_type": "scada-server",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_cs_thin_client",
+      "name": "CS Thin Client",
+      "asset_type": "hmi",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_dcs_thin_client",
+      "name": "DCS Thin Client",
+      "asset_type": "hmi",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 6,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_foxboro_controllers",
+      "name": "Foxboro Controllers",
+      "asset_type": "plc",
+      "vendor": "Schneider Electric (Foxboro)",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_control_system_zone",
+      "criticality_score": 9,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_primary_domain_controller",
+      "name": "Primary Domain Controller",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 9,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_secondary_domain_controller",
+      "name": "Secondary Domain Controller",
+      "asset_type": "plc",
+      "vendor": "",
+      "model": "",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "z_cybersecurity_zone",
+      "criticality_score": 9,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw1-02",
+      "name": "107 - FAR WS#7 107FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw3-04",
+      "name": "107 - FAR WS#7 107FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw5-06",
+      "name": "107 - FAR WS#7 107FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-107fw7-08",
+      "name": "107 - FAR WS#7 107FW7/08",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-125fw1-02",
+      "name": "107 - FAR WS#7 125FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-125fw3-04",
+      "name": "107 - FAR WS#7 125FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw1-02",
+      "name": "107 - FAR WS#7 329FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw3-04",
+      "name": "107 - FAR WS#7 329FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw5-06",
+      "name": "107 - FAR WS#7 329FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_107-far-ws-7-329fw7-08",
+      "name": "107 - FAR WS#7 329FW7/08",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_144-far-ws-1-144fw1-02",
+      "name": "144 FAR WS#1 144FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_144-far-ws-1-144fw3-04",
+      "name": "144 FAR WS#1 144FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_144-far-ws-1-144fw5-06",
+      "name": "144 FAR WS#1 144FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_153-far-ws-4-153fw1-02",
+      "name": "153 FAR WS#4 153FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ngod-ws-1-058fw1-02",
+      "name": "NGOD WS#1 058FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rcc-common-ghifw1-02",
+      "name": "RCC COMMON GHIFW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rcr-ws-7-025fw1-02",
+      "name": "RCR WS#7 025FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rcr-ws-7-025fw3-04",
+      "name": "RCR WS#7 025FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-1-043fw1-02",
+      "name": "RMP WS#1 043FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-2-041fw1-02",
+      "name": "RMP WS#2 041FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-2-042fw1-02",
+      "name": "RMP WS#2 042FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-3-048fw1-02",
+      "name": "RMP WS#3 048FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-051fw1-02",
+      "name": "RMP WS#4 051FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-051fw3-04",
+      "name": "RMP WS#4 051FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-051fw5-06",
+      "name": "RMP WS#4 051FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-057fw1-02",
+      "name": "RMP WS#4 057FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-057fw3-04",
+      "name": "RMP WS#4 057FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-4-057fw5-06",
+      "name": "RMP WS#4 057FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_rmp-ws-5-080fw1-02",
+      "name": "RMP WS#5 080FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-057fw7-08",
+      "name": "UCR WS#4 057FW7/08",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-097fw1-02",
+      "name": "UCR WS#4 097FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-097fw3-04",
+      "name": "UCR WS#4 097FW3/04",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-097fw5-06",
+      "name": "UCR WS#4 097FW5/06",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    },
+    {
+      "asset_id": "a_ucr-ws-4-105fw1-02",
+      "name": "UCR WS#4 105FW1/02",
+      "asset_type": "firewall",
+      "vendor": "Schneider Electric",
+      "model": "ConneXium",
+      "firmware_version": "",
+      "ip_address": "",
+      "zone_id": "",
+      "criticality_score": 5,
+      "process_tag": ""
+    }
+  ],
+  "connectivity": [
+    {
+      "source_asset_id": "a_ca_server_vm",
+      "target_asset_id": "a_cs_thin_client",
+      "protocol": "opc-ua",
+      "port": 4840,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_cs_thin_client",
+      "target_asset_id": "a_primary_domain_controller",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_dcs_vm_host_server",
+      "target_asset_id": "a_dcs_thin_client",
+      "protocol": "opc-ua",
+      "port": 4840,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    },
+    {
+      "source_asset_id": "a_dcs_thin_client",
+      "target_asset_id": "a_foxboro_controllers",
+      "protocol": "ethernet-ip",
+      "port": 44818,
+      "trust_level": "high",
+      "allowed_direction": "bi"
+    }
+  ],
+  "process_functions": [],
+  "demo_scenarios": [],
+  "onboarding_meta": {
+    "saved_at": "2026-04-28T15:37:21.700Z",
+    "drawings": [
+      {
+        "name": "ME-20420-RMP-ZCD-001 Rev C - Commented.pdf",
+        "url": "/uploads/draft/ME-20420-RMP-ZCD-001_Rev_C_-_Commented.pdf",
+        "size": 2345026
+      }
+    ]
+  }
+}

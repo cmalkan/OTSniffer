@@ -1,178 +1,411 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asset Detail</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTSniffer — Asset Detail</title>
   <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 <div class="app">
-  <div class="topbar">
+
+  <header class="topbar">
     <a class="brand" href="/" aria-label="Malkan Solutions — OTSniffer">
-      <img src="/assets/malkan-logo.png" alt="Malkan Solutions" />
+      <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-meta">
         <span class="brand-product">OTSniffer</span>
-        <span class="brand-tagline">Evidence-graded OT blast-radius</span>
+        <span class="brand-tagline">Malkan Solutions · OT Risk Assessment</span>
       </span>
     </a>
+
     <div class="title-block">
-      <h1 class="title">Asset Detail</h1>
-      <div class="subtitle">Asset-level risk contribution, vulnerabilities, conduits, downstream reachability, and process-function linkage.</div>
+      <h1 class="title" id="assetTitle">Asset <em>Detail</em></h1>
+      <div class="subtitle" id="assetSubtitle">Select an asset to view BOM, public advisories, scanner findings, and simulated blast radius.</div>
     </div>
-    <nav class="nav">
-      <a href="/index.html">Operations Dashboard</a>
-      <a href="/scenario-explorer.html">Scenario Explorer</a>
-      <a href="/network-graph.html">Network / Graph View</a>
-      <a class="active" href="/asset-detail.html">Asset Detail</a>
-      <a href="/scenario-comparison.html">Scenario Comparison</a>
-    </nav>
-  </div>
 
-  <div class="layout">
-    <aside class="panel filters">
-      <h2>Asset Selection</h2>
-      <label>Asset</label><select id="assetSel" class="input"></select>
-      <div class="row"><button class="btn btn-primary" id="loadBtn">Load Asset Evidence</button></div>
+    <div class="live-strip">
+      <select class="input" id="assetSelect" style="width:280px"></select>
+    </div>
+  </header>
 
-      <h2 style="margin-top:12px">Risk Summary</h2>
-      <div id="riskSummary" class="small">Select asset to compute blast-radius severity.</div>
-    </aside>
+  <nav class="nav">
+    <a href="/index.html">Posture</a>
+    <a href="/network-graph.html">Architecture &amp; BOM</a>
+    <a class="active" href="/asset-detail.html">Asset Detail</a>
+    <a href="/onboarding.html">Onboarding</a>
+  </nav>
 
-    <main class="panel" data-tabs>
-      <h2 id="assetName">Asset Metadata</h2>
-      <div class="tabs">
-        <button class="tab active" data-tab="meta">Metadata</button>
-        <button class="tab" data-tab="vuln">Vulnerabilities</button>
-        <button class="tab" data-tab="evidence">Evidence</button>
-        <button class="tab" data-tab="connections">Connections</button>
-        <button class="tab" data-tab="downstream">Downstream Reachability</button>
+  <div data-plant-tabs></div>
+
+  <section class="pipeline" data-reveal="1">
+    <div class="pipeline-stage">
+      <div class="stage-num">BOM</div>
+      <div class="stage-label">Vendor &amp; Model</div>
+      <div class="stage-value" id="bomVendor" style="font-size:24px; line-height:1.2">—</div>
+      <div class="stage-detail" id="bomModel">—</div>
+      <div class="stage-source" id="bomFirmware">Firmware: —</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-num">Zone</div>
+      <div class="stage-label">Purdue Placement</div>
+      <div class="stage-value" id="zoneLevel" style="font-size:24px">—</div>
+      <div class="stage-detail" id="zoneName">—</div>
+      <div class="stage-source" id="zoneNetwork">Network: —</div>
+    </div>
+    <div class="pipeline-stage">
+      <div class="stage-num">Advisories</div>
+      <div class="stage-label">Public CVE / ICS-CERT</div>
+      <div class="stage-value" id="advCount">—</div>
+      <div class="stage-detail" id="advBreakdown">—</div>
+      <div class="stage-source">Source: NVD · CISA · vendor PSIRT</div>
+    </div>
+    <div class="pipeline-stage is-posture" id="riskTile">
+      <div class="stage-num">Risk</div>
+      <div class="stage-label">Composite Score</div>
+      <div class="stage-value" id="assetRisk">—<span class="unit">/ 100</span></div>
+      <div class="stage-detail" id="assetWorstSev">—</div>
+      <div class="stage-source" id="assetCritLine">Criticality: —</div>
+    </div>
+  </section>
+
+  <div class="split">
+    <div>
+      <div class="section-head" data-reveal="2">
+        <h2 class="section-title" data-tag="01">Public Advisories</h2>
+        <span class="section-meta" id="advMeta">matched against BOM</span>
       </div>
+      <ul class="risk-feed" id="advFeed">
+        <li class="risk-row sev-low" style="grid-template-columns: 1fr"><div class="risk-detail">Loading…</div></li>
+      </ul>
 
-      <div data-panel="meta">
-        <div class="table-wrap"><table><tbody id="metaRows"></tbody></table></div>
+      <div class="section-head" data-reveal="3" style="margin-top:48px">
+        <h2 class="section-title" data-tag="02">Toolchain Findings</h2>
+        <span class="section-meta" id="findMeta">from otsniff scanners</span>
       </div>
-      <div data-panel="vuln" class="hidden"><div class="table-wrap"><table><thead><tr><th>CVE</th><th>Severity</th><th>Source</th><th>Description</th></tr></thead><tbody id="vulnRows"></tbody></table></div></div>
-      <div data-panel="evidence" class="hidden">
-        <div class="ev-summary">
-          <div class="ev-counts" id="evCounts"></div>
-          <div class="ev-tools" id="evTools"></div>
+      <ul class="risk-feed" id="findFeed">
+        <li class="risk-row sev-low" style="grid-template-columns: 1fr"><div class="risk-detail">Loading…</div></li>
+      </ul>
+
+      <div class="section-head" data-reveal="4" style="margin-top:48px">
+        <h2 class="section-title" data-tag="03">Blast Radius &amp; Compromise Impact</h2>
+        <span class="section-meta">what an attacker can do if this asset is breached — independent of CVE coverage</span>
+      </div>
+      <section class="impact-panel" data-reveal="5" id="impactPanel">
+        <div class="impact-summary" id="impactSummary">Computing impact…</div>
+        <div class="impact-grid">
+          <div class="impact-card">
+            <div class="impact-card-head">Operational impact of compromise</div>
+            <div class="impact-card-body" id="impactNarrative">—</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-head">Reachable assets <span class="impact-count" id="reachCount">—</span></div>
+            <div class="impact-card-body impact-list" id="reachList">—</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-head">Impacted business processes <span class="impact-count" id="procCount">—</span></div>
+            <div class="impact-card-body impact-list" id="procImpactList">—</div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-head">Top attack paths <span class="impact-count" id="pathCount">—</span></div>
+            <div class="impact-card-body impact-list" id="pathList">—</div>
+          </div>
         </div>
-        <ul class="ev-list" id="evList"></ul>
-      </div>
-      <div data-panel="connections" class="hidden"><div class="table-wrap"><table><thead><tr><th>Inbound/Outbound</th><th>Connected Asset</th><th>Protocol/Direction</th></tr></thead><tbody id="connRows"></tbody></table></div></div>
-      <div data-panel="downstream" class="hidden"><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Hop</th><th>Process Tag</th><th>Path Membership</th></tr></thead><tbody id="downRows"></tbody></table></div></div>
-    </main>
+        <div class="impact-foot">
+          <button class="btn-secondary" id="simBtn">Refresh trace</button>
+          <a class="btn-secondary" id="viewOnTopologyLink" href="#" style="text-decoration:none">View blast radius on topology →</a>
+          <span class="impact-meta">Source: <code>POST /api/simulate/blast-radius</code> · trace bounded by connectivity graph + zone-trust + criticality.</span>
+        </div>
+      </section>
+    </div>
 
-    <aside class="panel drawer">
-      <h2>Related Context</h2>
-      <h3>Scenarios containing this asset</h3>
-      <div class="table-wrap" style="max-height:180px"><table><thead><tr><th>Scenario</th><th>Severity</th></tr></thead><tbody id="scenarioRows"></tbody></table></div>
-      <h3 style="margin-top:12px">Related Zone & Process Info</h3>
-      <div id="zoneProcessInfo" class="small"></div>
-      <h3 style="margin-top:12px">Risk Contribution Explanation</h3>
-      <div id="riskExpl" class="small"></div>
+    <aside>
+      <div class="rail-section" data-reveal="2">
+        <div class="rail-head"><h3>Bill of Materials</h3><span class="meta" id="bomTag">—</span></div>
+        <div id="bomKV"></div>
+      </div>
+
+      <div class="rail-section" data-reveal="3">
+        <div class="rail-head"><h3>Connectivity</h3><span class="meta" id="connTag">— conduits</span></div>
+        <div id="connList"></div>
+      </div>
+
+      <div class="rail-section" data-reveal="4">
+        <div class="rail-head"><h3>Process Functions</h3><span class="meta" id="procTag">— processes</span></div>
+        <div id="procList"></div>
+      </div>
     </aside>
   </div>
+
 </div>
 
 <script type="module">
 import { api } from '/js/api.js';
-import { setTabs, severityBadge, fillTableBody } from '/js/ui.js';
+import { renderPlantTabs } from '/js/plant-tabs.js';
+import { inferAssetFunction, inferCompromiseImpact } from '/js/asset-function.js';
+renderPlantTabs(document.querySelector('[data-plant-tabs]'));
 
-setTabs(document);
-let assets = [];
+const $ = (id) => document.getElementById(id);
+const escape = (s) => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;" }[c]));
+
+let graph = null;
+let posture = null;
+let currentAssetId = null;
+
+init().catch(err => $('assetSubtitle').textContent = `Failed: ${err.message}`);
 
 async function init() {
-  const a = await api.assets();
-  assets = a.assets || [];
-  const sel = document.getElementById('assetSel');
-  assets.forEach(x => { const o=document.createElement('option'); o.value=x.asset_id; o.textContent=`${x.name} (${x.asset_type})`; sel.appendChild(o); });
-  document.getElementById('loadBtn').onclick = loadDetails;
+  [graph, posture] = await Promise.all([api.graph(), api.posture()]);
+
+  // Populate selector
+  const sel = $('assetSelect');
+  sel.innerHTML = graph.assets.map(a => `<option value="${escape(a.asset_id)}">${escape(a.asset_id)} · ${escape(a.name)}</option>`).join('');
+  sel.addEventListener('change', () => loadAsset(sel.value));
+
+  // Pick from URL or default to first
+  const params = new URLSearchParams(location.search);
+  const initial = params.get('id') || graph.assets[0]?.asset_id;
+  if (initial) {
+    sel.value = initial;
+    loadAsset(initial);
+  }
+
+  $('simBtn').addEventListener('click', runSim);
 }
 
-const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function loadAsset(assetId) {
+  currentAssetId = assetId;
+  const a = graph.assets.find(x => x.asset_id === assetId);
+  if (!a) return;
+  const topoLink = $('viewOnTopologyLink');
+  if (topoLink) topoLink.href = `/network-graph.html?focus=${encodeURIComponent(assetId)}`;
 
-function renderEvidence(data) {
-  const counts = data.severity_counts || {};
-  const order = ['critical','high','medium','low','info'];
-  document.getElementById('evCounts').innerHTML = order
-    .filter(k => counts[k])
-    .map(k => `<span class="ev-count c-${k}"><strong>${counts[k]}</strong>${k}</span>`)
-    .join('') || '<span class="ev-count">no findings</span>';
-  document.getElementById('evTools').innerHTML = Object.entries(data.tool_counts || {})
-    .map(([tool, n]) => `<span class="ev-tool-chip">${esc(tool)} · ${n}</span>`)
-    .join('');
+  // Title + subtitle
+  $('assetTitle').innerHTML = `<em>${escape(a.name)}</em>`;
+  $('assetSubtitle').textContent = `${a.asset_type.toUpperCase()} · ${a.vendor} ${a.model} · ${a.ip_address || 'no IP set'}`;
 
-  const list = document.getElementById('evList');
-  if (!data.findings.length) {
-    list.innerHTML = `<li class="ev-empty">No evidence attached to this asset yet.<br/>Run <code>otsniff scan:secrets --asset ${esc(data.asset_id)} --target &lt;path&gt;</code> then <code>otsniff merge</code> to attach findings.</li>`;
+  // BOM tile
+  $('bomVendor').textContent = a.vendor;
+  $('bomModel').textContent = a.model;
+  $('bomFirmware').textContent = `Firmware: ${a.firmware_version || '—'}`;
+
+  // Zone tile
+  const z = graph.zones.find(zz => zz.zone_id === a.zone_id);
+  $('zoneLevel').textContent = z ? z.level : '—';
+  $('zoneName').textContent = z ? z.name : '—';
+  $('zoneNetwork').textContent = `Network: ${a.ip_address || '—'} · zone ${a.zone_id}`;
+
+  // Advisory + finding tiles — pull full advisory list for this asset from posture
+  const risk = (posture.asset_risk || []).find(x => x.asset_id === assetId);
+  const allAdvisoriesForAsset = (posture.advisories_by_asset?.[assetId]) || [];
+  const exactAdvisories = allAdvisoriesForAsset.filter(a => a.match_tier === 'exact');
+  const vendorAdvisories = allAdvisoriesForAsset.filter(a => a.match_tier === 'vendor');
+  const allFindings = graph.findings_by_asset[assetId] || [];
+
+  $('advCount').innerHTML = `${exactAdvisories.length}<span class="unit">+${vendorAdvisories.length} vendor</span>`;
+  const advTally = allAdvisoriesForAsset.reduce((acc, r) => { acc[r.cvss_severity] = (acc[r.cvss_severity] || 0) + 1; return acc; }, {});
+  $('advBreakdown').textContent = `${advTally.critical || 0} critical · ${advTally.high || 0} high · ${advTally.medium || 0} medium · ${risk?.kev_count || 0} on KEV`;
+
+  $('assetRisk').innerHTML = `${risk ? risk.risk_score : 0}<span class="unit">/ 100</span>`;
+  $('assetWorstSev').textContent = risk?.worst_severity ? `Worst severity: ${risk.worst_severity}` : 'No risks recorded';
+  $('assetCritLine').textContent = `Criticality: ${a.criticality_score} · ${allFindings.length} scanner findings · ${risk?.kev_count || 0} KEV`;
+
+  // Risk tile color
+  const tile = $('riskTile');
+  tile.className = 'pipeline-stage is-posture';
+  if (risk) {
+    if (risk.risk_score >= 70) tile.classList.add('sev-critical');
+    else if (risk.risk_score >= 50) tile.classList.add('sev-high');
+    else if (risk.risk_score >= 30) tile.classList.add('sev-medium');
+    else tile.classList.add('sev-low');
+  }
+
+  // Advisories list — exact matches first, then vendor-only
+  if (allAdvisoriesForAsset.length === 0) {
+    $('advFeed').innerHTML = '<li class="risk-row sev-low" style="grid-template-columns: 1fr"><div class="risk-detail">No CISA ICS-CERT advisories matched this asset\'s vendor.</div></li>';
+  } else {
+    const sortBySev = (a, b) => (b.cvss_max || 0) - (a.cvss_max || 0);
+    const ordered = [...exactAdvisories.sort(sortBySev), ...vendorAdvisories.sort(sortBySev).slice(0, 6)];
+    $('advFeed').innerHTML = ordered.map(adv => {
+      const cwes = adv.cwes && adv.cwes.length
+        ? `<span style="margin-left:10px;color:var(--ink-muted);font-size:11px">${adv.cwes.slice(0,3).map(escape).join(' · ')}</span>`
+        : '';
+      const nvdNote = adv.nvd_enriched_count
+        ? `<span style="margin-left:8px;color:var(--mk-cyan-700);font-size:11px;letter-spacing:0.06em;text-transform:uppercase">NVD ${adv.nvd_enriched_count}/${adv.cves.length}</span>`
+        : '';
+      return `
+      <li class="risk-row sev-${adv.cvss_severity}">
+        <span class="risk-sev">${adv.cvss_severity}</span>
+        <span class="risk-source is-advisory">${adv.match_tier === 'exact' ? 'CISA · exact' : 'CISA · vendor'}</span>
+        <div class="risk-body">
+          <div class="risk-asset">${escape(adv.advisory_id)} · ${(adv.cves || []).slice(0,2).map(escape).join(', ')}${(adv.cves || []).length > 2 ? ' +'+((adv.cves || []).length-2) : ''} · CVSS ${adv.cvss_max || '—'}${nvdNote}</div>
+          <div class="risk-title">${escape(adv.title)}${cwes}</div>
+          <div class="risk-detail">${escape(adv.summary || '—')}</div>
+        </div>
+        <div class="risk-action"><a href="${escape(adv.cisa_url)}" target="_blank" rel="noopener" style="color:var(--mk-cyan-700)">view CISA</a></div>
+      </li>`;
+    }).join('');
+  }
+  $('advMeta').textContent = `${exactAdvisories.length} exact + ${vendorAdvisories.length} vendor-tier${vendorAdvisories.length > 6 ? ' · top 6 shown' : ''}`;
+
+  // Findings list
+  const allFndOnAsset = (graph.findings_by_asset[assetId] || []);
+  if (allFndOnAsset.length === 0) {
+    $('findFeed').innerHTML = '<li class="risk-row sev-low" style="grid-template-columns: 1fr"><div class="risk-detail">No toolchain findings recorded for this asset. Run <code>otsniff scan:secrets</code>, <code>scan:supply-chain</code>, <code>scan:exposure</code>, or <code>scan:mesh-gap</code> against the relevant target.</div></li>';
+  } else {
+    $('findFeed').innerHTML = allFndOnAsset.map(f => `
+      <li class="risk-row sev-${f.severity}">
+        <span class="risk-sev">${f.severity}</span>
+        <span class="risk-source is-finding">${escape(f.source_tool)}</span>
+        <div class="risk-body">
+          <div class="risk-asset">${escape(f.finding_id)}</div>
+          <div class="risk-title">${escape((f.finding_type || '').replace(/_/g, ' '))}</div>
+          <div class="risk-detail">${escape(f.evidence || '—')}</div>
+        </div>
+        <div class="risk-action">remediate</div>
+      </li>`).join('');
+  }
+  $('findMeta').textContent = `${allFndOnAsset.length} on this asset`;
+
+  // BOM rail
+  const rows = [
+    ['Asset ID',   a.asset_id, ''],
+    ['Type',       a.asset_type, ''],
+    ['Vendor',     a.vendor, ''],
+    ['Model',      a.model, ''],
+    ['Firmware',   a.firmware_version || '—', ''],
+    ['IP Address', a.ip_address || '—', ''],
+    ['Zone',       z ? `${z.zone_id} · ${z.name}` : a.zone_id, ''],
+    ['Purdue',     z ? z.level : '—', ''],
+    ['Criticality', a.criticality_score, a.criticality_score >= 9 ? 'crit' : a.criticality_score >= 7 ? 'med' : 'low'],
+    ['Process Tag', a.process_tag || '—', ''],
+  ];
+  $('bomKV').innerHTML = rows.map(([k, v, t]) => `<div class="kv"><span class="k">${k}</span><span class="v ${t}">${escape(String(v))}</span></div>`).join('');
+  $('bomTag').textContent = a.asset_id.toUpperCase();
+
+  // Connectivity rail
+  const incoming = graph.connectivity.filter(c => c.target_asset_id === assetId);
+  const outgoing = graph.connectivity.filter(c => c.source_asset_id === assetId);
+  const connKV = [];
+  for (const c of incoming) {
+    const src = graph.assets.find(x => x.asset_id === c.source_asset_id);
+    connKV.push([`← ${src ? src.name : c.source_asset_id}`, `${c.protocol}/${c.port}`, c.trust_level === 'low' ? 'high' : '']);
+  }
+  for (const c of outgoing) {
+    const dst = graph.assets.find(x => x.asset_id === c.target_asset_id);
+    connKV.push([`→ ${dst ? dst.name : c.target_asset_id}`, `${c.protocol}/${c.port}`, c.trust_level === 'low' ? 'high' : '']);
+  }
+  $('connList').innerHTML = connKV.length === 0
+    ? '<div class="rail-empty">No conduits declared.</div>'
+    : connKV.map(([k, v, t]) => `<div class="kv"><span class="k">${escape(k)}</span><span class="v ${t}">${escape(v)}</span></div>`).join('');
+  $('connTag').textContent = `${incoming.length + outgoing.length} conduits`;
+
+  // Process functions rail
+  const procs = (graph.process_functions || []).filter(p => p.dependent_asset_ids.includes(assetId));
+  $('procList').innerHTML = procs.length === 0
+    ? '<div class="rail-empty">Asset is not in any declared process function dependency chain.</div>'
+    : procs.map(p => `<div class="kv"><span class="k">${escape(p.name)}</span><span class="v ${p.criticality >= 9 ? 'crit' : 'med'}">crit ${p.criticality}</span></div>`).join('');
+  $('procTag').textContent = `${procs.length} processes`;
+
+  // Trigger an automatic blast-radius trace for this asset.
+  runSim();
+}
+
+async function runSim() {
+  if (!currentAssetId) return;
+  $('impactSummary').textContent = 'Tracing lateral reach across connectivity graph…';
+  $('impactNarrative').textContent = '—';
+  $('reachList').textContent = '—';
+  $('procImpactList').textContent = '—';
+  $('pathList').textContent = '—';
+  ['reachCount','procCount','pathCount'].forEach(id => $(id).textContent = '—');
+
+  const a = graph.assets.find(x => x.asset_id === currentAssetId);
+  const z = graph.zones.find(zz => zz.zone_id === a?.zone_id);
+  const fnText = a?.essential_function || inferAssetFunction(a);
+  const impactNarrative = inferCompromiseImpact(a, z);
+
+  let result;
+  try {
+    result = await api.simulateBlastRadius({
+      start_asset_id: currentAssetId,
+      max_depth: 6,
+      include_vulnerabilities: true,
+      include_zone_barriers: true,
+      mode: 'analyst',
+    });
+  } catch (err) {
+    $('impactSummary').innerHTML = `
+      <span class="impact-sev impact-sev-medium">Trace unavailable</span>
+      ${escape(err.message)}`;
+    $('impactNarrative').textContent = `${fnText}\n\n${impactNarrative}`;
     return;
   }
-  list.innerHTML = data.findings.map(f => {
-    const conf = Math.round((f.confidence ?? 0) * 100);
-    const detected = (f.detected_at || '').replace('T',' ').replace('Z','').slice(0,19);
-    return `
-      <li class="ev-item">
-        <span class="ev-dot sev-${esc(f.severity)}"></span>
-        <div class="ev-body">
-          <div class="ev-header">
-            <span class="ev-type">${esc(f.finding_type).replace(/_/g,' ')}</span>
-            <span class="ev-id">${esc(f.finding_id)}</span>
-          </div>
-          <pre class="ev-evidence">${esc(f.evidence)}</pre>
-          <div class="ev-meta">
-            <span class="ev-tool-chip">${esc(f.source_tool)}</span>
-            <span class="sep">·</span>
-            <span>${esc(detected)}</span>
-          </div>
-        </div>
-        <div class="ev-conf" title="confidence ${conf}%">
-          <span class="ev-conf-label">conf ${conf}</span>
-          <span class="ev-conf-bar" style="--conf:${conf}%"></span>
-        </div>
-      </li>`;
-  }).join('');
+
+  // Top-line summary
+  const sev = result.severity_label || 'low';
+  const reachCount = (result.impacted_assets || []).length;
+  const zonesReached = new Set((result.impacted_assets || []).map(x => x.zone_id)).size;
+  const procImpacted = (result.impacted_process_functions || result.total_impacted_processes || []);
+  const procCount = Array.isArray(procImpacted) ? procImpacted.length : Number(procImpacted) || 0;
+  const pathCount = (result.attack_paths || []).length;
+  $('impactSummary').innerHTML = `
+    <span class="impact-sev impact-sev-${sev}">${escape(sev.toUpperCase())}</span>
+    <span class="impact-headline">Risk score <strong>${Math.round(result.risk_score || 0)}/100</strong> · ${reachCount} reachable asset${reachCount === 1 ? '' : 's'} across ${zonesReached} zone${zonesReached === 1 ? '' : 's'}</span>
+  `;
+
+  // Operational impact panel — combines function + compromise narrative + analyst_summary
+  $('impactNarrative').innerHTML = `
+    <div class="impact-fn"><strong>Function:</strong> ${escape(fnText)}</div>
+    <div class="impact-narr">${escape(impactNarrative)}</div>
+    ${result.analyst_summary ? `<div class="impact-analyst">${escape(result.analyst_summary)}</div>` : ''}
+  `;
+
+  // Reachable assets — top 12 by criticality if present, else first 12
+  const reach = (result.impacted_assets || []).slice().sort((x, y) => (y.criticality_score || 0) - (x.criticality_score || 0));
+  $('reachCount').textContent = `${reach.length}`;
+  $('reachList').innerHTML = reach.length === 0
+    ? '<div class="impact-empty">Asset is isolated — no lateral reach declared in the connectivity graph.</div>'
+    : reach.slice(0, 12).map(x => {
+        const zz = graph.zones.find(z => z.zone_id === x.zone_id);
+        return `<div class="impact-row">
+          <a class="impact-link" href="/asset-detail.html?id=${encodeURIComponent(x.asset_id)}">${escape(x.name || x.asset_id)}</a>
+          <span class="impact-tag">${escape(zz ? zz.level : '')}</span>
+          <span class="impact-crit">crit ${x.criticality_score ?? '—'}</span>
+        </div>`;
+      }).join('') + (reach.length > 12 ? `<div class="impact-more">+ ${reach.length - 12} more</div>` : '');
+
+  // Impacted processes — list names + criticality
+  const procs = Array.isArray(result.impacted_process_functions) ? result.impacted_process_functions : [];
+  $('procCount').textContent = `${procs.length}`;
+  $('procImpactList').innerHTML = procs.length === 0
+    ? '<div class="impact-empty">No declared business process depends on this asset (or its reachable neighbors).</div>'
+    : procs.slice(0, 8).map(p => `<div class="impact-row">
+        <span class="impact-text">${escape(p.name || p.id || '—')}</span>
+        <span class="impact-crit">crit ${p.criticality ?? '—'}</span>
+      </div>`).join('');
+
+  // Attack paths — show top 5
+  const paths = result.attack_paths || [];
+  $('pathCount').textContent = `${paths.length}`;
+  $('pathList').innerHTML = paths.length === 0
+    ? '<div class="impact-empty">No multi-hop reach path found.</div>'
+    : paths.slice(0, 5).map(p => {
+        const hops = (p.path || p.hops || []).map(h => h.asset_id || h).join(' → ');
+        return `<div class="impact-path">
+          <code>${escape(hops)}</code>
+          ${p.severity ? `<span class="impact-sev impact-sev-${p.severity}">${escape(p.severity)}</span>` : ''}
+        </div>`;
+      }).join('');
 }
 
-async function loadDetails() {
-  const id = document.getElementById('assetSel').value;
-  const [risk, paths, top, evidence] = await Promise.all([
-    api.assetRisk(id), api.assetPaths(id), api.topScenarios(),
-    api.evidence(id).catch(() => ({ findings: [], severity_counts: {}, tool_counts: {}, asset_id: id })),
-  ]);
-  const asset = assets.find(a => a.asset_id === id);
-
-  document.getElementById('assetName').textContent = `${asset.name} — Asset Metadata`;
-  fillTableBody(document.getElementById('metaRows'), [
-    ['asset_id', asset.asset_id],['asset_type',asset.asset_type],['vendor',asset.vendor],['model',asset.model],['firmware_version',asset.firmware_version],['ip_address',asset.ip_address],['zone_id',asset.zone_id],['criticality_score',asset.criticality_score],['process_tag',asset.process_tag]
-  ]);
-
-  const sim = await api.simulateBlastRadius({start_asset_id:id,max_depth:6,include_vulnerabilities:true,include_zone_barriers:true,mode:'analyst'});
-
-  const srcByVuln = new Map((evidence.findings || []).map(f => [f.finding_id, f.source_tool]));
-  fillTableBody(document.getElementById('vulnRows'),
-    (sim.exploited_or_exploitable_vulnerabilities || [])
-      .filter(v=>v.asset_id===id)
-      .map(v => {
-        const src = v.source_tool || srcByVuln.get(v.vuln_id) || 'fixture';
-        return [v.cve, v.severity, `<span class="src-tag">${esc(src)}</span>`, v.description || 'n/a'];
-      })
-  );
-  renderEvidence(evidence);
-  fillTableBody(document.getElementById('connRows'), (paths.paths || []).flatMap(p => p.ordered_asset_ids.map((assetId, idx) => {
-    if (idx===0 || p.ordered_asset_ids[idx-1]!==id) return [];
-    return [[ 'outbound', assetId, `${p.protocols_used.join(',')} / path ${p.path_id}` ]];
-  })));
-  fillTableBody(document.getElementById('downRows'), (sim.impacted_assets || []).map(a => [a.name, a.hop_distance, a.process_tag, sim.attack_paths.filter(p => p.ordered_asset_ids.includes(a.asset_id)).map(p => p.path_id).join(', ')]));
-
-  fillTableBody(document.getElementById('scenarioRows'), (top.scenarios || []).filter(s => s.start_asset_id===id || s.title.toLowerCase().includes(asset.name.toLowerCase())).map(s => [s.title, severityBadge(s.severity_label)]));
-
-  document.getElementById('riskSummary').innerHTML = `Severity: ${severityBadge(risk.severity_label)}<br/>Risk Score: ${risk.risk_score}<br/>Blast Radius: ${risk.blast_radius_score}<br/>Operational Impact: ${risk.operational_impact_score}<br/>Confidence: ${risk.confidence_score}`;
-  document.getElementById('zoneProcessInfo').textContent = `Zone ${asset.zone_id}, process tag ${asset.process_tag}. Downstream process exposure appears in impacted_processes output.`;
-  document.getElementById('riskExpl').textContent = risk.analyst_summary;
+function sevColor(label) {
+  return ({
+    critical: 'var(--sev-critical)',
+    high: 'var(--sev-high)',
+    medium: 'var(--sev-medium)',
+    low: 'var(--sev-low)',
+  })[label] || 'var(--ink-3)';
 }
-
-init().catch(e => { document.getElementById('riskSummary').textContent = e.message; });
 </script>
 </body>
 </html>

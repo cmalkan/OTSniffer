@@ -5,6 +5,8 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { scanSecrets } from "../scripts/otsniff/scanners/secrets.mjs";
 import { scanSupplyChain } from "../scripts/otsniff/scanners/supply-chain.mjs";
+import { scanExposure } from "../scripts/otsniff/scanners/exposure.mjs";
+import { scanMeshGap } from "../scripts/otsniff/scanners/mesh-gap.mjs";
 import { mergeFindings } from "../scripts/otsniff/merge.mjs";
 import { validateFinding, findingToVulnerability } from "../scripts/otsniff/schema.mjs";
 
@@ -148,6 +150,115 @@ jobs:
 
 test("scanSupplyChain: rejects when no target and no repo", async () => {
   await assert.rejects(scanSupplyChain({}), /required/);
+});
+
+test("scanExposure: detects HTTP on HMI, cross-level control protocol, field RTU DNP3, eng-WS bi-PLC", async () => {
+  const plant = {
+    plant_id: "test",
+    zones: [
+      { zone_id: "z_ops",   name: "Ops",       level: "L3" },
+      { zone_id: "z_treat", name: "Treatment", level: "L2" },
+      { zone_id: "z_proc",  name: "Process",   level: "L1" },
+      { zone_id: "z_field", name: "Field Distribution", level: "L1" },
+    ],
+    assets: [
+      { asset_id: "a_scada", name: "SCADA", asset_type: "scada-server",          vendor: "AVEVA",    model: "SP",     zone_id: "z_ops" },
+      { asset_id: "a_hmi",   name: "HMI",   asset_type: "hmi",                   vendor: "Rockwell", model: "FT",     zone_id: "z_treat" },
+      { asset_id: "a_eng",   name: "EngWS", asset_type: "engineering-workstation", vendor: "Rockwell", model: "Studio", zone_id: "z_treat" },
+      { asset_id: "a_plc",   name: "PLC",   asset_type: "plc",                   vendor: "AB",       model: "CL",     zone_id: "z_proc" },
+      { asset_id: "a_rtu",   name: "RTU",   asset_type: "rtu",                   vendor: "Schneider",model: "SP350",  zone_id: "z_field" },
+    ],
+    connectivity: [
+      { source_asset_id: "a_scada", target_asset_id: "a_hmi", protocol: "http",        port: 80,    allowed_direction: "uni" },
+      { source_asset_id: "a_scada", target_asset_id: "a_rtu", protocol: "dnp3",        port: 20000, allowed_direction: "bi"  },
+      { source_asset_id: "a_eng",   target_asset_id: "a_plc", protocol: "ethernet-ip", port: 44818, allowed_direction: "bi"  },
+    ],
+  };
+  const findings = await scanExposure({ plant });
+  for (const f of findings) assert.deepEqual(validateFinding(f), [], `bad finding: ${JSON.stringify(f)}`);
+  assert.ok(findings.every((f) => f.finding_type === "exposure"));
+  assert.ok(findings.every((f) => f.source_tool === "manual"));
+  const ev = findings.map((f) => f.evidence).join("\n");
+  assert.ok(/HTTP\/80/.test(ev),                "expected HTTP web exposure finding");
+  assert.ok(/DNP3.*Purdue/.test(ev),            "expected cross-level DNP3 finding");
+  assert.ok(/Field RTU/.test(ev),               "expected field RTU exposure finding");
+  assert.ok(/Engineering workstation/.test(ev), "expected eng-WS bi-directional finding");
+});
+
+test("scanExposure: clean fixture produces zero findings", async () => {
+  const plant = {
+    plant_id: "test-clean",
+    zones: [
+      { zone_id: "z_ops",   name: "Ops",       level: "L3" },
+      { zone_id: "z_treat", name: "Treatment", level: "L2" },
+      { zone_id: "z_proc",  name: "Process",   level: "L1" },
+    ],
+    assets: [
+      { asset_id: "a_hmi", name: "HMI", asset_type: "hmi", vendor: "X", model: "Y", zone_id: "z_treat" },
+      { asset_id: "a_plc", name: "PLC", asset_type: "plc", vendor: "X", model: "Y", zone_id: "z_proc" },
+    ],
+    connectivity: [
+      { source_asset_id: "a_hmi", target_asset_id: "a_plc", protocol: "ethernet-ip", port: 44818, allowed_direction: "uni" },
+    ],
+  };
+  const findings = await scanExposure({ plant });
+  assert.equal(findings.length, 0, `expected 0, got: ${JSON.stringify(findings.map((f) => f.evidence))}`);
+});
+
+test("scanExposure: rejects when no plant", async () => {
+  await assert.rejects(scanExposure({}), /required/);
+});
+
+test("scanMeshGap: detects HMI->SIS, bi-directional SIS, cross-level high-crit PLC", async () => {
+  const plant = {
+    plant_id: "test",
+    zones: [
+      { zone_id: "z_ops",   name: "Ops",       level: "L3" },
+      { zone_id: "z_treat", name: "Treatment", level: "L2" },
+      { zone_id: "z_proc",  name: "Process",   level: "L1" },
+    ],
+    assets: [
+      { asset_id: "a_scada", name: "SCADA", asset_type: "scada-server",     vendor: "X", model: "Y", zone_id: "z_ops" },
+      { asset_id: "a_hmi",   name: "HMI",   asset_type: "hmi",              vendor: "X", model: "Y", zone_id: "z_treat" },
+      { asset_id: "a_plc",   name: "PLC",   asset_type: "plc",              vendor: "X", model: "Y", zone_id: "z_proc", criticality_score: 10 },
+      { asset_id: "a_sis",   name: "SIS",   asset_type: "safety-controller",vendor: "X", model: "Y", zone_id: "z_proc" },
+    ],
+    connectivity: [
+      { source_asset_id: "a_hmi",   target_asset_id: "a_sis", protocol: "ethernet-ip", port: 44818, allowed_direction: "uni" },
+      { source_asset_id: "a_plc",   target_asset_id: "a_sis", protocol: "ethernet-ip", port: 44818, allowed_direction: "bi"  },
+      { source_asset_id: "a_scada", target_asset_id: "a_plc", protocol: "ethernet-ip", port: 44818, allowed_direction: "bi"  },
+    ],
+  };
+  const findings = await scanMeshGap({ plant });
+  for (const f of findings) assert.deepEqual(validateFinding(f), [], `bad finding: ${JSON.stringify(f)}`);
+  assert.ok(findings.every((f) => f.finding_type === "mesh_gap"));
+  assert.ok(findings.every((f) => f.source_tool === "manual"));
+  const ev = findings.map((f) => f.evidence).join("\n");
+  assert.ok(/Safety controller .* reachable from .*hmi/i.test(ev), "expected HMI→SIS finding");
+  assert.ok(/bi-directional/.test(ev),                              "expected bi-directional SIS finding");
+  assert.ok(/High-criticality PLC/.test(ev),                        "expected high-crit PLC cross-level finding");
+});
+
+test("scanMeshGap: properly isolated plant produces zero findings", async () => {
+  const plant = {
+    plant_id: "test-clean",
+    zones: [
+      { zone_id: "z_proc", name: "Process", level: "L1" },
+    ],
+    assets: [
+      { asset_id: "a_plc", name: "PLC", asset_type: "plc",               vendor: "X", model: "Y", zone_id: "z_proc", criticality_score: 8 },
+      { asset_id: "a_sis", name: "SIS", asset_type: "safety-controller", vendor: "X", model: "Y", zone_id: "z_proc" },
+    ],
+    connectivity: [
+      { source_asset_id: "a_plc", target_asset_id: "a_sis", protocol: "ethernet-ip", port: 44818, allowed_direction: "uni" },
+    ],
+  };
+  const findings = await scanMeshGap({ plant });
+  assert.equal(findings.length, 0, `expected 0, got: ${JSON.stringify(findings.map((f) => f.evidence))}`);
+});
+
+test("scanMeshGap: rejects when no plant", async () => {
+  await assert.rejects(scanMeshGap({}), /required/);
 });
 
 test("merge: is idempotent on repeat runs (vulns + evidence)", () => {

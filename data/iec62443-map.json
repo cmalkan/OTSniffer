@@ -1,0 +1,77 @@
+{
+  "standard": "IEC 62443-3-3",
+  "version": "2013 + Amd 1:2018",
+  "purpose": "Static mapping from finding types and severities to System Requirements (SRs) and Foundational Requirements (FRs). Consumed by the Impact Map tier deliverable to render an SR-coverage matrix and to cite specific SR violations per finding. This is a curated subset of the 51 SRs in IEC 62443-3-3 — chosen for coverage across all 7 FRs and mappability to the finding types this scanner toolchain produces.",
+  "scope_note": "Mapping is illustrative for assessment reporting, not a substitute for a formal IEC 62443 conformance audit. SR descriptions are paraphrased; consult the standard for normative text.",
+  "foundational_requirements": [
+    {"fr_id": "FR1", "name": "Identification and Authentication Control", "summary": "Identify and authenticate all users, processes, and devices before granting access to control system assets."},
+    {"fr_id": "FR2", "name": "Use Control",                                "summary": "Enforce authorized actions and audit usage by authenticated identities."},
+    {"fr_id": "FR3", "name": "System Integrity",                           "summary": "Ensure integrity of the control system, its software, and the data it produces."},
+    {"fr_id": "FR4", "name": "Data Confidentiality",                       "summary": "Protect information at rest and in transit from unauthorized disclosure."},
+    {"fr_id": "FR5", "name": "Restricted Data Flow",                       "summary": "Segment the system into zones and conduits to limit unnecessary data flow."},
+    {"fr_id": "FR6", "name": "Timely Response to Events",                  "summary": "Detect, log, and respond to security events in a timeframe consistent with risk."},
+    {"fr_id": "FR7", "name": "Resource Availability",                      "summary": "Maintain control function availability under degraded and adversarial conditions."}
+  ],
+  "system_requirements": [
+    {"sr_id": "SR 1.1", "fr_id": "FR1", "name": "Human user identification and authentication", "description": "Identify and authenticate all human users before granting any control-system access.",                                            "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation"]},
+    {"sr_id": "SR 1.2", "fr_id": "FR1", "name": "Software process and device identification and authentication", "description": "Identify and authenticate software processes and devices establishing connections to the control system.",      "baseline_sl": 2, "applies_to_asset_types": ["scada-server","historian","plc","rtu","safety-controller"]},
+    {"sr_id": "SR 1.5", "fr_id": "FR1", "name": "Authenticator management",                                       "description": "Manage authenticators (passwords, keys, certs) including initial distribution, revocation, rotation, and protection from disclosure.", "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","rtu","safety-controller"]},
+    {"sr_id": "SR 1.7", "fr_id": "FR1", "name": "Strength of password-based authentication",                     "description": "Enforce password strength, history, and lifetime policies on all password-based authenticators.",                                  "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation"]},
+    {"sr_id": "SR 1.9", "fr_id": "FR1", "name": "Strength of public key authentication",                         "description": "Validate public key authenticators against an acceptable certificate authority and enforce key strength minima.",                  "baseline_sl": 3, "applies_to_asset_types": ["scada-server","historian","hmi"]},
+
+    {"sr_id": "SR 2.1", "fr_id": "FR2", "name": "Authorization enforcement",                                      "description": "Enforce assigned privileges so authenticated identities can only perform authorized actions on the control system.",               "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","safety-controller"]},
+    {"sr_id": "SR 2.4", "fr_id": "FR2", "name": "Mobile code",                                                    "description": "Restrict and audit the use of mobile code (e.g. ActiveX, signed scripts) to authorized sources and behaviors.",                    "baseline_sl": 2, "applies_to_asset_types": ["scada-server","hmi","engineering-workstation"]},
+    {"sr_id": "SR 2.8", "fr_id": "FR2", "name": "Auditable events",                                               "description": "Generate audit records for security-relevant events sufficient to support after-the-fact investigation.",                          "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","rtu","safety-controller"]},
+
+    {"sr_id": "SR 3.1", "fr_id": "FR3", "name": "Communication integrity",                                        "description": "Protect integrity of transmitted information against unauthorized modification on the wire.",                                     "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","plc","rtu"]},
+    {"sr_id": "SR 3.4", "fr_id": "FR3", "name": "Software and information integrity",                            "description": "Detect, record, and respond to unauthorized changes to software, configuration, and project artifacts.",                            "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","engineering-workstation","plc","safety-controller"]},
+    {"sr_id": "SR 3.5", "fr_id": "FR3", "name": "Input validation",                                               "description": "Validate the syntax and semantics of input received from untrusted sources.",                                                       "baseline_sl": 2, "applies_to_asset_types": ["scada-server","hmi","plc","rtu"]},
+    {"sr_id": "SR 3.8", "fr_id": "FR3", "name": "Session integrity",                                              "description": "Protect session state against modification, replay, and hijacking.",                                                                "baseline_sl": 2, "applies_to_asset_types": ["scada-server","hmi","engineering-workstation"]},
+
+    {"sr_id": "SR 4.1", "fr_id": "FR4", "name": "Information confidentiality",                                    "description": "Protect information at rest and in transit from unauthorized disclosure, including secrets in configuration files and backups.",   "baseline_sl": 2, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation"]},
+    {"sr_id": "SR 4.3", "fr_id": "FR4", "name": "Use of cryptography",                                            "description": "Apply cryptographic mechanisms appropriate to the protected asset class, with key strength and algorithm choices reviewed against current guidance.", "baseline_sl": 2, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","rtu"]},
+
+    {"sr_id": "SR 5.1", "fr_id": "FR5", "name": "Network segmentation",                                           "description": "Logically partition the control system into zones and conduits per the reference architecture.",                                   "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","rtu","safety-controller"]},
+    {"sr_id": "SR 5.2", "fr_id": "FR5", "name": "Zone boundary protection",                                       "description": "Monitor and enforce communication policies at zone boundaries; deny by default.",                                                   "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","rtu","safety-controller"]},
+    {"sr_id": "SR 5.4", "fr_id": "FR5", "name": "Application partitioning",                                       "description": "Separate application-layer functions (operator HMI, engineering, safety) into distinct zones with controlled conduits.",            "baseline_sl": 2, "applies_to_asset_types": ["scada-server","hmi","engineering-workstation","safety-controller"]},
+
+    {"sr_id": "SR 6.1", "fr_id": "FR6", "name": "Audit log accessibility",                                        "description": "Make audit logs accessible to authorized personnel for review and analysis.",                                                       "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","rtu","safety-controller"]},
+    {"sr_id": "SR 6.2", "fr_id": "FR6", "name": "Continuous monitoring",                                          "description": "Continuously monitor the control system for indicators of compromise and policy violations.",                                       "baseline_sl": 2, "applies_to_asset_types": ["scada-server","historian"]},
+
+    {"sr_id": "SR 7.1", "fr_id": "FR7", "name": "Denial of service protection",                                   "description": "Protect against and recover from denial-of-service conditions that affect control function availability.",                          "baseline_sl": 1, "applies_to_asset_types": ["scada-server","plc","rtu","safety-controller"]},
+    {"sr_id": "SR 7.6", "fr_id": "FR7", "name": "Network and security configuration settings",                    "description": "Manage network and security configuration settings against an approved baseline, with change control and drift detection.",        "baseline_sl": 1, "applies_to_asset_types": ["scada-server","historian","hmi","engineering-workstation","plc","rtu","safety-controller"]}
+  ],
+  "finding_type_to_sr_violations": {
+    "secret_leak":     ["SR 1.5", "SR 4.1", "SR 4.3"],
+    "supply_chain":    ["SR 3.4", "SR 7.6"],
+    "exposure":        ["SR 5.1", "SR 5.2"],
+    "mesh_gap":        ["SR 5.1", "SR 5.2", "SR 5.4"],
+    "validated_creds": ["SR 1.1", "SR 1.2", "SR 1.7"]
+  },
+  "finding_type_to_fr_coverage": {
+    "secret_leak":     ["FR1", "FR4"],
+    "supply_chain":    ["FR3", "FR7"],
+    "exposure":        ["FR5"],
+    "mesh_gap":        ["FR5"],
+    "validated_creds": ["FR1"]
+  },
+  "severity_to_sl_impact_floor": {
+    "critical": 3,
+    "high":     2,
+    "medium":   1,
+    "low":      1,
+    "info":     0
+  },
+  "consumer_contract": {
+    "expected_consumers": [
+      "Impact Map tier deliverable renderer (planned netlify function or analyst page section, not yet implemented)",
+      "Per-finding SR-violation citation in T2/T3 reports",
+      "Asset-type → expected-SRs coverage matrix in analyst dashboard"
+    ],
+    "join_keys": {
+      "by_finding": "evidence_findings[].finding_type → finding_type_to_sr_violations",
+      "by_asset":   "assets[].asset_type → system_requirements[].applies_to_asset_types",
+      "severity_floor": "evidence_findings[].severity → severity_to_sl_impact_floor"
+    }
+  }
+}
