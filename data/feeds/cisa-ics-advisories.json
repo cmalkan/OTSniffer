@@ -1,6 +1,45 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-125-05",
+      "title": "Johnson Controls CEM AC2000",
+      "date": "2026-05-05",
+      "summary": "Successful exploitation of this vulnerability could allow a standard user to escalate privileges on the host machine.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Commercial Facilities",
+        "Government Services and Facilities",
+        "Transportation Systems",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-21661"
+      ],
+      "cvss_max": 8.7,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Johnson Controls Inc.",
+          "product": "CEM AC2000",
+          "version": "12.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Johnson Controls Inc.",
+          "product": "CEM AC2000",
+          "version": "11.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Johnson Controls Inc.",
+          "product": "CEM AC2000",
+          "version": "10.6",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-05"
+    },
+    {
       "advisory_id": "ICSA-26-118-01",
       "title": "NSA GRASSMARLIN",
       "date": "2026-04-28",
@@ -22,6 +61,77 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-118-01"
+    },
+    {
+      "advisory_id": "ICSA-26-125-01",
+      "title": "Hitachi Energy PCM600",
+      "date": "2026-04-28",
+      "summary": "Hitachi Energy is aware of a vulnerability that affects the Hitachi Energy PCM600 product versions listed in this document. An attacker successfully exploiting this vulnerability can impact integrity of the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2018-1002208"
+      ],
+      "cvss_max": 4.4,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600 Legacy",
+          "version": "vers:PCM600_Legacy/<=2.11",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.0_HF1",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.0_HF2",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.0_HF3",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.1",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.1_SP1",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.1_SP2",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PCM600",
+          "version": "3.1_SP3",
+          "product_id": "CSAFPID-0009"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-01"
     },
     {
       "advisory_id": "ICSA-26-113-01",
@@ -6924,6 +7034,35 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-03"
     },
     {
+      "advisory_id": "ICSA-26-125-02",
+      "title": "ABB B&R PVI",
+      "date": "2026-01-29",
+      "summary": "ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is now available that addresses and remediates the vulnerability. \n\nAn attacker who successfully exploited this vulnerability could read sensitive information in the logging data of the PVI client application. Logging is deactivated by default in all PVI client versions.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-0936"
+      ],
+      "cvss_max": 5,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "PVI",
+          "version": "<6.5.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PVI",
+          "version": "6.5.0",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-02"
+    },
+    {
       "advisory_id": "ICSA-26-043-06",
       "title": "Siemens SINEC OS",
       "date": "2026-01-28",
@@ -7594,6 +7733,76 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-020-03"
+    },
+    {
+      "advisory_id": "ICSA-26-125-03",
+      "title": "ABB B&R Automation Runtime",
+      "date": "2026-01-19",
+      "summary": "ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is available that resolves a vulnerability.\n\nAn attacker who successfully exploited this vulnerability could cause the product to stop.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-11044"
+      ],
+      "cvss_max": 6.8,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Automation Runtime",
+          "version": "<6.5",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Automation Runtime",
+          "version": ">=6.5",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Automation Runtime",
+          "version": "<R4.93",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Automation Runtime",
+          "version": ">=R4.93",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-03"
+    },
+    {
+      "advisory_id": "ICSA-26-125-04",
+      "title": "ABB B&R Automation Studio",
+      "date": "2026-01-19",
+      "summary": "ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is available that resolves a vulnerability.\n\nSuccessful exploitation of this vulnerability may enable an attacker to masquerade as a trusted party when B&R Automation Studio establishes a connection with a server via the ANSL over TLS or OPC-UA protocol.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-11043"
+      ],
+      "cvss_max": 7.4,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Automation Studio",
+          "version": "<6.5",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Automation Studio",
+          "version": "6.5",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-04"
     },
     {
       "advisory_id": "ICSA-26-120-04",
