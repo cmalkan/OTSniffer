@@ -1,6 +1,29 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-127-01",
+      "title": "MAXHUB Pivot client application",
+      "date": "2026-05-07",
+      "summary": "Successful exploitation of this vulnerability may enable an attacker to access tenant email addresses and associated information in cleartext or cause a denial-of-service condition.",
+      "sectors": [
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2026-6411"
+      ],
+      "cvss_max": 7.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "MAXHUB",
+          "product": "MAXHUB Pivot client application",
+          "version": "<v1.36.2",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-127-01"
+    },
+    {
       "advisory_id": "ICSA-26-125-05",
       "title": "Johnson Controls CEM AC2000",
       "date": "2026-05-05",
