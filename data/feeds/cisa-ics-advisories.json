@@ -1,6 +1,80 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-132-01",
+      "title": "Fuji Electric Tellus",
+      "date": "2026-05-12",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to elevate privileges from user to system, which may then enable the attacker to cause a temporary denial of service, open files, or delete files.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-8108"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Fuji Electric",
+          "product": "Tellus",
+          "version": "5.0.2",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-01"
+    },
+    {
+      "advisory_id": "ICSA-26-132-02",
+      "title": "Subnet Solutions PowerSYSTEM Center",
+      "date": "2026-05-12",
+      "summary": "Successful exploitation of these vulnerabilities could allow an authenticated attacker to expose sensitive information or cause a CRLF injection.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-26289",
+        "CVE-2026-33570",
+        "CVE-2026-35555",
+        "CVE-2026-35504"
+      ],
+      "cvss_max": 8.2,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Subnet Solutions Inc.",
+          "product": "PowerSYSTEM Center 2020",
+          "version": "<=5.28.x",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Subnet Solutions Inc.",
+          "product": "PowerSYSTEM Center 2020",
+          "version": ">=5.8.x|<=5.28.x",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Subnet Solutions Inc.",
+          "product": "PowerSYSTEM Center 2020",
+          "version": ">=5.11.x|<=5.28.x",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Subnet Solutions Inc.",
+          "product": "PowerSYSTEM Center 2024",
+          "version": ">=6.0.x|<=6.1.x",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Subnet Solutions Inc.",
+          "product": "PowerSYSTEM Center 2026",
+          "version": "7.0.x",
+          "product_id": "CSAFPID-0005"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-02"
+    },
+    {
       "advisory_id": "ICSA-26-127-01",
       "title": "MAXHUB Pivot client application",
       "date": "2026-05-07",
@@ -2948,6 +3022,44 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-071-06"
     },
     {
+      "advisory_id": "ICSA-26-132-05",
+      "title": "ABB AC500 V3 Stack Buffer Overflow in Cryptographic Message Syntax",
+      "date": "2026-03-12",
+      "summary": "ABB became aware of vulnerability in the products versions listed as affected in the advisory. An update is available that resolves publicly reported vulnerability.\n\nAn attacker who successfully exploited these vulnerabilities could cause a crash, denial-of-service (DoS), or potentially remote code execution.",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-15467"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "AC500 V3 PM5xxx",
+          "version": "",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AC500 V3 Firmware",
+          "version": "3.9.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AC500 V3 Firmware",
+          "version": "3.9.0_HF1",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-05"
+    },
+    {
       "advisory_id": "ICSA-26-069-01",
       "title": "Apeman Cameras",
       "date": "2026-03-10",
@@ -5682,6 +5794,72 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-092-03"
+    },
+    {
+      "advisory_id": "ICSA-26-132-03",
+      "title": "ABB AC500 V3 Multiple Vulnerabilities",
+      "date": "2026-02-24",
+      "summary": "ABB became aware of severe vulnerability in the products versions listed as affected in the advisory. An update is available that resolves these vulnerabilities.\n\nAn attacker who successfully exploited these vulnerabilities could bypass the user management and read visualization files (CVE-2025-2595), read and write certificates and keys (CVE-2025-41659) or cause a denial-of-service (DoS) (CVE-2025-41691).",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-2595",
+        "CVE-2025-41659",
+        "CVE-2025-41691"
+      ],
+      "cvss_max": 8.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "AC500 V3",
+          "version": "<3.9.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AC500 V3",
+          "version": "3.9.0",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-03"
+    },
+    {
+      "advisory_id": "ICSA-26-132-04",
+      "title": "ABB Automation Builder Gateway for Windows",
+      "date": "2026-02-24",
+      "summary": "ABB became aware of severe vulnerability in the products versions listed as affected in the advisory. \n\nThe Windows gateway is accessible remotely by default. Unauthenticated attackers can therefore search for PLCs, but the user management of the PLCs prevents the actual access to the PLCs – unless it is disabled",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2024-41975"
+      ],
+      "cvss_max": 5.3,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Automation Builder",
+          "version": "<2.9.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Automation Builder",
+          "version": "2.9.0",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-04"
     },
     {
       "advisory_id": "ICSA-26-050-01",
@@ -9304,6 +9482,56 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-083-03"
+    },
+    {
+      "advisory_id": "ICSA-26-132-06",
+      "title": "ABB WebPro SNMP Card PowerValue Multiple Vulnerabilities",
+      "date": "2026-01-07",
+      "summary": "ABB became aware of multiple internally discovered vulnerabilities in the WebPro SNMP card PowerValue for the product versions listed as affected in the advisory. \n\nDepending upon the vulnerability, an attacker with access to local network who successfully exploited this vulnerability could have\n- Unauthorized access\n- Insufficient Session Expiration leading to resource unavailability\n- Uncontrolled Resource Consumption leading to DOS attack\n\nABB strongly advises customers to update the latest firmware of affected products.",
+      "sectors": [
+        "Chemical",
+        "Communications",
+        "Critical Manufacturing",
+        "Dams",
+        "Energy",
+        "Healthcare and Public Health",
+        "Information Technology",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-4675",
+        "CVE-2025-4676",
+        "CVE-2025-4677"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "WebPro SNMP Card PowerValue",
+          "version": "<=1.1.8.k",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "WebPro SNMP Card PowerValue",
+          "version": "1.1.8.p",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "WebPro SNMP Card PowerValue UL",
+          "version": "<=1.1.8.k",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "WebPro SNMP Card PowerValue UL",
+          "version": "1.1.8.p",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-06"
     },
     {
       "advisory_id": "ICSA-26-006-01",
