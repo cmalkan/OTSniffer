@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-05-19T10:07:01.559Z",
+  "pulled_at": "2026-05-21T10:03:40.340Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -81779,6 +81779,41 @@
       "published": "2026-04-22T09:16:21.270",
       "last_modified": "2026-05-12T16:15:00.923",
       "fetched_at": "2026-05-15T09:52:16.148Z"
+    },
+    "CVE-2026-0300": {
+      "cve_id": "CVE-2026-0300",
+      "description": "A buffer overflow vulnerability in the User-ID™ Authentication Portal (aka Captive Portal) service of Palo Alto Networks PAN-OS software allows an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets. \n\nThe risk of this issue is greatly reduced if you secure access to the User-ID™ Authentication Portal per the  best practice guidelines https://knowledgebase.paloaltonetworks.com/KCSArticleDetail  by restricting access to only trusted internal IP addresses.\n\nPrisma Access, Cloud NGFW and Panorama appliances are not impacted by this vulnerability.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://security.paloaltonetworks.com/CVE-2026-0300",
+          "tags": [
+            "Mitigation",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-967325.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-0300",
+          "tags": [
+            "US Government Resource"
+          ]
+        }
+      ],
+      "published": "2026-05-06T19:16:35.730",
+      "last_modified": "2026-05-12T18:47:21.360",
+      "fetched_at": "2026-05-21T10:03:19.692Z"
     }
   }
 }
