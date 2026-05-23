@@ -10471,6 +10471,59 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-04"
     },
     {
+      "advisory_id": "ICSA-26-141-03",
+      "title": "ABB B&R Automation Studio",
+      "date": "2026-02-18",
+      "summary": "ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is available that replaces an outdated third-party component.\n\nAlthough no successful exploitation was observed during testing of the affected B&R products, the identified vulnerabilities could present potential attack vectors that might enable unauthorized access, data exposure, or remote code execution.\n",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2025-6965",
+        "CVE-2025-3277",
+        "CVE-2023-7104",
+        "CVE-2022-35737",
+        "CVE-2020-15358",
+        "CVE-2020-13632",
+        "CVE-2020-13631",
+        "CVE-2020-13630",
+        "CVE-2020-13435",
+        "CVE-2020-13434",
+        "CVE-2020-11656",
+        "CVE-2020-11655",
+        "CVE-2019-19646",
+        "CVE-2019-19645",
+        "CVE-2019-8457",
+        "CVE-2018-20506",
+        "CVE-2018-20505",
+        "CVE-2018-20346",
+        "CVE-2018-8740",
+        "CVE-2017-10989",
+        "CVE-2016-6153",
+        "CVE-2015-6607",
+        "CVE-2015-5895",
+        "CVE-2015-3717",
+        "CVE-2015-3416"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "B&R Automation Studio",
+          "version": "<6.5",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "B&R Automation Studio",
+          "version": "6.5",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-03"
+    },
+    {
       "advisory_id": "ICSA-26-048-02",
       "title": "Delta Electronics ASDA-Soft",
       "date": "2026-02-17",
@@ -11771,6 +11824,145 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-125-02"
+    },
+    {
+      "advisory_id": "ICSA-26-141-02",
+      "title": "ABB B&R PCs",
+      "date": "2026-01-29",
+      "summary": "ABB became aware of vulnerability in the product versions listed as affected in the advisory. An update is now available that addresses and remediates the vulnerability.\n\nA network attacker could exploit the vulnerabilities to execute remote code, initiate DoS attacks, conduct DNS cache poisoning, or extract sensitive information. ",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2023-45229",
+        "CVE-2023-45230",
+        "CVE-2023-45231",
+        "CVE-2023-45232",
+        "CVE-2023-45233",
+        "CVE-2023-45234",
+        "CVE-2023-45235",
+        "CVE-2023-45236",
+        "CVE-2023-45237"
+      ],
+      "cvss_max": 8.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "APC4100",
+          "version": "<1.09",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "APC4100",
+          "version": "1.09",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "APC910",
+          "version": "<=1.25",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "C80",
+          "version": "<1.14",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "C80",
+          "version": "1.14",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "MPC3100",
+          "version": "<1.24",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "MPC3100",
+          "version": "1.24",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC1200",
+          "version": "<1.14",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC1200",
+          "version": "1.14",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC900",
+          "version": "<2.16",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC900",
+          "version": "2.16",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "ABB",
+          "product": "APC2200",
+          "version": "<1.35",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "ABB",
+          "product": "APC2200",
+          "version": "1.35",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC2200",
+          "version": "<1.35",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC2200",
+          "version": "1.35",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "ABB",
+          "product": "APC3100",
+          "version": "<1.45",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "ABB",
+          "product": "APC3100",
+          "version": "1.45",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC3100",
+          "version": "<1.45",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "ABB",
+          "product": "PPC3100",
+          "version": "1.45",
+          "product_id": "CSAFPID-0019"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-02"
     },
     {
       "advisory_id": "ICSA-26-043-06",
@@ -13696,7 +13888,7 @@
     },
     {
       "advisory_id": "ICSA-26-022-01",
-      "title": "Schneider Electric",
+      "title": "Schneider Electric EcoStruxure Process Expert (Update A)",
       "date": "2026-01-13",
       "summary": "Schneider Electric is aware of a vulnerability in its EcoStruxureTM Process and EcoStruxure™ Process Expert \r\nfor AVEVA System Platform products. \r\nThe EcoStruxureTM Process is a single automation system to engineer, operate, and maintain your entire \r\ninfrastructure for a sustainable, productive and market-agile plant.\r\nThe EcoStruxure™ Process Expert for AVEVA System Platform product enables users to achieve operational \r\nprofitability from design engineering to meeting the demands of modern-day production. It provides an asset \r\ncentric and object-oriented automation platform to deploy system-wide standards in a digital ecosystem.\r\nFailure to apply the Fix/Mitigations provided below may risk modification of the executable binaries, which \r\ncould result in privilege escalation.",
       "sectors": [
@@ -13718,15 +13910,21 @@
         },
         {
           "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Process Expert",
-          "version": "vers:all/*",
+          "product": "EcoStruxure Process Expert for AVEVA System Platform",
+          "version": "<2025",
           "product_id": "CSAFPID-0002"
         },
         {
           "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Process Expert",
+          "product": "EcoStruxure Process Expert",
           "version": "2025",
           "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure™ Process Expert for AVEVA System Platform",
+          "version": "2025",
+          "product_id": "CSAFPID-0004"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-01"
@@ -14503,6 +14701,68 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-02"
+    },
+    {
+      "advisory_id": "ICSA-26-141-04",
+      "title": "ABB B&R Automation Runtime",
+      "date": "2025-10-07",
+      "summary": "An update is available that resolves a vulnerability identified by B&Rs internal security analysis in the product versions listed as affected in this advisory.\n\nAn attacker who successfully exploited these vulnerabilities could take over a remote session or execute code in the context of the user’s browser session.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2025-3449",
+        "CVE-2025-3448",
+        "CVE-2025-11498"
+      ],
+      "cvss_max": 6.1,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "B&R",
+          "product": "Automation Runtime",
+          "version": "<6.4",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "B&R",
+          "product": "Automation Runtime",
+          "version": "6.4",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-04"
+    },
+    {
+      "advisory_id": "ICSA-26-141-05",
+      "title": "ABB Terra AC Wallbox",
+      "date": "2025-09-16",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory. \n\nAn attacker who successfully exploited this vulnerability could cause the pollution of heap memory which potentially takes remote control of the product and performs a write operation to the flash memory to alter the firmware behavior.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2025-10504",
+        "CVE-2025-12142",
+        "CVE-2025-12143"
+      ],
+      "cvss_max": 6.1,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (JP)",
+          "version": "<=1.8.33",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (JP)",
+          "version": "1.8.36",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-05"
     },
     {
       "advisory_id": "ICSA-25-252-01",
@@ -26305,30 +26565,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-140-05"
     },
     {
-      "advisory_id": "ICSA-25-133-04",
-      "title": "ABB Automation Builder",
-      "date": "2025-05-13",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to overrule the Automation Builder's user management.",
-      "sectors": [
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2025-3394",
-        "CVE-2025-3395"
-      ],
-      "cvss_max": 7.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "ABB",
-          "product": "Automation Builder",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-133-04"
-    },
-    {
       "advisory_id": "ICSA-25-135-01",
       "title": "Siemens RUGGEDCOM APE1808 Devices",
       "date": "2025-05-13",
@@ -28252,6 +28488,36 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-121-01"
+    },
+    {
+      "advisory_id": "ICSA-25-133-04",
+      "title": "ABB Automation Builder (Update A)",
+      "date": "2025-04-30",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the following section.\n\nAn attacker who successfully exploited this vulnerability could overrule the Automation Builder’s user management. Workarounds to close the vulnerabilities are available.\n",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2025-3394",
+        "CVE-2025-3395"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Automation Builder",
+          "version": "<=2.8.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Automation Builder",
+          "version": "2.8.1",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-133-04"
     },
     {
       "advisory_id": "ICSA-25-119-01",
@@ -30203,6 +30469,29 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-160-02"
+    },
+    {
+      "advisory_id": "ICSA-26-141-01",
+      "title": "Hitachi Energy GMS600",
+      "date": "2023-06-27",
+      "summary": "Hitachi Energy is aware of the vulnerability, CVE-2022-4304 in the OSS component OpenSSL, that affects the GMS600 versions that are listed below. An attacker successfully exploiting this vulnerability could send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection. For immediate mitigation /workaround information, please refer to the General Mitigation Factors/Workarounds",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2022-4304"
+      ],
+      "cvss_max": 5.9,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "GMS600",
+          "version": "vers:GMS600/>=1.3.0|<=1.3.1",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-01"
     },
     {
       "advisory_id": "ICSA-26-015-02",
