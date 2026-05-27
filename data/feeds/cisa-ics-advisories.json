@@ -1,6 +1,29 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSMA-26-146-01",
+      "title": "Eppendorf BioFlo 320",
+      "date": "2026-05-26",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to gain full access to functionality and data with the bioreactor.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-7251"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Eppendorf",
+          "product": "BioFlo 320 Bioreactor",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-146-01"
+    },
+    {
       "advisory_id": "ICSA-26-139-03",
       "title": "ScadaBR",
       "date": "2026-05-19",
@@ -14243,54 +14266,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-06"
     },
     {
-      "advisory_id": "ICSA-26-006-01",
-      "title": "Columbia Weather Systems MicroServer",
-      "date": "2026-01-06",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to redirect connections to an attacker controlled device, gain admin access to the web portal, or gain limited shell access.",
-      "sectors": [
-        "Information Technology"
-      ],
-      "cves": [
-        "CVE-2025-61939",
-        "CVE-2025-64305",
-        "CVE-2025-66620"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Columbia Weather Systems",
-          "product": "MicroServer firmware",
-          "version": "<MS_4.1_14142",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-006-01"
-    },
-    {
-      "advisory_id": "ICSA-26-008-01",
-      "title": "Hitachi Energy Asset Suite",
-      "date": "2025-12-09",
-      "summary": "Hitachi Energy is aware of a Jasper Report vulnerability that affects the Asset Suite product versions mentioned in this document below. This vulnerability can be exploited to carry out remote code execution (RCE) attack on the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
-      "sectors": [
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2025-10492"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Hitachi Energy",
-          "product": "Asset Suite",
-          "version": "vers:Asset_Suite/<=9.7",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-008-01"
-    },
-    {
       "advisory_id": "ICSA-26-015-05",
       "title": "Siemens RUGGEDCOM ROS",
       "date": "2025-12-09",
@@ -14638,6 +14613,61 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-03"
     },
     {
+      "advisory_id": "ICSA-26-146-05",
+      "title": "ABB Ability Camera Connect",
+      "date": "2025-11-27",
+      "summary": "ABB is aware of public reports of vulnerabilities in a 3rd party component VLC media player Version 2.2.4 which was delivered together with the installation package of Camera Connect Version 1.5.0.14 and below. An update is available that resolves a privately reported outdated 3rd party component with vulnerabilities in the product versions listed as affected in this advisory.\n\nAn attacker who successfully exploited any of these vulnerabilities in the 3rd party component could potentially compromise the system in different ways.\n",
+      "sectors": [
+        "Chemical",
+        "Commercial Facilities",
+        "Communications",
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2024-46461",
+        "CVE-2023-47360",
+        "CVE-2023-47359",
+        "CVE-2023-46814",
+        "CVE-2022-41325",
+        "CVE-2020-26664",
+        "CVE-2019-19721",
+        "CVE-2019-13962",
+        "CVE-2019-13615",
+        "CVE-2019-13602",
+        "CVE-2019-5460",
+        "CVE-2019-5459",
+        "CVE-2019-5439",
+        "CVE-2018-11529",
+        "CVE-2017-17670",
+        "CVE-2017-10699",
+        "CVE-2017-9301",
+        "CVE-2017-9300",
+        "CVE-2017-8313",
+        "CVE-2017-8312",
+        "CVE-2017-8311",
+        "CVE-2017-8310"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Ability Camera Connect",
+          "version": "vers:intdot/<=1.5.0.14",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Camera Connect",
+          "version": "1.5.0.15",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+    },
+    {
       "advisory_id": "ICSA-26-120-03",
       "title": "ABB Edgenius Management Portal",
       "date": "2025-11-20",
@@ -14703,6 +14733,132 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-02"
     },
     {
+      "advisory_id": "ICSA-26-146-01",
+      "title": "ABB Terra AC",
+      "date": "2025-10-20",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory. \n\nAn attacker who successfully exploited this vulnerability could cause the pollution of heap memory which potentially takes remote control of the product and performs a write operation to the flash memory to alter the firmware behavior.",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2025-5517"
+      ],
+      "cvss_max": 6.8,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (UL40/80A)",
+          "version": "<=1.8.32",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (UL40/80A)",
+          "version": "1.8.33",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (UL32A)",
+          "version": "<=1.8.2",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (UL32A)",
+          "version": "1.8.34",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (MID/ CE) Terra AC MID",
+          "version": "<=1.8.32",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (MID/ CE) Terra AC MID",
+          "version": "1.8.34",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (MID/ CE) Terra AC Juno CE",
+          "version": "<=1.8.32",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (MID/ CE) Terra AC Juno CE",
+          "version": "1.8.34",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (MID/ CE) Terra AC PTB",
+          "version": "<=1.8.21",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (MID/ CE) Terra AC PTB",
+          "version": "1.8.33",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (JP)",
+          "version": "<=1.8.2",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Terra AC wallbox (JP)",
+          "version": "1.8.34",
+          "product_id": "CSAFPID-0012"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-01"
+    },
+    {
+      "advisory_id": "ICSA-26-146-06",
+      "title": "ABB LVS MConfig",
+      "date": "2025-10-08",
+      "summary": "ABB became aware of an internally discovered vulnerability in the MConfig product versions listed as affected in the advisory. \n\nAn attacker with access to local networks who successfully exploits vulnerability could have access to application’s sensitive information.\n\nABB strongly advises customers to update MConfig with latest software version.",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Food and Agriculture",
+        "Transportation Systems",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-9970"
+      ],
+      "cvss_max": 7.4,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "LVS MConfig",
+          "version": "<=1.4.9.21",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "LVS MConfig",
+          "version": "1.4.9.22",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-06"
+    },
+    {
       "advisory_id": "ICSA-26-141-04",
       "title": "ABB B&R Automation Runtime",
       "date": "2025-10-07",
@@ -14732,6 +14888,54 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-04"
+    },
+    {
+      "advisory_id": "ICSA-26-146-04",
+      "title": "ABB B&R Automation Runtime DoS Vulnerability in System Diagnostics Manager (SDM)",
+      "date": "2025-10-07",
+      "summary": "An update is available that resolves a vulnerability identified by B&Rs internal security analysis in the product versions listed as affected in this advisory.\n\nAn attacker who successfully exploited this vulnerability could cause the product to stop.",
+      "sectors": [
+        "Chemical",
+        "Communications",
+        "Critical Manufacturing",
+        "Dams",
+        "Energy",
+        "Healthcare and Public Health",
+        "Information Technology",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-3450"
+      ],
+      "cvss_max": 10,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "B&R",
+          "product": "Automation Runtime",
+          "version": "<6.3",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "B&R",
+          "product": "Automation Runtime",
+          "version": "6.3",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "B&R",
+          "product": "Automation Runtime",
+          "version": "<Q4.93",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "B&R",
+          "product": "Automation Runtime",
+          "version": "Q4.93",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-04"
     },
     {
       "advisory_id": "ICSA-26-141-05",
@@ -20653,6 +20857,36 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-240-03"
     },
     {
+      "advisory_id": "ICSA-26-146-03",
+      "title": "ABB AbilityTM Zenon Remote Transport Vulnerability",
+      "date": "2025-08-12",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory.\nThe vulnerability enables unauthorized access to the Reboot OS function within the Remote Transport Service, allowing an attacker to trigger a system reboot without the required authentication. This functionality initiates a system reboot on the target machine. However, remote exploitation of this vulnerability is not feasible unless the attacker has already gained access to the network where the affected ABB Ability™ zenon system is deployed.\nAt the time of writing, there is no evidence that this vulnerability is being actively exploited in the wild.\n",
+      "sectors": [
+        "Chemical",
+        "Communications",
+        "Critical Manufacturing",
+        "Dams",
+        "Energy",
+        "Healthcare and Public Health",
+        "Information Technology",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-8754"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "AbilityTM zenon",
+          "version": "<=14",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-03"
+    },
+    {
       "advisory_id": "ICSA-25-219-01",
       "title": "Delta Electronics DIAView",
       "date": "2025-08-07",
@@ -21693,6 +21927,37 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-205-03"
+    },
+    {
+      "advisory_id": "ICSA-26-146-02",
+      "title": "ABB AC500 V2",
+      "date": "2025-07-23",
+      "summary": "ABB became aware of vulnerabilities in AC500 V2 listed as affected in the advisory. \nAn attacker who successfully exploited this vulnerability could access fragments of Modbus telegrams that have been sent earlier by that PLC",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-7745"
+      ],
+      "cvss_max": 5.8,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "AC500 V2",
+          "version": "<=2.5.2",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "AC500 V2",
+          "version": "2.5.3",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-02"
     },
     {
       "advisory_id": "ICSA-25-203-01",

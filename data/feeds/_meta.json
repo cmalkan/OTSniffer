@@ -1,11 +1,11 @@
 {
-  "pulled_at": "2026-05-25T10:47:12.178Z",
+  "pulled_at": "2026-05-27T10:20:18.587Z",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
-      "count": 1602,
-      "catalog_version": "2026.05.22",
-      "date_released": "2026-05-22T18:00:11.5035Z"
+      "count": 1603,
+      "catalog_version": "2026.05.26",
+      "date_released": "2026-05-26T17:02:17.2797Z"
     },
     "ics_advisories": {
       "repo": "https://github.com/cisagov/CSAF",
@@ -13,7 +13,7 @@
         "2025",
         "2026"
       ],
-      "count": 395
+      "count": 400
     }
   }
 }
