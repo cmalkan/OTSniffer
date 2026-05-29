@@ -1,6 +1,186 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-148-01",
+      "title": "MacGregor Voyage Data Recorder (VDR) G4e",
+      "date": "2026-05-28",
+      "summary": "Successful exploitation of these vulnerabilities could result in an attacker gaining administrator access to the device.",
+      "sectors": [
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-42941",
+        "CVE-2026-42951",
+        "CVE-2026-44611",
+        "CVE-2026-42929",
+        "CVE-2026-40425"
+      ],
+      "cvss_max": 8.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Danelec",
+          "product": "MacGregor Voyage Data Recorder (VDR) G4e",
+          "version": "<V5.250",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-01"
+    },
+    {
+      "advisory_id": "ICSA-26-148-02",
+      "title": "Jinan USR IOT Technology Limited (PUSR) USR-W610 RS232/485 to Wi-Fi/Ethernet Converter",
+      "date": "2026-05-28",
+      "summary": "Successful exploitation of this vulnerability could result in an attacker gaining administrator access to the device.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-7786"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Jinan USR IOT Technology Limited (PUSR)",
+          "product": "USR-W610 RS232/485 to Wi-Fi/Ethernet Converter",
+          "version": "7.03T.07",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-02"
+    },
+    {
+      "advisory_id": "ICSA-26-148-05",
+      "title": "CP Plus 8 Ch. Network Video Recorder",
+      "date": "2026-05-28",
+      "summary": "Successful exploitation of this vulnerability allows an attacker's malicious script to execute in the browser of any authenticated user or administrator who accesses the affected interface. This could lead to compromise of user sessions, execution of unauthorized actions with the victim's privileges, exposure or manipulation of sensitive data, and degradation of overall system integrity.",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Emergency Services"
+      ],
+      "cves": [
+        "CVE-2026-6824"
+      ],
+      "cvss_max": 8.4,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "CP Plus",
+          "product": "CP-UNR-108F1 Hardware",
+          "version": "V1.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "CP Plus",
+          "product": "CP-UNR-108F1 Web",
+          "version": "V3.2.7.128806",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "CP Plus",
+          "product": "CP-UNR-108F1 System",
+          "version": "V4.001.00AT009.0.R",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-05"
+    },
+    {
+      "advisory_id": "ICSA-26-148-06",
+      "title": "KMW CCTV Security Cameras",
+      "date": "2026-05-28",
+      "summary": "Successful exploitation of this vulnerability may grant full unauthorized access to camera feeds and settings.",
+      "sectors": [
+        "Commercial Facilities",
+        "Government Services and Facilities",
+        "Critical Manufacturing",
+        "Financial Services",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-5386"
+      ],
+      "cvss_max": 9.1,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "KMW",
+          "product": "KM-IP521",
+          "version": "IPCAM_V4.04.91.230307",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "KMW",
+          "product": "KM-IP421",
+          "version": "IPCAM_V4.04.53.210416",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-06"
+    },
+    {
+      "advisory_id": "ICSA-26-148-08",
+      "title": "XCharge C6",
+      "date": "2026-05-28",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to gain administrator rights or execute code on the affected device. ",
+      "sectors": [
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-9037",
+        "CVE-2026-9038",
+        "CVE-2026-9039"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "XCharge",
+          "product": "C6",
+          "version": "<May_22_2026",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08"
+    },
+    {
+      "advisory_id": "ICSMA-26-148-01",
+      "title": "Fourth Frontier Frontier X Mobile Application, Frontier X2",
+      "date": "2026-05-28",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to read and write arbitrary handle values and change clinical readings, which could result in taking control of the device and lead to patient harm.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-5768"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Fourth Frontier",
+          "product": "Frontier X Android application",
+          "version": "<v15.0.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Fourth Frontier",
+          "product": "Frontier X IOS application",
+          "version": "<v25.0.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Fourth Frontier",
+          "product": "Frontier X2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-148-01"
+    },
+    {
       "advisory_id": "ICSMA-26-146-01",
       "title": "Eppendorf BioFlo 320",
       "date": "2026-05-26",
@@ -4681,6 +4861,38 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+    },
+    {
+      "advisory_id": "ICSA-26-148-07",
+      "title": "Schnieider Electric EcoStruxure Machine Expert HVAC (SEVD-2026-132-01)",
+      "date": "2026-05-12",
+      "summary": "Schneider Electric is aware of a vulnerability in its EcostruxureTM Machine Expert HVAC product.  \r\nThe [EcostruxureTM Machine Expert HVAC](https://www.se.com/ww/en/download/document/EcoStruxureME_HVAC/) product is a programming software for Modicon M171-M172 logic \r\ncontrollers.  \r\nFailure to apply the remediation provided below may risk in revealing sensitive information, which could result \r\nin disclosing protected source code, leading to loss of confidentiality. ",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-6332"
+      ],
+      "cvss_max": 5.5,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "Ecostruxure™ Machine Expert HVAC",
+          "version": "vers:intdot/<1.10.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Ecostruxure™ Machine Expert HVAC",
+          "version": "1.10.0",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-07"
     },
     {
       "advisory_id": "ICSA-26-127-01",
@@ -12784,275 +12996,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-04"
     },
     {
-      "advisory_id": "ICSA-26-015-01",
-      "title": "AVEVA Process Optimization",
-      "date": "2026-01-15",
-      "summary": "Successful exploitation of these vulnerabilities could enable an attacker to execute remote code, perform SQL injection, escalate privileges, or access sensitive information.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-61937",
-        "CVE-2025-64691",
-        "CVE-2025-61943",
-        "CVE-2025-65118",
-        "CVE-2025-64729",
-        "CVE-2025-65117",
-        "CVE-2025-64769"
-      ],
-      "cvss_max": 10,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "AVEVA",
-          "product": "Process Optimization",
-          "version": "<=2024.1",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-01"
-    },
-    {
-      "advisory_id": "ICSA-26-013-01",
-      "title": "Rockwell Automation 432ES-IG3 Series A",
-      "date": "2026-01-13",
-      "summary": "Successful exploitation of this vulnerability could result in a denial-of-service condition.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-9368"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Rockwell Automation",
-          "product": "432ES-IG3 Series A",
-          "version": "V1.001",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-013-01"
-    },
-    {
-      "advisory_id": "ICSA-26-013-02",
-      "title": "Rockwell Automation FactoryTalk DataMosaix Private Cloud",
-      "date": "2026-01-13",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to perform unauthorized sensitive database operations.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-12807"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Rockwell Automation",
-          "product": "FactoryTalk DataMosaix Private Cloud",
-          "version": "7.11",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "FactoryTalk DataMosaix Private Cloud",
-          "version": "8.00",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "FactoryTalk DataMosaix Private Cloud",
-          "version": "8.01",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-013-02"
-    },
-    {
-      "advisory_id": "ICSA-26-013-03",
-      "title": "YoSmart YoLink Smart Hub",
-      "date": "2026-01-13",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to remotely control other users' smart home devices, intercept sensitive data, and hijack sessions.",
-      "sectors": [
-        "Communications"
-      ],
-      "cves": [
-        "CVE-2025-59449",
-        "CVE-2025-59452",
-        "CVE-2025-59448",
-        "CVE-2025-59451"
-      ],
-      "cvss_max": 5.8,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "YoSmart",
-          "product": "YoSmart server",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "YoSmart",
-          "product": "YoLink Smart Hub",
-          "version": "0382",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "YoSmart",
-          "product": "YoLink Mobile Appication",
-          "version": "<v1.40.45",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-013-03"
-    },
-    {
-      "advisory_id": "ICSA-26-015-03",
-      "title": "Siemens TeleControl Server Basic",
-      "date": "2026-01-13",
-      "summary": "TeleControl Server Basic before V3.1.2.4 contains a local privilege escalation vulnerability that could allow an attacker to run arbitrary code with elevated privileges.\n\nSiemens has released a new version for TeleControl Server Basic and recommends to update to the latest version.",
-      "sectors": [
-        "Energy",
-        "Water and Wastewater",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2025-40942"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "TeleControl Server Basic",
-          "version": "vers:intdot/<3.1.2.4",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-03"
-    },
-    {
-      "advisory_id": "ICSA-26-015-04",
-      "title": "Siemens SIMATIC and SIPLUS products",
-      "date": "2026-01-13",
-      "summary": "Siemens ET 200 devices contain a denial-of-service vulnerability that could be triggered by sending a valid S7 protocol Disconnect Request (COTP DR TPDU), causing the device to become unresponsive and require a power cycle to recover.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40944"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200AL IM 157-1 PN (6ES7157-1AB00-0AB0)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200MP IM 155-5 PN HF (6ES7155-5AA00-0AC0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP IM 155-6 MF HF (6ES7155-6MU00-0CN0)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP IM 155-6 PN HA (incl. SIPLUS variants)",
-          "version": "vers:intdot/<1.3",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP IM 155-6 PN R1 (6ES7155-6AU00-0HM0)",
-          "version": "vers:intdot/<6.0.1",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP IM 155-6 PN/2 HF (6ES7155-6AU01-0CN0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP IM 155-6 PN/3 HF (6ES7155-6AU30-0CN0)",
-          "version": "vers:intdot/<4.2.2",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC PN/MF Coupler (6ES7158-3MU10-0XA0)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC PN/PN Coupler (6ES7158-3AD10-0XA0)",
-          "version": "vers:intdot/<6.0.0",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-2AC0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200MP IM 155-5 PN HF (6AG1155-5AA00-7AC0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200MP IM 155-5 PN HF T1 RAIL (6AG2155-5AA00-1AC0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-2CN0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP IM 155-6 PN HF (6AG1155-6AU01-7CN0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP IM 155-6 PN HF T1 RAIL (6AG2155-6AU01-1CN0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP IM 155-6 PN HF TX RAIL (6AG2155-6AU01-4CN0)",
-          "version": "vers:intdot/>=4.2.0",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS NET PN/PN Coupler (6AG2158-3AD10-4XA0)",
-          "version": "vers:intdot/<6.0.0",
-          "product_id": "CSAFPID-0017"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-04"
-    },
-    {
       "advisory_id": "ICSA-26-015-07",
       "title": "Siemens RUGGEDCOM APE1808 Devices",
       "date": "2026-01-13",
@@ -14266,173 +14209,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-06"
     },
     {
-      "advisory_id": "ICSA-26-015-05",
-      "title": "Siemens RUGGEDCOM ROS",
-      "date": "2025-12-09",
-      "summary": "Ruggedcom ROS devices contain a temporary denial of service vulnerability that could allow an attacker to crash and restart the device.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40935"
-      ],
-      "cvss_max": 4.3,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RMC8388 V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RS416Pv2 V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RS416v2 V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RS900 (32M) V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RS900G (32M) V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG2100 (32M) V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG2100P (32M) V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG2288 V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG2300 V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG2300P V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG2488 V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG907R",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG908C",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG909R",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG910C",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSG920P V5.X",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RSL910",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RST2228",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RST2228P",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RST916C",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM RST916P",
-          "version": "vers:intdot/<5.10.1",
-          "product_id": "CSAFPID-0021"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-05"
-    },
-    {
-      "advisory_id": "ICSA-26-015-06",
-      "title": "Siemens SINEC Security Monitor",
-      "date": "2025-12-09",
-      "summary": "SINEC Security Monitor before V4.10.0 contains multiple  vulnerabilities.\n\nSiemens has released a new version for SINEC Security Monitor and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40830",
-        "CVE-2025-40831"
-      ],
-      "cvss_max": 6.7,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SINEC Security Monitor",
-          "version": "vers:intdot/<4.10.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-06"
-    },
-    {
       "advisory_id": "ICSA-26-015-11",
       "title": "Siemens RUGGEDCOM ROX II",
       "date": "2025-12-09",
@@ -14936,6 +14712,54 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-04"
+    },
+    {
+      "advisory_id": "ICSA-26-148-03",
+      "title": "ABB EIBPORT",
+      "date": "2025-10-07",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory. A firmware update is available that resolves these privately reported vulnerabilities in the product versions listed as affected in the advisory.\n\nAn attacker who successfully exploited these vulnerabilities could access sensitive information stored inside the device and can change the configuration of the device . \n",
+      "sectors": [
+        "Critical Manufacturing",
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2021-22291"
+      ],
+      "cvss_max": 8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "EIBPORT V3 KNX",
+          "version": "<3.9.2",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "EIBPORT V3 KNX",
+          "version": "3.9.2",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "EIBPORT V3 KNX",
+          "version": "<3.9.2",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "EIBPORT V3 KNX GSM",
+          "version": "<3.9.2",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "EIBPORT V3 KNX GSM",
+          "version": "3.9.2",
+          "product_id": "CSAFPID-0005"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-03"
     },
     {
       "advisory_id": "ICSA-26-141-05",
@@ -20858,9 +20682,9 @@
     },
     {
       "advisory_id": "ICSA-26-146-03",
-      "title": "ABB AbilityTM Zenon Remote Transport Vulnerability",
+      "title": "ABB Ability Zenon Remote Transport Vulnerability (Update A)",
       "date": "2025-08-12",
-      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory.\nThe vulnerability enables unauthorized access to the Reboot OS function within the Remote Transport Service, allowing an attacker to trigger a system reboot without the required authentication. This functionality initiates a system reboot on the target machine. However, remote exploitation of this vulnerability is not feasible unless the attacker has already gained access to the network where the affected ABB Ability™ zenon system is deployed.\nAt the time of writing, there is no evidence that this vulnerability is being actively exploited in the wild.\n",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory.\nThe vulnerability enables unauthorized access to the Reboot OS function within the Remote Transport Service, allowing an attacker to trigger a system reboot without the required authentication. This functionality initiates a system reboot on the target machine. However, remote exploitation of this vulnerability is not feasible unless the attacker has already gained access to the network where the affected ABB Ability Zenon system is deployed.\nAt the time of writing, there is no evidence that this vulnerability is being actively exploited in the wild.\n",
       "sectors": [
         "Chemical",
         "Communications",
@@ -20879,8 +20703,8 @@
       "affected_products": [
         {
           "vendor": "ABB",
-          "product": "AbilityTM zenon",
-          "version": "<=14",
+          "product": "Ability Zenon",
+          "version": ">=7.50|<=14",
           "product_id": "CSAFPID-0001"
         }
       ],
@@ -22042,6 +21866,35 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-203-04"
+    },
+    {
+      "advisory_id": "ICSA-26-148-04",
+      "title": "ABB Busch-Welcome 2 Wire Door Opener Actuator",
+      "date": "2025-07-21",
+      "summary": "ABB is aware of vulnerabilities in the product versions listed as affected in the advisory.\nAn attacker who successfully exploited this vulnerability could gain physical, unauthorized access to a \nBuilding where the product is installed",
+      "sectors": [
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2025-7705"
+      ],
+      "cvss_max": 6.8,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Switch Actuator 4 DU",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Switch actuator, door/light 4 DU",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-04"
     },
     {
       "advisory_id": "ICSA-25-198-01",
@@ -30757,359 +30610,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-01"
-    },
-    {
-      "advisory_id": "ICSA-26-015-02",
-      "title": "Festo Firmware",
-      "date": "2022-11-29",
-      "summary": "Incomplete Festo product documentation of remote accessible functions and their required IP ports. Depending on the product a description of the supported features can be found in the product documentation to some extent.\nUpdate A, 2022-12-13\nAdded affected device \"Bus module CPX-E-PN, 4080497\"",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2022-3270"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus module CPX-E-EP",
-          "version": "",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus module CPX-E-PN",
-          "version": "",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB32",
-          "version": "",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB33",
-          "version": "",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB36",
-          "version": "",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB37",
-          "version": "",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB39",
-          "version": "",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB40",
-          "version": "",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-FB43",
-          "version": "",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-M-FB34",
-          "version": "",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-M-FB35",
-          "version": "",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-M-FB44",
-          "version": "",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CPX-M-FB45",
-          "version": "",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CTEU-EP",
-          "version": "",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CTEU-PN",
-          "version": "",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Bus node CTEU-PN-EX1C",
-          "version": "",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Camera system CHB-C-N",
-          "version": "",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Compact Vision System SBO*-C-*",
-          "version": "",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Compact Vision System SBO*-M-*",
-          "version": "",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Compact Vision System SBO*-Q-*",
-          "version": "",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CEC",
-          "version": "",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CEC-C1",
-          "version": "",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CEC-C1-V3",
-          "version": "",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CEC-M1",
-          "version": "",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CEC-M1-V3",
-          "version": "",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CEC-S1-V3",
-          "version": "",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-CMXX",
-          "version": "",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Control block CPX-FEC-1-IE",
-          "version": "",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECC-D",
-          "version": "",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECC-D-BA",
-          "version": "",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECC-LK",
-          "version": "",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECC-S",
-          "version": "",
-          "product_id": "CSAFPID-0032"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECC-X-*",
-          "version": "",
-          "product_id": "CSAFPID-0033"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECX-X-C1",
-          "version": "",
-          "product_id": "CSAFPID-0034"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CECX-X-M1",
-          "version": "",
-          "product_id": "CSAFPID-0035"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CMXH-ST2-C5-7-DIOP",
-          "version": "",
-          "product_id": "CSAFPID-0036"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller CPX-E-CEC-*",
-          "version": "",
-          "product_id": "CSAFPID-0037"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Controller SBRD-Q",
-          "version": "",
-          "product_id": "CSAFPID-0038"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware EtherNet/IP interface CPX-AP-I-EP-M12",
-          "version": "",
-          "product_id": "CSAFPID-0039"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware EtherNet/IP interface CPX-AP-I-PN-M12",
-          "version": "",
-          "product_id": "CSAFPID-0040"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Gateway CPX-IOT",
-          "version": "",
-          "product_id": "CSAFPID-0041"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Integrated drive EMCA-EC-67-*",
-          "version": "",
-          "product_id": "CSAFPID-0042"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Motor controller CMMO-ST-C5-1-DION",
-          "version": "",
-          "product_id": "CSAFPID-0043"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Motor controller CMMO-ST-C5-1-DIOP",
-          "version": "",
-          "product_id": "CSAFPID-0044"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Motor controller CMMO-ST-C5-1-LKP",
-          "version": "",
-          "product_id": "CSAFPID-0045"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Motor controller CMMP-AS-*",
-          "version": "",
-          "product_id": "CSAFPID-0046"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Motor controller CMMT-AS-*",
-          "version": "",
-          "product_id": "CSAFPID-0047"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Operator unit CDPX-X-A-S-10",
-          "version": "",
-          "product_id": "CSAFPID-0048"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Operator unit CDPX-X-A-W-13",
-          "version": "",
-          "product_id": "CSAFPID-0049"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Operator unit CDPX-X-A-W-4",
-          "version": "",
-          "product_id": "CSAFPID-0050"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Operator unit CDPX-X-A-W-7",
-          "version": "",
-          "product_id": "CSAFPID-0051"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Planar surface gantry EXCM-*",
-          "version": "",
-          "product_id": "CSAFPID-0052"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Servo drive CMMT-ST-C8-1C-EP-S0",
-          "version": "",
-          "product_id": "CSAFPID-0053"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware Servo drive CMMT-ST-C8-1C-PN-S0",
-          "version": "",
-          "product_id": "CSAFPID-0054"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Hardware VTEM-S1-*",
-          "version": "",
-          "product_id": "CSAFPID-0055"
-        },
-        {
-          "vendor": "Festo",
-          "product": "Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0056"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-02"
     },
     {
       "advisory_id": "ICSA-25-182-04",
