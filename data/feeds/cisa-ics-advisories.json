@@ -20874,7 +20874,7 @@
     },
     {
       "advisory_id": "ICSA-25-219-06",
-      "title": "Dreame Technology iOS and Android Mobile Applications",
+      "title": "Dreame Technology iOS and Android Mobile Applications (Update A)",
       "date": "2025-08-07",
       "summary": "Successful exploitation of this vulnerability could result in unauthorized information disclosure.",
       "sectors": [
