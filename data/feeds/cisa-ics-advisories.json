@@ -1,6 +1,29 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-155-01",
+      "title": "NAVTOR NavBox",
+      "date": "2026-06-04",
+      "summary": "Successful exploitation of this vulnerability could allow a local attacker to gain unauthorized access to SOAP methods, resulting in a disruption of operations.",
+      "sectors": [
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2026-21404"
+      ],
+      "cvss_max": 6.3,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "NAVTOR",
+          "product": "NavBox",
+          "version": "4.16.1.20",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-01"
+    },
+    {
       "advisory_id": "ICSA-26-148-01",
       "title": "MacGregor Voyage Data Recorder (VDR) G4e",
       "date": "2026-05-28",
@@ -179,6 +202,157 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-148-01"
+    },
+    {
+      "advisory_id": "ICSA-26-155-02",
+      "title": "Hitachi Energy ITT600 Explorer",
+      "date": "2026-05-26",
+      "summary": "Hitachi Energy is aware of vulnerabilities that affect ITT600 Explorer product versions listed in this document. These vulnerabilities can be exploited to carry out Denial of Service (DoS) attack on the product. The vulnerabilities only affect Hitachi Energy Integrated Testing Tool ITT600 SA Explorer without affecting IEC 61850 system endpoints. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2024-8176",
+        "CVE-2025-59375"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "ITT600 Explorer",
+          "version": "vers:ITT600_Explorer/<2.1_SP6",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "ITT600 Explorer",
+          "version": "vers:ITT600_Explorer/<=2.1_SP6",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "ITT600 Explorer",
+          "version": "2.1_SP6",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-02"
+    },
+    {
+      "advisory_id": "ICSA-26-155-03",
+      "title": "B&R PPT30 Operating System",
+      "date": "2026-05-26",
+      "summary": "B&R is aware of a vulnerability in the product versions listed as affected in the advisory.\n\nAn attacker who successfully exploits this vulnerability could make the OPC-UA server of the product inaccessible.\n\n",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-11482"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "B&R Industrial Automation GmbH",
+          "product": "PPT30 Operating System",
+          "version": "<1.8.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "B&R Industrial Automation GmbH",
+          "product": "PPT30 Operating System",
+          "version": "1.8.0",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-03"
+    },
+    {
+      "advisory_id": "ICSA-26-155-04",
+      "title": "Hitachi Energy RTU500",
+      "date": "2026-05-26",
+      "summary": "Hitachi Energy is aware of vulnerabilities that affect RTU500 product versions listed in this document. If exploited, these vulnerabilities primarily impact product availability, with potential secondary impacts on confidentiality and integrity. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2025-69421",
+        "CVE-2026-24515",
+        "CVE-2026-25210",
+        "CVE-2026-32776",
+        "CVE-2026-32777",
+        "CVE-2026-32778",
+        "CVE-2026-8479"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "RTU500 series CMU Firmware",
+          "version": "vers:RTU500_series_CMU_Firmware/>=12.7.1|<=12.7.7",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "RTU500 series CMU Firmware",
+          "version": "vers:RTU500_series_CMU_Firmware/>=13.5.1|<=13.5.4",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "RTU500 series CMU Firmware",
+          "version": "vers:RTU500_series_CMU_Firmware/>=13.6.1|<=13.6.3",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "RTU500 series CMU Firmware",
+          "version": "vers:RTU500_series_CMU_Firmware/>=13.7.1|<=13.7.8",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "RTU500 series CMU Firmware",
+          "version": "13.8.1",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "RTU500 series CMU Firmware",
+          "version": "vers:RTU500_series_CMU_Firmware/>=13.7.1|<=13.7.7",
+          "product_id": "CSAFPID-0006"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-04"
+    },
+    {
+      "advisory_id": "ICSA-26-155-05",
+      "title": "Hitachi Energy MACH HiDraw",
+      "date": "2026-05-26",
+      "summary": "Hitachi Energy is aware of a buffer overflow vulnerability that affects MACH HiDraw product versions listed in this document. Successful exploitation of this vulnerability could lead to a buffer overflow condition, potentially resulting in application outages (denial of service) and possible arbitrary code execution. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-7310"
+      ],
+      "cvss_max": 5.5,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "MACH HiDraw",
+          "version": "vers:MACH_HiDraw/<=9.22",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-05"
     },
     {
       "advisory_id": "ICSMA-26-146-01",
@@ -12996,863 +13170,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-04"
     },
     {
-      "advisory_id": "ICSA-26-015-07",
-      "title": "Siemens RUGGEDCOM APE1808 Devices",
-      "date": "2026-01-13",
-      "summary": "Nozomi Networks has published information on vulnerabilities in Nozomi Guardian/CMC. This advisory lists the related Siemens Industrial products affected by these vulnerabilities.\n\nSiemens has released a new version for RUGGEDCOM APE1808 and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40891",
-        "CVE-2025-40892",
-        "CVE-2025-40893",
-        "CVE-2025-40894",
-        "CVE-2025-40897",
-        "CVE-2025-40898",
-        "CVE-2025-40899"
-      ],
-      "cvss_max": 8.9,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM APE1808",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-07"
-    },
-    {
-      "advisory_id": "ICSA-26-015-08",
-      "title": "Siemens Industrial Edge Devices",
-      "date": "2026-01-13",
-      "summary": "Siemens Industrial Edge Devices contain an authorization bypass vulnerability that could facilitate an unauthenticated remote attacker to circumvent authentication and impersonate a legitimate user.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40805"
-      ],
-      "cvss_max": 10,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Cloud Device (IECD)",
-          "version": "vers:intdot/<1.24.2",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Own Device (IEOD)",
-          "version": "vers:intdot/<1.24.2",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Virtual Device (IEVD)",
-          "version": "vers:intdot/<1.24.2",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SCALANCE LPE9413 (6GK5998-3GS01-2AC2)",
-          "version": "vers:intdot/<2.2",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SCALANCE LPE9433 (6GK5998-3GS11-2AC2)",
-          "version": "vers:intdot/<2.2",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC Automation Workstation 19\" (6AV7256-6CA01-0FP0)",
-          "version": "vers:intdot/<1.3",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC Automation Workstation 24\" (6AV7256-6CA00-0FP0)",
-          "version": "vers:intdot/<1.3",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1000 Unified Comfort Panel (6AV2128-3KB06-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1000 Unified Comfort Panel hygienic (6AV2128-3KB40-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1000 Unified Comfort Panel hygienic neutral design (6AV2128-3KB70-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1000, Unified Comfort Panel neutral (6AV2128-3KB36-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3MB27-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3MB27-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Comfort Pro for support arm (not extendable, flange on top) (6AV2128-3MB27-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Comfort Pro neutral design for stand (expandable, flange at the bottom) (6AV2128-3MB57-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Comfort Pro neutral design for support arm (expandable, round tube) and extensio (6AV2128-3MB57-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Comfort Pro neutral design for support arm (not extendable, flange on top) (6AV2128-3MB57-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Unified Comfort Panel (6AV2128-3MB06-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Unified Comfort Panel hygienic (6AV2128-3MB40-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Unified Comfort Panel hygienic neutral design (6AV2128-3MB70-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1200 Unified Comfort Panel neutral design (6AV2128-3MB36-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3QB27-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3QB27-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Comfort Pro for support arm (not extendable, flange on top) (6AV2128-3QB27-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Comfort Pro neutral design for stand (expandable, flange at the bottom) (6AV2128-3QB57-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Comfort Pro neutral design for support arm (expandable, round tube) and extensio (6AV2128-3QB57-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Comfort Pro neutral design for support arm (not extendable, flange on top) (6AV2128-3QB57-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Unified Comfort Panel (6AV2128-3QB06-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Unified Comfort Panel hygienic (6AV2128-3QB40-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Unified Comfort Panel hygienic neutral design (6AV2128-3QB70-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1500 Unified Comfort Panel neutral design (6AV2128-3QB36-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3UB27-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0032"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3UB27-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0033"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Comfort Pro for support arm (not extendable, flange on top) (6AV2128-3UB27-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0034"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Comfort Pro neutral design for stand (expandable, flange at the bottom) (6AV2128-3UB57-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0035"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Comfort Pro neutral design for support arm (expandable, round tube) and extensio (6AV2128-3UB57-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0036"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Comfort Pro neutral design for support arm (not extendable, flange on top) (6AV2128-3UB57-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0037"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Unified Comfort Panel (6AV2128-3UB06-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0038"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Unified Comfort Panel hygienic (6AV2128-3UB40-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0039"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Unified Comfort Panel hygienic neutral design (6AV2128-3UB70-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0040"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP1900 Unified Comfort Panel neutral design (6AV2128-3UB36-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0041"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Comfort Pro for stand (expandable, flange at the bottom) (6AV2128-3XB27-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0042"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Comfort Pro for support arm (expandable, round tube) and extension unit (6AV2128-3XB27-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0043"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Comfort Pro for support arm (not extendable, flange on top) (6AV2128-3XB27-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0044"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Comfort Pro neutral design for stand (expandable, flange at the bottom) (6AV2128-3XB57-1BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0045"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Comfort Pro neutral design for support arm (expandable, round tube) and extensio (6AV2128-3XB57-0BX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0046"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Comfort Pro neutral design for support arm (not extendable, flange on top) (6AV2128-3XB57-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0047"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Unified Comfort Hygienic (6AV2128-3XB40-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0048"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Unified Comfort Hygienic neutral design (6AV2128-3XB70-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0049"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Unified Comfort Panel (6AV2128-3XB06-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0050"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP2200 Unified Comfort Panel neutral design (6AV2128-3XB36-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0051"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP700 Unified Comfort Panel (6AV2128-3GB06-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0052"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP700 Unified Comfort Panel hygienic neutral design (6AV2128-3GB40-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0053"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP700 Unified Comfort Panel hygienic neutral design (6AV2128-3GB70-0AX0)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0054"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC HMI MTP700, Unified Comfort Panel neutral design (6AV2128-3GB36-0AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0055"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IOT2050 (6ES7647-0BA00-1YA2)",
-          "version": "vers:intdot/<1.25.1",
-          "product_id": "CSAFPID-0056"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-39A Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0057"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-59A Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0058"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC127E Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0059"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC227E Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0060"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC227G Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0061"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC427E Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0062"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC847E Industrial Edge Device",
-          "version": "vers:intdot/<3.1",
-          "product_id": "CSAFPID-0063"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS HMI MTP1000 Unified Comfort (6AG1128-3KB06-4AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0064"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS HMI MTP1200 Unified Comfort (6AG1128-3MB06-4AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0065"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS HMI MTP700 Unified Comfort (6AG1128-3GB06-4AX1)",
-          "version": "vers:intdot/<21",
-          "product_id": "CSAFPID-0066"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-08"
-    },
-    {
-      "advisory_id": "ICSA-26-015-09",
-      "title": "Siemens Industrial Edge Device Kit",
-      "date": "2026-01-13",
-      "summary": "Users of Industrial Edge Devices are advised to consult the respective Security Advisories for their devices (for Siemens Industrial Edge devices see Additional Information).\n\nIndustrial Edge Device Kit contains an authorization bypass vulnerability that could facilitate an unauthenticated remote attacker to circumvent authentication and impersonate a legitimate user.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40805"
-      ],
-      "cvss_max": 10,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.10",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.11",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.12",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.13",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.14",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.15",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.16",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.17",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.18",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.19",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.20",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.21",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.22",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.23",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.24",
-          "version": "vers:intdot/<1.24.2",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.25",
-          "version": "vers:intdot/<1.25.1",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.5",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.6",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.7",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.8",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - arm64 V1.9",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.10",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.11",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.12",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.13",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.14",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.15",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.16",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.17",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.18",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.19",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.20",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0032"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.21",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0033"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.22",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0034"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.23",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0035"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.24",
-          "version": "vers:intdot/<1.24.2",
-          "product_id": "CSAFPID-0036"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.25",
-          "version": "vers:intdot/<1.25.1",
-          "product_id": "CSAFPID-0037"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.5",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0038"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.6",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0039"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.7",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0040"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.8",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0041"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Industrial Edge Device Kit - x86-64 V1.9",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0042"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-09"
-    },
-    {
-      "advisory_id": "ICSA-26-015-10",
-      "title": "Schneider Electric EcoStruxure Power Build Rapsody (Update A)",
-      "date": "2026-01-13",
-      "summary": "Schneider Electric is aware of a vulnerability in its EcoStruxure Power Build Rapsody software. The [EcoStruxure Power Build Rapsody](https://www.se.com/ww/en/product-country-selector/?pageType=product-range&sourceId=2309) is used to enter or import the single line diagram, to get the extensive bill of material of your switchboard, including all devices, connection items, and mounting components. \n\nFailure to apply the mitigations/remediations provided below may risk memory corruption, heap-based buffer overflow, stack-based buffer overflow, which could result in local attackers being able to exploit these issues to potentially execute arbitrary code.",
-      "sectors": [
-        "Energy",
-        "Critical Manufacturing",
-        "Commercial Facilities"
-      ],
-      "cves": [
-        "CVE-2025-13844",
-        "CVE-2025-13845"
-      ],
-      "cvss_max": 7.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.1_FR",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.1.0401_FR",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.6_INT",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.6.200_INT",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.5_ES",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.5.0301_ES",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.3_BEL(NL)",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.3.0201_BELNL",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.8_BEL(FR)",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.8.0201_BELFR",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.1.0300_FR",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.5.0200_ES",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.7.0100_PT",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.7.0101_PT",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.8.0100_BEL(FR)",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.3.0100_BEL(EN)",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.3.0201_BELEN",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.4.0300_INT(EN)",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.4.0401_INTEN",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "vers:generic/<=2.8.2.0000_NL",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Build Rapsody software",
-          "version": "2.8.2.000_NL",
-          "product_id": "CSAFPID-0021"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-10"
-    },
-    {
       "advisory_id": "ICSA-26-022-01",
       "title": "Schneider Electric EcoStruxure Process Expert (Update A)",
       "date": "2026-01-13",
@@ -14207,34 +13524,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-06"
-    },
-    {
-      "advisory_id": "ICSA-26-015-11",
-      "title": "Siemens RUGGEDCOM ROX II",
-      "date": "2025-12-09",
-      "summary": "Devices based on RUGGEDCOM ROX before V2.17 contain multiple high severity vulnerabilities.\n\nSiemens has released a new version for RUGGEDCOM ROX II family and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2024-56835",
-        "CVE-2024-56836",
-        "CVE-2024-56837",
-        "CVE-2024-56838",
-        "CVE-2024-56839",
-        "CVE-2024-56840"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM ROX II family",
-          "version": "vers:intdot/<2.17.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-11"
     },
     {
       "advisory_id": "ICSA-26-015-12",
@@ -20578,7 +19867,7 @@
     },
     {
       "advisory_id": "ICSA-25-238-03",
-      "title": "Schneider Electric Modicon M340 Controller and Communication Modules",
+      "title": "Schneider Electric Modicon M340 Controller and Communication Modules (Update A)",
       "date": "2025-08-12",
       "summary": "Schneider Electric is aware of a vulnerability in its Modicon M340 https://www.se.com/ww/en/product-range/1468-modicon-m340-pac/, BMXNOR0200H https://www.se.com/us/en/product/BMXNOR0200H/communication-module-modicon-m340-iec-608705101-104-dnp3-for-severe-environments/: Modicon M340 X80 \r\nEthernet Communication Modules, BMXNGD0100 https://www.se.com/us/en/product/BMXNGD0100/communication-module-modicon-m580-global-data-service/: M580 Global Data module, BMXNOC0401 https://www.se.com/us/en/product/BMXNOC0401/network-module-modicon-m340-ethernet-ip-and-modbus-tcp-4-x-rj45/?pageType=product&sourceId=BMXNOC0401: Modicon M340 \r\nX80 Ethernet Communication modules, BMXNOE0100 https://www.se.com/ww/en/product/BMXNOE0100/network-module-modicon-m340-modbus-tcp-1-x-rj45-flash-memory-card/?pageType=pro",
       "sectors": [
@@ -20593,51 +19882,63 @@
       "affected_products": [
         {
           "vendor": "Schneider Electric",
-          "product": "Modicon M340",
-          "version": "vers:all/*",
+          "product": "Modicon M340 Firmware",
+          "version": "vers:generic/<SV3.70",
           "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Modicon M340 Firmware",
+          "version": "SV3.70",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Modicon M340 Controller",
+          "version": "",
+          "product_id": "CSAFPID-0003"
         },
         {
           "vendor": "Schneider Electric",
           "product": "Ethernet / Serial RTU Module",
           "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
+          "product_id": "CSAFPID-0004"
         },
         {
           "vendor": "Schneider Electric",
           "product": "M580 Global Data module",
           "version": "vers:all/*",
-          "product_id": "CSAFPID-0003"
+          "product_id": "CSAFPID-0005"
         },
         {
           "vendor": "Schneider Electric",
           "product": "Modicon M340 X80 Ethernet Communication modules",
           "version": "vers:all/*",
-          "product_id": "CSAFPID-0004"
+          "product_id": "CSAFPID-0006"
         },
         {
           "vendor": "Schneider Electric",
           "product": "Modbus/TCP Ethernet Modicon M340 module",
-          "version": "<3.60",
-          "product_id": "CSAFPID-0005"
+          "version": "vers:intdot/<3.60",
+          "product_id": "CSAFPID-0007"
         },
         {
           "vendor": "Schneider Electric",
           "product": "Modbus/TCP Ethernet Modicon M340 module",
           "version": "3.60",
-          "product_id": "CSAFPID-0006"
+          "product_id": "CSAFPID-0008"
         },
         {
           "vendor": "Schneider Electric",
           "product": "Modbus/TCP Ethernet Modicon M340 FactoryCast module",
-          "version": "<6.80",
-          "product_id": "CSAFPID-0007"
+          "version": "vers:intdot/<6.80",
+          "product_id": "CSAFPID-0009"
         },
         {
           "vendor": "Schneider Electric",
           "product": "Modbus/TCP Ethernet Modicon M340 FactoryCast module",
           "version": "6.80",
-          "product_id": "CSAFPID-0008"
+          "product_id": "CSAFPID-0010"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-238-03"
