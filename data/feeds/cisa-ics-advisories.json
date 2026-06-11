@@ -5069,6 +5069,349 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-07"
     },
     {
+      "advisory_id": "ICSA-26-160-02",
+      "title": "Siemens KACO Blueplanet Inverters",
+      "date": "2026-05-12",
+      "summary": "KACO blueplanet Inverters contain multiple vulnerabilities that could allow an attacker to derive the credentials from the devices serial number and misuse them to gain unauthorized access.\n\nKACO new energy GmbH has released new versions for several affected products and recommends to update to the latest versions. KACO new energy GmbH is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2025-40946",
+        "CVE-2026-41125"
+      ],
+      "cvss_max": 8.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 100 NX3 M8",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 100 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 100 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 105 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 105 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 105 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 110 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 125 NX3 M11",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 125 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 125 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 125 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 137 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 150 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 150 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 150 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 155 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 155 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 155 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 165 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 165 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 165 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 25.0 NX3-33.0 NX3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 3.0 NX3-20.0 NX3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 3.0 TL3-60.0 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 3.0-5.0 NX1",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0025"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 360 NX3 M6",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0026"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 50.0 NX3-60.0 NX3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0027"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 87.0 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0028"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 87.0 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0029"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 87.0 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0030"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 92.0 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0031"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 92.0 TL3 GEN2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0032"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet 92.0 TL3 GEN2",
+          "version": "vers:intdot/<6.1.4.9",
+          "product_id": "CSAFPID-0033"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet gridsafe 110 TL3-S",
+          "version": "vers:intdot/<3.91",
+          "product_id": "CSAFPID-0034"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet gridsafe 110 TL3-S",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0035"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet gridsafe 137 TL3-S",
+          "version": "vers:intdot/<3.91",
+          "product_id": "CSAFPID-0036"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet gridsafe 137 TL3-S",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0037"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet gridsafe 92.0 TL3-S",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0038"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet gridsafe 92.0 TL3-S",
+          "version": "vers:intdot/<3.91",
+          "product_id": "CSAFPID-0039"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet hybrid 10.0 TL3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0040"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "blueplanet hybrid 6.0 NH3-12.0 NH3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0041"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-02"
+    },
+    {
+      "advisory_id": "ICSA-26-160-03",
+      "title": "Schneider Electric EcoStruxure Panel Server",
+      "date": "2026-05-12",
+      "summary": "Schneider Electric is aware of its vulnerability in its EcoStruxure Panel Server offer.\r\nThe EcoStruxure Panel Server is a high performance, modular gateway with enhanced cybersecurity that provides easy and fast connections to multiple concurrent edge control or cloud applications.\r\nFailure to apply the remediations provided below may risk unauthorized authentication, which could lead to access to sensitive information.",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-6866"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS800",
+          "version": "vers:intdot/<=002.005.000",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS800",
+          "version": "vers:intdot/=002.006.000",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS800V2",
+          "version": "vers:intdot/<=002.005.000",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS800V2",
+          "version": "vers:intdot/=002.006.000",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS600",
+          "version": "vers:intdot/<=002.005.000",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS600",
+          "version": "vers:intdot/=002.006.000",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS600V2",
+          "version": "vers:intdot/<=002.005.000",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS600V2",
+          "version": "vers:intdot/=002.006.000",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS400",
+          "version": "vers:intdot/<=002.005.000",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Panel Server PAS400",
+          "version": "vers:intdot/=002.006.000",
+          "product_id": "CSAFPID-0010"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-03"
+    },
+    {
       "advisory_id": "ICSA-26-127-01",
       "title": "MAXHUB Pivot client application",
       "date": "2026-05-07",
@@ -6799,6 +7142,46 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-11"
+    },
+    {
+      "advisory_id": "ICSA-26-160-01",
+      "title": "Schneider Electric Modicon Network Managed Switches",
+      "date": "2026-04-14",
+      "summary": "Schneider Electric is aware of a RADIUS protocol vulnerability affecting its Modicon Network Managed Switch product. \r\n The Modicon Network Managed Switch product provides connectivity for multiple Ethernet devices, network management, enhanced cyber security and more advanced switching features. \r\n Failure to apply the mitigation provided below may risk forgery attacks in RADIUS Protocol, which could result in modification of any valid Response (Access-Accept, Access-Reject, or Access-Challenge) to any other response which could result in the possibility of denial of service and loss of confidentiality, integrity of the devices connected to the switch.",
+      "sectors": [
+        "Commercial Facilities",
+        "Energy",
+        "Food and Agriculture",
+        "Government Services and Facilities",
+        "Transportation Systems",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2024-3596"
+      ],
+      "cvss_max": 9,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "Connexium Managed Switches",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Modicon Managed Switches",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Modicon Redundancy Switches",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-01"
     },
     {
       "advisory_id": "ICSA-26-120-01",
@@ -13524,100 +13907,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-06"
-    },
-    {
-      "advisory_id": "ICSA-26-015-12",
-      "title": "Siemens SIMATIC CN 4100",
-      "date": "2025-12-09",
-      "summary": "SIMATIC CN 4100  contains multiple vulnerabilities which could potentially lead to a compromise in availability, integrity and confidentiality. \n\nSiemens has released a new version for SIMATIC CN 4100 and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40937",
-        "CVE-2025-40938",
-        "CVE-2025-40939",
-        "CVE-2025-40940",
-        "CVE-2025-40941"
-      ],
-      "cvss_max": 8.3,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC CN 4100",
-          "version": "vers:intdot/<4.0.1",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-015-12"
-    },
-    {
-      "advisory_id": "ICSA-26-020-01",
-      "title": "Schneider Electric EcoStruxure Foxboro DCS (Update A)",
-      "date": "2025-12-09",
-      "summary": "Schneider Electric is aware of a vulnerability disclosed by INTEL used in the EcoStruxure™ Foxboro \r\nDCS product formerly known as Foxboro Evo Process Automation System and I/A Series. \r\nThe [EcoStruxure™ Foxboro DCS product](https://www.se.com/ww/en/product-range/63680-ecostruxure-foxboro-dcs/#overview) is an innovative family of fault-tolerant, highly available \r\ncontrol components, which consolidates critical information and elevates staff capabilities to ensure \r\nflawless, continuous plant operation.  \r\nFailure to apply the remediations provided below may risk allowing an authenticated user to \r\npotentially enable information disclosure via a side channel with local access, which could result in \r\nloss of system functionality or unauthorized access to system functions.",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2018-12130"
-      ],
-      "cvss_max": 6.5,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Foxboro DCS Virtualization Server",
-          "version": "",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Foxboro DCS Virtualization Server",
-          "version": "",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Foxboro DCS Standard Workstation",
-          "version": "",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Foxboro DCS Standard Workstation",
-          "version": "",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Foxboro DCS Server",
-          "version": "",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Foxboro DCS Server",
-          "version": "",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Intel",
-          "product": "Xeon Silver",
-          "version": "",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Intel",
-          "product": "Xeon",
-          "version": "",
-          "product_id": "CSAFPID-0008"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-020-01"
     },
     {
       "advisory_id": "ICSA-26-043-03",
@@ -29606,235 +29895,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-182-02"
-    },
-    {
-      "advisory_id": "ICSA-26-020-02",
-      "title": "Schneider Electric devices using CODESYS Runtime",
-      "date": "2023-07-11",
-      "summary": "Schneider Electric is aware of multiple vulnerabilities disclosed on CODESYS runtime system V3 communication server. Many vendors, including Schneider Electric, embed CODESYS in their offers. \r\n\r\nIf successfully exploited, these vulnerabilities could result in a denial of service or, in some cases, in remote code execution on PacDrive controllers, Modicon Controllers M241 / M251 / M262 / M258 / LMC058 / LMC078 / M218 ,  HMISCU, the Simulation Runtime SoftSPS from EcoStruxure Machine Expert and EcoStruxure Microgrid Operation products. \r\n\r\nFailure to apply the mitigations provided below may result in denial of service and/or arbitrary remote code execution.  ",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2022-4046",
-        "CVE-2023-28355",
-        "CVE-2022-47378",
-        "CVE-2022-47379",
-        "CVE-2022-47380",
-        "CVE-2022-47381",
-        "CVE-2022-47382",
-        "CVE-2022-47383",
-        "CVE-2022-47384",
-        "CVE-2022-47386",
-        "CVE-2022-47387",
-        "CVE-2022-47388",
-        "CVE-2022-47389",
-        "CVE-2022-47390",
-        "CVE-2022-47385",
-        "CVE-2022-47392",
-        "CVE-2022-47393",
-        "CVE-2022-47391",
-        "CVE-2023-37545",
-        "CVE-2023-37546",
-        "CVE-2023-37547",
-        "CVE-2023-37548",
-        "CVE-2023-37549",
-        "CVE-2023-37550",
-        "CVE-2023-37551",
-        "CVE-2023-37552",
-        "CVE-2023-37553",
-        "CVE-2023-37554",
-        "CVE-2023-37555",
-        "CVE-2023-37556",
-        "CVE-2023-37557",
-        "CVE-2023-37558",
-        "CVE-2023-37559",
-        "CVE-2023-3662",
-        "CVE-2023-3663",
-        "CVE-2023-3669",
-        "CVE-2023-3670"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "HMISCU Controller",
-          "version": "<6.3.1",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller LMC078",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M241",
-          "version": "<5.2.11.18",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M251",
-          "version": "<5.2.11.18",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M262",
-          "version": "<5.2.8.12",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M258",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller LMC058",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M218",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "PacDrive 3 Controllers: LMC Eco/Pro/Pro2",
-          "version": "<1.76.14.1",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SoftSPS embedded in EcoStruxure Machine Expert",
-          "version": "<2.2",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Vijeo Designer embedded in EcoStruxure Machine Expert",
-          "version": "<6.3.1",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Harmony (Formerly Magelis) HMIGK/HMIGTO/HMIGTU/HMIGTUX/HMISTU series",
-          "version": "<6.3_HF3",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Easy Harmony HMIET6/HMIFT6 Magelis HMIGXU series",
-          "version": "<2.0_HF2",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "HMISCU Controller",
-          "version": "6.3.1",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M241",
-          "version": "5.2.11.18",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M251",
-          "version": "5.2.11.18",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M262",
-          "version": "5.2.8.12",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "PacDrive 3 Controllers: LMC Eco/Pro/Pro2",
-          "version": "1.76.14.1",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SoftSPS embedded in EcoStruxure Machine Expert",
-          "version": "2.2",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Vijeo Designer embedded in EcoStruxure Machine Expert",
-          "version": "6.3.1",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Harmony (Formerly Magelis) HMIGK/HMIGTO/HMIGTU/HMIGTUX/HMISTU series iPC series with Vijeo Designer runtime",
-          "version": "6.3_HF3",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Vijeo Designer Basic",
-          "version": "2.0_HotFix_2",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Harmony iPC series",
-          "version": "",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Magelis XBT series",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Easy Modicon M310",
-          "version": "<3.1.5.82",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Harmony P6 series",
-          "version": "",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Vijeo Designer runtime",
-          "version": "<6.3_SP2",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Vijeo Designer runtime",
-          "version": "6.3_SP2",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Easy Modicon M310",
-          "version": "3.1.5.82",
-          "product_id": "CSAFPID-0029"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-020-02"
     },
     {
       "advisory_id": "ICSA-25-160-02",

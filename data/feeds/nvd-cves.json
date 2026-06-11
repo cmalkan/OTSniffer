@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-06-09T10:03:03.103Z",
+  "pulled_at": "2026-06-11T10:59:03.735Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82115,6 +82115,66 @@
       "published": "2026-05-14T18:16:51.067",
       "last_modified": "2026-05-27T20:31:21.163",
       "fetched_at": "2026-05-29T10:18:03.340Z"
+    },
+    "CVE-2025-40946": {
+      "cve_id": "CVE-2025-40946",
+      "description": "A vulnerability has been identified in blueplanet 100 NX3 M8 (All versions), blueplanet 100 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 105 TL3 (All versions), blueplanet 105 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 110 TL3 (All versions), blueplanet 125 NX3 M10 (All versions), blueplanet 125 TL3 (All versions), blueplanet 125 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 137 TL3 (All versions), blueplanet 150 TL3 (All versions), blueplanet 150 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 155 TL3 (All versions), blueplanet 155 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 165 TL3 (All versions), blueplanet 165 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 25.0 NX3-33.0 NX3 (All versions), blueplanet 3.0 NX3-20.0 NX3 (All versions), blueplanet 3.0 TL3-60.0 TL3 (All versions), blueplanet 3.0-5.0 NX1 (All versions), blueplanet 360 NX3 M6 (All versions), blueplanet 50.0 NX3-60.0 NX3 (All versions), blueplanet 87.0 TL3 (All versions), blueplanet 87.0 TL3 GEN2 (All versions < V6.1.4.9), blueplanet 92.0 TL3 (All versions), blueplanet 92.0 TL3 GEN2 (All versions < V6.1.4.9), blueplanet gridsave 110 TL3-S (All versions < V3.91), blueplanet gridsave 137 TL3-S (All versions < V3.91), blueplanet gridsave 92.0 TL3-S (All versions < V3.91), blueplanet hybrid 10.0 TL3 (All versions), blueplanet hybrid 6.0 NH3-12.0 NH3 (All versions). A CRC16-based algorithm for generating Technical Service credentials could allow an attacker to derive the credentials from the devices serial number and misuse them to gain unauthorized access.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.3,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+      "cwes": [
+        "CWE-321"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-545643.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-05-12T10:16:42.860",
+      "last_modified": "2026-05-29T14:16:23.570",
+      "fetched_at": "2026-06-11T10:58:36.764Z"
+    },
+    "CVE-2026-41125": {
+      "cve_id": "CVE-2026-41125",
+      "description": "A vulnerability has been identified in blueplanet 100 NX3 M8 (All versions), blueplanet 100 TL3 GEN2 (All versions), blueplanet 105 TL3 (All versions), blueplanet 105 TL3 GEN2 (All versions), blueplanet 110 TL3 (All versions), blueplanet 125 NX3 M10 (All versions), blueplanet 125 TL3 (All versions), blueplanet 125 TL3 GEN2 (All versions), blueplanet 137 TL3 (All versions), blueplanet 150 TL3 (All versions), blueplanet 150 TL3 GEN2 (All versions), blueplanet 155 TL3 (All versions), blueplanet 155 TL3 GEN2 (All versions), blueplanet 165 TL3 (All versions), blueplanet 165 TL3 GEN2 (All versions), blueplanet 25.0 NX3-33.0 NX3 (All versions), blueplanet 3.0 NX3-20.0 NX3 (All versions), blueplanet 3.0-5.0 NX1 (All versions), blueplanet 360 NX3 M6 (All versions), blueplanet 50.0 NX3-60.0 NX3 (All versions), blueplanet 87.0 TL3 (All versions), blueplanet 87.0 TL3 GEN2 (All versions), blueplanet 92.0 TL3 (All versions), blueplanet 92.0 TL3 GEN2 (All versions), blueplanet gridsave 110 TL3-S (All versions), blueplanet gridsave 137 TL3-S (All versions), blueplanet gridsave 92.0 TL3-S (All versions), blueplanet hybrid 10.0 TL3 (All versions), blueplanet hybrid 6.0 NH3-12.0 NH3 (All versions). Improper neutralization of special elements used in an sql command ('sql injection') in KACO Meteor server allows an authorized attacker to elevate privileges over a local network.",
+      "cvss_version": "3.1",
+      "cvss_score": 6,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:A/AC:H/PR:H/UI:N/S:U/C:L/I:H/A:H",
+      "cwes": [
+        "CWE-89"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-545643.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-05-12T10:16:46.057",
+      "last_modified": "2026-05-29T14:16:26.890",
+      "fetched_at": "2026-06-11T10:58:43.519Z"
+    },
+    "CVE-2026-6866": {
+      "cve_id": "CVE-2026-6866",
+      "description": "CWE-1188 Initialization of a Resource with an Insecure Default vulnerability exists that could cause unauthorized disclosure of sensitive information when credentials revert to initial settings in rare circumstances, enabling unauthorized authentication using known credentials.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-1188"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-132-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-132-04.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-05-12T15:16:16.570",
+      "last_modified": "2026-05-12T16:38:24.040",
+      "fetched_at": "2026-06-11T10:58:50.215Z"
     }
   }
 }
