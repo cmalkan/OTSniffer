@@ -1,6 +1,128 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-162-01",
+      "title": "Yarbo Android/iOS Mobile Application and Cloud Infrastructure",
+      "date": "2026-06-11",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to obtain hard-coded credentials, gain access to telemetry data, and potentially send operational commands to the robot fleet.",
+      "sectors": [
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2026-10557",
+        "CVE-2026-7368"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Yarbo",
+          "product": "Yarbo Android/IOS mobile application",
+          "version": "<v3.17.4",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Yarbo",
+          "product": "Cloud MQTT infrastructure",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-162-01"
+    },
+    {
+      "advisory_id": "ICSA-26-162-02",
+      "title": "Naxclow IoT Platform",
+      "date": "2026-06-11",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to impersonate devices, intercept or manipulate communications, harvest sensitive credentials at scale, or gain unauthorized access.",
+      "sectors": [
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2026-42947",
+        "CVE-2026-50108",
+        "CVE-2026-50101",
+        "CVE-2026-28742",
+        "CVE-2026-42932",
+        "CVE-2026-50244",
+        "CVE-2026-50099"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Naxclow",
+          "product": "Smart Doorbell X3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Naxclow",
+          "product": "X Smart Home",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Naxclow",
+          "product": "V720",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Naxclow",
+          "product": "ix cam",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-162-02"
+    },
+    {
+      "advisory_id": "ICSA-26-162-03",
+      "title": "Brickcom Cameras",
+      "date": "2026-06-11",
+      "summary": "Successful exploitation of these vulnerabilities could allow a remote unauthenticated attacker to gain unauthorized access to live video feeds, retrieve sensitive visual information from affected premises, and obtain administrative control of the device. ",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Financial Services",
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-50245",
+        "CVE-2026-50005"
+      ],
+      "cvss_max": 7.7,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Brickcom",
+          "product": "Brickcom Cube",
+          "version": "3.2.3.5.6",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Brickcom",
+          "product": "Brickcom Dome",
+          "version": "3.2.3.5.6",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Brickcom",
+          "product": "Brickcom Bullet",
+          "version": "3.2.3.5.6",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Brickcom",
+          "product": "Brickcom Box",
+          "version": "3.2.3.5.6",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-162-03"
+    },
+    {
       "advisory_id": "ICSA-26-155-01",
       "title": "NAVTOR NavBox",
       "date": "2026-06-04",
@@ -13092,42 +13214,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-09"
     },
     {
-      "advisory_id": "ICSA-26-022-02",
-      "title": "AutomationDirect CLICK Programmable Logic Controller",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to impersonate users, escalate privileges, gain unauthorized access to systems and services, and decrypt sensitive data.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-67652",
-        "CVE-2025-25051"
-      ],
-      "cvss_max": 6.1,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "AutomationDirect",
-          "product": "CLICK Programmable Logic Controller",
-          "version": "C0-0x",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "AutomationDirect",
-          "product": "CLICK Programmable Logic Controller",
-          "version": "C0-1x",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "AutomationDirect",
-          "product": "CLICK Programmable Logic Controller",
-          "version": "C2-x",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-02"
-    },
-    {
       "advisory_id": "ICSA-26-022-03",
       "title": "Rockwell Automation CompactLogix 5370",
       "date": "2026-01-22",
@@ -13339,96 +13425,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-08"
     },
     {
-      "advisory_id": "ICSA-26-020-03",
-      "title": "Rockwell Automation Verve Asset Manager",
-      "date": "2026-01-20",
-      "summary": "Successful exploitation of these vulnerabilities may allow an attacker to access sensitive information stored in variables within the ADI server.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-14376",
-        "CVE-2025-14377"
-      ],
-      "cvss_max": 7.9,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.33",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.34",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.35",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.36",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.37",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.38",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.39",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.40",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.41",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.41.1",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.41.2",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "Verve Asset Manager",
-          "version": "1.41.3",
-          "product_id": "CSAFPID-0012"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-020-03"
-    },
-    {
       "advisory_id": "ICSA-26-125-03",
       "title": "ABB B&R Automation Runtime",
       "date": "2026-01-19",
@@ -13551,49 +13547,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-04"
-    },
-    {
-      "advisory_id": "ICSA-26-022-01",
-      "title": "Schneider Electric EcoStruxure Process Expert (Update A)",
-      "date": "2026-01-13",
-      "summary": "Schneider Electric is aware of a vulnerability in its EcoStruxureTM Process and EcoStruxure™ Process Expert \r\nfor AVEVA System Platform products. \r\nThe EcoStruxureTM Process is a single automation system to engineer, operate, and maintain your entire \r\ninfrastructure for a sustainable, productive and market-agile plant.\r\nThe EcoStruxure™ Process Expert for AVEVA System Platform product enables users to achieve operational \r\nprofitability from design engineering to meeting the demands of modern-day production. It provides an asset \r\ncentric and object-oriented automation platform to deploy system-wide standards in a digital ecosystem.\r\nFailure to apply the Fix/Mitigations provided below may risk modification of the executable binaries, which \r\ncould result in privilege escalation.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Energy",
-        "Commercial Facilities"
-      ],
-      "cves": [
-        "CVE-2025-13905"
-      ],
-      "cvss_max": 7.3,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Process Expert",
-          "version": "<2025",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Process Expert for AVEVA System Platform",
-          "version": "<2025",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Process Expert",
-          "version": "2025",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Process Expert for AVEVA System Platform",
-          "version": "2025",
-          "product_id": "CSAFPID-0004"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-01"
     },
     {
       "advisory_id": "ICSA-26-027-03",
