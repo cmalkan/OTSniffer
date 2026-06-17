@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-06-15T13:03:50.625Z",
+  "pulled_at": "2026-06-17T11:17:46.411Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82209,6 +82209,159 @@
       "published": "2026-05-12T15:16:16.570",
       "last_modified": "2026-05-12T16:38:24.040",
       "fetched_at": "2026-06-11T10:58:50.215Z"
+    },
+    "CVE-2025-14272": {
+      "cve_id": "CVE-2025-14272",
+      "description": "A security issue was identified in Pavilion due to improper authorization enforcement in API endpoints. This vulnerability can allow an unauthorized actor to execute privileged operations, including user/role management and other administrative actions.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-862"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1777.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:33.000",
+      "last_modified": "2026-06-16T15:26:04.250",
+      "fetched_at": "2026-06-17T11:16:53.424Z"
+    },
+    "CVE-2020-13573": {
+      "cve_id": "CVE-2020-13573",
+      "description": "A denial-of-service vulnerability exists in the Ethernet/IP server functionality of Rockwell Automation RSLinx Classic 2.57.00.14 CPR 9 SR 3. A specially crafted network request can lead to a denial of service. An attacker can send a sequence of malicious packets to trigger this vulnerability.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-823",
+        "CWE-119"
+      ],
+      "references": [
+        {
+          "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2020-1184",
+          "tags": [
+            "Exploit",
+            "Technical Description",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2020-1184",
+          "tags": [
+            "Exploit",
+            "Technical Description",
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2021-01-07T18:15:12.950",
+      "last_modified": "2024-11-21T05:01:31.670",
+      "fetched_at": "2026-06-17T11:17:00.207Z"
+    },
+    "CVE-2026-11317": {
+      "cve_id": "CVE-2026-11317",
+      "description": "A denial of service security issue exists in the\naffected product. The security issue stems from a fault occurring when a\ncrafted CIP message is sent. Devices with less memory are more likely to be\naffected. This can result in a major nonrecoverable fault (MNRF). A program\ndownload is required to recover.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-404"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1772.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:34.607",
+      "last_modified": "2026-06-16T15:26:04.250",
+      "fetched_at": "2026-06-17T11:17:06.784Z"
+    },
+    "CVE-2025-11694": {
+      "cve_id": "CVE-2025-11694",
+      "description": "A security issue exists within 1769 CompactLogix controllers due to the missing validation of sequence numbers and source IP addresses in the CIP protocol. This allows attacker to abuse the exposed Connection ID’s visible on the web interface to perform denial-of-service attacks, resulting in a minor fault.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-354"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1776.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:32.693",
+      "last_modified": "2026-06-16T15:26:04.250",
+      "fetched_at": "2026-06-17T11:17:13.569Z"
+    },
+    "CVE-2026-9307": {
+      "cve_id": "CVE-2026-9307",
+      "description": "A sensitive information disclosure security issue exists within the affected CompactLogix controllers. The controller's web server exposes CIP Connection IDs on the diagnostics webpage, which are accessible to any unauthenticated user on the network. This information can be leveraged by an attacker to construct malicious packets, leading to Denial-of-Service.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-497"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1776.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:45.223",
+      "last_modified": "2026-06-16T15:26:04.250",
+      "fetched_at": "2026-06-17T11:17:20.148Z"
+    },
+    "CVE-2026-0646": {
+      "cve_id": "CVE-2026-0646",
+      "description": "A denial-of-service security issue exists within the 1794-AENTR adapter due to improper memory handling of CIP protocol requests. This vulnerability can result in the adapter faulting and losing connection to its associated I/O modules, requiring a manual reset to recover.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1775.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:33.567",
+      "last_modified": "2026-06-16T15:26:04.250",
+      "fetched_at": "2026-06-17T11:17:26.717Z"
+    },
+    "CVE-2026-0647": {
+      "cve_id": "CVE-2026-0647",
+      "description": "An improper authentication security issue exists within the 1794-AENTR adapter's embedded web server. The vulnerability allows an unauthenticated attacker to change the device's web interface password by sending a crafted HTTP GET request to a specific endpoint, without any prior authentication being required. If exploited, this could lead to unauthorized access, account takeover, and loss of the device’s embedded web server’s availability.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-306"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1775.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:33.687",
+      "last_modified": "2026-06-16T15:26:04.250",
+      "fetched_at": "2026-06-17T11:17:33.310Z"
     }
   }
 }

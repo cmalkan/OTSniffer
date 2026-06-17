@@ -1,6 +1,162 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-167-01",
+      "title": "Rockwell Automation FactoryTalk Analytics PavilionX",
+      "date": "2026-06-16",
+      "summary": "Successful exploitation of this vulnerability could result in an attacker executing privileged operations.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-14272"
+      ],
+      "cvss_max": 7,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "FactoryTalk Analytics PavilionX",
+          "version": "<7.01",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-01"
+    },
+    {
+      "advisory_id": "ICSA-26-167-02",
+      "title": "RSLinx Classic Third-Party Vulnerability",
+      "date": "2026-06-16",
+      "summary": "Successful exploitation of this vulnerability can lead to a denial of service, where the application will become unresponsive and will not recover on its own. ",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Food and Agriculture",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2020-13573"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "RSLinx Classic",
+          "version": "<=4.50.00",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-02"
+    },
+    {
+      "advisory_id": "ICSA-26-167-03",
+      "title": "Rockwell Automation Logix 5370 & 5570 Controllers Vulnerable To Denial of Service Via CIP",
+      "date": "2026-06-16",
+      "summary": "Successful exploitation of this vulnerability could cause a denial-of-service condition that may result in a major nonrecoverable fault (MNRF).",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-11317"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "CompactLogix 5370",
+          "version": "<=34.016",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "Compact GuardLogix 5370",
+          "version": "<=35.015",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "ControlLogix 5570",
+          "version": "<=35.015",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "GuardLogix 5570",
+          "version": "36.012",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-03"
+    },
+    {
+      "advisory_id": "ICSA-26-167-04",
+      "title": "Rockwell Automation CompactLogix",
+      "date": "2026-06-16",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition. ",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-11694",
+        "CVE-2026-9307"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "CompactLogix 5370 L1",
+          "version": "<V38.011",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "CompactLogix 5370 L2",
+          "version": "<V38.011",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "CompactLogix 5370 L3",
+          "version": "<V38.011",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-04"
+    },
+    {
+      "advisory_id": "ICSA-26-167-05",
+      "title": "Rockwell Automation FLEX I/O EtherNet/IP Adapters",
+      "date": "2026-06-16",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized access, account takeover, and cause loss of availability.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-0646",
+        "CVE-2026-0647"
+      ],
+      "cvss_max": 9.4,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "1794-AENTR",
+          "version": "V2.012",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "1794-AENTRXT",
+          "version": "V2.012",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-167-05"
+    },
+    {
       "advisory_id": "ICSA-26-162-01",
       "title": "Yarbo Android/iOS Mobile Application and Cloud Infrastructure",
       "date": "2026-06-11",
@@ -13212,192 +13368,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-09"
-    },
-    {
-      "advisory_id": "ICSA-26-022-03",
-      "title": "Rockwell Automation CompactLogix 5370",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-11743"
-      ],
-      "cvss_max": 6.5,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Rockwell Automation",
-          "product": "CompactLogix 5370",
-          "version": "<=34.013",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "CompactLogix 5370",
-          "version": "<=35.012",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "CompactLogix 5370",
-          "version": "36.011",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-03"
-    },
-    {
-      "advisory_id": "ICSA-26-022-04",
-      "title": "Johnson Controls Inc. iSTAR Configuration Utility (ICU) tool",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to cause a failure within the operating system of the machine hosting the ICU tool.",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy",
-        "Government Services and Facilities",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2025-26386"
-      ],
-      "cvss_max": 7.1,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Johnson Controls Inc.",
-          "product": "iSTAR Configuration Utility (ICU) tool",
-          "version": "<=6.9.7",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-04"
-    },
-    {
-      "advisory_id": "ICSA-26-022-05",
-      "title": "Weintek cMT X Series HMI EasyWeb Service",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of these vulnerabilities could allow a low-level user to alter privileges and gain full control to the device.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-14750",
-        "CVE-2025-14751"
-      ],
-      "cvss_max": 8.3,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Weintek",
-          "product": "cMT3072XH",
-          "version": ">=20200630|<20241112",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Weintek",
-          "product": "cMT3072XH(T)",
-          "version": ">=20200630|<20241112",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Weintek",
-          "product": "cMT-SVRX-820",
-          "version": ">=20220413|<20240919",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Weintek",
-          "product": "cMT-CTRL01",
-          "version": ">=20230308|<20250827",
-          "product_id": "CSAFPID-0004"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-05"
-    },
-    {
-      "advisory_id": "ICSA-26-022-06",
-      "title": "Hubitat Elevation Hubs",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of this vulnerability could allow an authenticated attacker to escalate their privileges and control devices outside of their authorized scope.",
-      "sectors": [
-        "Energy",
-        "Communications"
-      ],
-      "cves": [
-        "CVE-2026-1201"
-      ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Hubitat",
-          "product": "Elevation C3",
-          "version": "<firmware_2.4.2.157",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Hubitat",
-          "product": "Elevation C4",
-          "version": "<firmware_2.4.2.157",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Hubitat",
-          "product": "Elevation C5",
-          "version": "<firmware_2.4.2.157",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Hubitat",
-          "product": "Elevation C7",
-          "version": "<firmware_2.4.2.157",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Hubitat",
-          "product": "Elevation C8",
-          "version": "<firmware_2.4.2.157",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Hubitat",
-          "product": "Elevation C8 pro",
-          "version": "<firmware_2.4.2.157",
-          "product_id": "CSAFPID-0006"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-06"
-    },
-    {
-      "advisory_id": "ICSA-26-022-07",
-      "title": "Delta Electronics DIAView",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of this vulnerability could enable an attacker to execute arbitrary code.",
-      "sectors": [
-        "Chemical",
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy",
-        "Transportation Systems",
-        "Water and Wastewater"
-      ],
-      "cves": [
-        "CVE-2026-0975"
-      ],
-      "cvss_max": 7.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Delta Electronics",
-          "product": "DIAView",
-          "version": "4.2.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-07"
     },
     {
       "advisory_id": "ICSA-26-022-08",
