@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-06-17T11:17:46.411Z",
+  "pulled_at": "2026-06-19T10:59:37.748Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82362,6 +82362,26 @@
       "published": "2026-06-16T15:16:33.687",
       "last_modified": "2026-06-16T15:26:04.250",
       "fetched_at": "2026-06-17T11:17:33.310Z"
+    },
+    "CVE-2025-13036": {
+      "cve_id": "CVE-2025-13036",
+      "description": "An authentication\nbypass security issue exists within FactoryTalk Historian Site Edition. By\ncontinually sending requests to the login endpoint, an attacker may obtain a\nvalid authentication token.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-362"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1773.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-16T15:16:32.870",
+      "last_modified": "2026-06-17T08:33:24.603",
+      "fetched_at": "2026-06-19T10:59:10.775Z"
     }
   }
 }

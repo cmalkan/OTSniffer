@@ -1,6 +1,179 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-169-01",
+      "title": "AVer PTC cameras",
+      "date": "2026-06-18",
+      "summary": "Successful exploitation of this vulnerability could allow arbitrary code execution.",
+      "sectors": [
+        "Government Services and Facilities",
+        "Commercial Facilities",
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-40624"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "AVer",
+          "product": "PTC500S",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "AVer",
+          "product": "PTC115",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "AVer",
+          "product": "PTC500+",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "AVer",
+          "product": "PTC115+",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-01"
+    },
+    {
+      "advisory_id": "ICSA-26-169-02",
+      "title": "AzeoTech DAQFactory",
+      "date": "2026-06-18",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to upload malicious .ctl files that may lead to arbitrary code execution.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-12390"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "AzeoTech",
+          "product": "DAQFactory",
+          "version": "<=21.1",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-02"
+    },
+    {
+      "advisory_id": "ICSA-26-169-03",
+      "title": "Rockwell Automation FactoryTalk Historian Site Edition",
+      "date": "2026-06-18",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to obtain a valid authentication token, perform a denial of service, or crash the system.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-13036",
+        "CVE-2025-44019",
+        "CVE-2025-36539"
+      ],
+      "cvss_max": 7.7,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "FactoryTalk Historian SE",
+          "version": "11",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "FactoryTalk Historian SE",
+          "version": "<=11.00",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "FactoryTalk Historian SE",
+          "version": "<=11.00",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-03"
+    },
+    {
+      "advisory_id": "ICSA-26-169-05",
+      "title": "Mitsubishi Electric MELSEC iQ-F Series",
+      "date": "2026-06-18",
+      "summary": "Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition in the affected product by rapidly establishing a large number of TCP connections to it, resulting in an inconsistency in the product's internal connection management process and triggering improper memory access.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-8805"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "MELSEC iQ-F Series FX5-EIP EtherNet/IP Module FX5-EIP",
+          "version": "<=1.000",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-05"
+    },
+    {
+      "advisory_id": "ICSA-26-169-06",
+      "title": "Mitsubishi Electric Co.'s MELSEC iQ-F Series FX5-ENET/IP Ethernet Module",
+      "date": "2026-06-18",
+      "summary": "Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition in the affected product by continuously sending a large number of communication packets to the Ethernet port of the product in a short period of time, increasing the processing load of the product, preventing the internal anomaly-detection processing from being performed, and causing the communication function to stop.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-8806"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "Mitsubishi Electric MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-06"
+    },
+    {
+      "advisory_id": "ICSMA-26-169-01",
+      "title": "Apollo Pharmacy Blood Glucose Monitoring System APG-01 BT",
+      "date": "2026-06-18",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive health-related information and prevent legitimate users from establishing a connection with the device.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-50034",
+        "CVE-2026-52866"
+      ],
+      "cvss_max": 6.5,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Apollo Pharmacy",
+          "product": "Blood Glucose Monitoring System (Model No. APG-01 BT)",
+          "version": "0x0110_v1.1.0",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-169-01"
+    },
+    {
       "advisory_id": "ICSA-26-167-01",
       "title": "Rockwell Automation FactoryTalk Analytics PavilionX",
       "date": "2026-06-16",
@@ -5688,6 +5861,404 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-03"
+    },
+    {
+      "advisory_id": "ICSA-26-169-04",
+      "title": "Schneider Electric EasyLogic T150 and Saitel DP",
+      "date": "2026-05-12",
+      "summary": "Schneider Electric is aware of a vulnerability in its EasyLogic T150 (formerly known as Saitel DR) and Saitel \r\nDP Remote Terminal Unit & Controller products.  \r\nThe [EasyLogic T150 (formerly known as Saitel DR RTU)](https://www.se.com/ww/en/product-country-selector/?pageType=product-range&sourceId=62685#overview) is a field device, offering a solid and powerful \r\nmodular platform for data acquisition, communication, automation and IED integration for distribution and \r\ntransmission networks, generation sector and railway.   \r\nThe [Saitel DP RTU](https://www.se.com/ww/en/product-country-selector/?pageType=product-range&sourceId=61747) is a modular platform for medium voltage and high voltage public distribution and \r\ntransmission substation control. \r\nFailure to apply the fix provided belo",
+      "sectors": [
+        "Energy",
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-6865"
+      ],
+      "cvss_max": 7.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "EasyLogic T150 (formerly Saitel DR) Remote Terminal Unit & Controller",
+          "version": "",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EasyLogic T150 (formerly Saitel DR) Remote Terminal Unit & Controller Firmware",
+          "version": "vers:semver/<=11.06.31",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EasyLogic T150 (formerly Saitel DR) Remote Terminal Unit & Controller Firmware",
+          "version": "11.06.32",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DP Remote Terminal Unit & Controller",
+          "version": "",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DP Remote Terminal Unit & Controller Firmware",
+          "version": "vers:semver/<=11.06.36",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DP Remote Terminal Unit & Controller Firmware",
+          "version": "11.06.37",
+          "product_id": "CSAFPID-0006"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-04"
+    },
+    {
+      "advisory_id": "ICSA-26-169-07",
+      "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+      "date": "2026-05-12",
+      "summary": "Schneider Electric is aware of vulnerabilities in its PowerChute™ Serial Shutdown product. \r\nThe [PowerChute Serial Shutdown](https://www.se.com/ww/en/product-range/137943580-powerchute-serial-shutdown/#products) product is a UPS management software enabling graceful system shutdown \r\nand energy management capabilities for desktop, servers and workstations.  \r\nFailure to apply the remediation provided below may risk improper input validation which could result in \r\ndisruption of operations and access to system data. ",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-4827"
+      ],
+      "cvss_max": 8.3,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM C264",
+          "version": "vers:generic/<=D7.33",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P139",
+          "version": "vers:generic/<=P139.678.700",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P437",
+          "version": "vers:generic/<=P437.678.700",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P439",
+          "version": "vers:generic/<=P439.678.700",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P532",
+          "version": "vers:generic/<=P532.678.700",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P539",
+          "version": "vers:generic/<=P539.678.700",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P631",
+          "version": "vers:generic/<=P631.678.700",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P632",
+          "version": "vers:generic/<=P632.678.700",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P633",
+          "version": "vers:generic/<=P633.678.700",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P634",
+          "version": "vers:generic/<=P634.678.700",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P633",
+          "version": "P633.680.700",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P634",
+          "version": "P634.680.700",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P138",
+          "version": "vers:generic/<=P138.677.700",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P436",
+          "version": "vers:generic/<=P436.677.701",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P438",
+          "version": "vers:generic/<=P438.677.701",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P638",
+          "version": "vers:generic/<=P638.677.700",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM C434",
+          "version": "vers:generic/<=C434.679.700",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Automation System Gateway (EPAS-GTW)",
+          "version": "vers:intdot/<=6.4.616.200.100",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Automation System User Interface (EPAS-UI)",
+          "version": "vers:intdot/<=3.0.3",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Operation",
+          "version": "vers:generic/<=2022_CU6",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Operation",
+          "version": "vers:generic/<=2024_CU2",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "iPMFLS",
+          "version": "vers:intdot/<=64.2025.0.13",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic P5 Protection Relay",
+          "version": "vers:intdot/<=02.502.103",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic P7 Protection and Control Platform",
+          "version": "vers:intdot/<=02.002.002",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic T300",
+          "version": "vers:intdot/<=2.9.4",
+          "product_id": "CSAFPID-0025"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic T500",
+          "version": "vers:intdot/<=11.08.02",
+          "product_id": "CSAFPID-0026"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DP",
+          "version": "vers:intdot/<=11.06.36",
+          "product_id": "CSAFPID-0027"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EasyLogic T150 (formerly Saitel DR)",
+          "version": "vers:intdot/<=11.06.30",
+          "product_id": "CSAFPID-0028"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM C264",
+          "version": "D7.34",
+          "product_id": "CSAFPID-0029"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy C5",
+          "version": "vers:intdot/<=1.1.17",
+          "product_id": "CSAFPID-0030"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy C5",
+          "version": "1.1.18",
+          "product_id": "CSAFPID-0031"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P139 version",
+          "version": "P139.678.700",
+          "product_id": "CSAFPID-0032"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P439",
+          "version": "P439.678.700",
+          "product_id": "CSAFPID-0033"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P539",
+          "version": "P539.678.700",
+          "product_id": "CSAFPID-0034"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P632",
+          "version": "P632.678.700",
+          "product_id": "CSAFPID-0035"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P633",
+          "version": "P633.680.701",
+          "product_id": "CSAFPID-0036"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P634",
+          "version": "P634.680.701",
+          "product_id": "CSAFPID-0037"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P633",
+          "version": "P633.678.700",
+          "product_id": "CSAFPID-0038"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P138",
+          "version": "P138.677.701",
+          "product_id": "CSAFPID-0039"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM C434",
+          "version": "C434.679.700",
+          "product_id": "CSAFPID-0040"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DR",
+          "version": "11.06.31",
+          "product_id": "CSAFPID-0041"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Automation System Gateway (EPAS-GTW)",
+          "version": "6.4.610.500.101",
+          "product_id": "CSAFPID-0042"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Automation Automation System User Interface (EPAS-UI)",
+          "version": "3.0.4",
+          "product_id": "CSAFPID-0043"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Operation",
+          "version": "2022_CU7",
+          "product_id": "CSAFPID-0044"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EcoStruxure Power Operation (EPO)",
+          "version": "2024_CU3",
+          "product_id": "CSAFPID-0045"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "iPMFLS",
+          "version": "64.2025.0.14",
+          "product_id": "CSAFPID-0046"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic P5 Protection Relay",
+          "version": "02.503.101",
+          "product_id": "CSAFPID-0047"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic P7 Protection and Control Platform",
+          "version": "02.003.001",
+          "product_id": "CSAFPID-0048"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic T300",
+          "version": "2.9.5",
+          "product_id": "CSAFPID-0049"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic T500",
+          "version": "11.08.03",
+          "product_id": "CSAFPID-0050"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DP",
+          "version": "11.06.37",
+          "product_id": "CSAFPID-0051"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P40 Series",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0052"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Saitel DP",
+          "version": "",
+          "product_id": "CSAFPID-0053"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "EasyLogic T150 (formerly Saitel DR)",
+          "version": "",
+          "product_id": "CSAFPID-0054"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-07"
     },
     {
       "advisory_id": "ICSA-26-127-01",
@@ -12712,161 +13283,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-034-04"
     },
     {
-      "advisory_id": "ICSA-26-029-01",
-      "title": "KiloView Encoder Series (Update A)",
-      "date": "2026-01-29",
-      "summary": "Successful exploitation of this vulnerability could allow an unauthenticated attacker to create or delete administrator accounts, granting full administrative control. ",
-      "sectors": [
-        "Communications",
-        "Information Technology"
-      ],
-      "cves": [
-        "CVE-2026-1453"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series E1 hardware Version 1.4",
-          "version": "Software_4.7.2516",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series E1 hardware Version 1.6.20",
-          "version": "4.7.2511|4.8.2523|4.8.2611|4.6.2400|4.7.2512|4.8.2561|4.8.2554|4.3.2029|4.8.2555|4.6.2408",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series E1-s hardware Version 1.4",
-          "version": "4.7.2516|4.8.2519|4.8.2525|4.8.2611|4.8.2561|4.8.2554|4.8.2523",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series E2 hardware Version 1.7.20",
-          "version": "4.8.2611|4.8.2561",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series E2 hardware Version 1.8.20",
-          "version": "4.8.2523|4.8.2611|4.8.2554",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series G1 hardware Version 1.6.20",
-          "version": "Software_4.8.2561",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series P1 hardware Version 1.3.20",
-          "version": "4.8.2633|4.8.2608",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series P2 hardware Version 1.8.20",
-          "version": "Software_4.8.2633",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series RE1 hardware Version 2.0.00",
-          "version": "Software_4.7.2513",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "KiloView",
-          "product": "Encoder Series RE1 hardware Version 3.0.00",
-          "version": "4.8.2519|4.8.2561|4.8.2611|4.8.2525",
-          "product_id": "CSAFPID-0010"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-01"
-    },
-    {
-      "advisory_id": "ICSA-26-029-02",
-      "title": "Rockwell Automation ArmorStart LT",
-      "date": "2026-01-29",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to cause a denial-of-service condition.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-9464",
-        "CVE-2025-9465",
-        "CVE-2025-9466",
-        "CVE-2025-9278",
-        "CVE-2025-9279",
-        "CVE-2025-9280",
-        "CVE-2025-9281",
-        "CVE-2025-9282",
-        "CVE-2025-9283"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Rockwell Automation",
-          "product": "ArmorStart LT 290D",
-          "version": "<=V2.002",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "ArmorStart LT 291D",
-          "version": "<=V2.002",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "ArmorStart LT 294D",
-          "version": "<=V2.002",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-02"
-    },
-    {
-      "advisory_id": "ICSA-26-029-03",
-      "title": "Rockwell Automation ControlLogix",
-      "date": "2026-01-29",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition.",
-      "sectors": [
-        "Chemical",
-        "Energy",
-        "Critical Manufacturing",
-        "Food and Agriculture",
-        "Transportation Systems",
-        "Water and Wastewater"
-      ],
-      "cves": [
-        "CVE-2025-14027"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Rockwell Automation",
-          "product": "ControlLogix Redundancy Enhanced Module Catalog 1756-RM2 Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Rockwell Automation",
-          "product": "ControlLogix Redundancy Enhanced Module Catalog 1756-RM2XT Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-029-03"
-    },
-    {
       "advisory_id": "ICSA-26-125-02",
       "title": "ABB B&R PVI",
       "date": "2026-01-29",
@@ -13201,86 +13617,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-06"
     },
     {
-      "advisory_id": "ICSA-26-027-01",
-      "title": "iba Systems ibaPDA",
-      "date": "2026-01-27",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to perform unauthorized actions on the file system.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-14988"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "iba Systems",
-          "product": "ibaPDA",
-          "version": "8.12.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-01"
-    },
-    {
-      "advisory_id": "ICSA-26-027-04",
-      "title": "Johnson Controls Metasys Products",
-      "date": "2026-01-27",
-      "summary": "Successful exploitation of this vulnerability could result in remote SQL execution, leading to alteration or loss of data.",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy",
-        "Government Services and Facilities",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2025-26385"
-      ],
-      "cvss_max": 10,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Johnson Controls",
-          "product": "Metasys Application and Data Server (ADS)",
-          "version": "<=14.1",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Johnson Controls",
-          "product": "Metasys Extended Application and Data Server (ADX)",
-          "version": "14.1",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Johnson Controls",
-          "product": "Metasys LCS8500",
-          "version": ">=12.0|<=14.1",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Johnson Controls",
-          "product": "Metasys NAE8500",
-          "version": ">=12.0|<=14.1",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Johnson Controls",
-          "product": "Metasys System Configuration Tool (SCT)",
-          "version": "<=17.1",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Johnson Controls",
-          "product": "Metasys Controller Configuration Tool (CCT)",
-          "version": "<=17.0",
-          "product_id": "CSAFPID-0006"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-04"
-    },
-    {
       "advisory_id": "ICSA-26-036-05",
       "title": "Hitachi Energy XMC20",
       "date": "2026-01-27",
@@ -13368,31 +13704,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-09"
-    },
-    {
-      "advisory_id": "ICSA-26-022-08",
-      "title": "EVMAPA",
-      "date": "2026-01-22",
-      "summary": "Successful exploitation of these vulnerabilities could lead to degraded service, a denial-of-service, or unauthorized remote command execution, which could lead to spoofing or a manipulation of charging station statuses.",
-      "sectors": [
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2025-54816",
-        "CVE-2025-53968",
-        "CVE-2025-55705"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "EVMAPA",
-          "product": "EVMAPA",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-08"
     },
     {
       "advisory_id": "ICSA-26-125-03",
@@ -13517,235 +13828,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-04"
-    },
-    {
-      "advisory_id": "ICSA-26-027-03",
-      "title": "Schneider Electric Zigbee Products",
-      "date": "2026-01-13",
-      "summary": "Schneider Electric is aware of multiple vulnerabilities with EmberZNet disclosed by Silicon Labs. \r\nMany vendors, including Schneider Electric, use Silicon Labs’ Zigbee processors in their offers.  \r\nThe following have denial of service vulnerabilities: Wiser iTRV, Wiser RTR, Wiser UFH, Wiser \r\nHeat Switch, Wiser Boiler Relay, cFMT (Exaact, Elko, Odace, Merten), Wiser Micromodule, \r\nIconic Wiser Connected Smart Dimmer, Iconic Zigbee devices, Wiser Application Modules, \r\nWiser Connected Pushbutton Switch/Dimmer/Shutter controller, Rotary Dimmer, Motion Sensor \r\nDimmer/Switch, Smart socket outlets, and EV socket outlet. See the following table.  \r\nFailure to apply the mitigations provided below may risk denial of service, which could result in \r\nproducts being unavailable. ",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy",
-        "Information Technology",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2024-6350",
-        "CVE-2024-6351",
-        "CVE-2024-6352",
-        "CVE-2024-10106",
-        "CVE-2024-7322"
-      ],
-      "cvss_max": 6.5,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser iTRV2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser iTRV3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser RTR2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser UFH",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser 16A Electrical Heat Switch",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Boiler Relay",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Exxact cFMT 16a",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Elko cFMT 16a",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Odace cFMT 2a",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Merten cFMT 16a",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Merten cFMT 2a",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Power Micromodule",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser FIP Micromodule",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Iconic, Wiser Connected Smart Dimmer",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Iconic, Wiser Connected Smart Switch, 2AX",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Iconic, Wiser Connected Smart Switch, 10AX",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Iconic, Connected AC Fan Controller",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Iconic, Connected Smart Socket",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Application Module 1-Gang",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Application Module 2-Gang",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Push Button Dimmer",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Push Button Switch",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Push Button Shutter",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Motion Dimmer",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Motion Switch",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Wiser Connected Rotary Dimmer",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Connected Wireless Switch",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Micromodule Switch",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Micromodule Dimmer",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Micromodule Shutter",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Connected Single Socket Outlet",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Connected Double Socket Outlet",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0032"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Fuga Connected Socket Outlet",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0033"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Mureva EV Link",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0034"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-03"
     },
     {
       "advisory_id": "ICSA-26-083-03",
@@ -29409,170 +29491,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-107-02"
-    },
-    {
-      "advisory_id": "ICSA-26-027-02",
-      "title": "Festo Didactic SE MES PC",
-      "date": "2024-02-27",
-      "summary": "MES PCs shipped with Windows 10 come pre-installed with XAMPP. XAMPP is a bundle of third-party open-source applications including the Apache HTTP Server, the MariaDB database and more. From time to time, vulnerabilities in these applications are discovered. These are fixed in newer versions of XAMPP by updating the bundled applications. \n\nMES PCs shipped with Windows 10 include a copy of XAMPP which contains around 140 such vulnerabilities listed in this advisory. They can be fixed by replacing XAMPP with Festo Didactic's Factory Control Panel application.",
-      "sectors": [
-        "Commercial Facilities",
-        "Communications",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2019-11036",
-        "CVE-2023-25727",
-        "CVE-2021-2011",
-        "CVE-2022-32083",
-        "CVE-2021-46668",
-        "CVE-2018-19518",
-        "CVE-2021-2194",
-        "CVE-2019-11049",
-        "CVE-2022-31626",
-        "CVE-2022-32084",
-        "CVE-2022-32088",
-        "CVE-2022-27377",
-        "CVE-2020-2922",
-        "CVE-2019-9638",
-        "CVE-2019-11044",
-        "CVE-2020-7068",
-        "CVE-2020-7069",
-        "CVE-2015-2301",
-        "CVE-2023-0568",
-        "CVE-2022-27458",
-        "CVE-2021-21706",
-        "CVE-2022-27452",
-        "CVE-2020-7071",
-        "CVE-2022-27387",
-        "CVE-2022-27376",
-        "CVE-2019-11043",
-        "CVE-2021-2032",
-        "CVE-2021-2007",
-        "CVE-2019-11045",
-        "CVE-2022-27445",
-        "CVE-2022-27457",
-        "CVE-2022-27384",
-        "CVE-2022-23808",
-        "CVE-2023-0567",
-        "CVE-2019-9025",
-        "CVE-2022-27379",
-        "CVE-2019-9637",
-        "CVE-2021-27928",
-        "CVE-2021-21703",
-        "CVE-2020-2760",
-        "CVE-2021-2166",
-        "CVE-2015-2787",
-        "CVE-2022-23807",
-        "CVE-2020-2752",
-        "CVE-2021-46666",
-        "CVE-2020-2814",
-        "CVE-2020-7065",
-        "CVE-2021-21705",
-        "CVE-2020-7062",
-        "CVE-2019-11039",
-        "CVE-2019-11035",
-        "CVE-2022-27447",
-        "CVE-2019-11046",
-        "CVE-2022-27446",
-        "CVE-2022-27386",
-        "CVE-2019-9639",
-        "CVE-2019-11042",
-        "CVE-2022-27385",
-        "CVE-2020-7059",
-        "CVE-2020-7070",
-        "CVE-2022-32091",
-        "CVE-2015-2348",
-        "CVE-2019-9020",
-        "CVE-2021-35604",
-        "CVE-2022-27444",
-        "CVE-2018-14883",
-        "CVE-2014-9705",
-        "CVE-2020-7064",
-        "CVE-2022-27382",
-        "CVE-2020-7063",
-        "CVE-2021-2372",
-        "CVE-2019-9021",
-        "CVE-2018-14851",
-        "CVE-2022-27448",
-        "CVE-2021-46663",
-        "CVE-2021-2180",
-        "CVE-2014-9709",
-        "CVE-2023-25690",
-        "CVE-2022-32082",
-        "CVE-2022-31629",
-        "CVE-2019-9022",
-        "CVE-2016-3078",
-        "CVE-2023-0662",
-        "CVE-2021-2022",
-        "CVE-2022-32089",
-        "CVE-2019-11048",
-        "CVE-2021-46669",
-        "CVE-2019-11047",
-        "CVE-2022-27383",
-        "CVE-2021-46667",
-        "CVE-2022-32087",
-        "CVE-2022-36760",
-        "CVE-2020-7060",
-        "CVE-2018-17082",
-        "CVE-2019-9640",
-        "CVE-2021-46661",
-        "CVE-2019-11034",
-        "CVE-2022-27456",
-        "CVE-2020-7061",
-        "CVE-2022-27455",
-        "CVE-2021-2144",
-        "CVE-2021-2154",
-        "CVE-2022-21595",
-        "CVE-2019-11040",
-        "CVE-2021-2389",
-        "CVE-2023-27522",
-        "CVE-2020-2812",
-        "CVE-2021-46665",
-        "CVE-2022-32086",
-        "CVE-2022-32085",
-        "CVE-2021-21704",
-        "CVE-2020-7066",
-        "CVE-2022-31628",
-        "CVE-2021-46662",
-        "CVE-2016-5385",
-        "CVE-2022-37436",
-        "CVE-2013-6501",
-        "CVE-2021-21702",
-        "CVE-2019-9024",
-        "CVE-2019-9023",
-        "CVE-2022-27449",
-        "CVE-2021-46664",
-        "CVE-2019-11050",
-        "CVE-2021-21708",
-        "CVE-2022-31625",
-        "CVE-2022-32081",
-        "CVE-2022-27378",
-        "CVE-2006-20001",
-        "CVE-2018-19935",
-        "CVE-2022-4900",
-        "CVE-2018-12882",
-        "CVE-2019-9641",
-        "CVE-2022-27380",
-        "CVE-2022-27381",
-        "CVE-2021-21707",
-        "CVE-2022-27451",
-        "CVE-2020-2780",
-        "CVE-2019-11041",
-        "CVE-2021-2174"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Festo Didactic SE",
-          "product": "MES PC",
-          "version": "shipped_with_Windows_10",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-027-02"
     },
     {
       "advisory_id": "ICSA-25-128-02",
