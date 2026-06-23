@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-06-21T10:05:57.894Z",
+  "pulled_at": "2026-06-23T10:03:11.274Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82382,6 +82382,46 @@
       "published": "2026-06-16T15:16:32.870",
       "last_modified": "2026-06-17T08:33:24.603",
       "fetched_at": "2026-06-19T10:59:10.775Z"
+    },
+    "CVE-2026-6865": {
+      "cve_id": "CVE-2026-6865",
+      "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory (“Path Traversal”) vulnerability that could cause unauthorized access to sensitive files when user-supplied input is improperly handled during server-side file path processing.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-132-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-132-03.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-05-12T14:17:10.567",
+      "last_modified": "2026-06-17T11:01:27.120",
+      "fetched_at": "2026-06-23T10:02:25.852Z"
+    },
+    "CVE-2026-4827": {
+      "cve_id": "CVE-2026-4827",
+      "description": "CWE‑331: Insufficient Entropy vulnerability exists that could lead to unauthorized access when an attacker on the network can exploit weaknesses in session‑management protections.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-331"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-132-02&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-132-02.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-05-12T13:17:35.510",
+      "last_modified": "2026-06-17T10:57:17.890",
+      "fetched_at": "2026-06-23T10:02:41.319Z"
     }
   }
 }
