@@ -1,6 +1,29 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-174-07",
+      "title": "Hubbell Aclara Metrum Cellular Web Interface",
+      "date": "2026-06-23",
+      "summary": "Successful exploitation of this vulnerability could allow attackers to manipulate critical device settings and repeatedly disrupt operations, potentially causing a loss of communications to the device.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-1840"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Hubbell",
+          "product": "Aclara Metrum Cellular Web Interface",
+          "version": "<v2.1.0.105",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-07"
+    },
+    {
       "advisory_id": "ICSA-26-169-01",
       "title": "AVer PTC cameras",
       "date": "2026-06-18",
@@ -450,6 +473,1443 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-162-03"
+    },
+    {
+      "advisory_id": "ICSA-26-174-06",
+      "title": "Impact of Linux Kernel vulnerabilities on B&R products",
+      "date": "2026-06-11",
+      "summary": "B&R is aware of publicly reported vulnerabilities affecting the Linux kernel versions shipped with the products listed as affected in the advisory.\n\nSuccessful local exploitation of these vulnerabilities could allow an attacker to escalate privileges on the affected system. Public proof-of-concept exploits are available for the vulnerabilities described herein. At the time of publication of this advisory, B&R had no evidence of active exploitation targeting B&R products.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-31431",
+        "CVE-2026-43284",
+        "CVE-2026-46333",
+        "CVE-2026-46300",
+        "CVE-2026-43494"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "B&R Industrial Automation GmbH",
+          "product": "Linux for B&R",
+          "version": "<=12",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "B&R Industrial Automation GmbH",
+          "product": "APROL",
+          "version": "<APROL-AutoYaST-DVD-_V4.4-010.10.260602",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "B&R Industrial Automation GmbH",
+          "product": "APROL",
+          "version": "APROL-AutoYaST-DVD-_V4.4-010.10.260602",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "B&R Industrial Automation GmbH",
+          "product": "X20EDS410",
+          "version": "/all",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06"
+    },
+    {
+      "advisory_id": "ICSA-26-174-05",
+      "title": "ABB Freelance Security Lock",
+      "date": "2026-06-10",
+      "summary": "ABB is aware of a vulnerability in the product versions listed as affected in the advisory. An attacker who successfully exploited this vulnerability could cause the product to stop or make the product inaccessible.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-7064"
+      ],
+      "cvss_max": 6.6,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "<=Freelance_2013",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2013_SP1",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2016",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2016_SP1",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2019",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2019_SP1",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2019_SP1_FP1",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "System Version",
+          "version": "Freelance_2024",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Freelance Security Lock",
+          "version": "",
+          "product_id": "CSAFPID-0009"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-05"
+    },
+    {
+      "advisory_id": "ICSA-26-174-01",
+      "title": "Siemens WinCC Certificate Manager",
+      "date": "2026-06-09",
+      "summary": "WinCC Certificate Manager insufficiently protects key material that could allow an attacker to extract sensitive information.\n\nSiemens has released a new version for SIMATIC WinCC Unified PC Runtime V21 and recommends to update to the latest version. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Transportation Systems",
+        "Energy",
+        "Healthcare and Public Health",
+        "Financial Services",
+        "Government Services and Facilities"
+      ],
+      "cves": [
+        "CVE-2026-24349"
+      ],
+      "cvss_max": 7.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified PC Runtime V16",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified PC Runtime V17",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified PC Runtime V18",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified PC Runtime V19",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified PC Runtime V20",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified PC Runtime V21",
+          "version": "vers:intdot/<21.0.2",
+          "product_id": "CSAFPID-0006"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-01"
+    },
+    {
+      "advisory_id": "ICSA-26-174-02",
+      "title": "Siemens SIPROTEC 5 Using DIGSI5 Protocol",
+      "date": "2026-06-09",
+      "summary": "SIPROTEC 5 is vulnerable to arbitrary file uploads by authenticated users using the DIGSI 5 protocol.\nThis could allow an attacker to upload malicious configuration files, potentially causing a permanent denial of service condition.\n\nAs a mitigation measure, users of the CP050 and CP150 device models are advised to upgrade to version 9.90 or later. For CP300 device models, devices 7ST85 and 7ST86 are advised to upgrade to version 10.00 or later, while the remaining models should upgrade to version 9.90 or later. These versions introduce an allow-list feature that restricts arbitrary file uploads and reduces the risk associated with this vulnerability.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Transportation Systems",
+        "Energy",
+        "Healthcare and Public Health",
+        "Financial Services",
+        "Government Services and Facilities"
+      ],
+      "cves": [
+        "CVE-2025-40808"
+      ],
+      "cvss_max": 6.1,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MD84 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MD85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MD85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MD86 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MD86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MD89 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 6MU85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7KE85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7KE85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SA82 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SA82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SA86 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SA86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SA87 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SA87 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SD82 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SD82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SD86 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SD86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SD87 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SD87 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ81 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ81 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ82 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0025"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0026"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0027"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ86 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0028"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SJ86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0029"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SK82 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0030"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SK82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0031"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SK85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0032"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SK85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0033"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SL82 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0034"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SL82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0035"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SL86 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0036"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SL86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0037"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SL87 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0038"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SL87 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0039"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SS85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0040"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SS85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0041"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7ST85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0042"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7ST85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0043"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7ST86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0044"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SX82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0045"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SX85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0046"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7SY82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0047"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UM85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0048"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT82 (CP100)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0049"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT82 (CP150)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0050"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT85 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0051"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0052"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT86 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0053"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT86 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0054"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT87 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0055"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7UT87 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0056"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7VE85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0057"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7VK87 (CP200)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0058"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7VK87 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0059"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 7VU85 (CP300)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0060"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPROTEC 5 Compact 7SX800 (CP050)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0061"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-02"
+    },
+    {
+      "advisory_id": "ICSA-26-174-03",
+      "title": "Siemens Products using OpenSSL",
+      "date": "2026-06-09",
+      "summary": "OpenSSL has published a stack based buffer overflow vulnerability that allows a remote attacker to cause a denial of service (DoS) or potentially allow for remote code execution.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Transportation Systems",
+        "Energy",
+        "Healthcare and Public Health",
+        "Financial Services",
+        "Government Services and Facilities"
+      ],
+      "cves": [
+        "CVE-2025-15467"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "AI Lightweight Inference Server",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Connector for Azure",
+          "version": "vers:intdot/<1.8.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Databus",
+          "version": "vers:intdot/<3.3.2",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "HiMed Cockpit",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "RUGGEDCOM RM1224 LTE(4G) EU (6GK6108-4AM00-2BA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "RUGGEDCOM RM1224 LTE(4G) NAM (6GK6108-4AM00-2DA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE LPE9413 (6GK5998-3GS01-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE LPE9433 (6GK5998-3GS11-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M804PB (6GK5804-0AP00-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M812-1 ADSL-Router family",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M816-1 ADSL-Router family",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M876-3 (6GK5876-3AA02-2BA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M876-4 (6GK5876-4AA10-2BA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUB852-1 (A1) (6GK5852-1EA10-1AA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUB852-1 (B1) (6GK5852-1EA10-1BA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM853-1 (A1) (6GK5853-2EA10-2AA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM853-1 (B1) (6GK5853-2EA10-2BA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0025"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM853-1 (EU) (6GK5853-2EA00-2DA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0026"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM856-1 (A1) (6GK5856-2EA10-3AA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0027"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM856-1 (B1) (6GK5856-2EA10-3BA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0028"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM856-1 (CN) (6GK5856-2EA00-3FA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0029"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM856-1 (EU) (6GK5856-2EA00-3DA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0030"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE MUM856-1 (RoW) (6GK5856-2EA00-3AA1)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0031"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0032"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0033"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0034"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0035"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0036"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0037"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0038"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0039"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAB762-1 (6GK5762-1AJ00-6AA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0040"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0041"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM763-1 (ME) (6GK5763-1AL00-7DC0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0042"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM763-1 (US) (6GK5763-1AL00-7DB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0043"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0044"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM766-1 (ME) (6GK5766-1GE00-7DC0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0045"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0046"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0047"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM766-1 EEC (ME) (6GK5766-1GE00-7TC0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0048"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0049"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUB762-1 (6GK5762-1AJ00-1AA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0050"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUB762-1 iFeatures (6GK5762-1AJ00-2AA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0051"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0052"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0053"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3AB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0054"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3DB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0055"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0056"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM766-1 (ME) (6GK5766-1GE00-3DC0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0057"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0058"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC316-8 (6GK5324-8TS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0059"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC324-4 (6GK5328-4TS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0060"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC324-4 EEC (6GK5328-4TS00-2EC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0061"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC332 (6GK5332-0GA00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0062"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC416-8 (6GK5424-8TR00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0063"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC424-4 (6GK5428-4TR00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0064"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC432 (6GK5432-0GR00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0065"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR302-32 (6GK5334-5TS00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0066"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR302-32 (6GK5334-5TS00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0067"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR302-32 (6GK5334-5TS00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0068"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR322-12 (6GK5334-3TS00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0069"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR322-12 (6GK5334-3TS00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0070"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR322-12 (6GK5334-3TS00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0071"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 (6GK5334-2TS00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0072"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 (6GK5334-2TS00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0073"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 (6GK5334-2TS00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0074"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 EEC (6GK5334-2TS00-2ER3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0075"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR502-32 (6GK5534-5TR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0076"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR502-32 (6GK5534-5TR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0077"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR502-32 (6GK5534-5TR00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0078"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR522-12 (6GK5534-3TR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0079"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR522-12 (6GK5534-3TR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0080"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR522-12 (6GK5534-3TR00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0081"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0082"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-2RR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0083"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0084"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-3RR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0085"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR526-8 (6GK5534-2TR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0086"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR526-8 (6GK5534-2TR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0087"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR526-8 (6GK5534-2TR00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0088"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Shopfloor IT Suite",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0089"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIDIS Prime",
+          "version": "vers:intdot/>=4.0.700",
+          "product_id": "CSAFPID-0090"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Siemens OPC UA Modelling Editor (SiOME)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0091"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC Comfort/Mobile RT",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0092"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC eaSie Core Package (6DL5424-0AX00-0AV8)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0093"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC eaSie PCS 7 Skill Package (6DL5424-0BX00-0AV8)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0094"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC HMI Basic Panels",
+          "version": "vers:intdot/<17.0.9",
+          "product_id": "CSAFPID-0095"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC HMI Comfort Panels",
+          "version": "vers:intdot/<17.0.9",
+          "product_id": "CSAFPID-0096"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC HMI Mobile Panels",
+          "version": "vers:intdot/<17.0.9",
+          "product_id": "CSAFPID-0097"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IOT2050 (6ES7647-0BA00-1YA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0098"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IPC BX-21A",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0099"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IPC MD-57A",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0100"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IPC ORCLA",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0101"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC PDM V9.3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0102"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA00)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0103"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0104"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA20)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0105"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA30)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0106"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0107"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA20)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0108"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA30)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0109"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC STEP 7 V5",
+          "version": "vers:intdot/<5.7.4",
+          "product_id": "CSAFPID-0110"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC Target",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0111"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC OA V3.19",
+          "version": "vers:intdot/<3.19.024",
+          "product_id": "CSAFPID-0112"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC OA V3.20",
+          "version": "vers:intdot/<3.20.012",
+          "product_id": "CSAFPID-0113"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC OA V3.21",
+          "version": "vers:intdot/<3.21.02",
+          "product_id": "CSAFPID-0114"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Runtime Advanced V17",
+          "version": "vers:intdot/<17.0.9",
+          "product_id": "CSAFPID-0115"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified Sequence",
+          "version": "vers:intdot/<21",
+          "product_id": "CSAFPID-0116"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC V7.5",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0117"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC V8.0",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0118"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC V8.1",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0119"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOTION OACAMGEN (6AU1820-3EA20-0AB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0120"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOVE Fleetmanager V3.1",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0121"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOVE Fleetmanager V3.2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0122"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOVE Fleetmanager V3.3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0123"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS G200",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0124"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS G220",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0125"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS S200",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0126"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS S210",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0127"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS S220",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0128"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINEC INS",
+          "version": "vers:intdot/<1.0.2.5",
+          "product_id": "CSAFPID-0129"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINEC NMS",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0130"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINEC Security Monitor",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0131"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINUMERIK Access MyMachine /OPC UA",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0132"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPLANT",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0133"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SITRANS ASM IQ",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0134"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SITRANS Soft Sensor Engine IQ (SITRANS SSE IQ)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0135"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "User Management Component (UMC)",
+          "version": "vers:intdot/<2.15.3.0",
+          "product_id": "CSAFPID-0136"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Visual Inspection Cockpit",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0137"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03"
+    },
+    {
+      "advisory_id": "ICSA-26-174-04",
+      "title": "Siemens SINEC INS",
+      "date": "2026-06-09",
+      "summary": "SINEC INS before V1.0 SP2 Update 6 is affected by multiple vulnerabilities.\n\nSiemens has released a new version for SINEC INS and recommends to update to the latest version.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Transportation Systems",
+        "Energy",
+        "Healthcare and Public Health",
+        "Financial Services",
+        "Government Services and Facilities"
+      ],
+      "cves": [
+        "CVE-2026-46746",
+        "CVE-2026-46747",
+        "CVE-2026-46748",
+        "CVE-2026-46749"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "SINEC INS",
+          "version": "vers:intdot/<1.0.2.6",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-04"
     },
     {
       "advisory_id": "ICSA-26-155-01",
@@ -7084,7 +8544,7 @@
     },
     {
       "advisory_id": "ICSA-26-111-06",
-      "title": "Zero Motorcycles Firmware",
+      "title": "Zero Motorcycles Firmware (Update A)",
       "date": "2026-04-21",
       "summary": "Successful exploitation of this vulnerability could allow an attacker to pair via Bluetooth with a motorcycle, gaining unauthorized access to all Bluetooth functions, including changing the firmware.",
       "sectors": [
@@ -12892,261 +14352,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-041-01"
     },
     {
-      "advisory_id": "ICSA-26-036-01",
-      "title": "TP-Link Systems Inc. VIGI Series IP Camera",
-      "date": "2026-02-05",
-      "summary": "Successful exploitation of this vulnerability could result in unauthorized users gaining administrative access to affected closed circuit television cameras.",
-      "sectors": [
-        "Commercial Facilities"
-      ],
-      "cves": [
-        "CVE-2026-0629"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx45 Series Models C345, C445",
-          "version": "<=3.1.0_Build_250820_Rel.57668n",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx55 Series Models C355, C455",
-          "version": "<=3.1.0_Build_250820_Rel.58873n",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx85 Series Models C385, C485",
-          "version": "<=3.0.2_Build_250630_Rel.71279n",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C340S Series",
-          "version": "<=3.1.0_Build_250625_Rel.65381n",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C540S Series Models C540S, EasyCam C540S",
-          "version": "<=3.1.0_Build_250625_Rel.66601n",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C540V Series",
-          "version": "<=2.1.0_Build_250702_Rel.54300n",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C250 Series",
-          "version": "<=2.1.0_Build_250702_Rel.54301n",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx50 Series Models C350, C450",
-          "version": "<=2.1.0_Build_250702_Rel.54294n",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx20I (1.0) Series Models C220I 1.0, C320I 1.0, C420I 1.0",
-          "version": "<=2.1.0_Build_251014_Rel.58331n",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx20I (1.20) Series Models C220I 1.20, C320I 1.20, C420I 1.20",
-          "version": "<=2.1.0_Build_250701_Rel.44071n",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx30I (1.0) Series Models C230I 1.0, C330I 1.0, C430I 1.0",
-          "version": "<=2.1.0_Build_250701_Rel.45506n",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx30I (1.20) Series Models C230I 1.20, C330I 1.20, C430I 1.20",
-          "version": "<=2.1.0_Build_250701_Rel.44555n",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx30 (1.0) Series Models C230 1.0, C330 1.0, C430 1.0",
-          "version": "<=2.1.0_Build_250701_Rel.46796n",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx30 (1.20) Series Models C230 1.20, C330 1.20, C430 1.20",
-          "version": "<=2.1.0_Build_250701_Rel.46796n",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx40I (1.0) Series Models C240I 1.0, C340I 1.0, C440I 1.0",
-          "version": "<=2.1.0_Build_250701_Rel.46003n",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx40I (1.20) Series Models C240I 1.20, C340I 1.20, C440I 1.20",
-          "version": "<=2.1.0_Build_250701_Rel.45041n",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C230I Mini Series",
-          "version": "<=2.1.0_Build_250701_Rel.47570n",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C240 1.0 Series",
-          "version": "<=2.1.0_Build_250701_Rel.48425n",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C340 2.0 Series",
-          "version": "<=2.1.0_Build_250701_Rel.49304n",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C440 2.0 Series",
-          "version": "<=2.1.0_Build_250701_Rel.49778n",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C540 2.0 Series",
-          "version": "<=2.1.0_Build_250701_Rel.50397n",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI C540‑4G Series",
-          "version": "<=2.2.0_Build_250826_Rel.56808n",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx40‑W Series Models C340‑W 2.0/2.20, C440‑W 2.0, C540‑W 2.0",
-          "version": "<=2.1.1_Build_250717",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI Cx20 Series Models C320, C420",
-          "version": "<=2.1.0_Build_250701_Rel.39597n",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight Sx45 Series Models S245, S345, S445",
-          "version": "<=3.1.0_Build_250820_Rel.57668n",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight Sx55 Series Models S355, S455",
-          "version": "<=3.1.0_Build_250820_Rel.58873n",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight Sx85 Series Models S285, S385",
-          "version": "<=3.0.2_Build_250630_Rel.71279n",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight Sx45ZI Series Models S245ZI, S345ZI, S445ZI",
-          "version": "<=1.2.0_Build_250820_Rel.60930n",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight Sx85PI Series Models S385PI, S485PI",
-          "version": "<=1.2.0_Build_250827_Rel.66817n",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight S655I Series",
-          "version": "<=1.1.1_Build_250625_Rel.64224n",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight S345‑4G Series",
-          "version": "<=2.1.0_Build_250725_Rel.36867n",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "TP-Link Systems Inc.",
-          "product": "VIGI InSight Sx25 Series Models S225, S325, S425",
-          "version": "<=1.1.0_Build_250630_Rel.39597n",
-          "product_id": "CSAFPID-0032"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-01"
-    },
-    {
-      "advisory_id": "ICSA-26-036-02",
-      "title": "Mitsubishi Electric MELSEC iQ-R Series",
-      "date": "2026-02-05",
-      "summary": "Successful exploitation of this vulnerability may allow an attacker to read device data or part of a control program from the affected product, write device data in the affected product, or cause a denial-of-service condition on the affected product.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-15080"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series R08/16/32/120PCPU firmware",
-          "version": "<=48",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-02"
-    },
-    {
-      "advisory_id": "ICSA-26-036-03",
-      "title": "o6 Automation GmbH Open62541",
-      "date": "2026-02-05",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to cause a denial-of-service condition and memory corruption.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-1301"
-      ],
-      "cvss_max": 5.7,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "o6 Automation GmbH",
-          "product": "Open62541",
-          "version": ">=1.5-rc1|<1.5-rc2",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-03"
-    },
-    {
       "advisory_id": "ICSA-26-036-04",
       "title": "Ilevia EVE X1 Server",
       "date": "2026-02-05",
@@ -13176,111 +14381,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-04"
-    },
-    {
-      "advisory_id": "ICSA-26-034-01",
-      "title": "Mitsubishi Electric FREQSHIP-mini for Windows",
-      "date": "2026-02-03",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to gain unauthorized access to, modify, delete, or destroy information stored on the system where the affected product is installed, or cause a denial-of-service condition on the affected system.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Energy",
-        "Information Technology",
-        "Healthcare and Public Health",
-        "Government Services and Facilities"
-      ],
-      "cves": [
-        "CVE-2025-10314"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "FREQSHIP-mini for Windows",
-          "version": ">=8.0.0|<=8.0.2",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-034-01"
-    },
-    {
-      "advisory_id": "ICSA-26-034-02",
-      "title": "*Avation Light Engine Pro *",
-      "date": "2026-02-03",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to take full control of the device.",
-      "sectors": [
-        "Commercial Facilities"
-      ],
-      "cves": [
-        "CVE-2026-1341"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Avation",
-          "product": "Light Engine Pro",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-034-02"
-    },
-    {
-      "advisory_id": "ICSA-26-034-03",
-      "title": "RISS SRL MOMA Seismic Station",
-      "date": "2026-02-03",
-      "summary": "Successful exploitation of this vulnerability could result in an unauthenticated attacker creating a denial-of-service condition.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Dams",
-        "Energy",
-        "Water and Wastewater",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-1632"
-      ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "RISS SRL",
-          "product": "MOMA Seismic Station",
-          "version": "<=v2.4.2520",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-034-03"
-    },
-    {
-      "advisory_id": "ICSA-26-034-04",
-      "title": "Synectix LAN 232 TRIO",
-      "date": "2026-02-03",
-      "summary": "Successful exploitation of this vulnerability could result in an unauthenticated attacker modifying critical device settings or factory resetting the device.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Emergency Services",
-        "Energy",
-        "Information Technology",
-        "Transportation Systems",
-        "Water and Wastewater"
-      ],
-      "cves": [
-        "CVE-2026-1633"
-      ],
-      "cvss_max": 10,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Synectix",
-          "product": "LAN 232 TRIO",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-034-04"
     },
     {
       "advisory_id": "ICSA-26-125-02",

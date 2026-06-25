@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-06-23T10:03:11.274Z",
+  "pulled_at": "2026-06-25T09:46:40.372Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82422,6 +82422,198 @@
       "published": "2026-05-12T13:17:35.510",
       "last_modified": "2026-06-17T10:57:17.890",
       "fetched_at": "2026-06-23T10:02:41.319Z"
+    },
+    "CVE-2026-24349": {
+      "cve_id": "CVE-2026-24349",
+      "description": "A vulnerability has been identified in SIMATIC WinCC Unified PC Runtime V16 (All versions), SIMATIC WinCC Unified PC Runtime V17 (All versions), SIMATIC WinCC Unified PC Runtime V18 (All versions), SIMATIC WinCC Unified PC Runtime V19 (All versions), SIMATIC WinCC Unified PC Runtime V20 (All versions), SIMATIC WinCC Unified PC Runtime V21 (All versions < V21 Update 2). Insufficient protection of key material in WinCC Certificate Manager that could allow an attacker to extract sensitive information.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+      "cwes": [
+        "CWE-313"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-063511.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-09T10:16:42.967",
+      "last_modified": "2026-06-17T10:22:55.847",
+      "fetched_at": "2026-06-25T09:44:04.462Z"
+    },
+    "CVE-2025-40808": {
+      "cve_id": "CVE-2025-40808",
+      "description": "A vulnerability has been identified in SIPROTEC 5 6MD84 (CP300) (All versions), SIPROTEC 5 6MD85 (CP200) (All versions), SIPROTEC 5 6MD85 (CP300) (All versions), SIPROTEC 5 6MD86 (CP200) (All versions), SIPROTEC 5 6MD86 (CP300) (All versions), SIPROTEC 5 6MD89 (CP300) (All versions), SIPROTEC 5 6MU85 (CP300) (All versions), SIPROTEC 5 7KE85 (CP200) (All versions), SIPROTEC 5 7KE85 (CP300) (All versions), SIPROTEC 5 7SA82 (CP100) (All versions), SIPROTEC 5 7SA82 (CP150) (All versions), SIPROTEC 5 7SA86 (CP200) (All versions), SIPROTEC 5 7SA86 (CP300) (All versions), SIPROTEC 5 7SA87 (CP200) (All versions), SIPROTEC 5 7SA87 (CP300) (All versions), SIPROTEC 5 7SD82 (CP100) (All versions), SIPROTEC 5 7SD82 (CP150) (All versions), SIPROTEC 5 7SD86 (CP200) (All versions), SIPROTEC 5 7SD86 (CP300) (All versions), SIPROTEC 5 7SD87 (CP200) (All versions), SIPROTEC 5 7SD87 (CP300) (All versions), SIPROTEC 5 7SJ81 (CP100) (All versions), SIPROTEC 5 7SJ81 (CP150) (All versions), SIPROTEC 5 7SJ82 (CP100) (All versions), SIPROTEC 5 7SJ82 (CP150) (All versions), SIPROTEC 5 7SJ85 (CP200) (All versions), SIPROTEC 5 7SJ85 (CP300) (All versions), SIPROTEC 5 7SJ86 (CP200) (All versions), SIPROTEC 5 7SJ86 (CP300) (All versions), SIPROTEC 5 7SK82 (CP100) (All versions), SIPROTEC 5 7SK82 (CP150) (All versions), SIPROTEC 5 7SK85 (CP200) (All versions), SIPROTEC 5 7SK85 (CP300) (All versions), SIPROTEC 5 7SL82 (CP100) (All versions), SIPROTEC 5 7SL82 (CP150) (All versions), SIPROTEC 5 7SL86 (CP200) (All versions), SIPROTEC 5 7SL86 (CP300) (All versions), SIPROTEC 5 7SL87 (CP200) (All versions), SIPROTEC 5 7SL87 (CP300) (All versions), SIPROTEC 5 7SS85 (CP200) (All versions), SIPROTEC 5 7SS85 (CP300) (All versions), SIPROTEC 5 7ST85 (CP200) (All versions), SIPROTEC 5 7ST85 (CP300) (All versions), SIPROTEC 5 7ST86 (CP300) (All versions), SIPROTEC 5 7SX82 (CP150) (All versions), SIPROTEC 5 7SX85 (CP300) (All versions), SIPROTEC 5 7SY82 (CP150) (All versions), SIPROTEC 5 7UM85 (CP300) (All versions), SIPROTEC 5 7UT82 (CP100) (All versions), SIPROTEC 5 7UT82 (CP150) (All versions), SIPROTEC 5 7UT85 (CP200) (All versions), SIPROTEC 5 7UT85 (CP300) (All versions), SIPROTEC 5 7UT86 (CP200) (All versions), SIPROTEC 5 7UT86 (CP300) (All versions), SIPROTEC 5 7UT87 (CP200) (All versions), SIPROTEC 5 7UT87 (CP300) (All versions), SIPROTEC 5 7VE85 (CP300) (All versions), SIPROTEC 5 7VK87 (CP200) (All versions), SIPROTEC 5 7VK87 (CP300) (All versions), SIPROTEC 5 7VU85 (CP300) (All versions), SIPROTEC 5 Compact 7SX800 (CP050) (All versions). The affected application allows authenticated users to upload arbitrary files using DIGSI 5 protocol. This could allow an attacker to upload malicious configuration files, that could cause denial of service condition and potentially lead to code execution.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.1,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+      "cwes": [
+        "CWE-434"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-139483.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-09T10:16:35.807",
+      "last_modified": "2026-06-17T09:22:09.343",
+      "fetched_at": "2026-06-25T09:44:25.184Z"
+    },
+    "CVE-2025-15467": {
+      "cve_id": "CVE-2025-15467",
+      "description": "Issue summary: Parsing CMS AuthEnvelopedData or EnvelopedData message with\nmaliciously crafted AEAD parameters can trigger a stack buffer overflow.\n\nImpact summary: A stack buffer overflow may lead to a crash, causing Denial\nof Service, or potentially remote code execution.\n\nWhen parsing CMS (Auth)EnvelopedData structures that use AEAD ciphers such as\nAES-GCM, the IV (Initialization Vector) encoded in the ASN.1 parameters is\ncopied into a fixed-size stack buffer without verifying that its length fits\nthe destination. An attacker can supply a crafted CMS message with an\noversized IV, causing a stack-based out-of-bounds write before any\nauthentication or tag verification occurs.\n\nApplications and services that parse untrusted CMS or PKCS#7 content using\nAEAD ciphers (e.g., S/MIME (Auth)EnvelopedData with AES-GCM) are vulnerable.\nBecause the overflow occurs prior to authentication, no valid key material\nis required to trigger it. While exploitability to remote code execution\ndepends on platform and toolchain mitigations, the stack-based write\nprimitive represents a severe risk.\n\nThe FIPS modules in 3.6, 3.5, 3.4, 3.3 and 3.0 are not affected by this\nissue, as the CMS implementation is outside the OpenSSL FIPS module\nboundary.\n\nOpenSSL 3.6, 3.5, 3.4, 3.3 and 3.0 are vulnerable to this issue.\n\nOpenSSL 1.1.1 and 1.0.2 are not affected by this issue.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/openssl/openssl/commit/2c8f0e5fa9b6ee5508a0349e4572ddb74db5a703",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/5f26d4202f5b89664c5c3f3c62086276026ba9a9",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/6ced0fe6b10faa560e410e3ee8d6c82f06c65ea3",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/ce39170276daec87f55c39dad1f629b56344429e",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://github.com/openssl/openssl/commit/d0071a0799f20cc8101730145349ed4487c268dc",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://openssl-library.org/news/secadv/20260127.txt",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2026/01/27/10",
+          "tags": [
+            "Mailing List"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2026/02/25/6",
+          "tags": [
+            "Mailing List"
+          ]
+        }
+      ],
+      "published": "2026-01-27T16:16:14.257",
+      "last_modified": "2026-06-17T08:37:50.080",
+      "fetched_at": "2026-06-25T09:44:38.072Z"
+    },
+    "CVE-2026-46746": {
+      "cve_id": "CVE-2026-46746",
+      "description": "A vulnerability has been identified in SINEC INS (All versions < V1.0 SP2 Update 6). The application does not properly sanitize user input in the /api/sftp/uploadFiles endpoint, allowing the injection of shell command payloads via crafted directory names. These payloads are stored and executed when directory listings are retrieved. This could allow an authenticated remote attacker to execute arbitrary commands on the underlying operating system with the privileges of the affected service user (sinecins).",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-78"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-860189.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-06-09T10:16:44.000",
+      "last_modified": "2026-06-17T10:53:53.263",
+      "fetched_at": "2026-06-25T09:45:02.094Z"
+    },
+    "CVE-2026-46747": {
+      "cve_id": "CVE-2026-46747",
+      "description": "A vulnerability has been identified in SINEC INS (All versions < V1.0 SP2 Update 6). The affected application does not properly sanitize path input in the `GET /api/sftp/uploadFiles` endpoint used for directory listing. This allows path traversal through crafted input, enabling access to unintended file system locations.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+      "cwes": [
+        "CWE-26"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-860189.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-06-09T10:16:44.130",
+      "last_modified": "2026-06-17T10:53:53.377",
+      "fetched_at": "2026-06-25T09:45:09.260Z"
+    },
+    "CVE-2026-46748": {
+      "cve_id": "CVE-2026-46748",
+      "description": "A vulnerability has been identified in SINEC INS (All versions < V1.0 SP2 Update 6). The affected system includes a binary that is configured with the cap_dac_override capability. This capability allows the process to bypass file system permission checks, resulting in unrestricted file system access. This could allow a local attacker to escalate privileges leading to arbitrary file modification and gaining root privileges on the system.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-250"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-860189.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-06-09T10:16:44.263",
+      "last_modified": "2026-06-17T10:53:53.493",
+      "fetched_at": "2026-06-25T09:45:16.280Z"
+    },
+    "CVE-2026-46749": {
+      "cve_id": "CVE-2026-46749",
+      "description": "A vulnerability has been identified in SINEC INS (All versions < V1.0 SP2 Update 6). The affected application uses a password hashing implementation with a static, hardcoded salt shared across all users and installations, and is configured with an insufficient number of iterations. This could allow an attacker to efficiently recover user passwords using brute-force or precomputed attacks, potentially resulting in unauthorized access.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-760"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-860189.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-06-09T10:16:44.410",
+      "last_modified": "2026-06-17T10:53:53.617",
+      "fetched_at": "2026-06-25T09:45:48.535Z"
     }
   }
 }
