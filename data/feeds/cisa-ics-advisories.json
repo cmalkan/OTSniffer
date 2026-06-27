@@ -1,6 +1,256 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-176-01",
+      "title": "Yokogawa FAST/TOOLS and CI Server",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of this vulnerability may return a response containing the CI Server setting information.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Food and Agriculture"
+      ],
+      "cves": [
+        "CVE-2026-11833"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Yokogawa",
+          "product": "FAST/TOOLS",
+          "version": ">=R9.01|<=R10.04",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Yokogawa",
+          "product": "Collaborative Information Server (CI Server)",
+          "version": ">=R1.01|<=R1.04",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-01"
+    },
+    {
+      "advisory_id": "ICSA-26-176-02",
+      "title": "EVoke Systems Charging Station Management System",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of these vulnerabilities could enable attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt charging services through denial-of-service attacks.",
+      "sectors": [
+        "Energy",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-40702",
+        "CVE-2026-50176",
+        "CVE-2026-54479",
+        "CVE-2026-44622"
+      ],
+      "cvss_max": 9.4,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "EVoke Systems",
+          "product": "EVoke CSMS",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02"
+    },
+    {
+      "advisory_id": "ICSA-26-176-03",
+      "title": "Horner Automation Cscape",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of this vulnerability could allow a local attacker to disclose information and execute arbitrary code.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-12897"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Horner Automation",
+          "product": "Cscape",
+          "version": "<10.2_SP3",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-03"
+    },
+    {
+      "advisory_id": "ICSA-26-176-04",
+      "title": "Daktronics Controller Firmware",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of these vulnerabilities could could provide an unauthenticated user with complete root-level access and control of the system.",
+      "sectors": [
+        "Commercial Facilities",
+        "Information Technology",
+        "Emergency Services",
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-28701",
+        "CVE-2026-33560",
+        "CVE-2026-31928"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Daktronics",
+          "product": "VFC-DMP-5000",
+          "version": "<v8.117.x.x",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "VFC-DMP-5000",
+          "version": "<v9.43.x.x",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "VFC-DMP-5000",
+          "version": "<v10.34.x.x",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "DMP-5000",
+          "version": "<v10.34.x.x",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "DMP-5000",
+          "version": "<v8.117.x.x",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "DMP-5000",
+          "version": "<v9.43.x.x",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "DMP-8000",
+          "version": "<v10.34.x.x",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "DMP-8000",
+          "version": "<v8.117.x.x",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Daktronics",
+          "product": "DMP-8000",
+          "version": "<v9.43.x.x",
+          "product_id": "CSAFPID-0009"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-04"
+    },
+    {
+      "advisory_id": "ICSA-26-176-05",
+      "title": "H.VIEW HV-500S6 IP Camera",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary code and upload malicious files to the affected device.",
+      "sectors": [
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2026-55975",
+        "CVE-2026-56414"
+      ],
+      "cvss_max": 7.2,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "H.VIEW",
+          "product": "HV-500S6 IP Camera",
+          "version": "IPCAM_V4.06.88.251229",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-05"
+    },
+    {
+      "advisory_id": "ICSA-26-176-06",
+      "title": "Delta Electronics DTM Soft",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to execute arbitrary code.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-12578"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Delta Electronics",
+          "product": "DTMSoft",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-06"
+    },
+    {
+      "advisory_id": "ICSMA-26-176-01",
+      "title": "pydicom pynetdicom Library",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of this vulnerability could allow an unauthenticated attacker to write to arbitrary file paths.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-56445"
+      ],
+      "cvss_max": 9.1,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "pydicom",
+          "product": "pynetdicom",
+          "version": ">=v1.0.0|<v3.0.4",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-176-01"
+    },
+    {
+      "advisory_id": "ICSMA-26-176-02",
+      "title": "OHIF Viewers DICOM",
+      "date": "2026-06-25",
+      "summary": "Successful exploitation of this vulnerability in a custom integration version could allow an attacker to steal an authenticated clinician's token via a crafted link.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-12473"
+      ],
+      "cvss_max": 8.2,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Open Health Imaging Foundation (OHIF)",
+          "product": "OHIF DICOM Web Viewer Framework",
+          "version": "<=v3.12.0",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-176-02"
+    },
+    {
       "advisory_id": "ICSA-26-174-07",
       "title": "Hubbell Aclara Metrum Cellular Web Interface",
       "date": "2026-06-23",
@@ -68,14 +318,15 @@
     },
     {
       "advisory_id": "ICSA-26-169-02",
-      "title": "AzeoTech DAQFactory",
+      "title": "AzeoTech DAQFactory (Update A)",
       "date": "2026-06-18",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to upload malicious .ctl files that may lead to arbitrary code execution.",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to upload malicious .ctl files that may lead to arbitrary code execution.",
       "sectors": [
         "Critical Manufacturing"
       ],
       "cves": [
-        "CVE-2026-12390"
+        "CVE-2026-12390",
+        "CVE-2026-12921"
       ],
       "cvss_max": 7.8,
       "cvss_severity": "high",
@@ -1910,6 +2161,39 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-04"
+    },
+    {
+      "advisory_id": "ICSA-26-176-07",
+      "title": "Schneider Electric PowerLogic P7",
+      "date": "2026-06-09",
+      "summary": "Schneider Electric is aware of a vulnerability in its PowerLogic™ P7 product. \r\nThe PowerLogic™ P7 is a protection and control platform designed for complex and advanced electrical \r\nnetwork applications.\r\nFailure to apply the remediation provided below may risk unauthorized execution of privileged commands or \r\nloss of HMI operability and configuration functionality, which could result in loss of control over system \r\noperations and disruption of critical services.",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-9716",
+        "CVE-2026-9717",
+        "CVE-2026-9718"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic™ P7",
+          "version": "vers:intdot/<=0.2.003.001.000",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerLogic™ P7",
+          "version": "0.2.003.001.000",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
     },
     {
       "advisory_id": "ICSA-26-155-01",
@@ -13726,200 +14010,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-10"
     },
     {
-      "advisory_id": "ICSA-26-041-01",
-      "title": "Yokogawa FAST/TOOLS",
-      "date": "2026-02-10",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to redirected users to malicious sites, decrypt communications, perform a man-in-the-middle (MITM) attack, execute malicious scripts, steal files, and perform other various attacks.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Energy",
-        "Food and Agriculture"
-      ],
-      "cves": [
-        "CVE-2025-66594",
-        "CVE-2025-66595",
-        "CVE-2025-66597",
-        "CVE-2025-66598",
-        "CVE-2025-66599",
-        "CVE-2025-66600",
-        "CVE-2025-66601",
-        "CVE-2025-66602",
-        "CVE-2025-66603",
-        "CVE-2025-66604",
-        "CVE-2025-66605",
-        "CVE-2025-66606",
-        "CVE-2025-66607",
-        "CVE-2025-66608"
-      ],
-      "cvss_max": 8.2,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Yokogawa",
-          "product": "FAST/TOOLS",
-          "version": ">=R9.01|<=R10.04",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-041-01"
-    },
-    {
-      "advisory_id": "ICSA-26-041-02",
-      "title": "ZLAN Information Technology Co. ZLAN5143D",
-      "date": "2026-02-10",
-      "summary": "Successful exploitation of these vulnerabilities could result in an attacker bypassing authentication, or resetting the device password.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-25084",
-        "CVE-2026-24789"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "ZLAN Information Technology Co.",
-          "product": "ZLAN5143D",
-          "version": "v1.600",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-041-02"
-    },
-    {
-      "advisory_id": "ICSA-26-041-03",
-      "title": "AVEVA PI Data Archive",
-      "date": "2026-02-10",
-      "summary": "Successful exploitation of this vulnerability could result in a denial-of-service condition.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-1507"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "AVEVA",
-          "product": "PI Data Archive PI Server",
-          "version": "<=2018_SP3_Patch_7",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "AVEVA",
-          "product": "PI Data Archive PI Server",
-          "version": "2023",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "AVEVA",
-          "product": "PI Data Archive PI Server",
-          "version": "2023_Patch_1",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "AVEVA",
-          "product": "PI Data Archive PI Server",
-          "version": "2024",
-          "product_id": "CSAFPID-0004"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-041-03"
-    },
-    {
-      "advisory_id": "ICSA-26-041-04",
-      "title": "AVEVA PI to CONNECT Agent",
-      "date": "2026-02-10",
-      "summary": "Successful exploitation of this vulnerability could result in an unauthorized access to the proxy server.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-1495"
-      ],
-      "cvss_max": 6.5,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "AVEVA",
-          "product": "PI to CONNECT Agent",
-          "version": "<=v2.4.2520",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-041-04"
-    },
-    {
-      "advisory_id": "ICSA-26-043-01",
-      "title": "Siemens SINEC NMS",
-      "date": "2026-02-10",
-      "summary": "Multiple Siemens products are affected by two local privilege escalation vulnerabilities which could allow an low privileged attacker to load malicious DLLs, potentially leading to arbitrary code execution with elevated privileges.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
-      "sectors": [
-        "Information Technology",
-        "Energy",
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-25655",
-        "CVE-2026-25656"
-      ],
-      "cvss_max": 7.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SINEC NMS",
-          "version": "<V4.0_SP2",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SINEC NMS",
-          "version": "<V4.0_SP3",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "User Management Component (UMC)",
-          "version": "vers:intdot/<2.15.2.1",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-01"
-    },
-    {
-      "advisory_id": "ICSA-26-043-02",
-      "title": "Siemens Polarion",
-      "date": "2026-02-10",
-      "summary": "Polarion before V2506 contains a vulnerability that could allow authenticated remote attackers to conduct cross-site scripting attacks.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
-      "sectors": [
-        "Energy",
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40587"
-      ],
-      "cvss_max": 7.6,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "Polarion V2404",
-          "version": "vers:intdot/<2404.5",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Polarion V2410",
-          "version": "vers:intdot/<2410.2",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-02"
-    },
-    {
       "advisory_id": "ICSA-26-043-04",
       "title": "Siemens Desigo CC Product Family and SENTRON Powermanager",
       "date": "2026-02-10",
@@ -14352,37 +14442,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-041-01"
     },
     {
-      "advisory_id": "ICSA-26-036-04",
-      "title": "Ilevia EVE X1 Server",
-      "date": "2026-02-05",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary shell commands and the disclosure of sensitive system information.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-34185",
-        "CVE-2025-34184",
-        "CVE-2025-34183",
-        "CVE-2025-34186",
-        "CVE-2025-34187",
-        "CVE-2025-34517",
-        "CVE-2025-34518",
-        "CVE-2025-34512",
-        "CVE-2025-34513"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Ilevia",
-          "product": "EVE X1",
-          "version": "<=4.7.18.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-04"
-    },
-    {
       "advisory_id": "ICSA-26-125-02",
       "title": "ABB B&R PVI",
       "date": "2026-01-29",
@@ -14715,64 +14774,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-043-06"
-    },
-    {
-      "advisory_id": "ICSA-26-036-05",
-      "title": "Hitachi Energy XMC20",
-      "date": "2026-01-27",
-      "summary": "Hitachi Energy is aware of a vulnerability that affects XMC20 product versions listed in this document. Successful exploitation of this vulnerability can lead to forgery attacks potentially causing impact on confidentiality, integrity and availability for the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation. Note: This is applicable only if XMC20 devices are configured to use remote RADIUS authentication.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2024-3596"
-      ],
-      "cvss_max": 9,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Hitachi Energy",
-          "product": "XMC20",
-          "version": "R18",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Hitachi Energy",
-          "product": "XMC20",
-          "version": "vers:XMC20/<=R17A",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-05"
-    },
-    {
-      "advisory_id": "ICSA-26-036-06",
-      "title": "Hitachi Energy FOX61x",
-      "date": "2026-01-27",
-      "summary": "Hitachi Energy is aware of a vulnerability that affects FOX61x product versions listed in this document. Successful exploitation of this vulnerability can lead to forgery attacks potentially causing impact on confidentiality, integrity and availability for the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation. Note: This is applicable only if FOX61x devices are configured to use remote RADIUS authentication.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2024-3596"
-      ],
-      "cvss_max": 9,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Hitachi Energy",
-          "product": "FOX61x",
-          "version": "R18",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Hitachi Energy",
-          "product": "FOX61x",
-          "version": "vers:FOX61x/<=R17A",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-036-06"
     },
     {
       "advisory_id": "ICSA-26-043-09",

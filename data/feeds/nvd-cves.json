@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-06-25T09:46:40.372Z",
+  "pulled_at": "2026-06-27T08:49:27.313Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82614,6 +82614,66 @@
       "published": "2026-06-09T10:16:44.410",
       "last_modified": "2026-06-17T10:53:53.617",
       "fetched_at": "2026-06-25T09:45:48.535Z"
+    },
+    "CVE-2026-9716": {
+      "cve_id": "CVE-2026-9716",
+      "description": "CWE-476 NULL Pointer Dereference vulnerability exists that could cause a denial-of-service condition, rendering the device’s HMI and configuration functionality unavailable when malformed requests are received over exposed network interfaces.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-476"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-03.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-25T16:16:44.107",
+      "last_modified": "2026-06-25T19:10:00.050",
+      "fetched_at": "2026-06-27T08:49:01.049Z"
+    },
+    "CVE-2026-9717": {
+      "cve_id": "CVE-2026-9717",
+      "description": "CWE-78 Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability exists that could allow unauthorized execution of commands with elevated privileges, impacting system integrity, confidentiality, and availability when a privileged authenticated user interacts with a vulnerable network-exposed service.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-78"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-03.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-25T16:16:44.220",
+      "last_modified": "2026-06-25T19:10:00.050",
+      "fetched_at": "2026-06-27T08:49:07.631Z"
+    },
+    "CVE-2026-9718": {
+      "cve_id": "CVE-2026-9718",
+      "description": "CWE-617 Reachable Assertion vulnerability exists that could allow an authenticated attacker to trigger a denial-of-service condition, impacting system availability when a specially crafted request is sent to a vulnerable network-exposed service.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-617"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-03.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-25T16:16:44.330",
+      "last_modified": "2026-06-25T19:10:00.050",
+      "fetched_at": "2026-06-27T08:49:14.200Z"
     }
   }
 }
