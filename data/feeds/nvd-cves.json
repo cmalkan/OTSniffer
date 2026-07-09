@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-07T10:00:18.348Z",
+  "pulled_at": "2026-07-09T10:09:55.826Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -83096,6 +83096,3262 @@
       "published": "2026-05-13T18:16:14.693",
       "last_modified": "2026-06-17T10:10:40.483",
       "fetched_at": "2026-07-03T09:36:59.694Z"
+    },
+    "CVE-2026-48192": {
+      "cve_id": "CVE-2026-48192",
+      "description": "A vulnerability has been identified in Mendix Studio Pro 10.11 (All versions), Mendix Studio Pro 10.12 (All versions), Mendix Studio Pro 10.13 (All versions), Mendix Studio Pro 10.14 (All versions), Mendix Studio Pro 10.15 (All versions), Mendix Studio Pro 10.16 (All versions), Mendix Studio Pro 10.17 (All versions), Mendix Studio Pro 10.18 (All versions), Mendix Studio Pro 10.19 (All versions), Mendix Studio Pro 10.20 (All versions), Mendix Studio Pro 10.21 (All versions), Mendix Studio Pro 10.22 (All versions), Mendix Studio Pro 10.23 (All versions), Mendix Studio Pro 10.24 (All versions < V10.24.21), Mendix Studio Pro 11.0 (All versions), Mendix Studio Pro 11.1 (All versions), Mendix Studio Pro 11.10 (All versions), Mendix Studio Pro 11.11 (All versions), Mendix Studio Pro 11.2 (All versions), Mendix Studio Pro 11.3 (All versions), Mendix Studio Pro 11.4 (All versions), Mendix Studio Pro 11.5 (All versions), Mendix Studio Pro 11.6 (All versions < V11.6.7), Mendix Studio Pro 11.7 (All versions), Mendix Studio Pro 11.8 (All versions), Mendix Studio Pro 11.9 (All versions). Affected versions of Mendix Studio Pro do not properly validate or sanitize project files processed during the build pipeline.\r\nThis could allow an attacker who tricks a user into opening and running a specially crafted malicious project locally on their system to execute arbitrary code in the context of that user.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.4,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:C/C:N/I:H/A:N",
+      "cwes": [
+        "CWE-94"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-779310.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-30T15:16:56.990",
+      "last_modified": "2026-07-02T17:55:50.060",
+      "fetched_at": "2026-07-09T10:02:06.252Z"
+    },
+    "CVE-2025-1352": {
+      "cve_id": "CVE-2025-1352",
+      "description": "A vulnerability has been found in GNU elfutils 0.192 and classified as critical. This vulnerability affects the function __libdw_thread_tail in the library libdw_alloc.c of the component eu-readelf. The manipulation of the argument w leads to memory corruption. The attack can be initiated remotely. The complexity of an attack is rather high. The exploitation appears to be difficult. The exploit has been disclosed to the public and may be used. The name of the patch is 2636426a091bd6c6f7f02e49ab20d4cdc6bfc753. It is recommended to apply a patch to fix this issue.",
+      "cvss_version": "3.1",
+      "cvss_score": 5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
+      "cwes": [
+        "CWE-119"
+      ],
+      "references": [
+        {
+          "url": "https://sourceware.org/bugzilla/attachment.cgi?id=15923",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=32650",
+          "tags": [
+            "Exploit",
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=32650#c2",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?ctiid.295960",
+          "tags": [
+            "Permissions Required",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?id.295960",
+          "tags": [
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?submit.495965",
+          "tags": [
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://www.gnu.org/",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-02-16T15:15:09.133",
+      "last_modified": "2026-06-17T08:38:57.857",
+      "fetched_at": "2026-07-09T10:02:13.037Z"
+    },
+    "CVE-2025-1376": {
+      "cve_id": "CVE-2025-1376",
+      "description": "A vulnerability classified as problematic was found in GNU elfutils 0.192. This vulnerability affects the function elf_strptr in the library /libelf/elf_strptr.c of the component eu-strip. The manipulation leads to denial of service. It is possible to launch the attack on the local host. The complexity of an attack is rather high. The exploitation appears to be difficult. The exploit has been disclosed to the public and may be used. The name of the patch is b16f441cca0a4841050e3215a9f120a6d8aea918. It is recommended to apply a patch to fix this issue.",
+      "cvss_version": "3.1",
+      "cvss_score": 2.5,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-404"
+      ],
+      "references": [
+        {
+          "url": "https://sourceware.org/bugzilla/attachment.cgi?id=15940",
+          "tags": [
+            "Exploit"
+          ]
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=32672",
+          "tags": [
+            "Exploit",
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://sourceware.org/bugzilla/show_bug.cgi?id=32672#c3",
+          "tags": [
+            "Exploit",
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?ctiid.295984",
+          "tags": [
+            "Permissions Required",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?id.295984",
+          "tags": [
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?submit.497538",
+          "tags": [
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://www.gnu.org/",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-02-17T05:15:09.807",
+      "last_modified": "2026-06-17T08:39:00.957",
+      "fetched_at": "2026-07-09T10:02:20.198Z"
+    },
+    "CVE-2025-6170": {
+      "cve_id": "CVE-2025-6170",
+      "description": "A flaw was found in the interactive shell of the xmllint command-line tool, used for parsing XML files. When a user inputs an overly long command, the program does not check the input size properly, which can cause it to crash. This issue might allow attackers to run harmful code in rare configurations without modern protections.",
+      "cvss_version": "3.1",
+      "cvss_score": 2.5,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-121"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:36734",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:7519",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2025-6170",
+          "tags": [
+            "Mitigation",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2372952",
+          "tags": [
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://gitlab.gnome.org/GNOME/libxml2/-/issues/941",
+          "tags": []
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/07/msg00014.html",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-06-16T16:15:20.430",
+      "last_modified": "2026-07-08T15:16:24.850",
+      "fetched_at": "2026-07-09T10:02:26.814Z"
+    },
+    "CVE-2025-7039": {
+      "cve_id": "CVE-2025-7039",
+      "description": "A flaw was found in glib. An integer overflow during temporary file creation leads to an out-of-bounds memory access, allowing an attacker to potentially perform path traversal or access private temporary file content by creating symbolic links. This vulnerability allows a local attacker to manipulate file paths and access unauthorized data. The core issue stems from insufficient validation of file path lengths during temporary file operations.",
+      "cvss_version": "3.1",
+      "cvss_score": 3.7,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2025-7039",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2392423",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-09-03T02:15:38.120",
+      "last_modified": "2026-06-17T10:04:08.797",
+      "fetched_at": "2026-07-09T10:02:33.441Z"
+    },
+    "CVE-2025-8732": {
+      "cve_id": "CVE-2025-8732",
+      "description": "A vulnerability was found in libxml2 up to 2.14.5. It has been declared as problematic. This vulnerability affects the function xmlParseSGMLCatalog of the component xmlcatalog. The manipulation leads to uncontrolled recursion. Attacking locally is a requirement. The exploit has been disclosed to the public and may be used. The real existence of this vulnerability is still doubted at the moment. The code maintainer explains, that \"[t]he issue can only be triggered with untrusted SGML catalogs and it makes absolutely no sense to use untrusted catalogs. I also doubt that anyone is still using SGML catalogs at all.\"",
+      "cvss_version": "3.1",
+      "cvss_score": 3.3,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-404",
+        "CWE-674"
+      ],
+      "references": [
+        {
+          "url": "https://drive.google.com/file/d/1woIeYVcSQB_NwfEhaVnX6MedpWJ_nqWl/view?usp=drive_link",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "https://gitlab.gnome.org/GNOME/libxml2/-/issues/958",
+          "tags": [
+            "Exploit",
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://gitlab.gnome.org/GNOME/libxml2/-/issues/958#note_2505853",
+          "tags": [
+            "Exploit",
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?ctiid.319228",
+          "tags": [
+            "Permissions Required",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?id.319228",
+          "tags": [
+            "Permissions Required",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://vuldb.com/?submit.622285",
+          "tags": [
+            "Permissions Required",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2025-08-08T17:15:30.583",
+      "last_modified": "2026-07-01T15:25:19.593",
+      "fetched_at": "2026-07-09T10:02:40.474Z"
+    },
+    "CVE-2025-10966": {
+      "cve_id": "CVE-2025-10966",
+      "description": "curl's code for managing SSH connections when SFTP was done using the wolfSSH\npowered backend was flawed and missed host verification mechanisms.\n\nThis prevents curl from detecting MITM attackers and more.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://curl.se/docs/CVE-2025-10966.html",
+          "tags": [
+            "Patch",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://curl.se/docs/CVE-2025-10966.json",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://hackerone.com/reports/3355218",
+          "tags": [
+            "Exploit",
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2025/11/05/2",
+          "tags": [
+            "Mailing List",
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-11-07T08:15:39.617",
+      "last_modified": "2026-06-17T08:29:21.997",
+      "fetched_at": "2026-07-09T10:02:47.855Z"
+    },
+    "CVE-2025-13465": {
+      "cve_id": "CVE-2025-13465",
+      "description": "Lodash versions 4.0.0 through 4.17.22 are vulnerable to prototype pollution in the _.unset and _.omit functions. An attacker can pass crafted paths which cause Lodash to delete methods from global prototypes.\n\nThe issue permits deletion of properties but does not allow overwriting their original behavior.\n\nThis issue is patched on 4.17.23",
+      "cvss_version": "3.1",
+      "cvss_score": 5.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "cwes": [
+        "CWE-1321",
+        "CWE-1321"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/lodash/lodash/security/advisories/GHSA-xxjr-mmjv-4gpg",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11414",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13542",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13548",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13829",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:14774",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:14870",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:14871",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-21T20:16:05.250",
+      "last_modified": "2026-07-03T13:16:53.737",
+      "fetched_at": "2026-07-09T10:02:55.092Z"
+    },
+    "CVE-2025-13601": {
+      "cve_id": "CVE-2025-13601",
+      "description": "A heap-based buffer overflow problem was found in glib through an incorrect calculation of buffer size in the g_escape_uri_string() function. If the string to escape contains a very large number of unacceptable characters (which would need escaping), the calculation of the length of the escaped string could overflow, leading to a potential write off the end of the newly allocated string.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.7,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+      "cwes": [
+        "CWE-190"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:0936",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:0975",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:0991",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:1323",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:1324",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:1326",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:1327",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:1465",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2025-11-26T15:15:51.723",
+      "last_modified": "2026-06-30T00:16:52.320",
+      "fetched_at": "2026-07-09T10:03:02.169Z"
+    },
+    "CVE-2025-39913": {
+      "cve_id": "CVE-2025-39913",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ntcp_bpf: Call sk_msg_free() when tcp_bpf_send_verdict() fails to allocate psock->cork.\n\nsyzbot reported the splat below. [0]\n\nThe repro does the following:\n\n  1. Load a sk_msg prog that calls bpf_msg_cork_bytes(msg, cork_bytes)\n  2. Attach the prog to a SOCKMAP\n  3. Add a socket to the SOCKMAP\n  4. Activate fault injection\n  5. Send data less than cork_bytes\n\nAt 5., the data is carried over to the next sendmsg() as it is\nsmaller than the cork_bytes specified by bpf_msg_cork_bytes().\n\nThen, tcp_bpf_send_verdict() tries to allocate psock->cork to hold\nthe data, but this fails silently due to fault injection + __GFP_NOWARN.\n\nIf the allocation fails, we need to revert the sk->sk_forward_alloc\nchange done by sk_msg_alloc().\n\nLet's call sk_msg_free() when tcp_bpf_send_verdict fails to allocate\npsock->cork.\n\nThe \"*copied\" also needs to be updated such that a proper error can\nbe returned to the caller, sendmsg. It fails to allocate psock->cork.\nNothing has been corked so far, so this patch simply sets \"*copied\"\nto 0.\n\n[0]:\nWARNING: net/ipv4/af_inet.c:156 at inet_sock_destruct+0x623/0x730 net/ipv4/af_inet.c:156, CPU#1: syz-executor/5983\nModules linked in:\nCPU: 1 UID: 0 PID: 5983 Comm: syz-executor Not tainted syzkaller #0 PREEMPT(full)\nHardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 07/12/2025\nRIP: 0010:inet_sock_destruct+0x623/0x730 net/ipv4/af_inet.c:156\nCode: 0f 0b 90 e9 62 fe ff ff e8 7a db b5 f7 90 0f 0b 90 e9 95 fe ff ff e8 6c db b5 f7 90 0f 0b 90 e9 bb fe ff ff e8 5e db b5 f7 90 <0f> 0b 90 e9 e1 fe ff ff 89 f9 80 e1 07 80 c1 03 38 c1 0f 8c 9f fc\nRSP: 0018:ffffc90000a08b48 EFLAGS: 00010246\nRAX: ffffffff8a09d0b2 RBX: dffffc0000000000 RCX: ffff888024a23c80\nRDX: 0000000000000100 RSI: 0000000000000fff RDI: 0000000000000000\nRBP: 0000000000000fff R08: ffff88807e07c627 R09: 1ffff1100fc0f8c4\nR10: dffffc0000000000 R11: ffffed100fc0f8c5 R12: ffff88807e07c380\nR13: dffffc0000000000 R14: ffff88807e07c60c R15: 1ffff1100fc0f872\nFS:  00005555604c4500(0000) GS:ffff888125af1000(0000) knlGS:0000000000000000\nCS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\nCR2: 00005555604df5c8 CR3: 0000000032b06000 CR4: 00000000003526f0\nCall Trace:\n <IRQ>\n __sk_destruct+0x86/0x660 net/core/sock.c:2339\n rcu_do_batch kernel/rcu/tree.c:2605 [inline]\n rcu_core+0xca8/0x1770 kernel/rcu/tree.c:2861\n handle_softirqs+0x286/0x870 kernel/softirq.c:579\n __do_softirq kernel/softirq.c:613 [inline]\n invoke_softirq kernel/softirq.c:453 [inline]\n __irq_exit_rcu+0xca/0x1f0 kernel/softirq.c:680\n irq_exit_rcu+0x9/0x30 kernel/softirq.c:696\n instr_sysvec_apic_timer_interrupt arch/x86/kernel/apic/apic.c:1052 [inline]\n sysvec_apic_timer_interrupt+0xa6/0xc0 arch/x86/kernel/apic/apic.c:1052\n </IRQ>",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/05366527f44cf4b884f3d9462ae8009be9665856",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/08f58d10f5abf11d297cc910754922498c921f91",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/539920180c55f5e13a2488a2339f94e6b8cb69e0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/66bcb04a441fbf15d66834b7e3eefb313dd750c8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/7429b8b9bfbc276fd304fbaebc405f46b421fedf",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9c2a6456bdf9794474460d885c359b6c4522d6e3",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a3967baad4d533dc254c31e0d221e51c8d223d58",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/de89e58368f8f07df005ecc1c86ad94898a999f2",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2025-10-01T08:15:34.390",
+      "last_modified": "2026-06-17T09:18:48.907",
+      "fetched_at": "2026-07-09T10:03:09.222Z"
+    },
+    "CVE-2025-40214": {
+      "cve_id": "CVE-2025-40214",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\naf_unix: Initialise scc_index in unix_add_edge().\n\nQuang Le reported that the AF_UNIX GC could garbage-collect a\nreceive queue of an alive in-flight socket, with a nice repro.\n\nThe repro consists of three stages.\n\n  1)\n    1-a. Create a single cyclic reference with many sockets\n    1-b. close() all sockets\n    1-c. Trigger GC\n\n  2)\n    2-a. Pass sk-A to an embryo sk-B\n    2-b. Pass sk-X to sk-X\n    2-c. Trigger GC\n\n  3)\n    3-a. accept() the embryo sk-B\n    3-b. Pass sk-B to sk-C\n    3-c. close() the in-flight sk-A\n    3-d. Trigger GC\n\nAs of 2-c, sk-A and sk-X are linked to unix_unvisited_vertices,\nand unix_walk_scc() groups them into two different SCCs:\n\n  unix_sk(sk-A)->vertex->scc_index = 2 (UNIX_VERTEX_INDEX_START)\n  unix_sk(sk-X)->vertex->scc_index = 3\n\nOnce GC completes, unix_graph_grouped is set to true.\nAlso, unix_graph_maybe_cyclic is set to true due to sk-X's\ncyclic self-reference, which makes close() trigger GC.\n\nAt 3-b, unix_add_edge() allocates unix_sk(sk-B)->vertex and\nlinks it to unix_unvisited_vertices.\n\nunix_update_graph() is called at 3-a. and 3-b., but neither\nunix_graph_grouped nor unix_graph_maybe_cyclic is changed\nbecause both sk-B's listener and sk-C are not in-flight.\n\n3-c decrements sk-A's file refcnt to 1.\n\nSince unix_graph_grouped is true at 3-d, unix_walk_scc_fast()\nis finally called and iterates 3 sockets sk-A, sk-B, and sk-X:\n\n  sk-A -> sk-B (-> sk-C)\n  sk-X -> sk-X\n\nThis is totally fine.  All of them are not yet close()d and\nshould be grouped into different SCCs.\n\nHowever, unix_vertex_dead() misjudges that sk-A and sk-B are\nin the same SCC and sk-A is dead.\n\n  unix_sk(sk-A)->scc_index == unix_sk(sk-B)->scc_index <-- Wrong!\n  &&\n  sk-A's file refcnt == unix_sk(sk-A)->vertex->out_degree\n                                       ^-- 1 in-flight count for sk-B\n  -> sk-A is dead !?\n\nThe problem is that unix_add_edge() does not initialise scc_index.\n\nStage 1) is used for heap spraying, making a newly allocated\nvertex have vertex->scc_index == 2 (UNIX_VERTEX_INDEX_START)\nset by unix_walk_scc() at 1-c.\n\nLet's track the max SCC index from the previous unix_walk_scc()\ncall and assign the max + 1 to a new vertex's scc_index.\n\nThis way, we can continue to avoid Tarjan's algorithm while\npreventing misjudgments.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1aa7e40ee850c9053e769957ce6541173891204d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/20003fbb9174121b27bd1da6ebe61542ac4c327d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4cd8d755c7d4f515dd9abf483316aca2f1b7b0f3",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/60e6489f8e3b086bd1130ad4450a2c112e863791",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/db81ad20fd8aef7cc7d536c52ee5ea4c1f979128",
+          "tags": []
+        },
+        {
+          "url": "https://mohandacherir.github.io/Qdiv7/posts/unix_new_gc/",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T13:15:48.157",
+      "last_modified": "2026-06-17T09:21:28.187",
+      "fetched_at": "2026-07-09T10:03:16.097Z"
+    },
+    "CVE-2025-40248": {
+      "cve_id": "CVE-2025-40248",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nvsock: Ignore signal/timeout on connect() if already established\n\nDuring connect(), acting on a signal/timeout by disconnecting an already\nestablished socket leads to several issues:\n\n1. connect() invoking vsock_transport_cancel_pkt() ->\n   virtio_transport_purge_skbs() may race with sendmsg() invoking\n   virtio_transport_get_credit(). This results in a permanently elevated\n   `vvs->bytes_unsent`. Which, in turn, confuses the SOCK_LINGER handling.\n\n2. connect() resetting a connected socket's state may race with socket\n   being placed in a sockmap. A disconnected socket remaining in a sockmap\n   breaks sockmap's assumptions. And gives rise to WARNs.\n\n3. connect() transitioning SS_CONNECTED -> SS_UNCONNECTED allows for a\n   transport change/drop after TCP_ESTABLISHED. Which poses a problem for\n   any simultaneous sendmsg() or connect() and may result in a\n   use-after-free/null-ptr-deref.\n\nDo not disconnect socket on signal/timeout. Keep the logic for unconnected\nsockets: they don't linger, can't be placed in a sockmap, are rejected by\nsendmsg().\n\n[1]: https://lore.kernel.org/netdev/e07fd95c-9a38-4eea-9638-133e38c2ec9b@rbox.co/\n[2]: https://lore.kernel.org/netdev/20250317-vsock-trans-signal-race-v4-0-fc8837f3f1d4@rbox.co/\n[3]: https://lore.kernel.org/netdev/60f1b7db-3099-4f6a-875e-af9f6ef194f6@rbox.co/",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/002541ef650b742a198e4be363881439bb9d86b4",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3f71753935d648082a8279a97d30efe6b85be680",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/5998da5a8208ae9ad7838ba322bccb2bdcd95e81",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/67432915145848658149683101104e32f9fd6559",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ab6b19f690d89ae4709fba73a3c4a7911f495b7a",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/da664101fb4a0de5cb70d2bae6a650df954df2af",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/eeca93f06df89be5a36305b7b9dae1ed65550dfc",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f1c170cae285e4b8f61be043bb17addc3d0a14b5",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:18.240",
+      "last_modified": "2026-06-17T09:21:31.573",
+      "fetched_at": "2026-07-09T10:03:23.773Z"
+    },
+    "CVE-2025-40250": {
+      "cve_id": "CVE-2025-40250",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/mlx5: Clean up only new IRQ glue on request_irq() failure\n\nThe mlx5_irq_alloc() function can inadvertently free the entire rmap\nand end up in a crash[1] when the other threads tries to access this,\nwhen request_irq() fails due to exhausted IRQ vectors. This commit\nmodifies the cleanup to remove only the specific IRQ mapping that was\njust added.\n\nThis prevents removal of other valid mappings and ensures precise\ncleanup of the failed IRQ allocation's associated glue object.\n\nNote: This error is observed when both fwctl and rds configs are enabled.\n\n[1]\nmlx5_core 0000:05:00.0: Successfully registered panic handler for port 1\nmlx5_core 0000:05:00.0: mlx5_irq_alloc:293:(pid 66740): Failed to\nrequest irq. err = -28\ninfiniband mlx5_0: mlx5_ib_test_wc:290:(pid 66740): Error -28 while\ntrying to test write-combining support\nmlx5_core 0000:05:00.0: Successfully unregistered panic handler for port 1\nmlx5_core 0000:06:00.0: Successfully registered panic handler for port 1\nmlx5_core 0000:06:00.0: mlx5_irq_alloc:293:(pid 66740): Failed to\nrequest irq. err = -28\ninfiniband mlx5_0: mlx5_ib_test_wc:290:(pid 66740): Error -28 while\ntrying to test write-combining support\nmlx5_core 0000:06:00.0: Successfully unregistered panic handler for port 1\nmlx5_core 0000:03:00.0: mlx5_irq_alloc:293:(pid 28895): Failed to\nrequest irq. err = -28\nmlx5_core 0000:05:00.0: mlx5_irq_alloc:293:(pid 28895): Failed to\nrequest irq. err = -28\ngeneral protection fault, probably for non-canonical address\n0xe277a58fde16f291: 0000 [#1] SMP NOPTI\n\nRIP: 0010:free_irq_cpu_rmap+0x23/0x7d\nCall Trace:\n   <TASK>\n   ? show_trace_log_lvl+0x1d6/0x2f9\n   ? show_trace_log_lvl+0x1d6/0x2f9\n   ? mlx5_irq_alloc.cold+0x5d/0xf3 [mlx5_core]\n   ? __die_body.cold+0x8/0xa\n   ? die_addr+0x39/0x53\n   ? exc_general_protection+0x1c4/0x3e9\n   ? dev_vprintk_emit+0x5f/0x90\n   ? asm_exc_general_protection+0x22/0x27\n   ? free_irq_cpu_rmap+0x23/0x7d\n   mlx5_irq_alloc.cold+0x5d/0xf3 [mlx5_core]\n   irq_pool_request_vector+0x7d/0x90 [mlx5_core]\n   mlx5_irq_request+0x2e/0xe0 [mlx5_core]\n   mlx5_irq_request_vector+0xad/0xf7 [mlx5_core]\n   comp_irq_request_pci+0x64/0xf0 [mlx5_core]\n   create_comp_eq+0x71/0x385 [mlx5_core]\n   ? mlx5e_open_xdpsq+0x11c/0x230 [mlx5_core]\n   mlx5_comp_eqn_get+0x72/0x90 [mlx5_core]\n   ? xas_load+0x8/0x91\n   mlx5_comp_irqn_get+0x40/0x90 [mlx5_core]\n   mlx5e_open_channel+0x7d/0x3c7 [mlx5_core]\n   mlx5e_open_channels+0xad/0x250 [mlx5_core]\n   mlx5e_open_locked+0x3e/0x110 [mlx5_core]\n   mlx5e_open+0x23/0x70 [mlx5_core]\n   __dev_open+0xf1/0x1a5\n   __dev_change_flags+0x1e1/0x249\n   dev_change_flags+0x21/0x5c\n   do_setlink+0x28b/0xcc4\n   ? __nla_parse+0x22/0x3d\n   ? inet6_validate_link_af+0x6b/0x108\n   ? cpumask_next+0x1f/0x35\n   ? __snmp6_fill_stats64.constprop.0+0x66/0x107\n   ? __nla_validate_parse+0x48/0x1e6\n   __rtnl_newlink+0x5ff/0xa57\n   ? kmem_cache_alloc_trace+0x164/0x2ce\n   rtnl_newlink+0x44/0x6e\n   rtnetlink_rcv_msg+0x2bb/0x362\n   ? __netlink_sendskb+0x4c/0x6c\n   ? netlink_unicast+0x28f/0x2ce\n   ? rtnl_calcit.isra.0+0x150/0x146\n   netlink_rcv_skb+0x5f/0x112\n   netlink_unicast+0x213/0x2ce\n   netlink_sendmsg+0x24f/0x4d9\n   __sock_sendmsg+0x65/0x6a\n   ____sys_sendmsg+0x28f/0x2c9\n   ? import_iovec+0x17/0x2b\n   ___sys_sendmsg+0x97/0xe0\n   __sys_sendmsg+0x81/0xd8\n   do_syscall_64+0x35/0x87\n   entry_SYSCALL_64_after_hwframe+0x6e/0x0\nRIP: 0033:0x7fc328603727\nCode: c3 66 90 41 54 41 89 d4 55 48 89 f5 53 89 fb 48 83 ec 10 e8 0b ed\nff ff 44 89 e2 48 89 ee 89 df 41 89 c0 b8 2e 00 00 00 0f 05 <48> 3d 00\nf0 ff ff 77 35 44 89 c7 48 89 44 24 08 e8 44 ed ff ff 48\nRSP: 002b:00007ffe8eb3f1a0 EFLAGS: 00000293 ORIG_RAX: 000000000000002e\nRAX: ffffffffffffffda RBX: 000000000000000d RCX: 00007fc328603727\nRDX: 0000000000000000 RSI: 00007ffe8eb3f1f0 RDI: 000000000000000d\nRBP: 00007ffe8eb3f1f0 R08: 0000000000000000 R09: 0000000000000000\nR10: 0000000000000000 R11: 0000000000000293 R12: 0000000000000000\nR13: 00000000000\n---truncated---",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/4d6b4bea8b80bfa13c903ba547538249e7c5e977",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/69e043bce09c9a77e5f55b9ac7505874a2a1a9f0",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6ebd02cf2dde11b86f89ea4c9f55179eab30d4ee",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d47515af6cccd7484d8b0870376858c9848a18ec",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:18.527",
+      "last_modified": "2026-06-17T09:21:31.790",
+      "fetched_at": "2026-07-09T10:03:30.391Z"
+    },
+    "CVE-2025-40251": {
+      "cve_id": "CVE-2025-40251",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndevlink: rate: Unset parent pointer in devl_rate_nodes_destroy\n\nThe function devl_rate_nodes_destroy is documented to \"Unset parent for\nall rate objects\". However, it was only calling the driver-specific\n`rate_leaf_parent_set` or `rate_node_parent_set` ops and decrementing\nthe parent's refcount, without actually setting the\n`devlink_rate->parent` pointer to NULL.\n\nThis leaves a dangling pointer in the `devlink_rate` struct, which cause\nrefcount error in netdevsim[1] and mlx5[2]. In addition, this is\ninconsistent with the behavior of `devlink_nl_rate_parent_node_set`,\nwhere the parent pointer is correctly cleared.\n\nThis patch fixes the issue by explicitly setting `devlink_rate->parent`\nto NULL after notifying the driver, thus fulfilling the function's\ndocumented behavior for all rate objects.\n\n[1]\nrepro steps:\necho 1 > /sys/bus/netdevsim/new_device\ndevlink dev eswitch set netdevsim/netdevsim1 mode switchdev\necho 1 > /sys/bus/netdevsim/devices/netdevsim1/sriov_numvfs\ndevlink port function rate add netdevsim/netdevsim1/test_node\ndevlink port function rate set netdevsim/netdevsim1/128 parent test_node\necho 1 > /sys/bus/netdevsim/del_device\n\ndmesg:\nrefcount_t: decrement hit 0; leaking memory.\nWARNING: CPU: 8 PID: 1530 at lib/refcount.c:31 refcount_warn_saturate+0x42/0xe0\nCPU: 8 UID: 0 PID: 1530 Comm: bash Not tainted 6.18.0-rc4+ #1 NONE\nHardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS rel-1.16.0-0-gd239552ce722-prebuilt.qemu.org 04/01/2014\nRIP: 0010:refcount_warn_saturate+0x42/0xe0\nCall Trace:\n <TASK>\n devl_rate_leaf_destroy+0x8d/0x90\n __nsim_dev_port_del+0x6c/0x70 [netdevsim]\n nsim_dev_reload_destroy+0x11c/0x140 [netdevsim]\n nsim_drv_remove+0x2b/0xb0 [netdevsim]\n device_release_driver_internal+0x194/0x1f0\n bus_remove_device+0xc6/0x130\n device_del+0x159/0x3c0\n device_unregister+0x1a/0x60\n del_device_store+0x111/0x170 [netdevsim]\n kernfs_fop_write_iter+0x12e/0x1e0\n vfs_write+0x215/0x3d0\n ksys_write+0x5f/0xd0\n do_syscall_64+0x55/0x10f0\n entry_SYSCALL_64_after_hwframe+0x4b/0x53\n\n[2]\ndevlink dev eswitch set pci/0000:08:00.0 mode switchdev\ndevlink port add pci/0000:08:00.0 flavour pcisf pfnum 0 sfnum 1000\ndevlink port function rate add pci/0000:08:00.0/group1\ndevlink port function rate set pci/0000:08:00.0/32768 parent group1\nmodprobe -r mlx5_ib mlx5_fwctl mlx5_core\n\ndmesg:\nrefcount_t: decrement hit 0; leaking memory.\nWARNING: CPU: 7 PID: 16151 at lib/refcount.c:31 refcount_warn_saturate+0x42/0xe0\nCPU: 7 UID: 0 PID: 16151 Comm: bash Not tainted 6.17.0-rc7_for_upstream_min_debug_2025_10_02_12_44 #1 NONE\nHardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS rel-1.16.3-0-ga6ed6b701f0a-prebuilt.qemu.org 04/01/2014\nRIP: 0010:refcount_warn_saturate+0x42/0xe0\nCall Trace:\n <TASK>\n devl_rate_leaf_destroy+0x8d/0x90\n mlx5_esw_offloads_devlink_port_unregister+0x33/0x60 [mlx5_core]\n mlx5_esw_offloads_unload_rep+0x3f/0x50 [mlx5_core]\n mlx5_eswitch_unload_sf_vport+0x40/0x90 [mlx5_core]\n mlx5_sf_esw_event+0xc4/0x120 [mlx5_core]\n notifier_call_chain+0x33/0xa0\n blocking_notifier_call_chain+0x3b/0x50\n mlx5_eswitch_disable_locked+0x50/0x110 [mlx5_core]\n mlx5_eswitch_disable+0x63/0x90 [mlx5_core]\n mlx5_unload+0x1d/0x170 [mlx5_core]\n mlx5_uninit_one+0xa2/0x130 [mlx5_core]\n remove_one+0x78/0xd0 [mlx5_core]\n pci_device_remove+0x39/0xa0\n device_release_driver_internal+0x194/0x1f0\n unbind_store+0x99/0xa0\n kernfs_fop_write_iter+0x12e/0x1e0\n vfs_write+0x215/0x3d0\n ksys_write+0x5f/0xd0\n do_syscall_64+0x53/0x1f0\n entry_SYSCALL_64_after_hwframe+0x4b/0x53",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-476"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/542f45486f1ce2d2dde75bd85aca0389ef7046c3",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/715d9cda646a8a38ea8b2bb5afb679a7464055e2",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/90e51e20bcec9bff5b2421ce1bd95704764655f5",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c70df6c17d389cc743f0eb30160e2d6bc6910db8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f94c1a114ac209977bdf5ca841b98424295ab1f0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:18.663",
+      "last_modified": "2026-06-17T09:21:31.917",
+      "fetched_at": "2026-07-09T10:03:37.563Z"
+    },
+    "CVE-2025-40252": {
+      "cve_id": "CVE-2025-40252",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: qlogic/qede: fix potential out-of-bounds read in qede_tpa_cont() and qede_tpa_end()\n\nThe loops in 'qede_tpa_cont()' and 'qede_tpa_end()', iterate\nover 'cqe->len_list[]' using only a zero-length terminator as\nthe stopping condition. If the terminator was missing or\nmalformed, the loop could run past the end of the fixed-size array.\n\nAdd an explicit bound check using ARRAY_SIZE() in both loops to prevent\na potential out-of-bounds access.\n\nFound by Linux Verification Center (linuxtesting.org) with SVACE.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/896f1a2493b59beb2b5ccdf990503dbb16cb2256",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/917a9d02182ac8b4f25eb47dc02f3ec679608c24",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a778912b4a53587ea07d85526d152f85d109cbfe",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e441db07f208184e0466abf44b389a81d70c340e",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ecbb12caf399d7cf364b7553ed5aebeaa2f255bc",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f0923011c1261b33a2ac1de349256d39cb750dd0",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:18.807",
+      "last_modified": "2026-06-17T09:21:32.070",
+      "fetched_at": "2026-07-09T10:03:44.697Z"
+    },
+    "CVE-2025-40254": {
+      "cve_id": "CVE-2025-40254",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: openvswitch: remove never-working support for setting nsh fields\n\nThe validation of the set(nsh(...)) action is completely wrong.\nIt runs through the nsh_key_put_from_nlattr() function that is the\nsame function that validates NSH keys for the flow match and the\npush_nsh() action.  However, the set(nsh(...)) has a very different\nmemory layout.  Nested attributes in there are doubled in size in\ncase of the masked set().  That makes proper validation impossible.\n\nThere is also confusion in the code between the 'masked' flag, that\nsays that the nested attributes are doubled in size containing both\nthe value and the mask, and the 'is_mask' that says that the value\nwe're parsing is the mask.  This is causing kernel crash on trying to\nwrite into mask part of the match with SW_FLOW_KEY_PUT() during\nvalidation, while validate_nsh() doesn't allocate any memory for it:\n\n  BUG: kernel NULL pointer dereference, address: 0000000000000018\n  #PF: supervisor read access in kernel mode\n  #PF: error_code(0x0000) - not-present page\n  PGD 1c2383067 P4D 1c2383067 PUD 20b703067 PMD 0\n  Oops: Oops: 0000 [#1] SMP NOPTI\n  CPU: 8 UID: 0 Kdump: loaded Not tainted 6.17.0-rc4+ #107 PREEMPT(voluntary)\n  RIP: 0010:nsh_key_put_from_nlattr+0x19d/0x610 [openvswitch]\n  Call Trace:\n   <TASK>\n   validate_nsh+0x60/0x90 [openvswitch]\n   validate_set.constprop.0+0x270/0x3c0 [openvswitch]\n   __ovs_nla_copy_actions+0x477/0x860 [openvswitch]\n   ovs_nla_copy_actions+0x8d/0x100 [openvswitch]\n   ovs_packet_cmd_execute+0x1cc/0x310 [openvswitch]\n   genl_family_rcv_msg_doit+0xdb/0x130\n   genl_family_rcv_msg+0x14b/0x220\n   genl_rcv_msg+0x47/0xa0\n   netlink_rcv_skb+0x53/0x100\n   genl_rcv+0x24/0x40\n   netlink_unicast+0x280/0x3b0\n   netlink_sendmsg+0x1f7/0x430\n   ____sys_sendmsg+0x36b/0x3a0\n   ___sys_sendmsg+0x87/0xd0\n   __sys_sendmsg+0x6d/0xd0\n   do_syscall_64+0x7b/0x2c0\n   entry_SYSCALL_64_after_hwframe+0x76/0x7e\n\nThe third issue with this process is that while trying to convert\nthe non-masked set into masked one, validate_set() copies and doubles\nthe size of the OVS_KEY_ATTR_NSH as if it didn't have any nested\nattributes.  It should be copying each nested attribute and doubling\nthem in size independently.  And the process must be properly reversed\nduring the conversion back from masked to a non-masked variant during\nthe flow dump.\n\nIn the end, the only two outcomes of trying to use this action are\neither validation failure or a kernel crash.  And if somehow someone\nmanages to install a flow with such an action, it will most definitely\nnot do what it is supposed to, since all the keys and the masks are\nmixed up.\n\nFixing all the issues is a complex task as it requires re-writing\nmost of the validation code.\n\nGiven that and the fact that this functionality never worked since\nintroduction, let's just remove it altogether.  It's better to\nre-introduce it later with a proper implementation instead of trying\nto fix it in stable releases.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0b903f33c31c82b1c3591279fd8a23893802b987",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3415faa1fcb4150f29a72c5ecf959339d797feb7",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3d2e7d3b28469081ccf08301df07cc411a1cc5e9",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4689ba45296dbb3a47e70a1bc2ed0328263e48f3",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/87d2429381ddcf8cbd30c8c36793a4f7916d5f99",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9c61d8fe1350b7322f4953318165d6719c3b1475",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/dfe28c4167a9259fc0c372d9f9473e1ac95cff67",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f95bef5ba0b88d971b02c776f24bd17544930a3a",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:19.080",
+      "last_modified": "2026-06-17T09:21:32.290",
+      "fetched_at": "2026-07-09T10:03:51.551Z"
+    },
+    "CVE-2025-40257": {
+      "cve_id": "CVE-2025-40257",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmptcp: fix a race in mptcp_pm_del_add_timer()\n\nmptcp_pm_del_add_timer() can call sk_stop_timer_sync(sk, &entry->add_timer)\nwhile another might have free entry already, as reported by syzbot.\n\nAdd RCU protection to fix this issue.\n\nAlso change confusing add_timer variable with stop_timer boolean.\n\nsyzbot report:\n\nBUG: KASAN: slab-use-after-free in __timer_delete_sync+0x372/0x3f0 kernel/time/timer.c:1616\nRead of size 4 at addr ffff8880311e4150 by task kworker/1:1/44\n\nCPU: 1 UID: 0 PID: 44 Comm: kworker/1:1 Not tainted syzkaller #0 PREEMPT_{RT,(full)}\nHardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 10/02/2025\nWorkqueue: events mptcp_worker\nCall Trace:\n <TASK>\n  dump_stack_lvl+0x189/0x250 lib/dump_stack.c:120\n  print_address_description mm/kasan/report.c:378 [inline]\n  print_report+0xca/0x240 mm/kasan/report.c:482\n  kasan_report+0x118/0x150 mm/kasan/report.c:595\n  __timer_delete_sync+0x372/0x3f0 kernel/time/timer.c:1616\n  sk_stop_timer_sync+0x1b/0x90 net/core/sock.c:3631\n  mptcp_pm_del_add_timer+0x283/0x310 net/mptcp/pm.c:362\n  mptcp_incoming_options+0x1357/0x1f60 net/mptcp/options.c:1174\n  tcp_data_queue+0xca/0x6450 net/ipv4/tcp_input.c:5361\n  tcp_rcv_established+0x1335/0x2670 net/ipv4/tcp_input.c:6441\n  tcp_v4_do_rcv+0x98b/0xbf0 net/ipv4/tcp_ipv4.c:1931\n  tcp_v4_rcv+0x252a/0x2dc0 net/ipv4/tcp_ipv4.c:2374\n  ip_protocol_deliver_rcu+0x221/0x440 net/ipv4/ip_input.c:205\n  ip_local_deliver_finish+0x3bb/0x6f0 net/ipv4/ip_input.c:239\n  NF_HOOK+0x30c/0x3a0 include/linux/netfilter.h:318\n  NF_HOOK+0x30c/0x3a0 include/linux/netfilter.h:318\n  __netif_receive_skb_one_core net/core/dev.c:6079 [inline]\n  __netif_receive_skb+0x143/0x380 net/core/dev.c:6192\n  process_backlog+0x31e/0x900 net/core/dev.c:6544\n  __napi_poll+0xb6/0x540 net/core/dev.c:7594\n  napi_poll net/core/dev.c:7657 [inline]\n  net_rx_action+0x5f7/0xda0 net/core/dev.c:7784\n  handle_softirqs+0x22f/0x710 kernel/softirq.c:622\n  __do_softirq kernel/softirq.c:656 [inline]\n  __local_bh_enable_ip+0x1a0/0x2e0 kernel/softirq.c:302\n  mptcp_pm_send_ack net/mptcp/pm.c:210 [inline]\n mptcp_pm_addr_send_ack+0x41f/0x500 net/mptcp/pm.c:-1\n  mptcp_pm_worker+0x174/0x320 net/mptcp/pm.c:1002\n  mptcp_worker+0xd5/0x1170 net/mptcp/protocol.c:2762\n  process_one_work kernel/workqueue.c:3263 [inline]\n  process_scheduled_works+0xae1/0x17b0 kernel/workqueue.c:3346\n  worker_thread+0x8a0/0xda0 kernel/workqueue.c:3427\n  kthread+0x711/0x8a0 kernel/kthread.c:463\n  ret_from_fork+0x4bc/0x870 arch/x86/kernel/process.c:158\n  ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:245\n </TASK>\n\nAllocated by task 44:\n  kasan_save_stack mm/kasan/common.c:56 [inline]\n  kasan_save_track+0x3e/0x80 mm/kasan/common.c:77\n  poison_kmalloc_redzone mm/kasan/common.c:400 [inline]\n  __kasan_kmalloc+0x93/0xb0 mm/kasan/common.c:417\n  kasan_kmalloc include/linux/kasan.h:262 [inline]\n  __kmalloc_cache_noprof+0x1ef/0x6c0 mm/slub.c:5748\n  kmalloc_noprof include/linux/slab.h:957 [inline]\n  mptcp_pm_alloc_anno_list+0x104/0x460 net/mptcp/pm.c:385\n  mptcp_pm_create_subflow_or_signal_addr+0xf9d/0x1360 net/mptcp/pm_kernel.c:355\n  mptcp_pm_nl_fully_established net/mptcp/pm_kernel.c:409 [inline]\n  __mptcp_pm_kernel_worker+0x417/0x1ef0 net/mptcp/pm_kernel.c:1529\n  mptcp_pm_worker+0x1ee/0x320 net/mptcp/pm.c:1008\n  mptcp_worker+0xd5/0x1170 net/mptcp/protocol.c:2762\n  process_one_work kernel/workqueue.c:3263 [inline]\n  process_scheduled_works+0xae1/0x17b0 kernel/workqueue.c:3346\n  worker_thread+0x8a0/0xda0 kernel/workqueue.c:3427\n  kthread+0x711/0x8a0 kernel/kthread.c:463\n  ret_from_fork+0x4bc/0x870 arch/x86/kernel/process.c:158\n  ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:245\n\nFreed by task 6630:\n  kasan_save_stack mm/kasan/common.c:56 [inline]\n  kasan_save_track+0x3e/0x80 mm/kasan/common.c:77\n  __kasan_save_free_info+0x46/0x50 mm/kasan/generic.c:587\n  kasan_save_free_info mm/kasan/kasan.h:406 [inline]\n  poison_slab_object m\n---truncated---",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/385ddc0f008f24d1e7d03be998b3a98a37bd29ff",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/426358d9be7ce3518966422f87b96f1bad27295f",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6d3275d4ca62e2c02e1b7e8cd32db59df91c14b7",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9be29f8e7ce4e147e56caac2c3a0ce3573cf9c17",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/bbbd75346c8e6490b19c2ba90f38ea66ccf352b2",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c602cc344b4b8d41515fec3ffa98457ac963ee12",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e2d1ad207174a7cd7903dd27a00db4b2dfa6c64b",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:19.503",
+      "last_modified": "2026-06-17T09:21:32.620",
+      "fetched_at": "2026-07-09T10:03:58.174Z"
+    },
+    "CVE-2025-40258": {
+      "cve_id": "CVE-2025-40258",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmptcp: fix race condition in mptcp_schedule_work()\n\nsyzbot reported use-after-free in mptcp_schedule_work() [1]\n\nIssue here is that mptcp_schedule_work() schedules a work,\nthen gets a refcount on sk->sk_refcnt if the work was scheduled.\nThis refcount will be released by mptcp_worker().\n\n[A] if (schedule_work(...)) {\n[B]     sock_hold(sk);\n        return true;\n    }\n\nProblem is that mptcp_worker() can run immediately and complete before [B]\n\nWe need instead :\n\n    sock_hold(sk);\n    if (schedule_work(...))\n        return true;\n    sock_put(sk);\n\n[1]\nrefcount_t: addition on 0; use-after-free.\n WARNING: CPU: 1 PID: 29 at lib/refcount.c:25 refcount_warn_saturate+0xfa/0x1d0 lib/refcount.c:25\nCall Trace:\n <TASK>\n __refcount_add include/linux/refcount.h:-1 [inline]\n  __refcount_inc include/linux/refcount.h:366 [inline]\n  refcount_inc include/linux/refcount.h:383 [inline]\n  sock_hold include/net/sock.h:816 [inline]\n  mptcp_schedule_work+0x164/0x1a0 net/mptcp/protocol.c:943\n  mptcp_tout_timer+0x21/0xa0 net/mptcp/protocol.c:2316\n  call_timer_fn+0x17e/0x5f0 kernel/time/timer.c:1747\n  expire_timers kernel/time/timer.c:1798 [inline]\n  __run_timers kernel/time/timer.c:2372 [inline]\n  __run_timer_base+0x648/0x970 kernel/time/timer.c:2384\n  run_timer_base kernel/time/timer.c:2393 [inline]\n  run_timer_softirq+0xb7/0x180 kernel/time/timer.c:2403\n  handle_softirqs+0x22f/0x710 kernel/softirq.c:622\n  __do_softirq kernel/softirq.c:656 [inline]\n  run_ktimerd+0xcf/0x190 kernel/softirq.c:1138\n  smpboot_thread_fn+0x542/0xa60 kernel/smpboot.c:160\n  kthread+0x711/0x8a0 kernel/kthread.c:463\n  ret_from_fork+0x4bc/0x870 arch/x86/kernel/process.c:158\n  ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:245",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/035bca3f017ee9dea3a5a756e77a6f7138cc6eea",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3fc7723ed01d1130d4bf7063c50e0af60ecccbb4",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8f9ba1a99a89feef9b5867c15a0141a97e893309",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/99908e2d601236842d705d5fd04fb349577316f5",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ac28dfddedf6f209190950fc71bcff65ec4ab47b",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/db4f7968a75250ca6c4ed70d0a78beabb2dcee18",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f865e6595acf33083168db76921e66ace8bf0e5b",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:19.640",
+      "last_modified": "2026-06-17T09:21:32.757",
+      "fetched_at": "2026-07-09T10:04:05.007Z"
+    },
+    "CVE-2025-40261": {
+      "cve_id": "CVE-2025-40261",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnvme: nvme-fc: Ensure ->ioerr_work is cancelled in nvme_fc_delete_ctrl()\n\nnvme_fc_delete_assocation() waits for pending I/O to complete before\nreturning, and an error can cause ->ioerr_work to be queued after\ncancel_work_sync() had been called.  Move the call to cancel_work_sync() to\nbe after nvme_fc_delete_association() to ensure ->ioerr_work is not running\nwhen the nvme_fc_ctrl object is freed.  Otherwise the following can occur:\n\n[ 1135.911754] list_del corruption, ff2d24c8093f31f8->next is NULL\n[ 1135.917705] ------------[ cut here ]------------\n[ 1135.922336] kernel BUG at lib/list_debug.c:52!\n[ 1135.926784] Oops: invalid opcode: 0000 [#1] SMP NOPTI\n[ 1135.931851] CPU: 48 UID: 0 PID: 726 Comm: kworker/u449:23 Kdump: loaded Not tainted 6.12.0 #1 PREEMPT(voluntary)\n[ 1135.943490] Hardware name: Dell Inc. PowerEdge R660/0HGTK9, BIOS 2.5.4 01/16/2025\n[ 1135.950969] Workqueue:  0x0 (nvme-wq)\n[ 1135.954673] RIP: 0010:__list_del_entry_valid_or_report.cold+0xf/0x6f\n[ 1135.961041] Code: c7 c7 98 68 72 94 e8 26 45 fe ff 0f 0b 48 c7 c7 70 68 72 94 e8 18 45 fe ff 0f 0b 48 89 fe 48 c7 c7 80 69 72 94 e8 07 45 fe ff <0f> 0b 48 89 d1 48 c7 c7 a0 6a 72 94 48 89 c2 e8 f3 44 fe ff 0f 0b\n[ 1135.979788] RSP: 0018:ff579b19482d3e50 EFLAGS: 00010046\n[ 1135.985015] RAX: 0000000000000033 RBX: ff2d24c8093f31f0 RCX: 0000000000000000\n[ 1135.992148] RDX: 0000000000000000 RSI: ff2d24d6bfa1d0c0 RDI: ff2d24d6bfa1d0c0\n[ 1135.999278] RBP: ff2d24c8093f31f8 R08: 0000000000000000 R09: ffffffff951e2b08\n[ 1136.006413] R10: ffffffff95122ac8 R11: 0000000000000003 R12: ff2d24c78697c100\n[ 1136.013546] R13: fffffffffffffff8 R14: 0000000000000000 R15: ff2d24c78697c0c0\n[ 1136.020677] FS:  0000000000000000(0000) GS:ff2d24d6bfa00000(0000) knlGS:0000000000000000\n[ 1136.028765] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\n[ 1136.034510] CR2: 00007fd207f90b80 CR3: 000000163ea22003 CR4: 0000000000f73ef0\n[ 1136.041641] DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000\n[ 1136.048776] DR3: 0000000000000000 DR6: 00000000fffe07f0 DR7: 0000000000000400\n[ 1136.055910] PKRU: 55555554\n[ 1136.058623] Call Trace:\n[ 1136.061074]  <TASK>\n[ 1136.063179]  ? show_trace_log_lvl+0x1b0/0x2f0\n[ 1136.067540]  ? show_trace_log_lvl+0x1b0/0x2f0\n[ 1136.071898]  ? move_linked_works+0x4a/0xa0\n[ 1136.075998]  ? __list_del_entry_valid_or_report.cold+0xf/0x6f\n[ 1136.081744]  ? __die_body.cold+0x8/0x12\n[ 1136.085584]  ? die+0x2e/0x50\n[ 1136.088469]  ? do_trap+0xca/0x110\n[ 1136.091789]  ? do_error_trap+0x65/0x80\n[ 1136.095543]  ? __list_del_entry_valid_or_report.cold+0xf/0x6f\n[ 1136.101289]  ? exc_invalid_op+0x50/0x70\n[ 1136.105127]  ? __list_del_entry_valid_or_report.cold+0xf/0x6f\n[ 1136.110874]  ? asm_exc_invalid_op+0x1a/0x20\n[ 1136.115059]  ? __list_del_entry_valid_or_report.cold+0xf/0x6f\n[ 1136.120806]  move_linked_works+0x4a/0xa0\n[ 1136.124733]  worker_thread+0x216/0x3a0\n[ 1136.128485]  ? __pfx_worker_thread+0x10/0x10\n[ 1136.132758]  kthread+0xfa/0x240\n[ 1136.135904]  ? __pfx_kthread+0x10/0x10\n[ 1136.139657]  ret_from_fork+0x31/0x50\n[ 1136.143236]  ? __pfx_kthread+0x10/0x10\n[ 1136.146988]  ret_from_fork_asm+0x1a/0x30\n[ 1136.150915]  </TASK>",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0a2c5495b6d1ecb0fa18ef6631450f391a888256",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/33f64600a12055219bda38b55320c62cdeda9167",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3f48cd7f35da07fc067cef926bb7f6f4735de37b",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/48ae433c6cc6985f647b1b37d8bb002972cf9bdb",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9610a2c162ef729a3988213a4604376e492f6f44",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a9b1315ed428239612601e9e188329e7cefa32fd",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/fbd5741a556eaaa63d0908132ca79d335b58b1cd",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:20.053",
+      "last_modified": "2026-06-17T09:21:33.087",
+      "fetched_at": "2026-07-09T10:04:11.630Z"
+    },
+    "CVE-2025-40262": {
+      "cve_id": "CVE-2025-40262",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nInput: imx_sc_key - fix memory corruption on unload\n\nThis is supposed to be \"priv\" but we accidentally pass \"&priv\" which is\nan address in the stack and so it will lead to memory corruption when\nthe imx_sc_key_action() function is called.  Remove the &.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/3e96803b169dc948847f0fc2bae729a80914eb7b",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4ce5218b101205b3425099fe3df88a61b58f9cc2",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/56881294915a6e866d31a46f9bcb5e19167cfbaa",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6524a15d33951b18ac408ebbcb9c16e14e21c336",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a155292c3ce722036014da5477ee0e4c87b5e6b3",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ca9a08de9b294422376f47ade323d69590dbc6f2",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d83f1512758f4ef6fc5e83219fe7eeeb6b428ea4",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:20.200",
+      "last_modified": "2026-06-17T09:21:33.220",
+      "fetched_at": "2026-07-09T10:04:18.255Z"
+    },
+    "CVE-2025-40263": {
+      "cve_id": "CVE-2025-40263",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nInput: cros_ec_keyb - fix an invalid memory access\n\nIf cros_ec_keyb_register_matrix() isn't called (due to\n`buttons_switches_only`) in cros_ec_keyb_probe(), `ckdev->idev` remains\nNULL.  An invalid memory access is observed in cros_ec_keyb_process()\nwhen receiving an EC_MKBP_EVENT_KEY_MATRIX event in cros_ec_keyb_work()\nin such case.\n\n  Unable to handle kernel read from unreadable memory at virtual address 0000000000000028\n  ...\n  x3 : 0000000000000000 x2 : 0000000000000000\n  x1 : 0000000000000000 x0 : 0000000000000000\n  Call trace:\n  input_event\n  cros_ec_keyb_work\n  blocking_notifier_call_chain\n  ec_irq_thread\n\nIt's still unknown about why the kernel receives such malformed event,\nin any cases, the kernel shouldn't access `ckdev->idev` and friends if\nthe driver doesn't intend to initialize them.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/2d251c15c27e2dd16d6318425d2f7260cbd47d39",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6d81068685154535af06163eb585d6d9663ec7ec",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9cf59f4724a9ee06ebb06c76b8678ac322e850b7",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d74864291cb8bd784d44d1d02e87109cf88666bb",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e08969c4d65ac31297fcb4d31d4808c789152f68",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:20.340",
+      "last_modified": "2026-06-17T09:21:33.327",
+      "fetched_at": "2026-07-09T10:04:24.909Z"
+    },
+    "CVE-2025-40264": {
+      "cve_id": "CVE-2025-40264",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nbe2net: pass wrb_params in case of OS2BMC\n\nbe_insert_vlan_in_pkt() is called with the wrb_params argument being NULL\nat be_send_pkt_to_bmc() call site.  This may lead to dereferencing a NULL\npointer when processing a workaround for specific packet, as commit\nbc0c3405abbb (\"be2net: fix a Tx stall bug caused by a specific ipv6\npacket\") states.\n\nThe correct way would be to pass the wrb_params from be_xmit().",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/012ee5882b1830db469194466a210768ed207388",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1ecd86ec6efddb59a10c927e8e679f183bb9113e",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/48d59b60dd5d7e4c48c077a2008c9dcd7b59bdfe",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4c4741f6e7f2fa4e1486cb61e1c15b9236ec134d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/630360c6724e27f1aa494ba3fffe1e38c4205284",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/7d277a7a58578dd62fd546ddaef459ec24ccae36",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ce0a3699244aca3acb659f143c9cb1327b210f89",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f499dfa5c98e92e72dd454eb95a1000a448f3405",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-04T16:16:20.510",
+      "last_modified": "2026-06-17T09:21:33.433",
+      "fetched_at": "2026-07-09T10:04:31.745Z"
+    },
+    "CVE-2025-40271": {
+      "cve_id": "CVE-2025-40271",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/proc: fix uaf in proc_readdir_de()\n\nPde is erased from subdir rbtree through rb_erase(), but not set the node\nto EMPTY, which may result in uaf access.  We should use RB_CLEAR_NODE()\nset the erased node to EMPTY, then pde_subdir_next() will return NULL to\navoid uaf access.\n\nWe found an uaf issue while using stress-ng testing, need to run testcase\ngetdent and tun in the same time.  The steps of the issue is as follows:\n\n1) use getdent to traverse dir /proc/pid/net/dev_snmp6/, and current\n   pde is tun3;\n\n2) in the [time windows] unregister netdevice tun3 and tun2, and erase\n   them from rbtree.  erase tun3 first, and then erase tun2.  the\n   pde(tun2) will be released to slab;\n\n3) continue to getdent process, then pde_subdir_next() will return\n   pde(tun2) which is released, it will case uaf access.\n\nCPU 0                                      |    CPU 1\n-------------------------------------------------------------------------\ntraverse dir /proc/pid/net/dev_snmp6/      |   unregister_netdevice(tun->dev)   //tun3 tun2\nsys_getdents64()                           |\n  iterate_dir()                            |\n    proc_readdir()                         |\n      proc_readdir_de()                    |     snmp6_unregister_dev()\n        pde_get(de);                       |       proc_remove()\n        read_unlock(&proc_subdir_lock);    |         remove_proc_subtree()\n                                           |           write_lock(&proc_subdir_lock);\n        [time window]                      |           rb_erase(&root->subdir_node, &parent->subdir);\n                                           |           write_unlock(&proc_subdir_lock);\n        read_lock(&proc_subdir_lock);      |\n        next = pde_subdir_next(de);        |\n        pde_put(de);                       |\n        de = next;    //UAF                |\n\nrbtree of dev_snmp6\n                        |\n                    pde(tun3)\n                     /    \\\n                  NULL  pde(tun2)",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/03de7ff197a3d0e17d0d5c58fdac99a63cba8110",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1d1596d68a6f11d28f677eedf6cf5b17dbfeb491",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4cba73c4c89219beef7685a47374bf88b1022369",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/623bb26127fb581a741e880e1e1a47d79aecb6f8",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/67272c11f379d9aa5e0f6b16286b9d89b3f76046",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6f2482745e510ae1dacc9b090194b9c5f918d774",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/895b4c0c79b092d732544011c3cecaf7322c36a1",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c81d0385500446efe48c305bbb83d47f2ae23a50",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-06T22:15:54.737",
+      "last_modified": "2026-06-17T09:21:34.150",
+      "fetched_at": "2026-07-09T10:04:38.670Z"
+    },
+    "CVE-2025-40278": {
+      "cve_id": "CVE-2025-40278",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: sched: act_ife: initialize struct tc_ife to fix KMSAN kernel-infoleak\n\nFix a KMSAN kernel-infoleak detected  by the syzbot .\n\n[net?] KMSAN: kernel-infoleak in __skb_datagram_iter\n\nIn tcf_ife_dump(), the variable 'opt' was partially initialized using a\ndesignatied initializer. While the padding bytes are reamined\nuninitialized. nla_put() copies the entire structure into a\nnetlink message, these uninitialized bytes leaked to userspace.\n\nInitialize the structure with memset before assigning its fields\nto ensure all members and padding are cleared prior to beign copied.\n\nThis change silences the KMSAN report and prevents potential information\nleaks from the kernel memory.\n\nThis fix has been tested and validated by syzbot. This patch closes the\nbug reported at the following syzkaller link and ensures no infoleak.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/2191662058443e0bcc28d11694293d8339af6dde",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/37f0680887c5aeba9a433fe04b35169010568bb1",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/5e3644ef147bf7140259dfa4cace680c9b26fe8b",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/918e063304f945fb93be9bb70cacea07d0b730ea",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a676a296af65d33725bdf7396803180957dbd92e",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c8f51dad94cbb88054e2aacc272b3ce1ed11fb1e",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ce50039be49eea9b4cd8873ca6eccded1b4a130a",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d1dbbbe839647486c9b893e5011fe84a052962df",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-06T22:15:55.700",
+      "last_modified": "2026-06-17T09:21:34.933",
+      "fetched_at": "2026-07-09T10:04:45.369Z"
+    },
+    "CVE-2025-40280": {
+      "cve_id": "CVE-2025-40280",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ntipc: Fix use-after-free in tipc_mon_reinit_self().\n\nsyzbot reported use-after-free of tipc_net(net)->monitors[]\nin tipc_mon_reinit_self(). [0]\n\nThe array is protected by RTNL, but tipc_mon_reinit_self()\niterates over it without RTNL.\n\ntipc_mon_reinit_self() is called from tipc_net_finalize(),\nwhich is always under RTNL except for tipc_net_finalize_work().\n\nLet's hold RTNL in tipc_net_finalize_work().\n\n[0]:\nBUG: KASAN: slab-use-after-free in __raw_spin_lock_irqsave include/linux/spinlock_api_smp.h:110 [inline]\nBUG: KASAN: slab-use-after-free in _raw_spin_lock_irqsave+0xa7/0xf0 kernel/locking/spinlock.c:162\nRead of size 1 at addr ffff88805eae1030 by task kworker/0:7/5989\n\nCPU: 0 UID: 0 PID: 5989 Comm: kworker/0:7 Not tainted syzkaller #0 PREEMPT_{RT,(full)}\nHardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 08/18/2025\nWorkqueue: events tipc_net_finalize_work\nCall Trace:\n <TASK>\n dump_stack_lvl+0x189/0x250 lib/dump_stack.c:120\n print_address_description mm/kasan/report.c:378 [inline]\n print_report+0xca/0x240 mm/kasan/report.c:482\n kasan_report+0x118/0x150 mm/kasan/report.c:595\n __kasan_check_byte+0x2a/0x40 mm/kasan/common.c:568\n kasan_check_byte include/linux/kasan.h:399 [inline]\n lock_acquire+0x8d/0x360 kernel/locking/lockdep.c:5842\n __raw_spin_lock_irqsave include/linux/spinlock_api_smp.h:110 [inline]\n _raw_spin_lock_irqsave+0xa7/0xf0 kernel/locking/spinlock.c:162\n rtlock_slowlock kernel/locking/rtmutex.c:1894 [inline]\n rwbase_rtmutex_lock_state kernel/locking/spinlock_rt.c:160 [inline]\n rwbase_write_lock+0xd3/0x7e0 kernel/locking/rwbase_rt.c:244\n rt_write_lock+0x76/0x110 kernel/locking/spinlock_rt.c:243\n write_lock_bh include/linux/rwlock_rt.h:99 [inline]\n tipc_mon_reinit_self+0x79/0x430 net/tipc/monitor.c:718\n tipc_net_finalize+0x115/0x190 net/tipc/net.c:140\n process_one_work kernel/workqueue.c:3236 [inline]\n process_scheduled_works+0xade/0x17b0 kernel/workqueue.c:3319\n worker_thread+0x8a0/0xda0 kernel/workqueue.c:3400\n kthread+0x70e/0x8a0 kernel/kthread.c:463\n ret_from_fork+0x439/0x7d0 arch/x86/kernel/process.c:148\n ret_from_fork_asm+0x1a/0x30 arch/x86/entry/entry_64.S:245\n </TASK>\n\nAllocated by task 6089:\n kasan_save_stack mm/kasan/common.c:47 [inline]\n kasan_save_track+0x3e/0x80 mm/kasan/common.c:68\n poison_kmalloc_redzone mm/kasan/common.c:388 [inline]\n __kasan_kmalloc+0x93/0xb0 mm/kasan/common.c:405\n kasan_kmalloc include/linux/kasan.h:260 [inline]\n __kmalloc_cache_noprof+0x1a8/0x320 mm/slub.c:4407\n kmalloc_noprof include/linux/slab.h:905 [inline]\n kzalloc_noprof include/linux/slab.h:1039 [inline]\n tipc_mon_create+0xc3/0x4d0 net/tipc/monitor.c:657\n tipc_enable_bearer net/tipc/bearer.c:357 [inline]\n __tipc_nl_bearer_enable+0xe16/0x13f0 net/tipc/bearer.c:1047\n __tipc_nl_compat_doit net/tipc/netlink_compat.c:371 [inline]\n tipc_nl_compat_doit+0x3bc/0x5f0 net/tipc/netlink_compat.c:393\n tipc_nl_compat_handle net/tipc/netlink_compat.c:-1 [inline]\n tipc_nl_compat_recv+0x83c/0xbe0 net/tipc/netlink_compat.c:1321\n genl_family_rcv_msg_doit+0x215/0x300 net/netlink/genetlink.c:1115\n genl_family_rcv_msg net/netlink/genetlink.c:1195 [inline]\n genl_rcv_msg+0x60e/0x790 net/netlink/genetlink.c:1210\n netlink_rcv_skb+0x208/0x470 net/netlink/af_netlink.c:2552\n genl_rcv+0x28/0x40 net/netlink/genetlink.c:1219\n netlink_unicast_kernel net/netlink/af_netlink.c:1320 [inline]\n netlink_unicast+0x846/0xa10 net/netlink/af_netlink.c:1346\n netlink_sendmsg+0x805/0xb30 net/netlink/af_netlink.c:1896\n sock_sendmsg_nosec net/socket.c:714 [inline]\n __sock_sendmsg+0x21c/0x270 net/socket.c:729\n ____sys_sendmsg+0x508/0x820 net/socket.c:2614\n ___sys_sendmsg+0x21f/0x2a0 net/socket.c:2668\n __sys_sendmsg net/socket.c:2700 [inline]\n __do_sys_sendmsg net/socket.c:2705 [inline]\n __se_sys_sendmsg net/socket.c:2703 [inline]\n __x64_sys_sendmsg+0x1a1/0x260 net/socket.c:2703\n do_syscall_x64 arch/x86/entry/syscall_64.c:63 [inline]\n do_syscall_64+0xfa/0x3b0 arch/\n---truncated---",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0725e6afb55128be21a2ca36e9674f573ccec173",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/499b5fa78d525c4450ebb76db83207db71efea77",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/51b8f0ab888f8aa5dfac954918864eeda8c12c19",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/5f541300b02ef8b2af34f6f7d41ce617f3571e88",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b2e77c789c234e7fe49057d2ced8f32e2d2c7901",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c92dbf85627b5c29e52d9c120a24e785801716df",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f0104977fed25ebe001fd63dab2b6b7fefad3373",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/fdf7c4c9af4f246323ce854e84b6aec198d49f7e",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-06T22:15:55.973",
+      "last_modified": "2026-06-17T09:21:35.140",
+      "fetched_at": "2026-07-09T10:04:52.255Z"
+    },
+    "CVE-2025-40281": {
+      "cve_id": "CVE-2025-40281",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsctp: prevent possible shift-out-of-bounds in sctp_transport_update_rto\n\nsyzbot reported a possible shift-out-of-bounds [1]\n\nBlamed commit added rto_alpha_max and rto_beta_max set to 1000.\n\nIt is unclear if some sctp users are setting very large rto_alpha\nand/or rto_beta.\n\nIn order to prevent user regression, perform the test at run time.\n\nAlso add READ_ONCE() annotations as sysctl values can change under us.\n\n[1]\n\nUBSAN: shift-out-of-bounds in net/sctp/transport.c:509:41\nshift exponent 64 is too large for 32-bit type 'unsigned int'\nCPU: 0 UID: 0 PID: 16704 Comm: syz.2.2320 Not tainted syzkaller #0 PREEMPT(full)\nHardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 10/02/2025\nCall Trace:\n <TASK>\n  __dump_stack lib/dump_stack.c:94 [inline]\n  dump_stack_lvl+0x16c/0x1f0 lib/dump_stack.c:120\n  ubsan_epilogue lib/ubsan.c:233 [inline]\n  __ubsan_handle_shift_out_of_bounds+0x27f/0x420 lib/ubsan.c:494\n  sctp_transport_update_rto.cold+0x1c/0x34b net/sctp/transport.c:509\n  sctp_check_transmitted+0x11c4/0x1c30 net/sctp/outqueue.c:1502\n  sctp_outq_sack+0x4ef/0x1b20 net/sctp/outqueue.c:1338\n  sctp_cmd_process_sack net/sctp/sm_sideeffect.c:840 [inline]\n  sctp_cmd_interpreter net/sctp/sm_sideeffect.c:1372 [inline]",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0e0413e3315199b23ff4aec295e256034cd0a6e4",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1534ff77757e44bcc4b98d0196bc5c0052fce5fa",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1cfa4eac275cc4875755c1303d48a4ddfe507ca8",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/834e65be429c0fa4f9bb5945064bd57f18ed2187",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/aaba523dd7b6106526c24b1fd9b5fc35e5aaa88d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/abb086b9a95d0ed3b757ee59964ba3c4e4b2fc1a",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d0d858652834dcf531342c82a0428170aa7c2675",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ed71f801249d2350c77a73dca2c03918a15a62fe",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-06T22:15:56.113",
+      "last_modified": "2026-06-17T09:21:35.297",
+      "fetched_at": "2026-07-09T10:04:58.861Z"
+    },
+    "CVE-2025-40345": {
+      "cve_id": "CVE-2025-40345",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nusb: storage: sddr55: Reject out-of-bound new_pba\n\nDiscovered by Atuin - Automated Vulnerability Discovery Engine.\n\nnew_pba comes from the status packet returned after each write.\nA bogus device could report values beyond the block count derived\nfrom info->capacity, letting the driver walk off the end of\npba_to_lba[] and corrupt heap memory.\n\nReject PBAs that exceed the computed block count and fail the\ntransfer so we avoid touching out-of-range mapping entries.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/04a8a6393f3f2f471e05eacca33282dd30b01432",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/26e9b5da3231da7dc357b363883b5b7b51a64092",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/5ebe8d479aaf4f41ac35e6955332304193c646f6",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a20f1dd19d21dcb70140ea5a71b1f8cbe0c7e68f",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/aa64e0e17e3a5991a25e6a46007770c629039869",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b59d4fda7e7d0aff1043a7f742487cb829f5aac1",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d00a6c04a502cd52425dbf35588732c652b16490",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-12-12T18:15:39.253",
+      "last_modified": "2026-06-17T09:21:41.530",
+      "fetched_at": "2026-07-09T10:05:05.477Z"
+    },
+    "CVE-2025-46394": {
+      "cve_id": "CVE-2025-46394",
+      "description": "In tar in BusyBox through 1.37.0, a TAR archive can have filenames hidden from a listing through the use of terminal escape sequences.",
+      "cvss_version": "3.1",
+      "cvss_score": 3.2,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N",
+      "cwes": [
+        "CWE-451"
+      ],
+      "references": [
+        {
+          "url": "https://bugs.busybox.net/show_bug.cgi?id=16018",
+          "tags": [
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://www.busybox.net",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://www.busybox.net/downloads/",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2025/04/23/5",
+          "tags": [
+            "Mailing List"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2025/04/24/3",
+          "tags": [
+            "Mailing List"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-04-23T16:15:48.713",
+      "last_modified": "2026-06-17T09:26:20.320",
+      "fetched_at": "2026-07-09T10:05:12.575Z"
+    },
+    "CVE-2025-49795": {
+      "cve_id": "CVE-2025-49795",
+      "description": "A NULL pointer dereference vulnerability was found in libxml2 when processing XPath XML expressions. This flaw allows an attacker to craft a malicious XML input to libxml2, leading to a denial of service.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-825"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:10630",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:19020",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:7519",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2025-49795",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2372379",
+          "tags": []
+        },
+        {
+          "url": "https://gitlab.gnome.org/GNOME/libxml2/-/issues/932",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-06-16T16:15:19.203",
+      "last_modified": "2026-07-07T13:16:28.003",
+      "fetched_at": "2026-07-09T10:05:19.199Z"
+    },
+    "CVE-2025-60876": {
+      "cve_id": "CVE-2025-60876",
+      "description": "BusyBox wget thru 1.3.7 accepted raw CR (0x0D)/LF (0x0A) and other C0 control bytes in the HTTP request-target (path/query), allowing the request line to be split and attacker-controlled headers to be injected. To preserve the HTTP/1.1 request-line shape METHOD SP request-target SP HTTP/1.1, a raw space (0x20) in the request-target must also be rejected (clients should use %20).",
+      "cvss_version": "3.1",
+      "cvss_score": 6.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+      "cwes": [
+        "CWE-284"
+      ],
+      "references": [
+        {
+          "url": "https://gist.github.com/subyumatest/41554af6a72aedaacaec026adc311092",
+          "tags": [
+            "Exploit",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://lists.busybox.net/pipermail/busybox/attachments/20250823/ccdc96ef/attachment-0001.htm",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://lists.busybox.net/pipermail/busybox/attachments/20250828/e7f90492/attachment.htm",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-11-10T20:15:48.683",
+      "last_modified": "2026-06-17T09:50:10.330",
+      "fetched_at": "2026-07-09T10:05:25.816Z"
+    },
+    "CVE-2025-69720": {
+      "cve_id": "CVE-2025-69720",
+      "description": "The infocmp command-line tool in ncurses before 6.5-20251213 has a stack-based buffer overflow in analyze_string in progs/infocmp.c.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.3,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
+      "cwes": [
+        "CWE-121",
+        "CWE-120"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/Cao-Wuhui/CVE-2025-69720",
+          "tags": [
+            "Exploit",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://invisible-island.net/archives/ncurses/6.5/",
+          "tags": [
+            "Release Notes"
+          ]
+        },
+        {
+          "url": "https://invisible-island.net/ncurses/",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://marc.info/?l=ncurses-bug&m=176539968328570&w=2",
+          "tags": [
+            "Issue Tracking",
+            "Mailing List",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://marc.info/?l=ncurses-bug&m=176540731801330&w=2",
+          "tags": [
+            "Issue Tracking",
+            "Mailing List",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://marc.info/?l=ncurses-bug&m=176545557728083&w=2",
+          "tags": [
+            "Issue Tracking",
+            "Mailing List",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-03-19T15:16:21.293",
+      "last_modified": "2026-06-17T10:00:50.423",
+      "fetched_at": "2026-07-09T10:05:32.802Z"
+    },
+    "CVE-2025-71185": {
+      "cve_id": "CVE-2025-71185",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: ti: dma-crossbar: fix device leak on am335x route allocation\n\nMake sure to drop the reference taken when looking up the crossbar\nplatform device during am335x route allocation.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1befa553f1ecc045dc9ff56107ff50162f63f3c0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/30352277d8e09c972436f883a5efd1f1b763ac14",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/43725bd47d984937c429919ae291896d982d1f17",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4fc17b1c6d2e04ad13fd6c21cfbac68043ec03f9",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6fdf168f57e331e148a1177a9b590a845c21b315",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c933aa74d9f8d35e6cda322c38c4a907d37a9a2b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f810132e825588fbad3cba940458c58bb7ec4d84",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:03.773",
+      "last_modified": "2026-06-17T10:03:50.730",
+      "fetched_at": "2026-07-09T10:05:43.115Z"
+    },
+    "CVE-2025-71186": {
+      "cve_id": "CVE-2025-71186",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: stm32: dmamux: fix device leak on route allocation\n\nMake sure to drop the reference taken when looking up the DMA mux\nplatform device during route allocation.\n\nNote that holding a reference to a device does not prevent its driver\ndata from going away so there is no point in keeping the reference.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1a179ac01ff3993ab97e33cc77c316ed7415cda1",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1dda2a32303df0091896b01a9d09070d61fa344c",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/2fb10259d4efb4367787b5ae9c94192e8a91c648",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3b42020e6790a5e19b36c187ed5b488a5716f97f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3ef52d31cce8ba816739085a61efe07b63c6cf27",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6393da54dcb3488c080a183c4182ddec71ba8d7f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/dd6e4943889fb354efa3f700e42739da9bddb6ef",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:03.873",
+      "last_modified": "2026-06-17T10:03:50.857",
+      "fetched_at": "2026-07-09T10:05:49.922Z"
+    },
+    "CVE-2025-71188": {
+      "cve_id": "CVE-2025-71188",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: lpc18xx-dmamux: fix device leak on route allocation\n\nMake sure to drop the reference taken when looking up the DMA mux\nplatform device during route allocation.\n\nNote that holding a reference to a device does not prevent its driver\ndata from going away so there is no point in keeping the reference.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1e47d80f6720f0224efd19bcf081d39637569c10",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3d396ebfb3049a2b5fac51d2c967db5114b685e8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/499ddae78c4baa9b94df76b2d2eb6b150d15377f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/992eb8055a6e5dbb808672d20d68e60d5a89b12b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9fba97baa520c9446df51a64708daf27c5a7ed32",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/adef147a8d8c3d767abf88ad2c381ffab2993086",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d4d63059dee7e7cae0c4d9a532ed558bc90efb55",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:04.067",
+      "last_modified": "2026-06-17T10:03:51.100",
+      "fetched_at": "2026-07-09T10:05:57.066Z"
+    },
+    "CVE-2025-71189": {
+      "cve_id": "CVE-2025-71189",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: dw: dmamux: fix OF node leak on route allocation failure\n\nMake sure to drop the reference taken to the DMA master OF node also on\nlate route allocation failures.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/6b87288581a0fcbe54b39da5c10e1aee2df8776e",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8f7a391211381ed2f6802032c78c7820d166bc49",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/db7c79c1bbfb1b0184e78a17ac2bd0f2bc3134d1",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/eabe40f8a53c29f531e92778ea243e379f4f7978",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ec25e60f9f95464aa11411db31d0906b3fb7b9f2",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:04.180",
+      "last_modified": "2026-06-17T10:03:51.230",
+      "fetched_at": "2026-07-09T10:06:03.685Z"
+    },
+    "CVE-2025-71190": {
+      "cve_id": "CVE-2025-71190",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: bcm-sba-raid: fix device leak on probe\n\nMake sure to drop the reference taken when looking up the mailbox device\nduring probe on probe failures and on driver unbind.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/2ed1a9de1f2d727ccae5bc9cc7c63ee3519c0c8b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4316e4c4fd2c09f68a262365f21847cafa8fe9dd",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4730f12a192d7314119b3d8331611ab151b87bdf",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/7c3a46ebf15a9796b763a54272407fdbf945bed8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/bc98e68adfef3b25c06ff08f0808bb59f787420c",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c80ca7bdff158401440741bdcf9175bd8608580b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/db6f1d6d31711e73e6a214c73e6a8fb4cda0483d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:04.280",
+      "last_modified": "2026-06-17T10:03:51.343",
+      "fetched_at": "2026-07-09T10:06:10.460Z"
+    },
+    "CVE-2025-71191": {
+      "cve_id": "CVE-2025-71191",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: at_hdmac: fix device leak on of_dma_xlate()\n\nMake sure to drop the reference taken when looking up the DMA platform\ndevice during of_dma_xlate() when releasing channel resources.\n\nNote that commit 3832b78b3ec2 (\"dmaengine: at_hdmac: add missing\nput_device() call in at_dma_xlate()\") fixed the leak in a couple of\nerror paths but the reference is still leaking on successful allocation.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/48b2d7f530b83cb149dbf0e48f95ccadb2d90da9",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/49d964cde422dc66fea514b7ab24aa729df7081d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4c67b4f45c8540ee4e62e24ca4608c6a9a81ee0f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6a86cf2c09e149d5718a5b7090545f7566da9334",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/987c71671367f42460689b78244d7b894c50999a",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b9074b2d7a230b6e28caa23165e9d8bc0677d333",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f3c23b7e941349505c3d40de2cc0acd93d9ac057",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:04.380",
+      "last_modified": "2026-06-17T10:03:51.477",
+      "fetched_at": "2026-07-09T10:06:17.594Z"
+    },
+    "CVE-2026-1484": {
+      "cve_id": "CVE-2026-1484",
+      "description": "A flaw was found in the GLib Base64 encoding routine when processing very large input data. Due to incorrect use of integer types during length calculation, the library may miscalculate buffer boundaries. This can cause memory writes outside the allocated buffer. Applications that process untrusted or extremely large Base64 input using GLib may crash or behave unpredictably.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.2,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:L",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-1484",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433259",
+          "tags": []
+        },
+        {
+          "url": "https://gitlab.gnome.org/GNOME/glib/-/issues/3870",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-27T14:15:56.050",
+      "last_modified": "2026-06-17T10:15:52.620",
+      "fetched_at": "2026-07-09T10:06:24.402Z"
+    },
+    "CVE-2026-1489": {
+      "cve_id": "CVE-2026-1489",
+      "description": "A flaw was found in GLib. An integer overflow vulnerability in its Unicode case conversion implementation can lead to memory corruption. By processing specially crafted and extremely large Unicode strings, an attacker could trigger an undersized memory allocation, resulting in out-of-bounds writes. This could cause applications utilizing GLib for string conversion to crash or become unstable.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.4,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-1489",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2433348",
+          "tags": []
+        },
+        {
+          "url": "https://gitlab.gnome.org/GNOME/glib/-/issues/3872",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-27T15:15:57.370",
+      "last_modified": "2026-06-17T10:15:53.120",
+      "fetched_at": "2026-07-09T10:06:31.724Z"
+    },
+    "CVE-2026-3784": {
+      "cve_id": "CVE-2026-3784",
+      "description": "curl would wrongly reuse an existing HTTP proxy connection doing CONNECT to a\nserver, even if the new request uses different credentials for the HTTP proxy.\nThe proper behavior is to create or use a separate connection.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+      "cwes": [
+        "CWE-305"
+      ],
+      "references": [
+        {
+          "url": "https://curl.se/docs/CVE-2026-3784.html",
+          "tags": [
+            "Patch",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://curl.se/docs/CVE-2026-3784.json",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://hackerone.com/reports/3584903",
+          "tags": [
+            "Exploit",
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2026/03/11/3",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-03-11T11:16:00.437",
+      "last_modified": "2026-06-17T10:44:12.767",
+      "fetched_at": "2026-07-09T10:06:38.998Z"
+    },
+    "CVE-2026-22976": {
+      "cve_id": "CVE-2026-22976",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/sched: sch_qfq: Fix NULL deref when deactivating inactive aggregate in qfq_reset\n\n`qfq_class->leaf_qdisc->q.qlen > 0` does not imply that the class\nitself is active.\n\nTwo qfq_class objects may point to the same leaf_qdisc. This happens\nwhen:\n\n1. one QFQ qdisc is attached to the dev as the root qdisc, and\n\n2. another QFQ qdisc is temporarily referenced (e.g., via qdisc_get()\n/ qdisc_put()) and is pending to be destroyed, as in function\ntc_new_tfilter.\n\nWhen packets are enqueued through the root QFQ qdisc, the shared\nleaf_qdisc->q.qlen increases. At the same time, the second QFQ\nqdisc triggers qdisc_put and qdisc_destroy: the qdisc enters\nqfq_reset() with its own q->q.qlen == 0, but its class's leaf\nqdisc->q.qlen > 0. Therefore, the qfq_reset would wrongly deactivate\nan inactive aggregate and trigger a null-deref in qfq_deactivate_agg:\n\n[    0.903172] BUG: kernel NULL pointer dereference, address: 0000000000000000\n[    0.903571] #PF: supervisor write access in kernel mode\n[    0.903860] #PF: error_code(0x0002) - not-present page\n[    0.904177] PGD 10299b067 P4D 10299b067 PUD 10299c067 PMD 0\n[    0.904502] Oops: Oops: 0002 [#1] SMP NOPTI\n[    0.904737] CPU: 0 UID: 0 PID: 135 Comm: exploit Not tainted 6.19.0-rc3+ #2 NONE\n[    0.905157] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.17.0-0-gb52ca86e094d-prebuilt.qemu.org 04/01/2014\n[    0.905754] RIP: 0010:qfq_deactivate_agg (include/linux/list.h:992 (discriminator 2) include/linux/list.h:1006 (discriminator 2) net/sched/sch_qfq.c:1367 (discriminator 2) net/sched/sch_qfq.c:1393 (discriminator 2))\n[    0.906046] Code: 0f 84 4d 01 00 00 48 89 70 18 8b 4b 10 48 c7 c2 ff ff ff ff 48 8b 78 08 48 d3 e2 48 21 f2 48 2b 13 48 8b 30 48 d3 ea 8b 4b 18 0\n\nCode starting with the faulting instruction\n===========================================\n   0:\t0f 84 4d 01 00 00    \tje     0x153\n   6:\t48 89 70 18          \tmov    %rsi,0x18(%rax)\n   a:\t8b 4b 10             \tmov    0x10(%rbx),%ecx\n   d:\t48 c7 c2 ff ff ff ff \tmov    $0xffffffffffffffff,%rdx\n  14:\t48 8b 78 08          \tmov    0x8(%rax),%rdi\n  18:\t48 d3 e2             \tshl    %cl,%rdx\n  1b:\t48 21 f2             \tand    %rsi,%rdx\n  1e:\t48 2b 13             \tsub    (%rbx),%rdx\n  21:\t48 8b 30             \tmov    (%rax),%rsi\n  24:\t48 d3 ea             \tshr    %cl,%rdx\n  27:\t8b 4b 18             \tmov    0x18(%rbx),%ecx\n\t...\n[    0.907095] RSP: 0018:ffffc900004a39a0 EFLAGS: 00010246\n[    0.907368] RAX: ffff8881043a0880 RBX: ffff888102953340 RCX: 0000000000000000\n[    0.907723] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000\n[    0.908100] RBP: ffff888102952180 R08: 0000000000000000 R09: 0000000000000000\n[    0.908451] R10: ffff8881043a0000 R11: 0000000000000000 R12: ffff888102952000\n[    0.908804] R13: ffff888102952180 R14: ffff8881043a0ad8 R15: ffff8881043a0880\n[    0.909179] FS:  000000002a1a0380(0000) GS:ffff888196d8d000(0000) knlGS:0000000000000000\n[    0.909572] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\n[    0.909857] CR2: 0000000000000000 CR3: 0000000102993002 CR4: 0000000000772ef0\n[    0.910247] PKRU: 55555554\n[    0.910391] Call Trace:\n[    0.910527]  <TASK>\n[    0.910638]  qfq_reset_qdisc (net/sched/sch_qfq.c:357 net/sched/sch_qfq.c:1485)\n[    0.910826]  qdisc_reset (include/linux/skbuff.h:2195 include/linux/skbuff.h:2501 include/linux/skbuff.h:3424 include/linux/skbuff.h:3430 net/sched/sch_generic.c:1036)\n[    0.911040]  __qdisc_destroy (net/sched/sch_generic.c:1076)\n[    0.911236]  tc_new_tfilter (net/sched/cls_api.c:2447)\n[    0.911447]  rtnetlink_rcv_msg (net/core/rtnetlink.c:6958)\n[    0.911663]  ? __pfx_rtnetlink_rcv_msg (net/core/rtnetlink.c:6861)\n[    0.911894]  netlink_rcv_skb (net/netlink/af_netlink.c:2550)\n[    0.912100]  netlink_unicast (net/netlink/af_netlink.c:1319 net/netlink/af_netlink.c:1344)\n[    0.912296]  ? __alloc_skb (net/core/skbuff.c:706)\n[    0.912484]  netlink_sendmsg (net/netlink/af\n---truncated---",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-476"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0809c4bc06c9c961222df29f2eccfd449304056f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/11bf9134613f6c71fc0ff36c5d8d33856f6ae3bb",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/43497313d0da3e12b5cfcd97aa17bf48ee663f95",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/51ffd447bc37bf1a5776b85523f51d2bc69977f6",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6116a83ec167d3ab1390cded854d237481f41b63",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c1d73b1480235731e35c81df70b08f4714a7d095",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/cdb24200b043438a144df501f1ebbd926bb1a2c7",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-21T07:16:01.433",
+      "last_modified": "2026-06-17T10:20:37.777",
+      "fetched_at": "2026-07-09T10:06:45.963Z"
+    },
+    "CVE-2026-22977": {
+      "cve_id": "CVE-2026-22977",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: sock: fix hardened usercopy panic in sock_recv_errqueue\n\nskbuff_fclone_cache was created without defining a usercopy region,\n[1] unlike skbuff_head_cache which properly whitelists the cb[] field.\n[2] This causes a usercopy BUG() when CONFIG_HARDENED_USERCOPY is\nenabled and the kernel attempts to copy sk_buff.cb data to userspace\nvia sock_recv_errqueue() -> put_cmsg().\n\nThe crash occurs when: 1. TCP allocates an skb using alloc_skb_fclone()\n   (from skbuff_fclone_cache) [1]\n2. The skb is cloned via skb_clone() using the pre-allocated fclone\n[3] 3. The cloned skb is queued to sk_error_queue for timestamp\nreporting 4. Userspace reads the error queue via recvmsg(MSG_ERRQUEUE)\n5. sock_recv_errqueue() calls put_cmsg() to copy serr->ee from skb->cb\n[4] 6. __check_heap_object() fails because skbuff_fclone_cache has no\n   usercopy whitelist [5]\n\nWhen cloned skbs allocated from skbuff_fclone_cache are used in the\nsocket error queue, accessing the sock_exterr_skb structure in skb->cb\nvia put_cmsg() triggers a usercopy hardening violation:\n\n[    5.379589] usercopy: Kernel memory exposure attempt detected from SLUB object 'skbuff_fclone_cache' (offset 296, size 16)!\n[    5.382796] kernel BUG at mm/usercopy.c:102!\n[    5.383923] Oops: invalid opcode: 0000 [#1] SMP KASAN NOPTI\n[    5.384903] CPU: 1 UID: 0 PID: 138 Comm: poc_put_cmsg Not tainted 6.12.57 #7\n[    5.384903] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.16.3-0-ga6ed6b701f0a-prebuilt.qemu.org 04/01/2014\n[    5.384903] RIP: 0010:usercopy_abort+0x6c/0x80\n[    5.384903] Code: 1a 86 51 48 c7 c2 40 15 1a 86 41 52 48 c7 c7 c0 15 1a 86 48 0f 45 d6 48 c7 c6 80 15 1a 86 48 89 c1 49 0f 45 f3 e8 84 27 88 ff <0f> 0b 490\n[    5.384903] RSP: 0018:ffffc900006f77a8 EFLAGS: 00010246\n[    5.384903] RAX: 000000000000006f RBX: ffff88800f0ad2a8 RCX: 1ffffffff0f72e74\n[    5.384903] RDX: 0000000000000000 RSI: 0000000000000004 RDI: ffffffff87b973a0\n[    5.384903] RBP: 0000000000000010 R08: 0000000000000000 R09: fffffbfff0f72e74\n[    5.384903] R10: 0000000000000003 R11: 79706f6372657375 R12: 0000000000000001\n[    5.384903] R13: ffff88800f0ad2b8 R14: ffffea00003c2b40 R15: ffffea00003c2b00\n[    5.384903] FS:  0000000011bc4380(0000) GS:ffff8880bf100000(0000) knlGS:0000000000000000\n[    5.384903] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\n[    5.384903] CR2: 000056aa3b8e5fe4 CR3: 000000000ea26004 CR4: 0000000000770ef0\n[    5.384903] PKRU: 55555554\n[    5.384903] Call Trace:\n[    5.384903]  <TASK>\n[    5.384903]  __check_heap_object+0x9a/0xd0\n[    5.384903]  __check_object_size+0x46c/0x690\n[    5.384903]  put_cmsg+0x129/0x5e0\n[    5.384903]  sock_recv_errqueue+0x22f/0x380\n[    5.384903]  tls_sw_recvmsg+0x7ed/0x1960\n[    5.384903]  ? srso_alias_return_thunk+0x5/0xfbef5\n[    5.384903]  ? schedule+0x6d/0x270\n[    5.384903]  ? srso_alias_return_thunk+0x5/0xfbef5\n[    5.384903]  ? mutex_unlock+0x81/0xd0\n[    5.384903]  ? __pfx_mutex_unlock+0x10/0x10\n[    5.384903]  ? __pfx_tls_sw_recvmsg+0x10/0x10\n[    5.384903]  ? _raw_spin_lock_irqsave+0x8f/0xf0\n[    5.384903]  ? _raw_read_unlock_irqrestore+0x20/0x40\n[    5.384903]  ? srso_alias_return_thunk+0x5/0xfbef5\n\nThe crash offset 296 corresponds to skb2->cb within skbuff_fclones:\n  - sizeof(struct sk_buff) = 232 - offsetof(struct sk_buff, cb) = 40 -\n  offset of skb2.cb in fclones = 232 + 40 = 272 - crash offset 296 =\n  272 + 24 (inside sock_exterr_skb.ee)\n\nThis patch uses a local stack variable as a bounce buffer to avoid the hardened usercopy check failure.\n\n[1] https://elixir.bootlin.com/linux/v6.12.62/source/net/ipv4/tcp.c#L885\n[2] https://elixir.bootlin.com/linux/v6.12.62/source/net/core/skbuff.c#L5104\n[3] https://elixir.bootlin.com/linux/v6.12.62/source/net/core/skbuff.c#L5566\n[4] https://elixir.bootlin.com/linux/v6.12.62/source/net/core/skbuff.c#L5491\n[5] https://elixir.bootlin.com/linux/v6.12.62/source/mm/slub.c#L5719",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-476"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/005671c60fcf1dbdb8bddf12a62568fd5e4ec391",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/2a71a1a8d0ed718b1c7a9ac61f07e5755c47ae20",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/582a5e922a9652fcbb7d0165c95d5b20aa37575d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/88dd6be7ebb3153b662c2cebcb06e032a92857f5",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8c6901aa29626e35045130bac09b75f791acca85",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c655d2167bf014d4c61b4faeca59b60ff9b9f6b1",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e00b169eaac5f7cdbf710c354c8fa76d02009115",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-21T14:16:06.853",
+      "last_modified": "2026-06-17T10:20:37.940",
+      "fetched_at": "2026-07-09T10:06:52.915Z"
+    },
+    "CVE-2026-23025": {
+      "cve_id": "CVE-2026-23025",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/page_alloc: prevent pcp corruption with SMP=n\n\nThe kernel test robot has reported:\n\n BUG: spinlock trylock failure on UP on CPU#0, kcompactd0/28\n  lock: 0xffff888807e35ef0, .magic: dead4ead, .owner: kcompactd0/28, .owner_cpu: 0\n CPU: 0 UID: 0 PID: 28 Comm: kcompactd0 Not tainted 6.18.0-rc5-00127-ga06157804399 #1 PREEMPT  8cc09ef94dcec767faa911515ce9e609c45db470\n Call Trace:\n  <IRQ>\n  __dump_stack (lib/dump_stack.c:95)\n  dump_stack_lvl (lib/dump_stack.c:123)\n  dump_stack (lib/dump_stack.c:130)\n  spin_dump (kernel/locking/spinlock_debug.c:71)\n  do_raw_spin_trylock (kernel/locking/spinlock_debug.c:?)\n  _raw_spin_trylock (include/linux/spinlock_api_smp.h:89 kernel/locking/spinlock.c:138)\n  __free_frozen_pages (mm/page_alloc.c:2973)\n  ___free_pages (mm/page_alloc.c:5295)\n  __free_pages (mm/page_alloc.c:5334)\n  tlb_remove_table_rcu (include/linux/mm.h:? include/linux/mm.h:3122 include/asm-generic/tlb.h:220 mm/mmu_gather.c:227 mm/mmu_gather.c:290)\n  ? __cfi_tlb_remove_table_rcu (mm/mmu_gather.c:289)\n  ? rcu_core (kernel/rcu/tree.c:?)\n  rcu_core (include/linux/rcupdate.h:341 kernel/rcu/tree.c:2607 kernel/rcu/tree.c:2861)\n  rcu_core_si (kernel/rcu/tree.c:2879)\n  handle_softirqs (arch/x86/include/asm/jump_label.h:36 include/trace/events/irq.h:142 kernel/softirq.c:623)\n  __irq_exit_rcu (arch/x86/include/asm/jump_label.h:36 kernel/softirq.c:725)\n  irq_exit_rcu (kernel/softirq.c:741)\n  sysvec_apic_timer_interrupt (arch/x86/kernel/apic/apic.c:1052)\n  </IRQ>\n  <TASK>\n RIP: 0010:_raw_spin_unlock_irqrestore (arch/x86/include/asm/preempt.h:95 include/linux/spinlock_api_smp.h:152 kernel/locking/spinlock.c:194)\n  free_pcppages_bulk (mm/page_alloc.c:1494)\n  drain_pages_zone (include/linux/spinlock.h:391 mm/page_alloc.c:2632)\n  __drain_all_pages (mm/page_alloc.c:2731)\n  drain_all_pages (mm/page_alloc.c:2747)\n  kcompactd (mm/compaction.c:3115)\n  kthread (kernel/kthread.c:465)\n  ? __cfi_kcompactd (mm/compaction.c:3166)\n  ? __cfi_kthread (kernel/kthread.c:412)\n  ret_from_fork (arch/x86/kernel/process.c:164)\n  ? __cfi_kthread (kernel/kthread.c:412)\n  ret_from_fork_asm (arch/x86/entry/entry_64.S:255)\n  </TASK>\n\nMatthew has analyzed the report and identified that in drain_page_zone()\nwe are in a section protected by spin_lock(&pcp->lock) and then get an\ninterrupt that attempts spin_trylock() on the same lock.  The code is\ndesigned to work this way without disabling IRQs and occasionally fail the\ntrylock with a fallback.  However, the SMP=n spinlock implementation\nassumes spin_trylock() will always succeed, and thus it's normally a\nno-op.  Here the enabled lock debugging catches the problem, but otherwise\nit could cause a corruption of the pcp structure.\n\nThe problem has been introduced by commit 574907741599 (\"mm/page_alloc:\nleave IRQs enabled for per-cpu page allocations\").  The pcp locking scheme\nrecognizes the need for disabling IRQs to prevent nesting spin_trylock()\nsections on SMP=n, but the need to prevent the nesting in spin_lock() has\nnot been recognized.  Fix it by introducing local wrappers that change the\nspin_lock() to spin_lock_iqsave() with SMP=n and use them in all places\nthat do spin_lock(&pcp->lock).\n\n[vbabka@suse.cz: add pcp_ prefix to the spin_lock_irqsave wrappers, per Steven]",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/038a102535eb49e10e93eafac54352fcc5d78847",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3098f8f7c7b0686c74827aec42a2c45e69801ff8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4a04ff9cd816e7346fcc8126f00ed80481f6569d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/68688fc4eab007834b4c2d740214423ba2a335a8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/df63d31e9ae02e2f6cd96147779e4ed7cd0e75f6",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:05.820",
+      "last_modified": "2026-06-17T10:20:44.017",
+      "fetched_at": "2026-07-09T10:07:00.266Z"
+    },
+    "CVE-2026-23026": {
+      "cve_id": "CVE-2026-23026",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: qcom: gpi: Fix memory leak in gpi_peripheral_config()\n\nFix a memory leak in gpi_peripheral_config() where the original memory\npointed to by gchan->config could be lost if krealloc() fails.\n\nThe issue occurs when:\n1. gchan->config points to previously allocated memory\n2. krealloc() fails and returns NULL\n3. The function directly assigns NULL to gchan->config, losing the\n   reference to the original memory\n4. The original memory becomes unreachable and cannot be freed\n\nFix this by using a temporary variable to hold the krealloc() result\nand only updating gchan->config when the allocation succeeds.\n\nFound via static analysis and code review.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/01b1d781394fc9b83015e3a3cd46b17bda842bd8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/3f747004bbd641131d9396d87b5d2d3d1e182728",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4532f18e4ab36def1f55cd936d0fc002b2ce34c2",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/55a67ba5ac4cebfd54cc8305d4d57a0f1dfe6a85",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/694ab1f6f16cb69f7c5ef2452b22ba7b00a3c7c7",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6bf4ef078fd11910988889a6c0b3698d2e0c89af",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:05.920",
+      "last_modified": "2026-06-17T10:20:44.167",
+      "fetched_at": "2026-07-09T10:07:07.501Z"
+    },
+    "CVE-2026-23030": {
+      "cve_id": "CVE-2026-23030",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nphy: rockchip: inno-usb2: Fix a double free bug in rockchip_usb2phy_probe()\n\nThe for_each_available_child_of_node() calls of_node_put() to\nrelease child_np in each success loop. After breaking from the\nloop with the child_np has been released, the code will jump to\nthe put_child label and will call the of_node_put() again if the\ndevm_request_threaded_irq() fails. These cause a double free bug.\n\nFix by returning directly to avoid the duplicate of_node_put().",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/027d42b97e6eb827c3438ebc09bab7efaee9270d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b97b2c9808c9a97e0ce30216fa12096d8b0eaa75",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e07dea3de508cd6950c937cec42de7603190e1ca",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ebae26dd15140b840cf65be5e1c0daee949ba70b",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/efe92ee7a111fe0f4d75f3ed6b7e3f86322279d5",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:06.313",
+      "last_modified": "2026-06-17T10:20:44.543",
+      "fetched_at": "2026-07-09T10:07:14.188Z"
+    },
+    "CVE-2026-23031": {
+      "cve_id": "CVE-2026-23031",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncan: gs_usb: gs_usb_receive_bulk_callback(): fix URB memory leak\n\nIn gs_can_open(), the URBs for USB-in transfers are allocated, added to the\nparent->rx_submitted anchor and submitted. In the complete callback\ngs_usb_receive_bulk_callback(), the URB is processed and resubmitted. In\ngs_can_close() the URBs are freed by calling\nusb_kill_anchored_urbs(parent->rx_submitted).\n\nHowever, this does not take into account that the USB framework unanchors\nthe URB before the complete function is called. This means that once an\nin-URB has been completed, it is no longer anchored and is ultimately not\nreleased in gs_can_close().\n\nFix the memory leak by anchoring the URB in the\ngs_usb_receive_bulk_callback() to the parent->rx_submitted anchor.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/08624b7206ddb9148eeffc2384ebda2c47b6d1e9",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/7352e1d5932a0e777e39fa4b619801191f57e603",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9c151898cc259a7784be60ba38664f42ede39b31",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9f669a38ca70839229b7ba0f851820850a2fe1f7",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ec5ccc2af9e5b045671f3f604b57512feda8bcc5",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f905bcfa971edb89e398c98957838d8c6381c0c7",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:06.413",
+      "last_modified": "2026-06-17T10:20:44.640",
+      "fetched_at": "2026-07-09T10:07:21.264Z"
+    },
+    "CVE-2026-23032": {
+      "cve_id": "CVE-2026-23032",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnull_blk: fix kmemleak by releasing references to fault configfs items\n\nWhen CONFIG_BLK_DEV_NULL_BLK_FAULT_INJECTION is enabled, the null-blk\ndriver sets up fault injection support by creating the timeout_inject,\nrequeue_inject, and init_hctx_fault_inject configfs items as children\nof the top-level nullbX configfs group.\n\nHowever, when the nullbX device is removed, the references taken to\nthese fault-config configfs items are not released. As a result,\nkmemleak reports a memory leak, for example:\n\nunreferenced object 0xc00000021ff25c40 (size 32):\n  comm \"mkdir\", pid 10665, jiffies 4322121578\n  hex dump (first 32 bytes):\n    69 6e 69 74 5f 68 63 74 78 5f 66 61 75 6c 74 5f  init_hctx_fault_\n    69 6e 6a 65 63 74 00 88 00 00 00 00 00 00 00 00  inject..........\n  backtrace (crc 1a018c86):\n    __kmalloc_node_track_caller_noprof+0x494/0xbd8\n    kvasprintf+0x74/0xf4\n    config_item_set_name+0xf0/0x104\n    config_group_init_type_name+0x48/0xfc\n    fault_config_init+0x48/0xf0\n    0xc0080000180559e4\n    configfs_mkdir+0x304/0x814\n    vfs_mkdir+0x49c/0x604\n    do_mkdirat+0x314/0x3d0\n    sys_mkdir+0xa0/0xd8\n    system_call_exception+0x1b0/0x4f0\n    system_call_vectored_common+0x15c/0x2ec\n\nFix this by explicitly releasing the references to the fault-config\nconfigfs items when dropping the reference to the top-level nullbX\nconfigfs group.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1a3286edf4d48ce37f8982ff3c3b65159a5ecbb2",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/40b94ec7edbbb867c4e26a1a43d2b898f04b93c5",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d59ba448ccd595d5d65e197216cf781a87db2b28",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f1718da051282698aa8fa150bebb9724f6389fda",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:06.513",
+      "last_modified": "2026-06-17T10:20:44.747",
+      "fetched_at": "2026-07-09T10:07:28.890Z"
+    },
+    "CVE-2026-23033": {
+      "cve_id": "CVE-2026-23033",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: omap-dma: fix dma_pool resource leak in error paths\n\nThe dma_pool created by dma_pool_create() is not destroyed when\ndma_async_device_register() or of_dma_controller_register() fails,\ncausing a resource leak in the probe error paths.\n\nAdd dma_pool_destroy() in both error paths to properly release the\nallocated dma_pool resource.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/2b29f38f4f9660595e8272b8e8b82ffcca7ce592",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/2e1136acf8a8887c29f52e35a77b537309af321f",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4b93712e96be17029bd22787f2e39feb0e73272c",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6b867a98699657c2a698bbc9e60656349b39b905",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/829b00481734dd54e72f755fd6584bce6fbffbb0",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/88a9483f093bbb9263dcf21bc7fdb5132e5de88d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8d66cb05b8b76396387a7b3a91f9284225c87f04",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:06.613",
+      "last_modified": "2026-06-17T10:20:44.847",
+      "fetched_at": "2026-07-09T10:07:35.929Z"
+    },
+    "CVE-2026-23037": {
+      "cve_id": "CVE-2026-23037",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncan: etas_es58x: allow partial RX URB allocation to succeed\n\nWhen es58x_alloc_rx_urbs() fails to allocate the requested number of\nURBs but succeeds in allocating some, it returns an error code.\nThis causes es58x_open() to return early, skipping the cleanup label\n'free_urbs', which leads to the anchored URBs being leaked.\n\nAs pointed out by maintainer Vincent Mailhol, the driver is designed\nto handle partial URB allocation gracefully. Therefore, partial\nallocation should not be treated as a fatal error.\n\nModify es58x_alloc_rx_urbs() to return 0 if at least one URB has been\nallocated, restoring the intended behavior and preventing the leak\nin es58x_open().",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/611e839d2d552416b498ed5593e10670f61fcd4d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6c5124a60989051799037834f0a1a4b428718157",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/97250eb05e4b6afe787290e8fd97d0675116c61b",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/aec888f44853584b5a7cd01249806030cf94a73d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b1979778e98569c1e78c2c7f16bb24d76541ab00",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ba45e3d6b02c97dbb4578fbae7027fd66f3caa10",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:07.010",
+      "last_modified": "2026-06-17T10:20:45.250",
+      "fetched_at": "2026-07-09T10:07:42.730Z"
+    },
+    "CVE-2026-23038": {
+      "cve_id": "CVE-2026-23038",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\npnfs/flexfiles: Fix memory leak in nfs4_ff_alloc_deviceid_node()\n\nIn nfs4_ff_alloc_deviceid_node(), if the allocation for ds_versions fails,\nthe function jumps to the out_scratch label without freeing the already\nallocated dsaddrs list, leading to a memory leak.\n\nFix this by jumping to the out_err_drain_dsaddrs label, which properly\nfrees the dsaddrs list before cleaning up other resources.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0c728083654f0066f5e10a1d2b0bd0907af19a58",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/27c90d8ed81e7a289c9fe41b5e31d8bb609a3385",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/34b9dd179818ff7af2b36410985fd8166573c62d",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/869862056e100973e76ce9f5f1b01837771b7722",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/86da7efd12295a7e2b4abde5e5984c821edd938f",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e2dde5dafb80f1af4028ed10ad255f42af71c784",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ed5d3f2f6885eb99f729e6ffd946e3aa058bd3eb",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-31T12:16:07.110",
+      "last_modified": "2026-06-17T10:20:45.360",
+      "fetched_at": "2026-07-09T10:07:49.880Z"
+    },
+    "CVE-2026-23111": {
+      "cve_id": "CVE-2026-23111",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: fix inverted genmask check in nft_map_catchall_activate()\n\nnft_map_catchall_activate() has an inverted element activity check\ncompared to its non-catchall counterpart nft_mapelem_activate() and\ncompared to what is logically required.\n\nnft_map_catchall_activate() is called from the abort path to re-activate\ncatchall map elements that were deactivated during a failed transaction.\nIt should skip elements that are already active (they don't need\nre-activation) and process elements that are inactive (they need to be\nrestored). Instead, the current code does the opposite: it skips inactive\nelements and processes active ones.\n\nCompare the non-catchall activate callback, which is correct:\n\n  nft_mapelem_activate():\n    if (nft_set_elem_active(ext, iter->genmask))\n        return 0;   /* skip active, process inactive */\n\nWith the buggy catchall version:\n\n  nft_map_catchall_activate():\n    if (!nft_set_elem_active(ext, genmask))\n        continue;   /* skip inactive, process active */\n\nThe consequence is that when a DELSET operation is aborted,\nnft_setelem_data_activate() is never called for the catchall element.\nFor NFT_GOTO verdict elements, this means nft_data_hold() is never\ncalled to restore the chain->use reference count. Each abort cycle\npermanently decrements chain->use. Once chain->use reaches zero,\nDELCHAIN succeeds and frees the chain while catchall verdict elements\nstill reference it, resulting in a use-after-free.\n\nThis is exploitable for local privilege escalation from an unprivileged\nuser via user namespaces + nftables on distributions that enable\nCONFIG_USER_NS and CONFIG_NF_TABLES.\n\nFix by removing the negation so the check matches nft_mapelem_activate():\nskip active elements, process inactive ones.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-416",
+        "CWE-416",
+        "CWE-672"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1444ff890b4653add12f734ffeffc173d42862dd",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/42c574c1504aa089a0a142e4c13859327570473d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8b68a45f9722f2babe9e7bad00aa74638addf081",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8c760ba4e36c750379d13569f23f5a6e185333f5",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b9b6573421de51829f7ec1cce76d85f5f6fbbd7f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f41c5d151078c5348271ffaf8e7410d96f2d82f8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:10108",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:10996",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-13T14:16:10.283",
+      "last_modified": "2026-06-30T03:17:30.223",
+      "fetched_at": "2026-07-09T10:07:57.093Z"
+    },
+    "CVE-2026-23112": {
+      "cve_id": "CVE-2026-23112",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec\n\nnvmet_tcp_build_pdu_iovec() could walk past cmd->req.sg when a PDU\nlength or offset exceeds sg_cnt and then use bogus sg->length/offset\nvalues, leading to _copy_to_iter() GPF/KASAN. Guard sg_idx, remaining\nentries, and sg->length/offset before building the bvec.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/0b9981751be14b59b4473383c731c833738aebdb",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1385be357e8acd09b36e026567f3a9d5c61139de",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/19672ae68d52ff75347ebe2420dde1b07adca09f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/42afe8ed8ad2de9c19457156244ef3e1eca94b5d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/52a0a98549344ca20ad81a4176d68d28e3c05a5c",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ab200d71553bdcf4de554a5985b05b2dd606bc57",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/dca1a6ba0da9f472ef040525fab10fd9956db59f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-13T14:16:10.403",
+      "last_modified": "2026-06-17T10:20:55.100",
+      "fetched_at": "2026-07-09T10:08:04.255Z"
+    },
+    "CVE-2026-23220": {
+      "cve_id": "CVE-2026-23220",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nksmbd: fix infinite loop caused by next_smb2_rcv_hdr_off reset in error paths\n\nThe problem occurs when a signed request fails smb2 signature verification\ncheck. In __process_request(), if check_sign_req() returns an error,\nset_smb2_rsp_status(work, STATUS_ACCESS_DENIED) is called.\nset_smb2_rsp_status() set work->next_smb2_rcv_hdr_off as zero. By resetting\nnext_smb2_rcv_hdr_off to zero, the pointer to the next command in the chain\nis lost. Consequently, is_chained_smb2_message() continues to point to\nthe same request header instead of advancing. If the header's NextCommand\nfield is non-zero, the function returns true, causing __handle_ksmbd_work()\nto repeatedly process the same failed request in an infinite loop.\nThis results in the kernel log being flooded with \"bad smb2 signature\"\nmessages and high CPU usage.\n\nThis patch fixes the issue by changing the return value from\nSERVER_HANDLER_CONTINUE to SERVER_HANDLER_ABORT. This ensures that\nthe processing loop terminates immediately rather than attempting to\ncontinue from an invalidated offset.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-835"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/010eb01ce23b34b50531448b0da391c7f05a72af",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/544adb0a6658ea1bff4064723761dbf05f95b1e2",
+          "tags": []
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/5accdc5b7f28a81bbc5880ac0b8886e60c86e8c8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/71b5e7c528315ca360a1825a4ad2f8ae48c5dc16",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9135e791ec2709bcf0cda0335535c74762489498",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f7b1c2f5642bbd60b1beef1f3298cbac81eb232c",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/fb3b66bd72deb5543addaefa67963b34fb163a7b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-18T16:22:31.700",
+      "last_modified": "2026-06-17T10:21:07.580",
+      "fetched_at": "2026-07-09T10:08:11.037Z"
+    },
+    "CVE-2026-23222": {
+      "cve_id": "CVE-2026-23222",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: omap - Allocate OMAP_CRYPTO_FORCE_COPY scatterlists correctly\n\nThe existing allocation of scatterlists in omap_crypto_copy_sg_lists()\nwas allocating an array of scatterlist pointers, not scatterlist objects,\nresulting in a 4x too small allocation.\n\nUse sizeof(*new_sg) to get the correct object size.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/1562b1fb7e17c1b3addb15e125c718b2be7f5512",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/2ed27b5a1174351148c3adbfc0cd86d54072ba2e",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/31aff96a41ae6f1f1687c065607875a27c364da8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6edf8df4bd29f7bfd245b67b2c31d905f1cfc14b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/79f95b51d4278044013672c27519ae88d07013d8",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/953c81941b0ad373674656b8767c00234ebf17ac",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c184341920ed78b6466360ed7b45b8922586c38f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d1836c628cb72734eb5f7dfd4c996a9c18bba3ad",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2026-02-18T16:22:31.920",
+      "last_modified": "2026-06-17T10:21:07.833",
+      "fetched_at": "2026-07-09T10:08:17.823Z"
+    },
+    "CVE-2026-23228": {
+      "cve_id": "CVE-2026-23228",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: server: fix leak of active_num_conn in ksmbd_tcp_new_connection()\n\nOn kthread_run() failure in ksmbd_tcp_new_connection(), the transport is\nfreed via free_transport(), which does not decrement active_num_conn,\nleaking this counter.\n\nReplace free_transport() with ksmbd_tcp_disconnect().",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-401"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/599271110c35f6b16e2e4e45b9fbd47ed378c982",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6dd2645cf080a75be31fa66063c7332b291f46f0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/77ffbcac4e569566d0092d5f22627dfc0896b553",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/787769c8cc50416af7b8b1a36e6bcd6aaa7680aa",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/7ddd69cd1338c6197e1b6b19cec60d99c8633e4f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/baf664fc90a6139a39a58333e4aaa390c10d45dc",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/cd25e0d809531a67e9dd53b19012d27d2b13425f",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-18T16:22:32.580",
+      "last_modified": "2026-06-17T10:21:08.550",
+      "fetched_at": "2026-07-09T10:08:24.454Z"
+    },
+    "CVE-2026-23229": {
+      "cve_id": "CVE-2026-23229",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: virtio - Add spinlock protection with virtqueue notification\n\nWhen VM boots with one virtio-crypto PCI device and builtin backend,\nrun openssl benchmark command with multiple processes, such as\n  openssl speed -evp aes-128-cbc -engine afalg  -seconds 10 -multi 32\n\nopenssl processes will hangup and there is error reported like this:\n virtio_crypto virtio0: dataq.0:id 3 is not a head!\n\nIt seems that the data virtqueue need protection when it is handled\nfor virtio done notification. If the spinlock protection is added\nin virtcrypto_done_task(), openssl benchmark with multiple processes\nworks well.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/49c57c6c108931a914ed94e3c0ddb974008260a3",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/552475d0b6cece73a52c0fa5faa0ce45e99df74b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/8ee8ccfd60bf17cbdab91069d324b5302f4f3a30",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/b505047ffc8057555900d2d3a005d033e6967382",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c0a0ded3bb7fd45f720faa48449a930153257d3a",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c9e594194795c86ca753ad6ed64c2762e9309d0d",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/d6f0d586808689963e58fd739bed626ff5013b24",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/e69a7b0a71b6561b3b6459f1fded8d589f2e8ac2",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2026-02-18T16:22:32.693",
+      "last_modified": "2026-06-17T10:21:08.677",
+      "fetched_at": "2026-07-09T10:08:31.369Z"
+    },
+    "CVE-2026-23230": {
+      "cve_id": "CVE-2026-23230",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: split cached_fid bitfields to avoid shared-byte RMW races\n\nis_open, has_lease and on_list are stored in the same bitfield byte in\nstruct cached_fid but are updated in different code paths that may run\nconcurrently. Bitfield assignments generate byte read–modify–write\noperations (e.g. `orb $mask, addr` on x86_64), so updating one flag can\nrestore stale values of the others.\n\nA possible interleaving is:\n    CPU1: load old byte (has_lease=1, on_list=1)\n    CPU2: clear both flags (store 0)\n    CPU1: RMW store (old | IS_OPEN) -> reintroduces cleared bits\n\nTo avoid this class of races, convert these flags to separate bool\nfields.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/3eaa22d688311c708b73f3c68bc6d0c8e3f0f77a",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4386f6af8aaedd0c5ad6f659b40cadcc8f423828",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4cfa4c37dcbcfd70866e856200ed8a2894cac578",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/569fecc56bfe4df66f05734d67daef887746656b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/c4b9edd55987384a1f201d3d07ff71e448d79c1b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ec306600d5ba7148c9dbf8f5a8f1f5c1a044a241",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-18T16:22:32.807",
+      "last_modified": "2026-06-17T10:21:08.820",
+      "fetched_at": "2026-07-09T10:08:39.656Z"
+    },
+    "CVE-2026-23231": {
+      "cve_id": "CVE-2026-23231",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: fix use-after-free in nf_tables_addchain()\n\nnf_tables_addchain() publishes the chain to table->chains via\nlist_add_tail_rcu() (in nft_chain_add()) before registering hooks.\nIf nf_tables_register_hook() then fails, the error path calls\nnft_chain_del() (list_del_rcu()) followed by nf_tables_chain_destroy()\nwith no RCU grace period in between.\n\nThis creates two use-after-free conditions:\n\n 1) Control-plane: nf_tables_dump_chains() traverses table->chains\n    under rcu_read_lock(). A concurrent dump can still be walking\n    the chain when the error path frees it.\n\n 2) Packet path: for NFPROTO_INET, nf_register_net_hook() briefly\n    installs the IPv4 hook before IPv6 registration fails.  Packets\n    entering nft_do_chain() via the transient IPv4 hook can still be\n    dereferencing chain->blob_gen_X when the error path frees the\n    chain.\n\nAdd synchronize_rcu() between nft_chain_del() and the chain destroy\nso that all RCU readers -- both dump threads and in-flight packet\nevaluation -- have finished before the chain is freed.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-416"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/2a6586ecfa4ce1413daaafee250d2590e05f1a33",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/2f9a4ffeb763aec822f8ff3d1e82202d27d46d4b",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/7017745068a9068904e1e7a1b170a5785647cc81",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/71e99ee20fc3f662555118cf1159443250647533",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/dbd0af8083dd201f07c49110b2ee93710abdff28",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f3fe58ce37926a10115ede527d59b91bcc05400a",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-03-04T13:15:58.137",
+      "last_modified": "2026-06-17T10:21:08.950",
+      "fetched_at": "2026-07-09T10:08:46.752Z"
+    },
+    "CVE-2026-23236": {
+      "cve_id": "CVE-2026-23236",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nfbdev: smscufx: properly copy ioctl memory to kernelspace\n\nThe UFX_IOCTL_REPORT_DAMAGE ioctl does not properly copy data from\nuserspace to kernelspace, and instead directly references the memory,\nwhich can cause problems if invalid data is passed from userspace.  Fix\nthis all up by correctly copying the memory before accessing it within\nthe kernel.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.3,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/061cfeb560aa3ddc174153dbe5be9d0b55eb7248",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/0634e8d650993602fc5b389ff7ac525f6542e141",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/120adae7b42faa641179270c067864544a50ab69",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/1c008ad0f0d1c1523902b9cdb08e404129677bfc",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/52917e265aa5f848212f60fc50fc504d8ef12866",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/6167af934f956d3ae1e06d61f45cd0d1004bbe1a",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a0321e6e58facb39fe191caa0e52ed9aab6a48fe",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f1e91bd4efeae48b0f42caed7e8ce2e3a0d05b02",
+          "tags": [
+            "Patch"
+          ]
+        }
+      ],
+      "published": "2026-03-04T15:16:14.173",
+      "last_modified": "2026-06-17T10:21:09.573",
+      "fetched_at": "2026-07-09T10:08:53.802Z"
+    },
+    "CVE-2026-23238": {
+      "cve_id": "CVE-2026-23238",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nromfs: check sb_set_blocksize() return value\n\nromfs_fill_super() ignores the return value of sb_set_blocksize(), which\ncan fail if the requested block size is incompatible with the block\ndevice's configuration.\n\nThis can be triggered by setting a loop device's block size larger than\nPAGE_SIZE using ioctl(LOOP_SET_BLOCK_SIZE, 32768), then mounting a romfs\nfilesystem on that device.\n\nWhen sb_set_blocksize(sb, ROMBSIZE) is called with ROMBSIZE=4096 but the\ndevice has logical_block_size=32768, bdev_validate_blocksize() fails\nbecause the requested size is smaller than the device's logical block\nsize. sb_set_blocksize() returns 0 (failure), but romfs ignores this and\ncontinues mounting.\n\nThe superblock's block size remains at the device's logical block size\n(32768). Later, when sb_bread() attempts I/O with this oversized block\nsize, it triggers a kernel BUG in folio_set_bh():\n\n    kernel BUG at fs/buffer.c:1582!\n    BUG_ON(size > PAGE_SIZE);\n\nFix by checking the return value of sb_set_blocksize() and failing the\nmount with -EINVAL if it returns 0.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-617"
+      ],
+      "references": [
+        {
+          "url": "https://git.kernel.org/stable/c/2c5829cd8fbbc91568c520b666898f57cdcb8cf6",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/4b71ad7676564a94ec5f7d18298f51e8ae53db73",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/9b203b8ddd7359270e8a694d0584743555128e2c",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/a381f0f61b35c8894b0bd0d6acef2d8f9b08b244",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/ab7ad7abb3660c58ffffdf07ff3bb976e7e0afa0",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/cbd9931e6456822067725354d83446c5bb813030",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://git.kernel.org/stable/c/f2521ab1f63a8c244f06a080319e5ff9a2e1bd95",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-03-04T15:16:14.530",
+      "last_modified": "2026-06-17T10:21:09.830",
+      "fetched_at": "2026-07-09T10:09:01.045Z"
+    },
+    "CVE-2026-24515": {
+      "cve_id": "CVE-2026-24515",
+      "description": "In libexpat before 2.7.4, XML_ExternalEntityParserCreate does not copy unknown encoding handler user data.",
+      "cvss_version": "3.1",
+      "cvss_score": 2.9,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-476"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/1131",
+          "tags": [
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-23T08:16:01.490",
+      "last_modified": "2026-06-17T10:23:10.660",
+      "fetched_at": "2026-07-09T10:09:07.724Z"
+    },
+    "CVE-2026-25210": {
+      "cve_id": "CVE-2026-25210",
+      "description": "In libexpat before 2.7.4, the doContent function does not properly determine the buffer size bufSize because there is no integer overflow check for tag buffer reallocation.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.9,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:L",
+      "cwes": [
+        "CWE-190"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/1075",
+          "tags": [
+            "Issue Tracking",
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://github.com/libexpat/libexpat/pull/1075/commits/9c2d990389e6abe2e44527eeaa8b39f16fe859c7",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-30T07:16:15.570",
+      "last_modified": "2026-06-17T10:24:19.123",
+      "fetched_at": "2026-07-09T10:09:15.436Z"
+    },
+    "CVE-2026-26157": {
+      "cve_id": "CVE-2026-26157",
+      "description": "A flaw was found in BusyBox. Incomplete path sanitization in its archive extraction utilities allows an attacker to craft malicious archives that when extracted, and under specific conditions, may write to files outside the intended directory. This can lead to arbitrary file overwrite, potentially enabling code execution through the modification of sensitive system files.",
+      "cvss_version": "3.1",
+      "cvss_score": 7,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-73",
+        "CWE-73"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13831",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-26157",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2439039",
+          "tags": []
+        },
+        {
+          "url": "https://git.busybox.net/busybox/commit/archival?id=3fb6b31c716669e12f75a2accd31bb7685b1a1cb",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13831",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-26157",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2439039",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-11T21:16:21.400",
+      "last_modified": "2026-06-30T03:17:48.433",
+      "fetched_at": "2026-07-09T10:09:22.240Z"
+    },
+    "CVE-2026-26158": {
+      "cve_id": "CVE-2026-26158",
+      "description": "A flaw was found in BusyBox. This vulnerability allows an attacker to modify files outside of the intended extraction directory by crafting a malicious tar archive containing unvalidated hardlink or symlink entries. If the tar archive is extracted with elevated privileges, this flaw can lead to privilege escalation, enabling an attacker to gain unauthorized access to critical system files.",
+      "cvss_version": "3.1",
+      "cvss_score": 7,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-73",
+        "CWE-73"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13831",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-26158",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2439040",
+          "tags": []
+        },
+        {
+          "url": "https://git.busybox.net/busybox/commit/archival?id=3fb6b31c716669e12f75a2accd31bb7685b1a1cb",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13831",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-26158",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2439040",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-02-11T21:16:21.607",
+      "last_modified": "2026-06-30T03:17:48.627",
+      "fetched_at": "2026-07-09T10:09:29.064Z"
+    },
+    "CVE-2026-35535": {
+      "cve_id": "CVE-2026-35535",
+      "description": "In Sudo through 1.9.17p2 before 3e474c2, a failure of a setuid, setgid, or setgroups call, during a privilege drop before running the mailer, is not a fatal error and can lead to privilege escalation.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.4,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-271",
+        "CWE-272"
+      ],
+      "references": [
+        {
+          "url": "https://bugs.debian.org/1130593",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "https://bugs.launchpad.net/ubuntu/+source/sudo/+bug/2143042",
+          "tags": [
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://github.com/sudo-project/sudo/commit/3e474c2f201484be83d994ae10a4e20e8c81bb69",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://www.qualys.com/2026/03/10/crack-armor.txt",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2026/06/msg00003.html",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:10758",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11521",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:12310",
+          "tags": []
+        }
+      ],
+      "published": "2026-04-03T03:16:18.233",
+      "last_modified": "2026-07-02T12:17:11.450",
+      "fetched_at": "2026-07-09T10:09:35.775Z"
+    },
+    "CVE-2026-41918": {
+      "cve_id": "CVE-2026-41918",
+      "description": "A vulnerability has been identified in RUGGEDCOM RST2428P (6GK6242-6PA00) (All versions < V4.0). The affected applications stores sensitive information in the browser cache when an authenticated user modify specific configurations. This could allow an authenticated attacker to access sensitive data stored in the browser.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.7,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+      "cwes": [
+        "CWE-525"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-253495.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-02T14:16:53.200",
+      "last_modified": "2026-06-17T10:47:11.847",
+      "fetched_at": "2026-07-09T10:09:42.391Z"
     }
   }
 }

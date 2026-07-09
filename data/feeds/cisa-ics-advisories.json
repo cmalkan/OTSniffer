@@ -1,6 +1,107 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-188-01",
+      "title": "Hydro-Québec Le Circuit Electrique charging station backend",
+      "date": "2026-07-07",
+      "summary": "Successful exploitation of these vulnerabilities could lead to privilege escalation, or result in a denial-of-service attack.",
+      "sectors": [
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-20744",
+        "CVE-2026-42952",
+        "CVE-2026-44383"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Hydro-Québec",
+          "product": "Le Circuit Electrique charging station backend",
+          "version": "<June_2026",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-01"
+    },
+    {
+      "advisory_id": "ICSA-26-188-06",
+      "title": "Labcenter Proteus 9",
+      "date": "2026-07-07",
+      "summary": "Successful exploitation of these vulnerabilities could disclose information and allow a malicious user to execute arbitrary code on affected installations. ",
+      "sectors": [
+        "Communications",
+        "Critical Manufacturing",
+        "Defense Industrial Base",
+        "Energy",
+        "Healthcare and Public Health",
+        "Transportation Systems",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-42953",
+        "CVE-2026-49033",
+        "CVE-2026-42958"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Labcenter Electronics",
+          "product": "Proteus",
+          "version": "9.1_SP4_Build_42914",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-06"
+    },
+    {
+      "advisory_id": "ICSA-26-188-07",
+      "title": "Digi International PortServer TS, Digi One SP IA",
+      "date": "2026-07-07",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to bypass authentication and gain access to restricted resources, obtain credentials, and inject malicious scripts.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Communications",
+        "Information Technology",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-12352",
+        "CVE-2026-12948"
+      ],
+      "cvss_max": 5.9,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Digi International",
+          "product": "PortServer TS",
+          "version": "<Firmware_2025",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Digi International",
+          "product": "Digi One SP",
+          "version": "<Firmware_2025",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Digi International",
+          "product": "Digi One SP IA",
+          "version": "<Firmware_2025",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Digi International",
+          "product": "Digi One IA",
+          "version": "<Firmware_2025",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-07"
+    },
+    {
       "advisory_id": "ICSA-26-183-01",
       "title": "ST Engineering iDirect iQ-Series Terminals",
       "date": "2026-07-02",
@@ -235,6 +336,238 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+    },
+    {
+      "advisory_id": "ICSA-26-188-02",
+      "title": "Hitachi Energy PROMOD V",
+      "date": "2026-06-30",
+      "summary": "Hitachi Energy is aware of insecure HTTP transmission vulnerability in PROMOD V product versions listed in this document. This vulnerability could allow attackers to intercept or manipulate sensitive data in transit, potentially leading to credential theft, session hijacking, or unauthorized access.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-10763"
+      ],
+      "cvss_max": 7.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "PROMOD V",
+          "version": "vers:PROMOD_V/<=1.0.10",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-02"
+    },
+    {
+      "advisory_id": "ICSA-26-188-03",
+      "title": "Hitachi Energy e-mesh EMS",
+      "date": "2026-06-30",
+      "summary": "Hitachi Energy is aware of a buffer overflow vulnerability that affects e-mesh EMS product versions listed in this document. Successful exploitation of this vulnerability could lead to a buffer overflow condition, potentially resulting in application outages (denial of service) and possible arbitrary code execution. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-42945"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "Hitachi Energy e-mesh EMS",
+          "version": "4.1.6",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "Hitachi Energy e-mesh EMS",
+          "version": "4.4.2",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Hitachi Energy",
+          "product": "Hitachi Energy e-mesh EMS",
+          "version": "4.7.0",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-03"
+    },
+    {
+      "advisory_id": "ICSA-26-188-04",
+      "title": "Siemens Mendix Studio Pro",
+      "date": "2026-06-30",
+      "summary": "Mendix Studio Pro versions before V11.12 are affected by a file parsing vulnerability that could be triggered when the application reads specially crafted malicious project during the build pipeline. This could allow an attacker to execute arbitrary code in the context of that user.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-48192"
+      ],
+      "cvss_max": 5.4,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.11",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.12",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.13",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.14",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.15",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.16",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.17",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.18",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.19",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.20",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.21",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.22",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.23",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0013"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 10.24",
+          "version": "vers:intdot/<10.24.21",
+          "product_id": "CSAFPID-0014"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.0",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0015"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.1",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0016"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.10",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0017"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.11",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0018"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.2",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0019"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.3",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0020"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.4",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0021"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.5",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0022"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.6",
+          "version": "vers:intdot/<11.6.7",
+          "product_id": "CSAFPID-0023"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.7",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0024"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.8",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0025"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.9",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0026"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-04"
     },
     {
       "advisory_id": "ICSMA-26-181-01",
@@ -2703,6 +3036,110 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-01"
+    },
+    {
+      "advisory_id": "ICSA-26-188-05",
+      "title": "Siemens SINEC OS",
+      "date": "2026-06-02",
+      "summary": "SINEC OS before V4.0 contains multiple vulnerabilities.\n\nSiemens has released a new version for RUGGEDCOM RST2428P and recommends to update to the latest version.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Transportation Systems",
+        "Energy",
+        "Healthcare and Public Health",
+        "Financial Services",
+        "Government Services and Facilities"
+      ],
+      "cves": [
+        "CVE-2025-1352",
+        "CVE-2025-1376",
+        "CVE-2025-6052",
+        "CVE-2025-6141",
+        "CVE-2025-6170",
+        "CVE-2025-7039",
+        "CVE-2025-8732",
+        "CVE-2025-9086",
+        "CVE-2025-9230",
+        "CVE-2025-9231",
+        "CVE-2025-9232",
+        "CVE-2025-10966",
+        "CVE-2025-13465",
+        "CVE-2025-13601",
+        "CVE-2025-39913",
+        "CVE-2025-40214",
+        "CVE-2025-40248",
+        "CVE-2025-40250",
+        "CVE-2025-40251",
+        "CVE-2025-40252",
+        "CVE-2025-40254",
+        "CVE-2025-40257",
+        "CVE-2025-40258",
+        "CVE-2025-40261",
+        "CVE-2025-40262",
+        "CVE-2025-40263",
+        "CVE-2025-40264",
+        "CVE-2025-40271",
+        "CVE-2025-40278",
+        "CVE-2025-40280",
+        "CVE-2025-40281",
+        "CVE-2025-40345",
+        "CVE-2025-46394",
+        "CVE-2025-49794",
+        "CVE-2025-49795",
+        "CVE-2025-49796",
+        "CVE-2025-60876",
+        "CVE-2025-66035",
+        "CVE-2025-66382",
+        "CVE-2025-66412",
+        "CVE-2025-69720",
+        "CVE-2025-71185",
+        "CVE-2025-71186",
+        "CVE-2025-71188",
+        "CVE-2025-71189",
+        "CVE-2025-71190",
+        "CVE-2025-71191",
+        "CVE-2026-1484",
+        "CVE-2026-1489",
+        "CVE-2026-3784",
+        "CVE-2026-22610",
+        "CVE-2026-22976",
+        "CVE-2026-22977",
+        "CVE-2026-23025",
+        "CVE-2026-23026",
+        "CVE-2026-23030",
+        "CVE-2026-23031",
+        "CVE-2026-23032",
+        "CVE-2026-23033",
+        "CVE-2026-23037",
+        "CVE-2026-23038",
+        "CVE-2026-23111",
+        "CVE-2026-23112",
+        "CVE-2026-23220",
+        "CVE-2026-23222",
+        "CVE-2026-23228",
+        "CVE-2026-23229",
+        "CVE-2026-23230",
+        "CVE-2026-23231",
+        "CVE-2026-23236",
+        "CVE-2026-23238",
+        "CVE-2026-24515",
+        "CVE-2026-25210",
+        "CVE-2026-26157",
+        "CVE-2026-26158",
+        "CVE-2026-35535",
+        "CVE-2026-41918"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "RUGGEDCOM RST2428P (6GK6242-6PA00)",
+          "version": "vers:intdot/<4.0",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
     },
     {
       "advisory_id": "ICSA-26-148-01",
@@ -14041,32 +14478,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-076-01"
     },
     {
-      "advisory_id": "ICSA-26-055-01",
-      "title": "InSAT MasterSCADA BUK-TS",
-      "date": "2026-02-24",
-      "summary": "Successful exploitation of these vulnerabilities may allow remote code execution.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Energy",
-        "Water and Wastewater"
-      ],
-      "cves": [
-        "CVE-2026-21410",
-        "CVE-2026-22553"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "InSAT",
-          "product": "MasterSCADA BUK-TS",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-055-01"
-    },
-    {
       "advisory_id": "ICSA-26-055-03",
       "title": "Gardyn Home Kit (Update B)",
       "date": "2026-02-24",
@@ -14280,106 +14691,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-04"
     },
     {
-      "advisory_id": "ICSA-26-050-01",
-      "title": "EnOcean SmartServer IoT",
-      "date": "2026-02-19",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to remotely execute arbitrary code and bypass ASLR.",
-      "sectors": [
-        "Information Technology"
-      ],
-      "cves": [
-        "CVE-2026-20761",
-        "CVE-2026-22885"
-      ],
-      "cvss_max": 8.1,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "EnOcean Edge Inc",
-          "product": "SmartServer IoT",
-          "version": "<=4.60.009",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-01"
-    },
-    {
-      "advisory_id": "ICSA-26-050-02",
-      "title": "Valmet DNA Engineering Web Tools",
-      "date": "2026-02-19",
-      "summary": "Successful exploitation of this vulnerability could allow an unauthenticated attacker to manipulate the web maintenance services URL to achieve arbitrary file read access.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2025-15577"
-      ],
-      "cvss_max": 8.6,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Valmet",
-          "product": "Valmet DNA Engineering Web Tools",
-          "version": "<=C2022",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-02"
-    },
-    {
-      "advisory_id": "ICSA-26-050-03",
-      "title": "Jinan USR IOT Technology Limited (PUSR) USR-W610",
-      "date": "2026-02-19",
-      "summary": "Successful exploitation of these vulnerabilities could result in authentication being disabled, a denial-of-service condition, or an attacker stealing valid user credentials, including administrator credentials.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-25715",
-        "CVE-2026-24455",
-        "CVE-2026-26049",
-        "CVE-2026-26048"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Jinan USR IOT Technology Limited (PUSR)",
-          "product": "USR-W610",
-          "version": "<=3.1.1.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-03"
-    },
-    {
-      "advisory_id": "ICSA-26-050-04",
-      "title": "Welker OdorEyes EcoSystem Pulse Bypass System with XL4 Controller",
-      "date": "2026-02-19",
-      "summary": "Successful exploitation of this vulnerability could result in an over- or under-odorization event.",
-      "sectors": [
-        "Chemical",
-        "Critical Manufacturing",
-        "Energy",
-        "Food and Agriculture"
-      ],
-      "cves": [
-        "CVE-2026-24790"
-      ],
-      "cvss_max": 8.2,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Welker",
-          "product": "OdorEyes EcoSystem Pulse Bypass System with XL4 Controller",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-050-04"
-    },
-    {
       "advisory_id": "ICSA-26-141-03",
       "title": "ABB B&R Automation Studio",
       "date": "2026-02-18",
@@ -14431,151 +14742,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-03"
-    },
-    {
-      "advisory_id": "ICSA-26-048-04",
-      "title": "Honeywell HIB2PI CCTV Camera (Update B)",
-      "date": "2026-02-17",
-      "summary": "Successful exploitation of this vulnerability could lead to account takeover and unauthorized access to camera feeds.",
-      "sectors": [
-        "Commercial Facilities"
-      ],
-      "cves": [
-        "CVE-2026-1670"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Honeywell",
-          "product": "I-HIB2PI-UL",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-048-04"
-    },
-    {
-      "advisory_id": "ICSA-26-055-02",
-      "title": "Schneider Electric EcoStruxure Building Operation Workstation",
-      "date": "2026-02-10",
-      "summary": "Schneider Electric is aware of a vulnerability in EcoStruxure Building Operation Workstation and EcoStruxure Building Operation WebStation.\r\n[EcoStruxure Building Operation (EBO)](https://www.se.com/ww/en/product-range/62111-ecostruxure-building-operation-software/#overview) is an open and scalable software platform providing insight, control and management of multiple building systems and devices in one mobile-enabled convenient view. It delivers valuable data for decision-making to improve energy management and increase efficiency for better building performance and comfort, reduced carbon, and more sustainable building environments. Failure to apply the remediations below may risk exposure of local files or denial of service, which could result in data breaches, and operational disrupti",
-      "sectors": [
-        "Commercial Facilities",
-        "Energy",
-        "Government Services and Facilities",
-        "Healthcare and Public Health",
-        "Information Technology",
-        "Transportation Systems",
-        "Financial Services",
-        "Defense Industrial Base",
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-1227",
-        "CVE-2026-1226"
-      ],
-      "cvss_max": 7.3,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "vers:generic/>=7.0.x|<7.0.3.2000_(CP1)",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "7.0.3.2000_CP1",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "vers:generic/>=6.x|<6.0.4.14001_(CP10)",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "6.0.4.14001_CP10",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "vers:intdot/>=7.0.x|<7.0.2",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "7.0.2",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "vers:generic/>=6.0.x|<6.0.4.7000_(CP5)",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation Workstation",
-          "version": "6.0.4.7000_CP5",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "vers:generic/>=7.0.x|<7.0.3.2000_(CP1)",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "7.0.3.2000_CP1",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "vers:generic/>=6.x|<6.0.4.14001_(CP10)",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "6.0.4.14001_CP10",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "vers:intdot/>=7.0.x|<7.0.2",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "7.0.2",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "vers:generic/>=6.0.x|<6.0.4.7000_(CP5)",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Building Operation WebStation",
-          "version": "6.0.4.7000_CP5",
-          "product_id": "CSAFPID-0016"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-055-02"
     },
     {
       "advisory_id": "ICSA-26-076-02",
@@ -17865,7 +18031,7 @@
     },
     {
       "advisory_id": "ICSA-25-226-03",
-      "title": "Siemens SIMATIC S7-PLCSIM",
+      "title": "Siemens Engineering Platforms",
       "date": "2025-08-12",
       "summary": "Affected products do not properly restrict access permissions to a local Windows Named Pipe and do not properly sanitize user-controllable input sent to that Named Pipe. This could allow a local authenticated attacker to cause a type confusion and execute arbitrary code within the affected application and its privileges.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
       "sectors": [
@@ -17892,7 +18058,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS neo V6.0",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<6.0.1.1",
           "product_id": "CSAFPID-0003"
         },
         {
@@ -17904,7 +18070,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC STEP 7 V17",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0005"
         },
         {
@@ -17916,19 +18082,19 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC STEP 7 V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0007"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC STEP 7 V20",
-          "version": "<V20_Update_4",
+          "version": "vers:intdot/<20.0.4",
           "product_id": "CSAFPID-0008"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC V17",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0009"
         },
         {
@@ -17940,13 +18106,13 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0011"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC V20",
-          "version": "<V20_Update_4",
+          "version": "vers:intdot/<20.0.4",
           "product_id": "CSAFPID-0012"
         },
         {
@@ -17988,7 +18154,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMOTION SCOUT TIA V5.6",
-          "version": "<V5.6_SP1_HF7",
+          "version": "vers:intdot/<5.6.1.7",
           "product_id": "CSAFPID-0019"
         },
         {
@@ -18096,7 +18262,7 @@
         {
           "vendor": "Siemens",
           "product": "TIA Portal Test Suite V20",
-          "version": "<V20_Update_4",
+          "version": "vers:intdot/<20.0.4",
           "product_id": "CSAFPID-0037"
         }
       ],
@@ -27570,7 +27736,7 @@
         {
           "vendor": "Siemens",
           "product": "Powerlink IP",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<4.22",
           "product_id": "CSAFPID-0005"
         },
         {
