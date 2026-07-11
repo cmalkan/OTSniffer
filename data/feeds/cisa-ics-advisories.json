@@ -1,6 +1,32 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-190-01",
+      "title": "OpenPLC v3",
+      "date": "2026-07-09",
+      "summary": "Successful exploitation of this vulnerability could allow an authenticated attacker to write arbitrary files to the filesystem and escalate this into arbitrary native code execution through the normal OpenPLC program compilation process, potentially resulting in code execution as the OpenPLC runtime user. ",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-14480"
+      ],
+      "cvss_max": 9.9,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "OpenPLC",
+          "product": "OpenPLC",
+          "version": "v3",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-01"
+    },
+    {
       "advisory_id": "ICSA-26-188-01",
       "title": "Hydro-Québec Le Circuit Electrique charging station backend",
       "date": "2026-07-07",
@@ -10738,6 +10764,161 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-160-01"
     },
     {
+      "advisory_id": "ICSA-26-190-02",
+      "title": "Schneider Electric PowerChute Serial Shutdown",
+      "date": "2026-04-14",
+      "summary": "Schneider Electric is aware of vulnerabilities in its PowerChute™ Serial Shutdown product. \r\nThe [PowerChute Serial Shutdown](https://www.se.com/ww/en/product-range/137943580-powerchute-serial-shutdown/#products) product is a UPS management software enabling graceful system shutdown \r\nand energy management capabilities for desktop, servers and workstations.  \r\nFailure to apply the remediation provided below may risk improper input validation which could result in \r\ndisruption of operations and access to system data. ",
+      "sectors": [
+        "Communications",
+        "Critical Manufacturing",
+        "Energy",
+        "Healthcare and Public Health",
+        "Information Technology",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-2399",
+        "CVE-2026-2404",
+        "CVE-2026-2402",
+        "CVE-2026-2405",
+        "CVE-2026-2403",
+        "CVE-2026-2400",
+        "CVE-2026-2401"
+      ],
+      "cvss_max": 6.1,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerChute™ Serial Shutdown",
+          "version": "vers:intdot/<=1.4",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "PowerChute™ Serial Shutdown",
+          "version": "1.5",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Microsoft",
+          "product": "Windows",
+          "version": "",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Red Hat",
+          "product": "Enterprise Linux",
+          "version": "",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "SuSE",
+          "product": "Linux",
+          "version": "",
+          "product_id": "CSAFPID-0005"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-02"
+    },
+    {
+      "advisory_id": "ICSA-26-190-03",
+      "title": "Schneider Electric Easergy MiCOM Px40 Series",
+      "date": "2026-04-14",
+      "summary": "Schneider Electric is aware of a vulnerability in its Easergy MiCOM Px40 Series products. The [Easergy MiCOM Px40](https://www.se.com/ww/en/product-subcategory/4725-easergy-micom-px40-series/?filter=business-6-medium-voltage-distribution-and-grid-automation) is a protection relay series for Medium Voltage, High Voltage and Extra High Voltage protection.  Failure to apply the mitigations provided below may risk unauthorized exposure of basic device identification through the SNMP protocol. ",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-4832"
+      ],
+      "cvss_max": 5.3,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P14x",
+          "version": "vers:generic/<B4A",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P24x",
+          "version": "vers:generic/<D3A",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P341",
+          "version": "vers:generic/<E3F",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P342, P343, P344, P345",
+          "version": "vers:generic/<B3F",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P442, P444",
+          "version": "vers:generic/<E3A",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P443, P445, P446, P543, P544, P545, P546",
+          "version": "vers:generic/<H6A",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P841",
+          "version": "vers:generic/<G6A",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P643",
+          "version": "vers:generic/<B3F",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P642, P645",
+          "version": "vers:generic/<B4A",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P741, P742, P743",
+          "version": "vers:generic/<B2A",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P746",
+          "version": "vers:generic/<B4E",
+          "product_id": "CSAFPID-0011"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P746",
+          "version": "vers:generic/<C4E",
+          "product_id": "CSAFPID-0012"
+        },
+        {
+          "vendor": "Schneider Electric",
+          "product": "Easergy MiCOM P849",
+          "version": "vers:generic/<B4A",
+          "product_id": "CSAFPID-0013"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-190-03"
+    },
+    {
       "advisory_id": "ICSA-26-120-01",
       "title": "ABB System 800xA, Symphony Plus IEC 61850",
       "date": "2026-04-13",
@@ -13971,80 +14152,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-062-08"
     },
     {
-      "advisory_id": "ICSA-26-057-01",
-      "title": "Johnson Controls, Inc. Frick Controls Quantum HD",
-      "date": "2026-02-26",
-      "summary": "Successful exploitation of these vulnerabilities can lead to pre-authentication remote code execution, information leak or denial of service.",
-      "sectors": [
-        "Food and Agriculture"
-      ],
-      "cves": [
-        "CVE-2026-21654",
-        "CVE-2026-21656",
-        "CVE-2026-21657",
-        "CVE-2026-21658",
-        "CVE-2026-21659",
-        "CVE-2026-21660"
-      ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Johnson Controls, Inc.",
-          "product": "Frick Controls Quantum HD",
-          "version": "<=10.22",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-01"
-    },
-    {
-      "advisory_id": "ICSA-26-057-02",
-      "title": "Pelco, Inc. Sarix Pro 3 Series IP Cameras",
-      "date": "2026-02-26",
-      "summary": "Successful exploitation of this vulnerability could allow attackers to gain unauthorized access to sensitive device data, bypass surveillance controls, and expose facilities to privacy breaches, operational risks, and regulatory compliance issues. ",
-      "sectors": [
-        "Commercial Facilities",
-        "Defense Industrial Base",
-        "Energy",
-        "Government Services and Facilities",
-        "Healthcare and Public Health",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-1241"
-      ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Pelco, Inc.",
-          "product": "Sarix Professional IMP 3 Series",
-          "version": "<=02.52",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Pelco, Inc.",
-          "product": "Sarix Professional IXP 3 Series",
-          "version": "<=02.52",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Pelco, Inc.",
-          "product": "Sarix Professional IBP 3 Series",
-          "version": "<=02.52",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Pelco, Inc.",
-          "product": "Sarix Professional IWP 3 Series",
-          "version": "<=02.52",
-          "product_id": "CSAFPID-0004"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-02"
-    },
-    {
       "advisory_id": "ICSA-26-057-03",
       "title": "CloudCharge cloudcharge.se",
       "date": "2026-02-26",
@@ -14476,56 +14583,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-076-01"
-    },
-    {
-      "advisory_id": "ICSA-26-055-03",
-      "title": "Gardyn Home Kit (Update B)",
-      "date": "2026-02-24",
-      "summary": "Successful exploitation of these vulnerabilities could allow unauthenticated users to access and control edge devices, access cloud-based devices and user information without authentication, and pivot to other edge devices managed in the Gardyn cloud environment.",
-      "sectors": [
-        "Food and Agriculture"
-      ],
-      "cves": [
-        "CVE-2025-29628",
-        "CVE-2025-29629",
-        "CVE-2025-29631",
-        "CVE-2025-1242",
-        "CVE-2025-10681",
-        "CVE-2026-28766",
-        "CVE-2026-25197",
-        "CVE-2026-32646",
-        "CVE-2026-28767",
-        "CVE-2026-32662"
-      ],
-      "cvss_max": 9.3,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Gardyn",
-          "product": "Gardyn Home Firmware",
-          "version": "<master.622",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Gardyn",
-          "product": "Gardyn Studio Firmware",
-          "version": "<master.622",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Gardyn",
-          "product": "Gardyn Mobile Application",
-          "version": "<2.11.0",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Gardyn",
-          "product": "Gardyn Cloud API",
-          "version": "<2.12.2026",
-          "product_id": "CSAFPID-0004"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-055-03"
     },
     {
       "advisory_id": "ICSA-26-062-02",
@@ -27555,6 +27612,7 @@
         "CVE-2025-47890",
         "CVE-2025-53744",
         "CVE-2025-53843",
+        "CVE-2025-53844",
         "CVE-2025-54821",
         "CVE-2025-57740",
         "CVE-2025-58413",

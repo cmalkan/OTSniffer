@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-09T10:09:55.826Z",
+  "pulled_at": "2026-07-11T08:14:45.196Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -86352,6 +86352,206 @@
       "published": "2026-06-02T14:16:53.200",
       "last_modified": "2026-06-17T10:47:11.847",
       "fetched_at": "2026-07-09T10:09:42.391Z"
+    },
+    "CVE-2026-2399": {
+      "cve_id": "CVE-2026-2399",
+      "description": "CWE-22 Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability exists that could cause critical files overwritten with text data when a Web Admin user alters the POST /REST/upssleep request payload.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.1,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:38.290",
+      "last_modified": "2026-06-17T10:30:53.697",
+      "fetched_at": "2026-07-11T08:13:39.328Z"
+    },
+    "CVE-2026-2404": {
+      "cve_id": "CVE-2026-2404",
+      "description": "CWE-116 Improper Encoding or Escaping of Output vulnerability exists that could cause log injection and forged log when an attacker alters the POST /j_security check request payload.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "cwes": [
+        "CWE-116"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:39.057",
+      "last_modified": "2026-06-17T10:30:54.277",
+      "fetched_at": "2026-07-11T08:13:45.926Z"
+    },
+    "CVE-2026-2402": {
+      "cve_id": "CVE-2026-2402",
+      "description": "CWE-307 Improper Restriction of Excessive Authentication Attempts vulnerability exists that would allow an attacker to gain access to the user account by performing an arbitrary number of authentication attempts with different credentials on a sequence of requests to multiple endpoints.",
+      "cvss_version": "3.1",
+      "cvss_score": 5.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-307"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:38.767",
+      "last_modified": "2026-06-17T10:30:54.043",
+      "fetched_at": "2026-07-11T08:13:52.510Z"
+    },
+    "CVE-2026-2405": {
+      "cve_id": "CVE-2026-2405",
+      "description": "CWE-400 Uncontrolled Resource Consumption vulnerability exists that could cause excessive troubleshooting zip file creation and denial of service when a Web Admin user floods the system with POST /helpabout requests.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-400"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:39.197",
+      "last_modified": "2026-06-17T10:30:54.397",
+      "fetched_at": "2026-07-11T08:13:59.127Z"
+    },
+    "CVE-2026-2403": {
+      "cve_id": "CVE-2026-2403",
+      "description": "CWE-1284 Improper Validation of Specified Quantity in Input vulnerability exists that could cause Event and Data Log truncation impacting log integrity when a Web Admin user alters the POST /logsettings request payload.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+      "cwes": [
+        "CWE-1284"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:38.913",
+      "last_modified": "2026-06-17T10:30:54.163",
+      "fetched_at": "2026-07-11T08:14:05.719Z"
+    },
+    "CVE-2026-2400": {
+      "cve_id": "CVE-2026-2400",
+      "description": "CWE-93 Improper Neutralization of CRLF Sequences ('CRLF Injection') vulnerability exists that could cause application user credentials to reset  when  a Web Admin user alters the POST /setPCBEDesc request payload.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-93"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:38.477",
+      "last_modified": "2026-06-17T10:30:53.813",
+      "fetched_at": "2026-07-11T08:14:12.306Z"
+    },
+    "CVE-2026-2401": {
+      "cve_id": "CVE-2026-2401",
+      "description": "CWE-532 Insertion of Sensitive Information into Log File vulnerability exists that could cause  confidential information to be exposed when a Web Admin user executes a malicious file provided by an attacker.",
+      "cvss_version": "3.1",
+      "cvss_score": 5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+      "cwes": [
+        "CWE-532"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-01.pdf",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2026-04-14T16:16:38.623",
+      "last_modified": "2026-06-17T10:30:53.927",
+      "fetched_at": "2026-07-11T08:14:18.862Z"
+    },
+    "CVE-2026-4832": {
+      "cve_id": "CVE-2026-4832",
+      "description": "CWE-798 Use of Hard-coded Credentials vulnerability exists that could cause unauthorized access to sensitive device information when an unauthenticated attacker is able to interrogate the SNMP port.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-798"
+      ],
+      "references": [
+        {
+          "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-104-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-104-03.pdf",
+          "tags": []
+        }
+      ],
+      "published": "2026-04-14T16:16:48.167",
+      "last_modified": "2026-06-17T10:57:18.533",
+      "fetched_at": "2026-07-11T08:14:25.449Z"
+    },
+    "CVE-2025-53844": {
+      "cve_id": "CVE-2025-53844",
+      "description": "A out-of-bounds write vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11 allows attacker to execute unauthorized code or commands via specially crafted packets.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-123",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-864900.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-05-12T18:16:35.983",
+      "last_modified": "2026-06-17T09:39:01.180",
+      "fetched_at": "2026-07-11T08:14:38.652Z"
     }
   }
 }
