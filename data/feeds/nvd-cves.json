@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-11T08:14:45.196Z",
+  "pulled_at": "2026-07-13T09:48:05.555Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82349,8 +82349,8 @@
         }
       ],
       "published": "2026-05-12T10:16:42.860",
-      "last_modified": "2026-05-29T14:16:23.570",
-      "fetched_at": "2026-06-11T10:58:36.764Z"
+      "last_modified": "2026-06-17T09:22:21.137",
+      "fetched_at": "2026-07-13T09:47:38.160Z"
     },
     "CVE-2026-41125": {
       "cve_id": "CVE-2026-41125",
@@ -82369,28 +82369,30 @@
         }
       ],
       "published": "2026-05-12T10:16:46.057",
-      "last_modified": "2026-05-29T14:16:26.890",
-      "fetched_at": "2026-06-11T10:58:43.519Z"
+      "last_modified": "2026-06-17T10:46:11.860",
+      "fetched_at": "2026-07-13T09:47:44.872Z"
     },
     "CVE-2026-6866": {
       "cve_id": "CVE-2026-6866",
       "description": "CWE-1188 Initialization of a Resource with an Insecure Default vulnerability exists that could cause unauthorized disclosure of sensitive information when credentials revert to initial settings in rare circumstances, enabling unauthorized authentication using known credentials.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
       "cwes": [
         "CWE-1188"
       ],
       "references": [
         {
           "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-132-04&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-132-04.pdf",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-05-12T15:16:16.570",
-      "last_modified": "2026-05-12T16:38:24.040",
-      "fetched_at": "2026-06-11T10:58:50.215Z"
+      "last_modified": "2026-06-24T15:17:05.810",
+      "fetched_at": "2026-07-13T09:47:51.665Z"
     },
     "CVE-2025-14272": {
       "cve_id": "CVE-2025-14272",
