@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-13T09:48:05.555Z",
+  "pulled_at": "2026-07-15T08:34:43.930Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -86554,6 +86554,26 @@
       "published": "2026-05-12T18:16:35.983",
       "last_modified": "2026-06-17T09:39:01.180",
       "fetched_at": "2026-07-11T08:14:38.652Z"
+    },
+    "CVE-2026-10577": {
+      "cve_id": "CVE-2026-10577",
+      "description": "A security issue exists within the 1715-AENTR EtherNet/IP Adapter. The affected product exposes a network-accessible debug port that does not enforce proper privilege controls, allowing unauthenticated remote access to intrusive command-line interface (CLI) commands. If exploited, a threat actor could read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-306"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1785.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T13:18:13.163",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-15T08:34:30.797Z"
     }
   }
 }

@@ -1,6 +1,31 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-195-04",
+      "title": "Rockwell Automation 1715-AENTR EtherNet/IP Adapter",
+      "date": "2026-07-14",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to read or delete files, stop tasks, modify memory, and change I/O states, potentially impacting the confidentiality, integrity, and availability of the device.",
+      "sectors": [
+        "Energy",
+        "Water and Wastewater",
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-10577"
+      ],
+      "cvss_max": 10,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "1715-AENTR EtherNet/IP Adapter",
+          "version": "<=3.003",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+    },
+    {
       "advisory_id": "ICSA-26-190-01",
       "title": "OpenPLC v3",
       "date": "2026-07-09",
@@ -827,6 +852,53 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-06"
     },
     {
+      "advisory_id": "ICSA-26-195-02",
+      "title": "ABB Ability Edgenius",
+      "date": "2026-06-25",
+      "summary": "ABB is aware of public reports of a vulnerability CVE‑2026‑31431 (Copy Fail) in the product versions listed as affected in the advisory. An update is available that resolves a publicly reported vulnerability.\n\nCVE‑2026‑31431 (Copy Fail) is a Linux kernel vulnerability that may allow a locally authenticated user or compromised container workload to gain elevated (root) privileges on affected systems. Once root access is obtained, the attacker can effectively gain complete control of the system\n",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-31431"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius Gateway - bE100",
+          "version": "",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius Gateway - E3100C",
+          "version": "",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius Server - vE1000",
+          "version": "",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius",
+          "version": ">=3.2.0.0|<3.2.4.1",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Ability Edgenius",
+          "version": "3.2.4.1",
+          "product_id": "CSAFPID-0005"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02"
+    },
+    {
       "advisory_id": "ICSMA-26-176-01",
       "title": "pydicom pynetdicom Library",
       "date": "2026-06-25",
@@ -894,6 +966,89 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-07"
+    },
+    {
+      "advisory_id": "ICSA-26-195-01",
+      "title": "ABB Advant Master Online Builder",
+      "date": "2026-06-23",
+      "summary": "ABB became aware of vulnerability in the products versions listed as affected in the advisory, where an incorrect version of Online Builder (ONB) was included in the media.\n\nAn update is available that resolves the vulnerability, see details in Recommended immediate actions. ",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-13162"
+      ],
+      "cvss_max": 4.4,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Control Builder A",
+          "version": "<=1.4/4",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "Control Builder A",
+          "version": "1.4/5",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "<=6.0.3-1",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "<=6.1.1-1",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.1.1-3",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.1.1-5",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.2.0-1",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.2.0-3",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.1.1-2",
+          "product_id": "CSAFPID-0009"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.1.1-4",
+          "product_id": "CSAFPID-0010"
+        },
+        {
+          "vendor": "ABB",
+          "product": "800xA for Advant Master",
+          "version": "6.2.0-2",
+          "product_id": "CSAFPID-0011"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-01"
     },
     {
       "advisory_id": "ICSA-26-169-01",
@@ -3062,6 +3217,38 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-155-01"
+    },
+    {
+      "advisory_id": "ICSA-26-195-03",
+      "title": "ABB T-MAC Plus",
+      "date": "2026-06-03",
+      "summary": "ABB became aware of vulnerability in the products versions listed as affected in the advisory. An update is available that resolves the reported vulnerabilities. \n\nAn attacker who successfully exploited any of these vulnerabilities could potentially compromise the system in different ways.\n",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-14771",
+        "CVE-2025-14772",
+        "CVE-2025-14773",
+        "CVE-2025-14774"
+      ],
+      "cvss_max": 9.9,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "T-MAC Plus",
+          "version": "4.0-24",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "T-MAC Plus",
+          "version": "4.0-25",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-03"
     },
     {
       "advisory_id": "ICSA-26-188-05",
@@ -14150,114 +14337,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-062-08"
-    },
-    {
-      "advisory_id": "ICSA-26-057-03",
-      "title": "CloudCharge cloudcharge.se",
-      "date": "2026-02-26",
-      "summary": "Successful exploitation of these vulnerabilities could allow attackers to impersonate charging stations, hijack sessions, suppress or misroute legitimate traffic to cause large-scale denial of service, and manipulate data sent to the backend.",
-      "sectors": [
-        "Energy",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-20781",
-        "CVE-2026-25114",
-        "CVE-2026-27652",
-        "CVE-2026-20733"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "CloudCharge",
-          "product": "cloudcharge.se",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-03"
-    },
-    {
-      "advisory_id": "ICSA-26-057-04",
-      "title": "EV2GO ev2go.io",
-      "date": "2026-02-26",
-      "summary": "Successful exploitation of these vulnerabilities could allow attackers to impersonate charging stations, hijack sessions, suppress or misroute legitimate traffic to cause large-scale denial of service, and manipulate data sent to the backend.",
-      "sectors": [
-        "Energy",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-24731",
-        "CVE-2026-25945",
-        "CVE-2026-20895",
-        "CVE-2026-22890"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "EV2GO",
-          "product": "ev2go.io",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-04"
-    },
-    {
-      "advisory_id": "ICSA-26-057-05",
-      "title": "Chargemap chargemap.com",
-      "date": "2026-02-26",
-      "summary": "Successful exploitation of these vulnerabilities could enable attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt charging services through denial-of-service attacks.",
-      "sectors": [
-        "Energy",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-25851",
-        "CVE-2026-20792",
-        "CVE-2026-25711",
-        "CVE-2026-20791"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Chargemap",
-          "product": "chargemap.com",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-05"
-    },
-    {
-      "advisory_id": "ICSA-26-057-06",
-      "title": "SWTCH EV swtchenergy.com (Update A)",
-      "date": "2026-02-26",
-      "summary": "Successful exploitation of these vulnerabilities could allow attackers to impersonate charging stations, hijack sessions, suppress or misroute legitimate traffic to cause large-scale denial-of-service, and manipulate data sent to the backend.",
-      "sectors": [
-        "Energy",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-27767",
-        "CVE-2026-25113",
-        "CVE-2026-25778",
-        "CVE-2026-27773"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "SWTCH EV",
-          "product": "swtchenergy.com",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-057-06"
     },
     {
       "advisory_id": "ICSA-26-057-07",
