@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-19T08:33:22.044Z",
+  "pulled_at": "2026-07-21T08:42:32.889Z",
   "sources": {
     "kev": {
       "url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
@@ -13,7 +13,7 @@
         "2025",
         "2026"
       ],
-      "count": 399
+      "count": 400
     }
   }
 }
