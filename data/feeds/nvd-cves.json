@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-21T08:42:46.193Z",
+  "pulled_at": "2026-07-23T08:47:24.744Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82408,7 +82408,7 @@
       ],
       "published": "2026-05-06T19:16:35.730",
       "last_modified": "2026-06-17T10:10:43.073",
-      "fetched_at": "2026-06-21T10:05:29.393Z"
+      "fetched_at": "2026-07-23T08:47:11.443Z"
     },
     "CVE-2026-6332": {
       "cve_id": "CVE-2026-6332",
@@ -86962,6 +86962,1280 @@
       "published": "2026-07-09T15:16:36.830",
       "last_modified": "2026-07-09T18:16:54.307",
       "fetched_at": "2026-07-17T08:28:31.018Z"
+    },
+    "CVE-2026-10714": {
+      "cve_id": "CVE-2026-10714",
+      "description": "A security issue exists within FactoryTalk® Services Platform (FTSP), allowing an attacker to bypass JWT signature validation during Okta Web Authentication. The vulnerability stems from the application not verifying that the JWT algorithm is configured for RSA, enabling an attacker to set the algorithm to \"none\" and craft forged tokens. This could allow an authenticated low-privilege user to impersonate any authorized user on the FTSP server, resulting in unauthorized access to system configuration and the ability to grant permissions to other systems protected by FTSP.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-1390"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1786.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T15:16:55.673",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-23T08:43:55.688Z"
+    },
+    "CVE-2026-9140": {
+      "cve_id": "CVE-2026-9140",
+      "description": "A denial-of-service security issue exists in the 1719-AENTR. The security issue stems from improper handling of a UDP unicast network storm, which causes the device to become overloaded and lose communication. A power cycle is required to recover.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-770"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1778.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T15:17:10.897",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-23T08:44:02.320Z"
+    },
+    "CVE-2026-10573": {
+      "cve_id": "CVE-2026-10573",
+      "description": "A denial-of-service security issue exists in 1734 POINT I/O™ module. The security issue stems from improper handling of crafted CIP messages, which can cause the module to enter a faulted state. A restart is required to recover.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-770"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1779.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T15:16:55.097",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-23T08:44:08.941Z"
+    },
+    "CVE-2026-9108": {
+      "cve_id": "CVE-2026-9108",
+      "description": "A path traversal security issue exists within Studio 5000 Logix Designer® due to improper limitation of file paths within ACD project files. The software does not sanitize or validate file names embedded in the ACD file structure during the project opening procedure, allowing path traversal sequences to escape the intended extraction directory. If exploited, an attacker could craft a malicious ACD project file that results in arbitrary files being written to attacker-controlled locations on the file system, potentially leading to code execution.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1783.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T16:17:05.210",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-23T08:44:15.595Z"
+    },
+    "CVE-2026-9127": {
+      "cve_id": "CVE-2026-9127",
+      "description": "A remote code execution security issue exists within Studio 5000 Logix Designer® due to incorrect authorization on a configuration file. This can allow any authenticated user to modify the paths of external tools configured within the application. If exploited, an attacker could alter the configuration to point to a malicious executable, resulting in arbitrary code execution when any user interacts with the external tools functionality.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-863"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1783.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T16:17:05.347",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-23T08:44:22.233Z"
+    },
+    "CVE-2026-9128": {
+      "cve_id": "CVE-2026-9128",
+      "description": "A code execution security issue exists within Studio 5000 Logix Designer® due to an unquoted search path in the External Tools configuration. The executable paths specified in the external tools configuration file are not properly quoted, and because these paths contain spaces, the operating system may resolve them to unintended executables placed earlier in the search order. If exploited, an attacker could plant a malicious executable in a location within the search path, resulting in arbitrary code execution with the same permissions of the user running the application.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-428"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1783.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T16:17:05.487",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-23T08:44:28.846Z"
+    },
+    "CVE-2026-0266": {
+      "cve_id": "CVE-2026-0266",
+      "description": "A cross-site scripting (XSS) vulnerability in Palo Alto Networks PAN-OS® software enables a malicious authenticated administrator to store a JavaScript payload using the web interface. \n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\nCloud NGFW and Prisma® Access are not affected by this vulnerability.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.8,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+      "cwes": [
+        "CWE-79"
+      ],
+      "references": [
+        {
+          "url": "https://security.paloaltonetworks.com/CVE-2026-0266",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-10T22:16:52.787",
+      "last_modified": "2026-07-14T13:18:10.833",
+      "fetched_at": "2026-07-23T08:44:35.507Z"
+    },
+    "CVE-2026-0272": {
+      "cve_id": "CVE-2026-0272",
+      "description": "A privilege escalation vulnerability in Palo Alto Networks PAN-OS® software allows an authenticated administrator with access to the Command Line Interface (CLI) to perform actions on the device with root privileges.\n\n\n\nThe security risk posed by this issue is significantly minimized when CLI access is restricted to a limited group of administrators and by restricting access to the management interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\n\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\nCloud NGFW, and Prisma® Access are not impacted by this vulnerability.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.2,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-862",
+        "CWE-863"
+      ],
+      "references": [
+        {
+          "url": "https://security.paloaltonetworks.com/CVE-2026-0272",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-10T22:16:54.270",
+      "last_modified": "2026-07-14T13:18:11.560",
+      "fetched_at": "2026-07-23T08:44:42.247Z"
+    },
+    "CVE-2026-0273": {
+      "cve_id": "CVE-2026-0273",
+      "description": "A command injection vulnerability in Palo Alto Networks PAN-OS® software enables an authenticated administrator to bypass system restrictions and run arbitrary commands as a root user. To be able to exploit this issue, the user must have access to the PAN-OS CLI or Web UI.\n\nThe security risk posed by this issue is significantly minimized when CLI access is restricted to a limited group of administrators and by restricting access to the management web interface to only trusted internal IP addresses according to our recommended  best practice deployment guidelines https://live.paloaltonetworks.com/t5/community-blogs/tips-amp-tricks-how-to-secure-the-management-access-of-your-palo/ba-p/464431 .\n\nThis issue is applicable to PAN-OS software on PA-Series and VM-Series firewalls and on Panorama (virtual and M-Series).\n\nCloud NGFW and Prisma® Access are not affected by this vulnerability.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.2,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-78"
+      ],
+      "references": [
+        {
+          "url": "https://security.paloaltonetworks.com/CVE-2026-0273",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-104023.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-06-10T22:16:54.730",
+      "last_modified": "2026-07-14T13:18:12.053",
+      "fetched_at": "2026-07-23T08:44:49.404Z"
+    },
+    "CVE-2026-56451": {
+      "cve_id": "CVE-2026-56451",
+      "description": "A vulnerability has been identified in Opcenter X (All versions < V2604). Affected applications do not properly validate the algorithm specified in the JSON Web Token (JWT) header.\r\nThis could allow an unauthenticated remote attacker to forge arbitrary JWT, bypass authentication mechanisms and impersonate any user including administrative accounts, potentially gaining full unauthorized access to the application.",
+      "cvss_version": "3.1",
+      "cvss_score": 10,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-347"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-096828.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T10:16:33.287",
+      "last_modified": "2026-07-15T20:27:37.663",
+      "fetched_at": "2026-07-23T08:44:56.031Z"
+    },
+    "CVE-2022-23303": {
+      "cve_id": "CVE-2022-23303",
+      "description": "The implementations of SAE in hostapd before 2.10 and wpa_supplicant before 2.10 are vulnerable to side channel attacks as a result of cache access patterns. NOTE: this issue exists because of an incomplete fix for CVE-2019-9494.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-203"
+      ],
+      "references": [
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/YPDHU5MV464CZBPX7N2SNMUYP6DFIBZL/",
+          "tags": []
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202309-16",
+          "tags": []
+        },
+        {
+          "url": "https://w1.fi/security/2022-1/",
+          "tags": [
+            "Mitigation",
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00019.html",
+          "tags": []
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/YPDHU5MV464CZBPX7N2SNMUYP6DFIBZL/",
+          "tags": []
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202309-16",
+          "tags": []
+        },
+        {
+          "url": "https://w1.fi/security/2022-1/",
+          "tags": [
+            "Mitigation",
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-585531.html",
+          "tags": []
+        }
+      ],
+      "published": "2022-01-17T02:15:06.760",
+      "last_modified": "2026-07-14T12:16:47.380",
+      "fetched_at": "2026-07-23T08:45:02.702Z"
+    },
+    "CVE-2022-23304": {
+      "cve_id": "CVE-2022-23304",
+      "description": "The implementations of EAP-pwd in hostapd before 2.10 and wpa_supplicant before 2.10 are vulnerable to side-channel attacks as a result of cache access patterns. NOTE: this issue exists because of an incomplete fix for CVE-2019-9495.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-203"
+      ],
+      "references": [
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/YPDHU5MV464CZBPX7N2SNMUYP6DFIBZL/",
+          "tags": []
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202309-16",
+          "tags": []
+        },
+        {
+          "url": "https://w1.fi/security/2022-1/",
+          "tags": [
+            "Mitigation",
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00019.html",
+          "tags": []
+        },
+        {
+          "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/YPDHU5MV464CZBPX7N2SNMUYP6DFIBZL/",
+          "tags": []
+        },
+        {
+          "url": "https://security.gentoo.org/glsa/202309-16",
+          "tags": []
+        },
+        {
+          "url": "https://w1.fi/security/2022-1/",
+          "tags": [
+            "Mitigation",
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-585531.html",
+          "tags": []
+        }
+      ],
+      "published": "2022-01-17T02:15:06.813",
+      "last_modified": "2026-07-14T12:16:47.523",
+      "fetched_at": "2026-07-23T08:45:09.562Z"
+    },
+    "CVE-2022-37660": {
+      "cve_id": "CVE-2022-37660",
+      "description": "In hostapd 2.10 and earlier, the PKEX code remains active even after a successful PKEX association. An attacker that successfully bootstrapped public keys with another entity using PKEX in the past, will be able to subvert a future bootstrapping by passively observing public keys, re-using the encrypting element Qi and subtracting it from the captured message M (X = M - Qi). This will result in the public ephemeral key X; the only element required to subvert the PKEX association.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+      "cwes": [
+        "CWE-323"
+      ],
+      "references": [
+        {
+          "url": "https://link.springer.com/article/10.1007/s10207-025-00988-3",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://w1.fi/cgit/hostap/commit/?id=15af83cf1846870873a011ed4d714732f01cd2e4",
+          "tags": [
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00019.html",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-585531.html",
+          "tags": []
+        }
+      ],
+      "published": "2025-02-11T23:15:08.140",
+      "last_modified": "2026-07-14T12:16:48.013",
+      "fetched_at": "2026-07-23T08:45:16.195Z"
+    },
+    "CVE-2025-5222": {
+      "cve_id": "CVE-2025-5222",
+      "description": "A stack buffer overflow was found in Internationl components for unicode (ICU ). While running the genrb binary, the 'subtag' struct overflowed at the SRBRoot::addTag function. This issue may lead to memory corruption and local arbitrary code execution.",
+      "cvss_version": "3.1",
+      "cvss_score": 7,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-120"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:11888",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:12083",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:12331",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:12332",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:12333",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2025-5222",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2368600",
+          "tags": [
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://unicode-org.atlassian.net/jira/software/c/projects/ICU/issues/ICU-22957",
+          "tags": []
+        }
+      ],
+      "published": "2025-05-27T21:15:23.030",
+      "last_modified": "2026-07-14T13:17:55.820",
+      "fetched_at": "2026-07-23T08:45:23.207Z"
+    },
+    "CVE-2025-5914": {
+      "cve_id": "CVE-2025-5914",
+      "description": "A vulnerability has been identified in the libarchive library, specifically within the archive_read_format_rar_seek_data() function. This flaw involves an integer overflow that can ultimately lead to a double-free condition. Exploiting a double-free vulnerability can result in memory corruption, enabling an attacker to execute arbitrary code or cause a denial-of-service condition.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-190"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14130",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14135",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14137",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14141",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14142",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14525",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14528",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2025:14594",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2025-06-09T20:15:26.123",
+      "last_modified": "2026-07-21T00:16:52.360",
+      "fetched_at": "2026-07-23T08:45:30.156Z"
+    },
+    "CVE-2025-32462": {
+      "cve_id": "CVE-2025-32462",
+      "description": "Sudo before 1.9.17p1, when used with a sudoers file that specifies a host that is neither the current host nor ALL, allows listed users to execute commands on unintended machines.",
+      "cvss_version": "3.1",
+      "cvss_score": 2.8,
+      "cvss_severity": "low",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:N/I:L/A:N",
+      "cwes": [
+        "CWE-863"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/security/cve/cve-2025-32462",
+          "tags": []
+        },
+        {
+          "url": "https://bugs.gentoo.org/show_bug.cgi?id=CVE-2025-32462",
+          "tags": []
+        },
+        {
+          "url": "https://explore.alas.aws.amazon.com/CVE-2025-32462.html",
+          "tags": []
+        },
+        {
+          "url": "https://lists.debian.org/debian-security-announce/2025/msg00118.html",
+          "tags": []
+        },
+        {
+          "url": "https://security-tracker.debian.org/tracker/CVE-2025-32462",
+          "tags": []
+        },
+        {
+          "url": "https://ubuntu.com/security/notices/USN-7604-1",
+          "tags": []
+        },
+        {
+          "url": "https://www.openwall.com/lists/oss-security/2025/06/30/2",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://www.secpod.com/blog/sudo-lpe-vulnerabilities-resolved-what-you-need-to-know-about-cve-2025-32462-and-cve-2025-32463/",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2025-06-30T21:15:30.080",
+      "last_modified": "2026-07-14T13:17:33.347",
+      "fetched_at": "2026-07-23T08:45:36.812Z"
+    },
+    "CVE-2026-5121": {
+      "cve_id": "CVE-2026-5121",
+      "description": "A flaw was found in libarchive. On 32-bit systems, an integer overflow vulnerability exists in the zisofs block pointer allocation logic. A remote attacker can exploit this by providing a specially crafted ISO9660 image, which can lead to a heap buffer overflow. This could potentially allow for arbitrary code execution on the affected system.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "cwes": [
+        "CWE-190",
+        "CWE-190"
+      ],
+      "references": [
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:10065",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:10097",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:11768",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:12071",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:12274",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:13812",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:14773",
+          "tags": []
+        },
+        {
+          "url": "https://access.redhat.com/errata/RHSA-2026:14937",
+          "tags": []
+        }
+      ],
+      "published": "2026-03-30T08:16:18.780",
+      "last_modified": "2026-07-14T13:19:00.930",
+      "fetched_at": "2026-07-23T08:45:43.522Z"
+    },
+    "CVE-2025-40945": {
+      "cve_id": "CVE-2025-40945",
+      "description": "A vulnerability has been identified in COMOS V10.4.5 (All versions < V10.4.5.0.2), COMOS V10.6 (All versions < V10.6.1), Designcenter NX (All versions < V2512.7000), Simcenter 3D (All versions < V2512.7000), Simcenter Femap V2506 (All versions < V2506.0003), Simcenter Femap V2512 (All versions < V2512.0002), Simcenter Nastran (All versions < V2606), Simcenter STAR-CCM+ (All versions < V2606), Solid Edge SE2025 (All versions < V225.0 Update 13), Solid Edge SE2026 (All versions < V226.0 Update 04), Teamcenter Visualization V2412 (All versions < V2412.0012), Teamcenter Visualization V2506 (All versions < V2506.0009), Teamcenter Visualization V2512 (All versions < V2512.2605), Tecnomatix Plant Simulation V2404 (All versions < V2404.0022), Tecnomatix Plant Simulation V2504 (All versions < V2504.0010), Tecnomatix Process Simulate (All versions < V2606). Untrusted search path in IAM Client SDK may allow an authenticated user to potentially enable escalation of privilege via local access.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.7,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-426"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-288252.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T10:16:30.783",
+      "last_modified": "2026-07-15T20:27:37.663",
+      "fetched_at": "2026-07-23T08:45:50.232Z"
+    },
+    "CVE-2005-2096": {
+      "cve_id": "CVE-2005-2096",
+      "description": "zlib 1.2 and later versions allows remote attackers to cause a denial of service (crash) via a crafted compressed stream with an incomplete code description of a length greater than 1, which leads to a buffer overflow, as demonstrated using a crafted PNG file.",
+      "cvss_version": "2.0",
+      "cvss_score": 7.5,
+      "cvss_severity": null,
+      "cvss_vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+      "cwes": [],
+      "references": [
+        {
+          "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:16.zlib.asc",
+          "tags": []
+        },
+        {
+          "url": "ftp://ftp.sco.com/pub/updates/OpenServer/SCOSA-2006.6/SCOSA-2006.6.txt",
+          "tags": []
+        },
+        {
+          "url": "http://lists.apple.com/archives/security-announce//2008/Nov/msg00001.html",
+          "tags": []
+        },
+        {
+          "url": "http://lists.apple.com/archives/security-announce/2005//Aug/msg00001.html",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "http://lists.apple.com/archives/security-announce/2005/Aug/msg00000.html",
+          "tags": []
+        },
+        {
+          "url": "http://secunia.com/advisories/15949",
+          "tags": [
+            "Patch",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "http://secunia.com/advisories/17054",
+          "tags": []
+        },
+        {
+          "url": "http://secunia.com/advisories/17225",
+          "tags": []
+        }
+      ],
+      "published": "2005-07-06T04:00:00.000",
+      "last_modified": "2026-07-14T12:16:44.270",
+      "fetched_at": "2026-07-23T08:45:56.880Z"
+    },
+    "CVE-2016-9840": {
+      "cve_id": "CVE-2016-9840",
+      "description": "inftrees.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact by leveraging improper pointer arithmetic.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2016-12/msg00127.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00050.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00053.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2016/12/05/21",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.securityfocus.com/bid/95131",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "http://www.securitytracker.com/id/1039427",
+          "tags": [
+            "Broken Link"
+          ]
+        }
+      ],
+      "published": "2017-05-23T04:29:01.667",
+      "last_modified": "2026-07-14T12:16:45.520",
+      "fetched_at": "2026-07-23T08:46:03.800Z"
+    },
+    "CVE-2016-9841": {
+      "cve_id": "CVE-2016-9841",
+      "description": "inffast.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact by leveraging improper pointer arithmetic.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [],
+      "references": [
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2016-12/msg00127.html",
+          "tags": []
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00050.html",
+          "tags": []
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00053.html",
+          "tags": []
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2016/12/05/21",
+          "tags": []
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2018-4258247.html",
+          "tags": []
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html",
+          "tags": []
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html",
+          "tags": []
+        },
+        {
+          "url": "http://www.securityfocus.com/bid/95131",
+          "tags": []
+        }
+      ],
+      "published": "2017-05-23T04:29:01.743",
+      "last_modified": "2026-07-14T12:16:45.867",
+      "fetched_at": "2026-07-23T08:46:10.788Z"
+    },
+    "CVE-2016-9842": {
+      "cve_id": "CVE-2016-9842",
+      "description": "The inflateMark function in inflate.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact via vectors involving left shifts of negative integers.",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-1335"
+      ],
+      "references": [
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2016-12/msg00127.html",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00050.html",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "http://lists.opensuse.org/opensuse-updates/2017-01/msg00053.html",
+          "tags": [
+            "Broken Link"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2016/12/05/21",
+          "tags": [
+            "Mailing List",
+            "Patch"
+          ]
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2018-4428296.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.securityfocus.com/bid/95131",
+          "tags": [
+            "Broken Link",
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "http://www.securitytracker.com/id/1039427",
+          "tags": [
+            "Broken Link",
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        }
+      ],
+      "published": "2017-05-23T04:29:01.837",
+      "last_modified": "2026-07-14T12:16:46.140",
+      "fetched_at": "2026-07-23T08:46:17.463Z"
+    },
+    "CVE-2017-14919": {
+      "cve_id": "CVE-2017-14919",
+      "description": "Node.js before 4.8.5, 6.x before 6.11.5, and 8.x before 8.8.0 allows remote attackers to cause a denial of service (uncaught exception and crash) by leveraging a change in the zlib module 1.2.9 making 8 an invalid value for the windowBits parameter.",
+      "cvss_version": "3.0",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-20"
+      ],
+      "references": [
+        {
+          "url": "http://www.securityfocus.com/bid/101881",
+          "tags": [
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://nodejs.org/en/blog/release/v4.8.5/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://nodejs.org/en/blog/release/v6.11.5/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://nodejs.org/en/blog/release/v8.8.0/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://nodejs.org/en/blog/vulnerability/oct-2017-dos/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "http://www.securityfocus.com/bid/101881",
+          "tags": [
+            "Third Party Advisory",
+            "VDB Entry"
+          ]
+        },
+        {
+          "url": "https://nodejs.org/en/blog/release/v4.8.5/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://nodejs.org/en/blog/release/v6.11.5/",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        }
+      ],
+      "published": "2017-10-30T19:29:00.420",
+      "last_modified": "2026-07-14T12:16:46.547",
+      "fetched_at": "2026-07-23T08:46:24.095Z"
+    },
+    "CVE-2018-25032": {
+      "cve_id": "CVE-2018-25032",
+      "description": "zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "cwes": [
+        "CWE-787",
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/May/33",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/May/35",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/May/38",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2022/03/25/2",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2022/03/26/1",
+          "tags": [
+            "Exploit",
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-333517.pdf",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://github.com/madler/zlib/commit/5c44459c3b28a9bd3283aaceab7c615f8020c531",
+          "tags": [
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://github.com/madler/zlib/compare/v1.2.11...v1.2.12",
+          "tags": [
+            "Patch",
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2022-03-25T09:15:08.187",
+      "last_modified": "2026-07-14T12:16:46.733",
+      "fetched_at": "2026-07-23T08:46:31.042Z"
+    },
+    "CVE-2022-37434": {
+      "cve_id": "CVE-2022-37434",
+      "description": "zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787",
+        "CWE-120"
+      ],
+      "references": [
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/Oct/37",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/Oct/38",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/Oct/41",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://seclists.org/fulldisclosure/2022/Oct/42",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2022/08/05/2",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2022/08/09/1",
+          "tags": [
+            "Mailing List",
+            "Patch",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://github.com/curl/curl/issues/9271",
+          "tags": [
+            "Exploit",
+            "Issue Tracking",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://github.com/ivd38/zlib_overflow",
+          "tags": [
+            "Exploit",
+            "Third Party Advisory"
+          ]
+        }
+      ],
+      "published": "2022-08-05T07:15:07.240",
+      "last_modified": "2026-07-14T12:16:47.660",
+      "fetched_at": "2026-07-23T08:46:37.841Z"
+    },
+    "CVE-2023-45853": {
+      "cve_id": "CVE-2023-45853",
+      "description": "MiniZip in zlib through 1.3 has an integer overflow and resultant heap-based buffer overflow in zipOpenNewFileInZip4_64 via a long filename, comment, or extra field. NOTE: MiniZip is not a supported part of the zlib product. NOTE: pyminizip through 0.2.6 is also vulnerable because it bundles an affected zlib version, and exposes the applicable MiniZip code through its compress API.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-190",
+        "CWE-190"
+      ],
+      "references": [
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2023/10/20/9",
+          "tags": [
+            "Mailing List"
+          ]
+        },
+        {
+          "url": "http://www.openwall.com/lists/oss-security/2024/01/24/10",
+          "tags": [
+            "Mailing List"
+          ]
+        },
+        {
+          "url": "https://chromium.googlesource.com/chromium/src/+/d709fb23806858847131027da95ef4c548813356",
+          "tags": [
+            "Mailing List",
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://chromium.googlesource.com/chromium/src/+/de29dd6c7151d3cd37cb4cf0036800ddfb1d8b61",
+          "tags": [
+            "Mailing List",
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://github.com/madler/zlib/blob/ac8f12c97d1afd9bafa9c710f827d40a407d3266/contrib/README.contrib#L1-L4",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://github.com/madler/zlib/pull/843",
+          "tags": [
+            "Issue Tracking",
+            "Patch"
+          ]
+        },
+        {
+          "url": "https://lists.debian.org/debian-lts-announce/2023/11/msg00026.html",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://pypi.org/project/pyminizip/#history",
+          "tags": [
+            "Release Notes"
+          ]
+        }
+      ],
+      "published": "2023-10-14T02:15:09.323",
+      "last_modified": "2026-07-14T13:17:02.983",
+      "fetched_at": "2026-07-23T08:46:44.743Z"
+    },
+    "CVE-2025-10585": {
+      "cve_id": "CVE-2025-10585",
+      "description": "Type confusion in V8 in Google Chrome prior to 140.0.7339.185 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "cvss_version": "3.1",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-843",
+        "CWE-843"
+      ],
+      "references": [
+        {
+          "url": "https://chromereleases.googleblog.com/2025/09/stable-channel-update-for-desktop_17.html",
+          "tags": [
+            "Release Notes",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://issues.chromium.org/issues/445380761",
+          "tags": [
+            "Issue Tracking",
+            "Permissions Required"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-470355.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-10585",
+          "tags": [
+            "US Government Resource"
+          ]
+        }
+      ],
+      "published": "2025-09-24T17:15:39.473",
+      "last_modified": "2026-07-14T15:21:36.793",
+      "fetched_at": "2026-07-23T08:46:51.365Z"
+    },
+    "CVE-2025-13223": {
+      "cve_id": "CVE-2025-13223",
+      "description": "Type Confusion in V8 in Google Chrome prior to 142.0.7444.175 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-843",
+        "CWE-843"
+      ],
+      "references": [
+        {
+          "url": "https://chromereleases.googleblog.com/2025/11/stable-channel-update-for-desktop_17.html",
+          "tags": [
+            "Release Notes",
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://issues.chromium.org/issues/460017370",
+          "tags": [
+            "Issue Tracking",
+            "Permissions Required"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-470355.html",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-13223",
+          "tags": [
+            "US Government Resource"
+          ]
+        }
+      ],
+      "published": "2025-11-17T23:15:45.140",
+      "last_modified": "2026-07-14T15:21:34.180",
+      "fetched_at": "2026-07-23T08:46:57.984Z"
+    },
+    "CVE-2026-22184": {
+      "cve_id": "CVE-2026-22184",
+      "description": "zlib versions up to and including 1.3.1.2 include a global buffer overflow in the untgz utility located under contrib/untgz. The vulnerability is limited to the standalone demonstration utility and does not affect the core zlib compression library. The flaw occurs when a user executes the untgz command with an excessively long archive name supplied via the command line, leading to an out-of-bounds write in a fixed-size global buffer.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787",
+        "CWE-787",
+        "CWE-120"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/madler/zlib",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://seclists.org/fulldisclosure/2026/Jan/3",
+          "tags": [
+            "Mailing List",
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://www.vulncheck.com/advisories/zlib-untgz-global-buffer-overflow-in-tgzfname",
+          "tags": [
+            "Third Party Advisory"
+          ]
+        },
+        {
+          "url": "https://zlib.net/",
+          "tags": [
+            "Product"
+          ]
+        },
+        {
+          "url": "https://github.com/madler/zlib/issues/1142",
+          "tags": [
+            "Issue Tracking"
+          ]
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/CVE-2026-22184",
+          "tags": []
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2427688",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-470355.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-01-07T21:16:01.563",
+      "last_modified": "2026-07-15T02:18:34.293",
+      "fetched_at": "2026-07-23T08:47:04.727Z"
     }
   }
 }
