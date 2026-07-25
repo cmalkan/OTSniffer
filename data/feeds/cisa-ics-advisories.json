@@ -1,6 +1,181 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-204-01",
+      "title": "Johnson Controls C-CURE 9000 and Victor application server",
+      "date": "2026-07-23",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker with network access to achieve remote code execution.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-21655",
+        "CVE-2026-21653",
+        "CVE-2026-34496"
+      ],
+      "cvss_max": 9.6,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Johnson Controls",
+          "product": "C-CURE 9000 and victor",
+          "version": "<=v2.90_v3.0",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Johnson Controls",
+          "product": "victor Web",
+          "version": "<v7.0",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Johnson Controls",
+          "product": "victor Web",
+          "version": "<=v7.1",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01"
+    },
+    {
+      "advisory_id": "ICSA-26-204-02",
+      "title": "Johnson Controls XAAP Android",
+      "date": "2026-07-23",
+      "summary": "Successful exploitation of this vulnerability could result in an attacker obtaining confidential information from the device.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-34490"
+      ],
+      "cvss_max": 3.3,
+      "cvss_severity": "low",
+      "affected_products": [
+        {
+          "vendor": "Johnson Controls",
+          "product": "XAAP Android",
+          "version": "<1.53",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-02"
+    },
+    {
+      "advisory_id": "ICSA-26-204-03",
+      "title": "Weintek cMT3092X",
+      "date": "2026-07-23",
+      "summary": "Successful exploitation of these vulnerabilities could allow a non-privileged user to escalate privileges or view the credentials of other users.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-60134",
+        "CVE-2026-61892",
+        "CVE-2026-61886",
+        "CVE-2026-60135"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Weintek",
+          "product": "cMT3092X firmware",
+          "version": "<20210218",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Weintek",
+          "product": "EasyWeb",
+          "version": "<v2.1.20",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-03"
+    },
+    {
+      "advisory_id": "ICSA-26-204-04",
+      "title": "Panduit IntraVUE",
+      "date": "2026-07-23",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker with access to the IT network to manipulate industrial control devices without requiring physical access, specialized insider knowledge, or advanced tooling. ",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Information Technology",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-40430",
+        "CVE-2026-42933",
+        "CVE-2026-44955",
+        "CVE-2026-50044",
+        "CVE-2026-28698"
+      ],
+      "cvss_max": 10,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Pronetiqs",
+          "product": "IntraVUE",
+          "version": "<=3.2.1a14",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-04"
+    },
+    {
+      "advisory_id": "ICSA-26-204-06",
+      "title": "MZ Automation libIEC61850",
+      "date": "2026-07-23",
+      "summary": "Successful exploitation of these vulnerabilities could allow an unauthenticated network-adjacent attacker to crash critical IEC 61850 services or execute arbitrary code, disrupting or compromising protection, visibility, and control functions.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-50039",
+        "CVE-2026-49035",
+        "CVE-2026-50103",
+        "CVE-2026-50032"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "MZ Automation",
+          "product": "libIEC61850",
+          "version": ">=v1.0.0|<=v1.6.1",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-06"
+    },
+    {
+      "advisory_id": "ICSA-26-204-07",
+      "title": "MZ Automation lib60870",
+      "date": "2026-07-23",
+      "summary": "Successful exploitation of this vulnerability could cause the parsing process to crash, which will cause a denial of service.",
+      "sectors": [
+        "Chemical",
+        "Energy",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-16002"
+      ],
+      "cvss_max": 8.2,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "MZ Automation",
+          "product": "lib60870",
+          "version": "<=2.4.0",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-07"
+    },
+    {
       "advisory_id": "ICSA-26-202-01",
       "title": "Tycon Systems TPDIN-Monitor-WEB2",
       "date": "2026-07-21",
@@ -764,6 +939,51 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-06"
+    },
+    {
+      "advisory_id": "ICSA-26-204-05",
+      "title": "Rockwell Automation ThinManager",
+      "date": "2026-07-14",
+      "summary": "Successful exploitation of this vulnerability could allow an authenticated attacker to write arbitrary files to restricted system directories outside of the application's intended directory.",
+      "sectors": [
+        "Chemical",
+        "Critical Manufacturing",
+        "Energy",
+        "Food and Agriculture",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2026-11917"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rockwell Automation",
+          "product": "ThinManager",
+          "version": ">=13.0.0|<13.0.7",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "ThinManager",
+          "version": ">=13.1.0|<13.1.5",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "ThinManager",
+          "version": ">=13.2.0|<13.2.4",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Rockwell Automation",
+          "product": "ThinManager",
+          "version": ">=14.0.0|<14.0.2",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-05"
     },
     {
       "advisory_id": "ICSA-26-190-01",
@@ -13032,29 +13252,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-05"
     },
     {
-      "advisory_id": "ICSA-26-071-06",
-      "title": "Inductive Automation Ignition Software",
-      "date": "2026-03-12",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to execute malicious code with OS application service account permissions that the authenticated, privileged application user did not intend on running.",
-      "sectors": [
-        "Information Technology"
-      ],
-      "cves": [
-        "CVE-2025-13913"
-      ],
-      "cvss_max": 6.3,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Inductive Automation",
-          "product": "Ignition Software",
-          "version": "<8.3.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-071-06"
-    },
-    {
       "advisory_id": "ICSA-26-132-05",
       "title": "ABB AC500 V3 Stack Buffer Overflow in Cryptographic Message Syntax",
       "date": "2026-03-12",
@@ -13091,1072 +13288,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-05"
-    },
-    {
-      "advisory_id": "ICSA-26-071-03",
-      "title": "Siemens SIDIS Prime",
-      "date": "2026-03-10",
-      "summary": "SIDIS Prime before V4.0.800 is affected by multiple vulnerabilities in the components OpenSSL, SQLite, and several Node.js packages as described below.\n\nSiemens has released a new version of SIDIS Prime and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2024-29857",
-        "CVE-2024-30171",
-        "CVE-2024-30172",
-        "CVE-2024-41996",
-        "CVE-2025-6965",
-        "CVE-2025-7783",
-        "CVE-2025-9230",
-        "CVE-2025-9232",
-        "CVE-2025-9670",
-        "CVE-2025-12816",
-        "CVE-2025-15284",
-        "CVE-2025-58751",
-        "CVE-2025-58752",
-        "CVE-2025-58754",
-        "CVE-2025-62522",
-        "CVE-2025-64718",
-        "CVE-2025-64756",
-        "CVE-2025-66030",
-        "CVE-2025-66031",
-        "CVE-2025-66035",
-        "CVE-2025-66412",
-        "CVE-2025-69277",
-        "CVE-2026-22610"
-      ],
-      "cvss_max": 8.7,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SIDIS Prime",
-          "version": "vers:intdot/<4.0.800",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-071-03"
-    },
-    {
-      "advisory_id": "ICSA-26-071-04",
-      "title": "Siemens SIMATIC",
-      "date": "2026-03-10",
-      "summary": "SIMATIC S7-1500 devices contain a vulnerability that could allow an attacker to inject code by tricking a legitimate user into importing a specially crafted trace file in the web interface.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40943"
-      ],
-      "cvss_max": 9.6,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC Drive Controller CPU 1504D TF (6ES7615-4DF10-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC Drive Controller CPU 1507D TF (6ES7615-7DF10-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1510SP F-1 PN (6ES7510-1SJ01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1510SP F-1 PN (6ES7510-1SK03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1510SP-1 PN (6ES7510-1DJ01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1510SP-1 PN (6ES7510-1DK03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1512SP F-1 PN (6ES7512-1SK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1512SP F-1 PN (6ES7512-1SM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1512SP-1 PN (6ES7512-1DK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1512SP-1 PN (6ES7512-1DM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1514SP F-2 PN (6ES7514-2SN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1514SP-2 PN (6ES7514-2DN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1514SPT F-2 PN (6ES7514-2WN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP CPU 1514SPT-2 PN (6ES7514-2VN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP Open Controller CPU 1515SP PC (incl. SIPLUS variants)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants) V2 CPUs - Windows OS",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants) V3 CPUs - Industrial OS",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP Open Controller CPU 1515SP PC2 (incl. SIPLUS variants) V3 CPUs - Windows OS",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ET 200SP Open Controller CPU 1515SP PC3 V4 CPUs",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511-1 PN (6ES7511-1AK00-0AB0)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511-1 PN (6ES7511-1AK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511-1 PN (6ES7511-1AK02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511-1 PN (6ES7511-1AL03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511C-1 PN (6ES7511-1CK00-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0024"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511C-1 PN (6ES7511-1CK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0025"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511C-1 PN (6ES7511-1CL03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0026"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511F-1 PN (6ES7511-1FK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0027"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511F-1 PN (6ES7511-1FK02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0028"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511F-1 PN (6ES7511-1FL03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0029"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511T-1 PN (6ES7511-1TK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0030"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511T-1 PN (6ES7511-1TL03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0031"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511TF-1 PN (6ES7511-1UK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0032"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1511TF-1 PN (6ES7511-1UL03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0033"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1512C-1 PN (6ES7512-1CK00-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0034"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1512C-1 PN (6ES7512-1CK01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0035"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1512C-1 PN (6ES7512-1CM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0036"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513-1 PN (6ES7513-1AL01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0037"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513-1 PN (6ES7513-1AL02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0038"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513-1 PN (6ES7513-1AM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0039"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513F-1 PN (6ES7513-1FL01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0040"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513F-1 PN (6ES7513-1FL02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0041"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513F-1 PN (6ES7513-1FM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0042"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513pro F-2 PN (6ES7513-2GM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0043"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1513pro-2 PN (6ES7513-2PM03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0044"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515-2 PN (6ES7515-2AM01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0045"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515-2 PN (6ES7515-2AM02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0046"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515-2 PN (6ES7515-2AN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0047"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515F-2 PN (6ES7515-2FM01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0048"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515F-2 PN (6ES7515-2FM02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0049"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515F-2 PN (6ES7515-2FN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0050"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515T-2 PN (6ES7515-2TM01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0051"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515T-2 PN (6ES7515-2TN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0052"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515TF-2 PN (6ES7515-2UM01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0053"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1515TF-2 PN (6ES7515-2UN03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0054"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516-3 PN/DP (6ES7516-3AN01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0055"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516-3 PN/DP (6ES7516-3AN02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0056"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516-3 PN/DP (6ES7516-3AP03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0057"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516F-3 PN/DP (6ES7516-3FN01-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0058"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516F-3 PN/DP (6ES7516-3FN02-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0059"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516F-3 PN/DP (6ES7516-3FP03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0060"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516pro F-2 PN (6ES7516-2GP03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0061"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516pro-2 PN (6ES7516-2PP03-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0062"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516T-3 PN (6ES7516-3TP10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0063"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516T-3 PN/DP (6ES7516-3TN00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0064"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516TF-3 PN (6ES7516-3UP10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0065"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1516TF-3 PN/DP (6ES7516-3UN00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0066"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517-3 PN (6ES7517-3AQ10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0067"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517-3 PN/DP (6ES7517-3AP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0068"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517F-3 PN (6ES7517-3FQ10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0069"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517F-3 PN/DP (6ES7517-3FP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0070"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517F-3 PN/DP (6ES7517-3FP01-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0071"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517T-3 PN (6ES7517-3TQ10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0072"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517T-3 PN/DP (6ES7517-3TP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0073"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517TF-3 PN (6ES7517-3UQ10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0074"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1517TF-3 PN/DP (6ES7517-3UP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0075"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518-3 PN (6ES7518-3AT10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0076"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP (6ES7518-4AP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0077"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0078"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AC0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0079"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518F-3 PN (6ES7518-3FT10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0080"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP (6ES7518-4FP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0081"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0082"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AC0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0083"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518T-3 PN (6ES7518-3TT10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0084"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518T-4 PN/DP (6ES7518-4TP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0085"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518TF-3 PN (6ES7518-3UT10-0AB0)",
-          "version": "vers:intdot/<4.1.2",
-          "product_id": "CSAFPID-0086"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU 1518TF-4 PN/DP (6ES7518-4UP00-0AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0087"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU S7-1518-4 PN/DP ODK (6ES7518-4AP00-3AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0088"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 CPU S7-1518F-4 PN/DP ODK (6ES7518-4FP00-3AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0089"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 ET 200pro: CPU 1513PRO F-2 PN (6ES7513-2GL00-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0090"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 ET 200pro: CPU 1513PRO-2 PN (6ES7513-2PL00-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0091"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 ET 200pro: CPU 1516PRO F-2 PN (6ES7516-2GN00-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0092"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 ET 200pro: CPU 1516PRO-2 PN (6ES7516-2PN00-0AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0093"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1507S F V2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0094"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1507S F V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0095"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1507S F V4",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0096"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1507S V2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0097"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1507S V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0098"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1507S V4",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0099"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S F V2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0100"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S F V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0101"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S F V4",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0102"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S T V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0103"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S TF V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0104"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S V2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0105"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0106"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller CPU 1508S V4",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0107"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller Linux V2",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0108"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-1500 Software Controller Linux V3",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0109"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC S7-PLCSIM Advanced",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0110"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1510SP F-1 PN (6AG1510-1SJ01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0111"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1510SP F-1 PN RAIL (6AG2510-1SJ01-1AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0112"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1510SP-1 PN (6AG1510-1DJ01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0113"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1510SP-1 PN (6AG1510-1DJ01-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0114"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1510SP-1 PN RAIL (6AG2510-1DJ01-1AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0115"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1510SP-1 PN RAIL (6AG2510-1DJ01-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0116"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP F-1 PN (6AG1512-1SK01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0117"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP F-1 PN (6AG1512-1SK01-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0118"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP F-1 PN RAIL (6AG2512-1SK01-1AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0119"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP F-1 PN RAIL (6AG2512-1SK01-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0120"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP-1 PN (6AG1512-1DK01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0121"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP-1 PN (6AG1512-1DK01-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0122"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP-1 PN RAIL (6AG2512-1DK01-1AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0123"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS ET 200SP CPU 1512SP-1 PN RAIL (6AG2512-1DK01-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0124"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0125"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK01-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0126"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0127"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN (6AG1511-1AK02-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0128"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN T1 RAIL (6AG2511-1AK01-1AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0129"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN T1 RAIL (6AG2511-1AK02-1AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0130"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN TX RAIL (6AG2511-1AK01-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0131"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511-1 PN TX RAIL (6AG2511-1AK02-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0132"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511F-1 PN (6AG1511-1FK01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0133"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1511F-1 PN (6AG1511-1FK02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0134"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0135"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL01-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0136"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0137"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1513-1 PN (6AG1513-1AL02-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0138"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1513F-1 PN (6AG1513-1FL01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0139"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1513F-1 PN (6AG1513-1FL02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0140"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1515F-2 PN (6AG1515-2FM01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0141"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1515F-2 PN (6AG1515-2FM02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0142"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1515F-2 PN RAIL (6AG2515-2FM02-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0143"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1515F-2 PN T2 RAIL (6AG2515-2FM01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0144"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0145"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN01-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0146"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0147"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516-3 PN/DP (6AG1516-3AN02-7AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0148"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516-3 PN/DP RAIL (6AG2516-3AN02-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0149"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516-3 PN/DP TX RAIL (6AG2516-3AN01-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0150"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516F-3 PN/DP (6AG1516-3FN01-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0151"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516F-3 PN/DP (6AG1516-3FN02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0152"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516F-3 PN/DP RAIL (6AG2516-3FN02-2AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0153"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1516F-3 PN/DP RAIL (6AG2516-3FN02-4AB0)",
-          "version": "vers:intdot/<2.9.9",
-          "product_id": "CSAFPID-0154"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1518-4 PN/DP (6AG1518-4AP00-4AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0155"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1518-4 PN/DP MFP (6AG1518-4AX00-4AC0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0156"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS S7-1500 CPU 1518F-4 PN/DP (6AG1518-4FP00-4AB0)",
-          "version": "vers:intdot/<3.1.6",
-          "product_id": "CSAFPID-0157"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-071-04"
-    },
-    {
-      "advisory_id": "ICSA-26-071-05",
-      "title": "Siemens Heliox EV Chargers",
-      "date": "2026-03-10",
-      "summary": "Heliox EV Chargers listed below contain improper access control vulnerability that could allow an attacker to reach unauthorized services via the charging cable.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-27769"
-      ],
-      "cvss_max": 2.6,
-      "cvss_severity": "low",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "Heliox Flex 180 kW EV Charging Station",
-          "version": "<F4.11.1",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Heliox Mobile DC 40 kW EV Charging Station",
-          "version": "<L4.10.1",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-071-05"
-    },
-    {
-      "advisory_id": "ICSA-26-076-03",
-      "title": "Schneider Electric EcoStruxure Data Center Expert",
-      "date": "2026-03-10",
-      "summary": "Schneider Electric is aware of a hard-coded credentials vulnerability in its EcoStruxure IT Data Center Expert (DCE) product that requires administrator credentials and enabling a feature (SOCKS Proxy) that is off by default.\r\nThe EcoStruxure IT Data Center Expert product is a scalable monitoring software that collects, organizes, and distributes critical device information providing a comprehensive view of equipment.\r\nFailure to apply the remediation provided below may risk information disclosure, and remote compromise of the offer which could result in disruption of operations and access to system data.",
-      "sectors": [
-        "Commercial Facilities",
-        "Energy",
-        "Food and Agriculture",
-        "Government Services and Facilities",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2025-13957"
-      ],
-      "cvss_max": 7.2,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure IT Data Center Expert",
-          "version": "vers:intdot/<=9.0",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure IT Data Center Expert",
-          "version": "9.1",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-076-03"
     },
     {
       "advisory_id": "ICSA-26-076-04",
@@ -14616,184 +13747,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-083-02"
     },
     {
-      "advisory_id": "ICSA-26-076-01",
-      "title": "CODESYS in Festo Automation Suite",
-      "date": "2026-02-26",
-      "summary": "Starting with Festo Automation Suite (FAS) version 2.8.0.138, the suite is delivered only with a connector to Codesys, rather than including Codesys directly. Prior to this version, Codesys was bundled within the FAS installation. From version 2.8.0.138 onwards, customers are required to download and install Codesys independently.\n\nThis change impacts the handling of security vulnerabilities (CVEs) related to Codesys. Any Codesys-related security issues must now be addressed by the customer through their separate Codesys installation. The FAS itself includes only the connector component, which is maintained and updated within the suite.\n\nPlease ensure that Codesys is kept up to date independently to mitigate any potential security risks associated with the Codesys software.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-2595",
-        "CVE-2010-5250",
-        "CVE-2017-3735",
-        "CVE-2018-0739",
-        "CVE-2018-10612",
-        "CVE-2018-20025",
-        "CVE-2018-20026",
-        "CVE-2019-13532",
-        "CVE-2019-13538",
-        "CVE-2019-13542",
-        "CVE-2019-13548",
-        "CVE-2019-18858",
-        "CVE-2019-19789",
-        "CVE-2019-5105",
-        "CVE-2019-9008",
-        "CVE-2019-9009",
-        "CVE-2019-9010",
-        "CVE-2019-9011",
-        "CVE-2019-9012",
-        "CVE-2019-9013",
-        "CVE-2020-10245",
-        "CVE-2020-12067",
-        "CVE-2020-12068",
-        "CVE-2020-12069",
-        "CVE-2020-14509",
-        "CVE-2020-14513",
-        "CVE-2020-14515",
-        "CVE-2020-14517",
-        "CVE-2020-14519",
-        "CVE-2020-15806",
-        "CVE-2020-16233",
-        "CVE-2020-7052",
-        "CVE-2021-21863",
-        "CVE-2021-21864",
-        "CVE-2021-21865",
-        "CVE-2021-21866",
-        "CVE-2021-21867",
-        "CVE-2021-21868",
-        "CVE-2021-21869",
-        "CVE-2021-29239",
-        "CVE-2021-29240",
-        "CVE-2021-29241",
-        "CVE-2021-29242",
-        "CVE-2021-30186",
-        "CVE-2021-30187",
-        "CVE-2021-30188",
-        "CVE-2021-30190",
-        "CVE-2021-30195",
-        "CVE-2021-33485",
-        "CVE-2021-33486",
-        "CVE-2021-34593",
-        "CVE-2021-34595",
-        "CVE-2021-34596",
-        "CVE-2021-36763",
-        "CVE-2021-36764",
-        "CVE-2021-36765",
-        "CVE-2022-1965",
-        "CVE-2022-1989",
-        "CVE-2022-22508",
-        "CVE-2022-22513",
-        "CVE-2022-22514",
-        "CVE-2022-22515",
-        "CVE-2022-22516",
-        "CVE-2022-22517",
-        "CVE-2022-22519",
-        "CVE-2022-30791",
-        "CVE-2022-30792",
-        "CVE-2022-31805",
-        "CVE-2022-31806",
-        "CVE-2022-32136",
-        "CVE-2022-32137",
-        "CVE-2022-32138",
-        "CVE-2022-32139",
-        "CVE-2022-32140",
-        "CVE-2022-32141",
-        "CVE-2022-32142",
-        "CVE-2022-32143",
-        "CVE-2022-4046",
-        "CVE-2022-4048",
-        "CVE-2022-4224",
-        "CVE-2022-47378",
-        "CVE-2022-47379",
-        "CVE-2022-47380",
-        "CVE-2022-47381",
-        "CVE-2022-47383",
-        "CVE-2022-47384",
-        "CVE-2022-47385",
-        "CVE-2022-47386",
-        "CVE-2022-47387",
-        "CVE-2022-47388",
-        "CVE-2022-47389",
-        "CVE-2022-47390",
-        "CVE-2022-47391",
-        "CVE-2022-47392",
-        "CVE-2022-47393",
-        "CVE-2023-3662",
-        "CVE-2023-3663",
-        "CVE-2023-3669",
-        "CVE-2023-3670",
-        "CVE-2023-37545",
-        "CVE-2023-37546",
-        "CVE-2023-37547",
-        "CVE-2023-37548",
-        "CVE-2023-37549",
-        "CVE-2023-37550",
-        "CVE-2023-37551",
-        "CVE-2023-37552",
-        "CVE-2023-37553",
-        "CVE-2023-37554",
-        "CVE-2023-37555",
-        "CVE-2023-37556",
-        "CVE-2023-37557",
-        "CVE-2023-37558",
-        "CVE-2023-37559",
-        "CVE-2023-3935",
-        "CVE-2023-49675",
-        "CVE-2023-49676",
-        "CVE-2023-6357",
-        "CVE-2024-5000",
-        "CVE-2024-8175",
-        "CVE-2025-0694",
-        "CVE-2025-1468",
-        "CVE-2025-41658",
-        "CVE-2025-41659",
-        "CVE-2020-11023",
-        "CVE-2022-47382"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "FESTO",
-          "product": "Software Festo Automation Suite",
-          "version": "vers:generic/<2.8.0.138",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "FESTO",
-          "product": "Software Festo Automation Suite",
-          "version": "2.8.0.138",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "FESTO",
-          "product": "Software Festo Automation Suite",
-          "version": "2.8.0.137",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "CODESYS",
-          "product": "Software CODESYS Development System",
-          "version": "3.5.21.20",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "CODESYS",
-          "product": "Software CODESYS Development System",
-          "version": "3.0",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "CODESYS",
-          "product": "Software CODESYS Development System",
-          "version": "3.5.16.10",
-          "product_id": "CSAFPID-0006"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-076-01"
-    },
-    {
       "advisory_id": "ICSA-26-092-03",
       "title": "Hitachi Energy Ellipse",
       "date": "2026-02-24",
@@ -14934,89 +13887,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-03"
-    },
-    {
-      "advisory_id": "ICSA-26-076-02",
-      "title": "Schneider Electric SCADAPack and RemoteConnect",
-      "date": "2026-02-10",
-      "summary": "Schneider Electric is aware of a vulnerability in its SCADAPack™ x70 RTU products.\r\nThe SCADAPack™ 47xi, SCADAPack™ 47x and SCADAPack™ 57x product are Remote Terminal Units that \r\nprovide communication capabilities for remote monitoring and control.\r\nFailure to apply the remediations provided below may risk unauthorized access to your RTU, which could \r\nresult in the possibility of denial of service and loss of confidentiality, integrity of the controller.",
-      "sectors": [
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2026-0667"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™",
-          "version": "vers:generic/<R3.4.2",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™",
-          "version": "R3.4.2",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™",
-          "version": "vers:generic/<R3.4.2",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™",
-          "version": "R3.4.2",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™ firmware",
-          "version": "vers:intdot/<9.12.2",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™ firmware",
-          "version": "9.12.2",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™ firmware",
-          "version": "vers:intdot/<9.12.2",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "SCADAPack™ firmware",
-          "version": "9.12.2",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "RemoteConnect",
-          "version": "vers:generic/<R3.4.2",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "RemoteConnect",
-          "version": "R3.4.2",
-          "product_id": "CSAFPID-0011"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-076-02"
     },
     {
       "advisory_id": "ICSMA-26-041-01",

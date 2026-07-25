@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-23T08:47:24.744Z",
+  "pulled_at": "2026-07-25T08:22:48.493Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82685,7 +82685,7 @@
       ],
       "published": "2026-05-12T14:17:10.567",
       "last_modified": "2026-06-17T11:01:27.120",
-      "fetched_at": "2026-06-23T10:02:25.852Z"
+      "fetched_at": "2026-07-25T08:22:35.405Z"
     },
     "CVE-2026-4827": {
       "cve_id": "CVE-2026-4827",
@@ -82705,7 +82705,7 @@
       ],
       "published": "2026-05-12T13:17:35.510",
       "last_modified": "2026-06-17T10:57:17.890",
-      "fetched_at": "2026-06-23T10:02:41.319Z"
+      "fetched_at": "2026-07-25T08:22:41.953Z"
     },
     "CVE-2026-24349": {
       "cve_id": "CVE-2026-24349",
@@ -88236,6 +88236,26 @@
       "published": "2026-01-07T21:16:01.563",
       "last_modified": "2026-07-15T02:18:34.293",
       "fetched_at": "2026-07-23T08:47:04.727Z"
+    },
+    "CVE-2026-11917": {
+      "cve_id": "CVE-2026-11917",
+      "description": "A path traversal security issue exists within Rockwell Automation ThinManager® software due to improper limitation of file save operations within the API. An authenticated attacker could exploit this vulnerability to write arbitrary files to restricted system directories outside of the application's intended directory.",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1782.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T16:16:44.780",
+      "last_modified": "2026-07-14T16:46:49.030",
+      "fetched_at": "2026-07-25T08:22:28.864Z"
     }
   }
 }
