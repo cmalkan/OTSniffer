@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-07-25T08:22:48.493Z",
+  "pulled_at": "2026-07-27T10:09:20.899Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82720,12 +82720,15 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-063511.html",
-          "tags": []
+          "tags": [
+            "Mitigation",
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-06-09T10:16:42.967",
-      "last_modified": "2026-06-17T10:22:55.847",
-      "fetched_at": "2026-06-25T09:44:04.462Z"
+      "last_modified": "2026-07-23T08:10:00.137",
+      "fetched_at": "2026-07-27T10:08:10.645Z"
     },
     "CVE-2025-40808": {
       "cve_id": "CVE-2025-40808",
@@ -82744,8 +82747,8 @@
         }
       ],
       "published": "2026-06-09T10:16:35.807",
-      "last_modified": "2026-06-17T09:22:09.343",
-      "fetched_at": "2026-06-25T09:44:25.184Z"
+      "last_modified": "2026-07-23T08:10:00.137",
+      "fetched_at": "2026-07-27T10:08:17.495Z"
     },
     "CVE-2025-15467": {
       "cve_id": "CVE-2025-15467",
@@ -82755,7 +82758,8 @@
       "cvss_severity": "high",
       "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
       "cwes": [
-        "CWE-787"
+        "CWE-787",
+        "CWE-120"
       ],
       "references": [
         {
@@ -82808,8 +82812,8 @@
         }
       ],
       "published": "2026-01-27T16:16:14.257",
-      "last_modified": "2026-06-17T08:37:50.080",
-      "fetched_at": "2026-06-25T09:44:38.072Z"
+      "last_modified": "2026-07-20T12:16:58.450",
+      "fetched_at": "2026-07-27T10:08:24.391Z"
     },
     "CVE-2026-46746": {
       "cve_id": "CVE-2026-46746",
@@ -82830,8 +82834,8 @@
         }
       ],
       "published": "2026-06-09T10:16:44.000",
-      "last_modified": "2026-06-17T10:53:53.263",
-      "fetched_at": "2026-06-25T09:45:02.094Z"
+      "last_modified": "2026-07-23T08:10:00.137",
+      "fetched_at": "2026-07-27T10:08:31.139Z"
     },
     "CVE-2026-46747": {
       "cve_id": "CVE-2026-46747",
@@ -82852,8 +82856,8 @@
         }
       ],
       "published": "2026-06-09T10:16:44.130",
-      "last_modified": "2026-06-17T10:53:53.377",
-      "fetched_at": "2026-06-25T09:45:09.260Z"
+      "last_modified": "2026-07-23T08:10:00.137",
+      "fetched_at": "2026-07-27T10:08:38.064Z"
     },
     "CVE-2026-46748": {
       "cve_id": "CVE-2026-46748",
@@ -82874,8 +82878,8 @@
         }
       ],
       "published": "2026-06-09T10:16:44.263",
-      "last_modified": "2026-06-17T10:53:53.493",
-      "fetched_at": "2026-06-25T09:45:16.280Z"
+      "last_modified": "2026-07-23T08:10:00.137",
+      "fetched_at": "2026-07-27T10:08:46.338Z"
     },
     "CVE-2026-46749": {
       "cve_id": "CVE-2026-46749",
@@ -82896,68 +82900,77 @@
         }
       ],
       "published": "2026-06-09T10:16:44.410",
-      "last_modified": "2026-06-17T10:53:53.617",
-      "fetched_at": "2026-06-25T09:45:48.535Z"
+      "last_modified": "2026-07-23T08:10:00.137",
+      "fetched_at": "2026-07-27T10:08:53.192Z"
     },
     "CVE-2026-9716": {
       "cve_id": "CVE-2026-9716",
       "description": "CWE-476 NULL Pointer Dereference vulnerability exists that could cause a denial-of-service condition, rendering the device’s HMI and configuration functionality unavailable when malformed requests are received over exposed network interfaces.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-476"
       ],
       "references": [
         {
           "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-03.pdf",
-          "tags": []
+          "tags": [
+            "Vendor Advisory",
+            "Mitigation"
+          ]
         }
       ],
       "published": "2026-06-25T16:16:44.107",
-      "last_modified": "2026-06-25T19:10:00.050",
-      "fetched_at": "2026-06-27T08:49:01.049Z"
+      "last_modified": "2026-07-01T19:52:38.000",
+      "fetched_at": "2026-07-27T10:09:00.042Z"
     },
     "CVE-2026-9717": {
       "cve_id": "CVE-2026-9717",
       "description": "CWE-78 Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability exists that could allow unauthorized execution of commands with elevated privileges, impacting system integrity, confidentiality, and availability when a privileged authenticated user interacts with a vulnerable network-exposed service.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.2,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-78"
       ],
       "references": [
         {
           "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-03.pdf",
-          "tags": []
+          "tags": [
+            "Vendor Advisory",
+            "Mitigation"
+          ]
         }
       ],
       "published": "2026-06-25T16:16:44.220",
-      "last_modified": "2026-06-25T19:10:00.050",
-      "fetched_at": "2026-06-27T08:49:07.631Z"
+      "last_modified": "2026-07-01T19:51:47.550",
+      "fetched_at": "2026-07-27T10:09:07.547Z"
     },
     "CVE-2026-9718": {
       "cve_id": "CVE-2026-9718",
       "description": "CWE-617 Reachable Assertion vulnerability exists that could allow an authenticated attacker to trigger a denial-of-service condition, impacting system availability when a specially crafted request is sent to a vulnerable network-exposed service.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 6.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-617"
       ],
       "references": [
         {
           "url": "https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2026-160-03&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2026-160-03.pdf",
-          "tags": []
+          "tags": [
+            "Vendor Advisory",
+            "Mitigation"
+          ]
         }
       ],
       "published": "2026-06-25T16:16:44.330",
-      "last_modified": "2026-06-25T19:10:00.050",
-      "fetched_at": "2026-06-27T08:49:14.200Z"
+      "last_modified": "2026-07-01T19:47:54.993",
+      "fetched_at": "2026-07-27T10:09:14.366Z"
     },
     "CVE-2026-8045": {
       "cve_id": "CVE-2026-8045",
