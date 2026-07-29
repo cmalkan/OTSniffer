@@ -1,6 +1,59 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-209-05",
+      "title": "MikroTik RouterOS and Cloud Hosted Router",
+      "date": "2026-07-28",
+      "summary": "Successful exploitation of this vulnerability could allow attackers to rapidly guess passwords and gain unauthorized system access.",
+      "sectors": [
+        "Information Technology",
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2026-16347"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "MikroTik",
+          "product": "RouterOS",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "MikroTik",
+          "product": "Cloud Hosted Router",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-05"
+    },
+    {
+      "advisory_id": "ICSA-26-209-06",
+      "title": "igloohome Smart Lock Mobile Application",
+      "date": "2026-07-28",
+      "summary": "Successful exploitation of this vulnerability could allow an unauthorized actor to access functions or backend services. ",
+      "sectors": [
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2026-16581"
+      ],
+      "cvss_max": 5.3,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "igloohome",
+          "product": "Smart Lock Mobile Application (Android)",
+          "version": "3.2.3",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-06"
+    },
+    {
       "advisory_id": "ICSA-26-204-01",
       "title": "Johnson Controls C-CURE 9000 and Victor application server",
       "date": "2026-07-23",
@@ -358,6 +411,35 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-202-10"
+    },
+    {
+      "advisory_id": "ICSA-26-209-07",
+      "title": "ABB KNX Update Tool",
+      "date": "2026-07-17",
+      "summary": "ABB has been contacted by a researcher who identified a vulnerability in one of its products. ABB has been contacted by a researcher who identified a vulnerability in one of its products. The vulnerability report has been shared in responsible disclosure. \n\nAn attacker who successfully exploited this vulnerability could cause the product to become unusable.\nABB confirms the vulnerability but at the same time acknowledges that the issue affects exclusively classic KNX devices that are not supporting the latest KNX Secure standard. Due to a lack of security in legacy KNX devices, the issue cannot be resolved via a software change. In order to actively exploit this vulnerability, an attacker requires physical access to the bus, the affected device is connected to.\n\nABB has no plans of correct",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-12705"
+      ],
+      "cvss_max": 6.4,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "KNX Update Tool (ABB)",
+          "version": "<=2.0.175",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ABB",
+          "product": "KNX Update Tool (BJE)",
+          "version": "<=2.0.175",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-07"
     },
     {
       "advisory_id": "ICSA-26-197-01",
@@ -984,6 +1066,485 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-05"
+    },
+    {
+      "advisory_id": "ICSA-26-209-01",
+      "title": "Siemens Desigo CC",
+      "date": "2026-07-14",
+      "summary": "OpenSSL has published a stack based buffer overflow vulnerability that allows a remote attacker to cause a denial of service (DoS) or potentially allow for remote code execution.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2025-15467"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Desigo CC family V7",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo CC family V8",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo CC family V9",
+          "version": "vers:intdot/<9.0.1",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-01"
+    },
+    {
+      "advisory_id": "ICSA-26-209-02",
+      "title": "Siemens Mendix Runtime",
+      "date": "2026-07-14",
+      "summary": "Mendix documentation for access rules does not adequately describe the special behavior of the System.User entity, leaving developers without sufficient guidance to configure access rules securely. This documentation gap may lead application developers to unknowingly apply overly permissive access rules to System.User, resulting in unintended exposure of sensitive user data or privilege escalation within deployed Mendix applications.\n\nA common misconfiguration identified is with the anonymous user role with a System.User entity to gain access to all stored records, even though no access rights are explicitly configured on that role.\n\nSiemens recommends Mendix developers to review their access rules based on updated documentation.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-7891"
+      ],
+      "cvss_max": 9.1,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Runtime",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-02"
+    },
+    {
+      "advisory_id": "ICSA-26-209-03",
+      "title": "Siemens SIMATIC S7-PLCSIM Advanced",
+      "date": "2026-07-14",
+      "summary": "SIMATIC S7-PLCSIM Advanced contains a vulnerability that could allow an attacker to cause a denial of service condition.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-54429"
+      ],
+      "cvss_max": 7.4,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC S7-PLCSIM Advanced",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-03"
+    },
+    {
+      "advisory_id": "ICSA-26-209-04",
+      "title": "Siemens SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP",
+      "date": "2026-07-14",
+      "summary": "Multiple vulnerabilities have been identified in the additional GNU/Linux subsystem of the firmware version V3.1.6 for the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP (incl. SIPLUS variant).\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2021-41617",
+        "CVE-2023-28531",
+        "CVE-2023-51384",
+        "CVE-2023-52927",
+        "CVE-2024-26783",
+        "CVE-2024-27056",
+        "CVE-2024-28956",
+        "CVE-2024-36903",
+        "CVE-2024-36927",
+        "CVE-2024-42079",
+        "CVE-2024-46786",
+        "CVE-2024-47736",
+        "CVE-2024-47809",
+        "CVE-2024-49968",
+        "CVE-2024-49994",
+        "CVE-2024-49998",
+        "CVE-2024-50014",
+        "CVE-2024-50063",
+        "CVE-2024-50164",
+        "CVE-2024-50298",
+        "CVE-2024-53124",
+        "CVE-2024-53170",
+        "CVE-2024-54458",
+        "CVE-2024-56631",
+        "CVE-2024-56703",
+        "CVE-2024-56719",
+        "CVE-2024-57917",
+        "CVE-2024-57924",
+        "CVE-2024-57973",
+        "CVE-2024-57977",
+        "CVE-2024-57979",
+        "CVE-2024-58011",
+        "CVE-2024-58016",
+        "CVE-2024-58020",
+        "CVE-2024-58056",
+        "CVE-2024-58058",
+        "CVE-2024-58061",
+        "CVE-2024-58086",
+        "CVE-2025-21645",
+        "CVE-2025-21648",
+        "CVE-2025-21655",
+        "CVE-2025-21676",
+        "CVE-2025-21682",
+        "CVE-2025-21702",
+        "CVE-2025-21705",
+        "CVE-2025-21706",
+        "CVE-2025-21707",
+        "CVE-2025-21718",
+        "CVE-2025-21731",
+        "CVE-2025-21745",
+        "CVE-2025-21758",
+        "CVE-2025-21760",
+        "CVE-2025-21764",
+        "CVE-2025-21765",
+        "CVE-2025-21780",
+        "CVE-2025-21795",
+        "CVE-2025-21796",
+        "CVE-2025-21802",
+        "CVE-2025-21814",
+        "CVE-2025-21846",
+        "CVE-2025-21853",
+        "CVE-2025-21861",
+        "CVE-2025-21864",
+        "CVE-2025-21867",
+        "CVE-2025-21875",
+        "CVE-2025-21887",
+        "CVE-2025-21913",
+        "CVE-2025-21919",
+        "CVE-2025-21925",
+        "CVE-2025-21926",
+        "CVE-2025-21938",
+        "CVE-2025-21959",
+        "CVE-2025-21999",
+        "CVE-2025-22005",
+        "CVE-2025-22015",
+        "CVE-2025-22055",
+        "CVE-2025-22056",
+        "CVE-2025-22060",
+        "CVE-2025-22083",
+        "CVE-2025-22090",
+        "CVE-2025-22095",
+        "CVE-2025-22107",
+        "CVE-2025-22111",
+        "CVE-2025-22121",
+        "CVE-2025-23136",
+        "CVE-2025-23143",
+        "CVE-2025-37785",
+        "CVE-2025-37909",
+        "CVE-2025-37917",
+        "CVE-2025-37945",
+        "CVE-2025-37959",
+        "CVE-2025-37964",
+        "CVE-2025-37972",
+        "CVE-2025-37980",
+        "CVE-2025-38125",
+        "CVE-2025-38162",
+        "CVE-2025-38192",
+        "CVE-2025-38201",
+        "CVE-2025-38232",
+        "CVE-2025-38322",
+        "CVE-2025-38591",
+        "CVE-2025-38614",
+        "CVE-2025-38681",
+        "CVE-2025-38704",
+        "CVE-2025-38721",
+        "CVE-2025-38725",
+        "CVE-2025-38727",
+        "CVE-2025-38732",
+        "CVE-2025-38736",
+        "CVE-2025-39681",
+        "CVE-2025-39691",
+        "CVE-2025-39721",
+        "CVE-2025-39748",
+        "CVE-2025-39756",
+        "CVE-2025-39764",
+        "CVE-2025-39770",
+        "CVE-2025-39773",
+        "CVE-2025-39782",
+        "CVE-2025-39795",
+        "CVE-2025-39826",
+        "CVE-2025-39827",
+        "CVE-2025-39845",
+        "CVE-2025-39866",
+        "CVE-2025-39871",
+        "CVE-2025-39931",
+        "CVE-2025-39953",
+        "CVE-2025-39955",
+        "CVE-2025-39964",
+        "CVE-2025-39977",
+        "CVE-2025-39978",
+        "CVE-2025-39980",
+        "CVE-2025-40022",
+        "CVE-2025-40070",
+        "CVE-2025-40078",
+        "CVE-2025-40080",
+        "CVE-2025-40105",
+        "CVE-2025-40135",
+        "CVE-2025-40149",
+        "CVE-2025-40219",
+        "CVE-2025-40261",
+        "CVE-2025-40300",
+        "CVE-2025-61984",
+        "CVE-2025-61985",
+        "CVE-2025-68206",
+        "CVE-2025-68261",
+        "CVE-2025-68264",
+        "CVE-2025-68265",
+        "CVE-2025-68266",
+        "CVE-2025-68291",
+        "CVE-2025-68337",
+        "CVE-2025-68349",
+        "CVE-2025-68363",
+        "CVE-2025-68371",
+        "CVE-2025-68724",
+        "CVE-2025-68725",
+        "CVE-2025-68742",
+        "CVE-2025-68764",
+        "CVE-2025-68773",
+        "CVE-2025-68776",
+        "CVE-2025-68782",
+        "CVE-2025-68787",
+        "CVE-2025-68788",
+        "CVE-2025-68798",
+        "CVE-2025-68803",
+        "CVE-2025-68814",
+        "CVE-2025-68816",
+        "CVE-2025-68818",
+        "CVE-2025-68820",
+        "CVE-2025-71064",
+        "CVE-2025-71075",
+        "CVE-2025-71079",
+        "CVE-2025-71085",
+        "CVE-2025-71086",
+        "CVE-2025-71088",
+        "CVE-2025-71095",
+        "CVE-2025-71097",
+        "CVE-2025-71098",
+        "CVE-2025-71104",
+        "CVE-2025-71112",
+        "CVE-2025-71113",
+        "CVE-2025-71114",
+        "CVE-2025-71120",
+        "CVE-2025-71123",
+        "CVE-2025-71131",
+        "CVE-2025-71161",
+        "CVE-2025-71162",
+        "CVE-2025-71163",
+        "CVE-2025-71185",
+        "CVE-2025-71186",
+        "CVE-2025-71189",
+        "CVE-2025-71190",
+        "CVE-2025-71191",
+        "CVE-2025-71197",
+        "CVE-2025-71221",
+        "CVE-2025-71265",
+        "CVE-2025-71266",
+        "CVE-2025-71267",
+        "CVE-2026-3497",
+        "CVE-2026-22977",
+        "CVE-2026-22979",
+        "CVE-2026-22980",
+        "CVE-2026-22982",
+        "CVE-2026-22992",
+        "CVE-2026-22994",
+        "CVE-2026-23003",
+        "CVE-2026-23005",
+        "CVE-2026-23010",
+        "CVE-2026-23011",
+        "CVE-2026-23019",
+        "CVE-2026-23026",
+        "CVE-2026-23038",
+        "CVE-2026-23054",
+        "CVE-2026-23060",
+        "CVE-2026-23083",
+        "CVE-2026-23084",
+        "CVE-2026-23086",
+        "CVE-2026-23087",
+        "CVE-2026-23095",
+        "CVE-2026-23100",
+        "CVE-2026-23103",
+        "CVE-2026-23110",
+        "CVE-2026-23111",
+        "CVE-2026-23113",
+        "CVE-2026-23154",
+        "CVE-2026-23204",
+        "CVE-2026-23231",
+        "CVE-2026-23242",
+        "CVE-2026-23243",
+        "CVE-2026-23245",
+        "CVE-2026-23270",
+        "CVE-2026-23271",
+        "CVE-2026-23273",
+        "CVE-2026-23274",
+        "CVE-2026-23277",
+        "CVE-2026-23284",
+        "CVE-2026-23287",
+        "CVE-2026-23290",
+        "CVE-2026-23293",
+        "CVE-2026-23300",
+        "CVE-2026-23304",
+        "CVE-2026-23319",
+        "CVE-2026-23321",
+        "CVE-2026-23335",
+        "CVE-2026-23340",
+        "CVE-2026-23343",
+        "CVE-2026-23351",
+        "CVE-2026-23359",
+        "CVE-2026-23365",
+        "CVE-2026-23368",
+        "CVE-2026-23370",
+        "CVE-2026-23378",
+        "CVE-2026-23379",
+        "CVE-2026-23381",
+        "CVE-2026-23391",
+        "CVE-2026-23392",
+        "CVE-2026-23397",
+        "CVE-2026-23398",
+        "CVE-2026-23414",
+        "CVE-2026-23422",
+        "CVE-2026-23434",
+        "CVE-2026-23438",
+        "CVE-2026-23439",
+        "CVE-2026-23446",
+        "CVE-2026-23449",
+        "CVE-2026-23450",
+        "CVE-2026-23452",
+        "CVE-2026-23454",
+        "CVE-2026-23455",
+        "CVE-2026-23456",
+        "CVE-2026-23457",
+        "CVE-2026-23458",
+        "CVE-2026-23463",
+        "CVE-2026-23474",
+        "CVE-2026-23475",
+        "CVE-2026-27135",
+        "CVE-2026-31389",
+        "CVE-2026-31391",
+        "CVE-2026-31396",
+        "CVE-2026-31402",
+        "CVE-2026-31403",
+        "CVE-2026-31411",
+        "CVE-2026-31414",
+        "CVE-2026-31415",
+        "CVE-2026-31416",
+        "CVE-2026-31417",
+        "CVE-2026-31418",
+        "CVE-2026-31421",
+        "CVE-2026-31422",
+        "CVE-2026-31423",
+        "CVE-2026-31424",
+        "CVE-2026-31427",
+        "CVE-2026-31428",
+        "CVE-2026-31431",
+        "CVE-2026-31441",
+        "CVE-2026-31446",
+        "CVE-2026-31447",
+        "CVE-2026-31448",
+        "CVE-2026-31450",
+        "CVE-2026-31452",
+        "CVE-2026-31466",
+        "CVE-2026-31469",
+        "CVE-2026-31485",
+        "CVE-2026-31494",
+        "CVE-2026-31495",
+        "CVE-2026-31496",
+        "CVE-2026-31503",
+        "CVE-2026-31504",
+        "CVE-2026-31507",
+        "CVE-2026-31508",
+        "CVE-2026-31515",
+        "CVE-2026-31518",
+        "CVE-2026-31521",
+        "CVE-2026-31533",
+        "CVE-2026-31546",
+        "CVE-2026-31555",
+        "CVE-2026-31563",
+        "CVE-2026-31565",
+        "CVE-2026-31628",
+        "CVE-2026-31634",
+        "CVE-2026-31649",
+        "CVE-2026-31651",
+        "CVE-2026-31658",
+        "CVE-2026-31664",
+        "CVE-2026-31665",
+        "CVE-2026-31669",
+        "CVE-2026-31670",
+        "CVE-2026-31671",
+        "CVE-2026-31674",
+        "CVE-2026-31680",
+        "CVE-2026-31682",
+        "CVE-2026-31737",
+        "CVE-2026-31752",
+        "CVE-2026-31761",
+        "CVE-2026-31768",
+        "CVE-2026-40355",
+        "CVE-2026-41989",
+        "CVE-2026-43011",
+        "CVE-2026-43024",
+        "CVE-2026-43025",
+        "CVE-2026-43026",
+        "CVE-2026-43027",
+        "CVE-2026-43028",
+        "CVE-2026-43030",
+        "CVE-2026-43033",
+        "CVE-2026-43035",
+        "CVE-2026-43038",
+        "CVE-2026-43040",
+        "CVE-2026-43057",
+        "CVE-2026-43284",
+        "CVE-2026-46174",
+        "CVE-2026-46300",
+        "CVE-2026-46333"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AB0)",
+          "version": "vers:intdot/>=3.1.6",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC S7-1500 CPU 1518-4 PN/DP MFP (6ES7518-4AX00-1AC0)",
+          "version": "vers:intdot/>=3.1.6",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AB0)",
+          "version": "vers:intdot/>=3.1.6",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC S7-1500 CPU 1518F-4 PN/DP MFP (6ES7518-4FX00-1AC0)",
+          "version": "vers:intdot/>=3.1.6",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPLUS S7-1500 CPU 1518-4 PN/DP MFP (6AG1518-4AX00-4AC0)",
+          "version": "vers:intdot/>=3.1.6",
+          "product_id": "CSAFPID-0005"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-04"
     },
     {
       "advisory_id": "ICSA-26-190-01",
@@ -13106,33 +13667,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-085-01"
     },
     {
-      "advisory_id": "ICSA-26-078-06",
-      "title": "CTEK Chargeportal",
-      "date": "2026-03-19",
-      "summary": "Successful exploitation of these vulnerabilities could enable attackers to gain unauthorized administrative control over vulnerable charging stations or disrupt charging services through denial-of-service attacks.",
-      "sectors": [
-        "Energy",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-25192",
-        "CVE-2026-31904",
-        "CVE-2026-27649",
-        "CVE-2026-28204"
-      ],
-      "cvss_max": 9.4,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "CTEK",
-          "product": "Chargeportal",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-06"
-    },
-    {
       "advisory_id": "ICSA-26-078-07",
       "title": "IGL-Technologies eParking.fi",
       "date": "2026-03-19",
@@ -13288,432 +13822,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-05"
-    },
-    {
-      "advisory_id": "ICSA-26-076-04",
-      "title": "Siemens SICAM SIAPP SDK",
-      "date": "2026-03-10",
-      "summary": "The SICAM SIAPP SDK contains multiple vulnerabilities that could allow an attacker to disrupt the customer-developed SIAPP or its simulation environment. Potential impacts include denial of service within the SIAPP, corruption of SIAPP data, or exploit the simulation environment. These vulnerabilities are only exploitable if the API is used improperly or hardening measures are not applied.\n\nSiemens has released a new version for SICAM SIAPP SDK and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-25569",
-        "CVE-2026-25570",
-        "CVE-2026-25571",
-        "CVE-2026-25572",
-        "CVE-2026-25573",
-        "CVE-2026-25605"
-      ],
-      "cvss_max": 7.4,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SICAM SIAPP SDK",
-          "version": "vers:intdot/<2.1.7",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-076-04"
-    },
-    {
-      "advisory_id": "ICSA-26-078-01",
-      "title": "Schneider Electric Modicon M241, M251, and M262",
-      "date": "2026-03-10",
-      "summary": "Schneider Electric is aware of a vulnerability in its Modicon Controllers M241 / M251, and M262 products.\r\nThe Modicon Controllers M241 / M251 / M262 are Programmable Logic Controllers for performance\u0002demanding applications.\r\nFailure to apply the remediation provided below may risk Denial of Service attack which could result in loss of \r\navailability of the controller",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2025-13901"
-      ],
-      "cvss_max": 5.3,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon M241",
-          "version": "vers:intdot/<5.4.13.12",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon M251",
-          "version": "vers:intdot/<5.4.13.12",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon M262",
-          "version": "vers:intdot/<5.4.10.12",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon M241",
-          "version": "5.4.13.12",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon M251",
-          "version": "5.4.13.12",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon M262",
-          "version": "5.4.10.12",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M241",
-          "version": "",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M251",
-          "version": "",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M262",
-          "version": "",
-          "product_id": "CSAFPID-0009"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-01"
-    },
-    {
-      "advisory_id": "ICSA-26-078-02",
-      "title": "Schneider Electric Modicon Controllers M241, M251, M258, and LMC058",
-      "date": "2026-03-10",
-      "summary": "Schneider Electric is aware of a vulnerability in its Modicon Controllers M241 / M251, M258, and LMC058 \r\nproducts. \r\nThe [Modicon Controllers M241 / M251 / M258](https://www.se.com/ww/en/product-category/3900-plc-pac-and-dedicated-controllers/) and [Modicon LMC058](https://www.se.com/ww/en/product-range/7744-modicon-lmc058/) are Programmable Logic Controllers for \r\nperformance-demanding applications.  \r\nFailure to apply the remediation or mitigations provided below may risk a Cross-site Scripting or an open \r\nredirect attack which could result in an account takeover scenario or the execution of code in the user browser. ",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2025-13902"
-      ],
-      "cvss_max": 5.4,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controllers M241",
-          "version": "",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M241 Firmware",
-          "version": "vers:intdot/<5.4.13.12",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M241 Firmware",
-          "version": "5.4.13.12",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controllers M251",
-          "version": "",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M251",
-          "version": "vers:intdot/<5.4.13.12",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controller M251 Firmware",
-          "version": "5.4.13.12",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controllers M258",
-          "version": "",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controllers M258 Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controllers LMC058",
-          "version": "",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "Modicon Controllers LMC058 Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0010"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-02"
-    },
-    {
-      "advisory_id": "ICSA-26-078-03",
-      "title": "Schneider Electric EcoStruxure Automation Expert",
-      "date": "2026-03-10",
-      "summary": "Schneider Electric is aware of a vulnerability in its EcoStruxure™ Automation Expert product.  \r\nThe EcoStruxure™ Automation Expert product is plant automation software designed for digital control systems \r\nin discrete, hybrid and continuous industrial processes. A totally integrated automation solution designed to \r\nenhance your flexibility, efficiency and scalability. \r\nFailure to apply the remediation provided below may risk execution of arbitrary commands on the engineering \r\nworkstation, which could result in a potential compromise of full system. ",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2026-2273"
-      ],
-      "cvss_max": 8.2,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Automation Expert",
-          "version": "vers:intdot/<25.0.1",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure™ Automation Expert",
-          "version": "25.0.1",
-          "product_id": "CSAFPID-0002"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-03"
-    },
-    {
-      "advisory_id": "ICSA-26-078-04",
-      "title": "Schneider Electric EcoStruxure PME and EPO",
-      "date": "2026-03-10",
-      "summary": "Schneider Electric is aware of a vulnerability in its EcoStruxure Power Monitoring Expert (PME) and EcoStruxure Power Operation (EPO) products. EcoStruxure Power Monitoring Expert (PME) is an on-premises software used to help power critical and energy-intensive facilities maximize uptime and operational efficiency. EcoStruxure Power Operation (EPO) are on-premises software offers that provides a single platform to monitor and control medium and lower power systems.Failure to apply the fix provided below may risk local arbitrary code execution, which could result in the local system being compromised, a disruption of operations, and/or unauthorized administrative control of the system.",
-      "sectors": [
-        "Healthcare and Public Health",
-        "Information Technology",
-        "Critical Manufacturing",
-        "Commercial Facilities",
-        "Energy",
-        "Transportation Systems",
-        "Government Services and Facilities",
-        "Water and Wastewater"
-      ],
-      "cves": [
-        "CVE-2025-11739"
-      ],
-      "cvss_max": 7.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME) 2022",
-          "version": "<=2022",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME)",
-          "version": "2023",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME)",
-          "version": "2023_R2",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME)",
-          "version": "2024",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME)",
-          "version": "2024_R2",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Operation (EPO) 2022 Advanced Reporting and Dashboards Module",
-          "version": "<=2022",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Operation (EPO) Advanced Reporting and Dashboards Module",
-          "version": "2024",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME)",
-          "version": "2023_R2_Hotfix_282807",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Schneider Electric",
-          "product": "EcoStruxure Power Monitoring Expert (PME)",
-          "version": "2024_R2_Hotfix_279338__2024R2",
-          "product_id": "CSAFPID-0009"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-04"
-    },
-    {
-      "advisory_id": "ICSA-26-078-05",
-      "title": "Mitsubishi Electric CNC Series",
-      "date": "2026-03-10",
-      "summary": "Successful exploitation of this vulnerability could allow a remote attacker to cause an out-of-bounds read, resulting in a denial-of-service condition in the affected products.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-2399"
-      ],
-      "cvss_max": 5.9,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M800VW (BND-2051W000)",
-          "version": "<=BB",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M800VS (BND-2052W000)",
-          "version": "<=BB",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M80V (BND-2053W000)",
-          "version": "<=BB",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M80VW (BND-2054W000)",
-          "version": "<=BB",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M800W (BND-2005W000)",
-          "version": "<=FM",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M800S (BND-2006W000)",
-          "version": "<=FM",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M80 (BND-2007W000)",
-          "version": "<=FM",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M80W (BND-2008W000)",
-          "version": "<=FM",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "E80 (BND-2009W000)",
-          "version": "<=FM",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "C80 (BND-2036W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M750VW (BND-1015W002)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M730VW (BND-1015W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M720VW (BND-1015W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M750VS (BND-1012W002)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M730VS (BND-1012W000-**)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M720VS (BND-1012W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "M70V (BND-1018W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "E70 (BND-1022W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "NC Trainer2 (BND-1802W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "NC Trainer2 plus (BND-1803W000)",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0020"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-078-05"
     },
     {
       "advisory_id": "ICSA-26-083-02",
