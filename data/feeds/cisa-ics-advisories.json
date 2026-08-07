@@ -1,6 +1,85 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-218-02",
+      "title": "Johnson Controls Inc. TL280",
+      "date": "2026-08-06",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to access sensitive information on the device. ",
+      "sectors": [
+        "Critical Manufacturing",
+        "Commercial Facilities",
+        "Government Services and Facilities",
+        "Transportation Systems",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-27871"
+      ],
+      "cvss_max": 4.1,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Johnson Controls Inc.",
+          "product": "TL280",
+          "version": "<5.63",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02"
+    },
+    {
+      "advisory_id": "ICSMA-26-218-01",
+      "title": "Medixant RadiAnt DICOM",
+      "date": "2026-08-06",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to cause the application to crash if a maliciously crafted DICOM file is opened.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-17264"
+      ],
+      "cvss_max": 4.3,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Medixant",
+          "product": "RadiAnt DICOM",
+          "version": "<=2025.2",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-218-01"
+    },
+    {
+      "advisory_id": "ICSA-26-216-01",
+      "title": "Acrisure KARR BT and DR-100",
+      "date": "2026-08-04",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to perform unauthorized vehicle control operations.",
+      "sectors": [
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-18411"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Acrisure",
+          "product": "KARR BT",
+          "version": "<July 26, 2026",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Acrisure",
+          "product": "DR-100",
+          "version": "<July 26, 2026",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-216-01"
+    },
+    {
       "advisory_id": "ICSA-26-211-01",
       "title": "MikroTik RouterOS",
       "date": "2026-07-30",
@@ -1022,6 +1101,48 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-211-11"
+    },
+    {
+      "advisory_id": "ICSA-26-218-01",
+      "title": "ABB Ability Zenon",
+      "date": "2026-07-30",
+      "summary": "ABB is aware of publicly reported vulnerabilities affecting MongoDB 4.2, which is bundled within the IIoT Services of the affected product versions. MongoDB 4.2 has reached end-of-life and contains multiple known security vulnerabilities. An attacker who successfully exploits these vulnerabilities could potentially access sensitive information, cause denial of service, or disrupt system availability.",
+      "sectors": [
+        "Chemical",
+        "Communications",
+        "Critical Manufacturing",
+        "Dams",
+        "Energy",
+        "Healthcare and Public Health",
+        "Information Technology",
+        "Water and Wastewater"
+      ],
+      "cves": [
+        "CVE-2025-14847",
+        "CVE-2020-7928",
+        "CVE-2020-7921",
+        "CVE-2020-7925",
+        "CVE-2020-7929",
+        "CVE-2020-7923",
+        "CVE-2021-20330",
+        "CVE-2021-32036",
+        "CVE-2021-32040",
+        "CVE-2021-20333",
+        "CVE-2020-7924",
+        "CVE-2021-20328",
+        "CVE-2021-20334"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "ABB",
+          "product": "Ability Zenon",
+          "version": "/all",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-01"
     },
     {
       "advisory_id": "ICSA-26-209-05",
@@ -13969,205 +14090,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-120-06"
     },
     {
-      "advisory_id": "ICSA-26-099-01",
-      "title": "Contemporary Controls BASC 20T",
-      "date": "2026-04-09",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to enumerate the functionality of each component associated with the PLC, reconfigure, rename, delete, perform file transfers, and make remote procedure calls.",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Energy"
-      ],
-      "cves": [
-        "CVE-2025-13926"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Contemporary Controls Sedona Alliance",
-          "product": "BASControl20",
-          "version": "3.1",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-099-01"
-    },
-    {
-      "advisory_id": "ICSA-26-099-02",
-      "title": "GPL Odorizers GPL750",
-      "date": "2026-04-09",
-      "summary": "Successful exploitation of this vulnerability could allow a low privileged remote attacker to manipulate register values, which would result in too much or too little odorant being injected into a gas line.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-4436"
-      ],
-      "cvss_max": 8.6,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "GPL Odorizers",
-          "product": "GPL750 (XL4)",
-          "version": ">=v1.0|<v6.0",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "GPL Odorizers",
-          "product": "GPL750 (XL4 Prime)",
-          "version": ">=v4.0|<v6.0",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "GPL Odorizers",
-          "product": "GPL750 (XL7)",
-          "version": ">=v13.0|<v20.0",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "GPL Odorizers",
-          "product": "GPL750 (XL7 Prime)",
-          "version": ">=v18.4|<v20.0",
-          "product_id": "CSAFPID-0004"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-099-02"
-    },
-    {
-      "advisory_id": "ICSA-26-097-01",
-      "title": "Mitsubishi Electric GENESIS64 and ICONICS Suite products",
-      "date": "2026-04-07",
-      "summary": "Successful exploitation of these vulnerabilities could allow a local attacker to disclose SQL Server credentials used by the affected products and use them to disclose, tamper with, or destroy data, or to cause a denial-of-service (DoS) condition on the system.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-14815",
-        "CVE-2025-14816"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "GENESIS64",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "ICONICS Suite",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MobileHMI",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "Hyper Historian",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "AnalytiX",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "MC Works 64",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Mitsubishi Electric",
-          "product": "GENESIS",
-          "version": "<=11.02",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Mitsubishi Electric Iconics Digital Solutions",
-          "product": "GENESIS64",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Mitsubishi Electric Iconics Digital Solutions",
-          "product": "ICONICS Suite",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Mitsubishi Electric Iconics Digital Solutions",
-          "product": "MobileHMI",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Mitsubishi Electric Iconics Digital Solutions",
-          "product": "Hyper Historian",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Mitsubishi Electric Iconics Digital Solutions",
-          "product": "AnalytiX",
-          "version": "<=10.97.3",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Mitsubishi Electric Iconics Digital Solutions",
-          "product": "GENESIS",
-          "version": "<=11.02",
-          "product_id": "CSAFPID-0013"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-097-01"
-    },
-    {
-      "advisory_id": "ICSA-26-092-02",
-      "title": "Yokogawa CENTUM VP",
-      "date": "2026-04-02",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to login as the PROG user and modify permissions.",
-      "sectors": [
-        "Critical Manufacturing",
-        "Energy",
-        "Food and Agriculture"
-      ],
-      "cves": [
-        "CVE-2025-7741"
-      ],
-      "cvss_max": 4,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Yokogawa",
-          "product": "CENTUM VP",
-          "version": ">=R5.01.00|<R5.04.20",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Yokogawa",
-          "product": "CENTUM VP",
-          "version": ">=R6.01.00|<R6.12.00",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Yokogawa",
-          "product": "CENTUM VP",
-          "version": "vR7.01.00",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-092-02"
-    },
-    {
       "advisory_id": "ICSMA-26-083-01",
       "title": "Grassroots DICOM (GDCM)",
       "date": "2026-03-24",
@@ -14294,29 +14216,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-132-05"
-    },
-    {
-      "advisory_id": "ICSA-26-092-03",
-      "title": "Hitachi Energy Ellipse",
-      "date": "2026-02-24",
-      "summary": "Hitachi Energy is aware of a Jasper Report vulnerability that affects the Ellipse product versions mentioned in this document below. This vulnerability can be exploited to carry out remote code execution (RCE) attack on the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-10492"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Hitachi Energy",
-          "product": "Ellipse",
-          "version": "vers:Ellipse/<=9.0.50",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-092-03"
     },
     {
       "advisory_id": "ICSA-26-132-03",
