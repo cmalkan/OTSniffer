@@ -1,6 +1,65 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSMA-26-223-01",
+      "title": "Mira Hormone Monitor, Mira Android App",
+      "date": "2026-08-11",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to access unauthorized health profile information, make changes to health information, cause a denial-of-service condition, disclose session token information, and obtain control of user accounts.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-66875",
+        "CVE-2026-66098",
+        "CVE-2026-67558",
+        "CVE-2026-67568",
+        "CVE-2026-68067",
+        "CVE-2026-66340",
+        "CVE-2026-64934",
+        "CVE-2026-66832"
+      ],
+      "cvss_max": 9.8,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Quanovate Tech Inc. (operating as Mira / Mira Care)",
+          "product": "Mira Monitor Firmware",
+          "version": "1.7.1.47",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Quanovate Tech Inc. (operating as Mira / Mira Care)",
+          "product": "Mira Android App",
+          "version": "4.5.15.4",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-223-01"
+    },
+    {
+      "advisory_id": "ICSMA-26-223-02",
+      "title": "Pulsetto Vagus Nerve Stimulator",
+      "date": "2026-08-11",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to use hidden commands to disable electrical safety mechanisms or modify other stimulation output settings.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-18844"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Pulsetto",
+          "product": "Pulsetto Vagus Nerve Stimulator",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-223-02"
+    },
+    {
       "advisory_id": "ICSA-26-219-01",
       "title": "CPDLC over ATN-B1 Vulnerabilities",
       "date": "2026-08-07",
@@ -98,6 +157,71 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-216-01"
+    },
+    {
+      "advisory_id": "ICSMA-26-216-01",
+      "title": "Thermo Fisher Applied Biosystems Genetic Analyzers",
+      "date": "2026-08-04",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to modify .fsa/.hid output files, tampering with DNA data and resulting in inaccurate test results.",
+      "sectors": [
+        "Healthcare and Public Health"
+      ],
+      "cves": [
+        "CVE-2026-17583"
+      ],
+      "cvss_max": 8.4,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Thermo Fisher",
+          "product": "Applied Biosystems 3500/3500xL Series Data Collection Software",
+          "version": "<=4.0.2",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "Applied Biosystems 3730/3730xL Series Data Collection Software",
+          "version": "<=5.0.2",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "Applied Biosystems SeqStudio Genetic Analyzer Data Collection Software",
+          "version": "<=1.2.5",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "Applied Biosystems SeqStudio Flex Series Instrument Software",
+          "version": "<=1.2.0",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "Applied Biosystems GeneMapper ID-X Software",
+          "version": "<=v1.7.3",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "Applied Biosystems 3130 Series Data Collection Software",
+          "version": "<=4.1",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "ABI PRISM 3100/3100-Avant Data Collection Software",
+          "version": "<=2.0",
+          "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Thermo Fisher",
+          "product": "ABI PRISM 310 Data Collection Software",
+          "version": "<=3.1",
+          "product_id": "CSAFPID-0008"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-216-01"
     },
     {
       "advisory_id": "ICSA-26-211-01",
@@ -1219,7 +1343,7 @@
     },
     {
       "advisory_id": "ICSA-26-204-01",
-      "title": "Johnson Controls C-CURE 9000 and Victor application server",
+      "title": "Johnson Controls C-CURE 9000 and Victor application server (Update A)",
       "date": "2026-07-23",
       "summary": "Successful exploitation of these vulnerabilities could allow an attacker with network access to achieve remote code execution.",
       "sectors": [
@@ -1235,21 +1359,33 @@
       "affected_products": [
         {
           "vendor": "Johnson Controls",
-          "product": "C-CURE 9000 and victor",
-          "version": "<=v2.90_v3.0",
+          "product": "C-CURE 9000",
+          "version": "<=v3.10.1",
           "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Johnson Controls",
+          "product": "victor Application Server",
+          "version": "<=v4.10",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Johnson Controls",
+          "product": "victor",
+          "version": "<=v7.0",
+          "product_id": "CSAFPID-0003"
         },
         {
           "vendor": "Johnson Controls",
           "product": "victor Web",
           "version": "<v7.0",
-          "product_id": "CSAFPID-0002"
+          "product_id": "CSAFPID-0004"
         },
         {
           "vendor": "Johnson Controls",
           "product": "victor Web",
           "version": "<=v7.1",
-          "product_id": "CSAFPID-0003"
+          "product_id": "CSAFPID-0005"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-204-01"
@@ -12854,96 +12990,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-12"
-    },
-    {
-      "advisory_id": "ICSA-26-106-02",
-      "title": "Horner Automation Cscape and XL4, XL7 PLC",
-      "date": "2026-04-16",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to gain unauthorized access to systems and services.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-6284"
-      ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Horner Automation",
-          "product": "Cscape",
-          "version": "v10.0",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Horner Automation",
-          "product": "XL7 PLC",
-          "version": "v15.60",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Horner Automation",
-          "product": "XL4 PLC",
-          "version": "v16.32.0",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-106-02"
-    },
-    {
-      "advisory_id": "ICSA-26-106-03",
-      "title": "Anviz Multiple Products",
-      "date": "2026-04-16",
-      "summary": "Successful exploitation of these vulnerabilities could allow attackers to conduct reconnaissance, capture or decrypt sensitive data, alter device configurations, gain unauthorized administrative or root‑level access, execute arbitrary code, compromise credentials or communications, and ultimately obtain full control over affected devices.",
-      "sectors": [
-        "Commercial Facilities",
-        "Critical Manufacturing",
-        "Defense Industrial Base",
-        "Energy",
-        "Financial Services",
-        "Food and Agriculture",
-        "Government Services and Facilities",
-        "Healthcare and Public Health",
-        "Information Technology",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2026-33093",
-        "CVE-2026-35061",
-        "CVE-2026-32648",
-        "CVE-2026-40461",
-        "CVE-2026-35682",
-        "CVE-2026-35546",
-        "CVE-2026-40066",
-        "CVE-2026-32324",
-        "CVE-2026-31927",
-        "CVE-2026-33569",
-        "CVE-2026-40434",
-        "CVE-2026-32650"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "Anviz",
-          "product": "CX2 Lite Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Anviz",
-          "product": "CX7 Firmware",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Anviz",
-          "product": "CrossChex Standard",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0003"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-106-03"
     },
     {
       "advisory_id": "ICSA-26-106-04",
