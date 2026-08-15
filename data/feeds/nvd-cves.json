@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-08-13T07:51:54.574Z",
+  "pulled_at": "2026-08-15T06:58:19.004Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -86765,7 +86765,7 @@
       ],
       "published": "2026-07-14T13:18:13.163",
       "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-07-15T08:34:30.797Z"
+      "fetched_at": "2026-08-15T06:58:12.455Z"
     },
     "CVE-2026-8085": {
       "cve_id": "CVE-2026-8085",
@@ -105776,6 +105776,414 @@
       "published": "2026-07-29T13:17:36.300",
       "last_modified": "2026-07-30T16:43:03.817",
       "fetched_at": "2026-07-31T09:19:52.846Z"
+    },
+    "CVE-2025-7639": {
+      "cve_id": "CVE-2025-7639",
+      "description": "The vulnerability, if exploited, could allow an authenticated miscreant \nwith \"DNA Authority - Operator\" privilege to tamper with serialized \ndata, potentially resulting in code execution during deserialization \nunder the privilege of Enterprise SCADA security group \"DNA Apps\".",
+      "cvss_version": null,
+      "cvss_score": null,
+      "cvss_severity": null,
+      "cvss_vector": null,
+      "cwes": [
+        "CWE-502"
+      ],
+      "references": [
+        {
+          "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-225-01.json",
+          "tags": []
+        },
+        {
+          "url": "https://www.aveva.com/content/dam/aveva/documents/support/cyber-security-updates/SecurityBulletin_AVEVA-2026-005.pdf",
+          "tags": []
+        },
+        {
+          "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-01",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-14T19:17:13.380",
+      "last_modified": "2026-08-14T22:16:33.127",
+      "fetched_at": "2026-08-15T06:56:07.636Z"
+    },
+    "CVE-2026-23573": {
+      "cve_id": "CVE-2026-23573",
+      "description": "An Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability [CWE-79] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.6, FortiOS 7.4 all versions, FortiOS 7.2 all versions, FortiPAM 1.8.0, FortiPAM 1.7 all versions, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.4.0 through 7.4.3, FortiProxy 7.2.0 through 7.2.9 may allow an authenticated remote user to execute code or commands via crafted requests.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.1,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+      "cwes": [
+        "CWE-79"
+      ],
+      "references": [
+        {
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-150",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-127084.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T16:16:51.823",
+      "last_modified": "2026-08-11T13:17:59.330",
+      "fetched_at": "2026-08-15T06:56:14.194Z"
+    },
+    "CVE-2026-59839": {
+      "cve_id": "CVE-2026-59839",
+      "description": "A improper limitation of a pathname to a restricted directory ('path traversal') vulnerability in Fortinet FortiOS 7.6.0 through 7.6.6, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions, FortiOS 6.4 all versions, FortiPAM 1.8.0, FortiPAM 1.7.0 through 1.7.2, FortiPAM 1.6 all versions, FortiPAM 1.5 all versions, FortiPAM 1.4 all versions, FortiPAM 1.3 all versions, FortiPAM 1.2 all versions, FortiPAM 1.1 all versions, FortiPAM 1.0 all versions, FortiProxy 7.6.0 through 7.6.5, FortiProxy 7.4 through 7.4.13, FortiProxy 7.2 all versions, FortiProxy 7.0 all versions may allow attacker to execute unauthorized code or commands via <insert attack vector here>",
+      "cvss_version": "3.1",
+      "cvss_score": 5.5,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:P/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+      "cwes": [
+        "CWE-22"
+      ],
+      "references": [
+        {
+          "url": "https://fortiguard.fortinet.com/psirt/FG-IR-26-151",
+          "tags": [
+            "Vendor Advisory"
+          ]
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-127084.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T16:17:03.047",
+      "last_modified": "2026-08-11T13:19:01.100",
+      "fetched_at": "2026-08-15T06:56:20.757Z"
+    },
+    "CVE-2026-69108": {
+      "cve_id": "CVE-2026-69108",
+      "description": "A vulnerability has been identified in Siemens License Server (SLS) (All versions < V5.1). The affected application is vulnerable to a local privilege escalation due to an insecure sudoers policy. This could allow an attacker to execute arbitrary commands and plant malicious files as root, leading to full system compromise.",
+      "cvss_version": "3.1",
+      "cvss_score": 6,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+      "cwes": [
+        "CWE-732"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-077553.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:19:01.883",
+      "last_modified": "2026-08-11T15:17:34.647",
+      "fetched_at": "2026-08-15T06:56:27.382Z"
+    },
+    "CVE-2026-69109": {
+      "cve_id": "CVE-2026-69109",
+      "description": "A vulnerability has been identified in Siemens License Server (SLS) (All versions < V5.3). The affected application is vulnerable to a path traversal vulnerability due to lack of sanitization of user input. This could allow a remote attacker to access arbitrary files on the application.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "cwes": [
+        "CWE-35"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-077553.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:19:02.030",
+      "last_modified": "2026-08-11T18:18:17.730",
+      "fetched_at": "2026-08-15T06:56:33.936Z"
+    },
+    "CVE-2026-59693": {
+      "cve_id": "CVE-2026-59693",
+      "description": "A vulnerability has been identified in Desigo DXR2 (All versions < V01.21.233.16-7862), Desigo PXC3 (All versions < V01.21.233.16-7862), Desigo PXC4 (All versions < V02.21.194.36-2715), Desigo PXC5.E003 (All versions < V02.21.194.36-2715), Desigo PXC5.E24 (All versions < V02.21.194.36-2715), Desigo PXC7 (All versions < V02.21.194.36-2715). The affected devices are vulnerable to a denial-of-service (DoS) vulnerability. An attacker can exploit this issue by sending a malformed BACnet packet, causing the device to stop responding to BACnet queries. Recovery requires a device reset or reboot to restore normal functionality.",
+      "cvss_version": "3.1",
+      "cvss_score": 4.3,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "cwes": [
+        "CWE-754"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-781903.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:19:00.477",
+      "last_modified": "2026-08-11T18:17:41.267",
+      "fetched_at": "2026-08-15T06:56:40.499Z"
+    },
+    "CVE-2026-3014": {
+      "cve_id": "CVE-2026-3014",
+      "description": "Milestone\nhas released a new version of XProtect® (and several cumulative patch updates)\nwhich fix security vulnerability in Management Server API.\n\n\n\nThe vulnerability\ncauses users with edit permissions to the Management Server to be able to\nexecute arbitrary code in context of the Management Server Service.",
+      "cvss_version": "3.1",
+      "cvss_score": 9.1,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-78"
+      ],
+      "references": [
+        {
+          "url": "https://doc.milestonesys.com/en-US/bundle/sec1504_latest/page/milestone_security_advisory_CVE-2026-3014_potential_remote_code_execution_by_admin_user_on_Management_Server.html",
+          "tags": []
+        },
+        {
+          "url": "https://support.milestonesys.com/article/CVE-2026-3014-potential-remote-code-execution-by-admin-user-on-Management-Server",
+          "tags": []
+        },
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-825228.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-07-14T10:16:32.917",
+      "last_modified": "2026-08-11T13:18:47.727",
+      "fetched_at": "2026-08-15T06:56:47.051Z"
+    },
+    "CVE-2026-64629": {
+      "cve_id": "CVE-2026-64629",
+      "description": "A vulnerability has been identified in Parasolid V38.0 (All versions < V38.0.235), Parasolid V38.1 (All versions < V38.1.230). The affected applications contains an out of bounds read vulnerability while parsing specially crafted X_T files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-138516.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:19:01.560",
+      "last_modified": "2026-08-12T20:17:48.073",
+      "fetched_at": "2026-08-15T06:56:53.607Z"
+    },
+    "CVE-2026-59700": {
+      "cve_id": "CVE-2026-59700",
+      "description": "A vulnerability has been identified in Simcenter Femap (All versions < V2606.0001). The affected applications contains an out of bounds read vulnerability while parsing specially crafted BMP files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-584312.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:19:00.627",
+      "last_modified": "2026-08-12T20:17:45.597",
+      "fetched_at": "2026-08-15T06:57:00.193Z"
+    },
+    "CVE-2026-59701": {
+      "cve_id": "CVE-2026-59701",
+      "description": "A vulnerability has been identified in Simcenter Femap (All versions < V2606.0001). The affected applications contains an out of bounds read vulnerability while parsing specially crafted BMP files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-584312.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:19:00.763",
+      "last_modified": "2026-08-11T14:17:14.850",
+      "fetched_at": "2026-08-15T06:57:06.747Z"
+    },
+    "CVE-2026-50058": {
+      "cve_id": "CVE-2026-50058",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contains an out of bounds read vulnerability while parsing specially crafted DFT files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.153",
+      "last_modified": "2026-08-11T15:17:30.730",
+      "fetched_at": "2026-08-15T06:57:13.356Z"
+    },
+    "CVE-2026-50059": {
+      "cve_id": "CVE-2026-50059",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contains an out of bounds write vulnerability while parsing specially crafted DFT files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.313",
+      "last_modified": "2026-08-11T18:17:35.120",
+      "fetched_at": "2026-08-15T06:57:19.928Z"
+    },
+    "CVE-2026-50060": {
+      "cve_id": "CVE-2026-50060",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contain a use-after-free vulnerability that could be triggered while parsing specially crafted DFT files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-416"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.447",
+      "last_modified": "2026-08-12T20:17:44.970",
+      "fetched_at": "2026-08-15T06:57:26.476Z"
+    },
+    "CVE-2026-50061": {
+      "cve_id": "CVE-2026-50061",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contain a use-after-free vulnerability that could be triggered while parsing specially crafted DFT files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-416"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.583",
+      "last_modified": "2026-08-11T15:17:30.847",
+      "fetched_at": "2026-08-15T06:57:33.044Z"
+    },
+    "CVE-2026-50062": {
+      "cve_id": "CVE-2026-50062",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contains an out of bounds read vulnerability while parsing specially crafted PAR files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.720",
+      "last_modified": "2026-08-12T21:17:39.243",
+      "fetched_at": "2026-08-15T06:57:39.622Z"
+    },
+    "CVE-2026-50063": {
+      "cve_id": "CVE-2026-50063",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contains an out of bounds read vulnerability while parsing specially crafted PAR files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-125"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.860",
+      "last_modified": "2026-08-11T15:17:30.990",
+      "fetched_at": "2026-08-15T06:57:46.195Z"
+    },
+    "CVE-2026-50064": {
+      "cve_id": "CVE-2026-50064",
+      "description": "A vulnerability has been identified in Solid Edge SE2025 (All versions < V225.0 Update 15), Solid Edge SE2026 (All versions < V226.0 Update 7). The affected applications contains an out of bounds write vulnerability while parsing specially crafted PSM files. This could allow an attacker to execute code in the context of the current process.",
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "cwes": [
+        "CWE-787"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:58.990",
+      "last_modified": "2026-08-11T18:17:35.633",
+      "fetched_at": "2026-08-15T06:57:52.753Z"
+    },
+    "CVE-2026-57262": {
+      "cve_id": "CVE-2026-57262",
+      "description": "A vulnerability has been identified in LOGO! Soft Comfort (All versions < V9). Affected products use a static, hardcoded AES master key to encrypt project files. This could allow a local attacker to extract the master key from the application files or memory and use it to decrypt project files or remove project passwords entirely without knowing the actual user-defined password.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.8,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "cwes": [
+        "CWE-321"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-751328.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:59.463",
+      "last_modified": "2026-08-12T20:17:45.260",
+      "fetched_at": "2026-08-15T06:57:59.302Z"
+    },
+    "CVE-2026-57263": {
+      "cve_id": "CVE-2026-57263",
+      "description": "A vulnerability has been identified in LOGO! Soft Comfort (All versions < V9). The project password feature in the affected products stores the password as an unsalted SHA-256 hash. This could allow an attacker who has obtained the project file to perform efficient offline dictionary or brute-force attacks against the unsalted hash.",
+      "cvss_version": "3.1",
+      "cvss_score": 6.8,
+      "cvss_severity": "medium",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "cwes": [
+        "CWE-759"
+      ],
+      "references": [
+        {
+          "url": "https://cert-portal.siemens.com/productcert/html/ssa-751328.html",
+          "tags": []
+        }
+      ],
+      "published": "2026-08-11T13:18:59.607",
+      "last_modified": "2026-08-11T14:17:14.590",
+      "fetched_at": "2026-08-15T06:58:05.901Z"
     }
   }
 }

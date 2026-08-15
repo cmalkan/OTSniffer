@@ -1,63 +1,456 @@
 {
   "advisories": [
     {
-      "advisory_id": "ICSMA-26-223-01",
-      "title": "Mira Hormone Monitor, Mira Android App",
-      "date": "2026-08-11",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to access unauthorized health profile information, make changes to health information, cause a denial-of-service condition, disclose session token information, and obtain control of user accounts.",
+      "advisory_id": "ICSA-26-225-01",
+      "title": "AVEVA Enterprise SCADA",
+      "date": "2026-08-13",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to tamper with serialized data, potentially resulting in code execution during deserialization.",
       "sectors": [
-        "Healthcare and Public Health"
+        "Critical Manufacturing"
       ],
       "cves": [
-        "CVE-2026-66875",
-        "CVE-2026-66098",
-        "CVE-2026-67558",
-        "CVE-2026-67568",
-        "CVE-2026-68067",
-        "CVE-2026-66340",
-        "CVE-2026-64934",
-        "CVE-2026-66832"
+        "CVE-2025-7639"
       ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
+      "cvss_max": 7.1,
+      "cvss_severity": "high",
       "affected_products": [
         {
-          "vendor": "Quanovate Tech Inc. (operating as Mira / Mira Care)",
-          "product": "Mira Monitor Firmware",
-          "version": "1.7.1.47",
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA",
+          "version": "2025",
           "product_id": "CSAFPID-0001"
         },
         {
-          "vendor": "Quanovate Tech Inc. (operating as Mira / Mira Care)",
-          "product": "Mira Android App",
-          "version": "4.5.15.4",
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA",
+          "version": ">=2024|<=2024_SP1_P01",
           "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA",
+          "version": ">=2023|<=2023_SP1",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA",
+          "version": ">=2022|<=2022_SP2_P2",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA",
+          "version": "<=2021_SP2_P5",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA HMI",
+          "version": "2024|2024|R2",
+          "product_id": "CSAFPID-0006"
+        },
+        {
+          "vendor": "AVEVA",
+          "product": "Enterprise SCADA HMI",
+          "version": "<=2023_P1",
+          "product_id": "CSAFPID-0007"
         }
       ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-223-01"
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-01"
     },
     {
-      "advisory_id": "ICSMA-26-223-02",
-      "title": "Pulsetto Vagus Nerve Stimulator",
-      "date": "2026-08-11",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to use hidden commands to disable electrical safety mechanisms or modify other stimulation output settings.",
+      "advisory_id": "ICSA-26-225-02",
+      "title": "Haiwell IoT Cloud HMI Gateway",
+      "date": "2026-08-13",
+      "summary": "Successful exploitation of this vulnerability may allow an attacker to inject and execute arbitrary OS commands with root privileges.",
       "sectors": [
-        "Healthcare and Public Health"
+        "Energy",
+        "Critical Manufacturing",
+        "Water and Wastewater"
       ],
       "cves": [
-        "CVE-2026-18844"
+        "CVE-2026-19188"
+      ],
+      "cvss_max": 10,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Haiwell",
+          "product": "Haiwell IoT Cloud HMI Gateway",
+          "version": "3.40.1.12",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+    },
+    {
+      "advisory_id": "ICSA-26-225-03",
+      "title": "Johnson Controls Inc. Airwall",
+      "date": "2026-08-13",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to decrypt sensitive data, bypass authentication controls, gaining unauthorized access to read arbitrary files on the system, or gain unauthorized access to protected system resources.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Commercial Facilities",
+        "Government Services and Facilities",
+        "Transportation Systems",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-64887",
+        "CVE-2026-34492"
+      ],
+      "cvss_max": 6.8,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Johnson Controls Inc.",
+          "product": "Airwall",
+          "version": "<=4.0.4",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-03"
+    },
+    {
+      "advisory_id": "ICSA-26-225-05",
+      "title": "ANDRITZ HIPASE-250 and 250 SCALA",
+      "date": "2026-08-13",
+      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to read data from the device or gain access to affected workstations.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-65309",
+        "CVE-2026-65310",
+        "CVE-2026-65311",
+        "CVE-2026-65313"
       ],
       "cvss_max": 8.1,
       "cvss_severity": "high",
       "affected_products": [
         {
-          "vendor": "Pulsetto",
-          "product": "Pulsetto Vagus Nerve Stimulator",
+          "vendor": "ANDRITZ",
+          "product": "HIPASE-250",
+          "version": "<=7.20",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "ANDRITZ",
+          "product": "250 SCALA",
+          "version": "<=7.20",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-05"
+    },
+    {
+      "advisory_id": "ICSA-26-225-14",
+      "title": "Johnson Controls Metasys",
+      "date": "2026-08-13",
+      "summary": "Successful exploitation of this vulnerability could allow a low-privilege user or attacker to inject a persistent malicious payload via a crafted URL that executes in the context of other users' sessions, including administrators, potentially leading to session hijacking and unauthorized access.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Commercial Facilities",
+        "Government Services and Facilities",
+        "Transportation Systems",
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-34491"
+      ],
+      "cvss_max": 8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Johnson Controls Inc",
+          "product": "Metasys 12",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Johnson Controls Inc",
+          "product": "Metasys 13",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Johnson Controls Inc",
+          "product": "Metasys 14",
+          "version": "<v14.1.5",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Johnson Controls Inc",
+          "product": "Metasys 15",
+          "version": "<v15.0.1",
+          "product_id": "CSAFPID-0004"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-14"
+    },
+    {
+      "advisory_id": "ICSA-26-225-06",
+      "title": "Siemens RUGGEDCOM APE1808",
+      "date": "2026-08-11",
+      "summary": "Fortinet has published information on vulnerabilities in FortiOS. This advisory lists the related Siemens Industrial products.\n\nSiemens recommends to contact customer support for additional information, and follow Fortinet advisory for workarounds and mitigation measures.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Energy",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-23573",
+        "CVE-2026-59839"
+      ],
+      "cvss_max": 6.1,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "RUGGEDCOM APE1808",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0001"
         }
       ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-223-02"
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-06"
+    },
+    {
+      "advisory_id": "ICSA-26-225-07",
+      "title": "Siemens License Server (SLS)",
+      "date": "2026-08-11",
+      "summary": "Siemens License Server is affected by multiple vulnerabilities which could allow an attacker to elevate its privileges and read arbitrary files on the system.\n\nSiemens has released a new version for Siemens License Server (SLS) and recommends to update to the latest version.",
+      "sectors": [
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2026-69108",
+        "CVE-2026-69109"
+      ],
+      "cvss_max": 7.5,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Siemens License Server (SLS)",
+          "version": "vers:intdot/<5.1",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Siemens License Server (SLS)",
+          "version": "vers:intdot/<5.3",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-07"
+    },
+    {
+      "advisory_id": "ICSA-26-225-08",
+      "title": "Siemens Desigo DXR and PXC Controllers",
+      "date": "2026-08-11",
+      "summary": "A vulnerability in Desigo DXR and PXC controllers has been identified that could allow an attacker to cause denial of service conditions by sending malformed  BACnet packets. Recovery requires a device reset or reboot to restore normal functionality.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+      "sectors": [
+        "Commercial Facilities",
+        "Critical Manufacturing",
+        "Energy",
+        "Healthcare and Public Health",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-59693"
+      ],
+      "cvss_max": 4.3,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Desigo DXR2",
+          "version": "vers:intdot/<01.21.233.16-7862",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo PXC3",
+          "version": "vers:intdot/<01.21.233.16-7862",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo PXC4",
+          "version": "vers:intdot/<02.21.194.36-2715",
+          "product_id": "CSAFPID-0003"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo PXC5.E003",
+          "version": "vers:intdot/<02.21.194.36-2715",
+          "product_id": "CSAFPID-0004"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo PXC5.E24",
+          "version": "vers:intdot/<02.21.194.36-2715",
+          "product_id": "CSAFPID-0005"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Desigo PXC7",
+          "version": "vers:intdot/<02.21.194.36-2715",
+          "product_id": "CSAFPID-0006"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-08"
+    },
+    {
+      "advisory_id": "ICSA-26-225-10",
+      "title": "Siemens Siveillance Video",
+      "date": "2026-08-11",
+      "summary": "Siveillance Video Management Servers contains a vulnerability that could allow a Remote Code Execution attack.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+      "sectors": [
+        "Critical Manufacturing",
+        "Communications",
+        "Commercial Facilities"
+      ],
+      "cves": [
+        "CVE-2026-3014"
+      ],
+      "cvss_max": 9.1,
+      "cvss_severity": "critical",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Siveillance Video V2023 R3",
+          "version": "vers:intdot/<23.3.27",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Siveillance Video V2024 R1",
+          "version": "vers:intdot/<24.1.16",
+          "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Siveillance Video V2025",
+          "version": "vers:intdot/<25.1.15",
+          "product_id": "CSAFPID-0003"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10"
+    },
+    {
+      "advisory_id": "ICSA-26-225-10",
+      "title": "Siemens Parasolid",
+      "date": "2026-08-11",
+      "summary": "Parasolid is affected by an out of bounds read vulnerability that could be triggered when the application reads files in X_T format. This could allow an attacker to crash the application or execute arbitrary code.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-64629"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Parasolid V38.0",
+          "version": "vers:intdot/<38.0.235",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Parasolid V38.1",
+          "version": "vers:intdot/<38.1.230",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-10"
+    },
+    {
+      "advisory_id": "ICSA-26-225-11",
+      "title": "Siemens Simcenter Femap",
+      "date": "2026-08-11",
+      "summary": "Simcenter Femap contains two file parsing vulnerabilities that could be triggered when the application reads files in BMP file format. If a user is tricked to open a malicious file with the affected application, this could lead the application to crash or potentially lead to arbitrary code execution.\n\nSiemens has released a new version for Simcenter Femap and recommends to update to the latest version.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-59700",
+        "CVE-2026-59701"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Simcenter Femap",
+          "version": "vers:intdot/<2606.0001",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-11"
+    },
+    {
+      "advisory_id": "ICSA-26-225-12",
+      "title": "Siemens Solid Edge",
+      "date": "2026-08-11",
+      "summary": "Solid Edge is affected by multiple file parsing vulnerabilities that could be triggered when the application reads specially crafted files in PAR, PSM or DFT format. This could allow an attacker to crash the application or execute arbitrary code.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+      "sectors": [
+        "Critical Manufacturing"
+      ],
+      "cves": [
+        "CVE-2026-50058",
+        "CVE-2026-50059",
+        "CVE-2026-50060",
+        "CVE-2026-50061",
+        "CVE-2026-50062",
+        "CVE-2026-50063",
+        "CVE-2026-50064"
+      ],
+      "cvss_max": 7.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "Solid Edge SE2025",
+          "version": "vers:intdot/<225.0.15",
+          "product_id": "CSAFPID-0001"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Solid Edge SE2026",
+          "version": "vers:intdot/<226.0.7",
+          "product_id": "CSAFPID-0002"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-12"
+    },
+    {
+      "advisory_id": "ICSA-26-225-13",
+      "title": "Siemens LOGO! Soft Comfort",
+      "date": "2026-08-11",
+      "summary": "Siemens LOGO! Soft Comfort contains multiple vulnerabilities in its project-file encryption and password handling mechanisms. A local attacker could exploit these vulnerabilities to extract the master key, allowing them to decrypt project data or remove project passwords. The lack of password salting enables offline dictionary or brute-force attacks against the password hashes. Successful exploitation could result in unauthorized access to, or modification of, sensitive project logic and configurations.\n\nSiemens has released a new version for LOGO! Soft Comfort and recommends to update to the latest version.",
+      "sectors": [
+        "Commercial Facilities",
+        "Transportation Systems"
+      ],
+      "cves": [
+        "CVE-2026-57262",
+        "CVE-2026-57263"
+      ],
+      "cvss_max": 6.8,
+      "cvss_severity": "medium",
+      "affected_products": [
+        {
+          "vendor": "Siemens",
+          "product": "LOGO! Soft Comfort",
+          "version": "vers:intdot/<9",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-13"
     },
     {
       "advisory_id": "ICSA-26-219-01",
@@ -107,29 +500,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-218-02"
     },
     {
-      "advisory_id": "ICSMA-26-218-01",
-      "title": "Medixant RadiAnt DICOM",
-      "date": "2026-08-06",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to cause the application to crash if a maliciously crafted DICOM file is opened.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2026-17264"
-      ],
-      "cvss_max": 4.3,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Medixant",
-          "product": "RadiAnt DICOM",
-          "version": "<=2025.2",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-218-01"
-    },
-    {
       "advisory_id": "ICSA-26-216-01",
       "title": "Acrisure KARR BT and DR-100",
       "date": "2026-08-04",
@@ -157,71 +527,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-216-01"
-    },
-    {
-      "advisory_id": "ICSMA-26-216-01",
-      "title": "Thermo Fisher Applied Biosystems Genetic Analyzers",
-      "date": "2026-08-04",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to modify .fsa/.hid output files, tampering with DNA data and resulting in inaccurate test results.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2026-17583"
-      ],
-      "cvss_max": 8.4,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Thermo Fisher",
-          "product": "Applied Biosystems 3500/3500xL Series Data Collection Software",
-          "version": "<=4.0.2",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "Applied Biosystems 3730/3730xL Series Data Collection Software",
-          "version": "<=5.0.2",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "Applied Biosystems SeqStudio Genetic Analyzer Data Collection Software",
-          "version": "<=1.2.5",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "Applied Biosystems SeqStudio Flex Series Instrument Software",
-          "version": "<=1.2.0",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "Applied Biosystems GeneMapper ID-X Software",
-          "version": "<=v1.7.3",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "Applied Biosystems 3130 Series Data Collection Software",
-          "version": "<=4.1",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "ABI PRISM 3100/3100-Avant Data Collection Software",
-          "version": "<=2.0",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Thermo Fisher",
-          "product": "ABI PRISM 310 Data Collection Software",
-          "version": "<=3.1",
-          "product_id": "CSAFPID-0008"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-216-01"
     },
     {
       "advisory_id": "ICSA-26-211-01",
@@ -1340,6 +1645,30 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-209-06"
+    },
+    {
+      "advisory_id": "ICSA-26-225-04",
+      "title": "Hitachi Energy APM Edge Product",
+      "date": "2026-07-28",
+      "summary": "Hitachi Energy is aware of Dirty Frag vulnerabilities that affect APM Edge product versions listed in this document. Successful exploitation of these vulnerabilities could result in impact on confidentiality, integrity and availability of the product. Please refer to the Recommended Immediate Actions for information about the mitigation/remediation.",
+      "sectors": [
+        "Energy"
+      ],
+      "cves": [
+        "CVE-2026-43284",
+        "CVE-2026-43500"
+      ],
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Hitachi Energy",
+          "product": "APM Edge",
+          "version": "vers:APM_Edge/<=6.10",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-04"
     },
     {
       "advisory_id": "ICSA-26-204-01",
@@ -3512,33 +3841,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-04"
     },
     {
-      "advisory_id": "ICSMA-26-181-01",
-      "title": "OFFIS DCMTK Toolkit",
-      "date": "2026-06-30",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to write files, access unauthorized information, exhaust memory, or crash affected DCMTK client or server processes.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2026-50003",
-        "CVE-2026-50254",
-        "CVE-2026-35505",
-        "CVE-2026-52868",
-        "CVE-2026-44628"
-      ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "OFFIS",
-          "product": "DCMTK",
-          "version": "<=3.7.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-181-01"
-    },
-    {
       "advisory_id": "ICSA-26-176-01",
       "title": "Yokogawa FAST/TOOLS and CI Server",
       "date": "2026-06-25",
@@ -3788,52 +4090,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02"
-    },
-    {
-      "advisory_id": "ICSMA-26-176-01",
-      "title": "pydicom pynetdicom Library",
-      "date": "2026-06-25",
-      "summary": "Successful exploitation of this vulnerability could allow an unauthenticated attacker to write to arbitrary file paths.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2026-56445"
-      ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "pydicom",
-          "product": "pynetdicom",
-          "version": ">=v1.0.0|<v3.0.4",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-176-01"
-    },
-    {
-      "advisory_id": "ICSMA-26-176-02",
-      "title": "OHIF Viewers DICOM",
-      "date": "2026-06-25",
-      "summary": "Successful exploitation of this vulnerability in a custom integration version could allow an attacker to steal an authenticated clinician's token via a crafted link.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2026-12473"
-      ],
-      "cvss_max": 8.2,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Open Health Imaging Foundation (OHIF)",
-          "product": "OHIF DICOM Web Viewer Framework",
-          "version": "<=v3.12.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-176-02"
     },
     {
       "advisory_id": "ICSA-26-174-07",
@@ -4090,30 +4346,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-169-06"
-    },
-    {
-      "advisory_id": "ICSMA-26-169-01",
-      "title": "Apollo Pharmacy Blood Glucose Monitoring System APG-01 BT",
-      "date": "2026-06-18",
-      "summary": "Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive health-related information and prevent legitimate users from establishing a connection with the device.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2026-50034",
-        "CVE-2026-52866"
-      ],
-      "cvss_max": 6.5,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Apollo Pharmacy",
-          "product": "Blood Glucose Monitoring System (Model No. APG-01 BT)",
-          "version": "0x0110_v1.1.0",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-169-01"
     },
     {
       "advisory_id": "ICSA-26-167-01",
@@ -12867,31 +13099,6 @@
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-113-06"
     },
     {
-      "advisory_id": "ICSA-26-111-05",
-      "title": "Hardy Barth Salia EV Charge Controller (Update A)",
-      "date": "2026-04-21",
-      "summary": "Successful exploitation of these vulnerabilities could crash the device being accessed; a buffer overflow condition may allow remote code execution.",
-      "sectors": [
-        "Energy",
-        "Transportation Systems"
-      ],
-      "cves": [
-        "CVE-2025-5873",
-        "CVE-2025-10371"
-      ],
-      "cvss_max": 7.3,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Hardy Barth",
-          "product": "Salia Board Firmware",
-          "version": "<=2.3.81",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-05"
-    },
-    {
       "advisory_id": "ICSA-26-111-06",
       "title": "Zero Motorcycles Firmware (Update A)",
       "date": "2026-04-21",
@@ -12990,295 +13197,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-12"
-    },
-    {
-      "advisory_id": "ICSA-26-106-04",
-      "title": "AVEVA Pipeline Simulation",
-      "date": "2026-04-16",
-      "summary": "Successful exploitation of this vulnerability could allow an unauthenticated attacker to modify simulation parameters, training configuration and training records.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-5387"
-      ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
-      "affected_products": [
-        {
-          "vendor": "AVEVA",
-          "product": "Pipeline Simulation",
-          "version": "<=2025_SP1_build_7.1.9497.6351",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-106-04"
-    },
-    {
-      "advisory_id": "ICSA-26-111-01",
-      "title": "Siemens TPM 2.0",
-      "date": "2026-04-14",
-      "summary": "The products listed below contain a vulnerability that could allow an attacker to perform an out-of-bound read, potentially leading to information disclosure or denial of service of the TPM.\n\nSiemens has released new versions for several affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-2884"
-      ],
-      "cvss_max": 6.6,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC CN 4100",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC Field PG M5",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC Field PG M6",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-32A",
-          "version": "vers:intdot/<29.01.09",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-39A",
-          "version": "vers:intdot/<29.01.09",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-56A",
-          "version": "vers:intdot/<32.01.09",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-59A",
-          "version": "vers:intdot/<32.01.09",
-          "product_id": "CSAFPID-0007"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC MD-57A",
-          "version": "vers:intdot/<30.01.10",
-          "product_id": "CSAFPID-0008"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC PX-32A",
-          "version": "vers:intdot/<29.01.09",
-          "product_id": "CSAFPID-0009"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC PX-39A",
-          "version": "vers:intdot/<29.01.09",
-          "product_id": "CSAFPID-0010"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC PX-39A PRO",
-          "version": "vers:intdot/<29.01.09",
-          "product_id": "CSAFPID-0011"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC RW-528A",
-          "version": "vers:intdot/<34.01.02",
-          "product_id": "CSAFPID-0012"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC RW-548A",
-          "version": "vers:intdot/<34.01.02",
-          "product_id": "CSAFPID-0013"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC227E",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0014"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC277E",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0015"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC427E",
-          "version": "vers:intdot/<21.01.20",
-          "product_id": "CSAFPID-0016"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC477E",
-          "version": "vers:intdot/<21.01.20",
-          "product_id": "CSAFPID-0017"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC477E PRO",
-          "version": "vers:intdot/<21.01.20",
-          "product_id": "CSAFPID-0018"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC627E",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0019"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC647E",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0020"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC677E",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0021"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC IPC847E",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0022"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIMATIC ITP1000",
-          "version": "vers:all/*",
-          "product_id": "CSAFPID-0023"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "SIPLUS IPC427E",
-          "version": "vers:intdot/<21.01.20",
-          "product_id": "CSAFPID-0024"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-01"
-    },
-    {
-      "advisory_id": "ICSA-26-111-02",
-      "title": "Siemens RUGGEDCOM CROSSBOW Secure Access Manager Primary",
-      "date": "2026-04-14",
-      "summary": "RUGGEDCOM CROSSBOW Secure Access Manager Primary (SAM-P) contains a vulnerability that could allow an attacker to escalate their own privileges.\n\nSiemens has released a new version for RUGGEDCOM CROSSBOW Secure Access Manager Primary (SAM-P) and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-27668"
-      ],
-      "cvss_max": 8.8,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "RUGGEDCOM CROSSBOW Secure Access Manager Primary (SAM-P)",
-          "version": "vers:intdot/<5.8",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-02"
-    },
-    {
-      "advisory_id": "ICSA-26-111-03",
-      "title": "Siemens SINEC NMS",
-      "date": "2026-04-14",
-      "summary": "Siemens SINEC NMS when used with User Management Component (UMC) contains an authentication bypass vulnerability due to insufficient validation of user identity. This could allow an unauthenticated remote attacker to bypass authentication and gain unauthorized access to the application.\n\nSiemens has released a new version for SINEC NMS and recommends to update to the latest version.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2026-24032"
-      ],
-      "cvss_max": 7.3,
-      "cvss_severity": "high",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "SINEC NMS",
-          "version": "<V4.0_SP3_with_UMC",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-03"
-    },
-    {
-      "advisory_id": "ICSA-26-111-04",
-      "title": "Siemens Analytics Toolkit",
-      "date": "2026-04-14",
-      "summary": "Multiple Siemens applications are affected by improper certificate validation in Siemens Analytics Toolkit. This could allow an unauthenticated remote attacker to perform man in the middle attacks.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
-      "sectors": [
-        "Critical Manufacturing"
-      ],
-      "cves": [
-        "CVE-2025-40745"
-      ],
-      "cvss_max": 3.7,
-      "cvss_severity": "low",
-      "affected_products": [
-        {
-          "vendor": "Siemens",
-          "product": "Siemens Software Center",
-          "version": "vers:intdot/<3.5.8.2",
-          "product_id": "CSAFPID-0001"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Simcenter 3D",
-          "version": "vers:intdot/<2506.6000",
-          "product_id": "CSAFPID-0002"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Simcenter Femap",
-          "version": "vers:intdot/<2506.0002",
-          "product_id": "CSAFPID-0003"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Simcenter STAR-CCM+",
-          "version": "vers:intdot/<2602",
-          "product_id": "CSAFPID-0004"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Solid Edge SE2025",
-          "version": "<V225.0_Update_13",
-          "product_id": "CSAFPID-0005"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Solid Edge SE2026",
-          "version": "<V226.0_Update_04",
-          "product_id": "CSAFPID-0006"
-        },
-        {
-          "vendor": "Siemens",
-          "product": "Tecnomatix Plant Simulation",
-          "version": "vers:intdot/<2504.0008",
-          "product_id": "CSAFPID-0007"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-111-04"
     },
     {
       "advisory_id": "ICSA-26-111-07",
