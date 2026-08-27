@@ -1,6 +1,31 @@
 {
   "advisories": [
     {
+      "advisory_id": "ICSA-26-237-01",
+      "title": "Rently Smart Home",
+      "date": "2026-08-25",
+      "summary": "Successful exploitation of this vulnerability could allow an attacker to access sensitive information and override user permissions.",
+      "sectors": [
+        "Commercial Facilities",
+        "Communications",
+        "Information Technology"
+      ],
+      "cves": [
+        "CVE-2026-75960"
+      ],
+      "cvss_max": 8.1,
+      "cvss_severity": "high",
+      "affected_products": [
+        {
+          "vendor": "Rently",
+          "product": "Smart Home",
+          "version": "<=20.1.0",
+          "product_id": "CSAFPID-0001"
+        }
+      ],
+      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-01"
+    },
+    {
       "advisory_id": "ICSA-26-232-01",
       "title": "Johnson Controls Simplex Incident Manager",
       "date": "2026-08-20",
@@ -14315,29 +14340,6 @@
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-141-03"
-    },
-    {
-      "advisory_id": "ICSMA-26-041-01",
-      "title": "ZOLL ePCR IOS Mobile Application",
-      "date": "2026-02-10",
-      "summary": "Successful exploitation of this vulnerability could allow an attacker to gain unauthorized access to protected health information (PHI) or device telemetry.",
-      "sectors": [
-        "Healthcare and Public Health"
-      ],
-      "cves": [
-        "CVE-2025-12699"
-      ],
-      "cvss_max": 5.5,
-      "cvss_severity": "medium",
-      "affected_products": [
-        {
-          "vendor": "ZOLL",
-          "product": "ePCR IOS Mobile Application",
-          "version": "2.6.7",
-          "product_id": "CSAFPID-0001"
-        }
-      ],
-      "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsma-26-041-01"
     },
     {
       "advisory_id": "ICSA-26-125-02",
