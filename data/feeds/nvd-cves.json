@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-08-27T17:38:53.330Z",
+  "pulled_at": "2026-08-29T13:14:51.309Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -88371,7 +88371,7 @@
       ],
       "published": "2026-05-07T22:16:37.070",
       "last_modified": "2026-07-14T10:16:33.550",
-      "fetched_at": "2026-07-29T09:06:56.174Z"
+      "fetched_at": "2026-08-29T12:40:49.786Z"
     },
     "CVE-2026-54429": {
       "cve_id": "CVE-2026-54429",
@@ -88391,7 +88391,7 @@
       ],
       "published": "2026-07-14T10:16:33.123",
       "last_modified": "2026-07-15T20:27:37.663",
-      "fetched_at": "2026-07-29T09:07:02.863Z"
+      "fetched_at": "2026-08-29T12:40:56.707Z"
     },
     "CVE-2024-26783": {
       "cve_id": "CVE-2024-26783",
@@ -88449,15 +88449,15 @@
       ],
       "published": "2024-04-04T09:15:08.077",
       "last_modified": "2026-07-14T13:17:06.560",
-      "fetched_at": "2026-07-29T09:07:09.623Z"
+      "fetched_at": "2026-08-29T12:41:03.325Z"
     },
     "CVE-2024-27056": {
       "cve_id": "CVE-2024-27056",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nwifi: iwlwifi: mvm: ensure offloading TID queue exists\n\nThe resume code path assumes that the TX queue for the offloading TID\nhas been configured. At resume time it then tries to sync the write\npointer as it may have been updated by the firmware.\n\nIn the unusual event that no packets have been send on TID 0, the queue\nwill not have been allocated and this causes a crash. Fix this by\nensuring the queue exist at suspend time.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -88506,8 +88506,8 @@
         }
       ],
       "published": "2024-05-01T13:15:50.360",
-      "last_modified": "2026-07-14T13:17:07.200",
-      "fetched_at": "2026-07-29T09:07:16.226Z"
+      "last_modified": "2026-08-04T11:17:38.850",
+      "fetched_at": "2026-08-29T12:41:10.072Z"
     },
     "CVE-2024-28956": {
       "cve_id": "CVE-2024-28956",
@@ -88549,7 +88549,7 @@
       ],
       "published": "2025-05-13T21:15:59.863",
       "last_modified": "2026-07-14T13:17:07.550",
-      "fetched_at": "2026-07-29T09:07:22.802Z"
+      "fetched_at": "2026-08-29T12:41:16.696Z"
     },
     "CVE-2024-36903": {
       "cve_id": "CVE-2024-36903",
@@ -88607,7 +88607,7 @@
       ],
       "published": "2024-05-30T16:15:13.867",
       "last_modified": "2026-07-14T13:17:08.480",
-      "fetched_at": "2026-07-29T09:07:29.387Z"
+      "fetched_at": "2026-08-29T12:41:23.306Z"
     },
     "CVE-2024-36927": {
       "cve_id": "CVE-2024-36927",
@@ -88666,7 +88666,7 @@
       ],
       "published": "2024-05-30T16:15:15.957",
       "last_modified": "2026-07-14T13:17:08.693",
-      "fetched_at": "2026-07-29T09:07:35.984Z"
+      "fetched_at": "2026-08-29T12:41:30.015Z"
     },
     "CVE-2024-42079": {
       "cve_id": "CVE-2024-42079",
@@ -88730,7 +88730,7 @@
       ],
       "published": "2024-07-29T16:15:07.180",
       "last_modified": "2026-07-14T13:17:09.177",
-      "fetched_at": "2026-07-29T09:07:42.695Z"
+      "fetched_at": "2026-08-29T12:41:36.628Z"
     },
     "CVE-2024-46786": {
       "cve_id": "CVE-2024-46786",
@@ -88774,7 +88774,7 @@
       ],
       "published": "2024-09-18T08:15:05.783",
       "last_modified": "2026-07-14T13:17:09.720",
-      "fetched_at": "2026-07-29T09:07:49.735Z"
+      "fetched_at": "2026-08-29T12:41:43.253Z"
     },
     "CVE-2024-47736": {
       "cve_id": "CVE-2024-47736",
@@ -88824,7 +88824,7 @@
       ],
       "published": "2024-10-21T13:15:03.737",
       "last_modified": "2026-07-14T13:17:09.903",
-      "fetched_at": "2026-07-29T09:07:56.410Z"
+      "fetched_at": "2026-08-29T12:41:50.166Z"
     },
     "CVE-2024-47809": {
       "cve_id": "CVE-2024-47809",
@@ -88875,7 +88875,7 @@
       ],
       "published": "2025-01-11T13:15:22.583",
       "last_modified": "2026-07-14T13:17:10.107",
-      "fetched_at": "2026-07-29T09:08:03.027Z"
+      "fetched_at": "2026-08-29T12:41:57.064Z"
     },
     "CVE-2024-49968": {
       "cve_id": "CVE-2024-49968",
@@ -88917,7 +88917,7 @@
       ],
       "published": "2024-10-21T18:15:17.833",
       "last_modified": "2026-07-14T13:17:10.357",
-      "fetched_at": "2026-07-29T09:08:09.593Z"
+      "fetched_at": "2026-08-29T12:42:03.769Z"
     },
     "CVE-2024-49994": {
       "cve_id": "CVE-2024-49994",
@@ -88967,7 +88967,7 @@
       ],
       "published": "2024-10-21T18:15:19.557",
       "last_modified": "2026-07-14T13:17:10.547",
-      "fetched_at": "2026-07-29T09:08:16.292Z"
+      "fetched_at": "2026-08-29T12:42:10.395Z"
     },
     "CVE-2024-49998": {
       "cve_id": "CVE-2024-49998",
@@ -89022,7 +89022,7 @@
       ],
       "published": "2024-10-21T18:15:19.907",
       "last_modified": "2026-07-14T13:17:10.767",
-      "fetched_at": "2026-07-29T09:08:23.127Z"
+      "fetched_at": "2026-08-29T12:42:17.163Z"
     },
     "CVE-2024-50014": {
       "cve_id": "CVE-2024-50014",
@@ -89068,7 +89068,7 @@
       ],
       "published": "2024-10-21T19:15:04.830",
       "last_modified": "2026-07-14T13:17:11.017",
-      "fetched_at": "2026-07-29T09:08:29.895Z"
+      "fetched_at": "2026-08-29T12:42:23.782Z"
     },
     "CVE-2024-50063": {
       "cve_id": "CVE-2024-50063",
@@ -89116,16 +89116,16 @@
         }
       ],
       "published": "2024-10-21T20:15:18.360",
-      "last_modified": "2026-07-14T13:17:11.210",
-      "fetched_at": "2026-07-29T09:08:36.593Z"
+      "last_modified": "2026-08-04T11:21:13.993",
+      "fetched_at": "2026-08-29T12:42:30.485Z"
     },
     "CVE-2024-50164": {
       "cve_id": "CVE-2024-50164",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Fix overloading of MEM_UNINIT's meaning\n\nLonial reported an issue in the BPF verifier where check_mem_size_reg()\nhas the following code:\n\n    if (!tnum_is_const(reg->var_off))\n        /* For unprivileged variable accesses, disable raw\n         * mode so that the program is required to\n         * initialize all the memory that the helper could\n         * just partially fill up.\n         */\n         meta = NULL;\n\nThis means that writes are not checked when the register containing the\nsize of the passed buffer has not a fixed size. Through this bug, a BPF\nprogram can write to a map which is marked as read-only, for example,\n.rodata global maps.\n\nThe problem is that MEM_UNINIT's initial meaning that \"the passed buffer\nto the BPF helper does not need to be initialized\" which was added back\nin commit 435faee1aae9 (\"bpf, verifier: add ARG_PTR_TO_RAW_STACK type\")\ngot overloaded over time with \"the passed buffer is being written to\".\n\nThe problem however is that checks such as the above which were added later\nvia 06c1c049721a (\"bpf: allow helpers access to variable memory\") set meta\nto NULL in order force the user to always initialize the passed buffer to\nthe helper. Due to the current double meaning of MEM_UNINIT, this bypasses\nverifier write checks to the memory (not boundary checks though) and only\nassumes the latter memory is read instead.\n\nFix this by reverting MEM_UNINIT back to its original meaning, and having\nMEM_WRITE as an annotation to BPF helpers in order to then trigger the\nBPF verifier checks for writing to memory.\n\nSome notes: check_arg_pair_ok() ensures that for ARG_CONST_SIZE{,_OR_ZERO}\nwe can access fn->arg_type[arg - 1] since it must contain a preceding\nARG_PTR_TO_MEM. For check_mem_reg() the meta argument can be removed\naltogether since we do check both BPF_READ and BPF_WRITE. Same for the\nequivalent check_kfunc_mem_size_reg().",
       "cvss_version": "3.1",
-      "cvss_score": 7.1,
+      "cvss_score": 7.8,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -89160,8 +89160,8 @@
         }
       ],
       "published": "2024-11-07T10:15:07.697",
-      "last_modified": "2026-07-14T13:17:11.400",
-      "fetched_at": "2026-07-29T09:08:43.173Z"
+      "last_modified": "2026-08-04T11:21:27.687",
+      "fetched_at": "2026-08-29T12:42:37.106Z"
     },
     "CVE-2024-50298": {
       "cve_id": "CVE-2024-50298",
@@ -89208,15 +89208,15 @@
       ],
       "published": "2024-11-19T02:16:31.970",
       "last_modified": "2026-07-14T13:17:11.663",
-      "fetched_at": "2026-07-29T09:08:49.868Z"
+      "fetched_at": "2026-08-29T12:42:43.834Z"
     },
     "CVE-2024-53124": {
       "cve_id": "CVE-2024-53124",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix data-races around sk->sk_forward_alloc\n\nSyzkaller reported this warning:\n ------------[ cut here ]------------\n WARNING: CPU: 0 PID: 16 at net/ipv4/af_inet.c:156 inet_sock_destruct+0x1c5/0x1e0\n Modules linked in:\n CPU: 0 UID: 0 PID: 16 Comm: ksoftirqd/0 Not tainted 6.12.0-rc5 #26\n Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.15.0-1 04/01/2014\n RIP: 0010:inet_sock_destruct+0x1c5/0x1e0\n Code: 24 12 4c 89 e2 5b 48 c7 c7 98 ec bb 82 41 5c e9 d1 18 17 ff 4c 89 e6 5b 48 c7 c7 d0 ec bb 82 41 5c e9 bf 18 17 ff 0f 0b eb 83 <0f> 0b eb 97 0f 0b eb 87 0f 0b e9 68 ff ff ff 66 66 2e 0f 1f 84 00\n RSP: 0018:ffffc9000008bd90 EFLAGS: 00010206\n RAX: 0000000000000300 RBX: ffff88810b172a90 RCX: 0000000000000007\n RDX: 0000000000000002 RSI: 0000000000000300 RDI: ffff88810b172a00\n RBP: ffff88810b172a00 R08: ffff888104273c00 R09: 0000000000100007\n R10: 0000000000020000 R11: 0000000000000006 R12: ffff88810b172a00\n R13: 0000000000000004 R14: 0000000000000000 R15: ffff888237c31f78\n FS:  0000000000000000(0000) GS:ffff888237c00000(0000) knlGS:0000000000000000\n CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\n CR2: 00007ffc63fecac8 CR3: 000000000342e000 CR4: 00000000000006f0\n DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000\n DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400\n Call Trace:\n  <TASK>\n  ? __warn+0x88/0x130\n  ? inet_sock_destruct+0x1c5/0x1e0\n  ? report_bug+0x18e/0x1a0\n  ? handle_bug+0x53/0x90\n  ? exc_invalid_op+0x18/0x70\n  ? asm_exc_invalid_op+0x1a/0x20\n  ? inet_sock_destruct+0x1c5/0x1e0\n  __sk_destruct+0x2a/0x200\n  rcu_do_batch+0x1aa/0x530\n  ? rcu_do_batch+0x13b/0x530\n  rcu_core+0x159/0x2f0\n  handle_softirqs+0xd3/0x2b0\n  ? __pfx_smpboot_thread_fn+0x10/0x10\n  run_ksoftirqd+0x25/0x30\n  smpboot_thread_fn+0xdd/0x1d0\n  kthread+0xd3/0x100\n  ? __pfx_kthread+0x10/0x10\n  ret_from_fork+0x34/0x50\n  ? __pfx_kthread+0x10/0x10\n  ret_from_fork_asm+0x1a/0x30\n  </TASK>\n ---[ end trace 0000000000000000 ]---\n\nIts possible that two threads call tcp_v6_do_rcv()/sk_forward_alloc_add()\nconcurrently when sk->sk_state == TCP_LISTEN with sk->sk_lock unlocked,\nwhich triggers a data-race around sk->sk_forward_alloc:\ntcp_v6_rcv\n    tcp_v6_do_rcv\n        skb_clone_and_charge_r\n            sk_rmem_schedule\n                __sk_mem_schedule\n                    sk_forward_alloc_add()\n            skb_set_owner_r\n                sk_mem_charge\n                    sk_forward_alloc_add()\n        __kfree_skb\n            skb_release_all\n                skb_release_head_state\n                    sock_rfree\n                        sk_mem_uncharge\n                            sk_forward_alloc_add()\n                            sk_mem_reclaim\n                                // set local var reclaimable\n                                __sk_mem_reclaim\n                                    sk_forward_alloc_add()\n\nIn this syzkaller testcase, two threads call\ntcp_v6_do_rcv() with skb->truesize=768, the sk_forward_alloc changes like\nthis:\n (cpu 1)             | (cpu 2)             | sk_forward_alloc\n ...                 | ...                 | 0\n __sk_mem_schedule() |                     | +4096 = 4096\n                     | __sk_mem_schedule() | +4096 = 8192\n sk_mem_charge()     |                     | -768  = 7424\n                     | sk_mem_charge()     | -768  = 6656\n ...                 |    ...              |\n sk_mem_uncharge()   |                     | +768  = 7424\n reclaimable=7424    |                     |\n                     | sk_mem_uncharge()   | +768  = 8192\n                     | reclaimable=8192    |\n __sk_mem_reclaim()  |                     | -4096 = 4096\n                     | __sk_mem_reclaim()  | -8192 = -4096 != 0\n\nThe skb_clone_and_charge_r() should not be called in tcp_v6_do_rcv() when\nsk->sk_state is TCP_LISTEN, it happens later in tcp_v6_syn_recv_sock().\nFix the same issue in dccp_v6_do_rcv().",
       "cvss_version": "3.1",
-      "cvss_score": 4.7,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-362"
       ],
@@ -89259,8 +89259,8 @@
         }
       ],
       "published": "2024-12-02T14:15:13.220",
-      "last_modified": "2026-07-14T13:17:12.083",
-      "fetched_at": "2026-07-29T09:08:56.583Z"
+      "last_modified": "2026-08-04T11:21:55.987",
+      "fetched_at": "2026-08-29T12:42:50.451Z"
     },
     "CVE-2024-53170": {
       "cve_id": "CVE-2024-53170",
@@ -89311,7 +89311,7 @@
       ],
       "published": "2024-12-27T14:15:24.183",
       "last_modified": "2026-07-14T13:17:12.530",
-      "fetched_at": "2026-07-29T09:09:03.165Z"
+      "fetched_at": "2026-08-29T12:42:57.155Z"
     },
     "CVE-2024-54458": {
       "cve_id": "CVE-2024-54458",
@@ -89369,7 +89369,7 @@
       ],
       "published": "2025-02-27T03:15:10.770",
       "last_modified": "2026-07-14T13:17:12.847",
-      "fetched_at": "2026-07-29T09:09:09.892Z"
+      "fetched_at": "2026-08-29T12:43:03.821Z"
     },
     "CVE-2024-56631": {
       "cve_id": "CVE-2024-56631",
@@ -89424,15 +89424,15 @@
       ],
       "published": "2024-12-27T15:15:22.690",
       "last_modified": "2026-07-14T13:17:13.187",
-      "fetched_at": "2026-07-29T09:09:16.737Z"
+      "fetched_at": "2026-08-29T12:43:10.513Z"
     },
     "CVE-2024-56703": {
       "cve_id": "CVE-2024-56703",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: Fix soft lockups in fib6_select_path under high next hop churn\n\nSoft lockups have been observed on a cluster of Linux-based edge routers\nlocated in a highly dynamic environment. Using the `bird` service, these\nrouters continuously update BGP-advertised routes due to frequently\nchanging nexthop destinations, while also managing significant IPv6\ntraffic. The lockups occur during the traversal of the multipath\ncircular linked-list in the `fib6_select_path` function, particularly\nwhile iterating through the siblings in the list. The issue typically\narises when the nodes of the linked list are unexpectedly deleted\nconcurrently on a different core—indicated by their 'next' and\n'previous' elements pointing back to the node itself and their reference\ncount dropping to zero. This results in an infinite loop, leading to a\nsoft lockup that triggers a system panic via the watchdog timer.\n\nApply RCU primitives in the problematic code sections to resolve the\nissue. Where necessary, update the references to fib6_siblings to\nannotate or use the RCU APIs.\n\nInclude a test script that reproduces the issue. The script\nperiodically updates the routing table while generating a heavy load\nof outgoing IPv6 traffic through multiple iperf3 clients. It\nconsistently induces infinite soft lockups within a couple of minutes.\n\nKernel log:\n\n 0 [ffffbd13003e8d30] machine_kexec at ffffffff8ceaf3eb\n 1 [ffffbd13003e8d90] __crash_kexec at ffffffff8d0120e3\n 2 [ffffbd13003e8e58] panic at ffffffff8cef65d4\n 3 [ffffbd13003e8ed8] watchdog_timer_fn at ffffffff8d05cb03\n 4 [ffffbd13003e8f08] __hrtimer_run_queues at ffffffff8cfec62f\n 5 [ffffbd13003e8f70] hrtimer_interrupt at ffffffff8cfed756\n 6 [ffffbd13003e8fd0] __sysvec_apic_timer_interrupt at ffffffff8cea01af\n 7 [ffffbd13003e8ff0] sysvec_apic_timer_interrupt at ffffffff8df1b83d\n-- <IRQ stack> --\n 8 [ffffbd13003d3708] asm_sysvec_apic_timer_interrupt at ffffffff8e000ecb\n    [exception RIP: fib6_select_path+299]\n    RIP: ffffffff8ddafe7b  RSP: ffffbd13003d37b8  RFLAGS: 00000287\n    RAX: ffff975850b43600  RBX: ffff975850b40200  RCX: 0000000000000000\n    RDX: 000000003fffffff  RSI: 0000000051d383e4  RDI: ffff975850b43618\n    RBP: ffffbd13003d3800   R8: 0000000000000000   R9: ffff975850b40200\n    R10: 0000000000000000  R11: 0000000000000000  R12: ffffbd13003d3830\n    R13: ffff975850b436a8  R14: ffff975850b43600  R15: 0000000000000007\n    ORIG_RAX: ffffffffffffffff  CS: 0010  SS: 0018\n 9 [ffffbd13003d3808] ip6_pol_route at ffffffff8ddb030c\n10 [ffffbd13003d3888] ip6_pol_route_input at ffffffff8ddb068c\n11 [ffffbd13003d3898] fib6_rule_lookup at ffffffff8ddf02b5\n12 [ffffbd13003d3928] ip6_route_input at ffffffff8ddb0f47\n13 [ffffbd13003d3a18] ip6_rcv_finish_core.constprop.0 at ffffffff8dd950d0\n14 [ffffbd13003d3a30] ip6_list_rcv_finish.constprop.0 at ffffffff8dd96274\n15 [ffffbd13003d3a98] ip6_sublist_rcv at ffffffff8dd96474\n16 [ffffbd13003d3af8] ipv6_list_rcv at ffffffff8dd96615\n17 [ffffbd13003d3b60] __netif_receive_skb_list_core at ffffffff8dc16fec\n18 [ffffbd13003d3be0] netif_receive_skb_list_internal at ffffffff8dc176b3\n19 [ffffbd13003d3c50] napi_gro_receive at ffffffff8dc565b9\n20 [ffffbd13003d3c80] ice_receive_skb at ffffffffc087e4f5 [ice]\n21 [ffffbd13003d3c90] ice_clean_rx_irq at ffffffffc0881b80 [ice]\n22 [ffffbd13003d3d20] ice_napi_poll at ffffffffc088232f [ice]\n23 [ffffbd13003d3d80] __napi_poll at ffffffff8dc18000\n24 [ffffbd13003d3db8] net_rx_action at ffffffff8dc18581\n25 [ffffbd13003d3e40] __do_softirq at ffffffff8df352e9\n26 [ffffbd13003d3eb0] run_ksoftirqd at ffffffff8ceffe47\n27 [ffffbd13003d3ec0] smpboot_thread_fn at ffffffff8cf36a30\n28 [ffffbd13003d3ee8] kthread at ffffffff8cf2b39f\n29 [ffffbd13003d3f28] ret_from_fork at ffffffff8ce5fa64\n30 [ffffbd13003d3f50] ret_from_fork_asm at ffffffff8ce03cbb",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-835",
         "CWE-835"
@@ -89478,16 +89478,16 @@
         }
       ],
       "published": "2024-12-28T10:15:18.433",
-      "last_modified": "2026-07-14T13:17:13.440",
-      "fetched_at": "2026-07-29T09:09:23.488Z"
+      "last_modified": "2026-08-04T11:22:22.247",
+      "fetched_at": "2026-08-29T12:43:17.161Z"
     },
     "CVE-2024-56719": {
       "cve_id": "CVE-2024-56719",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: stmmac: fix TSO DMA API usage causing oops\n\nCommit 66600fac7a98 (\"net: stmmac: TSO: Fix unbalanced DMA map/unmap\nfor non-paged SKB data\") moved the assignment of tx_skbuff_dma[]'s\nmembers to be later in stmmac_tso_xmit().\n\nThe buf (dma cookie) and len stored in this structure are passed to\ndma_unmap_single() by stmmac_tx_clean(). The DMA API requires that\nthe dma cookie passed to dma_unmap_single() is the same as the value\nreturned from dma_map_single(). However, by moving the assignment\nlater, this is not the case when priv->dma_cap.addr64 > 32 as \"des\"\nis offset by proto_hdr_len.\n\nThis causes problems such as:\n\n  dwc-eth-dwmac 2490000.ethernet eth0: Tx DMA map failed\n\nand with DMA_API_DEBUG enabled:\n\n  DMA-API: dwc-eth-dwmac 2490000.ethernet: device driver tries to +free DMA memory it has not allocated [device address=0x000000ffffcf65c0] [size=66 bytes]\n\nFix this by maintaining \"des\" as the original DMA cookie, and use\ntso_des to pass the offset DMA cookie to stmmac_tso_allocator().\n\nFull details of the crashes can be found at:\nhttps://lore.kernel.org/all/d8112193-0386-4e14-b516-37c2d838171a@nvidia.com/\nhttps://lore.kernel.org/all/klkzp5yn5kq5efgtrow6wbvnc46bcqfxs65nz3qy77ujr5turc@bwwhelz2l4dw/",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 10,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -89526,8 +89526,8 @@
         }
       ],
       "published": "2024-12-29T09:15:07.187",
-      "last_modified": "2026-07-14T13:17:13.697",
-      "fetched_at": "2026-07-29T09:09:30.210Z"
+      "last_modified": "2026-08-04T11:22:24.610",
+      "fetched_at": "2026-08-29T12:43:23.769Z"
     },
     "CVE-2024-57917": {
       "cve_id": "CVE-2024-57917",
@@ -89579,15 +89579,15 @@
       ],
       "published": "2025-01-19T12:15:25.860",
       "last_modified": "2026-07-14T13:17:13.920",
-      "fetched_at": "2026-07-29T09:09:36.839Z"
+      "fetched_at": "2026-08-29T12:43:30.387Z"
     },
     "CVE-2024-57973": {
       "cve_id": "CVE-2024-57973",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nrdma/cxgb4: Prevent potential integer overflow on 32bit\n\nThe \"gl->tot_len\" variable is controlled by the user.  It comes from\nprocess_responses().  On 32bit systems, the \"gl->tot_len + sizeof(struct\ncpl_pass_accept_req) + sizeof(struct rss_header)\" addition could have an\ninteger wrapping bug.  Use size_add() to prevent this.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 8.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-190"
       ],
@@ -89636,8 +89636,8 @@
         }
       ],
       "published": "2025-02-27T02:15:10.490",
-      "last_modified": "2026-07-14T13:17:14.287",
-      "fetched_at": "2026-07-29T09:09:43.427Z"
+      "last_modified": "2026-08-04T11:22:33.213",
+      "fetched_at": "2026-08-29T12:43:37.000Z"
     },
     "CVE-2024-57979": {
       "cve_id": "CVE-2024-57979",
@@ -89701,7 +89701,7 @@
       ],
       "published": "2025-02-27T02:15:11.087",
       "last_modified": "2026-07-14T13:17:14.673",
-      "fetched_at": "2026-07-29T09:09:50.147Z"
+      "fetched_at": "2026-08-29T12:43:43.703Z"
     },
     "CVE-2024-58011": {
       "cve_id": "CVE-2024-58011",
@@ -89760,7 +89760,7 @@
       ],
       "published": "2025-02-27T03:15:12.087",
       "last_modified": "2026-07-14T13:17:15.407",
-      "fetched_at": "2026-07-29T09:09:56.727Z"
+      "fetched_at": "2026-08-29T12:43:50.326Z"
     },
     "CVE-2024-58016": {
       "cve_id": "CVE-2024-58016",
@@ -89820,7 +89820,7 @@
       ],
       "published": "2025-02-27T03:15:12.590",
       "last_modified": "2026-07-14T13:17:15.823",
-      "fetched_at": "2026-07-29T09:10:03.303Z"
+      "fetched_at": "2026-08-29T12:43:56.951Z"
     },
     "CVE-2024-58020": {
       "cve_id": "CVE-2024-58020",
@@ -89878,7 +89878,7 @@
       ],
       "published": "2025-02-27T03:15:12.997",
       "last_modified": "2026-07-14T13:17:15.990",
-      "fetched_at": "2026-07-29T09:10:10.059Z"
+      "fetched_at": "2026-08-29T12:44:03.563Z"
     },
     "CVE-2024-58056": {
       "cve_id": "CVE-2024-58056",
@@ -89930,7 +89930,7 @@
       ],
       "published": "2025-03-06T16:15:51.837",
       "last_modified": "2026-07-14T13:17:16.177",
-      "fetched_at": "2026-07-29T09:10:16.941Z"
+      "fetched_at": "2026-08-29T12:44:10.221Z"
     },
     "CVE-2024-58058": {
       "cve_id": "CVE-2024-58058",
@@ -89995,7 +89995,7 @@
       ],
       "published": "2025-03-06T16:15:52.037",
       "last_modified": "2026-07-14T13:17:16.347",
-      "fetched_at": "2026-07-29T09:10:23.654Z"
+      "fetched_at": "2026-08-29T12:44:16.832Z"
     },
     "CVE-2024-58061": {
       "cve_id": "CVE-2024-58061",
@@ -90047,15 +90047,15 @@
       ],
       "published": "2025-03-06T16:15:52.390",
       "last_modified": "2026-07-14T13:17:16.567",
-      "fetched_at": "2026-07-29T09:10:30.360Z"
+      "fetched_at": "2026-08-29T12:44:23.442Z"
     },
     "CVE-2024-58086": {
       "cve_id": "CVE-2024-58086",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndrm/v3d: Stop active perfmon if it is being destroyed\n\nIf the active performance monitor (`v3d->active_perfmon`) is being\ndestroyed, stop it first. Currently, the active perfmon is not\nstopped during destruction, leaving the `v3d->active_perfmon` pointer\nstale. This can lead to undefined behavior and instability.\n\nThis patch ensures that the active perfmon is stopped before being\ndestroyed, aligning with the behavior introduced in commit\n7d1fd3638ee3 (\"drm/v3d: Stop the active perfmon before being destroyed\").",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -90104,8 +90104,8 @@
         }
       ],
       "published": "2025-03-06T17:15:22.117",
-      "last_modified": "2026-07-14T13:17:16.703",
-      "fetched_at": "2026-07-29T09:10:37.141Z"
+      "last_modified": "2026-08-04T11:22:38.453",
+      "fetched_at": "2026-08-29T12:44:30.151Z"
     },
     "CVE-2025-21645": {
       "cve_id": "CVE-2025-21645",
@@ -90151,7 +90151,7 @@
       ],
       "published": "2025-01-19T11:15:10.090",
       "last_modified": "2026-07-14T13:17:19.643",
-      "fetched_at": "2026-07-29T09:10:43.880Z"
+      "fetched_at": "2026-08-29T12:44:36.777Z"
     },
     "CVE-2025-21648": {
       "cve_id": "CVE-2025-21648",
@@ -90209,15 +90209,15 @@
       ],
       "published": "2025-01-19T11:15:10.410",
       "last_modified": "2026-07-14T13:17:19.800",
-      "fetched_at": "2026-07-29T09:10:50.973Z"
+      "fetched_at": "2026-08-29T12:44:43.399Z"
     },
     "CVE-2025-21655": {
       "cve_id": "CVE-2025-21655",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nio_uring/eventfd: ensure io_eventfd_signal() defers another RCU period\n\nio_eventfd_do_signal() is invoked from an RCU callback, but when\ndropping the reference to the io_ev_fd, it calls io_eventfd_free()\ndirectly if the refcount drops to zero. This isn't correct, as any\npotential freeing of the io_ev_fd should be deferred another RCU grace\nperiod.\n\nJust call io_eventfd_put() rather than open-code the dec-and-test and\nfree, which will correctly defer it another RCU grace period.",
       "cvss_version": "3.1",
-      "cvss_score": 4.7,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-416"
       ],
@@ -90263,16 +90263,16 @@
         }
       ],
       "published": "2025-01-20T14:15:27.027",
-      "last_modified": "2026-07-14T13:17:19.973",
-      "fetched_at": "2026-07-29T09:10:57.730Z"
+      "last_modified": "2026-07-30T06:17:32.767",
+      "fetched_at": "2026-08-29T12:44:50.017Z"
     },
     "CVE-2025-21676": {
       "cve_id": "CVE-2025-21676",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: fec: handle page_pool_dev_alloc_pages error\n\nThe fec_enet_update_cbd function calls page_pool_dev_alloc_pages but did\nnot handle the case when it returned NULL. There was a WARN_ON(!new_page)\nbut it would still proceed to use the NULL pointer and then crash.\n\nThis case does seem somewhat rare but when the system is under memory\npressure it can happen. One case where I can duplicate this with some\nfrequency is when writing over a smbd share to a SATA HDD attached to an\nimx6q.\n\nSetting /proc/sys/vm/min_free_kbytes to higher values also seems to solve\nthe problem for my test case. But it still seems wrong that the fec driver\nignores the memory allocation error and can crash.\n\nThis commit handles the allocation error by dropping the current packet.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-476",
         "CWE-476"
@@ -90310,16 +90310,16 @@
         }
       ],
       "published": "2025-01-31T12:15:28.780",
-      "last_modified": "2026-07-14T13:17:20.120",
-      "fetched_at": "2026-07-29T09:11:04.465Z"
+      "last_modified": "2026-07-30T06:18:28.787",
+      "fetched_at": "2026-08-29T12:44:56.633Z"
     },
     "CVE-2025-21682": {
       "cve_id": "CVE-2025-21682",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\neth: bnxt: always recalculate features after XDP clearing, fix null-deref\n\nRecalculate features when XDP is detached.\n\nBefore:\n  # ip li set dev eth0 xdp obj xdp_dummy.bpf.o sec xdp\n  # ip li set dev eth0 xdp off\n  # ethtool -k eth0 | grep gro\n  rx-gro-hw: off [requested on]\n\nAfter:\n  # ip li set dev eth0 xdp obj xdp_dummy.bpf.o sec xdp\n  # ip li set dev eth0 xdp off\n  # ethtool -k eth0 | grep gro\n  rx-gro-hw: on\n\nThe fact that HW-GRO doesn't get re-enabled automatically is just\na minor annoyance. The real issue is that the features will randomly\ncome back during another reconfiguration which just happens to invoke\nnetdev_update_features(). The driver doesn't handle reconfiguring\ntwo things at a time very robustly.\n\nStarting with commit 98ba1d931f61 (\"bnxt_en: Fix RSS logic in\n__bnxt_reserve_rings()\") we only reconfigure the RSS hash table\nif the \"effective\" number of Rx rings has changed. If HW-GRO is\nenabled \"effective\" number of rings is 2x what user sees.\nSo if we are in the bad state, with HW-GRO re-enablement \"pending\"\nafter XDP off, and we lower the rings by / 2 - the HW-GRO rings\ndoing 2x and the ethtool -L doing / 2 may cancel each other out,\nand the:\n\n  if (old_rx_rings != bp->hw_resc.resv_rx_rings &&\n\ncondition in __bnxt_reserve_rings() will be false.\nThe RSS map won't get updated, and we'll crash with:\n\n  BUG: kernel NULL pointer dereference, address: 0000000000000168\n  RIP: 0010:__bnxt_hwrm_vnic_set_rss+0x13a/0x1a0\n    bnxt_hwrm_vnic_rss_cfg_p5+0x47/0x180\n    __bnxt_setup_vnic_p5+0x58/0x110\n    bnxt_init_nic+0xb72/0xf50\n    __bnxt_open_nic+0x40d/0xab0\n    bnxt_open_nic+0x2b/0x60\n    ethtool_set_channels+0x18c/0x1d0\n\nAs we try to access a freed ring.\n\nThe issue is present since XDP support was added, really, but\nprior to commit 98ba1d931f61 (\"bnxt_en: Fix RSS logic in\n__bnxt_reserve_rings()\") it wasn't causing major issues.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.3,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:H",
       "cwes": [
         "CWE-476",
         "CWE-476"
@@ -90355,8 +90355,8 @@
         }
       ],
       "published": "2025-01-31T12:15:29.363",
-      "last_modified": "2026-07-14T13:17:20.350",
-      "fetched_at": "2026-07-29T09:11:11.047Z"
+      "last_modified": "2026-07-30T06:18:52.927",
+      "fetched_at": "2026-08-29T12:45:03.244Z"
     },
     "CVE-2025-21705": {
       "cve_id": "CVE-2025-21705",
@@ -90408,7 +90408,7 @@
       ],
       "published": "2025-02-27T02:15:14.137",
       "last_modified": "2026-07-14T13:17:21.020",
-      "fetched_at": "2026-07-29T09:11:17.715Z"
+      "fetched_at": "2026-08-29T12:45:09.851Z"
     },
     "CVE-2025-21706": {
       "cve_id": "CVE-2025-21706",
@@ -90460,15 +90460,15 @@
       ],
       "published": "2025-02-27T02:15:14.237",
       "last_modified": "2026-07-14T13:17:21.200",
-      "fetched_at": "2026-07-29T09:11:24.511Z"
+      "fetched_at": "2026-08-29T12:45:16.558Z"
     },
     "CVE-2025-21707": {
       "cve_id": "CVE-2025-21707",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmptcp: consolidate suboption status\n\nMPTCP maintains the received sub-options status is the bitmask carrying\nthe received suboptions and in several bitfields carrying per suboption\nadditional info.\n\nZeroing the bitmask before parsing is not enough to ensure a consistent\nstatus, and the MPTCP code has to additionally clear some bitfiled\ndepending on the actually parsed suboption.\n\nThe above schema is fragile, and syzbot managed to trigger a path where\na relevant bitfield is not cleared/initialized:\n\n  BUG: KMSAN: uninit-value in __mptcp_expand_seq net/mptcp/options.c:1030 [inline]\n  BUG: KMSAN: uninit-value in mptcp_expand_seq net/mptcp/protocol.h:864 [inline]\n  BUG: KMSAN: uninit-value in ack_update_msk net/mptcp/options.c:1060 [inline]\n  BUG: KMSAN: uninit-value in mptcp_incoming_options+0x2036/0x3d30 net/mptcp/options.c:1209\n   __mptcp_expand_seq net/mptcp/options.c:1030 [inline]\n   mptcp_expand_seq net/mptcp/protocol.h:864 [inline]\n   ack_update_msk net/mptcp/options.c:1060 [inline]\n   mptcp_incoming_options+0x2036/0x3d30 net/mptcp/options.c:1209\n   tcp_data_queue+0xb4/0x7be0 net/ipv4/tcp_input.c:5233\n   tcp_rcv_established+0x1061/0x2510 net/ipv4/tcp_input.c:6264\n   tcp_v4_do_rcv+0x7f3/0x11a0 net/ipv4/tcp_ipv4.c:1916\n   tcp_v4_rcv+0x51df/0x5750 net/ipv4/tcp_ipv4.c:2351\n   ip_protocol_deliver_rcu+0x2a3/0x13d0 net/ipv4/ip_input.c:205\n   ip_local_deliver_finish+0x336/0x500 net/ipv4/ip_input.c:233\n   NF_HOOK include/linux/netfilter.h:314 [inline]\n   ip_local_deliver+0x21f/0x490 net/ipv4/ip_input.c:254\n   dst_input include/net/dst.h:460 [inline]\n   ip_rcv_finish+0x4a2/0x520 net/ipv4/ip_input.c:447\n   NF_HOOK include/linux/netfilter.h:314 [inline]\n   ip_rcv+0xcd/0x380 net/ipv4/ip_input.c:567\n   __netif_receive_skb_one_core net/core/dev.c:5704 [inline]\n   __netif_receive_skb+0x319/0xa00 net/core/dev.c:5817\n   process_backlog+0x4ad/0xa50 net/core/dev.c:6149\n   __napi_poll+0xe7/0x980 net/core/dev.c:6902\n   napi_poll net/core/dev.c:6971 [inline]\n   net_rx_action+0xa5a/0x19b0 net/core/dev.c:7093\n   handle_softirqs+0x1a0/0x7c0 kernel/softirq.c:561\n   __do_softirq+0x14/0x1a kernel/softirq.c:595\n   do_softirq+0x9a/0x100 kernel/softirq.c:462\n   __local_bh_enable_ip+0x9f/0xb0 kernel/softirq.c:389\n   local_bh_enable include/linux/bottom_half.h:33 [inline]\n   rcu_read_unlock_bh include/linux/rcupdate.h:919 [inline]\n   __dev_queue_xmit+0x2758/0x57d0 net/core/dev.c:4493\n   dev_queue_xmit include/linux/netdevice.h:3168 [inline]\n   neigh_hh_output include/net/neighbour.h:523 [inline]\n   neigh_output include/net/neighbour.h:537 [inline]\n   ip_finish_output2+0x187c/0x1b70 net/ipv4/ip_output.c:236\n   __ip_finish_output+0x287/0x810\n   ip_finish_output+0x4b/0x600 net/ipv4/ip_output.c:324\n   NF_HOOK_COND include/linux/netfilter.h:303 [inline]\n   ip_output+0x15f/0x3f0 net/ipv4/ip_output.c:434\n   dst_output include/net/dst.h:450 [inline]\n   ip_local_out net/ipv4/ip_output.c:130 [inline]\n   __ip_queue_xmit+0x1f2a/0x20d0 net/ipv4/ip_output.c:536\n   ip_queue_xmit+0x60/0x80 net/ipv4/ip_output.c:550\n   __tcp_transmit_skb+0x3cea/0x4900 net/ipv4/tcp_output.c:1468\n   tcp_transmit_skb net/ipv4/tcp_output.c:1486 [inline]\n   tcp_write_xmit+0x3b90/0x9070 net/ipv4/tcp_output.c:2829\n   __tcp_push_pending_frames+0xc4/0x380 net/ipv4/tcp_output.c:3012\n   tcp_send_fin+0x9f6/0xf50 net/ipv4/tcp_output.c:3618\n   __tcp_close+0x140c/0x1550 net/ipv4/tcp.c:3130\n   __mptcp_close_ssk+0x74e/0x16f0 net/mptcp/protocol.c:2496\n   mptcp_close_ssk+0x26b/0x2c0 net/mptcp/protocol.c:2550\n   mptcp_pm_nl_rm_addr_or_subflow+0x635/0xd10 net/mptcp/pm_netlink.c:889\n   mptcp_pm_nl_rm_subflow_received net/mptcp/pm_netlink.c:924 [inline]\n   mptcp_pm_flush_addrs_and_subflows net/mptcp/pm_netlink.c:1688 [inline]\n   mptcp_nl_flush_addrs_list net/mptcp/pm_netlink.c:1709 [inline]\n   mptcp_pm_nl_flush_addrs_doit+0xe10/0x1630 net/mptcp/pm_netlink.c:1750\n   genl_family_rcv_msg_doit net/netlink/genetlink.c:1115 [inline]\n \n---truncated---",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 9.8,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-908"
       ],
@@ -90517,16 +90517,16 @@
         }
       ],
       "published": "2025-02-27T02:15:14.347",
-      "last_modified": "2026-07-14T13:17:21.383",
-      "fetched_at": "2026-07-29T09:11:31.110Z"
+      "last_modified": "2026-07-30T06:20:02.923",
+      "fetched_at": "2026-08-29T12:45:23.172Z"
     },
     "CVE-2025-21718": {
       "cve_id": "CVE-2025-21718",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: rose: fix timer races against user threads\n\nRose timers only acquire the socket spinlock, without\nchecking if the socket is owned by one user thread.\n\nAdd a check and rearm the timers if needed.\n\nBUG: KASAN: slab-use-after-free in rose_timer_expiry+0x31d/0x360 net/rose/rose_timer.c:174\nRead of size 2 at addr ffff88802f09b82a by task swapper/0/0\n\nCPU: 0 UID: 0 PID: 0 Comm: swapper/0 Not tainted 6.13.0-rc5-syzkaller-00172-gd1bf27c4e176 #0\nHardware name: Google Google Compute Engine/Google Compute Engine, BIOS Google 09/13/2024\nCall Trace:\n <IRQ>\n  __dump_stack lib/dump_stack.c:94 [inline]\n  dump_stack_lvl+0x241/0x360 lib/dump_stack.c:120\n  print_address_description mm/kasan/report.c:378 [inline]\n  print_report+0x169/0x550 mm/kasan/report.c:489\n  kasan_report+0x143/0x180 mm/kasan/report.c:602\n  rose_timer_expiry+0x31d/0x360 net/rose/rose_timer.c:174\n  call_timer_fn+0x187/0x650 kernel/time/timer.c:1793\n  expire_timers kernel/time/timer.c:1844 [inline]\n  __run_timers kernel/time/timer.c:2418 [inline]\n  __run_timer_base+0x66a/0x8e0 kernel/time/timer.c:2430\n  run_timer_base kernel/time/timer.c:2439 [inline]\n  run_timer_softirq+0xb7/0x170 kernel/time/timer.c:2449\n  handle_softirqs+0x2d4/0x9b0 kernel/softirq.c:561\n  __do_softirq kernel/softirq.c:595 [inline]\n  invoke_softirq kernel/softirq.c:435 [inline]\n  __irq_exit_rcu+0xf7/0x220 kernel/softirq.c:662\n  irq_exit_rcu+0x9/0x30 kernel/softirq.c:678\n  instr_sysvec_apic_timer_interrupt arch/x86/kernel/apic/apic.c:1049 [inline]\n  sysvec_apic_timer_interrupt+0xa6/0xc0 arch/x86/kernel/apic/apic.c:1049\n </IRQ>",
       "cvss_version": "3.1",
-      "cvss_score": 7,
+      "cvss_score": 7.8,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-362",
         "CWE-416"
@@ -90576,8 +90576,8 @@
         }
       ],
       "published": "2025-02-27T02:15:15.473",
-      "last_modified": "2026-07-14T13:17:21.657",
-      "fetched_at": "2026-07-29T09:11:37.703Z"
+      "last_modified": "2026-07-30T06:20:39.380",
+      "fetched_at": "2026-08-29T12:45:29.789Z"
     },
     "CVE-2025-21731": {
       "cve_id": "CVE-2025-21731",
@@ -90641,15 +90641,15 @@
       ],
       "published": "2025-02-27T02:15:16.833",
       "last_modified": "2026-07-14T13:17:22.003",
-      "fetched_at": "2026-07-29T09:11:44.413Z"
+      "fetched_at": "2026-08-29T12:45:36.420Z"
     },
     "CVE-2025-21760": {
       "cve_id": "CVE-2025-21760",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nndisc: extend RCU protection in ndisc_send_skb()\n\nndisc_send_skb() can be called without RTNL or RCU held.\n\nAcquire rcu_read_lock() earlier, so that we can use dev_net_rcu()\nand avoid a potential UAF.",
       "cvss_version": "3.1",
-      "cvss_score": 7.8,
+      "cvss_score": 8.1,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-416"
       ],
@@ -90704,8 +90704,8 @@
         }
       ],
       "published": "2025-02-27T03:15:16.653",
-      "last_modified": "2026-07-14T13:17:22.750",
-      "fetched_at": "2026-07-29T09:11:51.018Z"
+      "last_modified": "2026-07-30T06:21:28.730",
+      "fetched_at": "2026-08-29T12:45:43.049Z"
     },
     "CVE-2025-21764": {
       "cve_id": "CVE-2025-21764",
@@ -90769,7 +90769,7 @@
       ],
       "published": "2025-02-27T03:15:17.063",
       "last_modified": "2026-07-14T13:17:22.967",
-      "fetched_at": "2026-07-29T09:11:57.644Z"
+      "fetched_at": "2026-08-29T12:45:49.681Z"
     },
     "CVE-2025-21780": {
       "cve_id": "CVE-2025-21780",
@@ -90829,7 +90829,7 @@
       ],
       "published": "2025-02-27T03:15:18.827",
       "last_modified": "2026-07-14T13:17:23.560",
-      "fetched_at": "2026-07-29T09:12:04.382Z"
+      "fetched_at": "2026-08-29T12:45:56.535Z"
     },
     "CVE-2025-21802": {
       "cve_id": "CVE-2025-21802",
@@ -90889,7 +90889,7 @@
       ],
       "published": "2025-02-27T20:16:02.847",
       "last_modified": "2026-07-14T13:17:24.220",
-      "fetched_at": "2026-07-29T09:12:11.094Z"
+      "fetched_at": "2026-08-29T12:46:03.427Z"
     },
     "CVE-2025-21814": {
       "cve_id": "CVE-2025-21814",
@@ -90947,7 +90947,7 @@
       ],
       "published": "2025-02-27T20:16:03.973",
       "last_modified": "2026-07-14T13:17:24.417",
-      "fetched_at": "2026-07-29T09:12:17.685Z"
+      "fetched_at": "2026-08-29T12:46:10.052Z"
     },
     "CVE-2025-21846": {
       "cve_id": "CVE-2025-21846",
@@ -91012,7 +91012,7 @@
       ],
       "published": "2025-03-12T10:15:16.960",
       "last_modified": "2026-07-14T13:17:24.593",
-      "fetched_at": "2026-07-29T09:12:24.269Z"
+      "fetched_at": "2026-08-29T12:46:16.768Z"
     },
     "CVE-2025-21853": {
       "cve_id": "CVE-2025-21853",
@@ -91066,7 +91066,7 @@
       ],
       "published": "2025-03-12T10:15:18.063",
       "last_modified": "2026-07-14T13:17:24.957",
-      "fetched_at": "2026-07-29T09:12:30.901Z"
+      "fetched_at": "2026-08-29T12:46:23.462Z"
     },
     "CVE-2025-21861": {
       "cve_id": "CVE-2025-21861",
@@ -91121,7 +91121,7 @@
       ],
       "published": "2025-03-12T10:15:19.117",
       "last_modified": "2026-07-14T13:17:25.120",
-      "fetched_at": "2026-07-29T09:12:37.511Z"
+      "fetched_at": "2026-08-29T12:46:30.163Z"
     },
     "CVE-2025-21867": {
       "cve_id": "CVE-2025-21867",
@@ -91175,15 +91175,15 @@
       ],
       "published": "2025-03-27T14:15:47.750",
       "last_modified": "2026-07-14T13:17:26.030",
-      "fetched_at": "2026-07-29T09:12:44.108Z"
+      "fetched_at": "2026-08-29T12:46:36.784Z"
     },
     "CVE-2025-21875": {
       "cve_id": "CVE-2025-21875",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmptcp: always handle address removal under msk socket lock\n\nSyzkaller reported a lockdep splat in the PM control path:\n\n  WARNING: CPU: 0 PID: 6693 at ./include/net/sock.h:1711 sock_owned_by_me include/net/sock.h:1711 [inline]\n  WARNING: CPU: 0 PID: 6693 at ./include/net/sock.h:1711 msk_owned_by_me net/mptcp/protocol.h:363 [inline]\n  WARNING: CPU: 0 PID: 6693 at ./include/net/sock.h:1711 mptcp_pm_nl_addr_send_ack+0x57c/0x610 net/mptcp/pm_netlink.c:788\n  Modules linked in:\n  CPU: 0 UID: 0 PID: 6693 Comm: syz.0.205 Not tainted 6.14.0-rc2-syzkaller-00303-gad1b832bf1cf #0\n  Hardware name: Google Compute Engine/Google Compute Engine, BIOS Google 12/27/2024\n  RIP: 0010:sock_owned_by_me include/net/sock.h:1711 [inline]\n  RIP: 0010:msk_owned_by_me net/mptcp/protocol.h:363 [inline]\n  RIP: 0010:mptcp_pm_nl_addr_send_ack+0x57c/0x610 net/mptcp/pm_netlink.c:788\n  Code: 5b 41 5c 41 5d 41 5e 41 5f 5d c3 cc cc cc cc e8 ca 7b d3 f5 eb b9 e8 c3 7b d3 f5 90 0f 0b 90 e9 dd fb ff ff e8 b5 7b d3 f5 90 <0f> 0b 90 e9 3e fb ff ff 44 89 f1 80 e1 07 38 c1 0f 8c eb fb ff ff\n  RSP: 0000:ffffc900034f6f60 EFLAGS: 00010283\n  RAX: ffffffff8bee3c2b RBX: 0000000000000001 RCX: 0000000000080000\n  RDX: ffffc90004d42000 RSI: 000000000000a407 RDI: 000000000000a408\n  RBP: ffffc900034f7030 R08: ffffffff8bee37f6 R09: 0100000000000000\n  R10: dffffc0000000000 R11: ffffed100bcc62e4 R12: ffff88805e6316e0\n  R13: ffff88805e630c00 R14: dffffc0000000000 R15: ffff88805e630c00\n  FS:  00007f7e9a7e96c0(0000) GS:ffff8880b8600000(0000) knlGS:0000000000000000\n  CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\n  CR2: 0000001b2fd18ff8 CR3: 0000000032c24000 CR4: 00000000003526f0\n  DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000\n  DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400\n  Call Trace:\n   <TASK>\n   mptcp_pm_remove_addr+0x103/0x1d0 net/mptcp/pm.c:59\n   mptcp_pm_remove_anno_addr+0x1f4/0x2f0 net/mptcp/pm_netlink.c:1486\n   mptcp_nl_remove_subflow_and_signal_addr net/mptcp/pm_netlink.c:1518 [inline]\n   mptcp_pm_nl_del_addr_doit+0x118d/0x1af0 net/mptcp/pm_netlink.c:1629\n   genl_family_rcv_msg_doit net/netlink/genetlink.c:1115 [inline]\n   genl_family_rcv_msg net/netlink/genetlink.c:1195 [inline]\n   genl_rcv_msg+0xb1f/0xec0 net/netlink/genetlink.c:1210\n   netlink_rcv_skb+0x206/0x480 net/netlink/af_netlink.c:2543\n   genl_rcv+0x28/0x40 net/netlink/genetlink.c:1219\n   netlink_unicast_kernel net/netlink/af_netlink.c:1322 [inline]\n   netlink_unicast+0x7f6/0x990 net/netlink/af_netlink.c:1348\n   netlink_sendmsg+0x8de/0xcb0 net/netlink/af_netlink.c:1892\n   sock_sendmsg_nosec net/socket.c:718 [inline]\n   __sock_sendmsg+0x221/0x270 net/socket.c:733\n   ____sys_sendmsg+0x53a/0x860 net/socket.c:2573\n   ___sys_sendmsg net/socket.c:2627 [inline]\n   __sys_sendmsg+0x269/0x350 net/socket.c:2659\n   do_syscall_x64 arch/x86/entry/common.c:52 [inline]\n   do_syscall_64+0xf3/0x230 arch/x86/entry/common.c:83\n   entry_SYSCALL_64_after_hwframe+0x77/0x7f\n  RIP: 0033:0x7f7e9998cde9\n  Code: ff ff c3 66 2e 0f 1f 84 00 00 00 00 00 0f 1f 40 00 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 c7 c1 a8 ff ff ff f7 d8 64 89 01 48\n  RSP: 002b:00007f7e9a7e9038 EFLAGS: 00000246 ORIG_RAX: 000000000000002e\n  RAX: ffffffffffffffda RBX: 00007f7e99ba5fa0 RCX: 00007f7e9998cde9\n  RDX: 000000002000c094 RSI: 0000400000000000 RDI: 0000000000000007\n  RBP: 00007f7e99a0e2a0 R08: 0000000000000000 R09: 0000000000000000\n  R10: 0000000000000000 R11: 0000000000000246 R12: 0000000000000000\n  R13: 0000000000000000 R14: 00007f7e99ba5fa0 R15: 00007fff49231088\n\nIndeed the PM can try to send a RM_ADDR over a msk without acquiring\nfirst the msk socket lock.\n\nThe bugged code-path comes from an early optimization: when there\nare no subflows, the PM should (usually) not send RM_ADDR\nnotifications.\n\nThe above statement is incorrect, as without locks another process\ncould concur\n---truncated---",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -91234,8 +91234,8 @@
         }
       ],
       "published": "2025-03-27T15:15:55.307",
-      "last_modified": "2026-07-14T13:17:26.257",
-      "fetched_at": "2026-07-29T09:12:50.783Z"
+      "last_modified": "2026-07-30T06:21:42.447",
+      "fetched_at": "2026-08-29T12:46:43.399Z"
     },
     "CVE-2025-21887": {
       "cve_id": "CVE-2025-21887",
@@ -91295,7 +91295,7 @@
       ],
       "published": "2025-03-27T15:15:56.603",
       "last_modified": "2026-07-14T13:17:26.460",
-      "fetched_at": "2026-07-29T09:12:58.079Z"
+      "fetched_at": "2026-08-29T12:46:50.039Z"
     },
     "CVE-2025-21913": {
       "cve_id": "CVE-2025-21913",
@@ -91347,7 +91347,7 @@
       ],
       "published": "2025-04-01T16:15:21.893",
       "last_modified": "2026-07-14T13:17:26.703",
-      "fetched_at": "2026-07-29T09:13:04.726Z"
+      "fetched_at": "2026-08-29T12:46:56.769Z"
     },
     "CVE-2025-21919": {
       "cve_id": "CVE-2025-21919",
@@ -91408,7 +91408,7 @@
       ],
       "published": "2025-04-01T16:15:22.557",
       "last_modified": "2026-07-14T13:17:26.870",
-      "fetched_at": "2026-07-29T09:13:11.471Z"
+      "fetched_at": "2026-08-29T12:47:03.663Z"
     },
     "CVE-2025-21925": {
       "cve_id": "CVE-2025-21925",
@@ -91470,15 +91470,15 @@
       ],
       "published": "2025-04-01T16:15:23.227",
       "last_modified": "2026-07-14T13:17:27.100",
-      "fetched_at": "2026-07-29T09:13:18.077Z"
+      "fetched_at": "2026-08-29T12:47:10.293Z"
     },
     "CVE-2025-21926": {
       "cve_id": "CVE-2025-21926",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: gso: fix ownership in __udp_gso_segment\n\nIn __udp_gso_segment the skb destructor is removed before segmenting the\nskb but the socket reference is kept as-is. This is an issue if the\noriginal skb is later orphaned as we can hit the following bug:\n\n  kernel BUG at ./include/linux/skbuff.h:3312!  (skb_orphan)\n  RIP: 0010:ip_rcv_core+0x8b2/0xca0\n  Call Trace:\n   ip_rcv+0xab/0x6e0\n   __netif_receive_skb_one_core+0x168/0x1b0\n   process_backlog+0x384/0x1100\n   __napi_poll.constprop.0+0xa1/0x370\n   net_rx_action+0x925/0xe50\n\nThe above can happen following a sequence of events when using\nOpenVSwitch, when an OVS_ACTION_ATTR_USERSPACE action precedes an\nOVS_ACTION_ATTR_OUTPUT action:\n\n1. OVS_ACTION_ATTR_USERSPACE is handled (in do_execute_actions): the skb\n   goes through queue_gso_packets and then __udp_gso_segment, where its\n   destructor is removed.\n2. The segments' data are copied and sent to userspace.\n3. OVS_ACTION_ATTR_OUTPUT is handled (in do_execute_actions) and the\n   same original skb is sent to its path.\n4. If it later hits skb_orphan, we hit the bug.\n\nFix this by also removing the reference to the socket in\n__udp_gso_segment.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -91531,16 +91531,16 @@
         }
       ],
       "published": "2025-04-01T16:15:23.350",
-      "last_modified": "2026-07-14T13:17:27.300",
-      "fetched_at": "2026-07-29T09:13:24.786Z"
+      "last_modified": "2026-07-30T06:21:57.420",
+      "fetched_at": "2026-08-29T12:47:16.918Z"
     },
     "CVE-2025-21938": {
       "cve_id": "CVE-2025-21938",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmptcp: fix 'scheduling while atomic' in mptcp_pm_nl_append_new_local_addr\n\nIf multiple connection requests attempt to create an implicit mptcp\nendpoint in parallel, more than one caller may end up in\nmptcp_pm_nl_append_new_local_addr because none found the address in\nlocal_addr_list during their call to mptcp_pm_nl_get_local_id.  In this\ncase, the concurrent new_local_addr calls may delete the address entry\ncreated by the previous caller.  These deletes use synchronize_rcu, but\nthis is not permitted in some of the contexts where this function may be\ncalled.  During packet recv, the caller may be in a rcu read critical\nsection and have preemption disabled.\n\nAn example stack:\n\n   BUG: scheduling while atomic: swapper/2/0/0x00000302\n\n   Call Trace:\n   <IRQ>\n   dump_stack_lvl (lib/dump_stack.c:117 (discriminator 1))\n   dump_stack (lib/dump_stack.c:124)\n   __schedule_bug (kernel/sched/core.c:5943)\n   schedule_debug.constprop.0 (arch/x86/include/asm/preempt.h:33 kernel/sched/core.c:5970)\n   __schedule (arch/x86/include/asm/jump_label.h:27 include/linux/jump_label.h:207 kernel/sched/features.h:29 kernel/sched/core.c:6621)\n   schedule (arch/x86/include/asm/preempt.h:84 kernel/sched/core.c:6804 kernel/sched/core.c:6818)\n   schedule_timeout (kernel/time/timer.c:2160)\n   wait_for_completion (kernel/sched/completion.c:96 kernel/sched/completion.c:116 kernel/sched/completion.c:127 kernel/sched/completion.c:148)\n   __wait_rcu_gp (include/linux/rcupdate.h:311 kernel/rcu/update.c:444)\n   synchronize_rcu (kernel/rcu/tree.c:3609)\n   mptcp_pm_nl_append_new_local_addr (net/mptcp/pm_netlink.c:966 net/mptcp/pm_netlink.c:1061)\n   mptcp_pm_nl_get_local_id (net/mptcp/pm_netlink.c:1164)\n   mptcp_pm_get_local_id (net/mptcp/pm.c:420)\n   subflow_check_req (net/mptcp/subflow.c:98 net/mptcp/subflow.c:213)\n   subflow_v4_route_req (net/mptcp/subflow.c:305)\n   tcp_conn_request (net/ipv4/tcp_input.c:7216)\n   subflow_v4_conn_request (net/mptcp/subflow.c:651)\n   tcp_rcv_state_process (net/ipv4/tcp_input.c:6709)\n   tcp_v4_do_rcv (net/ipv4/tcp_ipv4.c:1934)\n   tcp_v4_rcv (net/ipv4/tcp_ipv4.c:2334)\n   ip_protocol_deliver_rcu (net/ipv4/ip_input.c:205 (discriminator 1))\n   ip_local_deliver_finish (include/linux/rcupdate.h:813 net/ipv4/ip_input.c:234)\n   ip_local_deliver (include/linux/netfilter.h:314 include/linux/netfilter.h:308 net/ipv4/ip_input.c:254)\n   ip_sublist_rcv_finish (include/net/dst.h:461 net/ipv4/ip_input.c:580)\n   ip_sublist_rcv (net/ipv4/ip_input.c:640)\n   ip_list_rcv (net/ipv4/ip_input.c:675)\n   __netif_receive_skb_list_core (net/core/dev.c:5583 net/core/dev.c:5631)\n   netif_receive_skb_list_internal (net/core/dev.c:5685 net/core/dev.c:5774)\n   napi_complete_done (include/linux/list.h:37 include/net/gro.h:449 include/net/gro.h:444 net/core/dev.c:6114)\n   igb_poll (drivers/net/ethernet/intel/igb/igb_main.c:8244) igb\n   __napi_poll (net/core/dev.c:6582)\n   net_rx_action (net/core/dev.c:6653 net/core/dev.c:6787)\n   handle_softirqs (kernel/softirq.c:553)\n   __irq_exit_rcu (kernel/softirq.c:588 kernel/softirq.c:427 kernel/softirq.c:636)\n   irq_exit_rcu (kernel/softirq.c:651)\n   common_interrupt (arch/x86/kernel/irq.c:247 (discriminator 14))\n   </IRQ>\n\nThis problem seems particularly prevalent if the user advertises an\nendpoint that has a different external vs internal address.  In the case\nwhere the external address is advertised and multiple connections\nalready exist, multiple subflow SYNs arrive in parallel which tends to\ntrigger the race during creation of the first local_addr_list entries\nwhich have the internal address instead.\n\nFix by skipping the replacement of an existing implicit local address if\ncalled via mptcp_pm_nl_get_local_id.",
       "cvss_version": "3.1",
-      "cvss_score": 4.7,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-362"
       ],
@@ -91585,16 +91585,16 @@
         }
       ],
       "published": "2025-04-01T16:15:24.667",
-      "last_modified": "2026-07-14T13:17:27.483",
-      "fetched_at": "2026-07-29T09:13:31.378Z"
+      "last_modified": "2026-07-30T06:21:58.180",
+      "fetched_at": "2026-08-29T12:47:23.622Z"
     },
     "CVE-2025-21959": {
       "cve_id": "CVE-2025-21959",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_conncount: Fully initialize struct nf_conncount_tuple in insert_tree()\n\nSince commit b36e4523d4d5 (\"netfilter: nf_conncount: fix garbage\ncollection confirm race\"), `cpu` and `jiffies32` were introduced to\nthe struct nf_conncount_tuple.\n\nThe commit made nf_conncount_add() initialize `conn->cpu` and\n`conn->jiffies32` when allocating the struct.\nIn contrast, count_tree() was not changed to initialize them.\n\nBy commit 34848d5c896e (\"netfilter: nf_conncount: Split insert and\ntraversal\"), count_tree() was split and the relevant allocation\ncode now resides in insert_tree().\nInitialize `conn->cpu` and `conn->jiffies32` in insert_tree().\n\nBUG: KMSAN: uninit-value in find_or_evict net/netfilter/nf_conncount.c:117 [inline]\nBUG: KMSAN: uninit-value in __nf_conncount_add+0xd9c/0x2850 net/netfilter/nf_conncount.c:143\n find_or_evict net/netfilter/nf_conncount.c:117 [inline]\n __nf_conncount_add+0xd9c/0x2850 net/netfilter/nf_conncount.c:143\n count_tree net/netfilter/nf_conncount.c:438 [inline]\n nf_conncount_count+0x82f/0x1e80 net/netfilter/nf_conncount.c:521\n connlimit_mt+0x7f6/0xbd0 net/netfilter/xt_connlimit.c:72\n __nft_match_eval net/netfilter/nft_compat.c:403 [inline]\n nft_match_eval+0x1a5/0x300 net/netfilter/nft_compat.c:433\n expr_call_ops_eval net/netfilter/nf_tables_core.c:240 [inline]\n nft_do_chain+0x426/0x2290 net/netfilter/nf_tables_core.c:288\n nft_do_chain_ipv4+0x1a5/0x230 net/netfilter/nft_chain_filter.c:23\n nf_hook_entry_hookfn include/linux/netfilter.h:154 [inline]\n nf_hook_slow+0xf4/0x400 net/netfilter/core.c:626\n nf_hook_slow_list+0x24d/0x860 net/netfilter/core.c:663\n NF_HOOK_LIST include/linux/netfilter.h:350 [inline]\n ip_sublist_rcv+0x17b7/0x17f0 net/ipv4/ip_input.c:633\n ip_list_rcv+0x9ef/0xa40 net/ipv4/ip_input.c:669\n __netif_receive_skb_list_ptype net/core/dev.c:5936 [inline]\n __netif_receive_skb_list_core+0x15c5/0x1670 net/core/dev.c:5983\n __netif_receive_skb_list net/core/dev.c:6035 [inline]\n netif_receive_skb_list_internal+0x1085/0x1700 net/core/dev.c:6126\n netif_receive_skb_list+0x5a/0x460 net/core/dev.c:6178\n xdp_recv_frames net/bpf/test_run.c:280 [inline]\n xdp_test_run_batch net/bpf/test_run.c:361 [inline]\n bpf_test_run_xdp_live+0x2e86/0x3480 net/bpf/test_run.c:390\n bpf_prog_test_run_xdp+0xf1d/0x1ae0 net/bpf/test_run.c:1316\n bpf_prog_test_run+0x5e5/0xa30 kernel/bpf/syscall.c:4407\n __sys_bpf+0x6aa/0xd90 kernel/bpf/syscall.c:5813\n __do_sys_bpf kernel/bpf/syscall.c:5902 [inline]\n __se_sys_bpf kernel/bpf/syscall.c:5900 [inline]\n __ia32_sys_bpf+0xa0/0xe0 kernel/bpf/syscall.c:5900\n ia32_sys_call+0x394d/0x4180 arch/x86/include/generated/asm/syscalls_32.h:358\n do_syscall_32_irqs_on arch/x86/entry/common.c:165 [inline]\n __do_fast_syscall_32+0xb0/0x110 arch/x86/entry/common.c:387\n do_fast_syscall_32+0x38/0x80 arch/x86/entry/common.c:412\n do_SYSENTER_32+0x1f/0x30 arch/x86/entry/common.c:450\n entry_SYSENTER_compat_after_hwframe+0x84/0x8e\n\nUninit was created at:\n slab_post_alloc_hook mm/slub.c:4121 [inline]\n slab_alloc_node mm/slub.c:4164 [inline]\n kmem_cache_alloc_noprof+0x915/0xe10 mm/slub.c:4171\n insert_tree net/netfilter/nf_conncount.c:372 [inline]\n count_tree net/netfilter/nf_conncount.c:450 [inline]\n nf_conncount_count+0x1415/0x1e80 net/netfilter/nf_conncount.c:521\n connlimit_mt+0x7f6/0xbd0 net/netfilter/xt_connlimit.c:72\n __nft_match_eval net/netfilter/nft_compat.c:403 [inline]\n nft_match_eval+0x1a5/0x300 net/netfilter/nft_compat.c:433\n expr_call_ops_eval net/netfilter/nf_tables_core.c:240 [inline]\n nft_do_chain+0x426/0x2290 net/netfilter/nf_tables_core.c:288\n nft_do_chain_ipv4+0x1a5/0x230 net/netfilter/nft_chain_filter.c:23\n nf_hook_entry_hookfn include/linux/netfilter.h:154 [inline]\n nf_hook_slow+0xf4/0x400 net/netfilter/core.c:626\n nf_hook_slow_list+0x24d/0x860 net/netfilter/core.c:663\n NF_HOOK_LIST include/linux/netfilter.h:350 [inline]\n ip_sublist_rcv+0x17b7/0x17f0 net/ipv4/ip_input.c:633\n ip_list_rcv+0x9ef/0xa40 net/ip\n---truncated---",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.3,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
       "cwes": [
         "CWE-908",
         "CWE-908"
@@ -91650,8 +91650,8 @@
         }
       ],
       "published": "2025-04-01T16:15:27.120",
-      "last_modified": "2026-07-14T13:17:27.670",
-      "fetched_at": "2026-07-29T09:13:38.036Z"
+      "last_modified": "2026-07-30T06:21:59.427",
+      "fetched_at": "2026-08-29T12:47:30.292Z"
     },
     "CVE-2025-21999": {
       "cve_id": "CVE-2025-21999",
@@ -91709,7 +91709,7 @@
       ],
       "published": "2025-04-03T08:15:15.360",
       "last_modified": "2026-07-14T13:17:28.107",
-      "fetched_at": "2026-07-29T09:13:44.593Z"
+      "fetched_at": "2026-08-29T12:47:36.990Z"
     },
     "CVE-2025-22005": {
       "cve_id": "CVE-2025-22005",
@@ -91774,15 +91774,15 @@
       ],
       "published": "2025-04-03T08:15:16.087",
       "last_modified": "2026-07-14T13:17:29.543",
-      "fetched_at": "2026-07-29T09:13:51.189Z"
+      "fetched_at": "2026-08-29T12:47:43.850Z"
     },
     "CVE-2025-22015": {
       "cve_id": "CVE-2025-22015",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nmm/migrate: fix shmem xarray update during migration\n\nA shmem folio can be either in page cache or in swap cache, but not at the\nsame time.  Namely, once it is in swap cache, folio->mapping should be\nNULL, and the folio is no longer in a shmem mapping.\n\nIn __folio_migrate_mapping(), to determine the number of xarray entries to\nupdate, folio_test_swapbacked() is used, but that conflates shmem in page\ncache case and shmem in swap cache case.  It leads to xarray multi-index\nentry corruption, since it turns a sibling entry to a normal entry during\nxas_store() (see [1] for a userspace reproduction).  Fix it by only using\nfolio_test_swapcache() to determine whether xarray is storing swap cache\nentries or not to choose the right number of xarray entries to update.\n\n[1] https://lore.kernel.org/linux-mm/Z8idPCkaJW1IChjT@casper.infradead.org/\n\nNote:\nIn __split_huge_page(), folio_test_anon() && folio_test_swapcache() is\nused to get swap_cache address space, but that ignores the shmem folio in\nswap cache case.  It could lead to NULL pointer dereferencing when a\nin-swap-cache shmem folio is split at __xa_store(), since\n!folio_test_anon() is true and folio->mapping is NULL.  But fortunately,\nits caller split_huge_page_to_list_to_order() bails out early with EBUSY\nwhen folio->mapping is NULL.  So no need to take care of it here.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-476"
       ],
@@ -91827,16 +91827,16 @@
         }
       ],
       "published": "2025-04-08T09:15:26.150",
-      "last_modified": "2026-07-14T13:17:29.813",
-      "fetched_at": "2026-07-29T09:13:57.885Z"
+      "last_modified": "2026-07-30T06:22:03.193",
+      "fetched_at": "2026-08-29T12:47:50.479Z"
     },
     "CVE-2025-22055": {
       "cve_id": "CVE-2025-22055",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: fix geneve_opt length integer overflow\n\nstruct geneve_opt uses 5 bit length for each single option, which\nmeans every vary size option should be smaller than 128 bytes.\n\nHowever, all current related Netlink policies cannot promise this\nlength condition and the attacker can exploit a exact 128-byte size\noption to *fake* a zero length option and confuse the parsing logic,\nfurther achieve heap out-of-bounds read.\n\nOne example crash log is like below:\n\n[    3.905425] ==================================================================\n[    3.905925] BUG: KASAN: slab-out-of-bounds in nla_put+0xa9/0xe0\n[    3.906255] Read of size 124 at addr ffff888005f291cc by task poc/177\n[    3.906646]\n[    3.906775] CPU: 0 PID: 177 Comm: poc-oob-read Not tainted 6.1.132 #1\n[    3.907131] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.16.0-0-gd239552ce722-prebuilt.qemu.org 04/01/2014\n[    3.907784] Call Trace:\n[    3.907925]  <TASK>\n[    3.908048]  dump_stack_lvl+0x44/0x5c\n[    3.908258]  print_report+0x184/0x4be\n[    3.909151]  kasan_report+0xc5/0x100\n[    3.909539]  kasan_check_range+0xf3/0x1a0\n[    3.909794]  memcpy+0x1f/0x60\n[    3.909968]  nla_put+0xa9/0xe0\n[    3.910147]  tunnel_key_dump+0x945/0xba0\n[    3.911536]  tcf_action_dump_1+0x1c1/0x340\n[    3.912436]  tcf_action_dump+0x101/0x180\n[    3.912689]  tcf_exts_dump+0x164/0x1e0\n[    3.912905]  fw_dump+0x18b/0x2d0\n[    3.913483]  tcf_fill_node+0x2ee/0x460\n[    3.914778]  tfilter_notify+0xf4/0x180\n[    3.915208]  tc_new_tfilter+0xd51/0x10d0\n[    3.918615]  rtnetlink_rcv_msg+0x4a2/0x560\n[    3.919118]  netlink_rcv_skb+0xcd/0x200\n[    3.919787]  netlink_unicast+0x395/0x530\n[    3.921032]  netlink_sendmsg+0x3d0/0x6d0\n[    3.921987]  __sock_sendmsg+0x99/0xa0\n[    3.922220]  __sys_sendto+0x1b7/0x240\n[    3.922682]  __x64_sys_sendto+0x72/0x90\n[    3.922906]  do_syscall_64+0x5e/0x90\n[    3.923814]  entry_SYSCALL_64_after_hwframe+0x6e/0xd8\n[    3.924122] RIP: 0033:0x7e83eab84407\n[    3.924331] Code: 48 89 fa 4c 89 df e8 38 aa 00 00 8b 93 08 03 00 00 59 5e 48 83 f8 fc 74 1a 5b c3 0f 1f 84 00 00 00 00 00 48 8b 44 24 10 0f 05 <5b> c3 0f 1f 80 00 00 00 00 83 e2 39 83 faf\n[    3.925330] RSP: 002b:00007ffff505e370 EFLAGS: 00000202 ORIG_RAX: 000000000000002c\n[    3.925752] RAX: ffffffffffffffda RBX: 00007e83eaafa740 RCX: 00007e83eab84407\n[    3.926173] RDX: 00000000000001a8 RSI: 00007ffff505e3c0 RDI: 0000000000000003\n[    3.926587] RBP: 00007ffff505f460 R08: 00007e83eace1000 R09: 000000000000000c\n[    3.926977] R10: 0000000000000000 R11: 0000000000000202 R12: 00007ffff505f3c0\n[    3.927367] R13: 00007ffff505f5c8 R14: 00007e83ead1b000 R15: 00005d4fbbe6dcb8\n\nFix these issues by enforing correct length condition in related\npolicies.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
       "cwes": [
         "CWE-190"
       ],
@@ -91891,8 +91891,8 @@
         }
       ],
       "published": "2025-04-16T15:15:58.983",
-      "last_modified": "2026-07-14T13:17:30.003",
-      "fetched_at": "2026-07-29T09:14:04.546Z"
+      "last_modified": "2026-07-30T06:22:09.127",
+      "fetched_at": "2026-08-29T12:47:57.387Z"
     },
     "CVE-2025-22056": {
       "cve_id": "CVE-2025-22056",
@@ -91957,7 +91957,7 @@
       ],
       "published": "2025-04-16T15:15:59.087",
       "last_modified": "2026-07-14T13:17:30.217",
-      "fetched_at": "2026-07-29T09:14:11.148Z"
+      "fetched_at": "2026-08-29T12:48:04.314Z"
     },
     "CVE-2025-22060": {
       "cve_id": "CVE-2025-22060",
@@ -92019,7 +92019,7 @@
       ],
       "published": "2025-04-16T15:15:59.477",
       "last_modified": "2026-07-14T13:17:30.473",
-      "fetched_at": "2026-07-29T09:14:17.830Z"
+      "fetched_at": "2026-08-29T12:48:10.941Z"
     },
     "CVE-2025-22083": {
       "cve_id": "CVE-2025-22083",
@@ -92074,16 +92074,16 @@
         }
       ],
       "published": "2025-04-16T15:16:02.510",
-      "last_modified": "2026-07-14T13:17:30.647",
-      "fetched_at": "2026-07-29T09:14:24.465Z"
+      "last_modified": "2026-07-30T06:22:11.487",
+      "fetched_at": "2026-08-29T12:48:17.988Z"
     },
     "CVE-2025-22090": {
       "cve_id": "CVE-2025-22090",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/mm/pat: Fix VM_PAT handling when fork() fails in copy_page_range()\n\nIf track_pfn_copy() fails, we already added the dst VMA to the maple\ntree. As fork() fails, we'll cleanup the maple tree, and stumble over\nthe dst VMA for which we neither performed any reservation nor copied\nany page tables.\n\nConsequently untrack_pfn() will see VM_PAT and try obtaining the\nPAT information from the page table -- which fails because the page\ntable was not copied.\n\nThe easiest fix would be to simply clear the VM_PAT flag of the dst VMA\nif track_pfn_copy() fails. However, the whole thing is about \"simply\"\nclearing the VM_PAT flag is shaky as well: if we passed track_pfn_copy()\nand performed a reservation, but copying the page tables fails, we'll\nsimply clear the VM_PAT flag, not properly undoing the reservation ...\nwhich is also wrong.\n\nSo let's fix it properly: set the VM_PAT flag only if the reservation\nsucceeded (leaving it clear initially), and undo the reservation if\nanything goes wrong while copying the page tables: clearing the VM_PAT\nflag after undoing the reservation.\n\nNote that any copied page table entries will get zapped when the VMA will\nget removed later, after copy_page_range() succeeded; as VM_PAT is not set\nthen, we won't try cleaning VM_PAT up once more and untrack_pfn() will be\nhappy. Note that leaving these page tables in place without a reservation\nis not a problem, as we are aborting fork(); this process will never run.\n\nA reproducer can trigger this usually at the first try:\n\n  https://gitlab.com/davidhildenbrand/scratchspace/-/raw/main/reproducers/pat_fork.c\n\n  WARNING: CPU: 26 PID: 11650 at arch/x86/mm/pat/memtype.c:983 get_pat_info+0xf6/0x110\n  Modules linked in: ...\n  CPU: 26 UID: 0 PID: 11650 Comm: repro3 Not tainted 6.12.0-rc5+ #92\n  Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.16.3-2.fc40 04/01/2014\n  RIP: 0010:get_pat_info+0xf6/0x110\n  ...\n  Call Trace:\n   <TASK>\n   ...\n   untrack_pfn+0x52/0x110\n   unmap_single_vma+0xa6/0xe0\n   unmap_vmas+0x105/0x1f0\n   exit_mmap+0xf6/0x460\n   __mmput+0x4b/0x120\n   copy_process+0x1bf6/0x2aa0\n   kernel_clone+0xab/0x440\n   __do_sys_clone+0x66/0x90\n   do_syscall_64+0x95/0x180\n\nLikely this case was missed in:\n\n  d155df53f310 (\"x86/mm/pat: clear VM_PAT if copy_p4d_range failed\")\n\n... and instead of undoing the reservation we simply cleared the VM_PAT flag.\n\nKeep the documentation of these functions in include/linux/pgtable.h,\none place is more than sufficient -- we should clean that up for the other\nfunctions like track_pfn_remap/untrack_pfn separately.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.3,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -92126,8 +92126,8 @@
         }
       ],
       "published": "2025-04-16T15:16:03.213",
-      "last_modified": "2026-07-14T13:17:30.837",
-      "fetched_at": "2026-07-29T09:14:31.071Z"
+      "last_modified": "2026-07-30T06:22:12.560",
+      "fetched_at": "2026-08-29T12:48:24.610Z"
     },
     "CVE-2025-22095": {
       "cve_id": "CVE-2025-22095",
@@ -92185,7 +92185,7 @@
       ],
       "published": "2025-04-16T15:16:03.830",
       "last_modified": "2026-07-14T13:17:31.017",
-      "fetched_at": "2026-07-29T09:14:37.775Z"
+      "fetched_at": "2026-08-29T12:48:31.319Z"
     },
     "CVE-2025-22107": {
       "cve_id": "CVE-2025-22107",
@@ -92237,7 +92237,7 @@
       ],
       "published": "2025-04-16T15:16:04.997",
       "last_modified": "2026-07-14T13:17:31.170",
-      "fetched_at": "2026-07-29T09:14:44.448Z"
+      "fetched_at": "2026-08-29T12:48:38.197Z"
     },
     "CVE-2025-22111": {
       "cve_id": "CVE-2025-22111",
@@ -92283,15 +92283,15 @@
       ],
       "published": "2025-04-16T15:16:05.347",
       "last_modified": "2026-07-14T13:17:31.400",
-      "fetched_at": "2026-07-29T09:14:51.206Z"
+      "fetched_at": "2026-08-29T12:48:44.839Z"
     },
     "CVE-2025-22121": {
       "cve_id": "CVE-2025-22121",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\next4: fix out-of-bound read in ext4_xattr_inode_dec_ref_all()\n\nThere's issue as follows:\nBUG: KASAN: use-after-free in ext4_xattr_inode_dec_ref_all+0x6ff/0x790\nRead of size 4 at addr ffff88807b003000 by task syz-executor.0/15172\n\nCPU: 3 PID: 15172 Comm: syz-executor.0\nCall Trace:\n __dump_stack lib/dump_stack.c:82 [inline]\n dump_stack+0xbe/0xfd lib/dump_stack.c:123\n print_address_description.constprop.0+0x1e/0x280 mm/kasan/report.c:400\n __kasan_report.cold+0x6c/0x84 mm/kasan/report.c:560\n kasan_report+0x3a/0x50 mm/kasan/report.c:585\n ext4_xattr_inode_dec_ref_all+0x6ff/0x790 fs/ext4/xattr.c:1137\n ext4_xattr_delete_inode+0x4c7/0xda0 fs/ext4/xattr.c:2896\n ext4_evict_inode+0xb3b/0x1670 fs/ext4/inode.c:323\n evict+0x39f/0x880 fs/inode.c:622\n iput_final fs/inode.c:1746 [inline]\n iput fs/inode.c:1772 [inline]\n iput+0x525/0x6c0 fs/inode.c:1758\n ext4_orphan_cleanup fs/ext4/super.c:3298 [inline]\n ext4_fill_super+0x8c57/0xba40 fs/ext4/super.c:5300\n mount_bdev+0x355/0x410 fs/super.c:1446\n legacy_get_tree+0xfe/0x220 fs/fs_context.c:611\n vfs_get_tree+0x8d/0x2f0 fs/super.c:1576\n do_new_mount fs/namespace.c:2983 [inline]\n path_mount+0x119a/0x1ad0 fs/namespace.c:3316\n do_mount+0xfc/0x110 fs/namespace.c:3329\n __do_sys_mount fs/namespace.c:3540 [inline]\n __se_sys_mount+0x219/0x2e0 fs/namespace.c:3514\n do_syscall_64+0x33/0x40 arch/x86/entry/common.c:46\n entry_SYSCALL_64_after_hwframe+0x67/0xd1\n\nMemory state around the buggy address:\n ffff88807b002f00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n ffff88807b002f80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\n>ffff88807b003000: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff\n                   ^\n ffff88807b003080: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff\n ffff88807b003100: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff\n\nAbove issue happens as ext4_xattr_delete_inode() isn't check xattr\nis valid if xattr is in inode.\nTo solve above issue call xattr_check_inode() check if xattr if valid\nin inode. In fact, we can directly verify in ext4_iget_extra_inode(),\nso that there is no divergent verification.",
       "cvss_version": "3.1",
-      "cvss_score": 7.1,
+      "cvss_score": 8.4,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-125"
       ],
@@ -92334,8 +92334,8 @@
         }
       ],
       "published": "2025-04-16T15:16:06.277",
-      "last_modified": "2026-07-14T13:17:31.580",
-      "fetched_at": "2026-07-29T09:14:57.793Z"
+      "last_modified": "2026-07-30T06:22:15.897",
+      "fetched_at": "2026-08-29T12:48:51.550Z"
     },
     "CVE-2025-23136": {
       "cve_id": "CVE-2025-23136",
@@ -92400,15 +92400,15 @@
       ],
       "published": "2025-04-16T15:16:07.970",
       "last_modified": "2026-07-14T13:17:31.850",
-      "fetched_at": "2026-07-29T09:15:04.526Z"
+      "fetched_at": "2026-08-29T12:48:58.169Z"
     },
     "CVE-2025-37785": {
       "cve_id": "CVE-2025-37785",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\next4: fix OOB read when checking dotdot dir\n\nMounting a corrupted filesystem with directory which contains '.' dir\nentry with rec_len == block size results in out-of-bounds read (later\non, when the corrupted directory is removed).\n\next4_empty_dir() assumes every ext4 directory contains at least '.'\nand '..' as directory entries in the first data block. It first loads\nthe '.' dir entry, performs sanity checks by calling ext4_check_dir_entry()\nand then uses its rec_len member to compute the location of '..' dir\nentry (in ext4_next_entry). It assumes the '..' dir entry fits into the\nsame data block.\n\nIf the rec_len of '.' is precisely one block (4KB), it slips through the\nsanity checks (it is considered the last directory entry in the data\nblock) and leaves \"struct ext4_dir_entry_2 *de\" point exactly past the\nmemory slot allocated to the data block. The following call to\next4_check_dir_entry() on new value of de then dereferences this pointer\nwhich results in out-of-bounds mem access.\n\nFix this by extending __ext4_check_dir_entry() to check for '.' dir\nentries that reach the end of data block. Make sure to ignore the phony\ndir entries for checksum (by checking name_len for non-zero).\n\nNote: This is reported by KASAN as use-after-free in case another\nstructure was recently freed from the slot past the bound, but it is\nreally an OOB read.\n\nThis issue was found by syzkaller tool.\n\nCall Trace:\n[   38.594108] BUG: KASAN: slab-use-after-free in __ext4_check_dir_entry+0x67e/0x710\n[   38.594649] Read of size 2 at addr ffff88802b41a004 by task syz-executor/5375\n[   38.595158]\n[   38.595288] CPU: 0 UID: 0 PID: 5375 Comm: syz-executor Not tainted 6.14.0-rc7 #1\n[   38.595298] Hardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS rel-1.16.3-0-ga6ed6b701f0a-prebuilt.qemu.org 04/01/2014\n[   38.595304] Call Trace:\n[   38.595308]  <TASK>\n[   38.595311]  dump_stack_lvl+0xa7/0xd0\n[   38.595325]  print_address_description.constprop.0+0x2c/0x3f0\n[   38.595339]  ? __ext4_check_dir_entry+0x67e/0x710\n[   38.595349]  print_report+0xaa/0x250\n[   38.595359]  ? __ext4_check_dir_entry+0x67e/0x710\n[   38.595368]  ? kasan_addr_to_slab+0x9/0x90\n[   38.595378]  kasan_report+0xab/0xe0\n[   38.595389]  ? __ext4_check_dir_entry+0x67e/0x710\n[   38.595400]  __ext4_check_dir_entry+0x67e/0x710\n[   38.595410]  ext4_empty_dir+0x465/0x990\n[   38.595421]  ? __pfx_ext4_empty_dir+0x10/0x10\n[   38.595432]  ext4_rmdir.part.0+0x29a/0xd10\n[   38.595441]  ? __dquot_initialize+0x2a7/0xbf0\n[   38.595455]  ? __pfx_ext4_rmdir.part.0+0x10/0x10\n[   38.595464]  ? __pfx___dquot_initialize+0x10/0x10\n[   38.595478]  ? down_write+0xdb/0x140\n[   38.595487]  ? __pfx_down_write+0x10/0x10\n[   38.595497]  ext4_rmdir+0xee/0x140\n[   38.595506]  vfs_rmdir+0x209/0x670\n[   38.595517]  ? lookup_one_qstr_excl+0x3b/0x190\n[   38.595529]  do_rmdir+0x363/0x3c0\n[   38.595537]  ? __pfx_do_rmdir+0x10/0x10\n[   38.595544]  ? strncpy_from_user+0x1ff/0x2e0\n[   38.595561]  __x64_sys_unlinkat+0xf0/0x130\n[   38.595570]  do_syscall_64+0x5b/0x180\n[   38.595583]  entry_SYSCALL_64_after_hwframe+0x76/0x7e",
       "cvss_version": "3.1",
-      "cvss_score": 7.1,
+      "cvss_score": 7.8,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-125"
       ],
@@ -92461,8 +92461,8 @@
         }
       ],
       "published": "2025-04-18T07:15:42.693",
-      "last_modified": "2026-07-14T13:17:33.797",
-      "fetched_at": "2026-07-29T09:15:11.169Z"
+      "last_modified": "2026-08-04T11:22:43.517",
+      "fetched_at": "2026-08-29T12:49:04.870Z"
     },
     "CVE-2025-37909": {
       "cve_id": "CVE-2025-37909",
@@ -92526,15 +92526,15 @@
       ],
       "published": "2025-05-20T16:15:27.390",
       "last_modified": "2026-07-14T13:17:34.003",
-      "fetched_at": "2026-07-29T09:15:17.956Z"
+      "fetched_at": "2026-08-29T12:49:11.504Z"
     },
     "CVE-2025-37917": {
       "cve_id": "CVE-2025-37917",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ethernet: mtk-star-emac: fix spinlock recursion issues on rx/tx poll\n\nUse spin_lock_irqsave and spin_unlock_irqrestore instead of spin_lock\nand spin_unlock in mtk_star_emac driver to avoid spinlock recursion\noccurrence that can happen when enabling the DMA interrupts again in\nrx/tx poll.\n\n```\nBUG: spinlock recursion on CPU#0, swapper/0/0\n lock: 0xffff00000db9cf20, .magic: dead4ead, .owner: swapper/0/0,\n    .owner_cpu: 0\nCPU: 0 UID: 0 PID: 0 Comm: swapper/0 Not tainted\n    6.15.0-rc2-next-20250417-00001-gf6a27738686c-dirty #28 PREEMPT\nHardware name: MediaTek MT8365 Open Platform EVK (DT)\nCall trace:\n show_stack+0x18/0x24 (C)\n dump_stack_lvl+0x60/0x80\n dump_stack+0x18/0x24\n spin_dump+0x78/0x88\n do_raw_spin_lock+0x11c/0x120\n _raw_spin_lock+0x20/0x2c\n mtk_star_handle_irq+0xc0/0x22c [mtk_star_emac]\n __handle_irq_event_percpu+0x48/0x140\n handle_irq_event+0x4c/0xb0\n handle_fasteoi_irq+0xa0/0x1bc\n handle_irq_desc+0x34/0x58\n generic_handle_domain_irq+0x1c/0x28\n gic_handle_irq+0x4c/0x120\n do_interrupt_handler+0x50/0x84\n el1_interrupt+0x34/0x68\n el1h_64_irq_handler+0x18/0x24\n el1h_64_irq+0x6c/0x70\n regmap_mmio_read32le+0xc/0x20 (P)\n _regmap_bus_reg_read+0x6c/0xac\n _regmap_read+0x60/0xdc\n regmap_read+0x4c/0x80\n mtk_star_rx_poll+0x2f4/0x39c [mtk_star_emac]\n __napi_poll+0x38/0x188\n net_rx_action+0x164/0x2c0\n handle_softirqs+0x100/0x244\n __do_softirq+0x14/0x20\n ____do_softirq+0x10/0x20\n call_on_irq_stack+0x24/0x64\n do_softirq_own_stack+0x1c/0x40\n __irq_exit_rcu+0xd4/0x10c\n irq_exit_rcu+0x10/0x1c\n el1_interrupt+0x38/0x68\n el1h_64_irq_handler+0x18/0x24\n el1h_64_irq+0x6c/0x70\n cpuidle_enter_state+0xac/0x320 (P)\n cpuidle_enter+0x38/0x50\n do_idle+0x1e4/0x260\n cpu_startup_entry+0x34/0x3c\n rest_init+0xdc/0xe0\n console_on_rootfs+0x0/0x6c\n __primary_switched+0x88/0x90\n```",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -92585,8 +92585,8 @@
         }
       ],
       "published": "2025-05-20T16:15:28.273",
-      "last_modified": "2026-07-14T13:17:34.200",
-      "fetched_at": "2026-07-29T09:15:24.556Z"
+      "last_modified": "2026-07-30T06:22:33.187",
+      "fetched_at": "2026-08-29T12:49:18.112Z"
     },
     "CVE-2025-37945": {
       "cve_id": "CVE-2025-37945",
@@ -92644,15 +92644,15 @@
       ],
       "published": "2025-05-20T16:15:32.453",
       "last_modified": "2026-07-14T13:17:34.373",
-      "fetched_at": "2026-07-29T09:15:31.203Z"
+      "fetched_at": "2026-08-29T12:49:24.728Z"
     },
     "CVE-2025-37959": {
       "cve_id": "CVE-2025-37959",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nbpf: Scrub packet on bpf_redirect_peer\n\nWhen bpf_redirect_peer is used to redirect packets to a device in\nanother network namespace, the skb isn't scrubbed. That can lead skb\ninformation from one namespace to be \"misused\" in another namespace.\n\nAs one example, this is causing Cilium to drop traffic when using\nbpf_redirect_peer to redirect packets that just went through IPsec\ndecryption to a container namespace. The following pwru trace shows (1)\nthe packet path from the host's XFRM layer to the container's XFRM\nlayer where it's dropped and (2) the number of active skb extensions at\neach function.\n\n    NETNS       MARK  IFACE  TUPLE                                FUNC\n    4026533547  d00   eth0   10.244.3.124:35473->10.244.2.158:53  xfrm_rcv_cb\n                             .active_extensions = (__u8)2,\n    4026533547  d00   eth0   10.244.3.124:35473->10.244.2.158:53  xfrm4_rcv_cb\n                             .active_extensions = (__u8)2,\n    4026533547  d00   eth0   10.244.3.124:35473->10.244.2.158:53  gro_cells_receive\n                             .active_extensions = (__u8)2,\n    [...]\n    4026533547  0     eth0   10.244.3.124:35473->10.244.2.158:53  skb_do_redirect\n                             .active_extensions = (__u8)2,\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  ip_rcv\n                             .active_extensions = (__u8)2,\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  ip_rcv_core\n                             .active_extensions = (__u8)2,\n    [...]\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  udp_queue_rcv_one_skb\n                             .active_extensions = (__u8)2,\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  __xfrm_policy_check\n                             .active_extensions = (__u8)2,\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  __xfrm_decode_session\n                             .active_extensions = (__u8)2,\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  security_xfrm_decode_session\n                             .active_extensions = (__u8)2,\n    4026534999  0     eth0   10.244.3.124:35473->10.244.2.158:53  kfree_skb_reason(SKB_DROP_REASON_XFRM_POLICY)\n                             .active_extensions = (__u8)2,\n\nIn this case, there are no XFRM policies in the container's network\nnamespace so the drop is unexpected. When we decrypt the IPsec packet,\nthe XFRM state used for decryption is set in the skb extensions. This\ninformation is preserved across the netns switch. When we reach the\nXFRM policy check in the container's netns, __xfrm_policy_check drops\nthe packet with LINUX_MIB_XFRMINNOPOLS because a (container-side) XFRM\npolicy can't be found that matches the (host-side) XFRM state used for\ndecryption.\n\nThis patch fixes this by scrubbing the packet when using\nbpf_redirect_peer, as is done on typical netns switches via veth\ndevices except skb->mark and skb->tstamp are not zeroed.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 9.4,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -92697,16 +92697,16 @@
         }
       ],
       "published": "2025-05-20T16:15:34.143",
-      "last_modified": "2026-07-14T13:17:34.580",
-      "fetched_at": "2026-07-29T09:15:37.840Z"
+      "last_modified": "2026-07-30T06:22:38.143",
+      "fetched_at": "2026-08-29T12:49:31.340Z"
     },
     "CVE-2025-37964": {
       "cve_id": "CVE-2025-37964",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nx86/mm: Eliminate window where TLB flushes may be inadvertently skipped\n\ntl;dr: There is a window in the mm switching code where the new CR3 is\nset and the CPU should be getting TLB flushes for the new mm.  But\nshould_flush_tlb() has a bug and suppresses the flush.  Fix it by\nwidening the window where should_flush_tlb() sends an IPI.\n\nLong Version:\n\n=== History ===\n\nThere were a few things leading up to this.\n\nFirst, updating mm_cpumask() was observed to be too expensive, so it was\nmade lazier.  But being lazy caused too many unnecessary IPIs to CPUs\ndue to the now-lazy mm_cpumask().  So code was added to cull\nmm_cpumask() periodically[2].  But that culling was a bit too aggressive\nand skipped sending TLB flushes to CPUs that need them.  So here we are\nagain.\n\n=== Problem ===\n\nThe too-aggressive code in should_flush_tlb() strikes in this window:\n\n\t// Turn on IPIs for this CPU/mm combination, but only\n\t// if should_flush_tlb() agrees:\n\tcpumask_set_cpu(cpu, mm_cpumask(next));\n\n\tnext_tlb_gen = atomic64_read(&next->context.tlb_gen);\n\tchoose_new_asid(next, next_tlb_gen, &new_asid, &need_flush);\n\tload_new_mm_cr3(need_flush);\n\t// ^ After 'need_flush' is set to false, IPIs *MUST*\n\t// be sent to this CPU and not be ignored.\n\n        this_cpu_write(cpu_tlbstate.loaded_mm, next);\n\t// ^ Not until this point does should_flush_tlb()\n\t// become true!\n\nshould_flush_tlb() will suppress TLB flushes between load_new_mm_cr3()\nand writing to 'loaded_mm', which is a window where they should not be\nsuppressed.  Whoops.\n\n=== Solution ===\n\nThankfully, the fuzzy \"just about to write CR3\" window is already marked\nwith loaded_mm==LOADED_MM_SWITCHING.  Simply checking for that state in\nshould_flush_tlb() is sufficient to ensure that the CPU is targeted with\nan IPI.\n\nThis will cause more TLB flush IPIs.  But the window is relatively small\nand I do not expect this to cause any kind of measurable performance\nimpact.\n\nUpdate the comment where LOADED_MM_SWITCHING is written since it grew\nyet another user.\n\nPeter Z also raised a concern that should_flush_tlb() might not observe\n'loaded_mm' and 'is_lazy' in the same order that switch_mm_irqs_off()\nwrites them.  Add a barrier to ensure that they are observed in the\norder they are written.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -92757,8 +92757,8 @@
         }
       ],
       "published": "2025-05-20T16:15:34.683",
-      "last_modified": "2026-07-14T13:17:34.787",
-      "fetched_at": "2026-07-29T09:15:44.433Z"
+      "last_modified": "2026-07-30T06:22:39.317",
+      "fetched_at": "2026-08-29T12:49:38.068Z"
     },
     "CVE-2025-37972": {
       "cve_id": "CVE-2025-37972",
@@ -92814,7 +92814,7 @@
       ],
       "published": "2025-05-20T17:15:47.743",
       "last_modified": "2026-07-14T13:17:34.997",
-      "fetched_at": "2026-07-29T09:15:51.209Z"
+      "fetched_at": "2026-08-29T12:49:44.729Z"
     },
     "CVE-2025-37980": {
       "cve_id": "CVE-2025-37980",
@@ -92866,7 +92866,7 @@
       ],
       "published": "2025-05-20T17:15:48.650",
       "last_modified": "2026-07-14T13:17:35.143",
-      "fetched_at": "2026-07-29T09:15:57.923Z"
+      "fetched_at": "2026-08-29T12:49:51.483Z"
     },
     "CVE-2025-38125": {
       "cve_id": "CVE-2025-38125",
@@ -92920,15 +92920,15 @@
       ],
       "published": "2025-07-03T09:15:26.680",
       "last_modified": "2026-07-14T13:17:37.313",
-      "fetched_at": "2026-07-29T09:16:04.535Z"
+      "fetched_at": "2026-08-29T12:49:58.097Z"
     },
     "CVE-2025-38162": {
       "cve_id": "CVE-2025-38162",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_set_pipapo: prevent overflow in lookup table allocation\n\nWhen calculating the lookup table size, ensure the following\nmultiplication does not overflow:\n\n- desc->field_len[] maximum value is U8_MAX multiplied by\n  NFT_PIPAPO_GROUPS_PER_BYTE(f) that can be 2, worst case.\n- NFT_PIPAPO_BUCKETS(f->bb) is 2^8, worst case.\n- sizeof(unsigned long), from sizeof(*f->lt), lt in\n  struct nft_pipapo_field.\n\nThen, use check_mul_overflow() to multiply by bucket size and then use\ncheck_add_overflow() to the alignment for avx2 (if needed). Finally, add\nlt_size_check_overflow() helper and use it to consolidate this.\n\nWhile at it, replace leftover allocation using the GFP_KERNEL to\nGFP_KERNEL_ACCOUNT for consistency, in pipapo_resize().",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -92969,16 +92969,16 @@
         }
       ],
       "published": "2025-07-03T09:15:31.617",
-      "last_modified": "2026-07-14T13:17:38.027",
-      "fetched_at": "2026-07-29T09:16:11.210Z"
+      "last_modified": "2026-07-30T06:22:55.953",
+      "fetched_at": "2026-08-29T12:50:04.721Z"
     },
     "CVE-2025-38192": {
       "cve_id": "CVE-2025-38192",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: clear the dst when changing skb protocol\n\nA not-so-careful NAT46 BPF program can crash the kernel\nif it indiscriminately flips ingress packets from v4 to v6:\n\n  BUG: kernel NULL pointer dereference, address: 0000000000000000\n    ip6_rcv_core (net/ipv6/ip6_input.c:190:20)\n    ipv6_rcv (net/ipv6/ip6_input.c:306:8)\n    process_backlog (net/core/dev.c:6186:4)\n    napi_poll (net/core/dev.c:6906:9)\n    net_rx_action (net/core/dev.c:7028:13)\n    do_softirq (kernel/softirq.c:462:3)\n    netif_rx (net/core/dev.c:5326:3)\n    dev_loopback_xmit (net/core/dev.c:4015:2)\n    ip_mc_finish_output (net/ipv4/ip_output.c:363:8)\n    NF_HOOK (./include/linux/netfilter.h:314:9)\n    ip_mc_output (net/ipv4/ip_output.c:400:5)\n    dst_output (./include/net/dst.h:459:9)\n    ip_local_out (net/ipv4/ip_output.c:130:9)\n    ip_send_skb (net/ipv4/ip_output.c:1496:8)\n    udp_send_skb (net/ipv4/udp.c:1040:8)\n    udp_sendmsg (net/ipv4/udp.c:1328:10)\n\nThe output interface has a 4->6 program attached at ingress.\nWe try to loop the multicast skb back to the sending socket.\nIngress BPF runs as part of netif_rx(), pushes a valid v6 hdr\nand changes skb->protocol to v6. We enter ip6_rcv_core which\ntries to use skb_dst(). But the dst is still an IPv4 one left\nafter IPv4 mcast output.\n\nClear the dst in all BPF helpers which change the protocol.\nTry to preserve metadata dsts, those may carry non-routing\nmetadata.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-476"
       ],
@@ -93025,8 +93025,8 @@
         }
       ],
       "published": "2025-07-04T14:15:26.280",
-      "last_modified": "2026-07-14T13:17:38.293",
-      "fetched_at": "2026-07-29T09:16:18.022Z"
+      "last_modified": "2026-07-30T06:22:59.143",
+      "fetched_at": "2026-08-29T12:50:11.331Z"
     },
     "CVE-2025-38201": {
       "cve_id": "CVE-2025-38201",
@@ -93086,15 +93086,15 @@
       ],
       "published": "2025-07-04T14:15:28.000",
       "last_modified": "2026-07-14T13:17:38.593",
-      "fetched_at": "2026-07-29T09:16:24.649Z"
+      "fetched_at": "2026-08-29T12:50:17.989Z"
     },
     "CVE-2025-38232": {
       "cve_id": "CVE-2025-38232",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: fix race between nfsd registration and exports_proc\n\nAs of now nfsd calls create_proc_exports_entry() at start of init_nfsd\nand cleanup by remove_proc_entry() at last of exit_nfsd.\n\nWhich causes kernel OOPs if there is race between below 2 operations:\n(i) exportfs -r\n(ii) mount -t nfsd none /proc/fs/nfsd\n\nfor 5.4 kernel ARM64:\n\nCPU 1:\nel1_irq+0xbc/0x180\narch_counter_get_cntvct+0x14/0x18\nrunning_clock+0xc/0x18\npreempt_count_add+0x88/0x110\nprep_new_page+0xb0/0x220\nget_page_from_freelist+0x2d8/0x1778\n__alloc_pages_nodemask+0x15c/0xef0\n__vmalloc_node_range+0x28c/0x478\n__vmalloc_node_flags_caller+0x8c/0xb0\nkvmalloc_node+0x88/0xe0\nnfsd_init_net+0x6c/0x108 [nfsd]\nops_init+0x44/0x170\nregister_pernet_operations+0x114/0x270\nregister_pernet_subsys+0x34/0x50\ninit_nfsd+0xa8/0x718 [nfsd]\ndo_one_initcall+0x54/0x2e0\n\nCPU 2 :\nUnable to handle kernel NULL pointer dereference at virtual address 0000000000000010\n\nPC is at : exports_net_open+0x50/0x68 [nfsd]\n\nCall trace:\nexports_net_open+0x50/0x68 [nfsd]\nexports_proc_open+0x2c/0x38 [nfsd]\nproc_reg_open+0xb8/0x198\ndo_dentry_open+0x1c4/0x418\nvfs_open+0x38/0x48\npath_openat+0x28c/0xf18\ndo_filp_open+0x70/0xe8\ndo_sys_open+0x154/0x248\n\nSometimes it crashes at exports_net_open() and sometimes cache_seq_next_rcu().\n\nand same is happening on latest 6.14 kernel as well:\n\n[    0.000000] Linux version 6.14.0-rc5-next-20250304-dirty\n...\n[  285.455918] Unable to handle kernel paging request at virtual address 00001f4800001f48\n...\n[  285.464902] pc : cache_seq_next_rcu+0x78/0xa4\n...\n[  285.469695] Call trace:\n[  285.470083]  cache_seq_next_rcu+0x78/0xa4 (P)\n[  285.470488]  seq_read+0xe0/0x11c\n[  285.470675]  proc_reg_read+0x9c/0xf0\n[  285.470874]  vfs_read+0xc4/0x2fc\n[  285.471057]  ksys_read+0x6c/0xf4\n[  285.471231]  __arm64_sys_read+0x1c/0x28\n[  285.471428]  invoke_syscall+0x44/0x100\n[  285.471633]  el0_svc_common.constprop.0+0x40/0xe0\n[  285.471870]  do_el0_svc_compat+0x1c/0x34\n[  285.472073]  el0_svc_compat+0x2c/0x80\n[  285.472265]  el0t_32_sync_handler+0x90/0x140\n[  285.472473]  el0t_32_sync+0x19c/0x1a0\n[  285.472887] Code: f9400885 93407c23 937d7c27 11000421 (f86378a3)\n[  285.473422] ---[ end trace 0000000000000000 ]---\n\nIt reproduced simply with below script:\nwhile [ 1 ]\ndo\n/exportfs -r\ndone &\n\nwhile [ 1 ]\ndo\ninsmod /nfsd.ko\nmount -t nfsd none /proc/fs/nfsd\numount /proc/fs/nfsd\nrmmod nfsd\ndone &\n\nSo exporting interfaces to user space shall be done at last and\ncleanup at first place.\n\nWith change there is no Kernel OOPs.",
       "cvss_version": "3.1",
-      "cvss_score": 4.7,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-362"
       ],
@@ -93141,8 +93141,8 @@
         }
       ],
       "published": "2025-07-04T14:15:32.810",
-      "last_modified": "2026-07-14T13:17:39.257",
-      "fetched_at": "2026-07-29T09:16:31.430Z"
+      "last_modified": "2026-07-30T06:23:01.780",
+      "fetched_at": "2026-08-29T12:50:24.860Z"
     },
     "CVE-2025-38591": {
       "cve_id": "CVE-2025-38591",
@@ -93196,7 +93196,7 @@
       ],
       "published": "2025-08-19T17:15:36.790",
       "last_modified": "2026-07-14T13:17:41.640",
-      "fetched_at": "2026-07-29T09:16:38.381Z"
+      "fetched_at": "2026-08-29T12:50:31.552Z"
     },
     "CVE-2025-38704": {
       "cve_id": "CVE-2025-38704",
@@ -93250,7 +93250,7 @@
       ],
       "published": "2025-09-04T16:15:39.263",
       "last_modified": "2026-07-14T13:17:42.597",
-      "fetched_at": "2026-07-29T09:16:44.972Z"
+      "fetched_at": "2026-08-29T12:50:38.402Z"
     },
     "CVE-2025-39721": {
       "cve_id": "CVE-2025-39721",
@@ -93300,7 +93300,7 @@
       ],
       "published": "2025-09-05T18:15:49.770",
       "last_modified": "2026-07-14T13:17:48.293",
-      "fetched_at": "2026-07-29T09:16:51.683Z"
+      "fetched_at": "2026-08-29T12:50:45.027Z"
     },
     "CVE-2025-39748": {
       "cve_id": "CVE-2025-39748",
@@ -93354,7 +93354,7 @@
       ],
       "published": "2025-09-11T17:15:38.237",
       "last_modified": "2026-07-14T13:17:48.567",
-      "fetched_at": "2026-07-29T09:16:58.450Z"
+      "fetched_at": "2026-08-29T12:50:51.801Z"
     },
     "CVE-2025-39764": {
       "cve_id": "CVE-2025-39764",
@@ -93404,7 +93404,7 @@
       ],
       "published": "2025-09-11T17:15:40.653",
       "last_modified": "2026-07-14T13:17:48.997",
-      "fetched_at": "2026-07-29T09:17:05.149Z"
+      "fetched_at": "2026-08-29T12:50:58.435Z"
     },
     "CVE-2025-39871": {
       "cve_id": "CVE-2025-39871",
@@ -93452,7 +93452,7 @@
       ],
       "published": "2025-09-23T06:15:46.400",
       "last_modified": "2026-07-14T13:17:50.923",
-      "fetched_at": "2026-07-29T09:17:11.883Z"
+      "fetched_at": "2026-08-29T12:51:05.080Z"
     },
     "CVE-2025-39953": {
       "cve_id": "CVE-2025-39953",
@@ -93514,7 +93514,7 @@
       ],
       "published": "2025-10-04T08:15:48.627",
       "last_modified": "2026-07-14T13:17:51.333",
-      "fetched_at": "2026-07-29T09:17:18.599Z"
+      "fetched_at": "2026-08-29T12:51:11.696Z"
     },
     "CVE-2025-39955": {
       "cve_id": "CVE-2025-39955",
@@ -93576,15 +93576,15 @@
       ],
       "published": "2025-10-09T10:15:36.220",
       "last_modified": "2026-07-14T13:17:51.527",
-      "fetched_at": "2026-07-29T09:17:25.293Z"
+      "fetched_at": "2026-08-29T12:51:18.684Z"
     },
     "CVE-2025-39964": {
       "cve_id": "CVE-2025-39964",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: af_alg - Disallow concurrent writes in af_alg_sendmsg\n\nIssuing two writes to the same af_alg socket is bogus as the\ndata will be interleaved in an unpredictable fashion.  Furthermore,\nconcurrent writes may create inconsistencies in the internal\nsocket state.\n\nDisallow this by adding a new ctx->write field that indiciates\nexclusive ownership for writing.",
       "cvss_version": "3.1",
-      "cvss_score": 3.3,
-      "cvss_severity": "low",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -93635,16 +93635,16 @@
         }
       ],
       "published": "2025-10-13T14:15:34.737",
-      "last_modified": "2026-07-14T13:17:51.723",
-      "fetched_at": "2026-07-29T09:17:31.966Z"
+      "last_modified": "2026-07-30T06:24:01.443",
+      "fetched_at": "2026-08-29T12:51:25.555Z"
     },
     "CVE-2025-39978": {
       "cve_id": "CVE-2025-39978",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nocteontx2-pf: Fix potential use after free in otx2_tc_add_flow()\n\nThis code calls kfree_rcu(new_node, rcu) and then dereferences \"new_node\"\nand then dereferences it on the next line.  Two lines later, we take\na mutex so I don't think this is an RCU safe region.  Re-order it to do\nthe dereferences before queuing up the free.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -93673,8 +93673,8 @@
         }
       ],
       "published": "2025-10-15T08:15:35.640",
-      "last_modified": "2026-07-14T13:17:52.057",
-      "fetched_at": "2026-07-29T09:17:38.716Z"
+      "last_modified": "2026-07-30T06:24:03.817",
+      "fetched_at": "2026-08-29T12:51:32.211Z"
     },
     "CVE-2025-39980": {
       "cve_id": "CVE-2025-39980",
@@ -93720,7 +93720,7 @@
       ],
       "published": "2025-10-15T08:15:35.887",
       "last_modified": "2026-07-14T13:17:52.170",
-      "fetched_at": "2026-07-29T09:17:45.349Z"
+      "fetched_at": "2026-08-29T12:51:39.065Z"
     },
     "CVE-2025-40070": {
       "cve_id": "CVE-2025-40070",
@@ -93766,7 +93766,7 @@
       ],
       "published": "2025-10-28T12:15:41.493",
       "last_modified": "2026-07-14T13:17:52.567",
-      "fetched_at": "2026-07-29T09:17:51.970Z"
+      "fetched_at": "2026-08-29T12:51:45.686Z"
     },
     "CVE-2025-40078": {
       "cve_id": "CVE-2025-40078",
@@ -93812,7 +93812,7 @@
       ],
       "published": "2025-10-28T12:15:42.360",
       "last_modified": "2026-07-14T13:17:52.740",
-      "fetched_at": "2026-07-29T09:17:58.555Z"
+      "fetched_at": "2026-08-29T12:51:52.305Z"
     },
     "CVE-2025-40080": {
       "cve_id": "CVE-2025-40080",
@@ -93850,15 +93850,15 @@
       ],
       "published": "2025-10-28T12:15:42.587",
       "last_modified": "2026-07-14T13:17:52.883",
-      "fetched_at": "2026-07-29T09:18:05.654Z"
+      "fetched_at": "2026-08-29T12:51:58.968Z"
     },
     "CVE-2025-40105": {
       "cve_id": "CVE-2025-40105",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nvfs: Don't leak disconnected dentries on umount\n\nWhen user calls open_by_handle_at() on some inode that is not cached, we\nwill create disconnected dentry for it. If such dentry is a directory,\nexportfs_decode_fh_raw() will then try to connect this dentry to the\ndentry tree through reconnect_path(). It may happen for various reasons\n(such as corrupted fs or race with rename) that the call to\nlookup_one_unlocked() in reconnect_one() will fail to find the dentry we\nare trying to reconnect and instead create a new dentry under the\nparent. Now this dentry will not be marked as disconnected although the\nparent still may well be disconnected (at least in case this\ninconsistency happened because the fs is corrupted and .. doesn't point\nto the real parent directory). This creates inconsistency in\ndisconnected flags but AFAICS it was mostly harmless. At least until\ncommit f1ee616214cb (\"VFS: don't keep disconnected dentries on d_anon\")\nwhich removed adding of most disconnected dentries to sb->s_anon list.\nThus after this commit cleanup of disconnected dentries implicitely\nrelies on the fact that dput() will immediately reclaim such dentries.\nHowever when some leaf dentry isn't marked as disconnected, as in the\nscenario described above, the reclaim doesn't happen and the dentries\nare \"leaked\". Memory reclaim can eventually reclaim them but otherwise\nthey stay in memory and if umount comes first, we hit infamous \"Busy\ninodes after unmount\" bug. Make sure all dentries created under a\ndisconnected parent are marked as disconnected as well.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -93895,16 +93895,16 @@
         }
       ],
       "published": "2025-10-30T10:15:34.880",
-      "last_modified": "2026-07-14T13:17:53.013",
-      "fetched_at": "2026-07-29T09:18:12.231Z"
+      "last_modified": "2026-07-30T06:24:11.963",
+      "fetched_at": "2026-08-29T12:52:05.677Z"
     },
     "CVE-2025-40135": {
       "cve_id": "CVE-2025-40135",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: use RCU in ip6_xmit()\n\nUse RCU in ip6_xmit() in order to use dst_dev_rcu() to prevent\npossible UAF.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 8.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -93937,8 +93937,8 @@
         }
       ],
       "published": "2025-11-12T11:15:43.220",
-      "last_modified": "2026-07-14T13:17:53.180",
-      "fetched_at": "2026-07-29T09:18:19.121Z"
+      "last_modified": "2026-07-30T06:24:13.067",
+      "fetched_at": "2026-08-29T12:52:12.288Z"
     },
     "CVE-2025-40149": {
       "cve_id": "CVE-2025-40149",
@@ -93993,8 +93993,8 @@
         }
       ],
       "published": "2025-11-12T11:15:44.817",
-      "last_modified": "2026-07-14T13:17:53.327",
-      "fetched_at": "2026-07-29T09:18:25.707Z"
+      "last_modified": "2026-07-30T06:24:13.833",
+      "fetched_at": "2026-08-29T12:52:18.922Z"
     },
     "CVE-2025-40219": {
       "cve_id": "CVE-2025-40219",
@@ -94040,7 +94040,7 @@
       ],
       "published": "2025-12-04T15:15:57.790",
       "last_modified": "2026-07-14T13:17:53.473",
-      "fetched_at": "2026-07-29T09:18:32.407Z"
+      "fetched_at": "2026-08-29T12:52:25.626Z"
     },
     "CVE-2025-61984": {
       "cve_id": "CVE-2025-61984",
@@ -94088,7 +94088,7 @@
       ],
       "published": "2025-10-06T19:15:36.157",
       "last_modified": "2026-07-14T13:17:56.850",
-      "fetched_at": "2026-07-29T09:18:39.212Z"
+      "fetched_at": "2026-08-29T12:52:32.492Z"
     },
     "CVE-2025-61985": {
       "cve_id": "CVE-2025-61985",
@@ -94120,15 +94120,15 @@
       ],
       "published": "2025-10-06T19:15:36.357",
       "last_modified": "2026-07-14T13:17:57.047",
-      "fetched_at": "2026-07-29T09:18:45.789Z"
+      "fetched_at": "2026-08-29T12:52:39.180Z"
     },
     "CVE-2025-68206": {
       "cve_id": "CVE-2025-68206",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nft_ct: add seqadj extension for natted connections\n\nSequence adjustment may be required for FTP traffic with PASV/EPSV modes.\ndue to need to re-write packet payload (IP, port) on the ftp control\nconnection. This can require changes to the TCP length and expected\nseq / ack_seq.\n\nThe easiest way to reproduce this issue is with PASV mode.\nExample ruleset:\ntable inet ftp_nat {\n        ct helper ftp_helper {\n                type \"ftp\" protocol tcp\n                l3proto inet\n        }\n\n        chain prerouting {\n                type filter hook prerouting priority 0; policy accept;\n                tcp dport 21 ct state new ct helper set \"ftp_helper\"\n        }\n}\ntable ip nat {\n        chain prerouting {\n                type nat hook prerouting priority -100; policy accept;\n                tcp dport 21 dnat ip prefix to ip daddr map {\n\t\t\t192.168.100.1 : 192.168.13.2/32 }\n        }\n\n        chain postrouting {\n                type nat hook postrouting priority 100 ; policy accept;\n                tcp sport 21 snat ip prefix to ip saddr map {\n\t\t\t192.168.13.2 : 192.168.100.1/32 }\n        }\n}\n\nNote that the ftp helper gets assigned *after* the dnat setup.\n\nThe inverse (nat after helper assign) is handled by an existing\ncheck in nf_nat_setup_info() and will not show the problem.\n\nTopoloy:\n\n +-------------------+     +----------------------------------+\n | FTP: 192.168.13.2 | <-> | NAT: 192.168.13.3, 192.168.100.1 |\n +-------------------+     +----------------------------------+\n                                      |\n                         +-----------------------+\n                         | Client: 192.168.100.2 |\n                         +-----------------------+\n\nftp nat changes do not work as expected in this case:\nConnected to 192.168.100.1.\n[..]\nftp> epsv\nEPSV/EPRT on IPv4 off.\nftp> ls\n227 Entering passive mode (192,168,100,1,209,129).\n421 Service not available, remote server has closed connection.\n\nKernel logs:\nMissing nfct_seqadj_ext_add() setup call\nWARNING: CPU: 1 PID: 0 at net/netfilter/nf_conntrack_seqadj.c:41\n[..]\n __nf_nat_mangle_tcp_packet+0x100/0x160 [nf_nat]\n nf_nat_ftp+0x142/0x280 [nf_nat_ftp]\n help+0x4d1/0x880 [nf_conntrack_ftp]\n nf_confirm+0x122/0x2e0 [nf_conntrack]\n nf_hook_slow+0x3c/0xb0\n ..\n\nFix this by adding the required extension when a conntrack helper is assigned\nto a connection that has a nat binding.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -94165,16 +94165,16 @@
         }
       ],
       "published": "2025-12-16T14:15:53.487",
-      "last_modified": "2026-07-14T13:17:57.447",
-      "fetched_at": "2026-07-29T09:18:52.521Z"
+      "last_modified": "2026-07-30T06:24:33.213",
+      "fetched_at": "2026-08-29T12:52:45.806Z"
     },
     "CVE-2025-68261": {
       "cve_id": "CVE-2025-68261",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\next4: add i_data_sem protection in ext4_destroy_inline_data_nolock()\n\nFix a race between inline data destruction and block mapping.\n\nThe function ext4_destroy_inline_data_nolock() changes the inode data\nlayout by clearing EXT4_INODE_INLINE_DATA and setting EXT4_INODE_EXTENTS.\nAt the same time, another thread may execute ext4_map_blocks(), which\ntests EXT4_INODE_EXTENTS to decide whether to call ext4_ext_map_blocks()\nor ext4_ind_map_blocks().\n\nWithout i_data_sem protection, ext4_ind_map_blocks() may receive inode\nwith EXT4_INODE_EXTENTS flag and triggering assert.\n\nkernel BUG at fs/ext4/indirect.c:546!\nEXT4-fs (loop2): unmounting filesystem.\ninvalid opcode: 0000 [#1] PREEMPT SMP KASAN NOPTI\nHardware name: QEMU Standard PC (i440FX + PIIX, 1996), BIOS 1.12.0-1 04/01/2014\nRIP: 0010:ext4_ind_map_blocks.cold+0x2b/0x5a fs/ext4/indirect.c:546\n\nCall Trace:\n <TASK>\n ext4_map_blocks+0xb9b/0x16f0 fs/ext4/inode.c:681\n _ext4_get_block+0x242/0x590 fs/ext4/inode.c:822\n ext4_block_write_begin+0x48b/0x12c0 fs/ext4/inode.c:1124\n ext4_write_begin+0x598/0xef0 fs/ext4/inode.c:1255\n ext4_da_write_begin+0x21e/0x9c0 fs/ext4/inode.c:3000\n generic_perform_write+0x259/0x5d0 mm/filemap.c:3846\n ext4_buffered_write_iter+0x15b/0x470 fs/ext4/file.c:285\n ext4_file_write_iter+0x8e0/0x17f0 fs/ext4/file.c:679\n call_write_iter include/linux/fs.h:2271 [inline]\n do_iter_readv_writev+0x212/0x3c0 fs/read_write.c:735\n do_iter_write+0x186/0x710 fs/read_write.c:861\n vfs_iter_write+0x70/0xa0 fs/read_write.c:902\n iter_file_splice_write+0x73b/0xc90 fs/splice.c:685\n do_splice_from fs/splice.c:763 [inline]\n direct_splice_actor+0x10f/0x170 fs/splice.c:950\n splice_direct_to_actor+0x33a/0xa10 fs/splice.c:896\n do_splice_direct+0x1a9/0x280 fs/splice.c:1002\n do_sendfile+0xb13/0x12c0 fs/read_write.c:1255\n __do_sys_sendfile64 fs/read_write.c:1323 [inline]\n __se_sys_sendfile64 fs/read_write.c:1309 [inline]\n __x64_sys_sendfile64+0x1cf/0x210 fs/read_write.c:1309\n do_syscall_x64 arch/x86/entry/common.c:51 [inline]\n do_syscall_64+0x35/0x80 arch/x86/entry/common.c:81\n entry_SYSCALL_64_after_hwframe+0x6e/0xd8",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -94211,8 +94211,8 @@
         }
       ],
       "published": "2025-12-16T15:15:55.547",
-      "last_modified": "2026-07-14T13:17:57.627",
-      "fetched_at": "2026-07-29T09:18:59.402Z"
+      "last_modified": "2026-07-30T06:24:35.443",
+      "fetched_at": "2026-08-29T12:52:52.503Z"
     },
     "CVE-2025-68264": {
       "cve_id": "CVE-2025-68264",
@@ -94258,15 +94258,15 @@
       ],
       "published": "2025-12-16T15:15:55.920",
       "last_modified": "2026-07-14T13:17:57.820",
-      "fetched_at": "2026-07-29T09:19:05.999Z"
+      "fetched_at": "2026-08-29T12:52:59.167Z"
     },
     "CVE-2025-68265": {
       "cve_id": "CVE-2025-68265",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnvme: fix admin request_queue lifetime\n\nThe namespaces can access the controller's admin request_queue, and\nstale references on the namespaces may exist after tearing down the\ncontroller. Ensure the admin request_queue is active by moving the\ncontroller's 'put' to after all controller references have been released\nto ensure no one is can access the request_queue. This fixes a reported\nuse-after-free bug:\n\n  BUG: KASAN: slab-use-after-free in blk_queue_enter+0x41c/0x4a0\n  Read of size 8 at addr ffff88c0a53819f8 by task nvme/3287\n  CPU: 67 UID: 0 PID: 3287 Comm: nvme Tainted: G            E       6.13.2-ga1582f1a031e #15\n  Tainted: [E]=UNSIGNED_MODULE\n  Hardware name: Jabil /EGS 2S MB1, BIOS 1.00 06/18/2025\n  Call Trace:\n   <TASK>\n   dump_stack_lvl+0x4f/0x60\n   print_report+0xc4/0x620\n   ? _raw_spin_lock_irqsave+0x70/0xb0\n   ? _raw_read_unlock_irqrestore+0x30/0x30\n   ? blk_queue_enter+0x41c/0x4a0\n   kasan_report+0xab/0xe0\n   ? blk_queue_enter+0x41c/0x4a0\n   blk_queue_enter+0x41c/0x4a0\n   ? __irq_work_queue_local+0x75/0x1d0\n   ? blk_queue_start_drain+0x70/0x70\n   ? irq_work_queue+0x18/0x20\n   ? vprintk_emit.part.0+0x1cc/0x350\n   ? wake_up_klogd_work_func+0x60/0x60\n   blk_mq_alloc_request+0x2b7/0x6b0\n   ? __blk_mq_alloc_requests+0x1060/0x1060\n   ? __switch_to+0x5b7/0x1060\n   nvme_submit_user_cmd+0xa9/0x330\n   nvme_user_cmd.isra.0+0x240/0x3f0\n   ? force_sigsegv+0xe0/0xe0\n   ? nvme_user_cmd64+0x400/0x400\n   ? vfs_fileattr_set+0x9b0/0x9b0\n   ? cgroup_update_frozen_flag+0x24/0x1c0\n   ? cgroup_leave_frozen+0x204/0x330\n   ? nvme_ioctl+0x7c/0x2c0\n   blkdev_ioctl+0x1a8/0x4d0\n   ? blkdev_common_ioctl+0x1930/0x1930\n   ? fdget+0x54/0x380\n   __x64_sys_ioctl+0x129/0x190\n   do_syscall_64+0x5b/0x160\n   entry_SYSCALL_64_after_hwframe+0x4b/0x53\n  RIP: 0033:0x7f765f703b0b\n  Code: ff ff ff 85 c0 79 9b 49 c7 c4 ff ff ff ff 5b 5d 4c 89 e0 41 5c c3 66 0f 1f 84 00 00 00 00 00 f3 0f 1e fa b8 10 00 00 00 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d dd 52 0f 00 f7 d8 64 89 01 48\n  RSP: 002b:00007ffe2cefe808 EFLAGS: 00000202 ORIG_RAX: 0000000000000010\n  RAX: ffffffffffffffda RBX: 00007ffe2cefe860 RCX: 00007f765f703b0b\n  RDX: 00007ffe2cefe860 RSI: 00000000c0484e41 RDI: 0000000000000003\n  RBP: 0000000000000000 R08: 0000000000000003 R09: 0000000000000000\n  R10: 00007f765f611d50 R11: 0000000000000202 R12: 0000000000000003\n  R13: 00000000c0484e41 R14: 0000000000000001 R15: 00007ffe2cefea60\n   </TASK>",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -94299,8 +94299,8 @@
         }
       ],
       "published": "2025-12-16T15:15:56.030",
-      "last_modified": "2026-07-14T13:17:57.997",
-      "fetched_at": "2026-07-29T09:19:12.754Z"
+      "last_modified": "2026-07-30T06:24:35.927",
+      "fetched_at": "2026-08-29T12:53:06.090Z"
     },
     "CVE-2025-68266": {
       "cve_id": "CVE-2025-68266",
@@ -94346,7 +94346,7 @@
       ],
       "published": "2025-12-16T15:15:56.140",
       "last_modified": "2026-07-14T13:17:58.153",
-      "fetched_at": "2026-07-29T09:19:19.428Z"
+      "fetched_at": "2026-08-29T12:53:12.805Z"
     },
     "CVE-2025-68291": {
       "cve_id": "CVE-2025-68291",
@@ -94384,15 +94384,15 @@
       ],
       "published": "2025-12-16T16:16:07.980",
       "last_modified": "2026-07-14T13:17:58.293",
-      "fetched_at": "2026-07-29T09:19:26.468Z"
+      "fetched_at": "2026-08-29T12:53:19.425Z"
     },
     "CVE-2025-68337": {
       "cve_id": "CVE-2025-68337",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\njbd2: avoid bug_on in jbd2_journal_get_create_access() when file system corrupted\n\nThere's issue when file system corrupted:\n------------[ cut here ]------------\nkernel BUG at fs/jbd2/transaction.c:1289!\nOops: invalid opcode: 0000 [#1] SMP KASAN PTI\nCPU: 5 UID: 0 PID: 2031 Comm: mkdir Not tainted 6.18.0-rc1-next\nRIP: 0010:jbd2_journal_get_create_access+0x3b6/0x4d0\nRSP: 0018:ffff888117aafa30 EFLAGS: 00010202\nRAX: 0000000000000000 RBX: ffff88811a86b000 RCX: ffffffff89a63534\nRDX: 1ffff110200ec602 RSI: 0000000000000004 RDI: ffff888100763010\nRBP: ffff888100763000 R08: 0000000000000001 R09: ffff888100763028\nR10: 0000000000000003 R11: 0000000000000000 R12: 0000000000000000\nR13: ffff88812c432000 R14: ffff88812c608000 R15: ffff888120bfc000\nCS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\nCR2: 00007f91d6970c99 CR3: 00000001159c4000 CR4: 00000000000006f0\nCall Trace:\n <TASK>\n __ext4_journal_get_create_access+0x42/0x170\n ext4_getblk+0x319/0x6f0\n ext4_bread+0x11/0x100\n ext4_append+0x1e6/0x4a0\n ext4_init_new_dir+0x145/0x1d0\n ext4_mkdir+0x326/0x920\n vfs_mkdir+0x45c/0x740\n do_mkdirat+0x234/0x2f0\n __x64_sys_mkdir+0xd6/0x120\n do_syscall_64+0x5f/0xfa0\n entry_SYSCALL_64_after_hwframe+0x76/0x7e\n\nThe above issue occurs with us in errors=continue mode when accompanied by\nstorage failures. There have been many inconsistencies in the file system\ndata.\nIn the case of file system data inconsistency, for example, if the block\nbitmap of a referenced block is not set, it can lead to the situation where\na block being committed is allocated and used again. As a result, the\nfollowing condition will not be satisfied then trigger BUG_ON. Of course,\nit is entirely possible to construct a problematic image that can trigger\nthis BUG_ON through specific operations. In fact, I have constructed such\nan image and easily reproduced this issue.\nTherefore, J_ASSERT() holds true only under ideal conditions, but it may\nnot necessarily be satisfied in exceptional scenarios. Using J_ASSERT()\ndirectly in abnormal situations would cause the system to crash, which is\nclearly not what we want. So here we directly trigger a JBD abort instead\nof immediately invoking BUG_ON.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -94429,16 +94429,16 @@
         }
       ],
       "published": "2025-12-22T17:16:01.463",
-      "last_modified": "2026-07-14T13:17:58.437",
-      "fetched_at": "2026-07-29T09:19:33.069Z"
+      "last_modified": "2026-07-30T06:24:38.643",
+      "fetched_at": "2026-08-29T12:53:26.052Z"
     },
     "CVE-2025-68349": {
       "cve_id": "CVE-2025-68349",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSv4/pNFS: Clear NFS_INO_LAYOUTCOMMIT in pnfs_mark_layout_stateid_invalid\n\nFixes a crash when layout is null during this call stack:\n\nwrite_inode\n    -> nfs4_write_inode\n        -> pnfs_layoutcommit_inode\n\npnfs_set_layoutcommit relies on the lseg refcount to keep the layout\naround. Need to clear NFS_INO_LAYOUTCOMMIT otherwise we might attempt\nto reference a null layout.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -94475,8 +94475,8 @@
         }
       ],
       "published": "2025-12-24T11:15:58.247",
-      "last_modified": "2026-07-14T13:17:58.623",
-      "fetched_at": "2026-07-29T09:19:39.868Z"
+      "last_modified": "2026-07-30T06:24:39.560",
+      "fetched_at": "2026-08-29T12:53:32.670Z"
     },
     "CVE-2025-68363": {
       "cve_id": "CVE-2025-68363",
@@ -94518,7 +94518,7 @@
       ],
       "published": "2025-12-24T11:15:59.720",
       "last_modified": "2026-07-14T13:17:58.780",
-      "fetched_at": "2026-07-29T09:19:46.581Z"
+      "fetched_at": "2026-08-29T12:53:39.367Z"
     },
     "CVE-2025-68371": {
       "cve_id": "CVE-2025-68371",
@@ -94560,15 +94560,15 @@
       ],
       "published": "2025-12-24T11:16:00.673",
       "last_modified": "2026-07-14T13:17:58.913",
-      "fetched_at": "2026-07-29T09:19:53.275Z"
+      "fetched_at": "2026-08-29T12:53:45.989Z"
     },
     "CVE-2025-68724": {
       "cve_id": "CVE-2025-68724",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: asymmetric_keys - prevent overflow in asymmetric_key_generate_id\n\nUse check_add_overflow() to guard against potential integer overflows\nwhen adding the binary blob lengths and the size of an asymmetric_key_id\nstructure and return ERR_PTR(-EOVERFLOW) accordingly. This prevents a\npossible buffer overflow when copying data from potentially malicious\nX.509 certificate fields that can be arbitrarily large, such as ASN.1\nINTEGER serial numbers, issuer names, etc.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -94605,8 +94605,8 @@
         }
       ],
       "published": "2025-12-24T11:16:01.697",
-      "last_modified": "2026-07-14T13:17:59.057",
-      "fetched_at": "2026-07-29T09:19:59.860Z"
+      "last_modified": "2026-07-30T06:24:40.883",
+      "fetched_at": "2026-08-29T12:53:52.600Z"
     },
     "CVE-2025-68725": {
       "cve_id": "CVE-2025-68725",
@@ -94666,7 +94666,7 @@
       ],
       "published": "2025-12-24T11:16:01.797",
       "last_modified": "2026-07-14T13:17:59.207",
-      "fetched_at": "2026-07-29T09:20:06.438Z"
+      "fetched_at": "2026-08-29T12:53:59.218Z"
     },
     "CVE-2025-68742": {
       "cve_id": "CVE-2025-68742",
@@ -94708,15 +94708,15 @@
       ],
       "published": "2025-12-24T13:16:29.147",
       "last_modified": "2026-07-14T13:17:59.387",
-      "fetched_at": "2026-07-29T09:20:13.263Z"
+      "fetched_at": "2026-08-29T12:54:05.827Z"
     },
     "CVE-2025-68764": {
       "cve_id": "CVE-2025-68764",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFS: Automounted filesystems should inherit ro,noexec,nodev,sync flags\n\nWhen a filesystem is being automounted, it needs to preserve the\nuser-set superblock mount options, such as the \"ro\" flag.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -94753,8 +94753,8 @@
         }
       ],
       "published": "2026-01-05T10:15:57.587",
-      "last_modified": "2026-07-14T13:17:59.540",
-      "fetched_at": "2026-07-29T09:20:20.005Z"
+      "last_modified": "2026-07-30T06:24:42.957",
+      "fetched_at": "2026-08-29T12:54:12.503Z"
     },
     "CVE-2025-68773": {
       "cve_id": "CVE-2025-68773",
@@ -94800,7 +94800,7 @@
       ],
       "published": "2026-01-13T16:15:56.840",
       "last_modified": "2026-07-14T13:17:59.697",
-      "fetched_at": "2026-07-29T09:20:26.615Z"
+      "fetched_at": "2026-08-29T12:54:19.112Z"
     },
     "CVE-2025-68776": {
       "cve_id": "CVE-2025-68776",
@@ -94846,15 +94846,15 @@
       ],
       "published": "2026-01-13T16:15:57.193",
       "last_modified": "2026-07-14T13:17:59.863",
-      "fetched_at": "2026-07-29T09:20:33.199Z"
+      "fetched_at": "2026-08-29T12:54:25.738Z"
     },
     "CVE-2025-68782": {
       "cve_id": "CVE-2025-68782",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: target: Reset t_task_cdb pointer in error case\n\nIf allocation of cmd->t_task_cdb fails, it remains NULL but is later\ndereferenced in the 'err' path.\n\nIn case of error, reset NULL t_task_cdb value to point at the default\nfixed-size buffer.\n\nFound by Linux Verification Center (linuxtesting.org) with SVACE.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -94891,8 +94891,8 @@
         }
       ],
       "published": "2026-01-13T16:15:57.890",
-      "last_modified": "2026-07-14T13:18:00.050",
-      "fetched_at": "2026-07-29T09:20:39.900Z"
+      "last_modified": "2026-07-30T06:24:43.807",
+      "fetched_at": "2026-08-29T12:54:32.367Z"
     },
     "CVE-2025-68787": {
       "cve_id": "CVE-2025-68787",
@@ -94938,7 +94938,7 @@
       ],
       "published": "2026-01-13T16:15:58.497",
       "last_modified": "2026-07-14T13:18:00.207",
-      "fetched_at": "2026-07-29T09:20:46.447Z"
+      "fetched_at": "2026-08-29T12:54:38.988Z"
     },
     "CVE-2025-68788": {
       "cve_id": "CVE-2025-68788",
@@ -94984,7 +94984,7 @@
       ],
       "published": "2026-01-13T16:15:58.623",
       "last_modified": "2026-07-14T13:18:00.363",
-      "fetched_at": "2026-07-29T09:20:53.166Z"
+      "fetched_at": "2026-08-29T12:54:45.619Z"
     },
     "CVE-2025-68798": {
       "cve_id": "CVE-2025-68798",
@@ -95022,15 +95022,15 @@
       ],
       "published": "2026-01-13T16:16:01.770",
       "last_modified": "2026-07-14T13:18:00.523",
-      "fetched_at": "2026-07-29T09:20:59.938Z"
+      "fetched_at": "2026-08-29T12:54:52.239Z"
     },
     "CVE-2025-68803": {
       "cve_id": "CVE-2025-68803",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nNFSD: NFSv4 file creation neglects setting ACL\n\nAn NFSv4 client that sets an ACL with a named principal during file\ncreation retrieves the ACL afterwards, and finds that it is only a\ndefault ACL (based on the mode bits) and not the ACL that was\nrequested during file creation. This violates RFC 8881 section\n6.4.1.3: \"the ACL attribute is set as given\".\n\nThe issue occurs in nfsd_create_setattr(), which calls\nnfsd_attrs_valid() to determine whether to call nfsd_setattr().\nHowever, nfsd_attrs_valid() checks only for iattr changes and\nsecurity labels, but not POSIX ACLs. When only an ACL is present,\nthe function returns false, nfsd_setattr() is skipped, and the\nPOSIX ACL is never applied to the inode.\n\nSubsequently, when the client retrieves the ACL, the server finds\nno POSIX ACL on the inode and returns one generated from the file's\nmode bits rather than returning the originally-specified ACL.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -95067,8 +95067,8 @@
         }
       ],
       "published": "2026-01-13T16:16:02.377",
-      "last_modified": "2026-07-14T13:18:00.667",
-      "fetched_at": "2026-07-29T09:21:06.655Z"
+      "last_modified": "2026-07-30T06:24:46.040",
+      "fetched_at": "2026-08-29T12:54:59.240Z"
     },
     "CVE-2025-68814": {
       "cve_id": "CVE-2025-68814",
@@ -95110,7 +95110,7 @@
       ],
       "published": "2026-01-13T16:16:03.643",
       "last_modified": "2026-07-14T13:18:00.810",
-      "fetched_at": "2026-07-29T09:21:13.233Z"
+      "fetched_at": "2026-08-29T12:55:05.862Z"
     },
     "CVE-2025-68816": {
       "cve_id": "CVE-2025-68816",
@@ -95156,15 +95156,15 @@
       ],
       "published": "2026-01-13T16:16:03.870",
       "last_modified": "2026-07-14T13:18:00.943",
-      "fetched_at": "2026-07-29T09:21:19.964Z"
+      "fetched_at": "2026-08-29T12:55:12.469Z"
     },
     "CVE-2025-68818": {
       "cve_id": "CVE-2025-68818",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nscsi: Revert \"scsi: qla2xxx: Perform lockless command completion in abort path\"\n\nThis reverts commit 0367076b0817d5c75dfb83001ce7ce5c64d803a9.\n\nThe commit being reverted added code to __qla2x00_abort_all_cmds() to\ncall sp->done() without holding a spinlock.  But unlike the older code\nbelow it, this new code failed to check sp->cmd_type and just assumed\nTYPE_SRB, which results in a jump to an invalid pointer in target-mode\nwith TYPE_TGT_CMD:\n\nqla2xxx [0000:65:00.0]-d034:8: qla24xx_do_nack_work create sess success\n  0000000009f7a79b\nqla2xxx [0000:65:00.0]-5003:8: ISP System Error - mbx1=1ff5h mbx2=10h\n  mbx3=0h mbx4=0h mbx5=191h mbx6=0h mbx7=0h.\nqla2xxx [0000:65:00.0]-d01e:8: -> fwdump no buffer\nqla2xxx [0000:65:00.0]-f03a:8: qla_target(0): System error async event\n  0x8002 occurred\nqla2xxx [0000:65:00.0]-00af:8: Performing ISP error recovery -\n  ha=0000000058183fda.\nBUG: kernel NULL pointer dereference, address: 0000000000000000\nPF: supervisor instruction fetch in kernel mode\nPF: error_code(0x0010) - not-present page\nPGD 0 P4D 0\nOops: 0010 [#1] SMP\nCPU: 2 PID: 9446 Comm: qla2xxx_8_dpc Tainted: G           O       6.1.133 #1\nHardware name: Supermicro Super Server/X11SPL-F, BIOS 4.2 12/15/2023\nRIP: 0010:0x0\nCode: Unable to access opcode bytes at 0xffffffffffffffd6.\nRSP: 0018:ffffc90001f93dc8 EFLAGS: 00010206\nRAX: 0000000000000282 RBX: 0000000000000355 RCX: ffff88810d16a000\nRDX: ffff88810dbadaa8 RSI: 0000000000080000 RDI: ffff888169dc38c0\nRBP: ffff888169dc38c0 R08: 0000000000000001 R09: 0000000000000045\nR10: ffffffffa034bdf0 R11: 0000000000000000 R12: ffff88810800bb40\nR13: 0000000000001aa8 R14: ffff888100136610 R15: ffff8881070f7400\nFS:  0000000000000000(0000) GS:ffff88bf80080000(0000) knlGS:0000000000000000\nCS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033\nCR2: ffffffffffffffd6 CR3: 000000010c8ff006 CR4: 00000000003706e0\nDR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000\nDR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400\nCall Trace:\n <TASK>\n ? __die+0x4d/0x8b\n ? page_fault_oops+0x91/0x180\n ? trace_buffer_unlock_commit_regs+0x38/0x1a0\n ? exc_page_fault+0x391/0x5e0\n ? asm_exc_page_fault+0x22/0x30\n __qla2x00_abort_all_cmds+0xcb/0x3e0 [qla2xxx_scst]\n qla2x00_abort_all_cmds+0x50/0x70 [qla2xxx_scst]\n qla2x00_abort_isp_cleanup+0x3b7/0x4b0 [qla2xxx_scst]\n qla2x00_abort_isp+0xfd/0x860 [qla2xxx_scst]\n qla2x00_do_dpc+0x581/0xa40 [qla2xxx_scst]\n kthread+0xa8/0xd0\n </TASK>\n\nThen commit 4475afa2646d (\"scsi: qla2xxx: Complete command early within\nlock\") added the spinlock back, because not having the lock caused a\nrace and a crash.  But qla2x00_abort_srb() in the switch below already\nchecks for qla2x00_chip_is_down() and handles it the same way, so the\ncode above the switch is now redundant and still buggy in target-mode.\nRemove it.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 8.8,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [],
       "references": [
         {
@@ -95201,8 +95201,8 @@
         }
       ],
       "published": "2026-01-13T16:16:04.097",
-      "last_modified": "2026-07-14T13:18:01.110",
-      "fetched_at": "2026-07-29T09:21:26.594Z"
+      "last_modified": "2026-07-30T06:24:47.387",
+      "fetched_at": "2026-08-29T12:55:19.215Z"
     },
     "CVE-2025-68820": {
       "cve_id": "CVE-2025-68820",
@@ -95248,7 +95248,7 @@
       ],
       "published": "2026-01-13T16:16:04.327",
       "last_modified": "2026-07-14T13:18:01.283",
-      "fetched_at": "2026-07-29T09:21:33.274Z"
+      "fetched_at": "2026-08-29T12:55:25.843Z"
     },
     "CVE-2025-71064": {
       "cve_id": "CVE-2025-71064",
@@ -95294,7 +95294,7 @@
       ],
       "published": "2026-01-13T16:16:05.740",
       "last_modified": "2026-07-14T13:18:01.570",
-      "fetched_at": "2026-07-29T09:21:39.916Z"
+      "fetched_at": "2026-08-29T12:55:32.566Z"
     },
     "CVE-2025-71075": {
       "cve_id": "CVE-2025-71075",
@@ -95356,7 +95356,7 @@
       ],
       "published": "2026-01-13T16:16:06.977",
       "last_modified": "2026-07-14T13:18:01.710",
-      "fetched_at": "2026-07-29T09:21:46.505Z"
+      "fetched_at": "2026-08-29T12:55:39.190Z"
     },
     "CVE-2025-71079": {
       "cve_id": "CVE-2025-71079",
@@ -95418,15 +95418,15 @@
       ],
       "published": "2026-01-13T16:16:07.433",
       "last_modified": "2026-07-14T13:18:01.890",
-      "fetched_at": "2026-07-29T09:21:53.278Z"
+      "fetched_at": "2026-08-29T12:55:45.972Z"
     },
     "CVE-2025-71085": {
       "cve_id": "CVE-2025-71085",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: BUG() in pskb_expand_head() as part of calipso_skbuff_setattr()\n\nThere exists a kernel oops caused by a BUG_ON(nhead < 0) at\nnet/core/skbuff.c:2232 in pskb_expand_head().\nThis bug is triggered as part of the calipso_skbuff_setattr()\nroutine when skb_cow() is passed headroom > INT_MAX\n(i.e. (int)(skb_headroom(skb) + len_delta) < 0).\n\nThe root cause of the bug is due to an implicit integer cast in\n__skb_cow(). The check (headroom > skb_headroom(skb)) is meant to ensure\nthat delta = headroom - skb_headroom(skb) is never negative, otherwise\nwe will trigger a BUG_ON in pskb_expand_head(). However, if\nheadroom > INT_MAX and delta <= -NET_SKB_PAD, the check passes, delta\nbecomes negative, and pskb_expand_head() is passed a negative value for\nnhead.\n\nFix the trigger condition in calipso_skbuff_setattr(). Avoid passing\n\"negative\" headroom sizes to skb_cow() within calipso_skbuff_setattr()\nby only using skb_cow() to grow headroom.\n\nPoC:\n\tUsing `netlabelctl` tool:\n\n        netlabelctl map del default\n        netlabelctl calipso add pass doi:7\n        netlabelctl map add default address:0::1/128 protocol:calipso,7\n\n        Then run the following PoC:\n\n        int fd = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP);\n\n        // setup msghdr\n        int cmsg_size = 2;\n        int cmsg_len = 0x60;\n        struct msghdr msg;\n        struct sockaddr_in6 dest_addr;\n        struct cmsghdr * cmsg = (struct cmsghdr *) calloc(1,\n                        sizeof(struct cmsghdr) + cmsg_len);\n        msg.msg_name = &dest_addr;\n        msg.msg_namelen = sizeof(dest_addr);\n        msg.msg_iov = NULL;\n        msg.msg_iovlen = 0;\n        msg.msg_control = cmsg;\n        msg.msg_controllen = cmsg_len;\n        msg.msg_flags = 0;\n\n        // setup sockaddr\n        dest_addr.sin6_family = AF_INET6;\n        dest_addr.sin6_port = htons(31337);\n        dest_addr.sin6_flowinfo = htonl(31337);\n        dest_addr.sin6_addr = in6addr_loopback;\n        dest_addr.sin6_scope_id = 31337;\n\n        // setup cmsghdr\n        cmsg->cmsg_len = cmsg_len;\n        cmsg->cmsg_level = IPPROTO_IPV6;\n        cmsg->cmsg_type = IPV6_HOPOPTS;\n        char * hop_hdr = (char *)cmsg + sizeof(struct cmsghdr);\n        hop_hdr[1] = 0x9; //set hop size - (0x9 + 1) * 8 = 80\n\n        sendmsg(fd, &msg, 0);",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-617"
       ],
@@ -95479,8 +95479,8 @@
         }
       ],
       "published": "2026-01-13T16:16:08.117",
-      "last_modified": "2026-07-14T13:18:02.087",
-      "fetched_at": "2026-07-29T09:21:59.892Z"
+      "last_modified": "2026-07-30T06:24:49.783",
+      "fetched_at": "2026-08-29T12:55:52.667Z"
     },
     "CVE-2025-71086": {
       "cve_id": "CVE-2025-71086",
@@ -95542,7 +95542,7 @@
       ],
       "published": "2026-01-13T16:16:08.230",
       "last_modified": "2026-07-14T13:18:02.280",
-      "fetched_at": "2026-07-29T09:22:07.007Z"
+      "fetched_at": "2026-08-29T12:55:59.413Z"
     },
     "CVE-2025-71088": {
       "cve_id": "CVE-2025-71088",
@@ -95590,15 +95590,15 @@
       ],
       "published": "2026-01-13T16:16:08.460",
       "last_modified": "2026-07-14T13:18:02.440",
-      "fetched_at": "2026-07-29T09:22:13.751Z"
+      "fetched_at": "2026-08-29T12:56:06.114Z"
     },
     "CVE-2025-71095": {
       "cve_id": "CVE-2025-71095",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: stmmac: fix the crash issue for zero copy XDP_TX action\n\nThere is a crash issue when running zero copy XDP_TX action, the crash\nlog is shown below.\n\n[  216.122464] Unable to handle kernel paging request at virtual address fffeffff80000000\n[  216.187524] Internal error: Oops: 0000000096000144 [#1]  SMP\n[  216.301694] Call trace:\n[  216.304130]  dcache_clean_poc+0x20/0x38 (P)\n[  216.308308]  __dma_sync_single_for_device+0x1bc/0x1e0\n[  216.313351]  stmmac_xdp_xmit_xdpf+0x354/0x400\n[  216.317701]  __stmmac_xdp_run_prog+0x164/0x368\n[  216.322139]  stmmac_napi_poll_rxtx+0xba8/0xf00\n[  216.326576]  __napi_poll+0x40/0x218\n[  216.408054] Kernel panic - not syncing: Oops: Fatal exception in interrupt\n\nFor XDP_TX action, the xdp_buff is converted to xdp_frame by\nxdp_convert_buff_to_frame(). The memory type of the resulting xdp_frame\ndepends on the memory type of the xdp_buff. For page pool based xdp_buff\nit produces xdp_frame with memory type MEM_TYPE_PAGE_POOL. For zero copy\nXSK pool based xdp_buff it produces xdp_frame with memory type\nMEM_TYPE_PAGE_ORDER0. However, stmmac_xdp_xmit_back() does not check the\nmemory type and always uses the page pool type, this leads to invalid\nmappings and causes the crash. Therefore, check the xdp_buff memory type\nin stmmac_xdp_xmit_back() to fix this issue.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 9.1,
+      "cvss_severity": "critical",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -95637,8 +95637,8 @@
         }
       ],
       "published": "2026-01-13T16:16:09.347",
-      "last_modified": "2026-07-14T13:18:02.610",
-      "fetched_at": "2026-07-29T09:22:20.334Z"
+      "last_modified": "2026-07-30T06:24:50.947",
+      "fetched_at": "2026-08-29T12:56:12.729Z"
     },
     "CVE-2025-71097": {
       "cve_id": "CVE-2025-71097",
@@ -95698,7 +95698,7 @@
       ],
       "published": "2026-01-13T16:16:09.583",
       "last_modified": "2026-07-14T13:18:02.767",
-      "fetched_at": "2026-07-29T09:22:26.999Z"
+      "fetched_at": "2026-08-29T12:56:19.415Z"
     },
     "CVE-2025-71098": {
       "cve_id": "CVE-2025-71098",
@@ -95760,7 +95760,7 @@
       ],
       "published": "2026-01-13T16:16:09.703",
       "last_modified": "2026-07-14T13:18:02.943",
-      "fetched_at": "2026-07-29T09:22:33.759Z"
+      "fetched_at": "2026-08-29T12:56:26.325Z"
     },
     "CVE-2025-71104": {
       "cve_id": "CVE-2025-71104",
@@ -95822,15 +95822,15 @@
       ],
       "published": "2026-01-14T15:15:59.423",
       "last_modified": "2026-07-14T13:18:03.120",
-      "fetched_at": "2026-07-29T09:22:40.348Z"
+      "fetched_at": "2026-08-29T12:56:32.946Z"
     },
     "CVE-2025-71112": {
       "cve_id": "CVE-2025-71112",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: hns3: add VLAN id validation before using\n\nCurrently, the VLAN id may be used without validation when\nreceive a VLAN configuration mailbox from VF. The length of\nvlan_del_fail_bmap is BITS_TO_LONGS(VLAN_N_VID). It may cause\nout-of-bounds memory access once the VLAN id is bigger than\nor equal to VLAN_N_VID.\n\nTherefore, VLAN id needs to be checked to ensure it is within\nthe range of VLAN_N_VID.",
       "cvss_version": "3.1",
-      "cvss_score": 7.1,
+      "cvss_score": 8.8,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
       "cwes": [
         "CWE-125"
       ],
@@ -95883,8 +95883,8 @@
         }
       ],
       "published": "2026-01-14T15:16:00.313",
-      "last_modified": "2026-07-14T13:18:03.337",
-      "fetched_at": "2026-07-29T09:22:46.942Z"
+      "last_modified": "2026-07-30T06:24:51.537",
+      "fetched_at": "2026-08-29T12:56:39.562Z"
     },
     "CVE-2025-71113": {
       "cve_id": "CVE-2025-71113",
@@ -95946,7 +95946,7 @@
       ],
       "published": "2026-01-14T15:16:00.433",
       "last_modified": "2026-07-14T13:18:03.480",
-      "fetched_at": "2026-07-29T09:22:53.622Z"
+      "fetched_at": "2026-08-29T12:56:46.301Z"
     },
     "CVE-2025-71114": {
       "cve_id": "CVE-2025-71114",
@@ -96008,15 +96008,15 @@
       ],
       "published": "2026-01-14T15:16:01.063",
       "last_modified": "2026-07-14T13:18:03.650",
-      "fetched_at": "2026-07-29T09:23:00.382Z"
+      "fetched_at": "2026-08-29T12:56:52.940Z"
     },
     "CVE-2025-71120": {
       "cve_id": "CVE-2025-71120",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nSUNRPC: svcauth_gss: avoid NULL deref on zero length gss_token in gss_read_proxy_verf\n\nA zero length gss_token results in pages == 0 and in_token->pages[0]\nis NULL. The code unconditionally evaluates\npage_address(in_token->pages[0]) for the initial memcpy, which can\ndereference NULL even when the copy length is 0. Guard the first\nmemcpy so it only runs when length > 0.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-476"
       ],
@@ -96069,8 +96069,8 @@
         }
       ],
       "published": "2026-01-14T15:16:01.690",
-      "last_modified": "2026-07-14T13:18:03.810",
-      "fetched_at": "2026-07-29T09:23:07.394Z"
+      "last_modified": "2026-07-30T06:24:52.050",
+      "fetched_at": "2026-08-29T12:56:59.557Z"
     },
     "CVE-2025-71123": {
       "cve_id": "CVE-2025-71123",
@@ -96124,15 +96124,15 @@
       ],
       "published": "2026-01-14T15:16:02.000",
       "last_modified": "2026-07-14T13:18:03.980",
-      "fetched_at": "2026-07-29T09:23:14.225Z"
+      "fetched_at": "2026-08-29T12:57:06.178Z"
     },
     "CVE-2025-71131": {
       "cve_id": "CVE-2025-71131",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: seqiv - Do not use req->iv after crypto_aead_encrypt\n\nAs soon as crypto_aead_encrypt is called, the underlying request\nmay be freed by an asynchronous completion.  Thus dereferencing\nreq->iv after it returns is invalid.\n\nInstead of checking req->iv against info, create a new variable\nunaligned_info and use it for that purpose instead.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [],
       "references": [
         {
@@ -96183,16 +96183,16 @@
         }
       ],
       "published": "2026-01-14T15:16:02.843",
-      "last_modified": "2026-07-14T13:18:04.163",
-      "fetched_at": "2026-07-29T09:23:20.806Z"
+      "last_modified": "2026-07-30T06:24:53.387",
+      "fetched_at": "2026-08-29T12:57:12.872Z"
     },
     "CVE-2025-71161": {
       "cve_id": "CVE-2025-71161",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndm-verity: disable recursive forward error correction\n\nThere are two problems with the recursive correction:\n\n1. It may cause denial-of-service. In fec_read_bufs, there is a loop that\nhas 253 iterations. For each iteration, we may call verity_hash_for_block\nrecursively. There is a limit of 4 nested recursions - that means that\nthere may be at most 253^4 (4 billion) iterations. Red Hat QE team\nactually created an image that pushes dm-verity to this limit - and this\nimage just makes the udev-worker process get stuck in the 'D' state.\n\n2. It doesn't work. In fec_read_bufs we store data into the variable\n\"fio->bufs\", but fio bufs is shared between recursive invocations, if\n\"verity_hash_for_block\" invoked correction recursively, it would\noverwrite partially filled fio->bufs.",
       "cvss_version": "3.1",
-      "cvss_score": 5.5,
-      "cvss_severity": "medium",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "cwes": [
         "CWE-193"
       ],
@@ -96235,8 +96235,8 @@
         }
       ],
       "published": "2026-01-23T16:15:53.000",
-      "last_modified": "2026-07-14T13:18:04.407",
-      "fetched_at": "2026-07-29T09:23:27.492Z"
+      "last_modified": "2026-07-30T06:24:55.107",
+      "fetched_at": "2026-08-29T12:57:19.508Z"
     },
     "CVE-2025-71162": {
       "cve_id": "CVE-2025-71162",
@@ -96297,8 +96297,8 @@
         }
       ],
       "published": "2026-01-25T15:15:53.947",
-      "last_modified": "2026-07-14T13:18:04.563",
-      "fetched_at": "2026-07-29T09:23:34.135Z"
+      "last_modified": "2026-07-30T06:24:55.260",
+      "fetched_at": "2026-08-29T12:57:26.134Z"
     },
     "CVE-2025-71163": {
       "cve_id": "CVE-2025-71163",
@@ -96354,7 +96354,7 @@
       ],
       "published": "2026-01-25T15:15:54.083",
       "last_modified": "2026-07-14T13:18:04.727",
-      "fetched_at": "2026-07-29T09:23:40.910Z"
+      "fetched_at": "2026-08-29T12:57:33.064Z"
     },
     "CVE-2025-71197": {
       "cve_id": "CVE-2025-71197",
@@ -96400,15 +96400,15 @@
       ],
       "published": "2026-02-04T17:16:11.633",
       "last_modified": "2026-07-14T13:18:05.637",
-      "fetched_at": "2026-07-29T09:23:47.579Z"
+      "fetched_at": "2026-08-29T12:57:39.713Z"
     },
     "CVE-2025-71221": {
       "cve_id": "CVE-2025-71221",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ndmaengine: mmp_pdma: Fix race condition in mmp_pdma_residue()\n\nAdd proper locking in mmp_pdma_residue() to prevent use-after-free when\naccessing descriptor list and descriptor contents.\n\nThe race occurs when multiple threads call tx_status() while the tasklet\non another CPU is freeing completed descriptors:\n\nCPU 0                              CPU 1\n-----                              -----\nmmp_pdma_tx_status()\nmmp_pdma_residue()\n  -> NO LOCK held\n     list_for_each_entry(sw, ..)\n                                   DMA interrupt\n                                   dma_do_tasklet()\n                                     -> spin_lock(&desc_lock)\n                                        list_move(sw->node, ...)\n                                        spin_unlock(&desc_lock)\n  |                                     dma_pool_free(sw) <- FREED!\n  -> access sw->desc <- UAF!\n\nThis issue can be reproduced when running dmatest on the same channel with\nmultiple threads (threads_per_chan > 1).\n\nFix by protecting the chain_running list iteration and descriptor access\nwith the chan->desc_lock spinlock.",
       "cvss_version": "3.1",
-      "cvss_score": 7,
+      "cvss_score": 7.8,
       "cvss_severity": "high",
-      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "cwes": [
         "CWE-362"
       ],
@@ -96451,8 +96451,8 @@
         }
       ],
       "published": "2026-02-14T17:15:54.450",
-      "last_modified": "2026-07-14T13:18:05.793",
-      "fetched_at": "2026-07-29T09:23:54.167Z"
+      "last_modified": "2026-07-30T06:24:56.147",
+      "fetched_at": "2026-08-29T12:57:46.324Z"
     },
     "CVE-2025-71265": {
       "cve_id": "CVE-2025-71265",
@@ -96514,7 +96514,7 @@
       ],
       "published": "2026-03-18T11:16:15.373",
       "last_modified": "2026-07-14T13:18:05.970",
-      "fetched_at": "2026-07-29T09:24:00.878Z"
+      "fetched_at": "2026-08-29T12:57:52.948Z"
     },
     "CVE-2025-71266": {
       "cve_id": "CVE-2025-71266",
@@ -96576,7 +96576,7 @@
       ],
       "published": "2026-03-18T11:16:15.560",
       "last_modified": "2026-07-14T13:18:06.163",
-      "fetched_at": "2026-07-29T09:24:07.634Z"
+      "fetched_at": "2026-08-29T12:57:59.663Z"
     },
     "CVE-2025-71267": {
       "cve_id": "CVE-2025-71267",
@@ -96638,7 +96638,7 @@
       ],
       "published": "2026-03-18T11:16:15.720",
       "last_modified": "2026-07-14T13:18:06.330",
-      "fetched_at": "2026-07-29T09:24:14.360Z"
+      "fetched_at": "2026-08-29T12:58:06.355Z"
     },
     "CVE-2026-3497": {
       "cve_id": "CVE-2026-3497",
@@ -96710,7 +96710,7 @@
       ],
       "published": "2026-03-12T19:16:19.910",
       "last_modified": "2026-07-15T02:21:00.033",
-      "fetched_at": "2026-07-29T09:24:21.096Z"
+      "fetched_at": "2026-08-29T12:58:13.060Z"
     },
     "CVE-2026-22979": {
       "cve_id": "CVE-2026-22979",
@@ -96760,7 +96760,7 @@
       ],
       "published": "2026-01-23T16:15:53.893",
       "last_modified": "2026-07-14T13:18:21.023",
-      "fetched_at": "2026-07-29T09:24:27.798Z"
+      "fetched_at": "2026-08-29T12:58:19.681Z"
     },
     "CVE-2026-22980": {
       "cve_id": "CVE-2026-22980",
@@ -96822,7 +96822,7 @@
       ],
       "published": "2026-01-23T16:15:54.003",
       "last_modified": "2026-07-14T13:18:21.220",
-      "fetched_at": "2026-07-29T09:24:34.389Z"
+      "fetched_at": "2026-08-29T12:58:26.416Z"
     },
     "CVE-2026-22982": {
       "cve_id": "CVE-2026-22982",
@@ -96878,7 +96878,7 @@
       ],
       "published": "2026-01-23T16:15:54.223",
       "last_modified": "2026-07-14T13:18:21.420",
-      "fetched_at": "2026-07-29T09:24:41.083Z"
+      "fetched_at": "2026-08-29T12:58:33.130Z"
     },
     "CVE-2026-22992": {
       "cve_id": "CVE-2026-22992",
@@ -96934,7 +96934,7 @@
       ],
       "published": "2026-01-23T16:15:55.290",
       "last_modified": "2026-07-14T13:18:21.640",
-      "fetched_at": "2026-07-29T09:24:47.713Z"
+      "fetched_at": "2026-08-29T12:58:39.783Z"
     },
     "CVE-2026-22994": {
       "cve_id": "CVE-2026-22994",
@@ -96982,7 +96982,7 @@
       ],
       "published": "2026-01-23T16:15:55.490",
       "last_modified": "2026-07-14T13:18:21.837",
-      "fetched_at": "2026-07-29T09:24:54.310Z"
+      "fetched_at": "2026-08-29T12:58:46.523Z"
     },
     "CVE-2026-23003": {
       "cve_id": "CVE-2026-23003",
@@ -97044,7 +97044,7 @@
       ],
       "published": "2026-01-25T15:15:55.170",
       "last_modified": "2026-07-14T13:18:21.990",
-      "fetched_at": "2026-07-29T09:25:01.105Z"
+      "fetched_at": "2026-08-29T12:58:53.213Z"
     },
     "CVE-2026-23005": {
       "cve_id": "CVE-2026-23005",
@@ -97092,7 +97092,7 @@
       ],
       "published": "2026-01-25T15:15:55.377",
       "last_modified": "2026-07-14T13:18:22.227",
-      "fetched_at": "2026-07-29T09:25:07.782Z"
+      "fetched_at": "2026-08-29T12:58:59.920Z"
     },
     "CVE-2026-23010": {
       "cve_id": "CVE-2026-23010",
@@ -97142,7 +97142,7 @@
       ],
       "published": "2026-01-25T15:15:55.867",
       "last_modified": "2026-07-14T13:18:22.433",
-      "fetched_at": "2026-07-29T09:25:14.374Z"
+      "fetched_at": "2026-08-29T12:59:06.544Z"
     },
     "CVE-2026-23011": {
       "cve_id": "CVE-2026-23011",
@@ -97202,7 +97202,7 @@
       ],
       "published": "2026-01-25T15:15:55.977",
       "last_modified": "2026-07-14T13:18:22.640",
-      "fetched_at": "2026-07-29T09:25:21.180Z"
+      "fetched_at": "2026-08-29T12:59:13.228Z"
     },
     "CVE-2026-23019": {
       "cve_id": "CVE-2026-23019",
@@ -97258,7 +97258,7 @@
       ],
       "published": "2026-01-31T12:16:05.207",
       "last_modified": "2026-07-14T13:18:22.847",
-      "fetched_at": "2026-07-29T09:25:27.758Z"
+      "fetched_at": "2026-08-29T12:59:19.928Z"
     },
     "CVE-2026-23054": {
       "cve_id": "CVE-2026-23054",
@@ -97296,7 +97296,7 @@
       ],
       "published": "2026-02-04T17:16:16.070",
       "last_modified": "2026-07-14T13:18:23.360",
-      "fetched_at": "2026-07-29T09:25:34.367Z"
+      "fetched_at": "2026-08-29T12:59:26.538Z"
     },
     "CVE-2026-23060": {
       "cve_id": "CVE-2026-23060",
@@ -97358,7 +97358,7 @@
       ],
       "published": "2026-02-04T17:16:16.687",
       "last_modified": "2026-07-14T13:18:23.490",
-      "fetched_at": "2026-07-29T09:25:41.098Z"
+      "fetched_at": "2026-08-29T12:59:33.166Z"
     },
     "CVE-2026-23083": {
       "cve_id": "CVE-2026-23083",
@@ -97418,7 +97418,7 @@
       ],
       "published": "2026-02-04T17:16:19.163",
       "last_modified": "2026-07-14T13:18:23.673",
-      "fetched_at": "2026-07-29T09:25:47.685Z"
+      "fetched_at": "2026-08-29T12:59:39.872Z"
     },
     "CVE-2026-23084": {
       "cve_id": "CVE-2026-23084",
@@ -97480,7 +97480,7 @@
       ],
       "published": "2026-02-04T17:16:19.257",
       "last_modified": "2026-07-14T13:18:23.860",
-      "fetched_at": "2026-07-29T09:25:54.449Z"
+      "fetched_at": "2026-08-29T12:59:46.548Z"
     },
     "CVE-2026-23086": {
       "cve_id": "CVE-2026-23086",
@@ -97528,7 +97528,7 @@
       ],
       "published": "2026-02-04T17:16:19.467",
       "last_modified": "2026-07-14T13:18:24.040",
-      "fetched_at": "2026-07-29T09:26:01.047Z"
+      "fetched_at": "2026-08-29T12:59:53.168Z"
     },
     "CVE-2026-23087": {
       "cve_id": "CVE-2026-23087",
@@ -97590,7 +97590,7 @@
       ],
       "published": "2026-02-04T17:16:19.570",
       "last_modified": "2026-07-14T13:18:24.237",
-      "fetched_at": "2026-07-29T09:26:07.753Z"
+      "fetched_at": "2026-08-29T12:59:59.915Z"
     },
     "CVE-2026-23095": {
       "cve_id": "CVE-2026-23095",
@@ -97652,7 +97652,7 @@
       ],
       "published": "2026-02-04T17:16:20.370",
       "last_modified": "2026-07-14T13:18:24.410",
-      "fetched_at": "2026-07-29T09:26:14.371Z"
+      "fetched_at": "2026-08-29T13:00:06.866Z"
     },
     "CVE-2026-23100": {
       "cve_id": "CVE-2026-23100",
@@ -97706,7 +97706,7 @@
       ],
       "published": "2026-02-04T17:16:20.880",
       "last_modified": "2026-07-14T13:18:24.613",
-      "fetched_at": "2026-07-29T09:26:21.169Z"
+      "fetched_at": "2026-08-29T13:00:13.578Z"
     },
     "CVE-2026-23103": {
       "cve_id": "CVE-2026-23103",
@@ -97768,7 +97768,7 @@
       ],
       "published": "2026-02-04T17:16:21.177",
       "last_modified": "2026-07-14T13:18:24.807",
-      "fetched_at": "2026-07-29T09:26:27.917Z"
+      "fetched_at": "2026-08-29T13:00:20.246Z"
     },
     "CVE-2026-23110": {
       "cve_id": "CVE-2026-23110",
@@ -97822,7 +97822,7 @@
       ],
       "published": "2026-02-04T17:16:21.880",
       "last_modified": "2026-07-14T13:18:25.040",
-      "fetched_at": "2026-07-29T09:26:34.529Z"
+      "fetched_at": "2026-08-29T13:00:26.949Z"
     },
     "CVE-2026-23113": {
       "cve_id": "CVE-2026-23113",
@@ -97876,7 +97876,7 @@
       ],
       "published": "2026-02-14T15:16:06.380",
       "last_modified": "2026-07-14T13:18:26.200",
-      "fetched_at": "2026-07-29T09:26:41.242Z"
+      "fetched_at": "2026-08-29T13:00:33.641Z"
     },
     "CVE-2026-23154": {
       "cve_id": "CVE-2026-23154",
@@ -97924,7 +97924,7 @@
       ],
       "published": "2026-02-14T16:15:55.550",
       "last_modified": "2026-07-14T13:18:26.587",
-      "fetched_at": "2026-07-29T09:26:47.838Z"
+      "fetched_at": "2026-08-29T13:00:40.269Z"
     },
     "CVE-2026-23204": {
       "cve_id": "CVE-2026-23204",
@@ -97980,7 +97980,7 @@
       ],
       "published": "2026-02-14T17:15:58.297",
       "last_modified": "2026-07-14T13:18:26.807",
-      "fetched_at": "2026-07-29T09:26:54.824Z"
+      "fetched_at": "2026-08-29T13:00:47.253Z"
     },
     "CVE-2026-23242": {
       "cve_id": "CVE-2026-23242",
@@ -98044,7 +98044,7 @@
       ],
       "published": "2026-03-18T11:16:15.887",
       "last_modified": "2026-07-14T13:18:27.187",
-      "fetched_at": "2026-07-29T09:27:01.604Z"
+      "fetched_at": "2026-08-29T13:00:54.014Z"
     },
     "CVE-2026-23243": {
       "cve_id": "CVE-2026-23243",
@@ -98108,7 +98108,7 @@
       ],
       "published": "2026-03-18T11:16:16.090",
       "last_modified": "2026-07-14T13:18:27.407",
-      "fetched_at": "2026-07-29T09:27:08.281Z"
+      "fetched_at": "2026-08-29T13:01:01.097Z"
     },
     "CVE-2026-23245": {
       "cve_id": "CVE-2026-23245",
@@ -98168,7 +98168,7 @@
       ],
       "published": "2026-03-18T11:16:16.437",
       "last_modified": "2026-07-14T13:18:27.607",
-      "fetched_at": "2026-07-29T09:27:14.971Z"
+      "fetched_at": "2026-08-29T13:01:07.839Z"
     },
     "CVE-2026-23270": {
       "cve_id": "CVE-2026-23270",
@@ -98230,7 +98230,7 @@
       ],
       "published": "2026-03-18T18:16:26.053",
       "last_modified": "2026-07-14T13:18:27.780",
-      "fetched_at": "2026-07-29T09:27:21.558Z"
+      "fetched_at": "2026-08-29T13:01:14.552Z"
     },
     "CVE-2026-23271": {
       "cve_id": "CVE-2026-23271",
@@ -98290,7 +98290,7 @@
       ],
       "published": "2026-03-20T09:16:11.773",
       "last_modified": "2026-07-14T13:18:27.963",
-      "fetched_at": "2026-07-29T09:27:28.256Z"
+      "fetched_at": "2026-08-29T13:01:21.237Z"
     },
     "CVE-2026-23273": {
       "cve_id": "CVE-2026-23273",
@@ -98354,7 +98354,7 @@
       ],
       "published": "2026-03-20T09:16:12.847",
       "last_modified": "2026-07-14T13:18:28.123",
-      "fetched_at": "2026-07-29T09:27:35.041Z"
+      "fetched_at": "2026-08-29T13:01:27.963Z"
     },
     "CVE-2026-23274": {
       "cve_id": "CVE-2026-23274",
@@ -98416,7 +98416,7 @@
       ],
       "published": "2026-03-20T09:16:13.077",
       "last_modified": "2026-07-14T13:18:28.337",
-      "fetched_at": "2026-07-29T09:27:41.759Z"
+      "fetched_at": "2026-08-29T13:01:34.650Z"
     },
     "CVE-2026-23277": {
       "cve_id": "CVE-2026-23277",
@@ -98480,7 +98480,7 @@
       ],
       "published": "2026-03-20T09:16:13.533",
       "last_modified": "2026-07-14T13:18:28.530",
-      "fetched_at": "2026-07-29T09:27:48.353Z"
+      "fetched_at": "2026-08-29T13:01:41.294Z"
     },
     "CVE-2026-23284": {
       "cve_id": "CVE-2026-23284",
@@ -98538,7 +98538,7 @@
       ],
       "published": "2026-03-25T11:16:23.080",
       "last_modified": "2026-07-14T13:18:28.717",
-      "fetched_at": "2026-07-29T09:27:54.943Z"
+      "fetched_at": "2026-08-29T13:01:47.944Z"
     },
     "CVE-2026-23287": {
       "cve_id": "CVE-2026-23287",
@@ -98596,7 +98596,7 @@
       ],
       "published": "2026-03-25T11:16:23.583",
       "last_modified": "2026-07-14T13:18:28.873",
-      "fetched_at": "2026-07-29T09:28:01.591Z"
+      "fetched_at": "2026-08-29T13:01:54.704Z"
     },
     "CVE-2026-23290": {
       "cve_id": "CVE-2026-23290",
@@ -98658,7 +98658,7 @@
       ],
       "published": "2026-03-25T11:16:24.043",
       "last_modified": "2026-07-14T13:18:29.043",
-      "fetched_at": "2026-07-29T09:28:08.624Z"
+      "fetched_at": "2026-08-29T13:02:01.474Z"
     },
     "CVE-2026-23293": {
       "cve_id": "CVE-2026-23293",
@@ -98722,7 +98722,7 @@
       ],
       "published": "2026-03-25T11:16:24.520",
       "last_modified": "2026-07-14T13:18:29.207",
-      "fetched_at": "2026-07-29T09:28:15.558Z"
+      "fetched_at": "2026-08-29T13:02:08.169Z"
     },
     "CVE-2026-23300": {
       "cve_id": "CVE-2026-23300",
@@ -98786,7 +98786,7 @@
       ],
       "published": "2026-03-25T11:16:25.623",
       "last_modified": "2026-07-14T13:18:29.393",
-      "fetched_at": "2026-07-29T09:28:22.325Z"
+      "fetched_at": "2026-08-29T13:02:14.810Z"
     },
     "CVE-2026-23304": {
       "cve_id": "CVE-2026-23304",
@@ -98850,7 +98850,7 @@
       ],
       "published": "2026-03-25T11:16:26.180",
       "last_modified": "2026-07-14T13:18:29.570",
-      "fetched_at": "2026-07-29T09:28:29.276Z"
+      "fetched_at": "2026-08-29T13:02:21.516Z"
     },
     "CVE-2026-23319": {
       "cve_id": "CVE-2026-23319",
@@ -98910,7 +98910,7 @@
       ],
       "published": "2026-03-25T11:16:28.570",
       "last_modified": "2026-07-14T13:18:29.743",
-      "fetched_at": "2026-07-29T09:28:36.311Z"
+      "fetched_at": "2026-08-29T13:02:28.140Z"
     },
     "CVE-2026-23321": {
       "cve_id": "CVE-2026-23321",
@@ -98968,7 +98968,7 @@
       ],
       "published": "2026-03-25T11:16:28.900",
       "last_modified": "2026-07-14T13:18:29.917",
-      "fetched_at": "2026-07-29T09:28:42.910Z"
+      "fetched_at": "2026-08-29T13:02:34.851Z"
     },
     "CVE-2026-23335": {
       "cve_id": "CVE-2026-23335",
@@ -99030,7 +99030,7 @@
       ],
       "published": "2026-03-25T11:16:31.050",
       "last_modified": "2026-07-14T13:18:30.113",
-      "fetched_at": "2026-07-29T09:28:49.738Z"
+      "fetched_at": "2026-08-29T13:02:41.693Z"
     },
     "CVE-2026-23340": {
       "cve_id": "CVE-2026-23340",
@@ -99092,7 +99092,7 @@
       ],
       "published": "2026-03-25T11:16:31.837",
       "last_modified": "2026-07-14T13:18:30.280",
-      "fetched_at": "2026-07-29T09:28:56.319Z"
+      "fetched_at": "2026-08-29T13:02:48.615Z"
     },
     "CVE-2026-23343": {
       "cve_id": "CVE-2026-23343",
@@ -99152,7 +99152,7 @@
       ],
       "published": "2026-03-25T11:16:32.300",
       "last_modified": "2026-07-14T13:18:30.470",
-      "fetched_at": "2026-07-29T09:29:03.202Z"
+      "fetched_at": "2026-08-29T13:02:55.335Z"
     },
     "CVE-2026-23351": {
       "cve_id": "CVE-2026-23351",
@@ -99216,7 +99216,7 @@
       ],
       "published": "2026-03-25T11:16:33.450",
       "last_modified": "2026-07-14T13:18:30.660",
-      "fetched_at": "2026-07-29T09:29:09.800Z"
+      "fetched_at": "2026-08-29T13:03:01.985Z"
     },
     "CVE-2026-23359": {
       "cve_id": "CVE-2026-23359",
@@ -99278,7 +99278,7 @@
       ],
       "published": "2026-03-25T11:16:34.740",
       "last_modified": "2026-07-14T13:18:30.847",
-      "fetched_at": "2026-07-29T09:29:16.512Z"
+      "fetched_at": "2026-08-29T13:03:08.767Z"
     },
     "CVE-2026-23365": {
       "cve_id": "CVE-2026-23365",
@@ -99340,7 +99340,7 @@
       ],
       "published": "2026-03-25T11:16:35.710",
       "last_modified": "2026-07-14T13:18:31.013",
-      "fetched_at": "2026-07-29T09:29:23.229Z"
+      "fetched_at": "2026-08-29T13:03:15.386Z"
     },
     "CVE-2026-23368": {
       "cve_id": "CVE-2026-23368",
@@ -99404,7 +99404,7 @@
       ],
       "published": "2026-03-25T11:16:36.167",
       "last_modified": "2026-07-14T13:18:31.190",
-      "fetched_at": "2026-07-29T09:29:29.827Z"
+      "fetched_at": "2026-08-29T13:03:22.091Z"
     },
     "CVE-2026-23370": {
       "cve_id": "CVE-2026-23370",
@@ -99464,7 +99464,7 @@
       ],
       "published": "2026-03-25T11:16:36.527",
       "last_modified": "2026-07-14T13:18:31.380",
-      "fetched_at": "2026-07-29T09:29:36.748Z"
+      "fetched_at": "2026-08-29T13:03:28.798Z"
     },
     "CVE-2026-23378": {
       "cve_id": "CVE-2026-23378",
@@ -99524,7 +99524,7 @@
       ],
       "published": "2026-03-25T11:16:37.643",
       "last_modified": "2026-07-14T13:18:31.513",
-      "fetched_at": "2026-07-29T09:29:43.483Z"
+      "fetched_at": "2026-08-29T13:03:35.782Z"
     },
     "CVE-2026-23379": {
       "cve_id": "CVE-2026-23379",
@@ -99588,7 +99588,7 @@
       ],
       "published": "2026-03-25T11:16:37.827",
       "last_modified": "2026-07-14T13:18:31.703",
-      "fetched_at": "2026-07-29T09:29:50.235Z"
+      "fetched_at": "2026-08-29T13:03:42.581Z"
     },
     "CVE-2026-23381": {
       "cve_id": "CVE-2026-23381",
@@ -99652,7 +99652,7 @@
       ],
       "published": "2026-03-25T11:16:38.160",
       "last_modified": "2026-07-14T13:18:31.910",
-      "fetched_at": "2026-07-29T09:29:56.825Z"
+      "fetched_at": "2026-08-29T13:03:49.304Z"
     },
     "CVE-2026-23391": {
       "cve_id": "CVE-2026-23391",
@@ -99714,7 +99714,7 @@
       ],
       "published": "2026-03-25T11:16:39.707",
       "last_modified": "2026-07-14T13:18:32.090",
-      "fetched_at": "2026-07-29T09:30:03.587Z"
+      "fetched_at": "2026-08-29T13:03:55.919Z"
     },
     "CVE-2026-23392": {
       "cve_id": "CVE-2026-23392",
@@ -99774,7 +99774,7 @@
       ],
       "published": "2026-03-25T11:16:39.873",
       "last_modified": "2026-07-14T13:18:32.290",
-      "fetched_at": "2026-07-29T09:30:10.188Z"
+      "fetched_at": "2026-08-29T13:04:02.839Z"
     },
     "CVE-2026-23397": {
       "cve_id": "CVE-2026-23397",
@@ -99838,7 +99838,7 @@
       ],
       "published": "2026-03-26T11:16:19.720",
       "last_modified": "2026-07-14T13:18:32.457",
-      "fetched_at": "2026-07-29T09:30:16.761Z"
+      "fetched_at": "2026-08-29T13:04:09.555Z"
     },
     "CVE-2026-23398": {
       "cve_id": "CVE-2026-23398",
@@ -99902,7 +99902,7 @@
       ],
       "published": "2026-03-26T11:16:19.910",
       "last_modified": "2026-07-14T13:18:32.647",
-      "fetched_at": "2026-07-29T09:30:23.456Z"
+      "fetched_at": "2026-08-29T13:04:16.468Z"
     },
     "CVE-2026-23414": {
       "cve_id": "CVE-2026-23414",
@@ -99962,7 +99962,7 @@
       ],
       "published": "2026-04-02T12:16:20.633",
       "last_modified": "2026-07-14T13:18:32.830",
-      "fetched_at": "2026-07-29T09:30:30.069Z"
+      "fetched_at": "2026-08-29T13:04:23.088Z"
     },
     "CVE-2026-23422": {
       "cve_id": "CVE-2026-23422",
@@ -100024,7 +100024,7 @@
       ],
       "published": "2026-04-03T14:16:28.320",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:30:36.784Z"
+      "fetched_at": "2026-08-29T13:04:29.805Z"
     },
     "CVE-2026-23434": {
       "cve_id": "CVE-2026-23434",
@@ -100086,7 +100086,7 @@
       ],
       "published": "2026-04-03T16:16:24.913",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:30:43.381Z"
+      "fetched_at": "2026-08-29T13:04:36.438Z"
     },
     "CVE-2026-23438": {
       "cve_id": "CVE-2026-23438",
@@ -100148,7 +100148,7 @@
       ],
       "published": "2026-04-03T16:16:25.540",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:30:49.984Z"
+      "fetched_at": "2026-08-29T13:04:43.187Z"
     },
     "CVE-2026-23439": {
       "cve_id": "CVE-2026-23439",
@@ -100212,7 +100212,7 @@
       ],
       "published": "2026-04-03T16:16:25.737",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:30:56.579Z"
+      "fetched_at": "2026-08-29T13:04:49.878Z"
     },
     "CVE-2026-23446": {
       "cve_id": "CVE-2026-23446",
@@ -100274,7 +100274,7 @@
       ],
       "published": "2026-04-03T16:16:30.317",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:31:03.337Z"
+      "fetched_at": "2026-08-29T13:04:56.510Z"
     },
     "CVE-2026-23449": {
       "cve_id": "CVE-2026-23449",
@@ -100334,7 +100334,7 @@
       ],
       "published": "2026-04-03T16:16:31.037",
       "last_modified": "2026-07-14T13:18:34.797",
-      "fetched_at": "2026-07-29T09:31:10.048Z"
+      "fetched_at": "2026-08-29T13:05:03.123Z"
     },
     "CVE-2026-23450": {
       "cve_id": "CVE-2026-23450",
@@ -100396,7 +100396,7 @@
       ],
       "published": "2026-04-03T16:16:31.243",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:31:16.644Z"
+      "fetched_at": "2026-08-29T13:05:10.065Z"
     },
     "CVE-2026-23452": {
       "cve_id": "CVE-2026-23452",
@@ -100460,7 +100460,7 @@
       ],
       "published": "2026-04-03T16:16:31.617",
       "last_modified": "2026-07-24T21:10:00.143",
-      "fetched_at": "2026-07-29T09:31:23.391Z"
+      "fetched_at": "2026-08-29T13:05:16.679Z"
     },
     "CVE-2026-23454": {
       "cve_id": "CVE-2026-23454",
@@ -100522,7 +100522,7 @@
       ],
       "published": "2026-04-03T16:16:31.947",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:31:30.292Z"
+      "fetched_at": "2026-08-29T13:05:23.476Z"
     },
     "CVE-2026-23455": {
       "cve_id": "CVE-2026-23455",
@@ -100586,7 +100586,7 @@
       ],
       "published": "2026-04-03T16:16:32.123",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:31:36.985Z"
+      "fetched_at": "2026-08-29T13:05:30.180Z"
     },
     "CVE-2026-23456": {
       "cve_id": "CVE-2026-23456",
@@ -100650,7 +100650,7 @@
       ],
       "published": "2026-04-03T16:16:32.300",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:31:43.562Z"
+      "fetched_at": "2026-08-29T13:05:36.792Z"
     },
     "CVE-2026-23457": {
       "cve_id": "CVE-2026-23457",
@@ -100712,7 +100712,7 @@
       ],
       "published": "2026-04-03T16:16:32.473",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:31:50.140Z"
+      "fetched_at": "2026-08-29T13:05:43.509Z"
     },
     "CVE-2026-23458": {
       "cve_id": "CVE-2026-23458",
@@ -100776,7 +100776,7 @@
       ],
       "published": "2026-04-03T16:16:32.647",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:31:56.732Z"
+      "fetched_at": "2026-08-29T13:05:50.202Z"
     },
     "CVE-2026-23463": {
       "cve_id": "CVE-2026-23463",
@@ -100840,7 +100840,7 @@
       ],
       "published": "2026-04-03T16:16:33.520",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:03.500Z"
+      "fetched_at": "2026-08-29T13:05:56.968Z"
     },
     "CVE-2026-23474": {
       "cve_id": "CVE-2026-23474",
@@ -100902,7 +100902,7 @@
       ],
       "published": "2026-04-03T16:16:35.260",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:10.229Z"
+      "fetched_at": "2026-08-29T13:06:03.599Z"
     },
     "CVE-2026-23475": {
       "cve_id": "CVE-2026-23475",
@@ -100962,7 +100962,7 @@
       ],
       "published": "2026-04-03T16:16:35.440",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:17.002Z"
+      "fetched_at": "2026-08-29T13:06:10.227Z"
     },
     "CVE-2026-27135": {
       "cve_id": "CVE-2026-27135",
@@ -101019,7 +101019,7 @@
       ],
       "published": "2026-03-18T18:16:26.723",
       "last_modified": "2026-07-15T02:19:03.367",
-      "fetched_at": "2026-07-29T09:32:23.730Z"
+      "fetched_at": "2026-08-29T13:06:17.023Z"
     },
     "CVE-2026-31389": {
       "cve_id": "CVE-2026-31389",
@@ -101079,7 +101079,7 @@
       ],
       "published": "2026-04-03T16:16:36.823",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:30.339Z"
+      "fetched_at": "2026-08-29T13:06:23.644Z"
     },
     "CVE-2026-31391": {
       "cve_id": "CVE-2026-31391",
@@ -101139,7 +101139,7 @@
       ],
       "published": "2026-04-03T16:16:37.123",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:36.975Z"
+      "fetched_at": "2026-08-29T13:06:30.387Z"
     },
     "CVE-2026-31396": {
       "cve_id": "CVE-2026-31396",
@@ -101203,7 +101203,7 @@
       ],
       "published": "2026-04-03T16:16:37.887",
       "last_modified": "2026-07-14T13:18:37.750",
-      "fetched_at": "2026-07-29T09:32:43.578Z"
+      "fetched_at": "2026-08-29T13:06:37.237Z"
     },
     "CVE-2026-31402": {
       "cve_id": "CVE-2026-31402",
@@ -101266,7 +101266,7 @@
       ],
       "published": "2026-04-03T16:16:39.283",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:50.213Z"
+      "fetched_at": "2026-08-29T13:06:43.942Z"
     },
     "CVE-2026-31403": {
       "cve_id": "CVE-2026-31403",
@@ -101326,7 +101326,7 @@
       ],
       "published": "2026-04-03T16:16:39.467",
       "last_modified": "2026-07-24T22:10:00.140",
-      "fetched_at": "2026-07-29T09:32:56.948Z"
+      "fetched_at": "2026-08-29T13:06:50.568Z"
     },
     "CVE-2026-31411": {
       "cve_id": "CVE-2026-31411",
@@ -101390,7 +101390,7 @@
       ],
       "published": "2026-04-08T14:16:27.977",
       "last_modified": "2026-07-25T10:10:00.167",
-      "fetched_at": "2026-07-29T09:33:03.544Z"
+      "fetched_at": "2026-08-29T13:06:57.538Z"
     },
     "CVE-2026-31414": {
       "cve_id": "CVE-2026-31414",
@@ -101448,7 +101448,7 @@
       ],
       "published": "2026-04-13T14:16:10.537",
       "last_modified": "2026-07-14T13:18:38.787",
-      "fetched_at": "2026-07-29T09:33:10.225Z"
+      "fetched_at": "2026-08-29T13:07:04.156Z"
     },
     "CVE-2026-31415": {
       "cve_id": "CVE-2026-31415",
@@ -101512,7 +101512,7 @@
       ],
       "published": "2026-04-13T14:16:10.707",
       "last_modified": "2026-07-14T13:18:38.960",
-      "fetched_at": "2026-07-29T09:33:16.818Z"
+      "fetched_at": "2026-08-29T13:07:10.862Z"
     },
     "CVE-2026-31416": {
       "cve_id": "CVE-2026-31416",
@@ -101574,7 +101574,7 @@
       ],
       "published": "2026-04-13T14:16:10.907",
       "last_modified": "2026-07-14T13:18:39.163",
-      "fetched_at": "2026-07-29T09:33:23.520Z"
+      "fetched_at": "2026-08-29T13:07:17.478Z"
     },
     "CVE-2026-31417": {
       "cve_id": "CVE-2026-31417",
@@ -101638,7 +101638,7 @@
       ],
       "published": "2026-04-13T14:16:11.097",
       "last_modified": "2026-07-14T13:18:39.343",
-      "fetched_at": "2026-07-29T09:33:30.098Z"
+      "fetched_at": "2026-08-29T13:07:24.109Z"
     },
     "CVE-2026-31418": {
       "cve_id": "CVE-2026-31418",
@@ -101700,7 +101700,7 @@
       ],
       "published": "2026-04-13T14:16:11.267",
       "last_modified": "2026-07-14T13:18:39.517",
-      "fetched_at": "2026-07-29T09:33:36.925Z"
+      "fetched_at": "2026-08-29T13:07:30.741Z"
     },
     "CVE-2026-31421": {
       "cve_id": "CVE-2026-31421",
@@ -101764,7 +101764,7 @@
       ],
       "published": "2026-04-13T14:16:11.740",
       "last_modified": "2026-07-14T13:18:39.683",
-      "fetched_at": "2026-07-29T09:33:43.637Z"
+      "fetched_at": "2026-08-29T13:07:37.403Z"
     },
     "CVE-2026-31422": {
       "cve_id": "CVE-2026-31422",
@@ -101828,7 +101828,7 @@
       ],
       "published": "2026-04-13T14:16:11.907",
       "last_modified": "2026-07-14T13:18:39.853",
-      "fetched_at": "2026-07-29T09:33:50.208Z"
+      "fetched_at": "2026-08-29T13:07:44.102Z"
     },
     "CVE-2026-31423": {
       "cve_id": "CVE-2026-31423",
@@ -101892,7 +101892,7 @@
       ],
       "published": "2026-04-13T14:16:12.070",
       "last_modified": "2026-07-14T13:18:40.023",
-      "fetched_at": "2026-07-29T09:33:56.801Z"
+      "fetched_at": "2026-08-29T13:07:50.715Z"
     },
     "CVE-2026-31424": {
       "cve_id": "CVE-2026-31424",
@@ -101956,7 +101956,7 @@
       ],
       "published": "2026-04-13T14:16:12.240",
       "last_modified": "2026-07-14T13:18:40.197",
-      "fetched_at": "2026-07-29T09:34:03.430Z"
+      "fetched_at": "2026-08-29T13:07:57.320Z"
     },
     "CVE-2026-31427": {
       "cve_id": "CVE-2026-31427",
@@ -102020,7 +102020,7 @@
       ],
       "published": "2026-04-13T14:16:12.783",
       "last_modified": "2026-07-14T13:18:40.380",
-      "fetched_at": "2026-07-29T09:34:10.061Z"
+      "fetched_at": "2026-08-29T13:08:03.929Z"
     },
     "CVE-2026-31428": {
       "cve_id": "CVE-2026-31428",
@@ -102084,7 +102084,7 @@
       ],
       "published": "2026-04-13T14:16:12.957",
       "last_modified": "2026-07-14T13:18:40.567",
-      "fetched_at": "2026-07-29T09:34:16.704Z"
+      "fetched_at": "2026-08-29T13:08:10.534Z"
     },
     "CVE-2026-31441": {
       "cve_id": "CVE-2026-31441",
@@ -102144,7 +102144,7 @@
       ],
       "published": "2026-04-22T14:16:37.530",
       "last_modified": "2026-07-14T13:18:41.427",
-      "fetched_at": "2026-07-29T09:34:23.254Z"
+      "fetched_at": "2026-08-29T13:08:17.152Z"
     },
     "CVE-2026-31446": {
       "cve_id": "CVE-2026-31446",
@@ -102206,7 +102206,7 @@
       ],
       "published": "2026-04-22T14:16:38.340",
       "last_modified": "2026-07-14T13:18:41.593",
-      "fetched_at": "2026-07-29T09:34:29.858Z"
+      "fetched_at": "2026-08-29T13:08:23.784Z"
     },
     "CVE-2026-31447": {
       "cve_id": "CVE-2026-31447",
@@ -102268,7 +102268,7 @@
       ],
       "published": "2026-04-22T14:16:38.577",
       "last_modified": "2026-07-14T13:18:41.800",
-      "fetched_at": "2026-07-29T09:34:36.438Z"
+      "fetched_at": "2026-08-29T13:08:30.410Z"
     },
     "CVE-2026-31448": {
       "cve_id": "CVE-2026-31448",
@@ -102328,7 +102328,7 @@
       ],
       "published": "2026-04-22T14:16:38.760",
       "last_modified": "2026-07-14T13:18:41.980",
-      "fetched_at": "2026-07-29T09:34:43.010Z"
+      "fetched_at": "2026-08-29T13:08:37.028Z"
     },
     "CVE-2026-31450": {
       "cve_id": "CVE-2026-31450",
@@ -102392,7 +102392,7 @@
       ],
       "published": "2026-04-22T14:16:39.083",
       "last_modified": "2026-07-14T13:18:42.207",
-      "fetched_at": "2026-07-29T09:34:49.913Z"
+      "fetched_at": "2026-08-29T13:08:43.705Z"
     },
     "CVE-2026-31452": {
       "cve_id": "CVE-2026-31452",
@@ -102456,7 +102456,7 @@
       ],
       "published": "2026-04-22T14:16:39.460",
       "last_modified": "2026-07-14T13:18:42.430",
-      "fetched_at": "2026-07-29T09:34:56.704Z"
+      "fetched_at": "2026-08-29T13:08:50.330Z"
     },
     "CVE-2026-31466": {
       "cve_id": "CVE-2026-31466",
@@ -102520,7 +102520,7 @@
       ],
       "published": "2026-04-22T14:16:42.780",
       "last_modified": "2026-07-14T13:18:42.620",
-      "fetched_at": "2026-07-29T09:35:03.492Z"
+      "fetched_at": "2026-08-29T13:08:57.027Z"
     },
     "CVE-2026-31469": {
       "cve_id": "CVE-2026-31469",
@@ -102584,7 +102584,7 @@
       ],
       "published": "2026-04-22T14:16:43.260",
       "last_modified": "2026-07-14T13:18:42.810",
-      "fetched_at": "2026-07-29T09:35:10.119Z"
+      "fetched_at": "2026-08-29T13:09:03.652Z"
     },
     "CVE-2026-31485": {
       "cve_id": "CVE-2026-31485",
@@ -102648,7 +102648,7 @@
       ],
       "published": "2026-04-22T14:16:45.923",
       "last_modified": "2026-07-14T13:18:43.000",
-      "fetched_at": "2026-07-29T09:35:16.727Z"
+      "fetched_at": "2026-08-29T13:09:10.312Z"
     },
     "CVE-2026-31494": {
       "cve_id": "CVE-2026-31494",
@@ -102712,7 +102712,7 @@
       ],
       "published": "2026-04-22T14:16:47.293",
       "last_modified": "2026-07-14T13:18:43.183",
-      "fetched_at": "2026-07-29T09:35:23.445Z"
+      "fetched_at": "2026-08-29T13:09:16.946Z"
     },
     "CVE-2026-31495": {
       "cve_id": "CVE-2026-31495",
@@ -102774,7 +102774,7 @@
       ],
       "published": "2026-04-22T14:16:47.500",
       "last_modified": "2026-07-14T13:18:43.377",
-      "fetched_at": "2026-07-29T09:35:30.035Z"
+      "fetched_at": "2026-08-29T13:09:23.565Z"
     },
     "CVE-2026-31496": {
       "cve_id": "CVE-2026-31496",
@@ -102832,7 +102832,7 @@
       ],
       "published": "2026-04-22T14:16:47.693",
       "last_modified": "2026-07-14T13:18:43.560",
-      "fetched_at": "2026-07-29T09:35:36.635Z"
+      "fetched_at": "2026-08-29T13:09:30.187Z"
     },
     "CVE-2026-31503": {
       "cve_id": "CVE-2026-31503",
@@ -102890,7 +102890,7 @@
       ],
       "published": "2026-04-22T14:16:48.863",
       "last_modified": "2026-07-14T13:18:43.710",
-      "fetched_at": "2026-07-29T09:35:43.187Z"
+      "fetched_at": "2026-08-29T13:09:37.035Z"
     },
     "CVE-2026-31504": {
       "cve_id": "CVE-2026-31504",
@@ -102954,7 +102954,7 @@
       ],
       "published": "2026-04-22T14:16:49.040",
       "last_modified": "2026-07-14T13:18:43.887",
-      "fetched_at": "2026-07-29T09:35:50.152Z"
+      "fetched_at": "2026-08-29T13:09:43.647Z"
     },
     "CVE-2026-31507": {
       "cve_id": "CVE-2026-31507",
@@ -103018,7 +103018,7 @@
       ],
       "published": "2026-04-22T14:16:49.523",
       "last_modified": "2026-07-14T13:18:44.073",
-      "fetched_at": "2026-07-29T09:35:56.825Z"
+      "fetched_at": "2026-08-29T13:09:50.554Z"
     },
     "CVE-2026-31508": {
       "cve_id": "CVE-2026-31508",
@@ -103080,7 +103080,7 @@
       ],
       "published": "2026-04-22T14:16:49.727",
       "last_modified": "2026-07-14T13:18:44.270",
-      "fetched_at": "2026-07-29T09:36:03.441Z"
+      "fetched_at": "2026-08-29T13:09:57.267Z"
     },
     "CVE-2026-31515": {
       "cve_id": "CVE-2026-31515",
@@ -103144,7 +103144,7 @@
       ],
       "published": "2026-04-22T14:16:50.940",
       "last_modified": "2026-07-14T13:18:44.487",
-      "fetched_at": "2026-07-29T09:36:10.155Z"
+      "fetched_at": "2026-08-29T13:10:03.869Z"
     },
     "CVE-2026-31518": {
       "cve_id": "CVE-2026-31518",
@@ -103208,7 +103208,7 @@
       ],
       "published": "2026-04-22T14:16:51.410",
       "last_modified": "2026-07-14T13:18:44.683",
-      "fetched_at": "2026-07-29T09:36:16.751Z"
+      "fetched_at": "2026-08-29T13:10:10.737Z"
     },
     "CVE-2026-31521": {
       "cve_id": "CVE-2026-31521",
@@ -103270,7 +103270,7 @@
       ],
       "published": "2026-04-22T14:16:51.930",
       "last_modified": "2026-07-14T13:18:44.917",
-      "fetched_at": "2026-07-29T09:36:23.357Z"
+      "fetched_at": "2026-08-29T13:10:17.363Z"
     },
     "CVE-2026-31533": {
       "cve_id": "CVE-2026-31533",
@@ -103332,7 +103332,7 @@
       ],
       "published": "2026-04-23T18:16:26.857",
       "last_modified": "2026-07-14T13:18:45.090",
-      "fetched_at": "2026-07-29T09:36:30.108Z"
+      "fetched_at": "2026-08-29T13:10:23.986Z"
     },
     "CVE-2026-31546": {
       "cve_id": "CVE-2026-31546",
@@ -103396,7 +103396,7 @@
       ],
       "published": "2026-04-24T15:16:28.690",
       "last_modified": "2026-07-14T13:18:45.277",
-      "fetched_at": "2026-07-29T09:36:36.675Z"
+      "fetched_at": "2026-08-29T13:10:30.828Z"
     },
     "CVE-2026-31555": {
       "cve_id": "CVE-2026-31555",
@@ -103458,7 +103458,7 @@
       ],
       "published": "2026-04-24T15:16:29.837",
       "last_modified": "2026-07-14T13:18:45.463",
-      "fetched_at": "2026-07-29T09:36:43.408Z"
+      "fetched_at": "2026-08-29T13:10:37.455Z"
     },
     "CVE-2026-31563": {
       "cve_id": "CVE-2026-31563",
@@ -103516,7 +103516,7 @@
       ],
       "published": "2026-04-24T15:16:30.720",
       "last_modified": "2026-07-14T13:18:45.660",
-      "fetched_at": "2026-07-29T09:36:49.961Z"
+      "fetched_at": "2026-08-29T13:10:44.081Z"
     },
     "CVE-2026-31565": {
       "cve_id": "CVE-2026-31565",
@@ -103578,7 +103578,7 @@
       ],
       "published": "2026-04-24T15:16:30.950",
       "last_modified": "2026-07-14T13:18:45.857",
-      "fetched_at": "2026-07-29T09:36:56.553Z"
+      "fetched_at": "2026-08-29T13:10:50.707Z"
     },
     "CVE-2026-31628": {
       "cve_id": "CVE-2026-31628",
@@ -103640,7 +103640,7 @@
       ],
       "published": "2026-04-24T15:16:42.103",
       "last_modified": "2026-07-14T13:18:46.023",
-      "fetched_at": "2026-07-29T09:37:03.371Z"
+      "fetched_at": "2026-08-29T13:10:57.495Z"
     },
     "CVE-2026-31634": {
       "cve_id": "CVE-2026-31634",
@@ -103700,7 +103700,7 @@
       ],
       "published": "2026-04-24T15:16:42.707",
       "last_modified": "2026-07-14T13:18:46.253",
-      "fetched_at": "2026-07-29T09:37:10.013Z"
+      "fetched_at": "2026-08-29T13:11:04.121Z"
     },
     "CVE-2026-31649": {
       "cve_id": "CVE-2026-31649",
@@ -103764,7 +103764,7 @@
       ],
       "published": "2026-04-24T15:16:44.330",
       "last_modified": "2026-07-14T13:18:46.557",
-      "fetched_at": "2026-07-29T09:37:16.598Z"
+      "fetched_at": "2026-08-29T13:11:10.751Z"
     },
     "CVE-2026-31651": {
       "cve_id": "CVE-2026-31651",
@@ -103828,7 +103828,7 @@
       ],
       "published": "2026-04-24T15:16:44.573",
       "last_modified": "2026-07-14T13:18:46.767",
-      "fetched_at": "2026-07-29T09:37:23.172Z"
+      "fetched_at": "2026-08-29T13:11:17.627Z"
     },
     "CVE-2026-31658": {
       "cve_id": "CVE-2026-31658",
@@ -103892,7 +103892,7 @@
       ],
       "published": "2026-04-24T15:16:45.337",
       "last_modified": "2026-07-14T13:18:46.950",
-      "fetched_at": "2026-07-29T09:37:29.788Z"
+      "fetched_at": "2026-08-29T13:11:24.240Z"
     },
     "CVE-2026-31664": {
       "cve_id": "CVE-2026-31664",
@@ -103950,7 +103950,7 @@
       ],
       "published": "2026-04-24T15:16:46.043",
       "last_modified": "2026-07-14T13:18:47.140",
-      "fetched_at": "2026-07-29T09:37:36.365Z"
+      "fetched_at": "2026-08-29T13:11:30.859Z"
     },
     "CVE-2026-31665": {
       "cve_id": "CVE-2026-31665",
@@ -104014,7 +104014,7 @@
       ],
       "published": "2026-04-24T15:16:46.157",
       "last_modified": "2026-07-14T13:18:47.347",
-      "fetched_at": "2026-07-29T09:37:42.967Z"
+      "fetched_at": "2026-08-29T13:11:37.476Z"
     },
     "CVE-2026-31669": {
       "cve_id": "CVE-2026-31669",
@@ -104076,7 +104076,7 @@
       ],
       "published": "2026-04-24T15:16:46.663",
       "last_modified": "2026-07-14T13:18:47.573",
-      "fetched_at": "2026-07-29T09:37:49.602Z"
+      "fetched_at": "2026-08-29T13:11:44.100Z"
     },
     "CVE-2026-31670": {
       "cve_id": "CVE-2026-31670",
@@ -104138,7 +104138,7 @@
       ],
       "published": "2026-04-24T15:16:46.790",
       "last_modified": "2026-07-14T13:18:47.840",
-      "fetched_at": "2026-07-29T09:37:56.334Z"
+      "fetched_at": "2026-08-29T13:11:50.701Z"
     },
     "CVE-2026-31671": {
       "cve_id": "CVE-2026-31671",
@@ -104202,7 +104202,7 @@
       ],
       "published": "2026-04-24T15:16:46.903",
       "last_modified": "2026-07-14T13:18:48.083",
-      "fetched_at": "2026-07-29T09:38:02.918Z"
+      "fetched_at": "2026-08-29T13:11:57.311Z"
     },
     "CVE-2026-31674": {
       "cve_id": "CVE-2026-31674",
@@ -104264,7 +104264,7 @@
       ],
       "published": "2026-04-25T09:16:00.963",
       "last_modified": "2026-07-14T13:18:48.320",
-      "fetched_at": "2026-07-29T09:38:09.717Z"
+      "fetched_at": "2026-08-29T13:12:04.075Z"
     },
     "CVE-2026-31680": {
       "cve_id": "CVE-2026-31680",
@@ -104326,7 +104326,7 @@
       ],
       "published": "2026-04-25T09:16:01.673",
       "last_modified": "2026-07-14T13:18:48.493",
-      "fetched_at": "2026-07-29T09:38:16.419Z"
+      "fetched_at": "2026-08-29T13:12:10.699Z"
     },
     "CVE-2026-31682": {
       "cve_id": "CVE-2026-31682",
@@ -104388,7 +104388,7 @@
       ],
       "published": "2026-04-25T09:16:01.913",
       "last_modified": "2026-07-14T13:18:48.683",
-      "fetched_at": "2026-07-29T09:38:23.129Z"
+      "fetched_at": "2026-08-29T13:12:17.308Z"
     },
     "CVE-2026-31737": {
       "cve_id": "CVE-2026-31737",
@@ -104450,7 +104450,7 @@
       ],
       "published": "2026-05-01T15:16:36.347",
       "last_modified": "2026-07-14T13:18:48.857",
-      "fetched_at": "2026-07-29T09:38:29.709Z"
+      "fetched_at": "2026-08-29T13:12:23.925Z"
     },
     "CVE-2026-31752": {
       "cve_id": "CVE-2026-31752",
@@ -104512,7 +104512,7 @@
       ],
       "published": "2026-05-01T15:16:38.090",
       "last_modified": "2026-07-14T13:18:49.033",
-      "fetched_at": "2026-07-29T09:38:36.300Z"
+      "fetched_at": "2026-08-29T13:12:30.540Z"
     },
     "CVE-2026-31761": {
       "cve_id": "CVE-2026-31761",
@@ -104576,7 +104576,7 @@
       ],
       "published": "2026-05-01T15:16:39.153",
       "last_modified": "2026-07-14T13:18:49.203",
-      "fetched_at": "2026-07-29T09:38:42.977Z"
+      "fetched_at": "2026-08-29T13:12:37.253Z"
     },
     "CVE-2026-31768": {
       "cve_id": "CVE-2026-31768",
@@ -104634,7 +104634,7 @@
       ],
       "published": "2026-05-01T15:16:39.977",
       "last_modified": "2026-07-14T13:18:49.377",
-      "fetched_at": "2026-07-29T09:38:49.548Z"
+      "fetched_at": "2026-08-29T13:12:44.123Z"
     },
     "CVE-2026-40355": {
       "cve_id": "CVE-2026-40355",
@@ -104686,7 +104686,7 @@
       ],
       "published": "2026-04-28T06:16:03.663",
       "last_modified": "2026-07-14T13:18:50.990",
-      "fetched_at": "2026-07-29T09:38:56.125Z"
+      "fetched_at": "2026-08-29T13:12:50.890Z"
     },
     "CVE-2026-41989": {
       "cve_id": "CVE-2026-41989",
@@ -104728,7 +104728,7 @@
       ],
       "published": "2026-04-23T05:16:05.750",
       "last_modified": "2026-07-14T13:18:51.503",
-      "fetched_at": "2026-07-29T09:39:02.802Z"
+      "fetched_at": "2026-08-29T13:12:57.509Z"
     },
     "CVE-2026-43011": {
       "cve_id": "CVE-2026-43011",
@@ -104792,7 +104792,7 @@
       ],
       "published": "2026-05-01T15:16:44.993",
       "last_modified": "2026-07-14T13:18:51.763",
-      "fetched_at": "2026-07-29T09:39:09.378Z"
+      "fetched_at": "2026-08-29T13:13:04.126Z"
     },
     "CVE-2026-43024": {
       "cve_id": "CVE-2026-43024",
@@ -104854,7 +104854,7 @@
       ],
       "published": "2026-05-01T15:16:46.760",
       "last_modified": "2026-07-14T13:18:51.963",
-      "fetched_at": "2026-07-29T09:39:16.132Z"
+      "fetched_at": "2026-08-29T13:13:10.870Z"
     },
     "CVE-2026-43025": {
       "cve_id": "CVE-2026-43025",
@@ -104914,7 +104914,7 @@
       ],
       "published": "2026-05-01T15:16:46.903",
       "last_modified": "2026-07-14T13:18:52.143",
-      "fetched_at": "2026-07-29T09:39:22.849Z"
+      "fetched_at": "2026-08-29T13:13:17.489Z"
     },
     "CVE-2026-43026": {
       "cve_id": "CVE-2026-43026",
@@ -104976,7 +104976,7 @@
       ],
       "published": "2026-05-01T15:16:47.033",
       "last_modified": "2026-07-14T13:18:52.310",
-      "fetched_at": "2026-07-29T09:39:29.476Z"
+      "fetched_at": "2026-08-29T13:13:24.101Z"
     },
     "CVE-2026-43027": {
       "cve_id": "CVE-2026-43027",
@@ -105040,7 +105040,7 @@
       ],
       "published": "2026-05-01T15:16:47.167",
       "last_modified": "2026-07-14T13:18:52.487",
-      "fetched_at": "2026-07-29T09:39:36.196Z"
+      "fetched_at": "2026-08-29T13:13:30.741Z"
     },
     "CVE-2026-43028": {
       "cve_id": "CVE-2026-43028",
@@ -105102,7 +105102,7 @@
       ],
       "published": "2026-05-01T15:16:47.297",
       "last_modified": "2026-07-14T13:18:52.690",
-      "fetched_at": "2026-07-29T09:39:43.230Z"
+      "fetched_at": "2026-08-29T13:13:37.359Z"
     },
     "CVE-2026-43030": {
       "cve_id": "CVE-2026-43030",
@@ -105164,7 +105164,7 @@
       ],
       "published": "2026-05-01T15:16:47.557",
       "last_modified": "2026-07-14T13:18:52.870",
-      "fetched_at": "2026-07-29T09:39:49.836Z"
+      "fetched_at": "2026-08-29T13:13:44.250Z"
     },
     "CVE-2026-43033": {
       "cve_id": "CVE-2026-43033",
@@ -105226,7 +105226,7 @@
       ],
       "published": "2026-05-01T15:16:47.910",
       "last_modified": "2026-07-14T13:18:53.060",
-      "fetched_at": "2026-07-29T09:39:56.412Z"
+      "fetched_at": "2026-08-29T13:13:50.906Z"
     },
     "CVE-2026-43035": {
       "cve_id": "CVE-2026-43035",
@@ -105290,7 +105290,7 @@
       ],
       "published": "2026-05-01T15:16:48.147",
       "last_modified": "2026-07-14T13:18:53.267",
-      "fetched_at": "2026-07-29T09:40:03.223Z"
+      "fetched_at": "2026-08-29T13:13:57.774Z"
     },
     "CVE-2026-43038": {
       "cve_id": "CVE-2026-43038",
@@ -105353,8 +105353,8 @@
         }
       ],
       "published": "2026-05-01T15:16:48.533",
-      "last_modified": "2026-07-15T02:21:41.223",
-      "fetched_at": "2026-07-29T09:40:10.052Z"
+      "last_modified": "2026-08-20T13:18:34.700",
+      "fetched_at": "2026-08-29T13:14:04.486Z"
     },
     "CVE-2026-43040": {
       "cve_id": "CVE-2026-43040",
@@ -105418,7 +105418,7 @@
       ],
       "published": "2026-05-01T15:16:50.130",
       "last_modified": "2026-07-14T13:18:53.810",
-      "fetched_at": "2026-07-29T09:40:17.545Z"
+      "fetched_at": "2026-08-29T13:14:11.095Z"
     },
     "CVE-2026-43057": {
       "cve_id": "CVE-2026-43057",
@@ -105476,7 +105476,7 @@
       ],
       "published": "2026-05-01T15:16:52.260",
       "last_modified": "2026-07-14T13:18:53.980",
-      "fetched_at": "2026-07-29T09:40:24.196Z"
+      "fetched_at": "2026-08-29T13:14:17.761Z"
     },
     "CVE-2026-43284": {
       "cve_id": "CVE-2026-43284",
@@ -105539,7 +105539,7 @@
       ],
       "published": "2026-05-08T08:16:43.827",
       "last_modified": "2026-07-15T02:21:43.190",
-      "fetched_at": "2026-07-29T09:40:30.996Z"
+      "fetched_at": "2026-08-29T13:14:24.702Z"
     },
     "CVE-2026-46174": {
       "cve_id": "CVE-2026-46174",
@@ -105601,7 +105601,7 @@
       ],
       "published": "2026-05-28T10:16:33.020",
       "last_modified": "2026-07-14T13:18:56.250",
-      "fetched_at": "2026-07-29T09:40:37.599Z"
+      "fetched_at": "2026-08-29T13:14:31.314Z"
     },
     "CVE-2026-46300": {
       "cve_id": "CVE-2026-46300",
@@ -105666,7 +105666,7 @@
       ],
       "published": "2026-05-23T12:17:02.660",
       "last_modified": "2026-07-23T11:10:00.120",
-      "fetched_at": "2026-07-29T09:40:44.267Z"
+      "fetched_at": "2026-08-29T13:14:38.075Z"
     },
     "CVE-2026-46333": {
       "cve_id": "CVE-2026-46333",
@@ -105730,8 +105730,8 @@
         }
       ],
       "published": "2026-05-15T14:16:35.793",
-      "last_modified": "2026-07-15T02:22:15.687",
-      "fetched_at": "2026-07-29T09:40:50.885Z"
+      "last_modified": "2026-08-24T13:18:59.973",
+      "fetched_at": "2026-08-29T13:14:44.763Z"
     },
     "CVE-2026-9636": {
       "cve_id": "CVE-2026-9636",

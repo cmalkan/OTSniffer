@@ -29042,7 +29042,7 @@
     },
     {
       "advisory_id": "ICSA-25-128-03",
-      "title": "Mitsubishi Electric Multiple FA Products (Update C)",
+      "title": "Mitsubishi Electric Multiple FA Products (Update D)",
       "date": "2025-04-25",
       "summary": "Successful exploitation of this vulnerability could allow a remote attacker to cause a denial-of-service (DoS) condition, a timeout error, or a communication delay by sending a specially crafted UDP packet to the product. ",
       "sectors": [
@@ -29056,267 +29056,297 @@
       "affected_products": [
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-32D",
           "version": "<=09",
           "product_id": "CSAFPID-0001"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32T",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-32T",
           "version": "<=09",
           "product_id": "CSAFPID-0002"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32TE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-32TE",
           "version": "<=09",
           "product_id": "CSAFPID-0003"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32DT",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-32DT",
           "version": "<=09",
           "product_id": "CSAFPID-0004"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-32DTE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-32DTE",
           "version": "<=09",
           "product_id": "CSAFPID-0005"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-32D",
           "version": "<=09",
           "product_id": "CSAFPID-0006"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32T",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-32T",
           "version": "<=09",
           "product_id": "CSAFPID-0007"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32TE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-32TE",
           "version": "<=09",
           "product_id": "CSAFPID-0008"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32DT",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-32DT",
           "version": "<=09",
           "product_id": "CSAFPID-0009"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-32DTE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-32DTE",
           "version": "<=09",
           "product_id": "CSAFPID-0010"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCF1-32D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GNCF1-32D",
           "version": "<=09",
           "product_id": "CSAFPID-0011"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCF1-32T",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GNCF1-32T",
           "version": "<=09",
           "product_id": "CSAFPID-0012"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCE3-32D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GNCE3-32D",
           "version": "<=09",
           "product_id": "CSAFPID-0013"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GNCE3-32DT",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GNCE3-32DT",
           "version": "<=09",
           "product_id": "CSAFPID-0014"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A4-16D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN12A4-16D",
           "version": "<=09",
           "product_id": "CSAFPID-0015"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A4-16DE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN12A4-16DE",
           "version": "<=09",
           "product_id": "CSAFPID-0016"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A2-16T",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN12A2-16T",
           "version": "<=09",
           "product_id": "CSAFPID-0017"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A2-16TE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN12A2-16TE",
           "version": "<=09",
           "product_id": "CSAFPID-0018"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A42-16DT",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN12A42-16DT",
           "version": "<=09",
           "product_id": "CSAFPID-0019"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN12A42-16DTE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN12A42-16DTE",
           "version": "<=09",
           "product_id": "CSAFPID-0020"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-16D",
           "version": "<=09",
           "product_id": "CSAFPID-0021"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16T",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-16T",
           "version": "<=09",
           "product_id": "CSAFPID-0022"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2S1-16TE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2S1-16TE",
           "version": "<=09",
           "product_id": "CSAFPID-0023"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16D",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-16D",
           "version": "<=09",
           "product_id": "CSAFPID-0024"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16T",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-16T",
           "version": "<=09",
           "product_id": "CSAFPID-0025"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote I/O module NZ2GN2B1-16TE",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote I/O module NZ2GN2B1-16TE",
           "version": "<=09",
           "product_id": "CSAFPID-0026"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Analog-Digital Converter module NZ2GN2S-60AD4",
+          "product": "Mitsubishi Electric CC-Link IE TSN Analog-Digital Converter module NZ2GN2S-60AD4",
           "version": "<=07",
           "product_id": "CSAFPID-0027"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Analog-Digital Converter module NZ2GN2B-60AD4",
+          "product": "Mitsubishi Electric CC-Link IE TSN Analog-Digital Converter module NZ2GN2B-60AD4",
           "version": "<=07",
           "product_id": "CSAFPID-0028"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Digital-Analog Converter module NZ2GN2S-60DA4",
+          "product": "Mitsubishi Electric CC-Link IE TSN Digital-Analog Converter module NZ2GN2S-60DA4",
           "version": "<=07",
           "product_id": "CSAFPID-0029"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Digital-Analog Converter module NZ2GN2B-60DA4",
+          "product": "Mitsubishi Electric CC-Link IE TSN Digital-Analog Converter module NZ2GN2B-60DA4",
           "version": "<=07",
           "product_id": "CSAFPID-0030"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41P01",
+          "product": "Mitsubishi Electric CC-Link IE TSN FPGA module NZ2GN2S-D41P01",
           "version": "01",
           "product_id": "CSAFPID-0031"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41D01",
+          "product": "Mitsubishi Electric CC-Link IE TSN FPGA module NZ2GN2S-D41D01",
           "version": "01",
           "product_id": "CSAFPID-0032"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN FPGA module NZ2GN2S-D41PD02",
+          "product": "Mitsubishi Electric CC-Link IE TSN FPGA module NZ2GN2S-D41PD02",
           "version": "01",
           "product_id": "CSAFPID-0033"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-300",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-300",
           "version": "<=1.08J",
           "product_id": "CSAFPID-0034"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-60",
+          "product": "Mitsubishi Electric CC-Link IE TSN Remote Station Communication LSI CP620 with GbE-PHY NZ2GACP620-60",
           "version": "<=1.08J",
           "product_id": "CSAFPID-0035"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-T2",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-T2",
           "version": "<=26",
           "product_id": "CSAFPID-0036"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-EIP",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-EIP",
           "version": "<=10",
           "product_id": "CSAFPID-0037"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-SX",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CC-Link IE TSN Master/Local Module RJ71GN11-SX",
           "version": "<=05",
           "product_id": "CSAFPID-0038"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-R Series Ethernet Interface Module RJ71EN71",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series Ethernet Interface Module RJ71EN71",
           "version": "<=85",
           "product_id": "CSAFPID-0039"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN master/local Station Communication LSI CP610 NZ2GACP610-60",
+          "product": "Mitsubishi Electric CC-Link IE TSN master/local Station Communication LSI CP610 NZ2GACP610-60",
           "version": "<=05",
           "product_id": "CSAFPID-0040"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "CC-Link IE TSN master/local Station Communication LSI CP610 NZ2KT-NPETNG51",
+          "product": "Mitsubishi Electric CC-Link IE TSN master/local Station Communication LSI CP610 NZ2KT-NPETNG51",
           "version": "<=05",
           "product_id": "CSAFPID-0041"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-F Series FX5 CC-Link IE TSN Master/Local Module FX5-CCLGN-MS",
+          "product": "Mitsubishi Electric MELSEC iQ-F Series FX5 CC-Link IE TSN Master/Local Module FX5-CCLGN-MS",
           "version": "<=1.020",
           "product_id": "CSAFPID-0042"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-F Series FX5 Ethernet Module FX5-ENET",
+          "product": "Mitsubishi Electric MELSEC iQ-F Series FX5 Ethernet Module FX5-ENET",
           "version": "<=1.200",
           "product_id": "CSAFPID-0043"
         },
         {
           "vendor": "Mitsubishi Electric",
-          "product": "MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP",
+          "product": "Mitsubishi Electric MELSEC iQ-F Series FX5-ENET/IP Ethernet Module FX5-ENET/IP",
           "version": "<=1.106",
           "product_id": "CSAFPID-0044"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CPU module R04ENCPU (Network Part)",
+          "version": "<=85",
+          "product_id": "CSAFPID-0045"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CPU module R08ENCPU (Network Part)",
+          "version": "<=85",
+          "product_id": "CSAFPID-0046"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CPU module R16ENCPU (Network Part)",
+          "version": "<=85",
+          "product_id": "CSAFPID-0047"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CPU module R32ENCPU (Network Part)",
+          "version": "<=85",
+          "product_id": "CSAFPID-0048"
+        },
+        {
+          "vendor": "Mitsubishi Electric",
+          "product": "Mitsubishi Electric MELSEC iQ-R Series CPU module R120ENCPU (Network Part)",
+          "version": "<=85",
+          "product_id": "CSAFPID-0049"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-128-03"
