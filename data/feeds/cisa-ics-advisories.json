@@ -2054,7 +2054,7 @@
     },
     {
       "advisory_id": "ICSA-26-202-09",
-      "title": "Rockwell Automation 1734 POINT I/O",
+      "title": "Rockwell Automation 1734 POINT I/O (Update A)",
       "date": "2026-07-21",
       "summary": "Successful exploitation of this vulnerability could allow for an attacker to cause a denial-of-service condition on the product.",
       "sectors": [
@@ -2063,8 +2063,8 @@
       "cves": [
         "CVE-2026-10573"
       ],
-      "cvss_max": 7.5,
-      "cvss_severity": "high",
+      "cvss_max": 3.7,
+      "cvss_severity": "low",
       "affected_products": [
         {
           "vendor": "Rockwell Automation",
