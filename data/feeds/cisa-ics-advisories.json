@@ -1984,7 +1984,7 @@
     },
     {
       "advisory_id": "ICSA-26-202-01",
-      "title": "Tycon Systems TPDIN-Monitor-WEB2",
+      "title": "Tycon Systems TPDIN-Monitor-WEB2 (Update A)",
       "date": "2026-07-21",
       "summary": "Successful exploitation of these vulnerabilities could result in an attacker accessing sensitive credentials, disrupting connected infrastructure, or manipulating physical equipment, which could present a physical safety risk.",
       "sectors": [
@@ -2000,7 +2000,7 @@
         {
           "vendor": "Tycon Systems",
           "product": "TPDIN-Monitor-WEB2",
-          "version": "2.3.9",
+          "version": "<2.4.5",
           "product_id": "CSAFPID-0001"
         }
       ],
@@ -12026,9 +12026,9 @@
     },
     {
       "advisory_id": "ICSA-26-169-07",
-      "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products",
+      "title": "Schneider Electric Easergy, EcoStruxture, PowerLogic, and Saitel Products (Update A)",
       "date": "2026-05-12",
-      "summary": "Schneider Electric is aware of vulnerabilities in its PowerChute™ Serial Shutdown product. \r\nThe [PowerChute Serial Shutdown](https://www.se.com/ww/en/product-range/137943580-powerchute-serial-shutdown/#products) product is a UPS management software enabling graceful system shutdown \r\nand energy management capabilities for desktop, servers and workstations.  \r\nFailure to apply the remediation provided below may risk improper input validation which could result in \r\ndisruption of operations and access to system data. ",
+      "summary": "Schneider Electric is aware of a vulnerability in the following products: \r\n The Easergy C5 is a scalable and interoperable bay controller, protection and merging unit for large and critical\rinfrastructure electrical distribution systems.\r\nThe Easergy MiCOM P30 is a family of multifunction protection and control relays designed for medium, high \rand extra high voltage electrical networks. \r\nThe Easergy MiCOM P40 is a protection relay series for Medium Voltage, High Voltage and Extra High Voltage \rprotection.  \r\nThe Easergy MiCOM C264 is a modular and compact substation or bay controller, smart RTU and MV one box \rsolution \r\nThe EcoStruxure™ Power Automation System Gateway (EPAS=GTW) is a scalable, interoperable, and \rrugged communication gateway that helps to remotely monitor and operate e",
       "sectors": [
         "Chemical",
         "Critical Manufacturing",
