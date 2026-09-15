@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-09-13T11:49:13.184Z",
+  "pulled_at": "2026-09-15T11:44:07.579Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -86759,7 +86759,7 @@
       ],
       "published": "2026-07-14T13:18:13.163",
       "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-15T06:58:12.455Z"
+      "fetched_at": "2026-09-15T11:44:01.028Z"
     },
     "CVE-2026-8085": {
       "cve_id": "CVE-2026-8085",
@@ -105770,10 +105770,10 @@
     "CVE-2025-7639": {
       "cve_id": "CVE-2025-7639",
       "description": "The vulnerability, if exploited, could allow an authenticated miscreant \nwith \"DNA Authority - Operator\" privilege to tamper with serialized \ndata, potentially resulting in code execution during deserialization \nunder the privilege of Enterprise SCADA security group \"DNA Apps\".",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.1,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:H",
       "cwes": [
         "CWE-502"
       ],
@@ -105792,8 +105792,8 @@
         }
       ],
       "published": "2026-08-14T19:17:13.380",
-      "last_modified": "2026-08-14T22:16:33.127",
-      "fetched_at": "2026-08-15T06:56:07.636Z"
+      "last_modified": "2026-09-08T19:30:43.093",
+      "fetched_at": "2026-09-15T11:41:51.736Z"
     },
     "CVE-2026-23573": {
       "cve_id": "CVE-2026-23573",
@@ -105819,7 +105819,7 @@
       ],
       "published": "2026-07-14T16:16:51.823",
       "last_modified": "2026-08-11T13:17:59.330",
-      "fetched_at": "2026-08-15T06:56:14.194Z"
+      "fetched_at": "2026-09-15T11:41:58.375Z"
     },
     "CVE-2026-59839": {
       "cve_id": "CVE-2026-59839",
@@ -105845,7 +105845,7 @@
       ],
       "published": "2026-07-14T16:17:03.047",
       "last_modified": "2026-08-11T13:19:01.100",
-      "fetched_at": "2026-08-15T06:56:20.757Z"
+      "fetched_at": "2026-09-15T11:42:05.015Z"
     },
     "CVE-2026-69108": {
       "cve_id": "CVE-2026-69108",
@@ -105864,8 +105864,8 @@
         }
       ],
       "published": "2026-08-11T13:19:01.883",
-      "last_modified": "2026-08-11T15:17:34.647",
-      "fetched_at": "2026-08-15T06:56:27.382Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:42:11.597Z"
     },
     "CVE-2026-69109": {
       "cve_id": "CVE-2026-69109",
@@ -105884,8 +105884,8 @@
         }
       ],
       "published": "2026-08-11T13:19:02.030",
-      "last_modified": "2026-08-11T18:18:17.730",
-      "fetched_at": "2026-08-15T06:56:33.936Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:42:18.242Z"
     },
     "CVE-2026-59693": {
       "cve_id": "CVE-2026-59693",
@@ -105904,8 +105904,8 @@
         }
       ],
       "published": "2026-08-11T13:19:00.477",
-      "last_modified": "2026-08-11T18:17:41.267",
-      "fetched_at": "2026-08-15T06:56:40.499Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:42:24.827Z"
     },
     "CVE-2026-3014": {
       "cve_id": "CVE-2026-3014",
@@ -105933,7 +105933,7 @@
       ],
       "published": "2026-07-14T10:16:32.917",
       "last_modified": "2026-08-11T13:18:47.727",
-      "fetched_at": "2026-08-15T06:56:47.051Z"
+      "fetched_at": "2026-09-15T11:42:31.565Z"
     },
     "CVE-2026-64629": {
       "cve_id": "CVE-2026-64629",
@@ -105952,8 +105952,8 @@
         }
       ],
       "published": "2026-08-11T13:19:01.560",
-      "last_modified": "2026-08-12T20:17:48.073",
-      "fetched_at": "2026-08-15T06:56:53.607Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:42:38.154Z"
     },
     "CVE-2026-59700": {
       "cve_id": "CVE-2026-59700",
@@ -105972,8 +105972,8 @@
         }
       ],
       "published": "2026-08-11T13:19:00.627",
-      "last_modified": "2026-08-12T20:17:45.597",
-      "fetched_at": "2026-08-15T06:57:00.193Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:42:44.763Z"
     },
     "CVE-2026-59701": {
       "cve_id": "CVE-2026-59701",
@@ -105992,8 +105992,8 @@
         }
       ],
       "published": "2026-08-11T13:19:00.763",
-      "last_modified": "2026-08-11T14:17:14.850",
-      "fetched_at": "2026-08-15T06:57:06.747Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:42:51.402Z"
     },
     "CVE-2026-50058": {
       "cve_id": "CVE-2026-50058",
@@ -106008,12 +106008,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.153",
-      "last_modified": "2026-08-11T15:17:30.730",
-      "fetched_at": "2026-08-15T06:57:13.356Z"
+      "last_modified": "2026-09-10T13:35:23.850",
+      "fetched_at": "2026-09-15T11:42:58.218Z"
     },
     "CVE-2026-50059": {
       "cve_id": "CVE-2026-50059",
@@ -106028,12 +106030,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.313",
-      "last_modified": "2026-08-11T18:17:35.120",
-      "fetched_at": "2026-08-15T06:57:19.928Z"
+      "last_modified": "2026-09-10T13:35:50.813",
+      "fetched_at": "2026-09-15T11:43:04.808Z"
     },
     "CVE-2026-50060": {
       "cve_id": "CVE-2026-50060",
@@ -106048,12 +106052,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.447",
-      "last_modified": "2026-08-12T20:17:44.970",
-      "fetched_at": "2026-08-15T06:57:26.476Z"
+      "last_modified": "2026-09-10T13:36:25.767",
+      "fetched_at": "2026-09-15T11:43:11.445Z"
     },
     "CVE-2026-50061": {
       "cve_id": "CVE-2026-50061",
@@ -106068,12 +106074,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.583",
-      "last_modified": "2026-08-11T15:17:30.847",
-      "fetched_at": "2026-08-15T06:57:33.044Z"
+      "last_modified": "2026-09-10T13:36:56.673",
+      "fetched_at": "2026-09-15T11:43:18.025Z"
     },
     "CVE-2026-50062": {
       "cve_id": "CVE-2026-50062",
@@ -106088,12 +106096,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.720",
-      "last_modified": "2026-08-12T21:17:39.243",
-      "fetched_at": "2026-08-15T06:57:39.622Z"
+      "last_modified": "2026-09-10T13:37:46.997",
+      "fetched_at": "2026-09-15T11:43:24.876Z"
     },
     "CVE-2026-50063": {
       "cve_id": "CVE-2026-50063",
@@ -106108,12 +106118,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.860",
-      "last_modified": "2026-08-11T15:17:30.990",
-      "fetched_at": "2026-08-15T06:57:46.195Z"
+      "last_modified": "2026-09-10T13:34:39.217",
+      "fetched_at": "2026-09-15T11:43:31.492Z"
     },
     "CVE-2026-50064": {
       "cve_id": "CVE-2026-50064",
@@ -106128,12 +106140,14 @@
       "references": [
         {
           "url": "https://cert-portal.siemens.com/productcert/html/ssa-621657.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-08-11T13:18:58.990",
-      "last_modified": "2026-08-11T18:17:35.633",
-      "fetched_at": "2026-08-15T06:57:52.753Z"
+      "last_modified": "2026-09-10T13:33:44.230",
+      "fetched_at": "2026-09-15T11:43:41.222Z"
     },
     "CVE-2026-57262": {
       "cve_id": "CVE-2026-57262",
@@ -106152,8 +106166,8 @@
         }
       ],
       "published": "2026-08-11T13:18:59.463",
-      "last_modified": "2026-08-12T20:17:45.260",
-      "fetched_at": "2026-08-15T06:57:59.302Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:43:47.805Z"
     },
     "CVE-2026-57263": {
       "cve_id": "CVE-2026-57263",
@@ -106172,8 +106186,8 @@
         }
       ],
       "published": "2026-08-11T13:18:59.607",
-      "last_modified": "2026-08-11T14:17:14.590",
-      "fetched_at": "2026-08-15T06:58:05.901Z"
+      "last_modified": "2026-08-28T19:03:37.837",
+      "fetched_at": "2026-09-15T11:43:54.448Z"
     },
     "CVE-2026-59086": {
       "cve_id": "CVE-2026-59086",
