@@ -5443,8 +5443,8 @@
       "cves": [
         "CVE-2025-15467"
       ],
-      "cvss_max": 9.8,
-      "cvss_severity": "critical",
+      "cvss_max": 8.8,
+      "cvss_severity": "high",
       "affected_products": [
         {
           "vendor": "Siemens",
@@ -5484,789 +5484,1671 @@
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
+          "product": "RUGGEDCOM ROX MX5000",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0007"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE LPE9413 (6GK5998-3GS01-2AC2)",
+          "product": "RUGGEDCOM ROX MX5000RE",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0008"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE LPE9433 (6GK5998-3GS11-2AC2)",
+          "product": "RUGGEDCOM ROX RX1400",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0009"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M804PB (6GK5804-0AP00-2AA2)",
+          "product": "RUGGEDCOM ROX RX1500",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0010"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M812-1 ADSL-Router family",
+          "product": "RUGGEDCOM ROX RX1501",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0011"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M816-1 ADSL-Router family",
+          "product": "RUGGEDCOM ROX RX1510",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0012"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)",
+          "product": "RUGGEDCOM ROX RX1511",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0013"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)",
+          "product": "RUGGEDCOM ROX RX1512",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0014"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)",
+          "product": "RUGGEDCOM ROX RX1524",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0015"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)",
+          "product": "RUGGEDCOM ROX RX1536",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0016"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M876-3 (6GK5876-3AA02-2BA2)",
+          "product": "RUGGEDCOM ROX RX5000",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0017"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)",
+          "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0018"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M876-4 (6GK5876-4AA10-2BA2)",
+          "product": "SCALANCE LPE9413 (6GK5998-3GS01-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0019"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)",
+          "product": "SCALANCE LPE9433 (6GK5998-3GS11-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0020"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)",
+          "product": "SCALANCE M804PB (6GK5804-0AP00-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0021"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUB852-1 (A1) (6GK5852-1EA10-1AA1)",
+          "product": "SCALANCE M812-1 ADSL-Router family",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0022"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUB852-1 (B1) (6GK5852-1EA10-1BA1)",
+          "product": "SCALANCE M816-1 ADSL-Router family",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0023"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM853-1 (A1) (6GK5853-2EA10-2AA1)",
+          "product": "SCALANCE M826-2 SHDSL-Router (6GK5826-2AB00-2AB2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0024"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM853-1 (B1) (6GK5853-2EA10-2BA1)",
+          "product": "SCALANCE M874-2 (6GK5874-2AA00-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0025"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM853-1 (EU) (6GK5853-2EA00-2DA1)",
+          "product": "SCALANCE M874-3 (6GK5874-3AA00-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0026"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM856-1 (A1) (6GK5856-2EA10-3AA1)",
+          "product": "SCALANCE M874-3 3G-Router (CN) (6GK5874-3AA00-2FA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0027"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM856-1 (B1) (6GK5856-2EA10-3BA1)",
+          "product": "SCALANCE M876-3 (6GK5876-3AA02-2BA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0028"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM856-1 (CN) (6GK5856-2EA00-3FA1)",
+          "product": "SCALANCE M876-3 (ROK) (6GK5876-3AA02-2EA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0029"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM856-1 (EU) (6GK5856-2EA00-3DA1)",
+          "product": "SCALANCE M876-4 (6GK5876-4AA10-2BA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0030"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE MUM856-1 (RoW) (6GK5856-2EA00-3AA1)",
+          "product": "SCALANCE M876-4 (EU) (6GK5876-4AA00-2BA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0031"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2)",
+          "product": "SCALANCE M876-4 (NAM) (6GK5876-4AA00-2DA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0032"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2)",
+          "product": "SCALANCE MUB852-1 (A1) (6GK5852-1EA10-1AA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0033"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
+          "product": "SCALANCE MUB852-1 (B1) (6GK5852-1EA10-1BA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0034"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
+          "product": "SCALANCE MUM853-1 (A1) (6GK5853-2EA10-2AA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0035"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
+          "product": "SCALANCE MUM853-1 (B1) (6GK5853-2EA10-2BA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0036"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
+          "product": "SCALANCE MUM853-1 (EU) (6GK5853-2EA00-2DA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0037"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
+          "product": "SCALANCE MUM856-1 (A1) (6GK5856-2EA10-3AA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0038"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
+          "product": "SCALANCE MUM856-1 (B1) (6GK5856-2EA10-3BA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0039"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAB762-1 (6GK5762-1AJ00-6AA0)",
+          "product": "SCALANCE MUM856-1 (CN) (6GK5856-2EA00-3FA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0040"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
+          "product": "SCALANCE MUM856-1 (EU) (6GK5856-2EA00-3DA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0041"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM763-1 (ME) (6GK5763-1AL00-7DC0)",
+          "product": "SCALANCE MUM856-1 (RoW) (6GK5856-2EA00-3AA1)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0042"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM763-1 (US) (6GK5763-1AL00-7DB0)",
+          "product": "SCALANCE S615 EEC LAN-Router (6GK5615-0AA01-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0043"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)",
+          "product": "SCALANCE S615 LAN-Router (6GK5615-0AA00-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0044"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM766-1 (ME) (6GK5766-1GE00-7DC0)",
+          "product": "SCALANCE SC622-2C (6GK5622-2GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0045"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
+          "product": "SCALANCE SC626-2C (6GK5626-2GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0046"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)",
+          "product": "SCALANCE SC632-2C (6GK5632-2GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0047"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM766-1 EEC (ME) (6GK5766-1GE00-7TC0)",
+          "product": "SCALANCE SC636-2C (6GK5636-2GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0048"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
+          "product": "SCALANCE SC642-2C (6GK5642-2GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0049"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUB762-1 (6GK5762-1AJ00-1AA0)",
+          "product": "SCALANCE SC646-2C (6GK5646-2GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0050"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUB762-1 iFeatures (6GK5762-1AJ00-2AA0)",
+          "product": "SCALANCE WAB762-1 (6GK5762-1AJ00-6AA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0051"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
+          "product": "SCALANCE WAM763-1 (6GK5763-1AL00-7DA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0052"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
+          "product": "SCALANCE WAM763-1 (ME) (6GK5763-1AL00-7DC0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0053"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3AB0)",
+          "product": "SCALANCE WAM763-1 (US) (6GK5763-1AL00-7DB0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0054"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3DB0)",
+          "product": "SCALANCE WAM766-1 (6GK5766-1GE00-7DA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0055"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)",
+          "product": "SCALANCE WAM766-1 (ME) (6GK5766-1GE00-7DC0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0056"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM766-1 (ME) (6GK5766-1GE00-3DC0)",
+          "product": "SCALANCE WAM766-1 (US) (6GK5766-1GE00-7DB0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0057"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)",
+          "product": "SCALANCE WAM766-1 EEC (6GK5766-1GE00-7TA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0058"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC316-8 (6GK5324-8TS00-2AC2)",
+          "product": "SCALANCE WAM766-1 EEC (ME) (6GK5766-1GE00-7TC0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0059"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC324-4 (6GK5328-4TS00-2AC2)",
+          "product": "SCALANCE WAM766-1 EEC (US) (6GK5766-1GE00-7TB0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0060"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC324-4 EEC (6GK5328-4TS00-2EC2)",
+          "product": "SCALANCE WUB762-1 (6GK5762-1AJ00-1AA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0061"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC332 (6GK5332-0GA00-2AC2)",
+          "product": "SCALANCE WUB762-1 iFeatures (6GK5762-1AJ00-2AA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0062"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC416-8 (6GK5424-8TR00-2AC2)",
+          "product": "SCALANCE WUM763-1 (6GK5763-1AL00-3AA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0063"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC424-4 (6GK5428-4TR00-2AC2)",
+          "product": "SCALANCE WUM763-1 (6GK5763-1AL00-3DA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0064"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XC432 (6GK5432-0GR00-2AC2)",
+          "product": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3AB0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0065"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR302-32 (6GK5334-5TS00-2AR3)",
+          "product": "SCALANCE WUM763-1 (US) (6GK5763-1AL00-3DB0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0066"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR302-32 (6GK5334-5TS00-3AR3)",
+          "product": "SCALANCE WUM766-1 (6GK5766-1GE00-3DA0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0067"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR302-32 (6GK5334-5TS00-4AR3)",
+          "product": "SCALANCE WUM766-1 (ME) (6GK5766-1GE00-3DC0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0068"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR322-12 (6GK5334-3TS00-2AR3)",
+          "product": "SCALANCE WUM766-1 (USA) (6GK5766-1GE00-3DB0)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0069"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR322-12 (6GK5334-3TS00-3AR3)",
+          "product": "SCALANCE X200-4P IRT (6GK5200-4AH00-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0070"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR322-12 (6GK5334-3TS00-4AR3)",
+          "product": "SCALANCE X200-4P IRT (6GK5200-4AH10-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0071"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR326-8 (6GK5334-2TS00-2AR3)",
+          "product": "SCALANCE X201-3P IRT (6GK5201-3BH00-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0072"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR326-8 (6GK5334-2TS00-3AR3)",
+          "product": "SCALANCE X201-3P IRT (6GK5201-3BH10-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0073"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR326-8 (6GK5334-2TS00-4AR3)",
+          "product": "SCALANCE X201-3P IRT PRO (6GK5201-3JR00-2BA6)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0074"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR326-8 EEC (6GK5334-2TS00-2ER3)",
+          "product": "SCALANCE X201-3P IRT PRO (6GK5201-3JR10-2BA6)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0075"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR502-32 (6GK5534-5TR00-2AR3)",
+          "product": "SCALANCE X202-2IRT (6GK5202-2BB00-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0076"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR502-32 (6GK5534-5TR00-3AR3)",
+          "product": "SCALANCE X202-2IRT (6GK5202-2BB10-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0077"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR502-32 (6GK5534-5TR00-4AR3)",
+          "product": "SCALANCE X202-2P IRT (6GK5202-2BH00-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0078"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR522-12 (6GK5534-3TR00-2AR3)",
+          "product": "SCALANCE X202-2P IRT (6GK5202-2BH10-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0079"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR522-12 (6GK5534-3TR00-3AR3)",
+          "product": "SCALANCE X202-2P IRT PRO (6GK5202-2JR00-2BA6)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0080"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR522-12 (6GK5534-3TR00-4AR3)",
+          "product": "SCALANCE X202-2P IRT PRO (6GK5202-2JR10-2BA6)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0081"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-2AR3)",
+          "product": "SCALANCE X204-2 (6GK5204-2BB10-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0082"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-2RR3)",
+          "product": "SCALANCE X204-2FM (6GK5204-2BB11-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0083"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-3AR3)",
+          "product": "SCALANCE X204-2LD (6GK5204-2BC10-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0084"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-3RR3)",
+          "product": "SCALANCE X204-2LD TS (6GK5204-2BC10-2CA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0085"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR526-8 (6GK5534-2TR00-2AR3)",
+          "product": "SCALANCE X204-2TS (6GK5204-2BB10-2CA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0086"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR526-8 (6GK5534-2TR00-3AR3)",
+          "product": "SCALANCE X204IRT (6GK5204-0BA00-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0087"
         },
         {
           "vendor": "Siemens",
-          "product": "SCALANCE XR526-8 (6GK5534-2TR00-4AR3)",
+          "product": "SCALANCE X204IRT (6GK5204-0BA10-2BA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0088"
         },
         {
           "vendor": "Siemens",
-          "product": "Shopfloor IT Suite",
+          "product": "SCALANCE X204IRT PRO (6GK5204-0JA00-2BA6)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0089"
         },
         {
           "vendor": "Siemens",
-          "product": "SIDIS Prime",
-          "version": "vers:intdot/>=4.0.700",
+          "product": "SCALANCE X204IRT PRO (6GK5204-0JA10-2BA6)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0090"
         },
         {
           "vendor": "Siemens",
-          "product": "Siemens OPC UA Modelling Editor (SiOME)",
+          "product": "SCALANCE X204RNA (HSR) (6GK5204-0BA00-2MB2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0091"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC Comfort/Mobile RT",
+          "product": "SCALANCE X204RNA (PRP) (6GK5204-0BA00-2KB2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0092"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC eaSie Core Package (6DL5424-0AX00-0AV8)",
+          "product": "SCALANCE X204RNA EEC (HSR) (6GK5204-0BS00-2NA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0093"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC eaSie PCS 7 Skill Package (6DL5424-0BX00-0AV8)",
+          "product": "SCALANCE X204RNA EEC (PRP) (6GK5204-0BS00-3LA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0094"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC HMI Basic Panels",
-          "version": "vers:intdot/<17.0.9",
+          "product": "SCALANCE X204RNA EEC (PRP/HSR) (6GK5204-0BS00-3PA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0095"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC HMI Comfort Panels",
-          "version": "vers:intdot/<17.0.9",
+          "product": "SCALANCE X206-1 (6GK5206-1BB10-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0096"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC HMI Mobile Panels",
-          "version": "vers:intdot/<17.0.9",
+          "product": "SCALANCE X206-1LD (6GK5206-1BC10-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0097"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC IOT2050 (6ES7647-0BA00-1YA2)",
+          "product": "SCALANCE X208 (6GK5208-0BA10-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0098"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC IPC BX-21A",
+          "product": "SCALANCE X208PRO (6GK5208-0HA10-2AA6)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0099"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC IPC MD-57A",
+          "product": "SCALANCE X212-2 (6GK5212-2BB00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0100"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC IPC ORCLA",
+          "product": "SCALANCE X212-2LD (6GK5212-2BC00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0101"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC PDM V9.3",
+          "product": "SCALANCE X216 (6GK5216-0BA00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0102"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA00)",
+          "product": "SCALANCE X224 (6GK5224-0BA00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0103"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA10)",
+          "product": "SCALANCE X302-7 EEC (230V, coated) (6GK5302-7GD00-3GA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0104"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA20)",
+          "product": "SCALANCE X302-7 EEC (230V) (6GK5302-7GD00-3EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0105"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA30)",
+          "product": "SCALANCE X302-7 EEC (24V, coated) (6GK5302-7GD00-1GA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0106"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA10)",
+          "product": "SCALANCE X302-7 EEC (24V) (6GK5302-7GD00-1EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0107"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA20)",
+          "product": "SCALANCE X302-7 EEC (2x 230V, coated) (6GK5302-7GD00-4GA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0108"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA30)",
+          "product": "SCALANCE X302-7 EEC (2x 230V) (6GK5302-7GD00-4EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0109"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC STEP 7 V5",
-          "version": "vers:intdot/<5.7.4",
+          "product": "SCALANCE X302-7 EEC (2x 24V, coated) (6GK5302-7GD00-2GA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0110"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC Target",
+          "product": "SCALANCE X302-7 EEC (2x 24V) (6GK5302-7GD00-2EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0111"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC OA V3.19",
-          "version": "vers:intdot/<3.19.024",
+          "product": "SCALANCE X304-2FE (6GK5304-2BD00-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0112"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC OA V3.20",
-          "version": "vers:intdot/<3.20.012",
+          "product": "SCALANCE X306-1LD FE (6GK5306-1BF00-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0113"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC OA V3.21",
-          "version": "vers:intdot/<3.21.02",
+          "product": "SCALANCE X307-2 EEC (230V, coated) (6GK5307-2FD00-3GA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0114"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC Runtime Advanced V17",
-          "version": "vers:intdot/<17.0.9",
+          "product": "SCALANCE X307-2 EEC (230V) (6GK5307-2FD00-3EA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0115"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC Unified Sequence",
-          "version": "vers:intdot/<21",
+          "product": "SCALANCE X307-2 EEC (24V, coated) (6GK5307-2FD00-1GA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0116"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC V7.5",
+          "product": "SCALANCE X307-2 EEC (24V) (6GK5307-2FD00-1EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0117"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC V8.0",
+          "product": "SCALANCE X307-2 EEC (2x 230V, coated) (6GK5307-2FD00-4GA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0118"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC WinCC V8.1",
+          "product": "SCALANCE X307-2 EEC (2x 230V) (6GK5307-2FD00-4EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0119"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMOTION OACAMGEN (6AU1820-3EA20-0AB0)",
+          "product": "SCALANCE X307-2 EEC (2x 24V, coated) (6GK5307-2FD00-2GA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0120"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMOVE Fleetmanager V3.1",
+          "product": "SCALANCE X307-2 EEC (2x 24V) (6GK5307-2FD00-2EA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0121"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMOVE Fleetmanager V3.2",
+          "product": "SCALANCE X307-3 (6GK5307-3BL00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0122"
         },
         {
           "vendor": "Siemens",
-          "product": "SIMOVE Fleetmanager V3.3",
+          "product": "SCALANCE X307-3 (6GK5307-3BL10-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0123"
         },
         {
           "vendor": "Siemens",
-          "product": "SINAMICS G200",
-          "version": "vers:intdot/>=6.3",
+          "product": "SCALANCE X307-3LD (6GK5307-3BM00-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0124"
         },
         {
           "vendor": "Siemens",
-          "product": "SINAMICS G220",
-          "version": "vers:intdot/>=6.3",
+          "product": "SCALANCE X307-3LD (6GK5307-3BM10-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0125"
         },
         {
           "vendor": "Siemens",
-          "product": "SINAMICS S200",
-          "version": "vers:intdot/>=6.3",
+          "product": "SCALANCE X308-2 (6GK5308-2FL00-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0126"
         },
         {
           "vendor": "Siemens",
-          "product": "SINAMICS S210",
-          "version": "vers:intdot/>=6.3",
+          "product": "SCALANCE X308-2 (6GK5308-2FL10-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0127"
         },
         {
           "vendor": "Siemens",
-          "product": "SINAMICS S220",
-          "version": "vers:intdot/>=6.3",
+          "product": "SCALANCE X308-2LD (6GK5308-2FM00-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0128"
         },
         {
           "vendor": "Siemens",
-          "product": "SINEC INS",
-          "version": "vers:intdot/<1.0.2.5",
+          "product": "SCALANCE X308-2LD (6GK5308-2FM10-2AA3)",
+          "version": "vers:all/*",
           "product_id": "CSAFPID-0129"
         },
         {
           "vendor": "Siemens",
-          "product": "SINEC NMS",
+          "product": "SCALANCE X308-2LH (6GK5308-2FN00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0130"
         },
         {
           "vendor": "Siemens",
-          "product": "SINEC Security Monitor",
+          "product": "SCALANCE X308-2LH (6GK5308-2FN10-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0131"
         },
         {
           "vendor": "Siemens",
-          "product": "SINUMERIK Access MyMachine /OPC UA",
+          "product": "SCALANCE X308-2LH+ (6GK5308-2FP00-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0132"
         },
         {
           "vendor": "Siemens",
-          "product": "SIPLANT",
+          "product": "SCALANCE X308-2LH+ (6GK5308-2FP10-2AA3)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0133"
         },
         {
           "vendor": "Siemens",
-          "product": "SITRANS ASM IQ",
+          "product": "SCALANCE X308-2M (6GK5308-2GG00-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0134"
         },
         {
           "vendor": "Siemens",
-          "product": "SITRANS Soft Sensor Engine IQ (SITRANS SSE IQ)",
+          "product": "SCALANCE X308-2M (6GK5308-2GG10-2AA2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0135"
         },
         {
           "vendor": "Siemens",
+          "product": "SCALANCE X308-2M PoE (6GK5308-2QG00-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0136"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X308-2M PoE (6GK5308-2QG10-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0137"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X308-2M TS (6GK5308-2GG00-2CA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0138"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X308-2M TS (6GK5308-2GG10-2CA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0139"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X310 (6GK5310-0FA00-2AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0140"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X310 (6GK5310-0FA10-2AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0141"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X310FE (6GK5310-0BA00-2AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0142"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X310FE (6GK5310-0BA10-2AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0143"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X320-1 FE (6GK5320-1BD00-2AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0144"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X320-1-2LD FE (6GK5320-3BF00-2AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0145"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE X408-2 (6GK5408-2FD00-2AA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0146"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC316-8 (6GK5324-8TS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0147"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC324-4 (6GK5328-4TS00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0148"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC324-4 EEC (6GK5328-4TS00-2EC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0149"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC332 (6GK5332-0GA00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0150"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC416-8 (6GK5424-8TR00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0151"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC424-4 (6GK5428-4TR00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0152"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XC432 (6GK5432-0GR00-2AC2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0153"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF201-3P IRT (6GK5201-3BH00-2BD2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0154"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF202-2P IRT (6GK5202-2BH00-2BD2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0155"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF204 (6GK5204-0BA00-2AF2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0156"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF204-2 (6GK5204-2BC00-2AF2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0157"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF204-2BA IRT (6GK5204-2AA00-2BD2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0158"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF204IRT (6GK5204-0BA00-2BF2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0159"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF204IRT (6GK5204-0BA10-2BF2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0160"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF206-1 (6GK5206-1BC00-2AF2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0161"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XF208 (6GK5208-0BA00-2AF2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0162"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR302-32 (6GK5334-5TS00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0163"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR302-32 (6GK5334-5TS00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0164"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR302-32 (6GK5334-5TS00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0165"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR322-12 (6GK5334-3TS00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0166"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR322-12 (6GK5334-3TS00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0167"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR322-12 (6GK5334-3TS00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0168"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (230V, ports on front) (6GK5324-0GG00-3AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0169"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (230V, ports on front) (6GK5324-0GG10-3AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0170"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (230V, ports on rear) (6GK5324-0GG00-3HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0171"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (230V, ports on rear) (6GK5324-0GG10-3HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0172"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (24V, ports on front) (6GK5324-0GG00-1AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0173"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (24V, ports on front) (6GK5324-0GG10-1AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0174"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (24V, ports on rear) (6GK5324-0GG00-1HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0175"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M (24V, ports on rear) (6GK5324-0GG10-1HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0176"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M TS (24V) (6GK5324-0GG00-1CR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0177"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-12M TS (24V) (6GK5324-0GG10-1CR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0178"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on front) (6GK5324-4GG00-3ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0179"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on front) (6GK5324-4GG10-3ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0180"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on rear) (6GK5324-4GG00-3JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0181"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (100-240VAC/60-250VDC, ports on rear) (6GK5324-4GG10-3JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0182"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (24V, ports on front) (6GK5324-4GG00-1ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0183"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (24V, ports on front) (6GK5324-4GG10-1ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0184"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (24V, ports on rear) (6GK5324-4GG00-1JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0185"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (24V, ports on rear) (6GK5324-4GG10-1JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0186"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on front) (6GK5324-4GG00-4ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0187"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on front) (6GK5324-4GG10-4ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0188"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on rear) (6GK5324-4GG00-4JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0189"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 100-240VAC/60-250VDC, ports on rear) (6GK5324-4GG10-4JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0190"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 24V, ports on front) (6GK5324-4GG00-2ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0191"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 24V, ports on front) (6GK5324-4GG10-2ER2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0192"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 24V, ports on rear) (6GK5324-4GG00-2JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0193"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M EEC (2x 24V, ports on rear) (6GK5324-4GG10-2JR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0194"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (230V, ports on front) (6GK5324-4QG00-3AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0195"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (230V, ports on front) (6GK5324-4QG10-3AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0196"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (230V, ports on rear) (6GK5324-4QG00-3HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0197"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (230V, ports on rear) (6GK5324-4QG10-3HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0198"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (24V, ports on front) (6GK5324-4QG00-1AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0199"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (24V, ports on front) (6GK5324-4QG10-1AR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0200"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (24V, ports on rear) (6GK5324-4QG00-1HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0201"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE (24V, ports on rear) (6GK5324-4QG10-1HR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0202"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE TS (24V, ports on front) (6GK5324-4QG00-1CR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0203"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR324-4M PoE TS (24V, ports on front) (6GK5324-4QG10-1CR2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0204"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 (6GK5334-2TS00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0205"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 (6GK5334-2TS00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0206"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 (6GK5334-2TS00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0207"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR326-8 EEC (6GK5334-2TS00-2ER3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0208"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR502-32 (6GK5534-5TR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0209"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR502-32 (6GK5534-5TR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0210"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR502-32 (6GK5534-5TR00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0211"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR522-12 (6GK5534-3TR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0212"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR522-12 (6GK5534-3TR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0213"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR522-12 (6GK5534-3TR00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0214"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0215"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-2RR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0216"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0217"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR524-8WG (6GK5532-2SR00-3RR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0218"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR526-8 (6GK5534-2TR00-2AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0219"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR526-8 (6GK5534-2TR00-3AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0220"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE XR526-8 (6GK5534-2TR00-4AR3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0221"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Shopfloor IT Suite",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0222"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIDIS Prime",
+          "version": "vers:intdot/>=4.0.700",
+          "product_id": "CSAFPID-0223"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Siemens OPC UA Modelling Editor (SiOME)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0224"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC eaSie Core Package (6DL5424-0AX00-0AV8)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0225"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC eaSie PCS 7 Skill Package (6DL5424-0BX00-0AV8)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0226"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC HMI Basic Panels",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0227"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC HMI Comfort Panels",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0228"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC HMI Mobile Panels",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0229"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC Industrial Thin Client",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0230"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IoT2050 Advanced (6ES7647-0BA00-1YA2)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0231"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IPC BX-21A",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0232"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IPC MD-57A",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0233"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC IPC ORCLA",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0234"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC Logon V1.6",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0235"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC Logon V2.0",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0236"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV530 H (6GF3530-0GE10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0237"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV530 S (6GF3530-0CD10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0238"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV540 H (6GF3540-0GE10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0239"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV540 H CRANES (6GF3540-0GE30)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0240"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV540 S (6GF3540-0CD10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0241"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV550 H (6GF3550-0GE10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0242"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV550 S (6GF3550-0CD10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0243"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV560 U (6GF3560-0LE10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0244"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC MV560 X (6GF3560-0HE10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0245"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC PCS neo V6.0",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0246"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC PDM V9.3",
+          "version": "vers:intdot/<9.3.2",
+          "product_id": "CSAFPID-0247"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA00)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0248"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0249"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA20)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0250"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-0DA30)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0251"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA10)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0252"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA20)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0253"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC RTLS Locating Manager (6GT2780-1EA30)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0254"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC STEP 7 V5",
+          "version": "vers:intdot/<5.7.4",
+          "product_id": "CSAFPID-0255"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC Target",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0256"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC OA V3.19",
+          "version": "vers:intdot/<3.19.024",
+          "product_id": "CSAFPID-0257"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC OA V3.20",
+          "version": "vers:intdot/<3.20.012",
+          "product_id": "CSAFPID-0258"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC OA V3.21",
+          "version": "vers:intdot/<3.21.02",
+          "product_id": "CSAFPID-0259"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Runtime Advanced V17",
+          "version": "vers:intdot/<17.0.9",
+          "product_id": "CSAFPID-0260"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC Unified Sequence",
+          "version": "vers:intdot/<21",
+          "product_id": "CSAFPID-0261"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC V7.5",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0262"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC V8.0",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0263"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMATIC WinCC V8.1",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0264"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOTION OACAMGEN (6AU1820-3EA20-0AB0)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0265"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOVE Fleetmanager V3.1",
+          "version": "vers:intdot/<3.1.13",
+          "product_id": "CSAFPID-0266"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOVE Fleetmanager V3.2",
+          "version": "vers:intdot/<3.2.4",
+          "product_id": "CSAFPID-0267"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIMOVE Fleetmanager V3.3",
+          "version": "vers:intdot/<3.3.2",
+          "product_id": "CSAFPID-0268"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS G200",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0269"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS G220",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0270"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS S200",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0271"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS S210",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0272"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINAMICS S220",
+          "version": "vers:intdot/>=6.3",
+          "product_id": "CSAFPID-0273"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINEC INS",
+          "version": "vers:intdot/<1.0.2.5",
+          "product_id": "CSAFPID-0274"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINEC NMS",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0275"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINEC Security Monitor",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0276"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SINUMERIK Access MyMachine /OPC UA",
+          "version": "vers:intdot/<4.2.3",
+          "product_id": "CSAFPID-0277"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPLANT",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0278"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPLUS NET SCALANCE X202-2P IRT (6AG1202-2BH00-2BA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0279"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SIPLUS NET SCALANCE X308-2 (6AG1308-2FL10-4AA3)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0280"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SITRANS ASM IQ",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0281"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SITRANS Soft Sensor Engine IQ (SITRANS SSE IQ)",
+          "version": "vers:all/*",
+          "product_id": "CSAFPID-0282"
+        },
+        {
+          "vendor": "Siemens",
           "product": "User Management Component (UMC)",
           "version": "vers:intdot/<2.15.3.0",
-          "product_id": "CSAFPID-0136"
+          "product_id": "CSAFPID-0283"
         },
         {
           "vendor": "Siemens",
           "product": "Visual Inspection Cockpit",
           "version": "vers:all/*",
-          "product_id": "CSAFPID-0137"
+          "product_id": "CSAFPID-0284"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-03"
@@ -17765,9 +18647,9 @@
     },
     {
       "advisory_id": "ICSA-25-226-05",
-      "title": "Siemens WIBU CodeMeter Runtime",
+      "title": "Siemens IAM Client",
       "date": "2025-08-12",
-      "summary": "WIBU Systems published information about a privilege escalation vulnerability under a certain circumstances and associated fix releases of CodeMeter Runtime, a product provided by WIBU Systems and used in several Siemens industrial products.\n\nSiemens has released new versions for affected products and recommends to update to the latest versions. Siemens is preparing further fix versions and recommends countermeasures for products where fixes are not, or not yet available.",
+      "summary": "WIBU Systems published information about a privilege escalation vulnerability under a certain circumstances and associated fix releases of CodeMeter Runtime, a product provided by WIBU Systems and used in several Siemens industrial products.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
       "sectors": [
         "Critical Manufacturing",
         "Financial Services",
@@ -17783,25 +18665,25 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PDM Maintenance Station V5.0",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<5.0.2",
           "product_id": "CSAFPID-0001"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC OA V3.18",
-          "version": "<V3.18_P032",
+          "version": "vers:intdot/<3.18.032",
           "product_id": "CSAFPID-0002"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC OA V3.19",
-          "version": "<V3.19_P020",
+          "version": "vers:intdot/<3.19.020",
           "product_id": "CSAFPID-0003"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC OA V3.20",
-          "version": "<V3.20_P008",
+          "version": "vers:intdot/<3.20.008",
           "product_id": "CSAFPID-0004"
         }
       ],
@@ -20045,7 +20927,7 @@
         {
           "vendor": "Siemens",
           "product": "Automation License Manager V6.2",
-          "version": "<V6.2_Upd3",
+          "version": "vers:intdot/<6.2.0.3",
           "product_id": "CSAFPID-0002"
         },
         {
@@ -20105,19 +20987,19 @@
         {
           "vendor": "Siemens",
           "product": "Siemens Network Planner (SINETPLAN)",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<2.0.2",
           "product_id": "CSAFPID-0012"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC Automation Tool",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<5.0.4",
           "product_id": "CSAFPID-0013"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC Automation Tool SDK Windows",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<5.0.4",
           "product_id": "CSAFPID-0014"
         },
         {
@@ -20159,7 +21041,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC D7-SYS",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<10.0.1",
           "product_id": "CSAFPID-0021"
         },
         {
@@ -20201,7 +21083,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC Energy Suite V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0028"
         },
         {
@@ -20213,19 +21095,19 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC Logon V2.0",
-          "version": "<V2.0_Upd3",
+          "version": "vers:intdot/<2.0.0.3",
           "product_id": "CSAFPID-0030"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC Management Agent",
-          "version": "<V9.1_SP1_Upd8",
+          "version": "vers:intdot/<9.1.1.8",
           "product_id": "CSAFPID-0031"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC Management Console",
-          "version": "<V9.1_SP1_Upd8",
+          "version": "vers:intdot/<9.1.1.8",
           "product_id": "CSAFPID-0032"
         },
         {
@@ -20291,7 +21173,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC NET PC Software V20",
-          "version": "<V20.0_Update_1",
+          "version": "vers:intdot/<20.0.0.1",
           "product_id": "CSAFPID-0043"
         },
         {
@@ -20303,7 +21185,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 Advanced Process Faceplates V9.1",
-          "version": "<V9.1_SP2_Upd4",
+          "version": "vers:intdot/<9.1.2.4",
           "product_id": "CSAFPID-0045"
         },
         {
@@ -20339,25 +21221,25 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 Advanced Process Library V9.1",
-          "version": "<V9.1_SP2_Upd6",
+          "version": "vers:intdot/<9.1.2.6",
           "product_id": "CSAFPID-0051"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 Basis Faceplates V9.1",
-          "version": "<V9.1_SP2_Upd2",
+          "version": "vers:intdot/<9.1.2.2",
           "product_id": "CSAFPID-0052"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 Basis Library V10.0",
-          "version": "<V10.0_SP1_Upd2",
+          "version": "vers:intdot/<10.0.1.2",
           "product_id": "CSAFPID-0053"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 Basis Library V9.1",
-          "version": "<V9.1_SP2_Upd8",
+          "version": "vers:intdot/<9.1.2.8",
           "product_id": "CSAFPID-0054"
         },
         {
@@ -20387,7 +21269,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 Logic Matrix V9.1",
-          "version": "<V9.1_Upd8",
+          "version": "vers:intdot/<9.1.0.8",
           "product_id": "CSAFPID-0059"
         },
         {
@@ -20398,7 +21280,7 @@
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC PCS 7 PowerControl",
+          "product": "SIMATIC PCS 7 PowerControl V9.1",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0061"
         },
@@ -20416,20 +21298,20 @@
         },
         {
           "vendor": "Siemens",
-          "product": "SIMATIC PCS 7 TeleControl",
+          "product": "SIMATIC PCS 7 TeleControl V9.1",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0064"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 V10.0",
-          "version": "<V10.0_SP1_UC01",
+          "version": "vers:intdot/<10.0.1.01",
           "product_id": "CSAFPID-0065"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS 7 V9.1",
-          "version": "<V9.1_SP1_UC08",
+          "version": "vers:intdot/<9.1.1.08",
           "product_id": "CSAFPID-0066"
         },
         {
@@ -20447,7 +21329,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PCS neo V6.0",
-          "version": "<V6.0_SP1",
+          "version": "vers:intdot/<6.0.1",
           "product_id": "CSAFPID-0069"
         },
         {
@@ -20465,7 +21347,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC PDM V9.3",
-          "version": "<V9.3_SP1_Upd2",
+          "version": "vers:intdot/<9.3.1.2",
           "product_id": "CSAFPID-0072"
         },
         {
@@ -20489,13 +21371,13 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC Process Historian 2024",
-          "version": "<V2024_SP1_Upd2",
+          "version": "vers:intdot/<2024.0.1.2",
           "product_id": "CSAFPID-0076"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC ProSave V17",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0077"
         },
         {
@@ -20507,7 +21389,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC ProSave V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0079"
         },
         {
@@ -20561,13 +21443,13 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC S7-PCT",
-          "version": "<V3.5_SP4_Update_1",
+          "version": "vers:intdot/<3.5.4.1",
           "product_id": "CSAFPID-0088"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC S7-PLCSIM Advanced",
-          "version": "<V7.0_Update_1",
+          "version": "vers:intdot/<7.0.0.1",
           "product_id": "CSAFPID-0089"
         },
         {
@@ -20591,7 +21473,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC S7-PLCSIM V20",
-          "version": "<V20_Update_1",
+          "version": "vers:intdot/<20.0.1",
           "product_id": "CSAFPID-0093"
         },
         {
@@ -20621,7 +21503,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC Target",
-          "version": "<V6.0_SP3",
+          "version": "vers:intdot/<6.0.3",
           "product_id": "CSAFPID-0098"
         },
         {
@@ -20633,7 +21515,7 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC Runtime Advanced",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0100"
         },
         {
@@ -20687,25 +21569,25 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC V7.5",
-          "version": "<V7.5_SP2_Update_20",
+          "version": "vers:intdot/<7.5.2.20",
           "product_id": "CSAFPID-0109"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC V8.0",
-          "version": "<V8.0_Update_8",
+          "version": "vers:intdot/<8.0.0.8",
           "product_id": "CSAFPID-0110"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC V8.1",
-          "version": "<V8.1_Update_3",
+          "version": "vers:intdot/<8.1.3",
           "product_id": "CSAFPID-0111"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC Visualization Architect (SiVArc) V17",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0112"
         },
         {
@@ -20717,13 +21599,13 @@
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC Visualization Architect (SiVArc) V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0114"
         },
         {
           "vendor": "Siemens",
           "product": "SIMATIC WinCC Visualization Architect (SiVArc) V20",
-          "version": "<V20_Update_3",
+          "version": "vers:intdot/<20.0.3",
           "product_id": "CSAFPID-0115"
         },
         {
@@ -20819,13 +21701,13 @@
         {
           "vendor": "Siemens",
           "product": "TIA Portal Test Suite V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0131"
         },
         {
           "vendor": "Siemens",
           "product": "TIA Portal Test Suite V20",
-          "version": "<V20_Update_3",
+          "version": "vers:intdot/<20.0.3",
           "product_id": "CSAFPID-0132"
         },
         {
@@ -20843,31 +21725,31 @@
         {
           "vendor": "Siemens",
           "product": "Totally Integrated Automation Portal (TIA Portal) V17",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0135"
         },
         {
           "vendor": "Siemens",
           "product": "Totally Integrated Automation Portal (TIA Portal) V18",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<18.0.6",
           "product_id": "CSAFPID-0136"
         },
         {
           "vendor": "Siemens",
           "product": "Totally Integrated Automation Portal (TIA Portal) V19",
-          "version": "<V19_Update_4",
+          "version": "vers:intdot/<19.0.4",
           "product_id": "CSAFPID-0137"
         },
         {
           "vendor": "Siemens",
           "product": "Totally Integrated Automation Portal (TIA Portal) V20",
-          "version": "<V20_Update_4",
+          "version": "vers:intdot/<20.0.4",
           "product_id": "CSAFPID-0138"
         },
         {
           "vendor": "Siemens",
           "product": "WinCC Panel Image Setup",
-          "version": "<V17_Update_9",
+          "version": "vers:intdot/<17.0.9",
           "product_id": "CSAFPID-0139"
         }
       ],
@@ -28493,14 +29375,9 @@
       "advisory_id": "ICSA-25-135-18",
       "title": "Siemens SCALANCE LPE9403",
       "date": "2025-05-13",
-      "summary": "SCALANCE LPE9403 is affected by multiple vulnerabilities which lead to a compromise in availability, integrity and confidentiality.\n\nSiemens is preparing fix versions and recommends specific countermeasures for products where fixes are not, or not yet available.",
+      "summary": "SCALANCE LPE9403 is affected by multiple vulnerabilities which lead to a compromise in availability, integrity and confidentiality.\n\nSiemens has released a new version for SCALANCE LPE9403 and recommends to update to the latest version. Siemens recommends specific countermeasures for products where fixes are not, or not yet available.",
       "sectors": [
-        "Critical Manufacturing",
-        "Transportation Systems",
-        "Energy",
-        "Healthcare and Public Health",
-        "Financial Services",
-        "Government Services and Facilities"
+        "Critical Manufacturing"
       ],
       "cves": [
         "CVE-2025-40572",
@@ -28522,7 +29399,7 @@
         {
           "vendor": "Siemens",
           "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
-          "version": "vers:all/*",
+          "version": "vers:intdot/<4.0.0",
           "product_id": "CSAFPID-0001"
         },
         {
@@ -28530,6 +29407,12 @@
           "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
           "version": "vers:all/*",
           "product_id": "CSAFPID-0002"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "SCALANCE LPE9403 (6GK5998-3GS00-2AC2)",
+          "version": "vers:intdot/<2.1.0",
+          "product_id": "CSAFPID-0003"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-135-18"
