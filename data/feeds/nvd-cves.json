@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-09-21T12:44:39.047Z",
+  "pulled_at": "2026-09-23T11:35:33.883Z",
   "cves": {
     "CVE-2026-5387": {
       "cve_id": "CVE-2026-5387",
@@ -82449,7 +82449,7 @@
       ],
       "published": "2026-05-06T19:16:35.730",
       "last_modified": "2026-06-17T10:10:43.073",
-      "fetched_at": "2026-08-23T07:02:47.280Z"
+      "fetched_at": "2026-09-23T11:35:27.341Z"
     },
     "CVE-2026-6332": {
       "cve_id": "CVE-2026-6332",
@@ -87073,7 +87073,7 @@
       ],
       "published": "2026-07-14T15:16:55.673",
       "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-23T06:59:30.346Z"
+      "fetched_at": "2026-09-23T11:32:12.505Z"
     },
     "CVE-2026-9140": {
       "cve_id": "CVE-2026-9140",
@@ -87093,7 +87093,7 @@
       ],
       "published": "2026-07-14T15:17:10.897",
       "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-23T06:59:36.980Z"
+      "fetched_at": "2026-09-23T11:32:19.119Z"
     },
     "CVE-2026-10573": {
       "cve_id": "CVE-2026-10573",
@@ -87112,68 +87112,74 @@
         }
       ],
       "published": "2026-07-14T15:16:55.097",
-      "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-23T06:59:43.549Z"
+      "last_modified": "2026-08-27T17:17:05.837",
+      "fetched_at": "2026-09-23T11:32:25.795Z"
     },
     "CVE-2026-9108": {
       "cve_id": "CVE-2026-9108",
       "description": "A path traversal security issue exists within Studio 5000 Logix Designer® due to improper limitation of file paths within ACD project files. The software does not sanitize or validate file names embedded in the ACD file structure during the project opening procedure, allowing path traversal sequences to escape the intended extraction directory. If exploited, an attacker could craft a malicious ACD project file that results in arbitrary files being written to attacker-controlled locations on the file system, potentially leading to code execution.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
       "cwes": [
         "CWE-22"
       ],
       "references": [
         {
           "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1783.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-07-14T16:17:05.210",
-      "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-23T06:59:50.121Z"
+      "last_modified": "2026-08-25T16:59:52.783",
+      "fetched_at": "2026-09-23T11:32:32.435Z"
     },
     "CVE-2026-9127": {
       "cve_id": "CVE-2026-9127",
       "description": "A remote code execution security issue exists within Studio 5000 Logix Designer® due to incorrect authorization on a configuration file. This can allow any authenticated user to modify the paths of external tools configured within the application. If exploited, an attacker could alter the configuration to point to a malicious executable, resulting in arbitrary code execution when any user interacts with the external tools functionality.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
       "cwes": [
         "CWE-863"
       ],
       "references": [
         {
           "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1783.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-07-14T16:17:05.347",
-      "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-23T06:59:56.763Z"
+      "last_modified": "2026-08-25T16:57:36.257",
+      "fetched_at": "2026-09-23T11:32:39.113Z"
     },
     "CVE-2026-9128": {
       "cve_id": "CVE-2026-9128",
       "description": "A code execution security issue exists within Studio 5000 Logix Designer® due to an unquoted search path in the External Tools configuration. The executable paths specified in the external tools configuration file are not properly quoted, and because these paths contain spaces, the operating system may resolve them to unintended executables placed earlier in the search order. If exploited, an attacker could plant a malicious executable in a location within the search path, resulting in arbitrary code execution with the same permissions of the user running the application.",
-      "cvss_version": null,
-      "cvss_score": null,
-      "cvss_severity": null,
-      "cvss_vector": null,
+      "cvss_version": "3.1",
+      "cvss_score": 7.5,
+      "cvss_severity": "high",
+      "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
       "cwes": [
         "CWE-428"
       ],
       "references": [
         {
           "url": "https://www.rockwellautomation.com/en-us/trust-center/security-advisories/advisory.SD1783.html",
-          "tags": []
+          "tags": [
+            "Vendor Advisory"
+          ]
         }
       ],
       "published": "2026-07-14T16:17:05.487",
-      "last_modified": "2026-07-14T16:46:49.030",
-      "fetched_at": "2026-08-23T07:00:05.314Z"
+      "last_modified": "2026-08-25T16:59:58.273",
+      "fetched_at": "2026-09-23T11:32:45.735Z"
     },
     "CVE-2026-0266": {
       "cve_id": "CVE-2026-0266",
@@ -87199,7 +87205,7 @@
       ],
       "published": "2026-06-10T22:16:52.787",
       "last_modified": "2026-07-23T09:10:00.113",
-      "fetched_at": "2026-08-23T07:00:12.630Z"
+      "fetched_at": "2026-09-23T11:32:52.469Z"
     },
     "CVE-2026-0272": {
       "cve_id": "CVE-2026-0272",
@@ -87226,7 +87232,7 @@
       ],
       "published": "2026-06-10T22:16:54.270",
       "last_modified": "2026-07-23T09:10:00.113",
-      "fetched_at": "2026-08-23T07:00:20.510Z"
+      "fetched_at": "2026-09-23T11:32:59.236Z"
     },
     "CVE-2026-0273": {
       "cve_id": "CVE-2026-0273",
@@ -87252,7 +87258,7 @@
       ],
       "published": "2026-06-10T22:16:54.730",
       "last_modified": "2026-07-23T09:10:00.113",
-      "fetched_at": "2026-08-23T07:00:27.188Z"
+      "fetched_at": "2026-09-23T11:33:05.995Z"
     },
     "CVE-2026-56451": {
       "cve_id": "CVE-2026-56451",
@@ -87272,7 +87278,7 @@
       ],
       "published": "2026-07-14T10:16:33.287",
       "last_modified": "2026-07-15T20:27:37.663",
-      "fetched_at": "2026-08-23T07:00:33.758Z"
+      "fetched_at": "2026-09-23T11:33:12.621Z"
     },
     "CVE-2022-23303": {
       "cve_id": "CVE-2022-23303",
@@ -87328,7 +87334,7 @@
       ],
       "published": "2022-01-17T02:15:06.760",
       "last_modified": "2026-07-14T12:16:47.380",
-      "fetched_at": "2026-08-23T07:00:41.709Z"
+      "fetched_at": "2026-09-23T11:33:19.337Z"
     },
     "CVE-2022-23304": {
       "cve_id": "CVE-2022-23304",
@@ -87384,7 +87390,7 @@
       ],
       "published": "2022-01-17T02:15:06.813",
       "last_modified": "2026-07-14T12:16:47.523",
-      "fetched_at": "2026-08-23T07:00:48.652Z"
+      "fetched_at": "2026-09-23T11:33:26.062Z"
     },
     "CVE-2022-37660": {
       "cve_id": "CVE-2022-37660",
@@ -87420,7 +87426,7 @@
       ],
       "published": "2025-02-11T23:15:08.140",
       "last_modified": "2026-07-14T12:16:48.013",
-      "fetched_at": "2026-08-23T07:00:55.220Z"
+      "fetched_at": "2026-09-23T11:33:32.679Z"
     },
     "CVE-2025-5222": {
       "cve_id": "CVE-2025-5222",
@@ -87477,8 +87483,8 @@
         }
       ],
       "published": "2025-05-27T21:15:23.030",
-      "last_modified": "2026-08-19T18:16:31.477",
-      "fetched_at": "2026-08-23T07:01:01.809Z"
+      "last_modified": "2026-09-17T19:16:36.083",
+      "fetched_at": "2026-09-23T11:33:39.364Z"
     },
     "CVE-2025-5914": {
       "cve_id": "CVE-2025-5914",
@@ -87541,8 +87547,8 @@
         }
       ],
       "published": "2025-06-09T20:15:26.123",
-      "last_modified": "2026-08-23T02:16:58.360",
-      "fetched_at": "2026-08-23T07:01:08.396Z"
+      "last_modified": "2026-09-21T17:17:28.047",
+      "fetched_at": "2026-09-23T11:33:46.029Z"
     },
     "CVE-2025-32462": {
       "cve_id": "CVE-2025-32462",
@@ -87595,7 +87601,7 @@
       ],
       "published": "2025-06-30T21:15:30.080",
       "last_modified": "2026-07-14T13:17:33.347",
-      "fetched_at": "2026-08-23T07:01:14.979Z"
+      "fetched_at": "2026-09-23T11:33:52.703Z"
     },
     "CVE-2026-5121": {
       "cve_id": "CVE-2026-5121",
@@ -87643,8 +87649,8 @@
         }
       ],
       "published": "2026-03-30T08:16:18.780",
-      "last_modified": "2026-07-14T13:19:00.930",
-      "fetched_at": "2026-08-23T07:01:21.595Z"
+      "last_modified": "2026-09-01T09:16:45.693",
+      "fetched_at": "2026-09-23T11:33:59.444Z"
     },
     "CVE-2025-40945": {
       "cve_id": "CVE-2025-40945",
@@ -87664,7 +87670,7 @@
       ],
       "published": "2026-07-14T10:16:30.783",
       "last_modified": "2026-07-15T20:27:37.663",
-      "fetched_at": "2026-08-23T07:01:28.182Z"
+      "fetched_at": "2026-09-23T11:34:06.205Z"
     },
     "CVE-2005-2096": {
       "cve_id": "CVE-2005-2096",
@@ -87715,7 +87721,7 @@
       ],
       "published": "2005-07-06T04:00:00.000",
       "last_modified": "2026-07-14T12:16:44.270",
-      "fetched_at": "2026-08-23T07:01:34.773Z"
+      "fetched_at": "2026-09-23T11:34:12.886Z"
     },
     "CVE-2016-9840": {
       "cve_id": "CVE-2016-9840",
@@ -87778,7 +87784,7 @@
       ],
       "published": "2017-05-23T04:29:01.667",
       "last_modified": "2026-07-14T12:16:45.520",
-      "fetched_at": "2026-08-23T07:01:41.351Z"
+      "fetched_at": "2026-09-23T11:34:19.610Z"
     },
     "CVE-2016-9841": {
       "cve_id": "CVE-2016-9841",
@@ -87824,7 +87830,7 @@
       ],
       "published": "2017-05-23T04:29:01.743",
       "last_modified": "2026-07-14T12:16:45.867",
-      "fetched_at": "2026-08-23T07:01:47.990Z"
+      "fetched_at": "2026-09-23T11:34:26.395Z"
     },
     "CVE-2016-9842": {
       "cve_id": "CVE-2016-9842",
@@ -87893,7 +87899,7 @@
       ],
       "published": "2017-05-23T04:29:01.837",
       "last_modified": "2026-07-14T12:16:46.140",
-      "fetched_at": "2026-08-23T07:01:54.589Z"
+      "fetched_at": "2026-09-23T11:34:33.112Z"
     },
     "CVE-2017-14919": {
       "cve_id": "CVE-2017-14919",
@@ -87959,7 +87965,7 @@
       ],
       "published": "2017-10-30T19:29:00.420",
       "last_modified": "2026-07-14T12:16:46.547",
-      "fetched_at": "2026-08-23T07:02:01.191Z"
+      "fetched_at": "2026-09-23T11:34:39.756Z"
     },
     "CVE-2018-25032": {
       "cve_id": "CVE-2018-25032",
@@ -88032,7 +88038,7 @@
       ],
       "published": "2022-03-25T09:15:08.187",
       "last_modified": "2026-07-14T12:16:46.733",
-      "fetched_at": "2026-08-23T07:02:07.758Z"
+      "fetched_at": "2026-09-23T11:34:46.616Z"
     },
     "CVE-2022-37434": {
       "cve_id": "CVE-2022-37434",
@@ -88107,7 +88113,7 @@
       ],
       "published": "2022-08-05T07:15:07.240",
       "last_modified": "2026-07-14T12:16:47.660",
-      "fetched_at": "2026-08-23T07:02:14.321Z"
+      "fetched_at": "2026-09-23T11:34:53.328Z"
     },
     "CVE-2023-45853": {
       "cve_id": "CVE-2023-45853",
@@ -88176,7 +88182,7 @@
       ],
       "published": "2023-10-14T02:15:09.323",
       "last_modified": "2026-07-14T13:17:02.983",
-      "fetched_at": "2026-08-23T07:02:20.891Z"
+      "fetched_at": "2026-09-23T11:35:00.295Z"
     },
     "CVE-2025-10585": {
       "cve_id": "CVE-2025-10585",
@@ -88219,7 +88225,7 @@
       ],
       "published": "2025-09-24T17:15:39.473",
       "last_modified": "2026-07-14T15:21:36.793",
-      "fetched_at": "2026-08-23T07:02:27.481Z"
+      "fetched_at": "2026-09-23T11:35:07.138Z"
     },
     "CVE-2025-13223": {
       "cve_id": "CVE-2025-13223",
@@ -88262,7 +88268,7 @@
       ],
       "published": "2025-11-17T23:15:45.140",
       "last_modified": "2026-07-14T15:21:34.180",
-      "fetched_at": "2026-08-23T07:02:34.050Z"
+      "fetched_at": "2026-09-23T11:35:13.784Z"
     },
     "CVE-2026-22184": {
       "cve_id": "CVE-2026-22184",
@@ -88322,8 +88328,8 @@
         }
       ],
       "published": "2026-01-07T21:16:01.563",
-      "last_modified": "2026-07-15T02:18:34.293",
-      "fetched_at": "2026-08-23T07:02:40.665Z"
+      "last_modified": "2026-09-01T13:18:19.867",
+      "fetched_at": "2026-09-23T11:35:20.551Z"
     },
     "CVE-2026-11917": {
       "cve_id": "CVE-2026-11917",
