@@ -2890,15 +2890,15 @@
       "advisory_id": "ICSA-26-209-02",
       "title": "Siemens Mendix Runtime",
       "date": "2026-07-14",
-      "summary": "Mendix documentation for access rules does not adequately describe the special behavior of the System.User entity, leaving developers without sufficient guidance to configure access rules securely. This documentation gap may lead application developers to unknowingly apply overly permissive access rules to System.User, resulting in unintended exposure of sensitive user data or privilege escalation within deployed Mendix applications.\n\nA common misconfiguration identified is with the anonymous user role with a System.User entity to gain access to all stored records, even though no access rights are explicitly configured on that role.\n\nSiemens recommends Mendix developers to review their access rules based on updated documentation.",
+      "summary": "This advisory is revoked. Re-investigation confirmed the reported behavior is expected platform configuration and does not expose the protected attribute.",
       "sectors": [
         "Critical Manufacturing"
       ],
       "cves": [
         "CVE-2026-7891"
       ],
-      "cvss_max": 9.1,
-      "cvss_severity": "critical",
+      "cvss_max": 0,
+      "cvss_severity": "info",
       "affected_products": [
         {
           "vendor": "Siemens",
