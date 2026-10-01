@@ -25693,7 +25693,7 @@
       "advisory_id": "ICSA-25-168-01",
       "title": "Siemens Mendix Studio Pro",
       "date": "2025-06-12",
-      "summary": "Mendix Studio Pro contains a vulnerability in the module installation process, that could allow an attacker to write or modify arbitrary files in directories outside a developer’s project directory.\n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
+      "summary": "Mendix Studio Pro contains a vulnerability in the module installation process, that could allow an attacker to write or modify arbitrary files in directories outside a developer’s project directory. \n\nSiemens has released new versions for the affected products and recommends to update to the latest versions.",
       "sectors": [
         "Critical Manufacturing"
       ],
@@ -25705,45 +25705,57 @@
       "affected_products": [
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 8",
-          "version": "vers:all/<V8.18.35",
+          "product": "Mendix Studio Pro 10",
+          "version": "vers:intdot/<10.24.24",
           "product_id": "CSAFPID-0001"
         },
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 9",
-          "version": "vers:all/<V9.24.35",
+          "product": "Mendix Studio Pro 10",
+          "version": "vers:intdot/<10.24.24",
           "product_id": "CSAFPID-0002"
         },
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 10",
-          "version": "vers:all/<V10.23.0",
+          "product": "Mendix Studio Pro 11",
+          "version": "vers:intdot/<11.13.0",
           "product_id": "CSAFPID-0003"
         },
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 10.6",
-          "version": "vers:all/<V10.6.24",
+          "product": "Mendix Studio Pro 11",
+          "version": "vers:intdot/<11.13.0",
           "product_id": "CSAFPID-0004"
         },
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 10.12",
-          "version": "vers:all/<V10.12.17",
+          "product": "Mendix Studio Pro 11.12",
+          "version": "vers:intdot/<11.12.2",
           "product_id": "CSAFPID-0005"
         },
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 10.18",
-          "version": "vers:all/<V10.18.7",
+          "product": "Mendix Studio Pro 11.12",
+          "version": "vers:intdot/<11.12.2",
           "product_id": "CSAFPID-0006"
         },
         {
           "vendor": "Siemens",
-          "product": "Mendix Studio Pro 11",
-          "version": "vers:all/<V11.0.0",
+          "product": "Mendix Studio Pro 11.6",
+          "version": "vers:intdot/<11.6.9",
           "product_id": "CSAFPID-0007"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 11.6",
+          "version": "vers:intdot/<11.6.9",
+          "product_id": "CSAFPID-0008"
+        },
+        {
+          "vendor": "Siemens",
+          "product": "Mendix Studio Pro 9",
+          "version": "vers:intdot/<9.24.44",
+          "product_id": "CSAFPID-0009"
         }
       ],
       "cisa_url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-168-01"
